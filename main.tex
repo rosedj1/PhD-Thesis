@@ -38,28 +38,33 @@
 %           If John was your chair and you had no cochair, you can simply use \chair{John}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author info
-\title{Precision Measurement of the Higgs Boson Mass and Search for Di-Lepton Resonances in ${\rm H \rightarrow 4\ell}$ Decays Using the CMS Detector at the LHC}
+\title{
+    Precision Measurement of the Higgs Boson Mass
+    and Search for Di-Lepton Mass Resonances in ${\rm H \rightarrow 4\ell}$ Decays
+    Using the CMS Detector at the LHC
+}
 
 \degreeType{Doctorate of Philosophy}%   Official name of your degree; eg "Doctorate of Philosophy".
 \major{Physics}%                    Your official Department
 \author{Daniel ``Jake'' Rosenzweig}%                  Your Name
 \thesisType{Dissertation}%              Dissertation (PhD) or Thesis (Masters)
-\degreeYear{2021}%                      Intended graduation year (not the year you submit the thesis)
+\degreeYear{2022}%                      Intended graduation year (not the year you submit the thesis)
 \degreeMonth{December}%                   Month of graduation should be May, August, or December.
 \chair[Guenakh Mitselmakher]{Andrey Korytov}%                   Chair and Cochair (see comment block above).
 
 %% additional sections
-%\setDedicationFile{dedicationFile}%                 Dedication Page
+\setDedicationFile{tex/dedicationFile}%                 Dedication Page
 \setAcknowledgementsFile{tex/acknowledgementsFile}%     Acknowledgements Page
+
 % \setAbstractFile{tex/abstractFile}%                     Abstract Page (This should only include the abstract itself)
 %\setReferenceFile{referenceFile}{amsplain}%         References. First argument is your bibtex source file
 % :                                                  the second argument is your bibtex style file.
 % \setReferenceFile{referenceFile}{unsrtnat}  % <== Use this one.  unsrtnat sorts references in cite order, and shows url.
 %\setBiographicalFile{biographyFile}%                Biography file of the Author (you).
-%
-%%%% These are NOT required, so only use them if you actually need/have them.
 
-%%\setAbbreviationsFile{abbreviations}%           Abbreviations Page
+
+%%%% These are NOT required, so only use them if you actually need/have them.
+% \setAbbreviationsFile{tex/abbreviations}%           Abbreviations Page
 % \setAppendixFile{tex/appendix}%                     Appendix Content; hyperlinking might be weird.
 %\multipleAppendixtrue%                          Uncomment this if you have more than one appendix, 
 %%                                                   comment it if you have only one appendix.
@@ -72,27 +77,30 @@
 \input{tex/definitions.tex}
 
 \justify % so that all text is fully justified
+
+%--- Structure of each chapter ---%
+% tex/chapter/section.tex
 %%%%%%%%%%%%%%%%%%%%%%%%
 %--- Standard Model ---%
 %%%%%%%%%%%%%%%%%%%%%%%%
-\input{tex/intro/intro.tex}
+\input{tex/01_intro/intro.tex}
 
 %%%%%%%%%%%%%%%%
 %--- Theory ---%
 %%%%%%%%%%%%%%%%
-\input{tex/theory/sm.tex}
+\input{tex/02_theory/sm.tex}
 % \input{tex/theory/higgs_prod.tex}
 
 %%%%%%%%%%%%%
 %--- LHC ---%
 %%%%%%%%%%%%%
-% \input{tex/lhc/lhc.tex}
+\input{tex/03_lhc/lhc.tex}
 
 %%%%%%%%%%%%%
 %--- CMS ---%
 %%%%%%%%%%%%%
 % \input{tex/cms/tracker.tex}
-\input{tex/cms/calorimeters.tex}
+\input{tex/04_cms/calorimeters.tex}
 % \input{tex/cms/solenoid.tex}
 % \input{tex/cms/muon_system.tex}
 % \input{tex/cms/trigger.tex}

@@ -507,13 +507,13 @@
     \edef\appendixFile{#2.#1}
     }
 
-\providecommand{\setReferenceFile}[2]{%             Sets the file name for the reference file and 
-%                                                       saves it in the macro \referenceFile. 
-%                                           We assume anyone using LaTeX will use BibTeX unless they specify otherwise. 
-%                                           The second argument sets the .bst file that should hold the bibtex style file.
-    \edef\referenceFile{#1}
-    \edef\referenceStyle{#2}
-    }
+% \providecommand{\setReferenceFile}[2]{%             Sets the file name for the reference file and 
+% %                                                       saves it in the macro \referenceFile. 
+% %                                           We assume anyone using LaTeX will use BibTeX unless they specify otherwise. 
+% %                                           The second argument sets the .bst file that should hold the bibtex style file.
+%     \edef\referenceFile{#1}
+%     \edef\referenceStyle{#2}
+%     }
 
 \providecommand{\setBiographicalFile}[2][tex]{%     Sets the file name for the biographical file and 
 %                                                       saves it in the macro \biographicalFile
@@ -769,7 +769,7 @@
             \bibliography{\referenceFile}}
         }
         {
-            \@latex@warning{You haven't specified a reference file using the command \setReferenceFile. Hopefully this is intentional!}
+            % \@latex@warning{You haven't specified a reference file using the command \setReferenceFile. Hopefully this is intentional!}
         }
         
     \ifExists{biographicalFile}%                            Biographical Sketch comes next (and last).
@@ -840,14 +840,3 @@
         {\color{red}\bfseries #1}
     \fi
     }% End of authorRemark
-
-
-
-
-
-
-
-
-
-
-

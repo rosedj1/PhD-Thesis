@@ -1,9 +1,46 @@
-\chapter{The Compact Muon Solenoid Experiment}\label{ch:cms}
+\chapter{The Compact Muon Solenoid Experiment}
+\label{ch:cms}
 
 The proton-proton collisions at the LHC produce 
 
-\section{Trigger System}\label{sec:trigger}
 
-\subsection{The Level-1 Trigger}\label{subsec:L1_trig}
+100M pixels, 40M pictures per second. Only record 1K events/s some events only occur only once per 10B collisions!
 
-\subsection{The High-Level Trigger}\label{subsec:hlt}
+Higgs bosons produced:
+2010: 776
+2011: 105K
+2012: ~500K?
+2016: 2M Higgs, 30 Higgs/min
+2017: 2.5M 
+2018: 3.5M
+
+Use the GIF of the m4l plot with growing Data.
+
+
+\section{Trigger System}
+\label{sec:trigger}
+
+\subsection{The Level-1 Trigger}
+\label{subsec:L1_trig}
+
+Trigger system helps to manage the enormous collision rate at 
+Size of 1 event is about 3 MB.
+This would be TB of data per second, which isn't feasible.
+Two stages of a trigger system: Level 1 Trigger (L1) and the High Level Trigger (HLT).
+
+L1 Trigger has about a trigger rate of 100 KHz as a hard limit.
+It's latency is only 3.2 microsec.
+
+At the start of a fill in the LHC, the trigger rate is maximum.
+INSERT L1 trigger rate plot.
+
+In order to remain at the maximal L1 trigger, prescales are implemented which switch on new triggers, while turning off others.
+Collision data which passes certain triggers can be ``parked'' on disk and analyzed later (FIXME e.g., during Long Shutdowns)  Data parking is used to 
+Data scouting: 
+The HLT has a trigger rate of about 1.5 KHz.
+It can write out about 5 GB/s to disk and has a much higher latency of 0.5 s compared to the L1 Trigger.
+
+
+
+\subsection{The High-Level Trigger}
+\label{subsec:hlt}

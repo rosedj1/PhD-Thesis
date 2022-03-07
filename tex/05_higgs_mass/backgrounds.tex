@@ -1,51 +1,55 @@
 \section{Background Estimation}
 \label{sec:bkg_estim}
 
-Processes which pass the event selection (REF EVENT SELECTION) but are not actually the signal process of interest (HZZ4L) are called background processes.
-These background events spoil the purity of signal and introduce further uncertainty into the final Higgs boson mass measurement.
+Processes which pass the signal event selection (REF EVENT SELECTION) but are not actually the signal process of interest (HZZ4L) are called background processes.
+These background events spoil the purity of the signal events and introduce further uncertainty into the final Higgs boson mass measurement.
 Therefore, it is a priority to properly model and reduce the number of background events.
 
-There are two types of backgrounds present in the HZZ4L analysis:
+The two types of background processes present in the HZZ4L analysis are:
 
 \begin{itemize}
     \item irreducible background
     \item reducible background
 \end{itemize}
 
-
-
-
-
+and will be explained in full detail in the subsequent sections.
 
 \subsection{Irreducible Background}
 \label{sec:bkg_irred}
 
-Backgrounds which produce 4 tight leptons in the final state look totally indistinguishable from the signal process.
-Therefore, there is no way to filter out such background processes; they are irreducible.
-There are two irreducible background processes for the HZZ4L analysis:
+The first kind of background process is that which produces two Z bosons which then decay into four prompt leptons.
+These four leptons typically get reconstructed as leptons which pass tight selection.
+Therefore, the event is tagged (incorrectly) as a 4-lepton signal event.
+Since these processes cannot be distinguished from the signal process and cannot be reduced, they are called irreducible backgrounds.
+The two irreducible backgrounds for the HZZ4L analysis are:
 
 \begin{enumerate}
     \item ggTOZZ (gluon-gluon fusion)
     \item qqbarTOZZ (quark-antiquark annihilation)
 \end{enumerate}
 
-
-
-
-
-
 \subsection{Reducible Background}
 \label{sec:bkg_red}
 
-Besides irreducible backgrounds, there are other background processes that produce leptons which accidentally pass the analysis event selection.
-These leptons should have been rejected since they come from a non-signal process, but due to imperfect lepton reconstruction, these leptons are identified as signal leptons.
-Using clever analysis techniques and more efficient detectors these background processes can be reduced, hence the term reducible backgrounds.
-
+Besides irreducible backgrounds, there are other background processes that produce non-prompt leptons which are erroneously reconstructed as passing tight selection, due to detector imperfections.
+These leptons should have been rejected since they come from a non-signal process, the imperfect lepton reconstruction, these leptons appear to be signal leptons.
+Using careful event selection methods and more efficient detectors, these background processes can be reduced, hence the term reducible backgrounds.
 Reducible backgrounds include:
 
 \begin{enumerate}
     \item Z+jets
     \item ttbar
     \item WZ
+    \item qqbarTOZZ, ggTOZZ
+\end{enumerate}
+
+Since reducible backgrounds are not eliminated entirely within the signal region, they must be modelled and estimated.
+
+More concretely, reducible backgrounds have three main sources:
+
+\begin{enumerate}
+    \item misidentifying light-flavor hadrons (e.g., PIONS) as leptons,
+    \item heavy-flavor hadrons which decay mid-flight into leptons,
+    \item and asymmetric photon conversions into electrons.
 \end{enumerate}
 

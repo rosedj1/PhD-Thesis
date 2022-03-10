@@ -3,60 +3,84 @@
 
 \subsection{Electromagnetic Calorimeter}
 
-Particles that survive the Tracker will then encounter the Electromagnetic Calorimeter (ECAL).
-The ECAL is a hermetic homogeneous sub-detector consisting of a barrel part (EB) and two endcap parts (EE).
-The EB contains 61200 lead tungstate (PbWO$_4$) crystals while each EE contains 7324 crystals.
-Due to its short radiation length (0.89 cm) and high density (8.28 g/cm$^3$),
-PbWO$_4$ is a good material to use in the ECAL.
-Conveniently after 1 bunch crossing (25 ns), nearly 80\% of the scintillated light is emitted.
+% WHAT IT IS
+\textit{\textbf{What is it?}}
+Particles that pass through the silicon tracker~\ref{sec:tracker} encounter the electromagnetic calorimeter (ECAL).
+Those particles which interact electromagnetically but not strongly, mostly photons and electrons, are typically absorbed by the ECAL.
+The particle's energy is then transferred to the ECAL in the form of an electromagnetic (EM) shower.
+The size and shape of the EM shower provide information about the particle's energy and trajectory.
+Since the Higgs boson can decay into two photons, it was essential that the ECAL was able to detect this decay mode.
 
+% STRUCTURE
+\textit{\textbf{Structure:}}
+The ECAL is a hermetic, cylindrical, homogeneous sub-detector that consists of a barrel (EB), two endcaps (EE), and a preshower detector in front of each endcap (Figure~\ref{fig:ecal_xs}, Left).
+The EB covers $\abseta < 1.479$ while the EE covers $1.479 < \abseta < 3.0$.
+The entire subdetector is composed of transparent lead tungstate (PbWO$_4$) crystals that point axially towards the center of CMS (the interaction point).
+The transparent crystals, one of which is shown in Fig.~\ref{fig:ecal_crystals} (Left), have a high density (8.28 g/\cm$^3$) which provides the ECAL with radiation resistance and a short radiation length ($X_0 = 0.89 \cm$).
+Because so many crystals are used (61,200 crystals in the EB and 7,324 in the EE), the ECAL has excellent energy resolution and fine granularity.
+Each endcap is composed of two ``Dee''s, one of which is shown in Figure~\ref{fig:ecal_xs} (Right).
+A single Dee carries 3,662 crystals.
+Crystals in the barrel are tapered, having front face dimensions $2.2 \times 2.2 \cm^2$, back face dimensions $2.6 \times 2.6 \cm^2$, and are 23.0 \cm long (25.8 $X_0$).
+Crystals in the endcaps are also tapered, with front face dimensions $2.862 \times 2.862 \cm^2$, back face dimensions $3.0 \times 3.0 \cm^2$, and are 22.0 \cm long (24.7 $X_0$).
+This gives a single crystal from the barrel a volume of approximately 132.5 \cm$^3$ (mL), about the volume of a small cup of coffee, yet it weighs 1.5 Kg.
+(REF:PDG).
+REF:PDG
+Particle Data Group collaboration, S. Eidelman \etal., \textit{Review of particle physics},
+\textit{Phys. Lett. \textbf{B 592 (2004) 1}}
+
+% ECAL diagram
 \begin{figure*}[!htb]
     \centering
     \captionsetup{justification=justified}
-    \includegraphics[width=0.95\textwidth]{figures/ECAL/xs_whiteblack.jpeg}
-    \caption{Cross sectional view of the electromagnetic calorimeter of CMS.
-             Figure taken from Ref.~\cite{jinst:cms_exp}.}
+    % \includegraphics[width=0.95\textwidth]{figures/cms/ecal/xs_whiteblack.jpeg}
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/xs_whiteblack.jpeg}
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/dee.jpeg}
+    \caption{
+        (Left) Cross sectional view of the electromagnetic calorimeter of CMS.
+        (Right) One of the Dees which comprise the EE.
+        Each square of $ 5 \times 5$ crystals constitutes a ``supercrystal''.
+        Figure taken from Ref.REFERENCE JINST%  ~\cite{jinst:cms_exp}.
+        }
     \label{fig:ecal_xs}
 \end{figure*}
 
-whose purpose is to absorb photons and electrons and detect their energies and directions.
-
-%%%%%%%%%%%%%%%%%%
-%----- ECAL -----%
-%%%%%%%%%%%%%%%%%%
-After particles pass through the Silicon Tracker system, they encounter the {\bf Electromagnetic Calorimeter} (ECAL). 
-This is a scintillating subdetector made out of approximately 78,000 beautiful, transparent, and heavy ${\rm PbWO_{4}}$ crystals, as shown in Fig.~\ref{fig:ecal_crystals} (Left).
-Each crystal weighs 1.5 Kg but has only the volume of a small cup of coffee. 
-
 %%%%%%%%%%%%%%%%%%%%
+% ECAL Crystals
 \begin{figure}[pbth]
 \centering
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{Figures/ECAL_crystals_fancy_lab.jpg}
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{Figures/ECAL_crystal_sizecomparison.jpg}
+\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystals_fancy_lab.jpg}
+\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystal_sizecomparison.jpg}
     \caption{
-    (Left) ECAL crystals are grown in a lab.
-    (Right) Although made mostly of metal, ECAL crystals are transparent and have a photomultiplier detector attached at the end.} 
+        (Left) ECAL crystals made from PbWO$_4$ are grown in a lab.
+        (Right) Although made mostly of metal, ECAL crystals are transparent and have a photomultiplier detector attached at the end.} 
     \label{fig:ecal_crystals}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
-Electrons and photons interact electromagnetically with the ECAL, creating an electromagnetic (EM) shower, and effectively get trapped here.
-The ECAL crystals then give off light (\emph{scintillate}) in proportion to the amount of energy deposited by the electron or photon. 
-The scintillator photons are detected by a photomultiplier detector attached to the back of each ECAL crystal (Fig.~\ref{fig:ecal_crystals}, Right).
-The ECAL has a barrel component and endcap components.
 
-How does one distinguish between an electron energy deposit in the ECAL system versus and a photon deposit?
-The electron will leave hits in the Tracker whereas a photon is electrically neutral and will not generate any signal in the Silicon Tracker. 
+% PHYSICS
+\textit{\textbf{Physics:}} 
+When electrons or photons pass through the ECAL, they create an EM shower.
+Electrons radiate more photons as they accelerate around $PbWO_4$ nuclei, in a process called \emph{bremsstrahlung}.
+Meanwhile, near the presence of a nucleus, photons can pair produce into \ee.
+This cycle of electron and photon production disperses the initial particle energy into a myriad of lower-energy particles - this is the EM shower REFERENCE EM SHOWER FIG.
+
+SHOW PICTURE OF EM SHOWER.
+
+The ECAL crystals then scintillate (emits photons) in proportion to the amount of energy deposited by the interacting particle. 
+The scintillator photons are detected by avalanche photodiodes on the back of each barrel crystal or by vacuum phototriodes in the endcap crystals (Fig.~\ref{fig:ecal_crystals}, Right).
+Conveniently after 1 bunch crossing (25 ns), Approximately 80\% of the scintillated light is emitted.
+
+An energy deposit in the ECAL could come from either an electron or a photon.
+In order to tell the difference, information from the silicon tracker is used.
+Charged particles, like electrons, will leave hits in the tracker and follow a curved path, whereas photons are electrically neutral and thus will not show any signs within the silicon tracker.
 So long as the Tracker and ECAL communicate effectively with each other, then they help distinguish between electrons and photons.
-Charged hadrons also interact with the ECAL, but only minimally. They very often punch through the ECAL system.
-Neutral hadrons can be detected by the ECAL preshower near the ECAL endcaps. 
-which helps distinguish a single photon from $\pi^{0}$ mesons as they decay into two photons with a narrow opening angle, making it look as if the two photons are a single photon.
+Charged hadrons interact only minimially with the ECAL, instead continuing on to the Hadron Calorimeter.
+Neutral hadrons can be detected by the ECAL preshower near the ECAL endcaps which helps distinguish a single photon from $\pi^{0}$ mesons as they decay into two photons with a narrow opening angle, making it look as if the two photons are a single photon.
+The preshower detector allows CMS to distinguish between low-energy diphoton pairs and single high-energy photons.
 
-What about those hadrons? They got through the ECAL... To detect hadrons effectively, we need a Hadron Calorimeter.
+NEED SMOOTH TRANSITION INTO HCAL. What about those hadrons? They got through the ECAL... To detect hadrons effectively, we need a Hadron Calorimeter.
 % That's what we see here with the blue dashed line (the photon) and the red line (the positron).
 
-%%%%%%%%%%%%%%%%%%
-%----- HCAL -----%
-%%%%%%%%%%%%%%%%%%
 \subsection{Hadron Calorimeter}
 By the time particles reach the {\bf Hadron Calorimeter} (HCAL), the only kind which remain (usually) are muons and hadrons.
 At 1 meter thick, the HCAL is a brass scintillator and its primary purpose is to catch and record the energies of hadrons.

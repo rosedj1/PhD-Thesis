@@ -2,6 +2,7 @@
 \label{sec:calo}
 
 \subsection{Electromagnetic Calorimeter}
+\label{subsec:ecal}
 
 % WHAT IT IS
 \textit{\textbf{What is it?}}
@@ -47,9 +48,9 @@ Particle Data Group collaboration, S. Eidelman \etal., \textit{Review of particl
 %%%%%%%%%%%%%%%%%%%%
 % ECAL Crystals
 \begin{figure}[pbth]
-\centering
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystals_fancy_lab.jpg}
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystal_sizecomparison.jpg}
+    \centering
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystals_fancy_lab.jpg}
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystal_sizecomparison.jpg}
     \caption{
         (Left) ECAL crystals made from PbWO$_4$ are grown in a lab.
         (Right) Although made mostly of metal, ECAL crystals are transparent and have a photomultiplier detector attached at the end.} 
@@ -58,11 +59,12 @@ Particle Data Group collaboration, S. Eidelman \etal., \textit{Review of particl
 %%%%%%%%%%%%%%%%%%%%
 
 % PHYSICS
-\textit{\textbf{Physics:}} 
+\textit{\textbf{Physics:}}
 When electrons or photons pass through the ECAL, they create an EM shower.
-Electrons radiate more photons as they accelerate around $PbWO_4$ nuclei, in a process called \emph{bremsstrahlung}.
-Meanwhile, near the presence of a nucleus, photons can pair produce into \ee.
-This cycle of electron and photon production disperses the initial particle energy into a myriad of lower-energy particles - this is the EM shower REFERENCE EM SHOWER FIG.
+Electrons radiate more photons as they accelerate around PbWO$_4$ nuclei, in a process called \emph{bremsstrahlung}.
+Meanwhile, near the presence of a nucleus, high-energy photons pair produce into \ee.
+% In turn, these newly-produced electrons can radiate more photons 
+This cycle of electron and photon production disperses the initial particle energy into a spray of lower- and lower-energy particles; an EM shower (REFERENCE EM SHOWER FIG).
 
 SHOW PICTURE OF EM SHOWER.
 
@@ -73,7 +75,7 @@ Conveniently after 1 bunch crossing (25 ns), Approximately 80\% of the scintilla
 An energy deposit in the ECAL could come from either an electron or a photon.
 In order to tell the difference, information from the silicon tracker is used.
 Charged particles, like electrons, will leave hits in the tracker and follow a curved path, whereas photons are electrically neutral and thus will not show any signs within the silicon tracker.
-So long as the Tracker and ECAL communicate effectively with each other, then they help distinguish between electrons and photons.
+So long as the tracker and ECAL communicate effectively with each other, then they help distinguish between electrons and photons.
 Charged hadrons interact only minimially with the ECAL, instead continuing on to the Hadron Calorimeter.
 Neutral hadrons can be detected by the ECAL preshower near the ECAL endcaps which helps distinguish a single photon from $\pi^{0}$ mesons as they decay into two photons with a narrow opening angle, making it look as if the two photons are a single photon.
 The preshower detector allows CMS to distinguish between low-energy diphoton pairs and single high-energy photons.
@@ -82,10 +84,50 @@ NEED SMOOTH TRANSITION INTO HCAL. What about those hadrons? They got through the
 % That's what we see here with the blue dashed line (the photon) and the red line (the positron).
 
 \subsection{Hadron Calorimeter}
-By the time particles reach the {\bf Hadron Calorimeter} (HCAL), the only kind which remain (usually) are muons and hadrons.
-At 1 meter thick, the HCAL is a brass scintillator and its primary purpose is to catch and record the energies of hadrons.
-Similar to the ECAL, the HCAL will scintillate in proportion to the amount of energy of the captured particle. 
-The incoming hadrons will \emph{hadronize} (\ie, produce a hadronic shower), generating jets of quarks and gluons which are bound in various ways forming protons, neutrons, pions, kaons, \etc.
+
+% WHAT IT IS
+\textit{\textbf{What is it?}}
+The particles that survive the ECAL, typically only muons and hadrons, then enter the hadron calorimeter (HCAL).
+Its primary purpose is to absorb the hadronic matter emerging from the interaction point.
+The absorbed jet energies cause the HCAL to scintillate photons which are then converted into electrical signals.
+These signals are used to deduce the original jet energies and any missing transverse energy (\MET) from the event.
+% emit proportionally-energetic scintillated 
+
+% STRUCTURE
+\textit{\textbf{Structure:}}
+Dissimilar to the ECAL (subsec.~\ref{subsec:ecal}) in material composition but similar in shape, the HCAL is a brass cylindrical scintillator.
+So although it has a barrel (HB) and two endcaps (HE), the HCAL also has an outer calorimeter (HO), and a forward calorimeter (HF) close to the beam pipe.
+With a thickness of over $1~\meter$, the HB is sandwiched between the barrels of the ECAL and the solenoid (subsec.~\ref{sec:solenoid}) at radial values $r = 1.77~\meter$ and $r = 2.95~\meter$, respectively.
+Because the HB and HE are located within the solenoid's strong magnetic field of 3.8 T, they both were both constructed out of a non-magnetic absorber called \emph{C26000 cartridge brass}.
+This absorber has a density of 8.53 $\g/\cm^{3}$ and an interaction length $(\lambda_I)$ of 16.42~\cm, which yields approximately 7.2(?) $(\lambda_I)$ within the thickness of the HB.
+The HB spans the pseudorapidity range $\abseta < 1.3$, the HE spans $1.3 < \abseta < 3$, and the HF spans $3 < \abseta < 5.2$, as shown in Figure~\ref{fig:hcal_quadrant}.
+Since the volume available to the HCAL is so limited, and in order to stop any particles that might traverse the entire HCAL and solenoid, the HO (the so-called ``tail catcher'') is situated outside the barrel of the solenoid.
+The HF is located 
+
+How many layers?
+What is a tray?
+delta eta delta phi = (0.087, 0.087)
+
+%%%%%%%%%%%%%%%%%%%%
+% HCAL Quadrant
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/cms/hcal/hcal_quadrants_longitudinalview.jpg}
+    \caption{
+        A cross-sectional quadrant of CMS showing the locations of the HCAL components:
+        the barrel (HB), outer (HO), endcap (HE), and forward (HF) detectors.
+        }
+    \label{fig:hcal_quadrant}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%
+
+% PHYSICS
+\textit{\textbf{Physics:}}
+Hadrons interact via the strong force with the Similar to the ECAL, the HCAL will scintillate in proportion to the amount of energy of the captured particle. 
+The incoming hadrons will \emph{hadronize} (\ie, produce a hadronic shower), generating jets of quarks and gluons which are bound in various ways forming protons, neutrons, pions, kaons, \etc
 Interestingly, the HCAL is made using over a million old, brass shell casings from the Russian Navy back from World War II.
 % kinds of particles which have not decayed on their own or were not caught by the ECAL, ,  or when it catches hadronic material: stuff made of quarks, like . 
 
+About 34\% of the particles produced from LHC \pp collisions enter the HE region, so the HE was built to handle high rates (MHz).
+
+The entire HCAL utilizes approximately 70,000 tiles.

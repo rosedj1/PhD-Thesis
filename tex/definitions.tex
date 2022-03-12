@@ -1,3 +1,38 @@
+%===============================%
+%=== Notes on using \xspace. ===%
+%===============================%
+% The TeXperts (by the way, if that's not what they're called then something's wrong!)
+% recommend NOT using \xspace, since once there are some cases when an extra space will be added:
+
+% \newcommand{\words}{words\xspace}
+% (\words)    % Returns: (words)
+% [\words]    % Returns: [words ]
+% \{\words\}  % Returns: {words }
+
+% The author(s) of xspace didn't included ] and \} in the list of exceptions.
+% If you insist on using \xspace, then simply add this to the document preamble:
+% \usepackage{xspace}
+% \xspaceaddexceptions{]\}}
+
+% So what do the TeXperts recommend instead?
+% They say to add `{}` to the end of every macro call:
+
+% \newcommand{\neat}{neat}
+% Some \neat words        % Returns: Some neatwords
+% Some \neat{} words      % Returns: Some neat words
+% Some \neat{}{}{} words  % Returns: Some neat words
+
+% The rule in TeX is simple: after a command name that uses letters, white space is ignored.
+
+%=================================================%
+%=== Difference between the kern and the skip. ===%
+%=================================================%
+% In LaTeX, `\,` (backslash comma) is a thin unbreakable space, also called a 'kern'.
+% It has a width of 1/6em (quite literally 1/6th the width of the 'M' in whatever font).
+% On the other hand, the `~` (tilde) is a normal unbreakable space, so a little bit wider, also called a 'skip'.
+% A skip is the same width of the space between words (the interword space).
+% Neither kerns nor skips will be broken across lines, but ~ may get stretched: `5~Kg` -> `5    Kg`.
+
 % Some shorthand
 % turn off italics
 \newcommand {\etal}{\mbox{et al.}\xspace} %et al. - no preceding comma
@@ -6,13 +41,15 @@
 \newcommand {\etc}{\mbox{etc.}\xspace}     %etc.
 \newcommand {\vs}{\mbox{\sl vs.}\xspace}      %vs.
 
+% Jake, consider getting rid of \mbox below!
 % some units
+\newcommand{\g}{\ensuremath{g}}
 \newcommand{\nm}{\ensuremath{\,\text{nm}}\xspace}
 \newcommand{\mum}{\ensuremath{\,\mu\text{m}}\xspace}
 \newcommand{\micron}{\ensuremath{\,\mu\text{m}}\xspace}
 \newcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
 \newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
-\newcommand{\meter}{\ensuremath{\,\text{m}}\xspace}
+\newcommand{\meter}{\ensuremath{\text{m}}\xspace}
 \newcommand{\km}{\ensuremath{\,\text{km}}\xspace}
 \newcommand{\ns}{\ensuremath{\,\text{ns}}\xspace}
 \newcommand{\mus}{\ensuremath{\,\mu\text{s}}\xspace}
@@ -68,6 +105,7 @@
 \newcommand{\PAGn}{\ensuremath{\overline{\nu}}\xspace} % generic neutrino
 
 % Particle combos.
+\newcommand{\pp}{\ensuremath{\mathrm{pp}}\xspace}
 \newcommand{\ee}{\ensuremath{\mathrm{e^+ e^-}}\xspace}
 
 \providecommand{\ttH}{\ensuremath{\Pqt\Paqt\PH}\xspace}

@@ -84,29 +84,35 @@ NEED SMOOTH TRANSITION INTO HCAL. What about those hadrons? They got through the
 % That's what we see here with the blue dashed line (the photon) and the red line (the positron).
 
 \subsection{Hadron Calorimeter}
+\label{subsec:hcal}
 
 % WHAT IT IS
 \textit{\textbf{What is it?}}
 The particles that survive the ECAL, typically only muons and hadrons, then enter the hadron calorimeter (HCAL).
-Its primary purpose is to absorb the hadronic matter emerging from the interaction point.
-The absorbed jet energies cause the HCAL to scintillate photons which are then converted into electrical signals.
+Its primary purpose is to absorb the hadronic matter emerging from the interaction point and measure the corresponding jet energies.
+The absorbed jets cause the HCAL to scintillate photons which are then converted into electrical signals.
 These signals are used to deduce the original jet energies and any missing transverse energy (\MET) from the event.
 % emit proportionally-energetic scintillated 
 
 % STRUCTURE
 \textit{\textbf{Structure:}}
 Dissimilar to the ECAL (subsec.~\ref{subsec:ecal}) in material composition but similar in shape, the HCAL is a brass cylindrical scintillator.
-So although it has a barrel (HB) and two endcaps (HE), the HCAL also has an outer calorimeter (HO), and a forward calorimeter (HF) close to the beam pipe.
-With a thickness of over $1~\meter$, the HB is sandwiched between the barrels of the ECAL and the solenoid (subsec.~\ref{sec:solenoid}) at radial values $r = 1.77~\meter$ and $r = 2.95~\meter$, respectively.
-Because the HB and HE are located within the solenoid's strong magnetic field of 3.8 T, they both were both constructed out of a non-magnetic absorber called \emph{C26000 cartridge brass}.
-This absorber has a density of 8.53 $\g/\cm^{3}$ and an interaction length $(\lambda_I)$ of 16.42~\cm, which yields approximately 7.2(?) $(\lambda_I)$ within the thickness of the HB.
+Although it has a barrel (HB) and two endcaps (HE), it has two more detectors than the ECAL: the outer calorimeter (HO) and the forward calorimeter (HF).
 The HB spans the pseudorapidity range $\abseta < 1.3$, the HE spans $1.3 < \abseta < 3$, and the HF spans $3 < \abseta < 5.2$, as shown in Figure~\ref{fig:hcal_quadrant}.
-Since the volume available to the HCAL is so limited, and in order to stop any particles that might traverse the entire HCAL and solenoid, the HO (the so-called ``tail catcher'') is situated outside the barrel of the solenoid.
-The HF is located 
+With a thickness of over $1\meter$, the HB is sandwiched between the barrels of the ECAL and the solenoid (subsec.~\ref{sec:solenoid}) at radial values $r = 1.77~\meter$ and $r = 2.95~\meter$, respectively.
+Because the HB and HE are located within the solenoid's strong magnetic field of 3.8 \tesla, they both were both constructed out of a non-magnetic absorber called \emph{C26000 cartridge brass}.
+This absorber has a density of 8.53 $\gram/\cm^{3}$ and an interaction length $(\lambda_I)$ of 16.42 \cm.
+The thickness of the HB increases as $1/\sin{\theta}$ so that at $\abseta = 0(1.3)$ the absorber thickness is $5.82(10.6)~\lambda_I$.
+The HB is composed of two half-barrels, where each half-barrel is built from 18 identical azimuthal wedges and each wedge spans 20$^\circ$.
+Each wedge is divided into four $\phi$ segments so that a single $\phi$ segment spans $\Delta \phi = 0.087$.
 
-How many layers?
-What is a tray?
-delta eta delta phi = (0.087, 0.087)
+Since the volume available to the HCAL is so limited, and in order to stop any particles that might traverse the entire HCAL and solenoid, the HO (the ``tail catcher'') is situated outside the barrel of the solenoid.
+The HF is located 11.2 \meter from the interaction point.
+
+All tiles within a single $\phi$ segment are grouped together into a single tray unit.
+The scintillator is also segmented into 16 $\eta$ sectors, the first(last) of which is located at $\abseta = 0(1.3)$.
+This way each tile covers $(\Delta \eta, \Delta \phi) = (0.087, 0.087)$.
+Each layer has 108 trays.
 
 %%%%%%%%%%%%%%%%%%%%
 % HCAL Quadrant
@@ -123,11 +129,15 @@ delta eta delta phi = (0.087, 0.087)
 
 % PHYSICS
 \textit{\textbf{Physics:}}
-Hadrons interact via the strong force with the Similar to the ECAL, the HCAL will scintillate in proportion to the amount of energy of the captured particle. 
+Since hadrons are the only particles to interact via the strong force, the HCAL is designed to have a high nuclear density.
+This ensures ample opportunity for hadrons to radiate gluons and convert  with the Similar to the ECAL, the HCAL will scintillate in proportion to the amount of energy of the captured particle. 
 The incoming hadrons will \emph{hadronize} (\ie, produce a hadronic shower), generating jets of quarks and gluons which are bound in various ways forming protons, neutrons, pions, kaons, \etc
 Interestingly, the HCAL is made using over a million old, brass shell casings from the Russian Navy back from World War II.
 % kinds of particles which have not decayed on their own or were not caught by the ECAL, ,  or when it catches hadronic material: stuff made of quarks, like . 
 
 About 34\% of the particles produced from LHC \pp collisions enter the HE region, so the HE was built to handle high rates (MHz).
 
-The entire HCAL utilizes approximately 70,000 tiles.
+The entire HCAL utilizes approximately 70,000 plastic scintillator tiles.
+The active material in the HB is 3.7-\mm-thick Kuraray SCSN81 plastic scintillator, selected for its radiation hardness and long-term stability.
+Hadron showers -> tiles scintillate -> scintillated photons are collected by 0.94-\mm-diameter green double-cladded wavelength shifting (WLS) fibers (Kuraray Y-11), which carry the light to hybrid photodiodes (HPD).
+

@@ -1,10 +1,9 @@
 \section{The Muon System}
 \label{sec:muon_sys}
 
-The muon detection system is one of the most important systems in CMS, which may seem odd since it is the farthest subdetector from the IP.
-The name Compact {\it Muon} Solenoid alludes to its importance.
+Although it is the farthest system from the interaction point, the muon system is one of the most important within the Compact \emph{Muon} Solenoid detector.
 %  is the {\bf Muon System} and is what puts the {\it Muon} in Compact {\it Muon} Solenoid.
-By the time particles make it out to the Muon System, CMS has filtered out nearly everything else: electrons, photons, and hadrons.
+Of the particles emerging from the interaction point, electrons and photons are absorbed by the ECAL (subsec.~\ref{subsec:ecal}), hadronic matter is absorbed by the HCAL (subsec.~\ref{subsec:hcal}), but muons are not stopped due to their relatively heavy mass (105.7 \MeV) for a lepton.
 The only \emph{detectable} particles remaining at this point are muons, which interestingly will travel way outside of CMS before decaying, upwards of 100s of kilometers before decaying to an electron and neutrino (neutrinos are the only particles which CMS can't explicitly detect).
 % We can only assume that we produced neutrinos when momentum is apparently not conserved in an event. 
 % When the protons collide at the IP they have nearly zero momentum perpendicular to the beam pipe. 
@@ -42,77 +41,77 @@ Since I have had hands-on experience working on CSCs, I will discuss the CSC com
 
 A cathode strip chambers (CSC) is a gaseous detector which specializes in muon detection. 
 {\bf Quick Mention:} The University of Florida has been one of the main contributors to the CSC system and was home to one of the testing and assembly facilities before shipping the CSCs off to CERN.
-The CSCs are found only on the endcaps of CMS and each endcap holds 270 CSCs (Fig~\ref{fig:CMS_endcap}). 
+The CSCs are found only on the endcaps of CMS and each endcap holds 270 CSCs (Fig~\ref{fig:cms_endcap}). 
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{Figures/CSC_endcap_cutaway.png}
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{Figures/CSC_endcap_real.png}
+\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_cutaway.png}
+\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_real.png}
     \caption{
     (Left) A cut out view of the ME+ endcap, simulated. Also shown is the coordinate system that CMS uses.
     (Right) The actual ME-2 disk is shown, revealing its ME-2/1 and ME-2/2 rings of CSCs.
     }
-    \label{fig:CMS_endcap}
+    \label{fig:cms_endcap}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 Each CSC cost about \$100,000 to make, so very quickly this becomes an expensive project.
 They are trapezoidal in shape and are composed of 6 layers filled with gas.
-The gas surrounds wires and strips which are put under 3,600 V to aid in muon detection as explained below (Fig.~\ref{fig:CSC_guts}). 
+The gas surrounds wires and strips which are put under 3,600 V to aid in muon detection as explained below (Fig.~\ref{fig:csc_guts}). 
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{Figures/CSC_cutaway_view_new.png}
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{Figures/CSC_stripsandwires.png}
+\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_cutaway_view_new.png}
+\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_stripsandwires.png}
     \caption{
     (Left) A CSC with its top layer exposed. You can see very thin gold-plated tungsten wires which actually span the entire width of the CSC. 
     Thicker vertical strips run along the length.
     (Right) More detail showing the radial strips and the horizontal wires. Also shown is the 5 segments of a CSC.
     }
-    \label{fig:CSC_guts}
+    \label{fig:csc_guts}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
-The gaseous mixture of ${\rm Ar:CO_{2}:CF_{4} }$ in the ratio of $5:4:1$ has been specially designed to maximize the lifetime of the CSC as it endures radiation damage over the years. 
+The gaseous mixture of $\mathrm{Ar:CO_{2}:CF_{4}}$ in the ratio of $5:4:1$ has been specially designed to maximize the lifetime of the CSC as it endures radiation damage over the years. 
 In each layer, the gas mixture surrounds approximately 80 copper strips, each about 1 cm wide that span radially away from the IP.
 Also inside the layers are over 1,000 gold-plated tungsten wires, which run azimuthally in the CMS coordinate system.
 When the strips and wires detect muons they provide an (x,y) coordinate system to track the muon. 
 As the muon passes through the remaining layers of the CSC, this provides a z coordinate as well, giving the Muon System the ability to ``see'' the full muon trajectory.
 % In conjunction with the Silicon Tracker measurements, muon momentum can be measured to a precision of 
 
-{\bf Labelling the CSCs:} 
+\textbf{Labelling the CSCs:} 
 The two endcaps are labelled as ``ME+'' and ``ME-'', depending on in which z-direction they sit. 
 Since they are structurally the same, let's focus on the ME+ endcap for a moment. 
 The ME+ endcap has four disks, where ME+1 is the first disk, the one closest to the IP, and ME+4 is the fourth and farthest away. 
 Similarly for the ME$-$ endcap. 
-Then, within each disk, there are either two or three ``rings'' of CSCs, as shown in Fig~\ref{fig:CMS_long_view_subdetectors} (green).
+Then, within each disk, there are either two or three ``rings'' of CSCs, as shown in Fig~\ref{fig:cms_long_view_subdetectors} (green).
 These rings are labelled like ME+2/1, which would indicate the second disk and the first (innermost) ring, radially closest to the IP.
-All rings contain 36 CSCs, except for ME${\rm \pm X}$/1, for $\x=$ 2,3,4, which contain only 18 CSCs.
+All rings contain 36 CSCs, except for ME$\pm X$/1, for $X=$ 2,3,4, which contain only 18 CSCs.
 Finally, the CSCs are given one, last number to label them on the ring:
 the CSC that sits along the positive x-axis in CMS's coordinate system is given the number ``01'', \eg\ ME+4/2/01. 
-The CSCs are then incrementally numbered as you go around in a positive azimuthal direction.
+The CSCs are then numbered incrementally following the positive azimuthal direction.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
-\includegraphics[width=15cm,height=10cm,keepaspectratio]{Figures/CMS_longitudinal_view.png}
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/cms_longitudinal_view.png}
     \caption{
     Longitudinal cross section of CMS, showing the different pseudorapidity values ($\eta$) and also the different subdetector regions.
     }
-    \label{fig:CMS_long_view_subdetectors}
+    \label{fig:cms_long_view_subdetectors}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 
 {\bf Detecting Muons:}
-When a muon passes through a layer of a CSC, it has the chance to ionize an Ar atom (Fig.~\ref{fig:e_avalanche}).
+When a muon passes through a layer of a CSC, it has the chance to ionize an Ar atom (Fig.~\ref{fig:elec_avalanche}).
 Since the wires are under high voltage (3,600 V), the ionized electron accelerates towards the positively-charged wire, and in doing so it ionizes many Ar atoms which are along its path. 
 Starting from just a single electron, the multiplicity can go as high as 100,000 ionized electrons, thereby creating what is known as an electron avalanche. 
 This phenomenon is called ``gas gain''.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
-\includegraphics[width=15cm,height=10cm,keepaspectratio]{Figures/CSC_elec_avalanche_old.png}
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_elec_avalanche_old.png}
     \caption{
     A muon passes through one of the gaseous layers of the CSC, ionizing the gas mixture and inducing a charge on the wires and strips. 
     }
-    \label{fig:e_avalanche}
+    \label{fig:elec_avalanche}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 The electrons travel onto the wire and become an electrical signal which then gets sent to the anode front-end boards (AFEBs) for further signal processing.
@@ -122,7 +121,7 @@ Therefore, comparator logic is implemented to narrow down the precision to the o
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
-\includegraphics[width=15cm,height=10cm,keepaspectratio]{Figures/CSC_comparators_and_strips.png}
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_comparators_and_strips.png}
     \caption{
     (Left) Comparators are used to compare neighboring strip cluster charge to determine on which half-strip the peak charge resided.
     (Right) A muon passes through all six layers of a CSC inducing charge on various half-strips.

@@ -3,60 +3,41 @@
 
 Although it is the farthest system from the interaction point, the muon system is one of the most important within the Compact \emph{Muon} Solenoid detector.
 %  is the {\bf Muon System} and is what puts the {\it Muon} in Compact {\it Muon} Solenoid.
-Of the particles emerging from the interaction point, electrons and photons are absorbed by the ECAL (subsec.~\ref{subsec:ecal}), hadronic matter is absorbed by the HCAL (subsec.~\ref{subsec:hcal}), but muons are not stopped due to their relatively heavy mass (105.7 \MeV) for a lepton.
-The only \emph{detectable} particles remaining at this point are muons, which interestingly will travel way outside of CMS before decaying, upwards of 100s of kilometers before decaying to an electron and neutrino (neutrinos are the only particles which CMS can't explicitly detect).
-% We can only assume that we produced neutrinos when momentum is apparently not conserved in an event. 
-% When the protons collide at the IP they have nearly zero momentum perpendicular to the beam pipe. 
-% This is called transverse momentum, because it's well... transverse to the beam pipe, the z direction.
-% If we track, tag, capture all the outgoing particles and reconstruct their transverse momenta, 
-% if we find out that it is NOT zero by a large amount, then we say that 
-
-The main purpose of the Muon System is to precisely determine the position and timing of muons.
-% \begin{enumerate}
-%     \item 
-%     % for offline analysis.
-%     \item Generate muon trigger primitives for the Level-1 trigger system.
-% \end{enumerate}
-Similar to the Silicon Tracker, the Muon System doesn't try to capture the muons passing through it;
-instead it just tracks their positions. 
-% In fact our very own Andrey, Guenakh, and Darin have been instrumental in implementing CSCs. 
-% There's also an assembly hall downstairs where CSCs were constructed and tested 
-% The  specializes muons. Au contraire; it \textit{specializes} in muon detection. 
-% The Compact \textit{Muon} Solenoid would be a pretty hypocritical name if CMS did not detect muons. Au contraire; it \textit{specializes} in muon detection. 
-% P
-%It would be an ironic name if it did not detect muons well. 
-The Muon System is comprised of three kinds of gaseous detectors: 
+Of the particles emerging from the interaction point, electrons and photons are absorbed by the ECAL (subsec.~\ref{subsec:ecal}) and hadronic matter is absorbed by the HCAL (subsec.~\ref{subsec:hcal}).
+This kind of filtration process leaves only neutrinos and muons to enter the muon system, which is the outermost detector situated past the solenoid (sec.~\ref{sec:solenoid}).
+As mentioned in
+% section~\ref{sec:sm}
+, neutrinos are the only weakly-interacting, electrically-neutral SM particles making them incredibly difficult to detect directly.
+MENTION LIGHTYEAR OF IRON.
+Thus, the detection of neutrinos is inferred via \MET on a per-event basis.
+Muons, on the other hand, have a heavy mass of 105.7 \MeV (relatively, for a weakly-interacting, electrically-charged particle) and live a billion-billion times longer than a Higgs boson (the average lifetime of a muonn is: $\tau_{\mu} = 2.2 \times 10^{-6}$ s.)
+% which interestingly will travel way outside of CMS before decaying, upwards of 100s of kilometers before decaying to an electron and neutrino (neutrinos are the only particles which CMS can't explicitly detect).
+These properties are what have helped shape the muon system to consist of its four main subdetectors, each of which is described in the following subsections:
 \begin{enumerate}
-    \item {\bf Drift Tubes} (DTs) found in the barrel.
-    \item {\bf Resistive Plate Chambers} (RPCs) found in both the barrel and endcap.
-    \item {\bf Cathode Strip Chambers} (CSCs) found only in the endcap.
+    \item CSC (cathode strip chambers, subsec.~\ref{subsec:csc})
+    \item DT (drift tubes, subsec.~\ref{subsec:dt})
+    \item RPC (resistive plate chambers, subsec.~\ref{subsec:rpc})
+    \item GEM (gas electron multiplier, subsec.~\ref{subsec:gem}).
 \end{enumerate}
-Each of these technologies is constructed differently and was designed with a specific purpose. 
-% In Chapter~\ref{ch:CSC}, the inner-workings of the CSCs are explained.
 
-This concludes the overall design and purpose of the subdetectors that make up CMS.
-Since I have had hands-on experience working on CSCs, I will discuss the CSC components and how it works in more detail in the subsection below.
+\subsection{Cathode Strip Chambers}
+\label{subsec:csc}
 
-\subsection{Let Me See These CSCs}
+\textbf{What is it?}
+Found exclusively in the two muon system endcaps, the 540 cathode strip chambers (CSCs) are arranged azimuthally with the sole purpose of detecting muons.
+They are multi-wire proportional chambers which detect muons based on the ionization of the inner gas mixture.
+The ionized electron is under high voltage (HV) which causes the electron to ionize nearby gaseous atoms.
+This generates an electron avalanche which is collected by metal strips and converted into a signal which gives precise position coordinates about where the initial muon entered the CSC.
 
-A cathode strip chambers (CSC) is a gaseous detector which specializes in muon detection. 
-{\bf Quick Mention:} The University of Florida has been one of the main contributors to the CSC system and was home to one of the testing and assembly facilities before shipping the CSCs off to CERN.
-The CSCs are found only on the endcaps of CMS and each endcap holds 270 CSCs (Fig~\ref{fig:cms_endcap}). 
-%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[pbth]
-\centering
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_cutaway.png}
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_real.png}
-    \caption{
-    (Left) A cut out view of the ME+ endcap, simulated. Also shown is the coordinate system that CMS uses.
-    (Right) The actual ME-2 disk is shown, revealing its ME-2/1 and ME-2/2 rings of CSCs.
-    }
-    \label{fig:cms_endcap}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%
-Each CSC cost about \$100,000 to make, so very quickly this becomes an expensive project.
-They are trapezoidal in shape and are composed of 6 layers filled with gas.
-The gas surrounds wires and strips which are put under 3,600 V to aid in muon detection as explained below (Fig.~\ref{fig:csc_guts}). 
+\textbf{Structure:}
+Each CSC is trapezoidal in shape, composed of six gas gaps (or \emph{layers}), and each layer is filled with GAS.
+In each layer, the gas mixture surrounds approximately 80 copper strips, each about 1\cm wide that spans radially away from the IP.
+Orthogonal to the strips
+% (except in the CSCs closest to the interaction point)
+are over 1,000 gold-plated tungsten wires, which run azimuthally to the beam pipe.
+filled with a carefully prepared gaseous mixture of $\mathrm{Ar:CO_{2}:CF_{4}}$ in the ratio $5:4:1$ maximize the lifetime of the CSCs as they endure radiation damage through years of use.
+
+In each layer, the gas surrounds the wires and strips which are put under 3,600 V to aid in muon detection as explained below (Fig.~\ref{fig:csc_guts}). 
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
@@ -70,23 +51,34 @@ The gas surrounds wires and strips which are put under 3,600 V to aid in muon de
     \label{fig:csc_guts}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
-The gaseous mixture of $\mathrm{Ar:CO_{2}:CF_{4}}$ in the ratio of $5:4:1$ has been specially designed to maximize the lifetime of the CSC as it endures radiation damage over the years. 
-In each layer, the gas mixture surrounds approximately 80 copper strips, each about 1 cm wide that span radially away from the IP.
-Also inside the layers are over 1,000 gold-plated tungsten wires, which run azimuthally in the CMS coordinate system.
-When the strips and wires detect muons they provide an (x,y) coordinate system to track the muon. 
-As the muon passes through the remaining layers of the CSC, this provides a z coordinate as well, giving the Muon System the ability to ``see'' the full muon trajectory.
 % In conjunction with the Silicon Tracker measurements, muon momentum can be measured to a precision of 
 
-\textbf{Labelling the CSCs:} 
-The two endcaps are labelled as ``ME+'' and ``ME-'', depending on in which z-direction they sit. 
-Since they are structurally the same, let's focus on the ME+ endcap for a moment. 
+% {\bf Quick Mention:} The University of Florida has been one of the main contributors to the CSC system and was home to one of the testing and assembly facilities before shipping the CSCs off to CERN.
+The CSCs are found only on the endcaps of CMS and each endcap holds 270 CSCs (Fig~\ref{fig:cms_endcap}).
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_cutaway.png}
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_real.png}
+        \caption{
+        (Left) A simulated cut out view of the ME+ endcap, with the coordinate system of CMS in the top-left corner.
+        (Right) The actual ME-2 disk of CMS is shown, revealing its ME-2/1 and ME-2/2 rings of CSCs.
+        }
+        \label{fig:cms_endcap}
+    \end{figure}
+    %%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Labelling the CSCs} 
+
+The two endcaps are labelled as ``ME+'' and ``ME-'', depending on whether they are situated in the +$z$ direction or -$z$.
+Both endcaps are structurally symmetric, so it is sufficient to discuss only one in detail.
 The ME+ endcap has four disks, where ME+1 is the first disk, the one closest to the IP, and ME+4 is the fourth and farthest away. 
-Similarly for the ME$-$ endcap. 
-Then, within each disk, there are either two or three ``rings'' of CSCs, as shown in Fig~\ref{fig:cms_long_view_subdetectors} (green).
-These rings are labelled like ME+2/1, which would indicate the second disk and the first (innermost) ring, radially closest to the IP.
+Then, within each disk, there are either two or three ``rings'' of CSCs, as shown in Fig.~\ref{fig:cms_long_view_subdetectors} (green).
+These rings are labelled as ME+$D$/$R$, where $D$ indicates the disk number and $R$ indicates the ring number.
+As an example, ME+2/1 refers to the second disk and the first (innermost) ring, which is the CSC radially closest to the IP.
 All rings contain 36 CSCs, except for ME$\pm X$/1, for $X=$ 2,3,4, which contain only 18 CSCs.
-Finally, the CSCs are given one, last number to label them on the ring:
-the CSC that sits along the positive x-axis in CMS's coordinate system is given the number ``01'', \eg\ ME+4/2/01. 
+Finally, the CSCs are given one final number to label them on the ring:
+the CSC that sits along the positive x-axis in CMS's coordinate system is given the number ``01'', \eg ME+4/2/01. 
 The CSCs are then numbered incrementally following the positive azimuthal direction.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
@@ -99,7 +91,7 @@ The CSCs are then numbered incrementally following the positive azimuthal direct
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 
-{\bf Detecting Muons:}
+\textbf{Physics:}
 When a muon passes through a layer of a CSC, it has the chance to ionize an Ar atom (Fig.~\ref{fig:elec_avalanche}).
 Since the wires are under high voltage (3,600 V), the ionized electron accelerates towards the positively-charged wire, and in doing so it ionizes many Ar atoms which are along its path. 
 Starting from just a single electron, the multiplicity can go as high as 100,000 ionized electrons, thereby creating what is known as an electron avalanche. 
@@ -137,6 +129,14 @@ he wires and strips provide (x,y)-coordinates, and as the muon passes through th
 Depending on how many hits were recorded by the CSC will determine if a muon event was significant enough to be registered as a real muon. 
 If so, then its precise positions on the wires and strips will be read out by the Data Acquisition (DAQ) system and be stored for further data analysis.
 
+When the strips and wires detect muons they provide an (x,y) coordinate system to track the muon. 
+As the muon passes through the remaining layers of the CSC, this provides a z coordinate as well, giving the Muon System the ability to ``see'' the full muon trajectory.
+
+
+% Each CSC cost about \$100,000 to make, so very quickly this becomes an expensive project.
+
+
+
 % \subsection{Endcap Muon Electronics}
 % In order to conclude that a muon definitely passed by the muon detectors, a very sophisticated electronics system has been developed. 
 
@@ -154,11 +154,55 @@ If so, then its precise positions on the wires and strips will be read out by th
 % This is the job of the L1 trigger and and the High-Level Trigger. 
 % I'm not going to explain any more of this because it is an extremely sophisticated system. 
 
-\subsection{Drift Tube Chambers}
-\label{subsec:drifttube}
 
-\subsection{Cathode Strip Chambers}
-\label{subsec:csc}
+\subsection{Drift Tube Chambers}
+\label{subsec:dt}
 
 \subsection{Resistive Plate Chambers}
 \label{subsec:rpc}
+
+\subsection{Gas Electron Multipliers (GEM)}
+\label{subsec:gem}
+
+
+Located in the forward region.
+Filled with Ar/CO2 gas mixture.
+The first GEMs At the time of this dissertation writing, 
+
+
+
+
+
+
+% We can only assume that we produced neutrinos when momentum is apparently not conserved in an event. 
+% When the protons collide at the IP they have nearly zero momentum perpendicular to the beam pipe. 
+% This is called transverse momentum, because it's well... transverse to the beam pipe, the z direction.
+% If we track, tag, capture all the outgoing particles and reconstruct their transverse momenta, 
+% if we find out that it is NOT zero by a large amount, then we say that 
+
+% The main purpose of the Muon System is to precisely determine the position and timing of muons.
+% \begin{enumerate}
+%     \item 
+%     % for offline analysis.
+%     \item Generate muon trigger primitives for the Level-1 trigger system.
+% \end{enumerate}
+% Similar to the Silicon Tracker, the Muon System doesn't try to capture the muons passing through it;
+% instead it just tracks their positions. 
+% In fact our very own Andrey, Guenakh, and Darin have been instrumental in implementing CSCs. 
+% There's also an assembly hall downstairs where CSCs were constructed and tested 
+% The  specializes muons. Au contraire; it \textit{specializes} in muon detection. 
+% The Compact \textit{Muon} Solenoid would be a pretty hypocritical name if CMS did not detect muons. Au contraire; it \textit{specializes} in muon detection. 
+% P
+%It would be an ironic name if it did not detect muons well. 
+
+% The Muon System is comprised of three kinds of gaseous detectors: 
+% \begin{enumerate}
+%     \item {\bf Drift Tubes} (DTs) found in the barrel.
+%     \item {\bf Resistive Plate Chambers} (RPCs) found in both the barrel and endcap.
+%     \item {\bf Cathode Strip Chambers} (CSCs) found only in the endcap.
+% \end{enumerate}
+% Each of these technologies is constructed differently and was designed with a specific purpose. 
+% In Chapter~\ref{ch:CSC}, the inner-workings of the CSCs are explained.
+
+% This concludes the overall design and purpose of the subdetectors that make up CMS.
+% Since I have had hands-on experience working on CSCs, I will discuss the CSC components and how it works in more detail in the subsection below.

@@ -4,57 +4,56 @@
 Although it is the farthest system from the interaction point, the muon system is one of the most important within the Compact \emph{Muon} Solenoid detector.
 %  is the {\bf Muon System} and is what puts the {\it Muon} in Compact {\it Muon} Solenoid.
 Of the particles emerging from the interaction point, electrons and photons are absorbed by the ECAL (subsec.~\ref{subsec:ecal}) and hadronic matter is absorbed by the HCAL (subsec.~\ref{subsec:hcal}).
-This kind of filtration process leaves only neutrinos and muons to enter the muon system, which is the outermost detector situated past the solenoid (sec.~\ref{sec:solenoid}).
+This filtration process leaves only neutrinos and muons to enter the muon system, which is the outermost detector situated past the solenoid (sec.~\ref{sec:solenoid}).
 As mentioned in
 % section~\ref{sec:sm}
-, neutrinos are the only weakly-interacting, electrically-neutral SM particles making them incredibly difficult to detect directly.
-MENTION LIGHTYEAR OF IRON.
-Thus, the detection of neutrinos is inferred via \MET on a per-event basis.
-Muons, on the other hand, have a heavy mass of 105.7 \MeV (relatively, for a weakly-interacting, electrically-charged particle) and live a billion-billion times longer than a Higgs boson (the average lifetime of a muonn is: $\tau_{\mu} = 2.2 \times 10^{-6}$ s.)
+, neutrinos are the only weakly-interacting, electrically-neutral SM particles which makes them incredibly difficult to detect directly.
+In fact, neutrinos interact with normal matter so little that a light-year (9.46 trillion~\km) of lead would only stop half of the neutrinos moving through it.
+Thus, the detection of neutrinos produced from \pp collisions is inferred via \MET on a per-event basis.
+Muons, on the other hand, have a mass of 105.7 \MeV (relatively heavy for a weakly-interacting, electrically-charged particle) and live a billion-billion times longer than a Higgs boson: the average lifetime of a muon is $\tau_{\mu} = 2.2 \times 10^{-6}$ s.
 % which interestingly will travel way outside of CMS before decaying, upwards of 100s of kilometers before decaying to an electron and neutrino (neutrinos are the only particles which CMS can't explicitly detect).
-These properties are what have helped shape the muon system to consist of its four main subdetectors, each of which is described in the following subsections:
+These properties are what determined the properties of the muon system within CMS to consist of its four main subdetectors, each of which is described in the following subsections:
 \begin{enumerate}
-    \item CSC (cathode strip chambers, subsec.~\ref{subsec:csc})
-    \item DT (drift tubes, subsec.~\ref{subsec:dt})
-    \item RPC (resistive plate chambers, subsec.~\ref{subsec:rpc})
+    \item CSC (cathode strip chambers, subsec.~\ref{subsec:csc}),
+    \item DT (drift tubes, subsec.~\ref{subsec:dt}),
+    \item RPC (resistive plate chambers, subsec.~\ref{subsec:rpc}),
     \item GEM (gas electron multiplier, subsec.~\ref{subsec:gem}).
 \end{enumerate}
 
 \subsection{Cathode Strip Chambers}
 \label{subsec:csc}
 
-\textbf{What is it?}
-Found exclusively in the two muon system endcaps, the 540 cathode strip chambers (CSCs) are arranged azimuthally with the sole purpose of detecting muons.
-They are multi-wire proportional chambers which detect muons based on the ionization of the inner gas mixture.
-The ionized electron is under high voltage (HV) which causes the electron to ionize nearby gaseous atoms.
-This generates an electron avalanche which is collected by metal strips and converted into a signal which gives precise position coordinates about where the initial muon entered the CSC.
+\textit{\textbf{What is it?}}
+A cathode strip chamber (CSC) is a multi-wire proportional chamber capable of precisely measuring the position of muons which enter and ionize the gas within.
+The CSCs are found exclusively in the two endcaps of the muon system, with each endcap bearing 270 CSCs (Fig~\ref{fig:cms_endcap}).
+The chambers are arranged azimuthally around the beam pipe in four with the sole purpose of detecting muons and providing precise position measurements.
 
-\textbf{Structure:}
-Each CSC is trapezoidal in shape, composed of six gas gaps (or \emph{layers}), and each layer is filled with GAS.
-In each layer, the gas mixture surrounds approximately 80 copper strips, each about 1\cm wide that spans radially away from the IP.
+\textit{\textbf{Structure:}}
+Each CSC is trapezoidal in shape, composed of six gas gaps (or \emph{layers}), and each layer is filled with a carefully prepared gaseous mixture\footnote{
+    The gas mix ratio of $\mathrm{Ar:CO_{2}:CF_{4}}$ $(5:4:1)$ was chosen to maximize the lifetime of the CSCs as they endure radiation damage through years of use.
+    }
+of $\mathrm{Ar:CO_{2}:CF_{4}}$ (Fig.~\ref{fig:csc_guts}).
+In each layer, the gas mixture surrounds approximately 80 copper strips, each of which spans radially away from the interaction point and is about 1~\cm wide.
 Orthogonal to the strips
 % (except in the CSCs closest to the interaction point)
 are over 1,000 gold-plated tungsten wires, which run azimuthally to the beam pipe.
-filled with a carefully prepared gaseous mixture of $\mathrm{Ar:CO_{2}:CF_{4}}$ in the ratio $5:4:1$ maximize the lifetime of the CSCs as they endure radiation damage through years of use.
-
-In each layer, the gas surrounds the wires and strips which are put under 3,600 V to aid in muon detection as explained below (Fig.~\ref{fig:csc_guts}). 
+The largest CSCs are 3.4~\meter long as measured along a strip and 1.5~\meter wide as measured along a wire.
+The CSCs are arranged in rings as described in subsec.~\ref{subsubsec:csc_numbering} and subtend either 10$^\circ$ or 20$^\circ$ in $\Delta\phi$.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
-\centering
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_cutaway_view_new.png}
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_stripsandwires.png}
-    \caption{
-    (Left) A CSC with its top layer exposed. You can see very thin gold-plated tungsten wires which actually span the entire width of the CSC. 
-    Thicker vertical strips run along the length.
-    (Right) More detail showing the radial strips and the horizontal wires. Also shown is the 5 segments of a CSC.
-    }
-    \label{fig:csc_guts}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%
+    \centering
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_cutaway_view_new.png}
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_stripsandwires.png}
+        \caption{
+        (Left) A CSC with its top layer exposed. You can see very thin gold-plated tungsten wires which actually span the entire width of the CSC. 
+        Thicker vertical strips run along the length.
+        (Right) More detail showing the radial strips and the horizontal wires. Also shown is the 5 segments of a CSC.
+        }
+        \label{fig:csc_guts}
+    \end{figure}
+    %%%%%%%%%%%%%%%%%%%%
 % In conjunction with the Silicon Tracker measurements, muon momentum can be measured to a precision of 
-
 % {\bf Quick Mention:} The University of Florida has been one of the main contributors to the CSC system and was home to one of the testing and assembly facilities before shipping the CSCs off to CERN.
-The CSCs are found only on the endcaps of CMS and each endcap holds 270 CSCs (Fig~\ref{fig:cms_endcap}).
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
     \centering
@@ -68,8 +67,8 @@ The CSCs are found only on the endcaps of CMS and each endcap holds 270 CSCs (Fi
     \end{figure}
     %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Labelling the CSCs} 
-
+\subsubsection{Numbering the CSCs}
+\label{subsubsec:csc_numbering}
 The two endcaps are labelled as ``ME+'' and ``ME-'', depending on whether they are situated in the +$z$ direction or -$z$.
 Both endcaps are structurally symmetric, so it is sufficient to discuss only one in detail.
 The ME+ endcap has four disks, where ME+1 is the first disk, the one closest to the IP, and ME+4 is the fourth and farthest away. 
@@ -78,7 +77,7 @@ These rings are labelled as ME+$D$/$R$, where $D$ indicates the disk number and 
 As an example, ME+2/1 refers to the second disk and the first (innermost) ring, which is the CSC radially closest to the IP.
 All rings contain 36 CSCs, except for ME$\pm X$/1, for $X=$ 2,3,4, which contain only 18 CSCs.
 Finally, the CSCs are given one final number to label them on the ring:
-the CSC that sits along the positive x-axis in CMS's coordinate system is given the number ``01'', \eg ME+4/2/01. 
+the CSC that sits along the positive $x$-axis in CMS's coordinate system is given the number ``01'', \eg ME+4/2/01. 
 The CSCs are then numbered incrementally following the positive azimuthal direction.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
@@ -91,7 +90,11 @@ The CSCs are then numbered incrementally following the positive azimuthal direct
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 
-\textbf{Physics:}
+\textit{\textbf{Physics:}}
+The ionized electron is under high voltage (HV) which causes the electron to accelerate towards a CSC strip.
+The accelerating electron collides with nearby gaseous atoms, which ionizes even more electrons.
+This generates an electron avalanche which is collected by metal strips and is converted into a signal to give precise position coordinates about where the initial muon entered the CSC.
+
 When a muon passes through a layer of a CSC, it has the chance to ionize an Ar atom (Fig.~\ref{fig:elec_avalanche}).
 Since the wires are under high voltage (3,600 V), the ionized electron accelerates towards the positively-charged wire, and in doing so it ionizes many Ar atoms which are along its path. 
 Starting from just a single electron, the multiplicity can go as high as 100,000 ionized electrons, thereby creating what is known as an electron avalanche. 
@@ -107,9 +110,9 @@ This phenomenon is called ``gas gain''.
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 The electrons travel onto the wire and become an electrical signal which then gets sent to the anode front-end boards (AFEBs) for further signal processing.
-The ionized Ar$^+$ will similarly distribute a charge signal on the negative strips. 
-This cluster of charge is much more widely spread over the strips compared to the charge on the wires.
-Therefore, comparator logic is implemented to narrow down the precision to the order of 100 $\mu$m by using half-strip information (Fig.~\ref{fig:comparators}).
+The ionized Ar$^+$ will similarly distribute a charge signal on the negative strips.
+This cluster of charge is more widely spread over the strips compared to the charge on the wires.
+Therefore, comparator logic is implemented to narrow down the precision to the order of 100~$\mum$ by using half-strip information (Fig.~\ref{fig:comparators}).
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
@@ -122,20 +125,17 @@ Therefore, comparator logic is implemented to narrow down the precision to the o
     \label{fig:comparators}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
-
 The muon will continue passing through the next 5 layers, repeating the process of ionizing the gas mixture, and depositing an electrical signal on the wires. 
-he wires and strips provide (x,y)-coordinates, and as the muon passes through the CSC, the other layers provide a z-coordinate, revealing the path of the muon.
+The wires and strips provide $(x,y)$-coordinates, and as the muon passes through the CSC, the other layers provide a $z$-coordinate.
+Taken together, this information generates a three-dimensional trajectory of the muon.
 % The AFEBs then digitize this analog signal using ADCs and 
 Depending on how many hits were recorded by the CSC will determine if a muon event was significant enough to be registered as a real muon. 
 If so, then its precise positions on the wires and strips will be read out by the Data Acquisition (DAQ) system and be stored for further data analysis.
 
-When the strips and wires detect muons they provide an (x,y) coordinate system to track the muon. 
-As the muon passes through the remaining layers of the CSC, this provides a z coordinate as well, giving the Muon System the ability to ``see'' the full muon trajectory.
-
-
+When a CSC is taking live data it can resolve approximately 2~$\mm$ in $r$-$\phi$, whereas during offline analysis the resolution improves by a factor of more than 20:
+the ME1/1 and ME1/2 chambers achieve a resolution of 75~$\mum$ in $r$-$\phi$ and the others achieve 150~$\mum$.
+A CSC can accommodate up to 1 KHz/$\cm^2$.
 % Each CSC cost about \$100,000 to make, so very quickly this becomes an expensive project.
-
-
 
 % \subsection{Endcap Muon Electronics}
 % In order to conclude that a muon definitely passed by the muon detectors, a very sophisticated electronics system has been developed. 

@@ -23,22 +23,65 @@ These properties are what determined the properties of the muon system within CM
 \subsection{Cathode Strip Chambers}
 \label{subsec:csc}
 
-\textit{\textbf{What is it?}}
+\textit{\textbf{Overview:}}
 A cathode strip chamber (CSC) is a multi-wire proportional chamber capable of precisely measuring the position of muons which enter and ionize the gas within.
-The CSCs are found exclusively in the two endcaps of the muon system, with each endcap bearing 270 CSCs (Fig~\ref{fig:cms_endcap}).
-The chambers are arranged azimuthally around the beam pipe in four with the sole purpose of detecting muons and providing precise position measurements.
+Spatial coordinates are obtained by the collection of electrical signals along the cathode strips $(\phi)$, anode wires $(r)$, and across multiple CSC layers $(z)$.
+CSCs are found exclusively on the two endcaps of CMS, with each endcap bearing 270 chambers (Fig~\ref{fig:cms_endcap}).
+The chambers are arranged azimuthally around the beam pipe in four disks per endcap allowing for contiguous coverage in $\phi$.
+In total, the CSC system provides an effective detection area of about 5,000$~\meter^2$, has a total gas volume that exceeds $>50~\meter^{3}$, and contains over 400,000 read-out channels.
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_cutaway.png}
+    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_real.png}
+        \caption{
+        (Left) A simulated cut out view of the ME+ endcap, with the coordinate system of CMS in the top-left corner.
+        (Right) The actual ME-2 disk of CMS is shown, revealing its ME-2/1 and ME-2/2 rings of CSCs.
+        }
+    \label{fig:cms_endcap}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%
 
-\textit{\textbf{Structure:}}
-Each CSC is trapezoidal in shape, composed of six gas gaps (or \emph{layers}), and each layer is filled with a carefully prepared gaseous mixture\footnote{
-    The gas mix ratio of $\mathrm{Ar:CO_{2}:CF_{4}}$ $(5:4:1)$ was chosen to maximize the lifetime of the CSCs as they endure radiation damage through years of use.
+\textit{\textbf{Design:}}
+Each CSC is trapezoidal in shape with its narrow end pointed toward the beam pipe (Fig.~\ref{fig:csc_guts}, Left).
+The chambers are arranged in rings and each chamber subtends either 10$^\circ$ or 20$^\circ$ in $\phi$, as described in subsubsec.~\ref{subsubsec:csc_numbering}.
+The CSCs cover the pseudorapidity range of $0.9 < \abseta < 2.4$ (Fig.~\ref{fig:cms_long_view_subdetectors}).
+%%%%%%%%%%%%%%%%%%%%
+% Longitudinal cross section
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/cms_longitudinal_view.png}
+        \caption{
+        Longitudinal cross section of CMS, showing the different pseudorapidity values ($\eta$) and also the different subdetector regions.
+        }
+        \label{fig:cms_long_view_subdetectors}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%
+A single CSC is composed of six layers (or \emph{gas gaps}), each of which is filled with a carefully prepared gaseous mixture\footnote{
+    The gas mixture ratio of Ar:CO$_{2}$:CF$_{4}$ was chosen to be 5:4:1 to maximize the lifetime of the CSCs as they endure radiation damage through years of use.
+    The CO$_{2}$ is used as a non-flammable quencher to reach even larger electron multiplicities, while the CF$_{4}$ helps prevent polymerization along (aging of) the wires.
     }
-of $\mathrm{Ar:CO_{2}:CF_{4}}$ (Fig.~\ref{fig:csc_guts}).
-In each layer, the gas mixture surrounds approximately 80 copper strips, each of which spans radially away from the interaction point and is about 1~\cm wide.
-Orthogonal to the strips
+of Ar:CO$_{2}$:CF$_{4}$ (Fig.~\ref{fig:csc_separatelayers}).
+The gas mixture flows from one layer to the next in a zigzag manner and has a flow rate of ???.
+Within every layer, the gas mixture surrounds approximately 80 copper strips, each of which spans radially away from the interaction point.
+A single strip is about 8.4~\mm wide at the narrower end of the CSC, about 16~\mm at the wider end, and is separated from its neighboring strip by about 0.5~\mm.
+Per layer, the inner gas also surrounds over 1,000 gold-plated tungsten wires, which are oriented azimuthally (so approximately orthogonal to the strips).
 % (except in the CSCs closest to the interaction point)
-are over 1,000 gold-plated tungsten wires, which run azimuthally to the beam pipe.
+Each wire is approximately 50~\mum in diameter and separated from its neighboring wire by about 3.2~\mm.
+A collection of 16 consecutive wires forms a \emph{wire group}, which is about 5~\cm wide and creates a single anode read-out channel.
+A single wire plane has five independently controlled HV segments (Fig.~\ref{fig:csc_guts}, Right).
 The largest CSCs are 3.4~\meter long as measured along a strip and 1.5~\meter wide as measured along a wire.
-The CSCs are arranged in rings as described in subsec.~\ref{subsubsec:csc_numbering} and subtend either 10$^\circ$ or 20$^\circ$ in $\Delta\phi$.
+% CSC separated layers.
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_separatedlayers.jpeg}
+        \caption{
+        Exploded view of the cross section of a CSC showing how the 7 panels come together to form the 6 gas gaps between the panels.
+        }
+        \label{fig:csc_separatelayers}
+\end{figure}
+% CSC guts.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
     \centering
@@ -50,69 +93,34 @@ The CSCs are arranged in rings as described in subsec.~\ref{subsubsec:csc_number
         (Right) More detail showing the radial strips and the horizontal wires. Also shown is the 5 segments of a CSC.
         }
         \label{fig:csc_guts}
-    \end{figure}
-    %%%%%%%%%%%%%%%%%%%%
+\end{figure}
 % In conjunction with the Silicon Tracker measurements, muon momentum can be measured to a precision of 
 % {\bf Quick Mention:} The University of Florida has been one of the main contributors to the CSC system and was home to one of the testing and assembly facilities before shipping the CSCs off to CERN.
-%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[pbth]
-    \centering
-    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_cutaway.png}
-    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_endcap_real.png}
-        \caption{
-        (Left) A simulated cut out view of the ME+ endcap, with the coordinate system of CMS in the top-left corner.
-        (Right) The actual ME-2 disk of CMS is shown, revealing its ME-2/1 and ME-2/2 rings of CSCs.
-        }
-        \label{fig:cms_endcap}
-    \end{figure}
-    %%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Numbering the CSCs}
-\label{subsubsec:csc_numbering}
-The two endcaps are labelled as ``ME+'' and ``ME-'', depending on whether they are situated in the +$z$ direction or -$z$.
-Both endcaps are structurally symmetric, so it is sufficient to discuss only one in detail.
-The ME+ endcap has four disks, where ME+1 is the first disk, the one closest to the IP, and ME+4 is the fourth and farthest away. 
-Then, within each disk, there are either two or three ``rings'' of CSCs, as shown in Fig.~\ref{fig:cms_long_view_subdetectors} (green).
-These rings are labelled as ME+$D$/$R$, where $D$ indicates the disk number and $R$ indicates the ring number.
-As an example, ME+2/1 refers to the second disk and the first (innermost) ring, which is the CSC radially closest to the IP.
-All rings contain 36 CSCs, except for ME$\pm X$/1, for $X=$ 2,3,4, which contain only 18 CSCs.
-Finally, the CSCs are given one final number to label them on the ring:
-the CSC that sits along the positive $x$-axis in CMS's coordinate system is given the number ``01'', \eg ME+4/2/01. 
-The CSCs are then numbered incrementally following the positive azimuthal direction.
-%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[pbth]
-\centering
-\includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/cms_longitudinal_view.png}
-    \caption{
-    Longitudinal cross section of CMS, showing the different pseudorapidity values ($\eta$) and also the different subdetector regions.
-    }
-    \label{fig:cms_long_view_subdetectors}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%
 
 \textit{\textbf{Physics:}}
-The ionized electron is under high voltage (HV) which causes the electron to accelerate towards a CSC strip.
-The accelerating electron collides with nearby gaseous atoms, which ionizes even more electrons.
-This generates an electron avalanche which is collected by metal strips and is converted into a signal to give precise position coordinates about where the initial muon entered the CSC.
-
-When a muon passes through a layer of a CSC, it has the chance to ionize an Ar atom (Fig.~\ref{fig:elec_avalanche}).
-Since the wires are under high voltage (3,600 V), the ionized electron accelerates towards the positively-charged wire, and in doing so it ionizes many Ar atoms which are along its path. 
-Starting from just a single electron, the multiplicity can go as high as 100,000 ionized electrons, thereby creating what is known as an electron avalanche. 
-This phenomenon is called ``gas gain''.
+As a muon passes through a CSC layer, it has the opportunity to interact with and ionize an Ar atom in the gas mixture.
+The wires are under high voltage (3,600 V) which causes the ionized electron to accelerate towards the positively-charged strips.
+The accelerating electron collides with and ionizes Ar atoms along its path toward the strip.
+This liberates even more electrons, thus forming an \emph{electron avalanche} (Fig.~\ref{fig:elec_avalanche}).
+The total number of ionized electrons per initial electron is referred to as the \emph{multiplicity} (or \emph{gas gain}), which can reach as high as 100,000.
+% Electron avalanche.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_elec_avalanche_old.png}
     \caption{
-    A muon passes through one of the gaseous layers of the CSC, ionizing the gas mixture and inducing a charge on the wires and strips. 
+    A muon passes through one of the gaseous layers of the CSC, ionizing the gas mixture and inducing a charge on the anode wires and cathode strips. 
     }
     \label{fig:elec_avalanche}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
-The electrons travel onto the wire and become an electrical signal which then gets sent to the anode front-end boards (AFEBs) for further signal processing.
-The ionized Ar$^+$ will similarly distribute a charge signal on the negative strips.
-This cluster of charge is more widely spread over the strips compared to the charge on the wires.
-Therefore, comparator logic is implemented to narrow down the precision to the order of 100~$\mum$ by using half-strip information (Fig.~\ref{fig:comparators}).
+
+The electron avalanche is collected by a cathode strip and becomes an electrical signal.
+This signal is processed by the cathode front-end boards (CFEBs).
+The Ar$^+$ ions similarly distribute a charge signal onto the negative wires.
+The cluster of charge that arrives at a strip is more widely spread than the charge which arrives along a wire.
+Therefore, comparator logic is implemented on the strips to narrow down the precision to the order of 100~$\mum$ by using half-strip information (Fig.~\ref{fig:comparators}).
+% Comparators and strips.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
@@ -125,24 +133,27 @@ Therefore, comparator logic is implemented to narrow down the precision to the o
     \label{fig:comparators}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
-The muon will continue passing through the next 5 layers, repeating the process of ionizing the gas mixture, and depositing an electrical signal on the wires. 
-The wires and strips provide $(x,y)$-coordinates, and as the muon passes through the CSC, the other layers provide a $z$-coordinate.
-Taken together, this information generates a three-dimensional trajectory of the muon.
-% The AFEBs then digitize this analog signal using ADCs and 
-Depending on how many hits were recorded by the CSC will determine if a muon event was significant enough to be registered as a real muon. 
-If so, then its precise positions on the wires and strips will be read out by the Data Acquisition (DAQ) system and be stored for further data analysis.
 
+The muon passes through the next 5 layers of the CSC, further ionizing the gas mixture and generating electrical signals along the wires and strips.
+A signal on a wire provides an $r$-coordinate, on a strip provides a $\phi$-coordinate, and through the other layers provides a $z$-coordinate.
+Taken together, this information helps to reconstruct the three-dimensional trajectory of the muon.
+% The AFEBs then digitize this analog signal using ADCs and 
+
+The number of hits recorded by the CSC will determine if an event was significant enough to be worth saving.
+If so, then its precise positions on the wires and strips will be read out by the Data Acquisition (DAQ) system and be stored for further data analysis.
 When a CSC is taking live data it can resolve approximately 2~$\mm$ in $r$-$\phi$, whereas during offline analysis the resolution improves by a factor of more than 20:
-the ME1/1 and ME1/2 chambers achieve a resolution of 75~$\mum$ in $r$-$\phi$ and the others achieve 150~$\mum$.
-A CSC can accommodate up to 1 KHz/$\cm^2$.
+the ME1/1 and ME1/2 chambers can resolve distances as small as 75~$\mum$ in $r$-$\phi$, while the other chambers can resolve 150~$\mum$.
+It is worth noting that a CSC can accommodate up to 1 KHz/$\cm^2$.
+
 % Each CSC cost about \$100,000 to make, so very quickly this becomes an expensive project.
+
+Gas gap is 9.5~\mm.
 
 % \subsection{Endcap Muon Electronics}
 % In order to conclude that a muon definitely passed by the muon detectors, a very sophisticated electronics system has been developed. 
 
 % Hmm... EMU is just for the endcaps. This system is called "EMU" and 
 
-% I had been working on CMS analyses for about a year and a half before I actually saw CMS just earlier this year. And let me tell you: It is HUGE! 
 % Next I am going to elaborate more on the CSCs, since my first experience with CMS hands-on work with CSCs. 
 
 % The muon barrel system, after it talks with the tracker system, has a muon pT resolution of 1.5% in the barrel and ~6% in the endcap.
@@ -152,18 +163,103 @@ A CSC can accommodate up to 1 KHz/$\cm^2$.
 % we need a fast-working filtration system to sift through the good and bad events. 
 % We want to "trigger" on the good events but only have about 4 μs to do so. 
 % This is the job of the L1 trigger and and the High-Level Trigger. 
-% I'm not going to explain any more of this because it is an extremely sophisticated system. 
 
+\subsubsection{CSC Numbering Scheme}
+\label{subsubsec:csc_numbering}
+The two endcaps are labelled as ``ME+'' and ``ME-'', depending on whether they are situated in the +$z$ direction or -$z$.
+Both endcaps are structurally symmetric, so it is sufficient to discuss only one in detail.
+The ME+ endcap has four disks: ME+1 is the first disk and the one closest to the interaction point, while ME+4 is the fourth and the farthest away. 
+Within each disk, there are either two or three ``rings'' of CSCs, as shown in Fig.~\ref{fig:cms_long_view_subdetectors} (green).
+These rings are labelled as ME+$D$/$R$, where $D$ indicates the disk number and $R$ indicates the ring number.
+For example, ME+2/1 refers to the second disk and the first ring (the ring closest to the beam pipe).
+All rings contain 36 CSCs, except for ME$\pm X$/1, for $X= 2,3,4$, which contain only 18 CSCs.
+Finally, the CSCs are given one final number to label them on the ring:
+the CSC that sits along the positive $x$-axis in the coordinate system of CMS is given the number ``01'', \eg ME+4/2/01. 
+The CSCs are then numbered incrementally following the positive azimuthal direction.
 
 \subsection{Drift Tube Chambers}
 \label{subsec:dt}
 
+\textbf{\textit{Overview:}}
+Functionally similar to but structurally different from a CSC (subsec.~\ref{subsec:csc}), a drift-tube chamber (DT) is a gaseous detector comprised of an anode wire and cathode strips (Fig.~\ref{fig:dt_xs}).
+Since the CSCs are built entirely within the endcaps of CMS, they are therefore unable to detect muons that enter the barrel.
+The DT system compensates for this and is built exclusively in the barrel, having stations inside, between, and outside the iron yoke (Fig.~\ref{fig:dt_locations}).
+Thus, the DT system is composed of concentric cylindrical stations, with the central axis parallel to the beam pipe.
+The first three stations contain 60 DTs each, while the station farthest from the beam pipe contains 70 DTs.
+%%%%%%%%%%%%%%%%%%%%
+% DT cell cross section.
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/drifttube_xs.jpeg}
+    \caption{
+        A cross section of a DT cell showing the drift lines (light blue), isochrone lines (dark blue), dimensions of the cell, and locations of the anode wire and cathode strips.
+        }
+        \label{fig:dt_xs}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%
+% DT locations.
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/drifttube_locations.jpeg}
+    \caption{
+        A cross section of CMS showing the locations and numbering scheme of the drift tubes in the barrel.
+        }
+        \label{fig:dt_locations}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%
+
+\textbf{\textit{Design:}}
+
+A DT 
+Tube cross section is $13 \times 42~\mm^{2}$.
+
+There are 5 wheels, 4 stations, and 12 sectors.
+MB/$W$/$A$/$S$,
+where $W$ stands for wheel (numbered -2 to 2),
+$A$ stands for station (numbered 1 to 4),
+and $S$ stands for sector, numbered 1 to 12.
+Gas mixture is approximately 85\% Ar $+$ 15\% CO$_{2}$.
+
+Anode wire is made of gold-plated stainless-steel that has a diameter of 50~\mum.
+
+Different voltages are applied to the anode wires ($+$3600 V), electrode strips ($+$1800 V), and cathode strips ($-$1200 V).
+
+\textbf{\textit{Physics:}}
+
+DTs are a good choice for the barrel because of the low rate and low strength of magnetic field.
+
+Uniform drift field of 1.5 KV/cm.
+
+A high \pt muon track will cross all 4 DT stations within the pseudorapidity range of $\abseta < 0.8$.
+The reconstruction efficiency of such a track is better than 95\%.
+
+A single SL has a time resolution of only a few nanoseconds which provides excellent bunch crossing identification.
+To assist the L1 trigger in determining the muon time and \pt, the DT system delivers to it the following muon track segment information:
+the position of the center of gravity (to a precision of 1.5~\mm) and the corresponding angle (to a precision of 20 mrad), w.r.t. the SL reference frame.
+The total resolution of a DT in $r$-$\phi$ is about 100~\mum which is comparable to the deviation caused by multiple scattering, for muon $\pt \le 200~\GeV$.
+
+The gas gain is comparable to that of a CSC: about 100,000.
+
+The maximum drift distance in a DT is 21~\mm, as can be seen in Fig.~\ref{fig:dt_xs}, which corresponds to a drift time of 380~\ns.
+This value 
+
 \subsection{Resistive Plate Chambers}
 \label{subsec:rpc}
+
+\textbf{\textit{Overview:}}
+
+\textbf{\textit{Design:}}
+
+\textbf{\textit{Physics:}}
 
 \subsection{Gas Electron Multipliers (GEM)}
 \label{subsec:gem}
 
+\textbf{\textit{Overview:}}
+
+\textbf{\textit{Design:}}
+
+\textbf{\textit{Physics:}}
 
 Located in the forward region.
 Filled with Ar/CO2 gas mixture.

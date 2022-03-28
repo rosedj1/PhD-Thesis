@@ -177,24 +177,36 @@ Finally, the CSCs are given one final number to label them on the ring:
 the CSC that sits along the positive $x$-axis in the coordinate system of CMS is given the number ``01'', \eg ME+4/2/01. 
 The CSCs are then numbered incrementally following the positive azimuthal direction.
 
-\subsection{Drift Tube Chambers}
+\subsection{Drift-Tube Chambers}
 \label{subsec:dt}
 
 \textbf{\textit{Overview:}}
-Functionally similar to but structurally different from a CSC (subsec.~\ref{subsec:csc}), a drift-tube chamber (DT) is a gaseous detector comprised of an anode wire and cathode strips (Fig.~\ref{fig:dt_xs}).
-Since the CSCs are built entirely within the endcaps of CMS, they are therefore unable to detect muons that enter the barrel.
-The DT system compensates for this and is built exclusively in the barrel, having stations inside, between, and outside the iron yoke (Fig.~\ref{fig:dt_locations}).
-Thus, the DT system is composed of concentric cylindrical stations, with the central axis parallel to the beam pipe.
-The first three stations contain 60 DTs each, while the station farthest from the beam pipe contains 70 DTs.
+Functionally similar to but structurally different from a CSC (subsec.~\ref{subsec:csc}), a DT is a collection of gaseous detector cells (Fig.~\ref{fig:dt_superlayers}).
+A single DT cell has an anode wire and two cathode strips and operates on the same principle as a CSC, providing timing and position measurements of muons (Fig.~\ref{fig:dt_cell}).
+While CSCs are found only on the endcaps of CMS, drift-tube chambers (DTs) are placed exclusively along the barrel (Fig.~\ref{fig:dt_locations}).
+The DT system is therefore composed of concentric cylindrical stations, with the central axis parallel to the beam pipe.
+Altogether, there are 250 DTs built inside of, between, and outside of the iron yoke.
+% DT Chamber.
 %%%%%%%%%%%%%%%%%%%%
-% DT cell cross section.
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/drifttube_superlayers.jpeg}
+        \caption{
+        A drift-tube chamber with 3 superlayers (SLs) is sandwiching a honeycomb plate.
+        Two SLs are indicated by the blue rectangles, whose cells (orange rectangle) have anode wires (red dots) oriented parallel to the beam pipe.
+        The third SL is indicated by the green rectangle and is staggered orthogonally to the other two SLs.
+        }
+        \label{fig:dt_superlayers}
+\end{figure}
+% DT Cell.
+%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
     \centering
     \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/drifttube_xs.jpeg}
-    \caption{
+        \caption{
         A cross section of a DT cell showing the drift lines (light blue), isochrone lines (dark blue), dimensions of the cell, and locations of the anode wire and cathode strips.
         }
-        \label{fig:dt_xs}
+        \label{fig:dt_cell}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
 % DT locations.
@@ -209,47 +221,47 @@ The first three stations contain 60 DTs each, while the station farthest from th
 %%%%%%%%%%%%%%%%%%%%
 
 \textbf{\textit{Design:}}
-
-A DT 
-Tube cross section is $13 \times 42~\mm^{2}$.
-
-There are 5 wheels, 4 stations, and 12 sectors.
+The first three stations contain 60 DTs each, while the station farthest from the beam pipe contains 70 DTs.
+The DTs are distributed among 5 wheels, 4 stations, and 12 sectors within the muon barrel (MB) system which uses the following numbering scheme:
 MB/$W$/$A$/$S$,
-where $W$ stands for wheel (numbered -2 to 2),
-$A$ stands for station (numbered 1 to 4),
-and $S$ stands for sector, numbered 1 to 12.
-Gas mixture is approximately 85\% Ar $+$ 15\% CO$_{2}$.
+where $W$ is the wheel number (-2 to 2),
+$A$ is the station number (1 to 4),
+and $S$ is the sector number (1 to 12).
+This accounts for only $5 \times 4 \times 12 = 240$ chambers, so the remaining 10 DTs are found in station 4, sectors 4 and 10, in each wheel (Fig.~\ref{fig:dt_locations}).
 
-Anode wire is made of gold-plated stainless-steel that has a diameter of 50~\mum.
-
+Each tube cross section is $13 \times 42~\mm^{2}$, within which a single anode wire is made of gold-plated stainless-steel that has a diameter of 50~\mum.
 Different voltages are applied to the anode wires ($+$3600 V), electrode strips ($+$1800 V), and cathode strips ($-$1200 V).
+The gas mixture within a DT is similar to that of a CSC, containing approximately 85\% Ar $+$ 15\% CO$_{2}$.
 
 \textbf{\textit{Physics:}}
-
 DTs are a good choice for the barrel because of the low rate and low strength of magnetic field.
-
 Uniform drift field of 1.5 KV/cm.
-
 A high \pt muon track will cross all 4 DT stations within the pseudorapidity range of $\abseta < 0.8$.
 The reconstruction efficiency of such a track is better than 95\%.
 
 A single SL has a time resolution of only a few nanoseconds which provides excellent bunch crossing identification.
-To assist the L1 trigger in determining the muon time and \pt, the DT system delivers to it the following muon track segment information:
+To assist in determining muon \pt and timing, the DT system delivers the following muon track segment information to the L1 trigger:
 the position of the center of gravity (to a precision of 1.5~\mm) and the corresponding angle (to a precision of 20 mrad), w.r.t. the SL reference frame.
-The total resolution of a DT in $r$-$\phi$ is about 100~\mum which is comparable to the deviation caused by multiple scattering, for muon $\pt \le 200~\GeV$.
+The total resolution of a DT in $r$-$\phi$ is about 100~\mum which is comparable to the deviation caused by multiple scattering, for a muon with $\pt \le 200~\GeV$.
 
-The gas gain is comparable to that of a CSC: about 100,000.
+The gas gain is comparable to that of a CSC (about 100,000).
 
-The maximum drift distance in a DT is 21~\mm, as can be seen in Fig.~\ref{fig:dt_xs}, which corresponds to a drift time of 380~\ns.
+The maximum drift distance in a DT is 21~\mm, as can be seen in Fig.~\ref{fig:dt_cell}, which corresponds to a drift time of 380~\ns.
 This value 
 
 \subsection{Resistive Plate Chambers}
 \label{subsec:rpc}
 
 \textbf{\textit{Overview:}}
+Even though CSCs~\ref{subsec:csc} and DTs~\ref{subsec:dt} cover the entire pseudorapidity range of $0 < \abseta < 2.4$, redundancy is important.
+Therefore, resistive plate chambers (RPCs) are placed in both the endcaps and barrel to provide excellent timing and spatial resolution, comparable to that of scintillators, to supplement the measurements of the CSC and DT systems.
+An RPC is a gaseous parallel-plate detector
+
+RPC has better time resolution than the 25~\ns between two continguous \pp bunch crossings.
 
 \textbf{\textit{Design:}}
 
+Gas mixture comprised of 96.2\% C$_{2}$H_${2}$F$_{4}$ (1,1,1,2-tetrafluoroethane) $+$ 3.5\% $i$C$_{4}$H_$10$
 \textbf{\textit{Physics:}}
 
 \subsection{Gas Electron Multipliers (GEM)}

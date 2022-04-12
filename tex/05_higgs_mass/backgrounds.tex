@@ -1,55 +1,390 @@
-\section{Background Estimation}
+\section{Background estimation}
 \label{sec:bkg_estim}
+Measurement of the Higgs boson mass requires the accurate modelling of the total event yield in the signal region (SR), into which events can be categorized as either \emph{signal} or \emph{background}.
+% Processes which pass the signal event selection but are not actually the signal process of interest (HZZ4L) are called background processes.
+These background events pass the signal event selection (Section~\ref{subsec:zz_sel}) and thus spoil the purity of the signal events.
+This introduces further uncertainty into the final Higgs boson mass measurement.
+Therefore, it is a priority to both reduce and predict the expected number of background events, which can be split into \emph{irreducible backgrounds} (IB) and \emph{reducible background} (RB) processes.
+% \begin{itemize}
+	% \item signal $(\HZZ)$,
+% 	\item irreducible background (IB),
+% 	\item reducible background (RB).
+% \end{itemize}
 
-Processes which pass the signal event selection (REF EVENT SELECTION) but are not actually the signal process of interest (HZZ4L) are called background processes.
-These background events spoil the purity of the signal events and introduce further uncertainty into the final Higgs boson mass measurement.
-Therefore, it is a priority to properly model and reduce the number of background events.
-
-The two types of background processes present in the HZZ4L analysis are:
-
+\subsection{Irreducible background}
+\label{sec:bkg_irred}
+IB processes produce two \PZ bosons and each \PZ subsequently decays into two prompt leptons (leptons that emerge directly from the primary vertex).
+This reliably produces a \fourell final state, whose prompt leptons typically get reconstructed as four leptons that pass tight selection (\emph{PTS leptons}), as defined in Section~\ref{subsec:lep_sel}.
+The IB event then looks indistinguishable from the 4 PTS lepton of the \emph{signal} process and cannot be reduced;
+Thus, throwing away IB process could mean throwing away a signal event.
+Since IB event cannot be reduced, it's called irreducible background.
+The two IBs for the HZZ4L analysis are:
 \begin{itemize}
-    \item irreducible background
-    \item reducible background
+    \item \ggZZfourl (gluon-gluon fusion),
+    \item \qqggZZfourl (quark-antiquark annihilation).
 \end{itemize}
 
-and will be explained in full detail in the subsequent sections.
+\subsection{Reducible background}
+\label{sec:redbkg}
+% \subsubsection{General Methodology}
+% \label{subsec:rb_methodology}
+% Besides irreducible backgrounds, there are other background processes that produce non-prompt leptons which are erroneously reconstructed as passing tight selection, due to detector imperfections.
+% These leptons should have been rejected since they come from a non-signal process, the imperfect lepton reconstruction, these leptons appear to be signal leptons.
+% Using careful event selection methods and more efficient detectors, these background processes can be reduced, hence the term reducible backgrounds.
+% Reducible backgrounds include:
+% \begin{enumerate}
+%     \item Z+jets
+%     \item ttbar
+%     \item WZ
+%     \item qqbarTOZZ, ggTOZZ
+% \end{enumerate}
+% Since reducible backgrounds are not eliminated entirely within the signal region, they must be modelled and estimated.
+While irreducible background processes produce 4 prompt leptons, RB processes produce varying numbers of prompt and nonprompt leptons.
+Nonprompt leptons emerge from 3 main sources:
+\begin{itemize}
+    \item misidentifying light-flavor hadrons (\eg, $\pi^{\pm}$) as leptons,
+    \item heavy-flavor hadrons that decay mid-flight into leptons,
+    \item and the asymmetric conversion of photons into electrons.
+\end{itemize}
 
-\subsection{Irreducible Background}
-\label{sec:bkg_irred}
+This analysis is tailored to efficiently reconstruct prompt leptons as those which pass tight selection (\emph{PTS leptons}), whereas nonprompt leptons typically fail tight selection (\emph{FTS leptons}).
+Tight and loose lepton selections are defined in Section~\ref{subsec:lep_sel}.
+Ideally, the SR would contain only the events with 4 prompt leptons, which would always be tagged as 4 PTS leptons.
+However, sometimes a truly nonprompt lepton is misidentified as a PTS lepton (sometimes called a \emph{fake lepton}), depending on the kinematical properties of the lepton.
+This misidentification rate ($f$, sometimes called the \emph{fake rate}) is due to imperfect detector performance, inefficiencies in reconstruction, and the specific choice of lepton selections used in the analysis.
 
-The first kind of background process is that which produces two Z bosons which then decay into four prompt leptons.
-These four leptons typically get reconstructed as leptons which pass tight selection.
-Therefore, the event is tagged (incorrectly) as a 4-lepton signal event.
-Since these processes cannot be distinguished from the signal process and cannot be reduced, they are called irreducible backgrounds.
-The two irreducible backgrounds for the HZZ4L analysis are:
+If an event produces prompt and nonprompt leptons but is reconstructed as 4 PTS leptons (a 4P event), then it contaminates the SR.
+These processes constitute the RB processes (sometimes called ``\ZplusX'').
+Examples of RB processes for this analysis include:
+\begin{itemize}
+	\item \Zplusjets (yields 2 prompt leptons)
+	\item \ttbarplusjets (yields 2 prompt leptons)
+	\item \WZplusjets (yields 3 prompt leptons)
+	\item $\PZ(\Zgammastar) + \text{jets}$ (yields 4 prompt leptons).
+\end{itemize}
+The careful estimation of these RB contributions to the 4P region is necessary for the precise measurement of the Higgs boson mass.
 
-\begin{enumerate}
-    \item ggTOZZ (gluon-gluon fusion)
-    \item qqbarTOZZ (quark-antiquark annihilation)
-\end{enumerate}
+\subsubsection{OS Method}
+% \label{subsec:os_method}
+The goal of the OS Method is to estimate the number of opposite-sign same-flavor (OSSF) $4\ell$ events produced by RB process that ``contaminate'' the 4P region $\left( \fourPexp \right)$.
+% Since the $4\ell$ final state of the signal process consists of 2 pairs of OSSF leptons, the method is called the \emph{OS Method}.
+However, the typical approach of using simulated samples does not model RB well, since RB processes (\eg, \Zplusjets) rely on higher-order effects like jet modelling which are not yet accurately simulated.
+Instead, a data-driven approach is used.
 
-\subsection{Reducible Background}
-\label{sec:bkg_red}
+The logic of the OS Method is to study events in data that are similar to, but not exactly the same as, those found in the 4P region.
+Thus, events in data are sorted into 2 control regions (CRs), both of which are orthogonal to the 4P region and to each other:
+\begin{itemize}
+	\item the \emph{3P1F} CR (built from 3 PTS and 1 FTS leptons)
+	\item the \emph{2P2F} CR (built from 2 PTS and 2 FTS leptons).
+\end{itemize}
+The event selection for the 2P2F and 3P1F CRs is almost identical to that of the SR (Section~\ref{subsec:zz_sel}),
+except that the FTS lepton(s) must go into building the Z$_{2}$.
+The events which contribute most to the 2P2F CR are those that produce 2 prompt and 2 nonprompt leptons (\emph{2pr events}).
+Events that produce 3 prompt and 1 nonprompt leptons (\emph{3pr events}) contribute mostly to the 3P1F CR.
 
-Besides irreducible backgrounds, there are other background processes that produce non-prompt leptons which are erroneously reconstructed as passing tight selection, due to detector imperfections.
-These leptons should have been rejected since they come from a non-signal process, the imperfect lepton reconstruction, these leptons appear to be signal leptons.
-Using careful event selection methods and more efficient detectors, these background processes can be reduced, hence the term reducible backgrounds.
-Reducible backgrounds include:
+To understand the logic behind the final formula for \fourPexp (Eq.~\ref{eqn:rbe_formula_final}), it is helpful to first analyze a single event:
+suppose event $k$ is a 2pr event which contributes to the 2P2F CR a certain event weight $\left( w^{k}_{\mathrm{2pr \to 2P2F}} \right)$.
+This event weight is built from the product of analysis weights (pileup, L1 pre-firing, \etc, whose product will be called $\hat{w}^k$) and the reconstruction efficiencies ($\epsilon$) of each lepton ($\ell_n$):
+\begin{equation}
+	\label{eqn:wt_2prto2p2f}
+	w^{k}_{\mathrm{2pr \to 2P2F}} = \hat{w}^k \cdot \effprpass(\ell_1^k) \cdot \effprpass(\ell_2^k) \cdot \effnpfail(\ell_3^k) \cdot \effnpfail(\ell_4^k),
+\end{equation}
+where the superscript of $\epsilon$ indicates the lepton promptness (pr = prompt, np = nonprompt),
+the subscript indicates the lepton tightness status (P = PTS, F = FTS).
+To simplify the equations that follow, $\hat{w}^k$ will be set to unity.
+%  \effprpass(\ell_1^k) is the efficiency of reconstructing $\ell_1$ from event $k$ as a \mathbf{P}TS lepton
+% and \effnpfail(\ell_3^k) is the efficiency of reconstructing $\ell_3$ from event $k$ as a \mathbf{F}TS lepton
+% where $\epsilon^{\mathrm{pr|np}}_{\mathrm{P|F}}$ is the efficiency of reconstructing a prompt/nonprompt lepton passing/failing tight selections.
+If the reconstruction efficiencies are the same for all leptons of a particular category $\left( \eg ~ \effprpass \right)$ across all events, then Eq.~\ref{eqn:wt_2prto2p2f} reduces to:
+\begin{equation}
+	\label{eqn:wt_2prto2p2f_simp}
+	w^{k}_{\mathrm{2pr \to 2P2F}} = 
+	\left( \effprpass \right)^2 
+	\left( \effnpfail \right)^2.
+\end{equation}
 
-\begin{enumerate}
-    \item Z+jets
-    \item ttbar
-    \item WZ
-    \item qqbarTOZZ, ggTOZZ
-\end{enumerate}
+Although a 2pr event mostly contributes to the 2P2F CR, a nonprompt lepton may be misidentified as a PTS lepton depending on \effnppass.
+In this case, event $k$ would then fall into the 3P1F CR and, being careful to allow only one nonprompt PTS lepton at a time, contributes an effective weight of
+\begin{align}
+	\label{eqn:wt_2prto3p1f}
+	w^{k}_{\mathrm{2pr \to 3P1F}}
+	&= \left( \effprpass \right)^2 
+	\left[
+		\effnppass(\ell_1^k) \cdot \effnpfail(\ell_2^k) + \effnpfail(\ell_1^k) \cdot \effnppass(\ell_2^k)
+	\right]
+	\notag
+	\\
+	&= \left( \effprpass \right)^2
+	\left[
+		2 \effnppass \effnpfail
+	\right].
+\end{align}
+Using the fact that a (non)prompt lepton is exclusively either PTS or FTS,
+% $\left( \epsilon^\mathrm{pr(np)}_\mathrm{P} + \epsilon^\mathrm{pr(np)}_\mathrm{F} = 1 \right)$,
+\begin{equation*}
+	\epsilon^\mathrm{pr(np)}_\mathrm{P} + \epsilon^\mathrm{pr(np)}_\mathrm{F} = 1,
+\end{equation*}
+recognizing that $\effnppass \equiv f$ (Section~\ref{sec:redbkg}), and defining $\effprpass \equiv \epsilon$,
+then Eq.~\ref{eqn:wt_2prto3p1f}  % TODO: Update with new equation number.
+becomes
+\begin{equation}
+	\label{eqn:wt_2prto3p1f_simp}
+	w^{k}_{\mathrm{2pr \to 3P1F}} = 2 \epsilon^2 f (1-f).
+\end{equation}
+The prediction of Eq.~\ref{eqn:wt_2prto3p1f_simp} can be seen in Figures~\ref{cr_plots_3p1f_2016}--\ref{cr_plots_3p1f_2018} for 2016--2018 UL data.
 
-Since reducible backgrounds are not eliminated entirely within the signal region, they must be modelled and estimated.
+An even smaller fraction of the time, both nonprompt leptons from a 2pr event may be misidentified as PTS leptons.
+In this case, event $k$ contributes to the 4P region an effective weight of
+\begin{equation}
+	\label{eqn:wt_2prto4p}
+	w^{k}_{\mathrm{2pr \to 4P}} = \epsilon^2 f^2,
+\end{equation}
+where it is assumed that both leptons have the same misidentification rate.
+Similar equations can be derived for the contributions of a 3pr event to the 3P1F CR and to the 4P region:
+\begin{align}
+	\label{eqn:wt_3prto3p1f}
+	w^{k}_{\mathrm{3pr \to 3P1F}} &= \epsilon^3 \left( 1-f \right)
+	\\
+	\label{eqn:wt_3prto4p}
+	w^{k}_{\mathrm{3pr \to 4P}} &= \epsilon^3 f.
+\end{align}
+Since only 1 nonprompt lepton must be misidentified as a PTS lepton (thus, only 1 factor of $f$), a 3pr event contributes more weight than a 2pr event to the 4P region.
+If the total number of 2pr and 3pr events is $X_2$ and $X_3$, respectively, then using Eqs.~\ref{eqn:wt_2prto4p} and~\ref{eqn:wt_3prto4p} the expected number of 4P events is
+\begin{align}
+	\label{eqn:n4p_x2x3}
+	\fourPexp
+	&= \sum_{k=1}^{X_{2}} w^{k}_{\mathrm{2pr \to 4P}} + \sum_{m=1}^{X_{3}} w^{m}_{\mathrm{3pr \to 4P}}
+	\notag
+	\\
+	&= \sum_{k=1}^{X_{2}} \epsilon^2 f^2 + \sum_{m=1}^{X_{3}} \epsilon^3 f
+	\notag
+	\\
+	&= f^2 \epsilon^2 X_{2} + f \epsilon^3 X_{3}.
+\end{align}
+Only the quantities $f$ and $\epsilon$ are known, so $X_2$ and $X_3$ must be estimated.
+This is achieved by relating $X_2$ to the observed number of 2P2F events $\left( \twoPtwoFexp \right)$.
+Using Eq.~\ref{eqn:wt_2prto2p2f_simp} and summing over all 2pr events gives:
+% If the total number of true 2pr events is $X_2$, then the expected number of 2P2F events $\left( \twoPtwoFexp \right)$ is obtained via Eq.:
+\begin{align}
+	\label{eqn:n2p2f_x2}
+	\twoPtwoFexp
+	&= \sum_{k=1}^{X_{2}} w^{k}_{\mathrm{2pr \to 2P2F}}
+	\notag
+	\\
+	% &= \sum_{k=1}^{X_{2}} \epsilon^2 \left( \effnpfail \right)^2
+	% \\
+	&= \sum_{k=1}^{X_{2}} \epsilon^2 \left( 1-f \right)^2
+	\notag
+	\\
+	&= \left( 1-f \right)^2 \epsilon^2 X_{2}
+	% \\
+	% \implies X_{2} &= \frac{ \twoPtwoFexp }{ \epsilon^2 \left( 1-f \right)^2 }
+\end{align}
 
-More concretely, reducible backgrounds have three main sources:
+The strategy to relate $X_3$ to the observed number of 3P1F events $\left( \threePoneFexp \right)$ is not as straightforward as relating $X_2$ to \twoPtwoFexp.
+The following two sources contribute events to the 3P1F CR:
+\begin{itemize}
+	\item A 2pr process can yield a nonprompt PTS lepton (via Eq.~\ref{eqn:wt_2prto3p1f_simp}).
+	\item A 4-prompt-lepton irreducible background process (\ZZ) can yield a FTS lepton.
+\end{itemize}
+The \ZZ contribution to the 3P1F CR $\left( \threePoneFzz \right)$ is well estimated from simulation since all leptons are prompt.
+Thus, using Eq.~\ref{eqn:wt_3prto3p1f}, $X_3$ is related to \threePoneFexp by
+\begin{align}
+	\label{eqn:n3p1f_x3}
+	\threePoneFexp
+	&= \sum_{j=1}^{X_{3}} w^{j}_{\mathrm{3pr \to 3P1F}} + \sum_{k=1}^{X_{2}} w^{k}_{\mathrm{2pr \to 3P1F}} + \threePoneFzz
+	\notag
+	\\
+	&= \sum_{j=1}^{X_{3}} \epsilon^3 (1-f) + \sum_{k=1}^{X_{2}} 2 \epsilon^2 f (1-f) + \threePoneFzz
+	\notag
+	\\
+	&= (1-f) \epsilon^3 X_{3} + 2 f (1-f) \epsilon^2 X_{2} + \threePoneFzz.
+\end{align}
 
-\begin{enumerate}
-    \item misidentifying light-flavor hadrons (e.g., PIONS) as leptons,
-    \item heavy-flavor hadrons which decay mid-flight into leptons,
-    \item and asymmetric photon conversions into electrons.
-\end{enumerate}
+Solving for \fourPexp using Eqs.~\ref{eqn:n4p_x2x3},~\ref{eqn:n2p2f_x2}, and~\ref{eqn:n3p1f_x3} gives
+% (the substitutions $A = \epsilon^2 X_2, B = \epsilon^3 X_3$ are quite useful)
+\begin{equation}
+	\label{eqn:rbe_formula}
+	\fourPexp =
+	\left( \frac{f}{1-f} \right) \threePoneFexp^{\mathrm{Data}} -
+	\left( \frac{f}{1-f} \right)^2 \twoPtwoFexp^{\mathrm{Data}} - 
+	\left( \frac{f}{1-f} \right) \threePoneFzz.
+\end{equation}
+Thus, Eq.~\ref{eqn:rbe_formula} estimates the RB contribution to the 4P region by using one lepton misidentification rate to reweight the observed yields of data events in the 3P1F and 2P2F CRs.
 
+It should be mentioned that Eq.~\ref{eqn:rbe_formula} was derived assuming that the analysis weights were set to unity $\left( \hat{w}^k = 1 \right)$ before being scaled by the misidentification rates.
+Another assumption was that $f$ is constant for all nonprompt leptons misidentified as PTS leptons, across all events.
+% However, as seen in \figurename~\ref{fr_plots}, the misidentification rates depend on lepton flavor, $\eta$, and $\pt$.
+An extension of Eq.~\ref{eqn:rbe_formula} can be formed by assigning misidentification rates that depend on the kinematical variables per lepton and then summing over the total number of events per CR:
+\begin{equation}
+	\label{eqn:rbe_formula_final}
+	\fourPexp = \sum_{i=1}^{N_{\mathrm{3P1F}}^\mathrm{Data}} \frac{f_i}{1 - f_i}
+	- \sum_{j=1}^{N_{\mathrm{2P2F}}^{\mathrm{Data}}} \frac{f_{1j}}{1 - f_{1j}}\frac{f_{2j}}{1 - f_{2j}}
+	- \sum_{k=1}^{N_{\mathrm{3P1F}}^{\mathrm{ZZ}}} \frac{f_k}{1 - f_k},
+\end{equation}
+where $f_{1j}$ and $f_{2j}$ are the misidentification rates of the first and second FTS leptons, respectively, in the 2P2F event $j$.
+% The plots in \figurename~\ref{FINAL RBE PLOTS} make use of Eq.~\ref{eqn:rbe_formula_final}.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016_CR_2P2F_4mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016_CR_2P2F_4e.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016_CR_2P2F_2e2mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016_CR_2P2F_2mu2e.pdf}
+		\caption{
+			Events from 2016 UL data that pass 2P2F CR selections (black markers) 
+			are compared to the stacked 2P2F distributions of simulated samples
+			(\Zplusjets, \ttbarplusjets, \WZ, \Zgammastar, \ZZ).
+			The results are split into the $4\ell$ final states:
+            $4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
+        }
+		\label{cr_plots_2p2f_2016}
+	\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_4mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_4e.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_2e2mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_2mu2e.pdf}
+		\caption{
+			Events from 2017 UL data that pass 2P2F CR selections (black markers) 
+			are compared to the stacked 2P2F distributions of simulated samples
+			(\Zplusjets, \ttbarplusjets, \WZ, \Zgammastar, \ZZ).
+			The results are split into the $4\ell$ final states:
+			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
+		}
+		\label{cr_plots_2p2f_2017}
+	\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_4mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_4e.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_2e2mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_2mu2e.pdf}
+		\caption{
+			Events from 2018 UL data that pass 2P2F CR selections (black markers) 
+			are compared to the stacked 2P2F distributions of simulated samples
+			(\Zplusjets, \ttbarplusjets, \WZ, \Zgammastar, \ZZ).
+			The results are split into the $4\ell$ final states:
+			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
+		}
+		\label{cr_plots_2p2f_2018}
+	\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016_CR_3P1F_4mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016_CR_3P1F_4e.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016_CR_3P1F_2e2mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016_CR_3P1F_2mu2e.pdf}
+		\caption{
+			Events from 2016 UL data that pass 3P1F CR selections (black markers) 
+			are compared to the stacked 3P1F distributions of simulated samples
+			(\Zplusjets, \ttbarplusjets, \WZ, \Zgammastar, \ZZ)
+			and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
+			This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
+			The results are split into the $4\ell$ final states:
+			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
+		}
+		\label{cr_plots_3p1f_2016}
+	\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_4mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_4e.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_2e2mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_2mu2e.pdf}
+		\caption{
+			Events from 2017 UL data that pass 3P1F CR selections (black markers) 
+			are compared to the stacked 3P1F distributions of simulated samples
+			(\Zplusjets, \ttbarplusjets, \WZ, \Zgammastar, \ZZ)
+			and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
+			This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
+			The results are split into the $4\ell$ final states:
+			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
+		}
+		\label{cr_plots_3p1f_2017}
+	\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_4mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_4e.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_2e2mu.pdf}
+		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_2mu2e.pdf}
+		\caption{
+			Events from 2018 UL data that pass 3P1F CR selections (black markers) 
+			are compared to the stacked 3P1F distributions of simulated samples
+			(\Zplusjets, \ttbarplusjets, \WZ, \Zgammastar, \ZZ)
+			and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
+			This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
+			The results are split into the $4\ell$ final states:
+			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
+		}
+		\label{cr_plots_3p1f_2018}
+	\end{center}
+\end{figure}
+
+% \subsubsection{Tight-to-loose lepton rates}
+\subsubsection{Lepton misidentification rate measurement}
+\label{subsubsec:fr_evtsel}
+As mentioned in Section~\ref{sec:redbkg}, the lepton misidentification rate ($f$) is the probability that a nonprompt lepton will pass tight selections (PTS).
+The value $f$ is a function of the flavor ($\ell = \mathrm{e}, \mu$), \pt, and $\eta$ of a lepton.
+The misidentification rate is calculated by simply counting the number of nonprompt PTS leptons $\left( N^{\mathrm{np}}_{\mathrm{P}} \right)$ that enter a particular $\ell, \pt, \abseta$ bin compared to the total number of loose probe leptons $\left( N^{\mathrm{np}}_{\mathrm{L}} \right)$ in the same bin:
+\begin{equation}
+	\label{eqn:fr_calc}
+	f\left( \ell, \abseta, \pt \right) = 
+	\frac{
+		N^{\mathrm{np}}_{\mathrm{P}}
+		}{
+		N^{\mathrm{np}}_{\mathrm{L}}
+		}.
+\end{equation}
+The $\pt^e$ bin edges are [5--10--20--30--40--50--80] \GeV and the $\pt^{\mu}$ bin edges are [5--7--10--20--30--40--50--80] \GeV.
+% Since the 2P2F, 3P1F, and 4P regions all contain an unreliable
+The nonprompt leptons used to measure $f$ are taken from events in data with a signature like that of \ZplusL, where Z is a Z boson and \looselep is a loose lepton.
+By construction, this region of events is orthogonal to the 2P2F, 3P1F, and 4P regions, and provides a clean source of \looselep.
+The loose lepton, whose selection is defined in Section~\ref{subsec:lep_sel}, is also called the \emph{probe} lepton.
+The probe lepton is either a PTS or FTS lepton and is counted towards both the numerator and denominator of Eq.~\ref{eqn:fr_calc}. 
+
+Events are selected that satisfy the following criteria:
+\begin{itemize}
+	\item The event has exactly 3 leptons.
+	\item The event contains $\MET < 25$~\GeV.
+	\item Two of the leptons form a Z candidate. A Z candidate is formed when:
+	\begin{itemize}
+		\item The lepton pair is OSSF.
+		\item Both leptons PTS.
+		\item The leading lepton has $\pt > 20~\GeV$.
+		\item The subleading lepton has $\pt > 10~\GeV$.
+		\item The lepton pair satisfies $\left| \mll - m_{\PZ_{\text{PDG}}} \right| < 7~\GeV$
+	\end{itemize}
+	\item The third and final lepton is loose (and may be a PTS or FTS lepton).
+	\item Suppress QCD processes: probe lepton and OS lepton from Z have $\mll > 4~\GeV$.
+\end{itemize}
+
+The calculation of $f$ requires that \looselep is a nonprompt lepton but since data events were used, this may not be the case.
+For example, the decay of \WZ produces 3 prompt leptons and so this contribution must be subtracted.
+Thus, the number of expected prompt probe leptons from \WZ events is subtracted from both the numerator and denominator in Eq.~\ref{eqn:fr_calc} for each $\ell, \pt, \abseta$ bin.
+The final OS Method misidentification rates for electrons and muons are shown in \figurename~\ref{fr_plots} using 2016--2018 UL data.
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016_el.pdf}
+		\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2017_el.pdf}
+		\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2018_el.pdf}
+		\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016_mu.pdf}
+		\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2017_mu.pdf}
+		\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2018_mu.pdf}
+		\caption{
+			Electron (top row) and muon (bottom row) fake rates evaluated using the OS Method
+			\vs the \pt of the probe lepton
+			for 2016, 2017, and 2018 UL data (left, middle, right columns, respectively).
+		}
+		\label{fr_plots}
+	\end{center}
+\end{figure}
+% \subsubsection{OS Method event selection}
+% \label{osmethod_evtsel}

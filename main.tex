@@ -25,7 +25,6 @@
 \usepackage{newtxtext}
 \usepackage{newtxmath}
 
-
 % Enable format for table, figure, object
 \haveTablestrue%        Uncomment this if you have tables in your thesis.
 \haveFigurestrue%       Uncomment this if you have figures in your thesis.
@@ -45,9 +44,9 @@
     Using the CMS Detector at the LHC
 }
 
-\degreeType{Doctorate of Philosophy}         % Official name of your degree; eg "Doctorate of Philosophy".
+\degreeType{Doctor of Philosophy}         % Official name of your degree; eg "Doctorate of Philosophy".
 \major{Physics}                              % Your official Department.
-\author{Daniel ``Jake'' Rosenzweig}%                  Your Name
+\author{Jake Rosenzweig}%                  Your Name
 \thesisType{Dissertation}%              Dissertation (PhD) or Thesis (Masters)
 \degreeYear{2022}%                      Intended graduation year (not the year you submit the thesis)
 \degreeMonth{December}%                   Month of graduation should be May, August, or December.
@@ -58,9 +57,9 @@
 \setAcknowledgementsFile{tex/acknowledgementsFile}%     Acknowledgements Page
 
 % \setAbstractFile{tex/abstractFile}%                     Abstract Page (This should only include the abstract itself)
-%\setReferenceFile{referenceFile}{amsplain}%         References. First argument is your bibtex source file
+% \setReferenceFile{referenceFile}{amsplain}%         References. First argument is your bibtex source file
 % :                                                  the second argument is your bibtex style file.
-% \setReferenceFile{referenceFile}{unsrtnat}  % <== Use this one.  unsrtnat sorts references in cite order, and shows url.
+\setReferenceFile{referenceFile}{unsrtnat}  % <== Use this one.  unsrtnat sorts references in cite order, and shows url.
 %\setBiographicalFile{biographyFile}%                Biography file of the Author (you).
 
 
@@ -77,7 +76,7 @@
 % \input{tex/abstractFile.tex}
 \input{tex/definitions.tex}
 
-\justify % so that all text is fully justified
+% \justify % so that all text is fully justified
 
 %--- Structure of each chapter ---%
 % tex/chapter/section.tex
@@ -113,8 +112,9 @@
 %--- Higgs Mass Measurement ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tex/05_higgs_mass/higgs_intro.tex}
-% \input{tex/higgs_mass/datasets.tex}
-% \input{tex/higgs_mass/objects.tex}
+\input{tex/05_higgs_mass/overview.tex}
+\input{tex/05_higgs_mass/datasets.tex}
+\input{tex/05_higgs_mass/objects.tex}
 \input{tex/05_higgs_mass/event_selection.tex}
 % \input{tex/higgs_mass/ebe_mass_uncert.tex}
 % \input{tex/higgs_mass/signal_model.tex}

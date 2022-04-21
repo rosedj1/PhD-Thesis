@@ -2,7 +2,7 @@
 \label{sec:bkg_estim}
 Measurement of the Higgs boson mass requires the accurate modelling of the total event yield in the signal region (SR), into which events can be categorized as either \emph{signal} or \emph{background}.
 % Processes which pass the signal event selection but are not actually the signal process of interest (HZZ4L) are called background processes.
-These background events pass the signal event selection (Section~\ref{subsec:zz_sel}) and thus spoil the purity of the signal events.
+These background events pass the signal event selection (Section~\ref{subsubsec:zz_sel}) and thus spoil the purity of the signal events.
 This introduces further uncertainty into the final Higgs boson mass measurement.
 Therefore, it is a priority to both reduce and predict the expected number of background events, which can be split into \emph{irreducible backgrounds} (IB) and \emph{reducible background} (RB) processes.
 % \begin{itemize}
@@ -77,10 +77,10 @@ Thus, events in data are sorted into 2 control regions (CRs), both of which are 
 	\item the \emph{3P1F} CR (built from 3 PTS and 1 FTS leptons)
 	\item the \emph{2P2F} CR (built from 2 PTS and 2 FTS leptons).
 \end{itemize}
-The event selection for the 2P2F and 3P1F CRs is almost identical to that of the SR (Section~\ref{subsec:zz_sel}),
-except that the FTS lepton(s) must go into building the Z$_{2}$.
-The events which contribute most to the 2P2F CR are those that produce 2 prompt and 2 nonprompt leptons (\emph{2pr events}).
-Events that produce 3 prompt and 1 nonprompt leptons (\emph{3pr events}) contribute mostly to the 3P1F CR.
+The event selection for the 2P2F and 3P1F CRs is almost identical to that of the SR (Section~\ref{subsubsec:zz_sel}),
+except that the FTS lepton(s) are required to build the $\PZ_{2}$.
+The events that contribute most to the 2P2F CR are those that produce 2 prompt and 2 nonprompt leptons (\emph{2pr events})
+and, similarly, events that contribute mostly to the 3P1F CR are those that produce 3 prompt and 1 nonprompt leptons (\emph{3pr events}).
 
 To understand the logic behind the final formula for \fourPexp (Eq.~\ref{eqn:rbe_formula_final}), it is helpful to first analyze a single event:
 suppose event $k$ is a 2pr event which contributes to the 2P2F CR a certain event weight $\left( w^{k}_{\mathrm{2pr \to 2P2F}} \right)$.
@@ -345,7 +345,7 @@ and $\hat{w}^k_{\ZZ}$ accounts for the differential QCD and electroweak $k$-fact
 \subsubsection{Lepton misidentification rate measurement}
 \label{subsubsec:fr_evtsel}
 As mentioned in Section~\ref{sec:redbkg}, the lepton misidentification rate ($f$) is the probability that a nonprompt lepton will pass tight selections (PTS).
-The value $f$ is a function of the flavor ($\ell = \mathrm{e}, \mu$), \pt, and $\eta$ of a lepton.
+The value $f$ is a function of the flavor ($\ell = \text{e}, \mu$), \pt, and $\eta$ of a lepton.
 The misidentification rate is calculated by simply counting the number of nonprompt PTS leptons $\left( N^{\mathrm{np}}_{\mathrm{P}} \right)$ that enter a particular $\ell, \pt, \abseta$ bin compared to the total number of loose probe leptons $\left( N^{\mathrm{np}}_{\mathrm{L}} \right)$ in the same bin:
 \begin{equation}
 	\label{eqn:fr_calc}

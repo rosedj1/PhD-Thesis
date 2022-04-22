@@ -66,7 +66,7 @@ The careful estimation of these RB contributions to the 4P region is necessary f
 
 \subsubsection{OS Method}
 % \label{subsec:os_method}
-The goal of the OS Method is to estimate the number of opposite-sign same-flavor (OSSF) $4\ell$ events produced by RB process that ``contaminate'' the 4P region $\left( \fourPexp \right)$.
+The goal of the OS Method is to estimate the number of opposite-sign same-flavor (OSSF) $4\ell$ events produced by RB process that ``contaminate'' the 4P region $\left( \nfourPRB \right)$, given by Eq.~\ref{eqn:rbe_formula_final}.
 % Since the $4\ell$ final state of the signal process consists of 2 pairs of OSSF leptons, the method is called the \emph{OS Method}.
 However, the typical approach of using simulated samples does not model RB well, since RB processes (\eg, \Zplusjets) rely on higher-order effects like jet modelling which are not yet accurately simulated.
 Instead, a data-driven approach is used.
@@ -78,36 +78,35 @@ Thus, events in data are sorted into 2 control regions (CRs), both of which are 
 	\item the \emph{2P2F} CR (built from 2 PTS and 2 FTS leptons).
 \end{itemize}
 The event selection for the 2P2F and 3P1F CRs is almost identical to that of the SR (Section~\ref{subsubsec:zz_sel}),
-except that the FTS lepton(s) are required to build the $\PZ_{2}$.
-The events that contribute most to the 2P2F CR are those that produce 2 prompt and 2 nonprompt leptons (\emph{2pr events})
-and, similarly, events that contribute mostly to the 3P1F CR are those that produce 3 prompt and 1 nonprompt leptons (\emph{3pr events}).
+except that the FTS lepton(s) are required to build the \Ztwo.
+The events that contribute mostly to the 2P2F(3P1F) CR are those that produce 2(3) prompt and 2(1) nonprompt leptons and are called \emph{2pr}(\emph{3pr}) events.
+Similarly, the events that contribute mostly to the 4P SR are those that produce 4 prompt leptons and are called \emph{4pr} events.
 
-To understand the logic behind the final formula for \fourPexp (Eq.~\ref{eqn:rbe_formula_final}), it is helpful to first analyze a single event:
-suppose event $k$ is a 2pr event which contributes to the 2P2F CR a certain event weight $\left( w^{k}_{\mathrm{2pr \to 2P2F}} \right)$.
-This event weight is built from the product of analysis weights (pileup, L1 pre-firing, \etc, whose product will be called $\hat{w}^k$) and the reconstruction efficiencies ($\epsilon$) of each lepton ($\ell_n$):
+The final formula for \nfourPRB is obtained by first supposing that event $k$ is a 2pr event and contributes to the 2P2F CR an event weight of $\wgttwoprompttotwoPtwoF^k$.
+This weight is built from the product of analysis weights (pileup, L1 pre-firing, \etc, whose product is $\hat{w}^k$) and the reconstruction efficiencies ($\epsilon$) of each lepton ($\ell_n$):
 \begin{equation}
 	\label{eqn:wt_2prto2p2f}
-	w^{k}_{\mathrm{2pr \to 2P2F}} = \hat{w}^k \cdot \effprpass(\ell_1^k) \cdot \effprpass(\ell_2^k) \cdot \effnpfail(\ell_3^k) \cdot \effnpfail(\ell_4^k),
+	\wgttwoprompttotwoPtwoF^k = \hat{w}^k \cdot \effprpass(\ell_1^k) \cdot \effprpass(\ell_2^k) \cdot \effnpfail(\ell_3^k) \cdot \effnpfail(\ell_4^k),
 \end{equation}
 where the superscript of $\epsilon$ indicates the lepton promptness (pr = prompt, np = nonprompt),
 the subscript indicates the lepton tightness status (P = PTS, F = FTS).
-To simplify the equations that follow, $\hat{w}^k$ will be set to unity.
+To simplify the equations that follow, $\hat{w}^k$ is set to unity.
 %  \effprpass(\ell_1^k) is the efficiency of reconstructing $\ell_1$ from event $k$ as a \mathbf{P}TS lepton
 % and \effnpfail(\ell_3^k) is the efficiency of reconstructing $\ell_3$ from event $k$ as a \mathbf{F}TS lepton
 % where $\epsilon^{\mathrm{pr|np}}_{\mathrm{P|F}}$ is the efficiency of reconstructing a prompt/nonprompt lepton passing/failing tight selections.
-If the reconstruction efficiencies are the same for all leptons of a particular category $\left( \eg ~ \effprpass \right)$ across all events, then Eq.~\ref{eqn:wt_2prto2p2f} reduces to:
+If the reconstruction efficiencies of a particular category are the same for all $j$ leptons across all $k$ events $\left( \eg, ~ \effprpass(\ell_j^k) \equiv \effprpass \right)$, then Eq.~\ref{eqn:wt_2prto2p2f} reduces to:
 \begin{equation}
 	\label{eqn:wt_2prto2p2f_simp}
-	w^{k}_{\mathrm{2pr \to 2P2F}} = 
+	\wgttwoprompttotwoPtwoF^k = 
 	\left( \effprpass \right)^2 
 	\left( \effnpfail \right)^2.
 \end{equation}
 
-Although a 2pr event mostly contributes to the 2P2F CR, a nonprompt lepton may be misidentified as a PTS lepton depending on \effnppass.
-In this case, event $k$ would then fall into the 3P1F CR and, being careful to allow only one nonprompt PTS lepton at a time, contributes an effective weight of
+Although a 2pr event mostly contributes to the 2P2F CR, a nonprompt lepton may be misidentified as a PTS lepton, depending on \effnppass.
+Such an event would then fall into the 3P1F CR and, allowing for only one nonprompt PTS lepton at a time, contributes an effective weight of
 \begin{align}
 	\label{eqn:wt_2prto3p1f}
-	w^{k}_{\mathrm{2pr \to 3P1F}}
+	\wgttwoprompttothreePoneF^k
 	&= \left( \effprpass \right)^2 
 	\left[
 		\effnppass(\ell_1^k) \cdot \effnpfail(\ell_2^k) + \effnpfail(\ell_1^k) \cdot \effnppass(\ell_2^k)
@@ -119,106 +118,136 @@ In this case, event $k$ would then fall into the 3P1F CR and, being careful to a
 		2 \effnppass \effnpfail
 	\right].
 \end{align}
-Using the fact that a (non)prompt lepton is exclusively either PTS or FTS,
-% $\left( \epsilon^\mathrm{pr(np)}_\mathrm{P} + \epsilon^\mathrm{pr(np)}_\mathrm{F} = 1 \right)$,
-\begin{equation*}
-	\epsilon^\mathrm{pr(np)}_\mathrm{P} + \epsilon^\mathrm{pr(np)}_\mathrm{F} = 1,
-\end{equation*}
-recognizing that $\effnppass \equiv f$ (Section~\ref{sec:redbkg}), and defining $\effprpass \equiv \epsilon$,
-then Eq.~\ref{eqn:wt_2prto3p1f}  % TODO: Update with new equation number.
-becomes
+Using the fact that a (non)prompt lepton is exclusively either PTS or FTS
+$\left( \epsilon^\text{pr(np)}_\text{P} + \epsilon^\text{pr(np)}_\text{F} = 1 \right)$,
+% \begin{equation*}
+% 	\epsilon^\mathrm{pr(np)}_\mathrm{P} + \epsilon^\mathrm{pr(np)}_\mathrm{F} = 1,
+% \end{equation*}
+while recognizing that $\effnppass \equiv f$ (Section~\ref{sec:redbkg}) and defining $\effprpass \equiv \epsilon$,
+allows Eq.~\ref{eqn:wt_2prto3p1f} to be written as
 \begin{equation}
 	\label{eqn:wt_2prto3p1f_simp}
-	w^{k}_{\mathrm{2pr \to 3P1F}} = 2 \epsilon^2 f (1-f).
+	\wgttwoprompttothreePoneF^k = 2 \epsilon^2 f (1-f).
 \end{equation}
 The prediction of Eq.~\ref{eqn:wt_2prto3p1f_simp} can be seen in Figures~\ref{cr_plots_3p1f_2016}--\ref{cr_plots_3p1f_2018} for 2016--2018 UL data.
 
-A smaller fraction of the time, both nonprompt leptons from a 2pr event may be misidentified as PTS leptons.
+Even more rarely, both nonprompt leptons from a 2pr event may be misidentified as PTS leptons.
 In this case, event $k$ contributes to the 4P region an effective weight of
 \begin{equation}
 	\label{eqn:wt_2prto4p}
-	w^{k}_{\mathrm{2pr \to 4P}} = \epsilon^2 f^2,
+	\wgttwoprompttofourP^k = \epsilon^2 f^2,
 \end{equation}
 where it is assumed that both leptons have the same misidentification rate.
 Similar equations can be derived for the contributions of a 3pr event to the 3P1F CR and to the 4P region:
 \begin{align}
 	\label{eqn:wt_3prto3p1f}
-	w^{k}_{\mathrm{3pr \to 3P1F}} &= \epsilon^3 \left( 1-f \right)
+	\wgtthreeprompttothreePoneF^k &= \epsilon^3 \left( 1-f \right)
 	\\
 	\label{eqn:wt_3prto4p}
-	w^{k}_{\mathrm{3pr \to 4P}} &= \epsilon^3 f.
+	\wgtthreeprompttofourP^k &= \epsilon^3 f.
 \end{align}
 Since a 3pr event needs only 1 nonprompt PTS lepton to be included in the 4P region (therefore, carrying only 1 factor of $f$), a 3pr event tends to contribute more weight to 4P than does a 2pr event (which carries $f^2$).
-If the total number of 2pr and 3pr events is $X_2$ and $X_3$, respectively, then the expected number of 4P events using Eqs.~\ref{eqn:wt_2prto4p} and~\ref{eqn:wt_3prto4p} is
+
+If the total number of 2pr, 3pr, and 4pr events is \xtwoprompt, \xthreeprompt, and \xfourprompt, respectively, then Figure~\ref{fig:prompt_to_crs} shows how the weight of a single event, derived in the previous equations (and others forthcoming), from each category contributes to the final yield of each CR $\left( \ntwoPtwoF, \nthreePoneF \right)$ and of the SR $\left( \nfourP \right)$.
+% \begin{figure}[!htbp]
+% 	\begin{center}
+% 		\begin{tikzpicture}
+% 			\node (X2pr) {\xtwoprompt};
+% 			\node[right=4cm of X2pr] (X3pr) {\xthreeprompt};
+% 			\node[right=4cm of X3pr] (X4pr) {\xfourprompt};
+% 			\node[below=2cm of X2pr] (N2p) {\ntwoPtwoF};
+% 			\node[below=2cm of X3pr] (N3p) {\nthreePoneF};
+% 			\node[below=2cm of X4pr] (N4p) {\nfourP};
+% 			% \draw[-latex] (X3pr) -- (N4p) node[xshift=2cm,yshift=1cm,rotate=45] {some words};
+% 			% \draw[-latex] (X3pr) -- (N4p) node[midway,above,rotate=45] {words};
+% 			% \draw[-latex] (X3pr) -- (N4p) node[sloped, anchor=center] {words};
+% 		\end{tikzpicture}
+% 		\caption{
+% 			Each category of prompt processes contribute an effective event weight $\left( w^k \right)$ The total number of events that yield 2/3/4 prompt leptons each con
+% 			}
+% 		\label{fig:prompt_to_crs}
+% 	\end{center}
+% \end{figure}
+It is then straightforward to evaluate the expected number of RB 4P events:
 \begin{align}
 	\label{eqn:n4p_x2x3}
-	\fourPexp
-	&= \sum_{k=1}^{X_{2}} w^{k}_{\mathrm{2pr \to 4P}} + \sum_{m=1}^{X_{3}} w^{m}_{\mathrm{3pr \to 4P}}
+	\nfourPRB
+	&= \sum_{k=1}^{\xtwoprompt} \wgttwoprompttofourP^k + \sum_{m=1}^{\xthreeprompt} \wgtthreeprompttofourP^m
 	\notag
 	\\
-	&= \sum_{k=1}^{X_{2}} \epsilon^2 f^2 + \sum_{m=1}^{X_{3}} \epsilon^3 f
+	&= \sum_{k=1}^{\xtwoprompt} \epsilon^2 f^2 + \sum_{m=1}^{\xthreeprompt} \epsilon^3 f
 	\notag
 	\\
-	&= f^2 \epsilon^2 X_{2} + f \epsilon^3 X_{3}.
+	&= f^2 \epsilon^2 \xtwoprompt + f \epsilon^3 \xthreeprompt,
 \end{align}
-Only the quantities $f$ and $\epsilon$ are known, so $X_2$ and $X_3$ must be estimated.
-This is achieved by relating $X_2$ to the observed number of 2P2F events $\left( \twoPtwoFexp \right)$.
-Using Eq.~\ref{eqn:wt_2prto2p2f_simp} across all 2pr events gives:
-% If the total number of true 2pr events is $X_2$, then the expected number of 2P2F events $\left( \twoPtwoFexp \right)$ is obtained via Eq.:
+where only the quantities $f$ and $\epsilon$ are known, so \xtwoprompt and \xthreeprompt must be estimated.
+This is achieved by relating \xtwoprompt to \ntwoPtwoF using Eq.~\ref{eqn:wt_2prto2p2f_simp} across all 2pr events:
+% If the total number of true 2pr events is \xtwoprompt, then the expected number of 2P2F events $\left( \ntwoPtwoF \right)$ is obtained via Eq.:
 \begin{align}
 	\label{eqn:n2p2f_x2}
-	\twoPtwoFexp
-	&= \sum_{k=1}^{X_{2}} w^{k}_{\mathrm{2pr \to 2P2F}}
+	\ntwoPtwoF
+	&= \sum_{k=1}^{\xtwoprompt} \wgttwoprompttotwoPtwoF^k
 	\notag
 	\\
-	% &= \sum_{k=1}^{X_{2}} \epsilon^2 \left( \effnpfail \right)^2
+	% &= \sum_{k=1}^{\xtwoprompt} \epsilon^2 \left( \effnpfail \right)^2
 	% \\
-	&= \sum_{k=1}^{X_{2}} \epsilon^2 \left( 1-f \right)^2
+	&= \sum_{k=1}^{\xtwoprompt} \epsilon^2 \left( 1-f \right)^2
 	\notag
 	\\
-	&= \left( 1-f \right)^2 \epsilon^2 X_{2}
+	&= \left( 1-f \right)^2 \epsilon^2 \xtwoprompt
 	% \\
-	% \implies X_{2} &= \frac{ \twoPtwoFexp }{ \epsilon^2 \left( 1-f \right)^2 }
+	% \implies \xtwoprompt &= \frac{ \ntwoPtwoF }{ \epsilon^2 \left( 1-f \right)^2 }
 \end{align}
 
-The strategy to relate $X_3$ to the observed number of 3P1F events $\left( \threePoneFexp \right)$ is not as straightforward as relating $X_2$ to \twoPtwoFexp,
-since two other sources also contribute to the 3P1F CR:
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{figures/higgsmassmeas/redbkg/promptwgts_to_CRSR.png}
+		\caption{
+			Contributions of per-event weights (boxed values) of various $n$-prompt-lepton processes ($X_{n\text{pr}}$, in parentheses) to the total numbers of events in the observed control regions $\left( \ntwoPtwoF, \nthreePoneF \right)$ and signal region $\left( \nfourP \right)$.
+			The labels ``IB'' and ``RB'' indicate those contributions which comprise the irreducible and reducible backgrounds, respectively.
+		}
+		\label{fig:prompt_to_crs}
+	\end{center}
+\end{figure}
+
+The strategy to relate \xthreeprompt to \nthreePoneF is not as straightforward as relating \xtwoprompt to \ntwoPtwoF,
+since two other sources also contribute to the 3P1F CR (as shown in Figure~\ref{fig:prompt_to_crs}):
 \begin{itemize}
 	\item A 2pr RB process can yield one nonprompt PTS lepton (via Eq.~\ref{eqn:wt_2prto3p1f_simp}).
 	\item A 4-prompt IB process (\qqggZZfourl, ``\ZZ'') can yield one FTS lepton.
 \end{itemize}
 The second of these is well estimated from simulation, since \ZZ produces 4 prompt leptons.
-Supposing that the total number of simulated \ZZ events is $X_4^{\ZZ}$, then event $k$ belonging to these events contributes to the 3P1F CR an effective weight of
+If the total number of simulated \ZZ events is \xfourpromptzz, then event $k$ belonging to these events contributes to the 3P1F CR an effective weight of
 \begin{equation}
 	\label{eqn:wt_4przzto3p1f}
-	w^k_{\mathrm{4prZZ \to 3P1F}} = 4 \epsilon^3 \effprfail,
+	\wgtfourpromptzztothreePoneF^k = 4 \epsilon^3 \effprfail,
 \end{equation}
 which accounts for any of the 4 prompt leptons to be reconstructed as a FTS lepton while the others are PTS leptons.
-Incorporating Eqs.~\ref{eqn:wt_2prto3p1f_simp},~\ref{eqn:wt_3prto3p1f}, and~\ref{eqn:wt_4przzto3p1f} for all events relates $X_3$ to \threePoneFexp:
+Incorporating Eqs.~\ref{eqn:wt_2prto3p1f_simp},~\ref{eqn:wt_3prto3p1f}, and~\ref{eqn:wt_4przzto3p1f} for all events relates \xthreeprompt to \nthreePoneF:
 \begin{align}
 	\label{eqn:n3p1f_x3}
-	\threePoneFexp
-	&= \sum_{j=1}^{X_{3}} w^{j}_{\mathrm{3pr \to 3P1F}} + \sum_{k=1}^{X_{2}} w^{k}_{\mathrm{2pr \to 3P1F}} + \sum_{m=1}^{X_4^{\ZZ}} w^m_{\mathrm{4prZZ \to 3P1F}}
+	\nthreePoneF
+	&= \sum_{j=1}^{\xthreeprompt} \wgtthreeprompttothreePoneF^j + \sum_{k=1}^{\xtwoprompt} \wgttwoprompttothreePoneF^k + \sum_{m=1}^{\xfourpromptzz} \wgtfourpromptzztothreePoneF^m
 	\notag
 	\\
-	&= \sum_{j=1}^{X_{3}} \epsilon^3 (1-f) + \sum_{k=1}^{X_{2}} 2 \epsilon^2 f (1-f) + \sum_{m=1}^{X_4^{\ZZ}} 4 \epsilon^3 \effprfail
+	&= \sum_{j=1}^{\xthreeprompt} \epsilon^3 (1-f) + \sum_{k=1}^{\xtwoprompt} 2 \epsilon^2 f (1-f) + \sum_{m=1}^{\xfourpromptzz} 4 \epsilon^3 \effprfail
 	\notag
 	\\
-	&= (1-f) \epsilon^3 X_{3} + 2 f (1-f) \epsilon^2 X_{2} + 4 \epsilon^3 \effprfail X_4^{\ZZ}
+	&= (1-f) \epsilon^3 \xthreeprompt + 2 f (1-f) \epsilon^2 \xtwoprompt + 4 \epsilon^3 \effprfail \xfourpromptzz
 	\notag
 	\\
-	&= (1-f) \epsilon^3 X_{3} + 2 f (1-f) \epsilon^2 X_{2} + \threePoneFzz,
+	&= (1-f) \epsilon^3 \xthreeprompt + 2 f (1-f) \epsilon^2 \xtwoprompt + \nthreePoneFzz,
 \end{align}
-where \threePoneFzz is simply the raw (integer) number of \ZZ events that pass 3P1F selections, obtained directly from simulation.
+where \nthreePoneFzz is simply the raw (integer) number of \ZZ events that pass 3P1F selections, obtained directly from simulation.
 
-At this point, \fourPexp can be isolated by combining Eqs.~\ref{eqn:n4p_x2x3},~\ref{eqn:n2p2f_x2}, and~\ref{eqn:n3p1f_x3}:
+At this point, \nfourPRB can be isolated by combining Eqs.~\ref{eqn:n4p_x2x3},~\ref{eqn:n2p2f_x2}, and~\ref{eqn:n3p1f_x3}:
 % (the substitutions $A = \epsilon^2 X_2, B = \epsilon^3 X_3$ are quite useful)
 \begin{equation}
 	\label{eqn:rbe_formula}
-	\fourPexp =
-	\left( \frac{f}{1-f} \right) \threePoneFexp^{\mathrm{Data}} -
-	\left( \frac{f}{1-f} \right)^2 \twoPtwoFexp^{\mathrm{Data}} - 
-	\left( \frac{f}{1-f} \right) \threePoneFzz.
+	\nfourPRB =
+	\left( \frac{f}{1-f} \right) \nthreePoneF^{\text{Data}} -
+	\left( \frac{f}{1-f} \right)^2 \ntwoPtwoF^{\text{Data}} - 
+	\left( \frac{f}{1-f} \right) \nthreePoneFzz.
 \end{equation}
 Thus, Eq.~\ref{eqn:rbe_formula} estimates the RB contribution to the 4P region by using a single lepton misidentification rate to reweight the raw yields of events found in the 3P1F and 2P2F CRs of data, and also the 3P1F CR of \ZZ.
 
@@ -229,10 +258,10 @@ by restoring the analysis weights per event,
 and by summing over the total number of raw yields per CR:
 \begin{equation}
 	\label{eqn:rbe_formula_final}
-	\fourPexp =
-	  \sum_{i=1}^{N_{\mathrm{3P1F}}^\mathrm{Data}} \hat{w}^i \frac{f_i}{1 - f_i}
-	- \sum_{j=1}^{N_{\mathrm{2P2F}}^{\mathrm{Data}}} \hat{w}^j \frac{f_{1,j}}{1 - f_{1,j}}\frac{f_{2,j}}{1 - f_{2,j}}
-	- \sum_{k=1}^{N_{\mathrm{3P1F}}^{\mathrm{ZZ}}} \hat{w}^k_{\ZZ} \frac{f_k}{1 - f_k},
+	\nfourPRB =
+	  \sum_{i=1}^{N_{\text{3P1F}}^\text{Data}} \hat{w}^i \frac{f_i}{1 - f_i}
+	- \sum_{j=1}^{N_{\text{2P2F}}^\text{Data}} \hat{w}^j \frac{f_{1,j}}{1 - f_{1,j}}\frac{f_{2,j}}{1 - f_{2,j}}
+	- \sum_{k=1}^{N_{\text{3P1F}}^{\ZZ}} \hat{w}^{k}_{\ZZ} \frac{f_k}{1 - f_k},
 \end{equation}
 where $f_{1,j}$ and $f_{2,j}$ are the misidentification rates of the first and second FTS leptons, respectively, found in the $j^{\text{th}}$ 2P2F event
 and $\hat{w}^k_{\ZZ}$ accounts for the differential QCD and electroweak $k$-factors defined in Section~\ref{sec:bkg_irred}.

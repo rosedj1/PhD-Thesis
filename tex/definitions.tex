@@ -50,7 +50,6 @@
 
 % Units.
 % Xunwu used `\,` (a kern) at the beginning of each unit.
-% I removed them.
 % Jake, consider getting rid of \mbox below!
 \newcommand{\de}{\ensuremath{^\circ}}
 \newcommand{\tentothe}[1]{\ensuremath{\times \text{10}^\text{#1}}}
@@ -93,6 +92,7 @@
 \newcommand{\GeVccns}{\ensuremath{{\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace} % no leading thinspace
 \newcommand{\TeVcc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
 % Cross section.
+\newcommand{\mb}{\ensuremath{\,\text{mb}}\xspace}
 \newcommand{\pb}{\ensuremath{\,\text{pb}}\xspace}
 \newcommand{\fb}{\ensuremath{\,\text{fb}}\xspace}
 % Luminosity.
@@ -178,7 +178,12 @@
 \newcommand{\htvecmiss}{\ensuremath{\vec{H}_{\text{T}}^{\text{miss}}}\xspace}
 \newcommand{\wangle}{\ensuremath{\sin^{2}\theta_{\text{eff}}^\text{lept}(M^2_{\PZ})}\xspace}
 \newcommand{\alpS}{\ensuremath{\alpha_S}\xspace}
+% Masses.
 \newcommand{\mh}{\ensuremath{m_{\PH}}\xspace}
+\newcommand{\mH}{\mh}
+\newcommand{\mmm}{\ensuremath{m_{\mu\mu}}\xspace}
+\newcommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
+\newcommand{\mjj}{\ensuremath{m_{\mathrm{jj}}}\xspace}
 
 %=== Particles ===%
 \newcommand{\Pn}{\ensuremath{\mathrm{n}}}
@@ -204,6 +209,7 @@
 
 %=== Particle combos. ===%
 \newcommand{\pp}{\ensuremath{\mathrm{pp}}\xspace}
+\newcommand{\lplm}{\ensuremath{\ell^+ \ell^-}\xspace}
 \newcommand{\ee}{\ensuremath{\mathrm{e^+ e^-}}\xspace}
 \newcommand{\fourl}{\ensuremath{4\ell}\xspace}
 \newcommand{\ZX}{\ensuremath{\PZ \PX}\xspace}
@@ -238,9 +244,11 @@
 \newcommand{\kappazi}{\ensuremath{\kappa_{i}\smash[b]{^{\PGn\PAGn}}}\xspace}
 
 % Reactions/Processes.
+\newcommand{\Ztolplm}{\ensuremath{\PZ \to \lplm}\xspace}
 \newcommand{\hmm}{\ensuremath{\PH \to \mu\mu}\xspace}
 \newcommand{\zmm}{\ensuremath{\PZ \to \mu\mu}\xspace}
-\newcommand{\hzzfourl}{\ensuremath{\PH \to \PZ\PZ^{\ast} \to \fourl}\xspace}
+\newcommand{\htozz}{\ensuremath{\PH \to \PZ\PZ^{\ast}}\xspace}
+\newcommand{\hzzfourl}{\ensuremath{\htozz \to \fourl}\xspace}
 \newcommand{\hzxxxfourl}{\ensuremath{\PH \to \ZX / \XX \to \fourl}\xspace}
 % Dilepton
 
@@ -280,12 +288,10 @@
 \newcommand{\qqggZZfourl}{\ensuremath{\mathrm{q\bar{q}/gg \to ZZ \to 4\ell}}\xspace}
 
 % To-be sorted.
-\newcommand{\mmm}{\ensuremath{m_{\mu\mu}}\xspace}
-\newcommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
-\newcommand{\mjj}{\ensuremath{m_{\mathrm{jj}}}\xspace}
 
-% \newcommand{\br}[1]{\ensuremath{{\mathcal{B} \left( #1 \right)}}\xspace}
+
 \newcommand{\br}{\ensuremath{\mathcal{B}}\xspace}
+\newcommand{\BRof}[1]{\ensuremath{{\mathcal{B} \left( #1 \right)}}\xspace}
 \newcommand{\brhmm}{\ensuremath{{\mathcal{B}(\PH \to \mu\mu)}}\xspace}
 \newcommand{\brhff}{\ensuremath{{\mathcal{B}(\PH \to f\overline{f})}}\xspace}
 \newcommand{\detajj}{\ensuremath{\Delta\eta_{\mathrm{jj}}}\xspace}

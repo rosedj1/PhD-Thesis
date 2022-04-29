@@ -25,8 +25,13 @@ Each decay occurs with a different probability---the \emph{branching fraction} o
 	\end{center}
 \end{figure} 
 The question then becomes, \emph{``Which decay mode of the Higgs boson is most useful for the measurement of \mH?''}.
+% Real particles enter detectors in CMS which send signals to various electronics.
+% Particle Flow algorithm pieces the information together to construct objects out of each event.
+% Now, instead of just a deposit of energy in the ECAL and corresponding hits in the silicon tracker, the particle is identified as a newly produced electron.
+% CMS records which kinds of objects came from which events and stores the information in \emph{data sets} (TODO: ref Section future).
+
 Owing to its large signal-to-background ratio of approximately 2 and its relatively rare four-lepton final state, the \hzzfourl decay channel is selected and is called the \emph{signal} process.
-Thus, a single Higgs boson decays via the signal process into two \PZ bosons (one on-shell and one off-shell) only 2.6\% of the time.
+Thus, a single Higgs boson will decay via the signal process into two \PZ bosons (one on-shell and one off-shell) on average only 2.6\% of the time.
 In turn, each \PZ boson decays into two opposite-sign, same flavor (OSSF) leptons (\Ztolplm, where $\ell = \Pe, \mu$) on average approximately 6.7\% of the time, giving rise to four distinct final states:
 \foure, \fourmu, \twoetwomu, \twomutwoe.
 The branching ratio for the overall signal process is then calculated as: % B(Z->ee)=0.033632, B(Z->mumu)=0.033662
@@ -39,36 +44,50 @@ The strategy is then to search the \pp collision data collected and analyzed by 
 The task is not so straightforward;
 events in the data are categorized---not by the entire decay process---but by their final state, based on which triggers fired to collect which events.
 Section~\ref{sec:datasets_simul_trig} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
-The chosen events have a plethora of information from all the various subdetectors in CMS (Chapter~\ref{ch:cms_detector}) which gets reconstructed into \emph{objects}---representations of the true particles produced by the event.
-Since the process of interest is \hzzfourl, the reconstructed objects per event should be assembled in a fashion that coincides with the  of each event should resemble this process, 
-The reconstructed objects per event must then be assembled in a fashion that coincides with the logic of the process of interest: \hzzfourl.
-So, for example, two OSSF-dilepton objects should each appear to come from a \PZ-boson-like object (\eg having a nominal mass of approximately 91\GeV and zero net electric charge)---instead of, say, coming from a Higgs-boson-like object.
-Furthermore, the involved objects should obey physics conservation laws (energy, momentum, charge, \etc) and pass detector selection criteria.
-These requirements are analysis-specific \emph{event selection} process to ensure that the events 
+For each chosen event, the subdetectors of CMS (Chapter~\ref{ch:cms_detector}) provide a plethora of track and energy-detection information to reconstruct \emph{objects}---representations of the underlying particles within the event.
+The reconstructed objects are then assembled in a fashion that checks if the logic coincides with the process of interest: \hzzfourl.  % TODO: Clean up this sentence.
+For example, two OSSF-dilepton objects should each appear to come from a \PZ-boson-like object (\eg having a nominal mass of approximately 91\GeV and zero net electric charge)---instead of, say, coming from a Higgs-boson-like object.
+Furthermore, the reconstructed event must obey physics conservation laws (energy, momentum, charge, \etc) and the associated objects may be required to pass certain detector selection criteria (\eg $\pt^\mu > 5\GeV$).
+% This process hinges on the conservation of momentum, since in the longitudinal ($z$) direction the \pp collision has initial and final.
+% Specifically, the 
+%     - The \PZ boson has a precisely measured mass of TODO a neutral particle, so the two leptons into which it decays should combine to Group two leptons together, 
+%     - Form two different pairs of opposite-sign, same-flavor (OSSF) leptons
+%     - If it appears that the to select specific hzz4l events (\emph{event selection}).
+These criteria are analysis-specific and are collectively called the \emph{event selection} of the analysis.
+The event selection for this analysis is described in Section~\ref{sec:evt_sel}.  % TODO: ref may be wrong.
 
-Once all signal-like events have been identified...
+Even though the event selection is constructed to select signal events, it is not guaranteed;
+there are certain physics process that have exactly the same initial and final states as the signal process.
+Such processes ``contaminate'' the collected signal events and are called \emph{background processes}.
+Figure~\ref{TODO} shows how identical initial state gluons can react to produce exactly the same final state particles, while producing different intermediate particles:
+the signal process (Left), initiated by gluon-gluon fusion \vs a background process (Right).
+It is imperative for all physics analyses to maximize the number of collected signal events while minimizing the number of collected background events.
+Section~\ref{sec:bkg_estim} discusses the associated background processes and how to estimate the number of events these contribute to the signal region.
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{figures/placeholder.png}  % TODO.
+		\includegraphics[width=0.48\textwidth]{figures/placeholder.png}  % TODO.
+		\caption{
+            Feynman diagrams showing how the initial and final states are the same
+            for the signal process (\gghzzfourl, Left) and one possible background process (\ggzzfourl, Right).
+        }
+		\label{fig:feyndiag_sig_vs_bkg}
+	\end{center}
+\end{figure}
 
-BACKGROUND
+Before extracting information or conclusions from the data themselves, it is necessary for particle physicists to make predictions about their analysis using simulated samples.
+Concretely, physicists have created software packages that simulate particle physics collisions,
+the resulting particle transformations using various theoretical frameworks,
+and even the interactions that particles have with the virtual detectors, through which they traverse.
+In this way, programs like \MGvATNLO and \POWHEG can simulate millions of rare (or \emph{fictitious}) events of, say, \hzzfourl, which would otherwise require many years to observe in data.
+Similarly, programs like \GEANTfour can show analysts what to expect as the produced particles interact with a virtual version of the CMS detector.
+The predictions from simulation can then be compared to the truth---the data---as a way to check the accuracy of the analysis.
+For example, a surplus of events in data where none was expected can lead to the discovery of new particles, as was the case in the discovery of the Higgs boson.
+The simulated samples for this analysis is described in Section~\ref{sec:datasets_simul_trig}.
+% agreement or deviations in what was expected.
 
-by being combined in a specific fashion and be combined in such a way so as to resemble this process, \eg 
-
-% Real particles enter detectors in CMS which send signals to various electronics.
-% Particle Flow algorithm pieces the information together to construct objects out of each event.
-% Now, instead of just a deposit of energy in the ECAL and corresponding hits in the silicon tracker, the particle is identified as a newly produced electron.
-% CMS records which kinds of objects came from which events and stores the information in \emph{data sets} (TODO: ref Section future).
-
-BACKGROUND
-- By collecting events with the \fourl final state, we are likely to find signal events.
-    - It's not just the signal process which produces \fourl: background also makes \fourl (Section FIXME).
-
-- Before analyzing the data, however, it is important to make predictions using simulated samples (Section FIXME).
-- In order to sort signal from background, use simulated samples 
-
-, which is the formation of particle physics objects from data.
-The data collected and analyzed by CMS is not so simple so as to have \htozz
-
-This process hinges on the conservation of momentum, since in the longitudinal ($z$) direction the \pp collision has initial and final.
-Specifically, the 
-    - The \PZ boson has a precisely measured mass of TODO a neutral particle, so the two leptons into which it decays should combine to Group two leptons together, 
-    - Form two different pairs of opposite-sign, same-flavor (OSSF) leptons
-    - If it appears that the to select specific hzz4l events (\emph{event selection}).
+Collected events that look like \hzzfourl.
+Now we measure mass.
+Make distribution of m4l.
+Fit it with signal line shape.
+Do likelihood fit.

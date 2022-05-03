@@ -19,7 +19,7 @@ Each decay occurs with a different probability---the \emph{branching fraction} o
 		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/higgs_BR_120to130GeV.pdf}
 		\caption{
             The branching ratios of various Higgs boson decays as a function of the Higgs boson mass
-            over a wide range of values (Left) and a narrow range (Right).
+            over a wide range (Left) and a narrow range (Right) of values.
             }
 		\label{fig:higgs_br}
 	\end{center}
@@ -46,8 +46,10 @@ events in the data are categorized---not by the entire decay process---but by th
 Section~\ref{sec:datasets_simul_trig} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
 For each chosen event, the subdetectors of CMS (Chapter~\ref{ch:cms_detector}) provide a plethora of track and energy-detection information to reconstruct \emph{objects}---representations of the underlying particles within the event.
 The reconstructed objects are then assembled in a fashion that checks if the logic coincides with the process of interest: \hzzfourl.  % TODO: Clean up this sentence.
-For example, two OSSF-dilepton objects should each appear to come from a \PZ-boson-like object (\eg having a nominal mass of approximately 91\GeV and zero net electric charge)---instead of, say, coming from a Higgs-boson-like object.
-Furthermore, the reconstructed event must obey physics conservation laws (energy, momentum, charge, \etc) and the associated objects may be required to pass certain detector selection criteria (\eg $\pt^\mu > 5\GeV$).
+For example, a pair of OSSF lepton-like objects should appear to come from a \PZ-like object---\ie having a nominal mass of approximately 91\GeV and zero net electric charge---instead of, say, appearing to come from a \PH-like object.
+Two such \PZ-like objects must be formed and should appear to come from a \PH-like object.
+% OSSF-dilepton objects should each appear to come from a \PZ-boson-like object (\eg having a nominal mass of approximately 91\GeV and zero net electric charge)---instead of, say, coming from a Higgs-boson-like object.
+All throughout, the reconstructed event must obey physics conservation laws (energy, momentum, charge, \etc) and the associated objects may even be required to pass certain detector selection criteria (\eg $\pt^\mu > 5\GeV$).
 % This process hinges on the conservation of momentum, since in the longitudinal ($z$) direction the \pp collision has initial and final.
 % Specifically, the 
 %     - The \PZ boson has a precisely measured mass of TODO a neutral particle, so the two leptons into which it decays should combine to Group two leptons together, 
@@ -60,7 +62,7 @@ Even though the event selection is constructed to select signal events, it is no
 there are certain physics process that have exactly the same initial and final states as the signal process.
 Such processes ``contaminate'' the collected signal events and are called \emph{background processes}.
 Figure~\ref{TODO} shows how identical initial state gluons can react to produce exactly the same final state particles, while producing different intermediate particles:
-the signal process (Left), initiated by gluon-gluon fusion \vs a background process (Right).
+the signal process (Left), initiated by gluon-gluon fusion \vs a background process (Right) which skips the intermediate Higgs boson.
 It is imperative for all physics analyses to maximize the number of collected signal events while minimizing the number of collected background events.
 Section~\ref{sec:bkg_estim} discusses the associated background processes and how to estimate the number of events these contribute to the signal region.
 \begin{figure}[!htbp]
@@ -75,19 +77,47 @@ Section~\ref{sec:bkg_estim} discusses the associated background processes and ho
 	\end{center}
 \end{figure}
 
-Before extracting information or conclusions from the data themselves, it is necessary for particle physicists to make predictions about their analysis using simulated samples.
-Concretely, physicists have created software packages that simulate particle physics collisions,
-the resulting particle transformations using various theoretical frameworks,
-and even the interactions that particles have with the virtual detectors, through which they traverse.
-In this way, programs like \MGvATNLO and \POWHEG can simulate millions of rare (or \emph{fictitious}) events of, say, \hzzfourl, which would otherwise require many years to observe in data.
-Similarly, programs like \GEANTfour can show analysts what to expect as the produced particles interact with a virtual version of the CMS detector.
-The predictions from simulation can then be compared to the truth---the data---as a way to check the accuracy of the analysis.
-For example, a surplus of events in data where none was expected can lead to the discovery of new particles, as was the case in the discovery of the Higgs boson.
-The simulated samples for this analysis is described in Section~\ref{sec:datasets_simul_trig}.
+Before drawing conclusions from the data themselves, it is necessary for particle physicists to make predictions about their analysis using simulated samples or \emph{simulation}.
+These samples contain simulated events usually of a specific process (\eg $\pp \to \hzzfourl$), governed by some theoretical framework that is programmed mathematically into the software package.
+% events from simulated particle physics collisions--- are created by software physicists have created software packages that simulate particle physics collisions,
+% the resulting particle transformations using various theoretical frameworks,
+% and even the interactions that particles have with the virtual detectors, through which they traverse.
+Programs like \MGvATNLO and \POWHEG can simulate millions of rare (or even \emph{fictitious}) events, which might otherwise take many years to observe in data.
+Furthermore, software can even simulate the particles as they travel through the simulated detectors.
+Programs like \GEANTfour can show analysts what to expect as the particles interact with a virtual version of the CMS detector.
+Predictions from simulation can then be compared to the truth---the data---as a way to check the accuracy of the analysis.
+For example, a surplus of events in data where none was expected may lead to the discovery of new particles, as was the case in the discovery of the Higgs boson.
 % agreement or deviations in what was expected.
+The simulated samples for this analysis are described in Section~\ref{sec:datasets_simul_trig}.
 
-Collected events that look like \hzzfourl.
-Now we measure mass.
-Make distribution of m4l.
-Fit it with signal line shape.
+So how is the measurement of \mH achieved?
+Since the signal process is \hzzfourl, conservation of energy leads one to expect that $\mH \approx \mfourl$.
+Although this is not how the final measurement is obtained, it is a logical starting point.
+The distribution of \mfourl values reveals the Higgs boson mass resonance (Figure~\ref{fig:m4l_run2}).
+Simulation is then used to predict the \emph{line shape} of this signal peak (Section~\ref{sec:signal_model}).
+This signal modeling is performed using a double-sided Crystal Ball function to fit the line shape, for various mass points of \mH, in each of the four final states.
+% m4l dist Full Run 2.
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/higgsmassmeas/m4l_FullRun2_epjc.jpeg}
+        \caption{Distribution of \mfourl from \hzzfourl events using Full Run 2 data.}
+        \label{fig:m4l_run2}
+\end{figure}
+
+In order to improve the precision of the measurement of \mH, several techniques are implemented.
+The first technique is called the \Zone mass constraint, which uses the benefit of the mostly on-shell \Zone mass resonance to reevaluate the momenta of the leptons that went into building the \Zone.
+This improves the lepton momentum resolution, thereby improving the resolution of the \mH peak.
+The second technique is event-by-event mass uncertainty.
+The third technique is vertex constraint.
+
+% is mostly on-shell as opposed to the \Ztwo.
+% Z1 significantly on-shell, but Z2 is mostly off-shell.
+% 	- Therefore just perform constraint on mZ1.
+% 	- Idea is to reevaluate the lepton
+% - Per-event 
+
+The resolution of the peak 
+Ways to improve the 
 Do likelihood fit.
+$\mathcal{L}$

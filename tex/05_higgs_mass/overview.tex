@@ -91,9 +91,9 @@ For example, a surplus of events in data where none was expected may lead to the
 The simulated samples for this analysis are described in Section~\ref{sec:datasets_simul_trig}.
 
 So how is the measurement of \mH achieved?
-Since the signal process is \hzzfourl, conservation of energy leads one to expect that $\mH \approx \mfourl$.
+Since the signal process is \hzzfourl, conservation of energy leads one to expect that $\mfourl \approx \mH$.
 Although this is not how the final measurement is obtained, it is a logical starting point.
-The distribution of \mfourl values reveals the Higgs boson mass resonance (Figure~\ref{fig:m4l_run2}).
+The distribution of \mfourl values reveals that the Higgs boson mass resonance stands well above the distribution of expected background events (Figure~\ref{fig:m4l_run2}).
 Simulation is then used to predict the \emph{line shape} of this signal peak (Section~\ref{sec:signal_model}).
 This signal modeling is performed using a double-sided Crystal Ball function to fit the line shape, for various mass points of \mH, in each of the four final states.
 % m4l dist Full Run 2.
@@ -105,17 +105,40 @@ This signal modeling is performed using a double-sided Crystal Ball function to 
         \label{fig:m4l_run2}
 \end{figure}
 
-In order to improve the precision of the measurement of \mH, several techniques are implemented.
-The first technique is called the \Zone mass constraint, which uses the benefit of the mostly on-shell \Zone mass resonance to reevaluate the momenta of the leptons that went into building the \Zone.
-This improves the lepton momentum resolution, thereby improving the resolution of the \mH peak.
-The second technique is event-by-event mass uncertainty.
-The third technique is vertex constraint.
+The precision of the measurement of \mH is improved by implementing several techniques:
+calculating a per-event matrix element kinematic discriminant,
+deriving correction factors for \mfourl uncertainty for various regions of phase space,
+reevaluating the lepton \pt values using a \Zone mass constraint,
+and constraining the four muon tracks to the selected vertex (\emph{vertex constraint}).
+The implementation of these techniques is discussed in Section~\ref{sec:techniques}.
+% The first technique is called the \Zone mass constraint, which uses the benefit of the mostly on-shell \Zone mass resonance to reevaluate the momenta of the two leptons that built the \Zone, on a per-event basis.
+% This improves the overall lepton momentum resolution, thereby improving the resolution of the \mH peak.
+% The second technique is per-event mass uncertainty.
+% The third technique is vertex constraint.
 
 % is mostly on-shell as opposed to the \Ztwo.
 % Z1 significantly on-shell, but Z2 is mostly off-shell.
 % 	- Therefore just perform constraint on mZ1.
 % 	- Idea is to reevaluate the lepton
 % - Per-event 
+
+Important in any scientific analysis is the careful study of all the associated uncertainties that inherently come with making \emph{any} measurement.
+The two main kinds of uncertainties are either \emph{statistical}, which depend on the number of data points used to the make the measurement, or \emph{systematic}, which depend on the instrumentation precision used to make the measurement.
+The systematic uncertainties for this analysis include:
+\begin{itemize}
+	\item Lint (TODO 2.5\%)
+	\item Lepton identification and reconstruction efficiencies (TODO 2.5--9\%): lepton energy scale
+	\item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG
+	\item Estimation of the reducible background.
+\end{itemize}
+The systematic theoretical uncertainties include:
+\begin{itemize}
+	\item renormalization and factorization scale uncertainties
+	\item choice of the set of parton distribution functions
+	\item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG
+	\item branching fraction uncertainties for signal and background processes.
+\end{itemize}
+These uncertainties are discussed in Section~\ref{sec:syst_uncert}.
 
 The resolution of the peak 
 Ways to improve the 

@@ -1,45 +1,26 @@
-\section{Background estimation}
+\section{Background Estimation}
 \label{sec:bkg_estim}
-Measurement of the Higgs boson mass requires the accurate modelling of the total event yield in the signal region (SR), into which events can be categorized as either \emph{signal} or \emph{background}.
-% Processes which pass the signal event selection but are not actually the signal process of interest (HZZ4L) are called background processes.
+Measurement of the Higgs boson mass requires the accurate modeling of the total event yield in the signal region (SR), into which events can be categorized as either \emph{signal} or \emph{background}.
 These background events pass the signal event selection (Section~\ref{sec:zz_sel}) and thus spoil the purity of the signal events.
 This introduces further uncertainty into the final Higgs boson mass measurement.
-Therefore, it is a priority to both reduce and predict the expected number of background events, which can be split into \emph{irreducible backgrounds} (IB) and \emph{reducible background} (RB) processes.
-% \begin{itemize}
-	% \item signal $(\HZZ)$,
-% 	\item irreducible background (IB),
-% 	\item reducible background (RB).
-% \end{itemize}
+Therefore, it is a priority to reduce and to predict the expected number of background events, which can be split into two types: \emph{irreducible background} (IB) and \emph{reducible background} (RB) processes.
 
-\subsection{Irreducible background}
+\subsection{Irreducible Background}
 \label{sec:bkg_irred}
 IB processes produce two \PZ bosons and each \PZ subsequently decays into two prompt leptons (leptons that emerge directly from the primary vertex).
-This reliably produces a \fourl final state, whose prompt leptons typically get reconstructed as four leptons that pass tight selection (\emph{PTS leptons}), as defined in Sections~\ref{sec:el_sel} and~\ref{sec:mu_sel}.
+This reliably produces a \fourl final state, whose prompt leptons are typically reconstructed as four leptons that pass tight selection (\emph{PTS leptons}), as defined in Sections~\ref{sec:el_sel} and~\ref{sec:mu_sel}.
 The IB event then looks indistinguishable from the 4 PTS lepton of the \emph{signal} process and cannot be reduced;
 Thus, throwing away IB process could mean throwing away a signal event.
-Since IB event cannot be reduced, it's called irreducible background.
-The two IBs for the HZZ4L analysis are:
+Since IB events cannot be completely eliminated---or \emph{reduced}---from the SR, they are given the name \emph{irreducible} backgrounds.
+The two IBs for this analysis are:
 \begin{itemize}
     \item \ggzzfourl (gluon-gluon fusion),
-    \item \qqggzzfourl (quark-antiquark annihilation).
+    \item \qqzzfourl (quark-antiquark annihilation).
 \end{itemize}
 
-\subsection{Reducible background}
+\subsection{Reducible Background}
 \label{sec:redbkg}
-% \subsubsection{General Methodology}
-% \label{sec:rb_methodology}
-% Besides irreducible backgrounds, there are other background processes that produce non-prompt leptons which are erroneously reconstructed as passing tight selection, due to detector imperfections.
-% These leptons should have been rejected since they come from a non-signal process, the imperfect lepton reconstruction, these leptons appear to be signal leptons.
-% Using careful event selection methods and more efficient detectors, these background processes can be reduced, hence the term reducible backgrounds.
-% Reducible backgrounds include:
-% \begin{enumerate}
-%     \item Z+jets
-%     \item ttbar
-%     \item WZ
-%     \item qqbarTOZZ, ggTOZZ
-% \end{enumerate}
-% Since reducible backgrounds are not eliminated entirely within the signal region, they must be modelled and estimated.
-While irreducible background processes produce 4 prompt leptons, RB processes produce varying numbers of prompt and nonprompt leptons.
+While IB processes produce 4 prompt leptons, RB processes produce varying numbers of prompt and nonprompt leptons.
 Nonprompt leptons emerge from 3 main sources:
 \begin{itemize}
     \item misidentifying light-flavor hadrons (\eg, $\pi^{\pm}$) as leptons,
@@ -47,10 +28,9 @@ Nonprompt leptons emerge from 3 main sources:
     \item and the asymmetric conversion of photons into electrons.
 \end{itemize}
 
-This analysis is tailored to efficiently reconstruct prompt leptons as those which pass tight selection (\emph{PTS leptons}), whereas nonprompt leptons typically fail tight selection (\emph{FTS leptons}).
-Tight and loose lepton selections are defined in Sections~\ref{sec:el_sel} and~\ref{sec:mu_sel}.
+This analysis is tailored to efficiently reconstruct prompt(nonprompt) leptons as PTS(FTS) leptons.
 Ideally, the SR would contain only the events with 4 prompt leptons, which would always be tagged as 4 PTS leptons.
-However, sometimes a truly nonprompt lepton is misidentified as a PTS lepton (sometimes called a \emph{fake lepton}), depending on the kinematical properties of the lepton.
+However, sometimes a truly nonprompt lepton is misidentified as a PTS lepton (sometimes called a \emph{fake lepton}), depending on the kinematic properties of the lepton.
 This misidentification rate ($f$, sometimes called the \emph{fake rate}) is due to imperfect detector performance, inefficiencies in reconstruction, and the specific choice of lepton selections used in the analysis.
 
 If an event produces prompt and nonprompt leptons but is reconstructed as 4 PTS leptons (a 4P event), then it contaminates the SR.
@@ -66,7 +46,7 @@ The careful estimation of these RB contributions to the 4P region is necessary f
 
 \subsubsection{OS Method}
 % \label{sec:os_method}
-The goal of the OS Method is to estimate the number of opposite-sign same-flavor (OSSF) $4\ell$ events produced by RB process that ``contaminate'' the 4P region $\left( \nfourPRB \right)$, given by Eq.~\ref{eqn:rbe_formula_final}.
+The goal of the OS Method is to estimate the number of opposite-sign same-flavor (OSSF) \fourl events produced by RB process that ``contaminate'' the 4P region $\left( \nfourPRB \right)$, given by Eq.~\ref{eqn:rbe_formula_final}.
 % Since the $4\ell$ final state of the signal process consists of 2 pairs of OSSF leptons, the method is called the \emph{OS Method}.
 However, the typical approach of using simulated samples does not model RB well, since RB processes (\eg, \Zplusjets) rely on higher-order effects like jet modelling which are not yet accurately simulated.
 Instead, a data-driven approach is used.
@@ -83,7 +63,7 @@ The events that contribute mostly to the 2P2F(3P1F) CR are those that produce 2(
 Similarly, the events that contribute mostly to the 4P SR are those that produce 4 prompt leptons and are called \emph{4pr} events.
 
 The final formula for \nfourPRB is obtained by first supposing that event $k$ is a 2pr event and contributes to the 2P2F CR an event weight of $\wgttwoprompttotwoPtwoF^k$.
-This weight is built from the product of analysis weights (pileup, L1 pre-firing, \etc, whose product is $\hat{w}^k$) and the reconstruction efficiencies ($\epsilon$) of each lepton ($\ell_n$):
+This weight is built from $\hat{w}^k$, which is the product of analysis weights (pileup, L1 pre-firing, \etc), and the reconstruction efficiencies ($\epsilon$) of each lepton ($\ell_n$):
 \begin{equation}
 	\label{eqn:wt_2prto2p2f}
 	\wgttwoprompttotwoPtwoF^k = \hat{w}^k \cdot \effprpass(\ell_1^k) \cdot \effprpass(\ell_2^k) \cdot \effnpfail(\ell_3^k) \cdot \effnpfail(\ell_4^k),

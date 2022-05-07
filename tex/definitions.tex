@@ -60,6 +60,10 @@
 \newcommand{\gram}{\ensuremath{\,\text{g}}\xspace}
 \newcommand{\meter}{\ensuremath{\,\text{m}}\xspace}
 \newcommand{\snd}{\ensuremath{\,\text{s}}\xspace}
+% Mass.
+\newcommand{\tonne}{\ensuremath{\,\text{t}}\xspace}
+% Temperature.
+\newcommand{\kelvin}{\ensuremath{\,\text{K}}\xspace}
 % Length.
 \newcommand{\Km}{\ensuremath{\,\text{Km}}\xspace}
 \newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
@@ -132,7 +136,7 @@
 
 %=== Math ===%
 % absolute value
-\newcommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
+\providecommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
 % Calculus: Roman face derivative.
 \newcommand{\dd}[2]{\ensuremath{\frac{\cmsSymbolFace{d} #1}{\cmsSymbolFace{d} #2}}}
 \newcommand{\ddinline}[2]{\ensuremath{\cmsSymbolFace{d} #1/\cmsSymbolFace{d} #2}}
@@ -264,7 +268,8 @@
 \newcommand{\ZplusX}{\ensuremath{\PZ + \mathrm{X}}\xspace}
 \newcommand{\Zplusjets}{\ensuremath{\PZ + \text{jets}}\xspace}
 \newcommand{\WZplusjets}{\ensuremath{\WZ + \text{jets}}\xspace}
-\newcommand{\Zgammastar}{\ensuremath{\PZ/\gamma^\ast}\xspace}
+\newcommand{\Zgammastar}{\ensuremath{\PZ\gamma^\ast}\xspace}
+\newcommand{\Zorgammastar}{\ensuremath{\PZ/\gamma^\ast}\xspace}
 \newcommand{\ttbarplusjets}{\ensuremath{\Pqt\Paqt + \text{jets}}\xspace}
 % CRs.
 \newcommand{\ntwoPtwoF}{\ensuremath{N_{\text{2P2F}}}\xspace}

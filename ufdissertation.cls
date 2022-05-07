@@ -767,6 +767,10 @@
             \bibliographystyle{\referenceStyle}
             {\singlespacing
             \bibliography{\referenceFile}}
+            % Suz uses this:
+            % \usepackage[style=phys, backend=biber, biblabel=brackets]{biblatex}
+            % though I can't get it to work.
+            % The default UF template (this file) should be fine.
         }
         {
             % \@latex@warning{You haven't specified a reference file using the command \setReferenceFile. Hopefully this is intentional!}

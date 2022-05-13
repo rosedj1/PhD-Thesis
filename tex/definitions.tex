@@ -1,3 +1,8 @@
+% Consider using CMS's standard macros and particle name macros (PENNAMES)
+% provided by the ptdr-definitions.sty and heppennames2.sty files, respectively.
+% Here's a PDF showing the commands and the output:
+% https://twiki.cern.ch/twiki/pub/CMS/Internal/PubGuidelines/macros.pdf
+
 %===============================%
 %=== Notes on using \xspace. ===%
 %===============================%
@@ -43,6 +48,7 @@
 \newcommand {\mdash}{\ensuremath{\text{---}}} % for use within formulas
 \providecommand {\NA}{\ensuremath{\text{---}}}    % for Not applicable (or available). Needs to be renewcommanded for APS to \cdots
 
+\providecommand{\paren}[1]{\ensuremath{\left( \text{#1} \right)}\xspace}
 % some terms whose definition we may change
 \newcommand {\Lone}{Level-1\xspace} % Level-1 or L1 ?
 \newcommand {\Ltwo}{Level-2\xspace}
@@ -101,11 +107,13 @@
 \newcommand{\pb}{\ensuremath{\,\text{pb}}\xspace}
 \newcommand{\fb}{\ensuremath{\,\text{fb}}\xspace}
 % Luminosity.
-\newcommand{\abinv} {\mbox{\ensuremath{\,\text{ab}^{-1}}}\xspace}
-\newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^{-1}}}\xspace}
+%--- Don't use the \mbox commands. ---%
+% \newcommand{\abinv} {\mbox{\ensuremath{\,\text{ab}^{-1}}}\xspace}
+% \newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^{-1}}}\xspace}
+\newcommand{\fbinv}{\ensuremath{\,\text{fb}^{\text{$-$}1}}\xspace}
 % \newcommand{\invfb}{\ensuremath{\mbox{fb}^{\scriptscriptstyle -1}}\xspace}  % Xunwu's usage.
-\newcommand{\pbinv} {\mbox{\ensuremath{\,\text{pb}^{-1}}}\xspace}
-\newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^{-1}}}\xspace}
+% \newcommand{\pbinv} {\mbox{\ensuremath{\,\text{pb}^{-1}}}\xspace}
+% \newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^{-1}}}\xspace}
 \newcommand{\mubinv} {\ensuremath{\,\mu\text{b}^{-1}}\xspace}
 \newcommand{\mbinv} {\ensuremath{\,\text{mb}^{-1}}\xspace}
 \newcommand{\percms}{\ensuremath{\,\text{cm}^{-2}\,\text{s}^{-1}}\xspace}
@@ -119,6 +127,7 @@
 \newcommand{\LHigh}  {\ensuremath{\mathcal{L}=\text{10}^\text{34}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
 \newcommand{\hilumi} {\ensuremath{\mathcal{L}=\text{10}^\text{34}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
 \newcommand{\lum}{\ensuremath{\,\text{(lumi)}}\xspace}
+\newcommand{\lumiruntwo}{\ensuremath{137.1\fbinv}\xspace}
 
 % analysis tools
 \newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}
@@ -177,6 +186,7 @@
 \newcommand{\ptvec}{\ensuremath{{\vec p}_{\mathrm{T}}}\xspace}
 \newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
 \newcommand{\tauh}{\ensuremath{\PGt_\mathrm{h}}\xspace}
+\newcommand{\sqrtsthirteen}{\ensuremath{\sqrt{s} = 13 \TeV}\xspace}
 \newcommand{\sqrtsNN}{\ensuremath{\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}}\xspace}
 \newcommand{\MHT}{\ensuremath{H_{\mathrm{T}}^{\text{miss}}}\xspace}
 \newcommand{\mht}{\MHT}
@@ -261,6 +271,7 @@
 \newcommand{\hmm}{\ensuremath{\PH \to \mu\mu}\xspace}
 \newcommand{\zmm}{\ensuremath{\PZ \to \mu\mu}\xspace}
 \newcommand{\htozz}{\ensuremath{\PH \to \PZ\PZ^{\ast}}\xspace}
+\newcommand{\htofourell}{\ensuremath{\PH \to \fourell}\xspace}
 \newcommand{\hzzfourl}{\ensuremath{\htozz \to \fourl}\xspace}
 \newcommand{\hzxxxfourl}{\ensuremath{\PH \to \ZX / \XX \to \fourl}\xspace}
 % Dilepton

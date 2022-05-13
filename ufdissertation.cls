@@ -671,7 +671,7 @@
                     \@latex@warning{You haven't specified a committee chair using the command \chair. Hopefully this is intentional!}
                 }
             \ifExists{@CoChair}{%
-                \noindent Cochair: \@CoChair \\% If there is a Co-Chair provided, then list it.
+                \noindent Co-Chair: \@CoChair \\% If there is a Co-Chair provided, then list it.
                 }{%                             Else, toss a warning, even though this is probably normal.
                     \@latex@warning{You haven't specified a committee co-chair using the optional argument of the command \chair. Hopefully this is intentional!}
                 }

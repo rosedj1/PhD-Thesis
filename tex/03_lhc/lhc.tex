@@ -1,6 +1,7 @@
 % Great animation about protons going through the CERN accelerator complex.
 % https://www.youtube.com/watch?v=FLrEghnKncA
 \chapter{THE LARGE HADRON COLLIDER}
+\label{ch:lhc}
 
 % OUTLINE
 \section{Motivation}
@@ -67,7 +68,7 @@ The 4 main particle detectors and their locations along the LHC are:
 \begin{itemize}
     \item A Toroidal LHC ApparatuS (ATLAS)---located at the first collision point (P1),
     \item A Large Ion Collider Experiment (ALICE)---located at P2,
-    \item the Compact Muon Solenoid (CMS, Chapter~\ref{ch:cms_detector}) experiment---located at P5, and
+    \item the Compact Muon Solenoid (CMS, Chapter~\ref{ch:cms}) experiment---located at P5, and
     \item the LHC-beauty (LHCb) experiment---located at P8.
 \end{itemize}
 % ATLAS	A Toroidal LHC Apparatus
@@ -122,7 +123,7 @@ Protons are further accelerated to the maximum energy of 6.5\TeV using RF caviti
 - The cryogenics of the 96\tonne of superfluid helium-4
 
 Finally the proton bunches approach a collision point.
-- Beam pipes are conjoined in an ``X'' shape (Figure TODO) where 2 proton bunches cross---a \emph{bunch crossing} (BX).
+- Beam pipes are conjoined in an ``X'' shape (Fig. TODO) where 2 proton bunches cross---a \emph{bunch crossing} (BX).
 - Out of more than 40 million \pp collisions that could have occurred, a mere 50 collisions take place on average (\ie only 0.000\,1\%).
     - This is a testament to just how small protons truly are.
 - Frequency of BX: considering that proton bunches are spaced 25\ns apart, this means 
@@ -135,6 +136,10 @@ SPECS
 - Luminosity
 - rates
 - data
+
+N obs events = xs * eff * Lint 
+cross section is specific to the process
+efficiency is ideally unity.
 
 \section{High-Luminosity LHC}
 
@@ -150,7 +155,7 @@ The clockwise and counterclockwise rings are filled to a maximum of 2808 proton 
 It requires an incredibly strong magnetic field to turn the protons as they make their revolutions around the LHC. 
 Recall that charged particles bend in a magnetic field, via the Lorentz force. 
 Therefore, the LHC is equipped with 1232 dipole magnets distributed all along the length of the beam pipe to keep the proton bunches turning in the tunnel.
-The cross section of such a dipole magnet is shown in Figure~\ref{fig:lhc_dipole_xs}.
+The cross section of such a dipole magnet is shown in Fig.~\ref{fig:lhc_dipole_xs}.
 Each dipole magnet is 14.3\meter long, weighs 35\tonne, cost nearly 500\,KCHF to produce, and has nearly 11\,700 amps of current running through it. 
 Only with such massive currents is it possible to generate the appropriate magnetic field strength of 8\tesla to keep the protons turning. 
 The magnetic field is maintained by titanium-niobium coils, which are kept under cryogenic conditions using liquid helium to achieve the necessary temperature of 1.9\kelvin to reach a superconducting state; 
@@ -175,7 +180,7 @@ At each of these four points, there is a unique and gigantic particle detector t
 As the two bunches are just about to cross one another, they are squeezed down using quadrupole magnets, focusing the beams more tightly, increasing their chance for tasty \pp collisions.
 %from 50 $\mu$m
 During such a bunch crossing (BX), amazingly most of the protons just pass right by one another; 
-out of the possible 100 billion possible collisions that could have occurred, Figure~\ref{plt:pileup} shows that on average only 32 collisions occurred per BX in the LHC 2018 run, according to a particle detector called CMS, described in Chapter~\ref{ch:CMS_detector}.
+out of the possible 100 billion possible collisions that could have occurred, Fig.~\ref{plt:pileup} shows that on average only 32 collisions occurred per BX in the LHC 2018 run, according to a particle detector called CMS, described in Chapter~\ref{ch:cms}.
 It should be mentioned that the luminosity of the LHC is on the order of \LHigh. %$10^{34}$ Hz/cm$^2$.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]

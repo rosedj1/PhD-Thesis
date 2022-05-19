@@ -1,7 +1,7 @@
 \section{Background Estimation}
 \label{sec:bkg_estim}
 Measurement of the Higgs boson mass requires the accurate modeling of the total event yield in the signal region (SR), into which events can be categorized as either \emph{signal} or \emph{background}.
-These background events pass the signal event selection (Section~\ref{sec:zz_sel}) and thus spoil the purity of the signal events.
+These background events pass the signal event selection (Sec.~\ref{sec:zz_sel}) and thus spoil the purity of the signal events.
 This introduces further uncertainty into the final Higgs boson mass measurement.
 Therefore, it is a priority to reduce and to predict the expected number of background events, which can be split into two types: \emph{irreducible background} (IB) and \emph{reducible background} (RB) processes.
 
@@ -57,7 +57,7 @@ Thus, events in data are sorted into 2 control regions (CRs), both of which are 
 	\item the \emph{3P1F} CR (built from 3 PTS and 1 FTS leptons)
 	\item the \emph{2P2F} CR (built from 2 PTS and 2 FTS leptons).
 \end{itemize}
-The event selection for the 2P2F and 3P1F CRs is almost identical to that of the SR (Section~\ref{sec:zz_sel}),
+The event selection for the 2P2F and 3P1F CRs is almost identical to that of the SR (Sec.~\ref{sec:zz_sel}),
 except that the FTS lepton(s) are required to build the \Ztwo.
 The events that contribute mostly to the 2P2F(3P1F) CR are those that produce 2(3) prompt and 2(1) nonprompt leptons and are called \emph{2pr}(\emph{3pr}) events.
 Similarly, the events that contribute mostly to the 4P SR are those that produce 4 prompt leptons and are called \emph{4pr} events.
@@ -103,7 +103,7 @@ $\left( \epsilon^\text{pr(np)}_\text{P} + \epsilon^\text{pr(np)}_\text{F} = 1 \r
 % \begin{equation*}
 % 	\epsilon^\mathrm{pr(np)}_\mathrm{P} + \epsilon^\mathrm{pr(np)}_\mathrm{F} = 1,
 % \end{equation*}
-while recognizing that $\effnppass \equiv f$ (Section~\ref{sec:redbkg}) and defining $\effprpass \equiv \epsilon$,
+while recognizing that $\effnppass \equiv f$ (Sec.~\ref{sec:redbkg}) and defining $\effprpass \equiv \epsilon$,
 allows Eq.~\ref{eqn:wt_2prto3p1f} to be written as
 \begin{equation}
 	\label{eqn:wt_2prto3p1f_simp}
@@ -127,7 +127,7 @@ Similar equations can be derived for the contributions of a 3pr event to the 3P1
 \end{align}
 Since a 3pr event needs only 1 nonprompt PTS lepton to be included in the 4P region (therefore, carrying only 1 factor of $f$), a 3pr event tends to contribute more weight to 4P than does a 2pr event (which carries $f^2$).
 
-If the total number of 2pr, 3pr, and 4pr events is \xtwoprompt, \xthreeprompt, and \xfourprompt, respectively, then Figure~\ref{fig:prompt_to_crs} shows how the weight of a single event, derived in the previous equations (and others forthcoming), from each category contributes to the final yield of each CR $\left( \ntwoPtwoF, \nthreePoneF \right)$ and of the SR $\left( \nfourP \right)$.
+If the total number of 2pr, 3pr, and 4pr events is \xtwoprompt, \xthreeprompt, and \xfourprompt, respectively, then Fig.~\ref{fig:prompt_to_crs} shows how the weight of a single event, derived in the previous equations (and others forthcoming), from each category contributes to the final yield of each CR $\left( \ntwoPtwoF, \nthreePoneF \right)$ and of the SR $\left( \nfourP \right)$.
 % \begin{figure}[!htbp]
 % 	\begin{center}
 % 		\begin{tikzpicture}
@@ -190,7 +190,7 @@ This is achieved by relating \xtwoprompt to \ntwoPtwoF using Eq.~\ref{eqn:wt_2pr
 \end{figure}
 
 The strategy to relate \xthreeprompt to \nthreePoneF is not as straightforward as relating \xtwoprompt to \ntwoPtwoF,
-since two other sources also contribute to the 3P1F CR (as shown in Figure~\ref{fig:prompt_to_crs}):
+since two other sources also contribute to the 3P1F CR (as shown in Fig.~\ref{fig:prompt_to_crs}):
 \begin{itemize}
 	\item A 2pr RB process can yield one nonprompt PTS lepton (via Eq.~\ref{eqn:wt_2prto3p1f_simp}).
 	\item A 4-prompt IB process (\qqggzzfourl, ``\ZZ'') can yield one FTS lepton.
@@ -243,7 +243,7 @@ and by summing over the total number of raw yields per CR:
 	- \sum_{k=1}^{N_{\text{3P1F}}^{\ZZ}} \hat{w}^{k}_{\ZZ} \frac{f_k}{1 - f_k},
 \end{equation}
 where $f_{1,j}$ and $f_{2,j}$ are the misidentification rates of the first and second FTS leptons, respectively, found in the $j^{\text{th}}$ 2P2F event
-and $\hat{w}^k_{\ZZ}$ accounts for the differential QCD and electroweak $K$ factors defined in Section~\ref{sec:bkg_irred}.
+and $\hat{w}^k_{\ZZ}$ accounts for the differential QCD and electroweak $K$ factors defined in Sec.~\ref{sec:bkg_irred}.
 % The plots in \figurename~\ref{FINAL RBE PLOTS} make use of Eq.~\ref{eqn:rbe_formula_final}.
 
 TODO:MOVE The prediction of Eq.~\ref{eqn:wt_2prto3p1f_simp} can be seen in Figures~\ref{cr_plots_3p1f_2016prevfp}--\ref{cr_plots_3p1f_2018} (red line) for 2016--2018 UL data.
@@ -387,7 +387,7 @@ TODO:MOVE The prediction of Eq.~\ref{eqn:wt_2prto3p1f_simp} can be seen in Figur
 % \subsubsection{Tight-to-loose lepton rates}
 \subsubsection{Lepton misidentification rate measurement}
 \label{sec:fr_evtsel}
-As mentioned in Section~\ref{sec:redbkg}, the lepton misidentification rate ($f$) is the probability that a nonprompt lepton will pass tight selections (PTS).
+As mentioned in Sec.~\ref{sec:redbkg}, the lepton misidentification rate ($f$) is the probability that a nonprompt lepton will pass tight selections (PTS).
 The value $f$ is a function of the flavor ($\ell = \text{e}, \mu$), \pt, and $\eta$ of a lepton.
 The misidentification rate is calculated by simply counting the number of nonprompt PTS leptons $\left( N^{\mathrm{np}}_{\mathrm{P}} \right)$ that enter a particular $\ell, \pt, \abseta$ bin compared to the total number of loose probe leptons $\left( N^{\mathrm{np}}_{\mathrm{L}} \right)$ in the same bin:
 \begin{equation}

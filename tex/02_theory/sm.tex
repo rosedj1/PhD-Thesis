@@ -1,9 +1,9 @@
-\chapter{Theory}
+\chapter{THE STANDARD MODEL OF PARTICLE PHYSICS}
 \label{ch:theory}
 
-The Standard Model (SM) is a collection of the most accurate and self-consistent theories which mathematically describe the particles within the universe and their interactions with each other.
+The standard model (SM) is a collection of the most accurate and self-consistent particle physics theories that mathematically describe the properties of particles within the universe and their interactions with each other.
 For the past century, some of the most brilliant minds in physics have spent their entire careers to develop equations, mathematical tricks, and completely novel ideas to help build a solid foundation for the SM.
-To demonstrate the unparalleled accuracy with which the SM predicts , one can compare the experimentally measured anomalous magnetic moment of the electron
+To demonstrate the unparalleled accuracy with which the SM predicts physical phenomena, one can compare the experimentally measured anomalous magnetic moment of the electron
 \begin{equation*}
     a_e^{\mathrm{exp}} = 0.001\ 159\ 652\ 180\ 73(28)
 \end{equation*}
@@ -11,14 +11,28 @@ to the value predicted by the SM
 \begin{equation*}
     a_e^{\mathrm{pred}} = 0.001\ 159\ 652\ 181\ 643(764).
 \end{equation*}
-An impressive agreement to better than one in a trillion!
+An impressive agreement to better than one part per trillion.
 
-In the following sections, the
+On the other hand, the SM has no explanation for some observed physical phenomena (Sec.~\ref{sec:shortcomings}), \eg the existence of dark matter~\cite{10.1093/ptep/ptaa104}, and is thus not a fully descriptive model of the Universe.
+Furthermore, the Collider Detector at Fermilab (CDF) Collaboration recently measured the mass of the \PW boson to be $80\,433.5 \pm 9.4\MeV$, whereas the SM expectation $80\,357 \pm 4\MeV$---a discrepancy of 7.0 standard deviations~\cite{wmass}---as is shown in Fig.~\ref{fig:wmass}.
+Nevertheless, the SM has laid important foundations in particle physics for over 100 years and is fully explained with the discovery of the Higgs boson in 2012 TODO:CITE.
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[pbth]
+    \centering
+    \includegraphics[height=5cm,keepaspectratio]{figures/sm/wmass.pdf}
+        \caption{Precision measurements of the W-boson mass performed by various collaborations.} 
+        \label{fig:wmass}
+    \end{figure}
+    %%%%%%%%%%%%%%%%%%%%
+% CDF MW=80,433.5 +- 6.4 stat +- 6.9 syst = 80,433.5 +- 9.4 MeV/c2
+% SM expectation: MW=80,357 +- 4inputs +- 4theory MeV
 
+The remainder of this chapter presents a general overview (Sec.~\ref{sec:sm_overview}) of the particles and forces described by the SM, followed by a brief analysis of the mathematical underpinnings of the SM (Sec.~\ref{sec:sm_math}), and then finally a brief description of the shortcomings of the SM (Sec.~\ref{sec:shortcomings}).
+%and finally a summary of the physics of the Higgs boson, which is integral to this dissertation.
 
-First, the major players that make up the SM - the fundamental particles - are introduced.
-Next, an explanation is given on how the infamous Higgs boson completed the SM.
-Finally, problems of the SM are described and how its claims can be tested.
+% First, the major players that make up the SM---the fundamental particles---are introduced.
+% Next, an explanation is given on how the infamous Higgs boson completed the SM.
+% Finally, problems of the SM are described and how its claims can be tested.
 % Some of the most brilliant minds in physics have worked for their entire careers to develop equations and  novel ideas solutions to problems which perplexed mankind for more than 100 years a century's worth of work to  
 % an impressively accurate 
 % It is currently the most accurate model of particles and their interactions with each other - and frankly - it is {\it quite} impressive!
@@ -38,8 +52,37 @@ Finally, problems of the SM are described and how its claims can be tested.
 
 % So, how does the song go?
 
-\section{The Standard Model}
-\label{sec:sm}
+SM OF PARTICLE PHYSICS CHAPTER OUTLINE
+OVERVIEW:
+- Main concept:
+- Everything is particles!
+    Fields permeate all of space.
+    Their mathematical treatment is handled in Sec.TODO.
+    Particles are excitations of the fields.
+    Interactions are between particles 
+    Bosons
+    Fermions
+        Leptons
+        Quarks
+MATHEMATICAL FRAMEWORK
+- Show SM Lagrangian.
+- Derive interactions between particles.
+    BEH MECHANISM
+    - Robert Brout, François Englert, and Peter Higgs claimed that elementary particles acquire their masses via spontaneous EWSB. (reword!)
+    - Sheldon Glashow, Abdus Salam, and Steven Weinberg were able to unify the weak and electromagnetic forces into a single force, above the unification energy of 246\GeV.
+    - In 1973 the Gargamelle collaboration experimentally confirmed the existence of the electroweak force by discovering neutral currents in neutrino scattering experiments.
+    - Furthermore, in 1983 the UA1 and UA2 collaborations used proton-antiproton collisions to discover the theorized \PW and \PZ electroweak gauge bosons.
+SHORTCOMINGS OF THE SM
+- Each of these is a new paragraph?:
+- Neutrino oscillations confirm that neutrinos \emph{do} have masses but interaction with the Higgs field is not responsible for this origination.
+- No gravity.
+- Why matter and no antimatter?
+- Where does dark matter fit in?
+- Why should there be exactly 3 generations of fermions?
+- Although the SM does not answer any of the above questions, 
+
+\section{Overview}
+\label{sec:sm_overview}
 
 The SM is a non-Abelian set of gauge theories.
 Non-Abelian gauge symmetry gives rise to charged gauge bosons.
@@ -57,7 +100,7 @@ The connection between conservation laws and symmetries is best analyzed via Lag
 
 Each Lagrangian has its own set of ``Feynman rules''.
 
-\section{The Particles: The Players on the Fields}
+\textbf{The Particles: The Players on the Fields}
 
 Contrary to intuition, fundamental particles are not hard, billiard-ball-like objects as is often perceived.
 Instead the SM predicts that every particle is actually an \emph{excitation} of its corresponding field.
@@ -73,7 +116,7 @@ However, as soon as particles begin moving at 30.5\% of the speed of light (91.4
 In other words, fast-moving particles must account for effects due to Special Relativity (SR).
 The merger of QM and SR gives rise to Quantum Field Theory (QFT) - the backbone of the SM.
 
-Figure~\ref{fig:particulartable} shows all the fundamental particles that have been discovered up to the present day.
+Fig.~\ref{fig:particulartable} shows all the fundamental particles that have been discovered up to the present day.
 The phrase ``fundamental particle'' just means that the particle is not composed of anything smaller than itself. 
 These particles are not just diabolical creations from theorists. 
 No, these particles are precisely defined, mathematical objects whose existence has been predicted by the SM and experimentally verified time and time again in the laboratory.
@@ -93,12 +136,13 @@ Without further ado, let's meet the particles.
 There are two major types: \emph{bosons} and \emph{fermions}.
 We are going to take a non-traditional route and introduce the bosons first, then the fermions.
 
-\subsection{Bosons: Use the Force}
+\textbf{Bosons: Use the Force}
+
 % The bosons are said to be the "force carrier" particles. 
 % In particle physics, when two particles interact with one another, how do they do it? 
 % instead an intermediate particle, very often a boson, is said to ``mediate'' the interaction and be the entity responsible which transfers the force from one particle to the other. 
 Ever wonder how two electrons "know" that they are near each other and that they should repel? 
-Figure~\ref{fig:ee_scattering} shows a Feynman diagram of two electrons ``communicating'' with each other by means of an intermediate photon.
+Fig.~\ref{fig:ee_scattering} shows a Feynman diagram of two electrons ``communicating'' with each other by means of an intermediate photon.
 I like to think of it as the two electrons ``playing catch'' with the photon.
 The first electron recoils from the throw and then the second electron recoils from catching the photon.
 The photon carries some momentum away from the first electron and brings it to the second one, therefore making it look as if the two electrons are repelling one another!
@@ -107,7 +151,7 @@ Now we see why bosons are called the force carriers.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
-\includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_Moeller.png}
+\includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_moeller.png}
     \caption{A Feynman diagram showing electron-electron scattering, also known as Møller scattering.} 
     \label{fig:ee_scattering}
 \end{figure}
@@ -163,12 +207,12 @@ This particle decays into three charged pions, but takes on average $10^{-8}$ s 
 Over 10 orders of magnitude different from the pion decay.
 This is because the charged kaon decays via the weak force.
 
-The last boson not yet mentioned is the scalar Higgs boson, which is introduced in Section~\ref{sec:EWSB} below.
+The last boson not yet mentioned is the scalar Higgs boson, which is introduced in Sec.TODO below.
 
 % 1. There are 12 kinds fermions which are the matter particles and comprise all the matter that you see and feel
 % 2. And in the other group there are 5 kinds of bosons, which are the force carriers and help fermions communicate with each other. 
 
-\subsection{Fermions: Each One Matters}
+\textbf{Fermions: Each One Matters}
 There are 12 kinds of fermions - the matter particles of the Universe. 
 They comprise all the ``stuff'' that we see and feel.
 All fermions have half-integer spin, typically a value of 1/2. 
@@ -177,7 +221,7 @@ Let's consider the leptons first.
 
 {\bf Leptons:}
 % Ultimately all the matter we see, feel, and interact with daily is composed of fermions.
-% Referring back to Figure~\ref{fig:particulartable}, Fermions can be categorized into two groups: {\bf leptons} and {\bf quarks}.
+% Referring back to Fig.~\ref{fig:particulartable}, Fermions can be categorized into two groups: {\bf leptons} and {\bf quarks}.
 We already introduced one lepton earlier: the electron. 
 Looking again at the ``particular table'', the electron has a heavier brother, the muon, which is 200 times heavier than the electron. 
 Then there is an even heavier sibling: the tauon. 
@@ -231,8 +275,7 @@ Just as a `$+$' charge would negate a `$-$' charge, so too would the `red' color
 {\bf Antiparticles:} It should be noted that almost every \emph{particle} has a corresponding \emph{antiparticle}, whose charges (\eg, color charge, electric charge) are all opposite the original particle's charges.
 Accounting for leptons, quarks, bosons, bound states of quarks, and now antiparticles, it is easy to see why sometimes particle physics is referred to as a ``zoo''!
 
-\section{Electroweak Symmetry Breaking and the Higgs Boson}
-\label{sec:EWSB}
+\textbf{Electroweak Symmetry Breaking and the Higgs Boson}
 % At room temperature, we know that the weak force, which mediates decays of radioactive substances, is very different from the EM force.
 % However, at large energy scales, like those found during the Big Bang or those produced in the energetic proton-proton collisions of the Large Hadron Collider, the electromagnetic (EM) force and weak force are unified. 
 At large energy scales, like those found during the Big Bang or those produced in the energetic proton-proton collisions of the Large Hadron Collider, the electromagnetic (EM) force and weak nuclear force are one and the same: they are unified.
@@ -253,7 +296,33 @@ Each particle interacts with the Higgs field with a different strength: in fact,
 The more the particle interacts with the Higgs field, the more mass it gains.
 Excitations, or quanta, of the Higgs field are Higgs bosons and are a direct consequence of introducing a Higgs scalar field into the SM Lagrangian to allow particles to have mass.
 
-\section{The Standard Model Doesn't Explain Everything}
+
+\begin{itemize}
+    \item strong force $(1)$
+    \item EM force $(10^{-1})$
+    \item weak force $(10^{-6})$
+    \item gravitational force $(10^{-40})$
+\end{itemize}
+Speaking of forces, the four fundamental forces found in nature, along with their decreasing, relative strength are: 
+
+\textbf{Electroweak Interaction}
+Particles can interact with one another at long range.
+For example, an electron can emit a photon which can travel a 
+
+Electromagnetic force and weak force were unified Electroweak symmetry.
+This introduced 4 electroweak bosons: the photon, Z, W+, and W-.
+Then lectroweak symmetry breaking happened.
+This made the photon massless and the Z, W+, and W- as (very) massive.
+
+\textbf{Higgs Mechanism}
+Force field that fills space in the whole Universe but has no source or direction.
+The field has the same field at every point.
+It's a scalar field with spin 0.
+It does have electroweak charge.
+
+
+\section{Shortcomings of the SM}
+\label{sec:shortcomings}
 The SM has only mathematically accommodated the strong, EM, and weak forces.
 One problem however is that the SM can't predict the mass of the Higgs boson... or the mass of \emph{any} particle for that matter.
 That's not the only thing the SM has trouble doing. 
@@ -264,6 +333,11 @@ For example, the SM can't...
     \item ...predict the existence of dark matter - but we know it's there from observation.
     \item ...explain why there should be exactly three generations of fermions. 
 \end{itemize}
+
+No Gravity. Can't combine quantum mechanics and gravity.
+No neutrino masses. Are they Direac or Majorana particles?
+Higgs field parameters appear highly fine-tuned.
+Does not explain dark matter or dark energy.
 
 So we see that the SM isn't the ultimate Theory of Everything, but it does a pretty good job. 
 How can we test the SM and try to break it or confirm it?
@@ -276,59 +350,6 @@ This could take a VERY long time, (possibly way longer than the age of the Unive
 or it could take as short as a billionth of a billionth of a millionth of a second, 
 like in the case of a ${\rm Z}$ boson.
 It's not the most reliable method, it is difficult to control, and it requires a lot of patience.
-
-Instead, let's be impatient: 
-let's smash particles together and convert their energies into new kinds of matter. 
-If we use hadrons, which are made of smaller parts like, quarks and gluons 
-(let's call them ``partons'') then we will have many more interactions and a lot more fun (Fig.~\ref{fig:pp_collision}).
-We are going to need a lot of energy, so we should make a large collider. 
-Let's make a Large Hadron Collider!
-\begin{itemize}
-    \item strong force $(1)$
-    \item EM force $(10^{-1})$
-    \item weak force $(10^{-6})$
-    \item gravitational force $(10^{-40})$
-\end{itemize}
-Speaking of forces, the four fundamental forces found in nature, along with their decreasing, relative strength are: 
-
-
-\subsection{Electroweak Interaction}
-\label{sec:ew_inter}
-
-Particles can interact with one another at long range.
-For example, an electron can emit a photon which can travel a 
-
-Electromagnetic force and weak force were unified Electroweak symmetry.
-This introduced 4 electroweak bosons: the photon, Z, W+, and W-.
-Then lectroweak symmetry breaking happened.
-This made the photon massless and the Z, W+, and W- as (very) massive.
-
-\subsection{Strong Interaction}
-\label{sec:strong_inter}
-
-
-\subsection{Higgs Boson Production at the LHC}
-\label{sec:higgs_prod}
-
-\subsection{Higgs Mechanism}
-\label{sec:higgs_mech}
-
-Force field that fills space in the whole Universe but has no source or direction.
-The field has the same field at every point.
-It's a scalar field with spin 0.
-It does have electroweak charge.
-
-Current problems with the SM.
-No Gravity. Can't combine quantum mechanics and gravity.
-No neutrino masses. Are they Direac or Majorana particles?
-Higgs field parameters appear highly fine-tuned.
-Does not explain dark matter or dark energy.
-
-N obs events = xs * eff * Lint 
-cross section is specific to the process
-efficiency is ideally unity.
-
-\section{Remaining Mysteries}
 - Origin of mass: yes, the Higgs boson---but is it certainly the same Higgs boson as predicted by the SM?
 - SUSY:
     - A way to unify the fundamental forces (all 4?) but SM doesn't predict SUSY particles.
@@ -343,3 +364,10 @@ efficiency is ideally unity.
     - So why is the universe made of \emph{only} matter?
 
 % - Quark-Gluon Plasma Physics:
+
+Instead, let's be impatient: 
+let's smash particles together and convert their energies into new kinds of matter. 
+If we use hadrons, which are made of smaller parts like, quarks and gluons 
+(let's call them ``partons'') then we will have many more interactions and a lot more fun (Fig.~\ref{fig:pp_collision}).
+We are going to need a lot of energy, so we should make a large collider. 
+Let's make a Large Hadron Collider!

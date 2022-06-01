@@ -1,9 +1,32 @@
+CMS recommendations:
+References should be numbered consecutively in the order in which they are cited in the text.
+The general guidelines for choosing references are:
+* Reference all papers that were useful in preparing and making the specific measurement.
+* Reference previous measurements extensively (in particular from other LHC and Tevatron experiments).
+* Reference relevant theoretical papers, especially ones that predict a value for your measurement.
+* Give a minimal general bibliography for the nonexpert reader who might need to be educated on the subject. These are papers typically referred to in the introduction. 
+
+% Seems like titles should have quotes around them in the compiled version.
+
 %=== Some citation types ===%
 % article
 % misc
 % techreport (arXiv)
 % unpublished
 % phdthesis
+
+% What keys should an "article" have?
+% title ?
+% author ?
+% abstract ?
+% journal ?
+% volume ?
+% pages ?
+% year ?
+% issn ?
+% doi ?
+% url ?
+% keywords ?
 
 %=== Different citation styles ===%
 %MLA: Particle Data Group, et al. "Review of particle physics." Progress of Theoretical and Experimental Physics 2020.8 (2020): 083C01.
@@ -12,8 +35,6 @@
 %Harvard: Particle Data Group, Zyla, P., Barnett, R.M., Beringer, J., Dahl, O., Dwyer, D.A., Groom, D.E., Lin, C.J., Lugovsky, K.S., Pianori, E. and Robinson, D.J., 2020. Review of particle physics. Progress of Theoretical and Experimental Physics, 2020(8), p.083C01.
 %Vancouver: Particle Data Group, Zyla P, Barnett RM, Beringer J, Dahl O, Dwyer DA, Groom DE, Lin CJ, Lugovsky KS, Pianori E, Robinson DJ. Review of particle physics. Progress of Theoretical and Experimental Physics. 2020 Aug;2020(8):083C01.
 
-%%% Books
-%% SM
 @article{cms_exp,
        author = {CMS Collaboration},
         title = "{The CMS experiment at the CERN LHC}",
@@ -41,6 +62,17 @@
     year = "2020",
     note = "and 2021 update"
 }
+CMS recommends using this reference instead:
+article{PDG2020,
+    author = "{Particle Data Group} and Zyla, P. A. and others",
+    title = "Review of particle physics",
+    doi = "10.1093/ptep/ptaa104",
+    journal = "Prog. Theor. Exp. Phys.",
+    volume = "2020",
+    pages = "083C01",
+    year = "2020"
+}
+
 
 %=== Dark Matter citation ===%
 @article{10.1093/ptep/ptaa104,
@@ -86,6 +118,47 @@
       abstract = {The mass of the W boson, a mediator of the weak force between elementary particles, is tightly constrained by the symmetries of the standard model of particle physics. The Higgs boson was the last missing component of the model. After observation of the Higgs boson, a measurement of the W boson mass provides a stringent test of the model. We measure the W boson mass, MW, using data corresponding to 8.8 inverse femtobarns of integrated luminosity collected in proton-antiproton collisions at a 1.96 tera–electron volt center-of-mass energy with the CDF II detector at the Fermilab Tevatron collider. A sample of approximately 4 million W boson candidates is used to obtain MW=80,433.5±6.4stat±6.9syst=80,433.5±9.4\&nbsp;MeV/c2, the precision of which exceeds that of all previous measurements combined (stat, statistical uncertainty; syst, systematic uncertainty; MeV, mega–electron volts; c, speed of light in a vacuum). This measurement is in significant tension with the standard model expectation. W bosons mediate the weak interaction, one of the fundamental forces in physics. Because the Standard Model (SM) of particle physics places tight constraints on the mass of the W boson, measuring the mass puts the SM to the test. The Collider Detector at Fermilab (CDF) Collaboration now reports a precise measurement of the W boson mass extracted from data taken at the Tevatron particle accelerator (see the Perspective by Campagnari and Mulders). Surprisingly, the researchers found that the mass of the boson was significantly higher than the SM predicts, with a discrepancy of 7 standard deviations. —JS Analysis of the data collected at the Tevatron particle collider finds that the W boson is heavier than expected.}
 }
 
+% HIG-16-041
+article{hig16041,
+    title = "{Measurements of properties of the Higgs boson decaying into four leptons in pp collisions at sqrt{s} = 13 TeV}",
+    collaboration = "CMS",
+    author = "CMS Collaboration",
+    reportNumber = "CMS-PAS-HIG-16-041",
+    year = "2017"
+}
+% From AN: {HIG_16_041,
+      institution   = "CERN",
+      address       = "Geneva",
+      number        = "CMS-PAS-HIG-16-041",
+      url           = "http://cds.cern.ch/record/2256357",
+}
+% From CDS:
+@techreport{hig16041,
+      title         = "{Measurements of properties of the Higgs boson decaying into four leptons in pp collisions at sqrt{s} = 13 TeV}",
+      institution   = "CERN",
+      collaboration = "CMS Collaboration",
+      address       = "Geneva",
+      reportNumber  = "CMS-PAS-HIG-16-041",
+      year          = "2017",
+      url           = "http://cds.cern.ch/record/2256357",
+}
+
+% Universe stability
+@article{univ_stab,
+  title = {Scale-invariant instantons and the complete lifetime of the standard model},
+  author = {Andreassen, Anders and Frost, William and Schwartz, Matthew D.},
+  journal = {Phys. Rev. D},
+  volume = {97},
+  issue = {5},
+  pages = {056006},
+  numpages = {42},
+  year = {2018},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevD.97.056006},
+  url = {https://link.aps.org/doi/10.1103/PhysRevD.97.056006}
+}
+                       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Xunwu's references below. ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1604,10 +1677,8 @@ Program title: Pythia 8.2 Catalogue identifier: ACTU_v4_0 Program summary URL:ht
 
 %% statistical analysis
 @article{Cowan:2010js,
-      author         = "Cowan, Glen and Cranmer, Kyle and Gross, Eilam and
-                        Vitells, Ofer",
-      title          = "{Asymptotic formulae for likelihood-based tests of new
-                        physics}",
+      author         = "Cowan, Glen and Cranmer, Kyle and Gross, Eilam and Vitells, Ofer",
+      title          = "{Asymptotic formulae for likelihood-based tests of new physics}",
       journal        = "Eur. Phys. J.",
       volume         = "C71",
       year           = "2011",

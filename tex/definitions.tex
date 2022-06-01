@@ -47,8 +47,9 @@
 \newcommand{\vs}{\mbox{vs.}\xspace}      %vs. No slant according to HIG-16-041 and HIG-19-001.
 \newcommand {\mdash}{\ensuremath{\text{---}}} % for use within formulas
 \providecommand {\NA}{\ensuremath{\text{---}}}    % for Not applicable (or available). Needs to be renewcommanded for APS to \cdots
+\providecommand{\middlepipe}{\ensuremath{\; \middle| \;}\xspace{}}  % The spacing to the left and right of \middle is weird, so manually fix it.
 
-\providecommand{\paren}[1]{\ensuremath{\left( \text{#1} \right)}\xspace}
+% \providecommand{\paren}[1]{\ensuremath{\left( \text{#1} \right)}\xspace}  % Ends up spacing out the internal text too much.
 % some terms whose definition we may change
 \newcommand {\Lone}{Level-1\xspace} % Level-1 or L1 ?
 \newcommand {\Ltwo}{Level-2\xspace}
@@ -120,17 +121,18 @@
 \newcommand{\lumi}{\ensuremath{\mathcal{L}}\xspace}
 \newcommand{\Lumi}{\lumi}
 % Luminosity values.
-\newcommand{\LvLow}  {\ensuremath{\mathcal{L}=\text{10}^\text{32}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
-\newcommand{\LLow}   {\ensuremath{\mathcal{L}=\text{10}^\text{33}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
-\newcommand{\lowlumi}{\ensuremath{\mathcal{L}=\text{2}\times \text{10}^\text{33}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
-\newcommand{\LMed}   {\ensuremath{\mathcal{L}=\text{2}\times \text{10}^\text{33}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
-\newcommand{\LHigh}  {\ensuremath{\mathcal{L}=\text{10}^\text{34}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
-\newcommand{\hilumi} {\ensuremath{\mathcal{L}=\text{10}^\text{34}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
+\newcommand{\LvLow}  {\ensuremath{\lumi = \text{10}^\text{32}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
+\newcommand{\LLow}   {\ensuremath{\lumi = \text{10}^\text{33}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
+\newcommand{\lowlumi}{\ensuremath{\lumi = \text{2}\times \text{10}^\text{33}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
+\newcommand{\LMed}   {\ensuremath{\lumi = \text{2}\times \text{10}^\text{33}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
+\newcommand{\LHigh}  {\ensuremath{\lumi = \text{10}^\text{34}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
+\newcommand{\hilumi} {\ensuremath{\lumi = \text{10}^\text{34}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
 \newcommand{\lum}{\ensuremath{\,\text{(lumi)}}\xspace}
+\newcommand{\lumisixteen}{\ensuremath{35.9\fbinv}\xspace}
 \newcommand{\lumiruntwo}{\ensuremath{137.1\fbinv}\xspace}
 
 % analysis tools
-\newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}
+\newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}  % \textsc is "small caps".
 \newcommand{\HERWIG} {{\textsc{herwig}}\xspace}
 \newcommand{\HERWIGpp} {{\textsc{herwig++}}\xspace}
 \newcommand{\HERWIGSeven}{{\textsc{HERWIG7}}\xspace}
@@ -195,12 +197,17 @@
 \newcommand{\alpS}{\ensuremath{\alpha_S}\xspace}
 % Masses.
 \providecommand{\mass}[1]{\ensuremath{m_{#1}}\xspace}
-\newcommand{\mh}{\ensuremath{m_{\PH}}\xspace}
-\newcommand{\mH}{\mh}
-\newcommand{\mfourl}{\ensuremath{m_{\fourl}}\xspace}
-\newcommand{\mmm}{\ensuremath{m_{\mu\mu}}\xspace}
-\newcommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
-\newcommand{\mjj}{\ensuremath{m_{\mathrm{jj}}}\xspace}
+\providecommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
+
+%=== Higgs mass symbols ===%
+\providecommand{\mh}{\ensuremath{m_{\PH}}\xspace}
+\providecommand{\mH}{\mh}
+\providecommand{\mfourl}{\ensuremath{m_{\fourl}}\xspace}
+\providecommand{\mfourlerr}{\ensuremath{\sigma_{\mfourl}}\xspace}
+\providecommand{\relmfourlerr}{\ensuremath{\frac{\mfourlerr}{\mfourl}}\xspace}
+\providecommand{\Dkinbkg}{\ensuremath{\mathcal{D}^{\text{kin}}_{\text{bkg}}}\xspace}
+
+
 
 %=== Particles ===%
 \newcommand{\Pn}{\ensuremath{\mathrm{n}}}
@@ -227,7 +234,7 @@
 
 %=== Particle combos. ===%
 \newcommand{\pp}{\ensuremath{\Pp \Pp}\xspace}
-\newcommand{\lplm}{\ensuremath{\ell^+ \ell^-}\xspace}
+\newcommand{\ellpellm}{\ensuremath{\ell^+ \ell^-}\xspace}
 \newcommand{\ee}{\ensuremath{\Pe^+ \Pe^-}\xspace}
 \newcommand{\fourl}{\ensuremath{4\ell}\xspace}
 \newcommand{\fourmu}{\ensuremath{4\mu}\xspace}
@@ -268,14 +275,13 @@
 \newcommand{\kappazi}{\ensuremath{\kappa_{i}\smash[b]{^{\PGn\PAGn}}}\xspace}
 
 % Reactions/Processes.
-\newcommand{\Ztolplm}{\ensuremath{\PZ \to \lplm}\xspace}
+\newcommand{\Ztolplm}{\ensuremath{\PZ \to \ellpellm}\xspace}
 \newcommand{\hmm}{\ensuremath{\PH \to \mu\mu}\xspace}
 \newcommand{\zmm}{\ensuremath{\PZ \to \mu\mu}\xspace}
 \newcommand{\htozz}{\ensuremath{\PH \to \PZ\PZ^{\ast}}\xspace}
 \newcommand{\htofourell}{\ensuremath{\PH \to \fourell}\xspace}
 \newcommand{\hzzfourl}{\ensuremath{\htozz \to \fourl}\xspace}
 \newcommand{\hzxxxfourl}{\ensuremath{\PH \to \ZX / \XX \to \fourl}\xspace}
-% Dilepton
 
 %=== RedBkg ===%
 \newcommand{\looselep}{\ensuremath{\ell_{\mathrm{L}}}\xspace}

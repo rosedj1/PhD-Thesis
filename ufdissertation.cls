@@ -68,7 +68,7 @@
 %                                               the gap between the chapter and section when they occur consecutively.
 \RequirePackage{titletoc}%          Use this to manipulate Table of Contents styling
 \RequirePackage{float}
-\RequirePackage[numbers]{natbib}
+\RequirePackage[numbers]{natbib}  % If using biblatex: comment this.
 
 \providecommand{\ifExists}[3]{%     Check to see if a macro is defined, for the use of detecting 
 %                                   which files have been supplied by the user.
@@ -110,7 +110,7 @@
 \multipleAppendixfalse%      We assume there will be only one appendix by default.
 
 %%%%%%%
-%%% Decide if we need to include a list of tables and/or a list of figures. Right now we'll do so with a manually set boolean. Would be a good idea to, instead, do some kind of check on the table/figure number and display if that value is bigger than 0.
+%%% Decide if we need to include a list of tables and/or a list of figures. Right now we'll do so with a manually-set boolean. Would be a good idea to, instead, do some kind of check on the table/figure number and display if that value is bigger than 0.
 %%%%%%%
 
 \newif\ifhaveTables
@@ -417,7 +417,7 @@
 
 %%%%%% Next is the creation of the List of Objects code.
 %   Note: By default LaTeX only supports table of contents, List of tables and List of figures. The primary package to use to create a custom list is the tocloft package; but that has been depreciated and thus creates all kinds of cascading formatting problems with the other packages we use here. 
-%   However, we can hijack another well maintained package that generates (among other things) a custom "List of ...". Specifically, we hijack the "algorithms" package, which gives a "list of algorithms" and an "algorithm" environment that takes captions and, in general, does everything we want. We will hijack this, then retool it to format it how we want, and finally reskin the words a little bit to make it say "object" instead of "algorithm" where needed, in the output. Since this could be a bit confusing for the author (using an 'algorithm' environment to insert an object') we conclude by defining an "addObject" command that will allow the author to add an object via the sensible "addObject" command, and that command will do all the weird formating and call all the weird environments/factors/etc to make it work, all behind the scenes.
+%   However, we can hijack another well-maintained package that generates (among other things) a custom "List of ...". Specifically, we hijack the "algorithms" package, which gives a "list of algorithms" and an "algorithm" environment that takes captions and, in general, does everything we want. We will hijack this, then retool it to format it how we want, and finally reskin the words a little bit to make it say "object" instead of "algorithm" where needed, in the output. Since this could be a bit confusing for the author (using an 'algorithm' environment to insert an object') we conclude by defining an "addObject" command that will allow the author to add an object via the sensible "addObject" command, and that command will do all the weird formating and call all the weird environments/factors/etc to make it work, all behind the scenes.
 %   Currently I don't have a good enough idea of what the formating or nature of "Objects" are, in order to actually write the "addObjects" command fully, but I have the shell defined and correct until I get additional parameters.
 
 
@@ -764,13 +764,11 @@
             \phantomsection
             \addcontentsline{toc}{chapter}{REFERENCES}
             \label{references}
-            \bibliographystyle{\referenceStyle}
+            \bibliographystyle{\referenceStyle}  % If using biblatex: comment this.
             {\singlespacing
-            \bibliography{\referenceFile}}
-            % Suz uses this:
-            % \usepackage[style=phys, backend=biber, biblabel=brackets]{biblatex}
-            % though I can't get it to work.
-            % The default UF template (this file) should be fine.
+            % \printbibliography  % If using biblatex: uncomment this.
+            \bibliography{\referenceFile}  % If using biblatex: comment this.
+            }
         }
         {
             % \@latex@warning{You haven't specified a reference file using the command \setReferenceFile. Hopefully this is intentional!}

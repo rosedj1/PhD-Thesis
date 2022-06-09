@@ -1,3 +1,34 @@
+%=== BIBLIOGRAPHIES IN LATEX with the UF template ===%
+% There are 2 main bib organizers in LaTeX: BibTeX and BibLaTeX (and no, they're not the same thing!).
+% * BibTeX comes standard with the UF template but offers limited flexibility.
+% * BibLaTeX offers excellent flexibility, but you'll need to go into ufdissertation.cls and perform the 'biblatex' (un)comment instructions as well as changing some things in main.tex.
+% default biblatex style: It uses the word "In: " in strange places. Otherwise it looks good. What journal would it correspond to though?
+
+%=== How to get your bib to look the way you want (BibTeX). ===%
+% (1) Select a journal style you like: JHEP, APS, MLA, Chicago, etc.
+% (2) Download the corresponding '.bst' (bibliography style) file.
+% (3) Put the '.bst' file in your working area.
+% E.g., JHEP bst file: https://jhep.sissa.it/jhep/help/JHEP/TeXclass/DOCS/JHEP.bst
+
+%=== Thoughts on different styles: ===%
+% JHEP: Reference titles are italicized, references in appearance-order, citation ranges look like 1--3. Bibtex has difficulty getting references unsorted (i.e., in appearance-order).
+% Physical Letters B looks really good, except that it doesn't often include titles of refs!
+% Physical REVIEW Letters uses italicized titles.
+% Nature: Bibliography labels are like: 1., 2., instead of [1], [2], ..
+% Science: Uses italic numbers.
+% MLA: In the text, uses name the reference instead of number.
+% Chicago: Uses the date in the text and doesn't use any numbers in the bib.
+% Chem-ACS: Doesn't include the title! Also, uses parentheses around numbers in bib.
+
+%=== After spending loads of time on bibliography styles, etc., I've learned: ===%
+% * Don't export bibliography from zotero---instead pull citation from website, then make the following changes:
+% (1) Delete key=abstract, if it exists.
+% (2) If 3 or more authors, only keep the first author and replace second onward with "and others" (this will be replaced by "et al.").
+% (3) Make sure that key=url is filled out.
+
+% TODO: Are quotes around titles necessary?
+% DOI = Digital Object Identifier. A unique and never-changing string assigned to online (journal) articles, books, and other works.
+
 CMS recommendations:
 References should be numbered consecutively in the order in which they are cited in the text.
 The general guidelines for choosing references are:
@@ -6,27 +37,12 @@ The general guidelines for choosing references are:
 * Reference relevant theoretical papers, especially ones that predict a value for your measurement.
 * Give a minimal general bibliography for the nonexpert reader who might need to be educated on the subject. These are papers typically referred to in the introduction. 
 
-% Seems like titles should have quotes around them in the compiled version.
-
 %=== Some citation types ===%
 % article
 % misc
 % techreport (arXiv)
 % unpublished
 % phdthesis
-
-% What keys should an "article" have?
-% title ?
-% author ?
-% abstract ?
-% journal ?
-% volume ?
-% pages ?
-% year ?
-% issn ?
-% doi ?
-% url ?
-% keywords ?
 
 %=== Different citation styles ===%
 %MLA: Particle Data Group, et al. "Review of particle physics." Progress of Theoretical and Experimental Physics 2020.8 (2020): 083C01.
@@ -72,6 +88,23 @@ article{PDG2020,
     pages = "083C01",
     year = "2020"
 }
+% From zotero:
+@article{particle_data_group_review_2020,
+	title = {Review of {Particle} {Physics}},
+	volume = {2020},
+	issn = {2050-3911},
+	url = {https://doi.org/10.1093/ptep/ptaa104},
+	doi = {10.1093/ptep/ptaa104},
+	abstract = {The Review summarizes much of particle physics and cosmology. Using data from previous editions, plus 3,324 new measurements from 878 papers, we list, evaluate, and average measured properties of gauge bosons and the recently discovered Higgs boson, leptons, quarks, mesons, and baryons. We summarize searches for hypothetical particles such as supersymmetric particles, heavy bosons, axions, dark photons, etc. Particle properties and search limits are listed in Summary Tables. We give numerous tables, figures, formulae, and reviews of topics such as Higgs Boson Physics, Supersymmetry, Grand Unified Theories, Neutrino Mixing, Dark Energy, Dark Matter, Cosmology, Particle Detectors, Colliders, Probability and Statistics. Among the 120 reviews are many that are new or heavily revised, including a new review on High Energy Soft QCD and Diffraction and one on the Determination of CKM Angles from B Hadrons.The Review is divided into two volumes. Volume 1 includes the Summary Tables and 98 review articles. Volume 2 consists of the Particle Listings and contains also 22 reviews that address specific aspects of the data presented in the Listings.The complete Review (both volumes) is published online on the website of the Particle Data Group (pdg.lbl.gov) and in a journal. Volume 1 is available in print as the PDG Book. A Particle Physics Booklet with the Summary Tables and essential tables, figures, and equations from selected review articles is available in print and as a web version optimized for use on phones as well as an Android app.},
+	number = {8},
+	urldate = {2022-06-08},
+	journal = {Progress of Theoretical and Experimental Physics},
+	author = {{Particle Data Group} and Zyla, P A and Barnett, R M and Beringer, J and Dahl, O and Dwyer, D A and Groom, D E and Lin, C -J and Lugovsky, K S and Pianori, E and Robinson, D J and Wohl, C G and Yao, W -M and Agashe, K and Aielli, G and Allanach, B C and Amsler, C and Antonelli, M and Aschenauer, E C and Asner, D M and Baer, H and Banerjee, Sw and Baudis, L and Bauer, C W and Beatty, J J and Belousov, V I and Bethke, S and Bettini, A and Biebel, O and Black, K M and Blucher, E and Buchmuller, O and Burkert, V and Bychkov, M A and Cahn, R N and Carena, M and Ceccucci, A and Cerri, A and Chakraborty, D and Chivukula, R Sekhar and Cowan, G and D'Ambrosio, G and Damour, T and de Florian, D and de Gouv{\^e}a, A and DeGrand, T and de Jong, P and Dissertori, G and Dobrescu, B A and D'Onofrio, M and Doser, M and Drees, M and Dreiner, H K and Eerola, P and Egede, U and Eidelman, S and Ellis, J and Erler, J and Ezhela, V V and Fetscher, W and Fields, B D and Foster, B and Freitas, A and Gallagher, H and Garren, L and Gerber, H -J and Gerbier, G and Gershon, T and Gershtein, Y and Gherghetta, T and Godizov, A A and Gonzalez-Garcia, M C and Goodman, M and Grab, C and Gritsan, A V and Grojean, C and Gr{\"u}newald, M and Gurtu, A and Gutsche, T and Haber, H E and Hanhart, C and Hashimoto, S and Hayato, Y and Hebecker, A and Heinemeyer, S and Heltsley, B and Hern{\'a}ndez-Rey, J J and Hikasa, K and Hisano, J and H{\"o}cker, A and Holder, J and Holtkamp, A and Huston, J and Hyodo, T and Johnson, K F and Kado, M and Karliner, M and Katz, U F and Kenzie, M and Khoze, V A and Klein, S R and Klempt, E and Kowalewski, R V and Krauss, F and Kreps, M and Krusche, B and Kwon, Y and Lahav, O and Laiho, J and Lellouch, L P and Lesgourgues, J and Liddle, A R and Ligeti, Z and Lippmann, C and Liss, T M and Littenberg, L and Lourengo, C and Lugovsky, S B and Lusiani, A and Makida, Y and Maltoni, F and Mannel, T and Manohar, A V and Marciano, W J and Masoni, A and Matthews, J and Mei{\ss}ner, U -G and Mikhasenko, M and Miller, D J and Milstead, D and Mitchell, R E and M{\"o}nig, K and Molaro, P and Moortgat, F and Moskovic, M and Nakamura, K and Narain, M and Nason, P and Navas, S and Neubert, M and Nevski, P and Nir, Y and Olive, K A and Patrignani, C and Peacock, J A and Petcov, S T and Petrov, V A and Pich, A and Piepke, A and Pomarol, A and Profumo, S and Quadt, A and Rabbertz, K and Rademacker, J and Raffelt, G and Ramani, H and Ramsey-Musolf, M and Ratcliff, B N and Richardson, P and Ringwald, A and Roesler, S and Rolli, S and Romaniouk, A and Rosenberg, L J and Rosner, J L and Rybka, G and Ryskin, M and Ryutin, R A and Sakai, Y and Salam, G P and Sarkar, S and Sauli, F and Schneider, O and Scholberg, K and Schwartz, A J and Schwiening, J and Scott, D and Sharma, V and Sharpe, S R and Shutt, T and Silari, M and Sj{\"o}strand, T and Skands, P and Skwarnicki, T and Smoot, G F and Soffer, A and Sozzi, M S and Spanier, S and Spiering, C and Stahl, A and Stone, S L and Sumino, Y and Sumiyoshi, T and Syphers, M J and Takahashi, F and Tanabashi, M and Tanaka, J and Ta{\v s}evsk{\'y}, M and Terashi, K and Terning, J and Thoma, U and Thorne, R S and Tiator, L and Titov, M and Tkachenko, N P and Tovey, D R and Trabelsi, K and Urquijo, P and Valencia, G and Van de Water, R and Varelas, N and Venanzoni, G and Verde, L and Vincter, M G and Vogel, P and Vogelsang, W and Vogt, A and Vorobyev, V and Wakely, S P and Walkowiak, W and Walter, C W and Wands, D and Wascko, M O and Weinberg, D H and Weinberg, E J and White, M and Wiencke, L R and Willocq, S and Woody, C L and Workman, R L and Yokoyama, M and Yoshida, R and Zanderighi, G and Zeller, G P and Zenin, O V and Zhu, R -Y and Zhu, S -L and Zimmermann, F and Anderson, J and Basaglia, T and Lugovsky, V S and Schaffner, P and Zheng, W},
+	month = aug,
+	year = {2020},
+	pages = {083C01},
+	file = {Full Text PDF:/Users/Jake/Zotero/storage/L525XZ2W/Particle Data Group et al. - 2020 - Review of Particle Physics.pdf:application/pdf;Snapshot:/Users/Jake/Zotero/storage/UE75E9K5/5891211.html:text/html},
+}
 
 
 %=== Dark Matter citation ===%
@@ -83,7 +116,6 @@ article{PDG2020,
     number = {8},
     year = {2020},
     month = {08},
-    abstract = "{The Review summarizes much of particle physics and cosmology. Using data from previous editions, plus 3,324 new measurements from 878 papers, we list, evaluate, and average measured properties of gauge bosons and the recently discovered Higgs boson, leptons, quarks, mesons, and baryons. We summarize searches for hypothetical particles such as supersymmetric particles, heavy bosons, axions, dark photons, etc. Particle properties and search limits are listed in Summary Tables. We give numerous tables, figures, formulae, and reviews of topics such as Higgs Boson Physics, Supersymmetry, Grand Unified Theories, Neutrino Mixing, Dark Energy, Dark Matter, Cosmology, Particle Detectors, Colliders, Probability and Statistics. Among the 120 reviews are many that are new or heavily revised, including a new review on High Energy Soft QCD and Diffraction and one on the Determination of CKM Angles from B Hadrons.The Review is divided into two volumes. Volume 1 includes the Summary Tables and 98 review articles. Volume 2 consists of the Particle Listings and contains also 22 reviews that address specific aspects of the data presented in the Listings.The complete Review (both volumes) is published online on the website of the Particle Data Group (pdg.lbl.gov) and in a journal. Volume 1 is available in print as the PDG Book. A Particle Physics Booklet with the Summary Tables and essential tables, figures, and equations from selected review articles is available in print and as a web version optimized for use on phones as well as an Android app.}",
     issn = {2050-3911},
     doi = {10.1093/ptep/ptaa104},
     url = {https://doi.org/10.1093/ptep/ptaa104},
@@ -133,7 +165,7 @@ article{hig16041,
       url           = "http://cds.cern.ch/record/2256357",
 }
 % From CDS:
-@techreport{hig16041,
+techreport{hig16041,
       title         = "{Measurements of properties of the Higgs boson decaying into four leptons in pp collisions at sqrt{s} = 13 TeV}",
       institution   = "CERN",
       collaboration = "CMS Collaboration",
@@ -142,8 +174,15 @@ article{hig16041,
       year          = "2017",
       url           = "http://cds.cern.ch/record/2256357",
 }
+% From INSPIRE:
+@article{CMS:2017jkd,
+    collaboration = "CMS",
+    title = "{Measurements of properties of the Higgs boson decaying into four leptons in pp collisions at sqrt{s} = 13 TeV}",
+    reportNumber = "CMS-PAS-HIG-16-041",
+    year = "2017",
+}
 
-% Universe stability
+% Universe stability (citation taken straight from url).
 @article{univ_stab,
   title = {Scale-invariant instantons and the complete lifetime of the standard model},
   author = {Andreassen, Anders and Frost, William and Schwartz, Matthew D.},
@@ -299,6 +338,12 @@ article{hig16041,
 }
 
 % phase-1 L1T
+% Xunwu's changes to the original citation taken from url:
+% * Added key=number and made the value=(reportNumber's value).
+% * In number's value, changed comma to dot to separate strings.
+% * Removed ", CMS-TDR-12" from reportNumber.
+% This techreport printout looks like this:
+% <author>, <title>, Technical Report <number>, <month> <year>. <url>
 @techreport{Tapper:1556311,
       author        = "Tapper, A and Acosta, Darin",
       editor        = "Tapper, A",
@@ -483,6 +528,19 @@ author = {CMS Collaboration}
       SLACcitation   = "%%CITATION = ARXIV:1207.7214;%%"
 }
 
+%=== Changes Xunwu made to the original website citation extraction: ===%
+% For all keys, REPLACE surrounding brackets {...} with double quotes "...".
+% author:
+% * When you have a giant author list replace all names---except the first---with "and others" (no dot at the end).
+% title:
+% * Wrap first letter of title in '{ }'.
+% * If any numbers or units, then surround in math env ($...$) and use, e.g., \GeV.
+% journal:
+% * ABBREVIATED the journal: Physics Letters B -> "Phys. Lett. B"
+% ADD key=collaboration with value="CMS".
+% DELETE key=abstract.
+
+XUNWU'S VERSION:
 @article{Chatrchyan:2012xdj,
       author         = "Chatrchyan, Serguei and others",
       title          = "{O}bservation of a new boson at a mass of ${125\GeV}$ with the {CMS} experiment at the {LHC}",
@@ -499,6 +557,23 @@ author = {CMS Collaboration}
       SLACcitation   = "%%CITATION = ARXIV:1207.7235;%%"
 }
 
+% Jake pulled from somewhere.
+article{chatrchyan_observation_2012,
+	title = {Observation of a new boson at a mass of 125 {GeV} with the {CMS} experiment at the {LHC}},
+	volume = {716},
+	issn = {0370-2693},
+	url = {https://www.sciencedirect.com/science/article/pii/S0370269312008581},
+	doi = {https://doi.org/10.1016/j.physletb.2012.08.021},
+	abstract = {Results are presented from searches for the standard model Higgs boson in proton{\textendash}proton collisions at s=7 and 8 TeV in the Compact Muon Solenoid experiment at the LHC, using data samples corresponding to integrated luminosities of up to 5.1 fb-1 at 7 TeV and 5.3 fb-1 at 8 TeV. The search is performed in five decay modes: $\gamma$$\gamma$, ZZ, W+W-, $\tau$+$\tau$-, and bb{\textasciimacron}. An excess of events is observed above the expected background, with a local significance of 5.0 standard deviations, at a mass near 125 GeV, signalling the production of a new particle. The expected significance for a standard model Higgs boson of that mass is 5.8 standard deviations. The excess is most significant in the two decay modes with the best mass resolution, $\gamma$$\gamma$ and ZZ; a fit to these signals gives a mass of 125.3{\textpm}0.4(stat.){\textpm}0.5(syst.) GeV. The decay to two photons indicates that the new particle is a boson with spin different from one.},
+	number = {1},
+	journal = {Physics Letters B},
+	author = {Chatrchyan, S. and others},
+	year = {2012},
+	keywords = {CMS, Higgs, Physics},
+	pages = {30--61},
+}
+
+%=== OBSERVATION sqrt(7), sqrt(8)
 @article{Chatrchyan:2013lba,
       author         = "Chatrchyan, Serguei and others",
       title          = "{O}bservation of a new boson with mass near ${125\GeV}$ in ${\Pp\Pp}$ collisions at ${\sqrt{s} = 7}$ and {8\TeV}",
@@ -514,6 +589,39 @@ author = {CMS Collaboration}
       reportNumber   = "CMS-HIG-12-036, CERN-PH-EP-2013-035",
       SLACcitation   = "%%CITATION = ARXIV:1303.4571;%%"
 }
+
+% Jake pulled this citation using zotero.
+% * DELETED keys=abstract, file.
+article{chatrchyan_observation_2013,
+	title = {Observation of a new boson with mass near 125 {GeV} in pp collisions at $ {\sqrt{s}=7 and 8\TeV}$},
+	volume = {2013},
+	issn = {1029-8479},
+	url = {https://doi.org/10.1007/JHEP06(2013)081},
+	doi = {10.1007/JHEP06(2013)081},
+	language = {en},
+	number = {6},
+	urldate = {2022-06-06},
+	journal = {Journal of High Energy Physics},
+	author = {Chatrchyan, S. and Khachatryan, V. and Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Bergauer, T. and Dragicevic, M. and Er{\"o}, J. and Fabjan, C. and Friedl, M. and Fr{\"u}hwirth, R. and Ghete, V. M. and H{\"o}rmann, N. and Hrubec, J. and Jeitler, M. and Kiesenhofer, W. and Kn{\"u}nz, V. and Krammer, M. and Kr{\"a}tschmer, I. and Liko, D. and Mikulec, I. and Rabady, D. and Rahbaran, B. and Rohringer, C. and Rohringer, H. and Sch{\"o}fbeck, R. and Strauss, J. and Taurok, A. and Treberer-treberspurg, W. and Waltenberger, W. and Wulz, C.-E. and Mossolov, V. and Shumeiko, N. and Gonzalez, J. Suarez and Alderweireldt, S. and Bansal, M. and Bansal, S. and Cornelis, T. and De Wolf, E. A. and Janssen, X. and Knutsson, A. and Luyckx, S. and Mucibello, L. and Ochesanu, S. and Roland, B. and Rougny, R. and Van Haevermaet, H. and Van Mechelen, P. and Van Remortel, N. and Van Spilbeeck, A. and Blekman, F. and Blyweert, S. and D{\textquoteright}Hondt, J. and Kalogeropoulos, A. and Keaveney, J. and Maes, M. and Olbrechts, A. and Tavernier, S. and Van Doninck, W. and Van Mulders, P. and Van Onsem, G. P. and Villella, I. and Clerbaux, B. and De Lentdecker, G. and Gay, A. P. R. and Hreus, T. and L{\'e}onard, A. and Marage, P. E. and Mohammadi, A. and Reis, T. and Thomas, L. and Velde, C. Vander and Vanlaer, P. and Wang, J. and Adler, V. and Beernaert, K. and Benucci, L. and Cimmino, A. and Costantini, S. and Dildick, S. and Garcia, G. and Klein, B. and Lellouch, J. and Marinov, A. and Mccartin, J. and Rios, A. A. Ocampo and Ryckbosch, D. and Sigamani, M. and Strobbe, N. and Thyssen, F. and Tytgat, M. and Walsh, S. and Yazgan, E. and Zaganidis, N. and Basegmez, S. and Bruno, G. and Castello, R. and Caudron, A. and Ceard, L. and Delaere, C. and du Pree, T. and Favart, D. and Forthomme, L. and Giammanco, A. and Hollar, J. and Lemaitre, V. and Liao, J. and Militaru, O. and Nuttens, C. and Pagano, D. and Pin, A. and Piotrzkowski, K. and Popov, A. and Selvaggi, M. and Garcia, J. M. Vizan and Beliy, N. and Caebergs, T. and Daubie, E. and Hammad, G. H. and Alves, G. A. and Martins, M. Correa and Martins, T. and Pol, M. E. and Souza, M. H. G. and J{\'u}nior, W. L. Ald{\'a} and Carvalho, W. and Chinellato, J. and Cust{\'o}dio, A. and Da Costa, E. M. and De Jesus Damiao, D. and De Oliveira Martins, C. and De Souza, S. Fonseca and Malbouisson, H. and Malek, M. and Figueiredo, D. Matos and Mundim, L. and Nogima, H. and Da Silva, W. L. Prado and Santoro, A. and Jorge, L. Soares and Sznajder, A. and Manganote, E. J. Tonelli and Pereira, A. Vilela and Anjos, T. S. and Bernardes, C. A. and Dias, F. A. and Tomei, T. R. Fernandez Perez and Gregores, E. M. and Lagana, C. and Marinho, F. and Mercadante, P. G. and Novaes, S. F. and Padula, Sandra S. and Genchev, V. and Iaydjiev, P. and Piperov, S. and Rodozov, M. and Stoykova, S. and Sultanov, G. and Tcholakov, V. and Trayanov, R. and Vutova, M. and Dimitrov, A. and Hadjiiska, R. and Kozhuharov, V. and Litov, L. and Pavlov, B. and Petkov, P. and Bian, J. G. and Chen, G. M. and Chen, H. S. and Jiang, C. H. and Liang, D. and Liang, S. and Meng, X. and Tao, J. and Wang, J. and Wang, X. and Wang, Z. and Xiao, H. and Xu, M. and Asawatangtrakuldee, C. and Ban, Y. and Guo, Y. and Li, Q. and Li, W. and Liu, S. and Mao, Y. and Qian, S. J. and Wang, D. and Zhang, L. and Zou, W. and Avila, C. and Montoya, C. A. Carrillo and Gomez, J. P. and Moreno, B. Gomez and Sanabria, J. C. and Godinovic, N. and Lelas, D. and Plestina, R. and Polic, D. and Puljak, I. and Antunovic, Z. and Kovac, M. and Brigljevic, V. and Duric, S. and Kadija, K. and Luetic, J. and Mekterovic, D. and Morovic, S. and Tikvica, L. and Attikis, A. and Mavromanolakis, G. and Mousa, J. and Nicolaou, C. and Ptochos, F. and Razis, P. A. and Finger, M. and Finger, M. and Assran, Y. and Kamel, A. Ellithi and Mahmoud, M. A. and Mahrous, A. and Radi, A. and Kadastik, M. and M{\"u}ntel, M. and Murumaa, M. and Raidal, M. and Rebane, L. and Tiko, A. and Eerola, P. and Fedi, G. and Voutilainen, M. and H{\"a}rk{\"o}nen, J. and Karim{\"a}ki, V. and Kinnunen, R. and Kortelainen, M. J. and Lamp{\'e}n, T. and Lassila-Perini, K. and Lehti, S. and Lind{\'e}n, T. and Luukka, P. and M{\"a}enp{\"a}{\"a}, T. and Peltola, T. and Tuominen, E. and Tuominiemi, J. and Tuovinen, E. and Wendland, L. and Korpela, A. and Tuuva, T. and Besancon, M. and Choudhury, S. and Couderc, F. and Dejardin, M. and Denegri, D. and Fabbro, B. and Faure, J. L. and Ferri, F. and Ganjour, S. and Givernaud, A. and Gras, P. and de Monchenault, G. Hamel and Jarry, P. and Locci, E. and Malcles, J. and Millischer, L. and Nayak, A. and Rander, J. and Rosowsky, A. and Titov, M. and Baffioni, S. and Beaudette, F. and Benhabib, L. and Bianchini, L. and Bluj, M. and Busson, P. and Charlot, C. and Daci, N. and Dahms, T. and Dalchenko, M. and Dobrzynski, L. and Florent, A. and de Cassagnac, R. Granier and Haguenauer, M. and Min{\'e}, P. and Mironov, C. and Naranjo, I. N. and Nguyen, M. and Ochando, C. and Paganini, P. and Sabes, D. and Salerno, R. and Sirois, Y. and Veelken, C. and Zabi, A. and Agram, J.-L. and Andrea, J. and Bloch, D. and Bodin, D. and {The CMS collaboration}},
+	month = jun,
+	year = {2013},
+	keywords = {Hadron-Hadron Scattering},
+	pages = {81},
+}
+% From arXiv.
+article{2013,
+	doi = {10.1007/jhep06(2013)081},
+	url = {https://doi.org/10.1007%2Fjhep06%282013%29081},
+	year = 2013,
+	month = {jun},
+	publisher = {Springer Science and Business Media {LLC}},
+	volume = {2013},
+	number = {6},
+	author = {S. Chatrchyan and V. Khachatryan and A. M. Sirunyan and A. Tumasyan and W. Adam and T. Bergauer and M. Dragicevic and J. Erö and C. Fabjan and M. Friedl and R. Frühwirth},
+	title = {Observation of a new boson with mass near 125 {GeV} in pp collisions at {\textdollar} {\textbackslash}sqrt$\lbrace$s$\rbrace$=7 {\textdollar} and 8 {TeV}},
+	journal = {Journal of High Energy Physics}
+}
+%========================%
 
 % ATLAS Higgs coupling
 @article{PhysRevD.99.072001,

@@ -23,8 +23,10 @@
 \usepackage{newtxmath}
 
 \input{tex/definitions.tex}
-
-% \usepackage[style=phys, backend=biber, biblabel=brackets]{biblatex}
+%=== N.B.: If you want to use biblatex, go into ufdissertation.cls and search for 'biblatex' (un)comment instructions.
+% \usepackage[sorting=none, backend=biber, style=phys, biblabel=brackets]{biblatex}
+% \usepackage[sorting=none]{biblatex}
+% \addbibresource{biblatex-phys.bib}  % If using biblatex: uncomment this.
 
 % Enable format for table, figure, object
 \haveTablestrue%        Uncomment this if you have tables in your thesis.
@@ -52,9 +54,12 @@
 % \setDedicationFile{tex/dedicationFile}%                 Dedication Page
 % \setAcknowledgementsFile{tex/acknowledgementsFile}%     Acknowledgements Page
 \setAbstractFile{tex/abstractFile}%                     Abstract Page (This should only include the abstract itself)
-% \setReferenceFile{referenceFile}{amsplain}%         References. First argument is your bibtex source file
-% :                                                  the second argument is your bibtex style file.
-\setReferenceFile{referenceFile}{unsrtnat}  % <== Use this one.  unsrtnat sorts references in cite order, and shows url.
+% \setReferenceFile{referenceFile}{amsplain}%         References. First argument is your bibtex source file (.bib) the second argument is your bibtex style file (.bst).
+\setReferenceFile{referenceFile}{jhep}
+% Use the style "unsrtnat" since it sorts references in cite order and shows url.
+% Other bibliographystyles: unsrtnat, apsrev, ieeetr, jhep (beautiful but doesn't show url).
+% \setReferenceFile{newboi}{unsrtnat}
+% \setReferenceFile{referenceFile}{ieeetr}
 %\setBiographicalFile{biographyFile}%                Biography file of the Author (you).
 
 
@@ -116,7 +121,7 @@
 %%%%%%%%%%%%%%%%%%%%
 % \input{tex/conclusion/conclusion.tex}
 
-%=== Don't use the below; use \setReferenceFile above. ===%
+%=== Bibliography is printed in the command \setReferenceFile above. ===%
 % \bibliographystyle{plain}
 % \bibliography{referenceFile}
 %=========================================================%

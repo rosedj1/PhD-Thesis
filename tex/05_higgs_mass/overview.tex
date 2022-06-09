@@ -24,16 +24,16 @@ Each decay occurs with a different probability---the \emph{branching fraction} o
 		\label{fig:higgs_br}
 	\end{center}
 \end{figure} 
-The question then becomes, \emph{``Which decay mode of the Higgs boson is most useful for the measurement of \mH?''}.
+The question then becomes, \emph{``Which Higgs boson decay mode is most useful for the measurement of \mH?''}.
 % Real particles enter detectors in CMS which send signals to various electronics.
 % Particle Flow algorithm pieces the information together to construct objects out of each event.
 % Now, instead of just a deposit of energy in the ECAL and corresponding hits in the silicon tracker, the particle is identified as a newly produced electron.
 % CMS records which kinds of objects came from which events and stores the information in \emph{data sets} (TODO: ref Section future).
 
-Owing to its large signal-to-background ratio of approximately 2 and its relatively rare four-lepton final state, the \hzzfourl decay channel is selected and is called the \emph{signal} process.
-Thus, a single Higgs boson will decay via the signal process into two \PZ bosons (one on-shell and one off-shell) on average only 2.6\% of the time.
-In turn, each \PZ boson decays into two opposite-sign, same flavor (OSSF) leptons (\Ztolplm, where $\ell = \Pe, \mu$) on average approximately 6.7\% of the time, giving rise to four distinct final states:
-\foure, \fourmu, \twoetwomu, \twomutwoe.
+Owing to its large signal-to-background ratio of approximately 2 and its relatively rare four-lepton final state, the \hzzfourl decay channel is chosen and is called the \emph{signal} process.
+On average, a Higgs boson will decay into two \PZ bosons (one on-shell and one off-shell) only 2.6\% of the time.
+In turn, each \PZ boson \emph{may} decay into two opposite-sign, same flavor (OSSF) leptons (\Ztolplm, where $\ell = \Pe, \mu$) on average approximately 6.7\% of the time.
+This signal process then gives rise to four distinct final states: \foure, \fourmu, \twoetwomu, \twomutwoe.
 The branching ratio for the overall signal process is then calculated as: % B(Z->ee)=0.033632, B(Z->mumu)=0.033662
 \begin{equation*}
     \BRof{\hzzfourl} = \BRof{\htozz} \left[ \BRof{\Ztolplm} \right]^2 = 1.8\tentotheminus{3}.
@@ -58,7 +58,7 @@ All throughout, the reconstructed event must obey physics conservation laws (ene
 These criteria are analysis-specific and are collectively called the \emph{event selection} of the analysis.
 The event selection for this analysis is described in Section~\ref{sec:evt_sel}.  % TODO: ref may be wrong.
 
-Even though the event selection is constructed to select signal events, it is not guaranteed;
+Although the event selection is constructed to select only signal events, it is not guaranteed;
 there are certain physics process that have exactly the same initial and final states as the signal process.
 Such processes ``contaminate'' the collected signal events and are called \emph{background processes}.
 Fig.~\ref{TODO} shows how identical initial state gluons can react to produce exactly the same final state particles, while producing different intermediate particles:
@@ -84,17 +84,17 @@ These events simulate a specific process (\eg $\pp \to \hzzfourl$), governed by 
 % and even the interactions that particles have with the virtual detectors, through which they traverse.
 Programs like \MGvATNLO and \POWHEG can simulate millions of rare (or even \emph{fictitious}) events, which might otherwise take many years to observe in data.
 Furthermore, software can even simulate the particles as they travel through the simulated detectors.
-Programs like \GEANTfour can show analysts what to expect as the particles interact with a virtual version of the CMS detector.
+Programs like \GEANTfour show analysts what to expect as the particles interact with a virtual version of the CMS detector.
 Predictions from simulation can then be compared to the truth---the data---as a way to check the accuracy of the analysis.
-For example, a surplus of events in data where none was expected may lead to the discovery of new particles, as was the case in the discovery of the Higgs boson.
+For example, a surplus of events in data where none was expected may lead to the discovery of new particles, as was the case for the discovery of the Higgs boson.
 % agreement or deviations in what was expected.
-The simulated samples for this analysis are described in Section~\ref{sec:datasets_simul_trig}.
+The simulated events for this analysis are described in Section~\ref{sec:datasets_simul_trig}.
 
-So how is the measurement of \mH achieved?
+So how is the measurement of \mH obtained?
 Since the signal process is \hzzfourl, conservation of energy leads one to expect that $\mfourl \approx \mH$.
 Although this is not how the final measurement is obtained, it is a logical starting point.
 The distribution of \mfourl values reveals that the Higgs boson mass resonance stands well above the distribution of expected background events (Figure~\ref{fig:m4l_run2}).
-Simulation is then used to predict the \emph{line shape} of this signal peak (Section~\ref{sec:signal_model}).
+Simulated signal events are then used to predict the \emph{line shape} of this signal peak (Section~\ref{sec:signal_model}).
 This signal modeling is performed using a double-sided Crystal Ball function to fit the line shape, for various mass points of \mH, in each of the four final states.
 % m4l dist Full Run 2.
 %%%%%%%%%%%%%%%%%%%%
@@ -126,7 +126,7 @@ Important in any scientific analysis is the careful study of all the associated 
 The two main kinds of uncertainties are either \emph{statistical}, which depend on the number of data points used to the make the measurement, or \emph{systematic}, which depend on the instrumentation precision used to make the measurement.
 The systematic uncertainties for this analysis include:
 \begin{itemize}
-	\item Lint (TODO 2.5\%)
+	\item \lumiint (TODO 2.5\%)
 	\item Lepton identification and reconstruction efficiencies (TODO 2.5--9\%): lepton energy scale
 	\item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG
 	\item Estimation of the reducible background.
@@ -143,4 +143,33 @@ These uncertainties are discussed in Section~\ref{sec:syst_uncert}.
 The resolution of the peak 
 Ways to improve the 
 Do likelihood fit.
-$\mathcal{L}$
+
+\textbf{FROM THE AN}
+\begin{itemize}
+	\item TODO:REWORD First, assess what the expected statistical uncertainty will be on \mH using a 1D $\text{pdf} \left( \mfourl \right)$ on the signal events alone (\ie assuming no background).
+	\item TODO:REWORD Next, add the vertex constraint in reconstruction of muon \pt.
+	\item TODO:REWORD Then, use the expected \Zone mass line shape for a scalar Higgs boson to refit the momenta of the leptons originating from the \Zone.
+	\item Next, we include per-event four-lepton mass uncertainties in the mass measurement. 
+	Events that are assessed to have better four-lepton mass resolution then acquire higher weight in the mass fit.
+	\item Add the background and assess how it worsens the expected \mH uncertainties.
+	\item Introduce the kinematic discriminant $\left( \Dkinbkg \right)$, whose purpose is to discriminate signal events from background events.
+	This discriminant works on a per-event basis using the four-lepton kinematical observables, instead of directly using the four-lepton mass.
+	In the Higgs boson mass fit, this gives less weight to events with four-lepton kinematic configurations more typical of background than signal.
+	\item Finally, add all systematic uncertainties to study how they contribute to, \ie propagate into, the total uncertainty on \mH.
+\end{itemize}
+
+% \begin{table}[!htb]	
+% 	\centering
+% 	% \captionsetup{justification=justified}
+% 	\topcaption{Previous Higgs boson mass measurements made by ATLAS and CMS using the \htofourl decay channel.}
+% 	\begin{tabular}{|c|c|c|}
+% 		\hline			
+% 		Collaboration	&	Mass (GeV) \\
+% 		\hline
+% 		CMS	            &	125.38 $\pm$ 0.14 \\
+% 		ATLAS	        &	124.97 $\pm$ 0.24 \\
+% 		\hline			
+% 	\end{tabular}
+% 	\label{tab:cms_vs_atlas}
+% \end{table}
+% For reference, Table~\ref{tab:cms_vs_atlas} summarizes the previous Higgs boson mass measurements made by ATLAS and CMS collaborations, using the \htofourl decay channel.

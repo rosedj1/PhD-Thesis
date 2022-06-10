@@ -49,7 +49,8 @@ Thus, a signal event is expected to be produced only once in about every \emph{t
 The strategy is then to search the \pp collision data collected and analyzed by the CMS Experiment for all the detected \hzzfourl events.
 The task is not so straightforward;
 events in the data are categorized---not by the entire decay process---but by their final state, based on which triggers fired to collect which events.
-Section~\ref{sec:datasets_simul_trig} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
+% TODO: uncomment the line below.
+% Section~\ref{sec:datasets_simul_trig} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
 For each chosen event, the subdetectors of CMS (Secs.~\ref{sec:tracker}--\ref{sec:solenoid}) provide a plethora of track and energy-detection information to reconstruct \emph{objects}---representations of the underlying particles within the event.
 The reconstructed objects are then assembled in a fashion that checks if the logic coincides with the signal process of interest: \hzzfourl.  % TODO: Clean up this sentence.
 For example, a pair of OSSF lepton-like objects should appear to come from a \PZ-like object---\ie having a nominal mass of approximately 91\GeV and zero net electric charge---instead of, say, appearing to come from a \PH-like object.
@@ -96,13 +97,14 @@ Programs like \GEANTfour show analysts what to expect as the particles interact 
 Predictions from simulation can then be compared to the truth---the data---as a way to check the accuracy of the analysis.
 For example, a surplus of events in data where none was expected may lead to the discovery of new particles, as was the case for the discovery of the Higgs boson.
 % agreement or deviations in what was expected.
-The simulated events for this analysis are described in Sec.~\ref{sec:datasets_simul_trig}.
+% TODO: The simulated events for this analysis are described in Sec.~\ref{sec:datasets_simul_trig}.
 
 So how is the measurement of \mH obtained?
 Since the signal process is \hzzfourl, conservation of energy leads one to expect that $\mfourl \approx \mH$.
 Although this is not how the final measurement is obtained, it is a logical starting point.
 The distribution of \mfourl values reveals that the Higgs boson mass resonance stands well above the distribution of expected background events (Fig.~\ref{fig:m4l_run2}).
-Simulated signal events are then used to predict the \emph{line shape} of this signal peak (Sec.~\ref{sec:signal_model}).
+Simulated signal events are then used to predict the \emph{line shape} of this signal peak
+% (Sec.~\ref{sec:signal_model}).
 This signal modeling is performed using a double-sided Crystal Ball function to fit the line shape, for various mass points of \mH, in each of the four final states.
 % m4l dist Full Run 2.
 %%%%%%%%%%%%%%%%%%%%
@@ -120,7 +122,7 @@ calculating a per-event matrix element kinematic discriminant,
 deriving correction factors for \mfourl uncertainty for various regions of phase space,
 reevaluating the lepton \pt values using a \Zone mass constraint,
 and constraining the four muon tracks to the selected vertex (\emph{vertex constraint}).
-The implementation of these techniques is discussed in Sec.~\ref{sec:techniques}.
+% The implementation of these techniques is discussed in Sec.~\ref{sec:techniques}.
 % The first technique is called the \Zone mass constraint, which uses the benefit of the mostly on-shell \Zone mass resonance to reevaluate the momenta of the two leptons that built the \Zone, on a per-event basis.
 % This improves the overall lepton momentum resolution, thereby improving the resolution of the \mH peak.
 % The second technique is per-event mass uncertainty.
@@ -153,11 +155,14 @@ The systematic theoretical uncertainties include:
 	% \item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG
 	\item Branching fraction uncertainties for signal and background processes.
 \end{itemize}
-These uncertainties are discussed in Sec.~\ref{sec:syst_uncert}.
+% These uncertainties are discussed in Sec.~\ref{sec:syst_uncert}.
 
 % TODO: Fix below.
 Finally, a likelihood fit is performed on the \mH spectrum to extract the most likely value of \mH.
-The results are summarized in Sec.~\ref{sec:results}.
+% The results are summarized in Sec.~\ref{sec:results}.
+
+
+
 % The resolution of the peak 
 % Ways to improve the 
 % Do likelihood fit.

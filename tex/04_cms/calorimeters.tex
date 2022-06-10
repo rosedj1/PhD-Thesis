@@ -7,27 +7,23 @@
 % WHAT IT IS
 \textit{\textbf{Overview:}}
 Particles that pass through the silicon tracker~\ref{sec:tracker} encounter the electromagnetic calorimeter (ECAL).
-Those particles which interact electromagnetically but not strongly, mostly photons and electrons, are typically absorbed by the ECAL.
+Those particles which interact electromagnetically but not strongly (\ie mostly photons and electrons) are typically absorbed by the ECAL.
 The particle's energy is then transferred to the ECAL in the form of an electromagnetic (EM) shower.
 The size and shape of the EM shower provide information about the particle's energy and trajectory.
-Since the Higgs boson can decay into two photons, it was essential that the ECAL was able to detect this decay mode.
+Since the Higgs boson can decay into two photons, the ECAL played a critical role in detecting this decay mode.
 
 % STRUCTURE
 \textit{\textbf{Design:}}
 The ECAL is a hermetic, cylindrical, homogeneous sub-detector that consists of a barrel (EB), two endcaps (EE), and a preshower detector in front of each endcap (Figure~\ref{fig:ecal_xs}, Left).
 The EB covers $\abseta < 1.479$ while the EE covers $1.479 < \abseta < 3.0$.
-The entire subdetector is composed of transparent lead tungstate (PbWO$_4$) crystals that point axially towards the center of CMS (the interaction point).
-The transparent crystals, one of which is shown in Fig.~\ref{fig:ecal_crystals} (Left), have a high density (8.28 g/$\cm^3$) which provides the ECAL with radiation resistance and a short radiation length ($X_0 = 0.89~\cm$).
-Because so many crystals are used (61,200 crystals in the EB and 7,324 in the EE), the ECAL has excellent energy resolution and fine granularity.
-Each endcap is composed of two ``Dee''s, one of which is shown in Figure~\ref{fig:ecal_xs} (Right).
-A single Dee carries 3,662 crystals.
-Crystals in the barrel are tapered, having front face dimensions $2.2 \times 2.2~\cm^2$, back face dimensions $2.6 \times 2.6~\cm^2$, and are 23.0 \cm long (25.8 $X_0$).
-Crystals in the endcaps are also tapered, with front face dimensions $2.862 \times 2.862~\cm^2$, back face dimensions $3.0 \times 3.0~\cm^2$, and are 22.0 \cm long (24.7 $X_0$).
-This gives a single crystal from the barrel a volume of approximately 132.5 $\cm^3$ (mL), about the volume of a small cup of coffee, yet it weighs 1.5 Kg.
-(REF:PDG).
-REF:PDG
-Particle Data Group collaboration, S. Eidelman \etal., \textit{Review of particle physics},
-\textit{Phys. Lett. \textbf{B 592 (2004) 1}}
+The entire subdetector is composed of transparent lead tungstate (PbWO$_4$) crystals that point axially towards the center (\ie towards the interaction point) of CMS.
+The transparent crystals, one of which is shown in Fig.~\ref{fig:ecal_crystals} (Left), have a high density (8.28 g/cm$^3$) which provides the ECAL with radiation resistance and a short radiation length ($X_0 = 0.89\cm$).
+Because so many crystals are used (61\,200 crystals in the EB and 7324 in the EE), the ECAL has excellent energy resolution and fine granularity.
+Each endcap is composed of two \emph{Dee}s, one of which is shown in Figure~\ref{fig:ecal_xs} (Right).
+A single Dee carries 3662 crystals.
+Crystals in the barrel are tapered, having front-face dimensions $2.2 \times 2.2\cm^2$, back-face dimensions $2.6 \times 2.6\cm^2$, and are 23.0\cm long (25.8 $X_0$).
+Crystals in the endcaps are also tapered, with front-face dimensions $2.862 \times 2.862\cm^2$, back-face dimensions $3.0 \times 3.0\cm^2$, and are 22.0\cm long (24.7 $X_0$).
+This gives a single crystal from the barrel a volume of approximately 132.5$\cm^3$ (\ie 132.5\mL)---about the volume of a small cup of coffee---yet it has a surprisingly hefty mass of 1.5\Kg~\cite{particle_data_group_review_2020}.
 
 % ECAL diagram
 \begin{figure*}[!htb]
@@ -36,11 +32,13 @@ Particle Data Group collaboration, S. Eidelman \etal., \textit{Review of particl
     % \includegraphics[width=0.95\textwidth]{figures/cms/ecal/xs_whiteblack.jpeg}
     \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/xs_whiteblack.jpeg}
     \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/dee.jpeg}
-    \caption{
-        (Left) Cross sectional view of the electromagnetic calorimeter of CMS.
+    \caption
+        [(Left) Cross-sectional view of the ECAL. (Right) An ECAL Dee.]
+        {
+        (Left) Cross-sectional view of the electromagnetic calorimeter of CMS.
         (Right) One of the Dees which comprise the EE.
-        Each square of $ 5 \times 5$ crystals constitutes a ``supercrystal''.
-        Figure taken from Ref.~\cite{cms_exp}.
+        Each square of $5 \times 5$ crystals constitutes a ``supercrystal''.
+        Figure taken from Ref.~\cite{collaboration_cms_2008}.
         }
     \label{fig:ecal_xs}
 \end{figure*}
@@ -49,11 +47,16 @@ Particle Data Group collaboration, S. Eidelman \etal., \textit{Review of particl
 % ECAL Crystals
 \begin{figure}[pbth]
     \centering
-    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystals_fancy_lab.jpg}
-    \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystal_sizecomparison.jpg}
-    \caption{
+    \includegraphics[height=5cm,keepaspectratio]{figures/cms/ecal/ECAL_crystals_fancy_lab.jpg}
+    \includegraphics[height=5cm,keepaspectratio]{figures/cms/ecal/ECAL_crystal_sizecomparison.jpg}
+    % \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystals_fancy_lab.jpg}
+    % \includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/ecal/ECAL_crystal_sizecomparison.jpg}
+    \caption
+        [(Left) ECAL crystals are grown in a lab. (Right) A single crystal.]
+        {
         (Left) ECAL crystals made from PbWO$_4$ are grown in a lab.
-        (Right) Although made mostly of metal, ECAL crystals are transparent and have a photomultiplier detector attached at the end.} 
+        (Right) Although made mostly of metal, ECAL crystals are transparent and have a photomultiplier detector attached at the end.
+        } 
     \label{fig:ecal_crystals}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
@@ -64,13 +67,13 @@ When electrons or photons pass through the ECAL, they create an EM shower.
 Electrons radiate more photons as they accelerate around PbWO$_4$ nuclei, in a process called \emph{bremsstrahlung}.
 Meanwhile, near the presence of a nucleus, high-energy photons pair produce into \ee.
 % In turn, these newly-produced electrons can radiate more photons 
-This cycle of electron and photon production disperses the initial particle energy into a spray of lower- and lower-energy particles; an EM shower (REFERENCE EM SHOWER FIG).
-
-SHOW PICTURE OF EM SHOWER.
+This cycle of electron/photon production disperses all the initial particle energy into a spray of decreasingly lower-energy particles until it all runs out; this is the EM shower.
+% TODO: REFERENCE EM SHOWER FIG.
+% TODO: SHOW PICTURE OF EM SHOWER.
 
 The ECAL crystals then scintillate (emits photons) in proportion to the amount of energy deposited by the interacting particle. 
 The scintillator photons are detected by avalanche photodiodes on the back of each barrel crystal or by vacuum phototriodes in the endcap crystals (Fig.~\ref{fig:ecal_crystals}, Right).
-Conveniently after 1 bunch crossing (25 ns), Approximately 80\% of the scintillated light is emitted.
+After 1 BX (25\ns), approximately 80\% of the scintillated light is emitted.
 
 An energy deposit in the ECAL could come from either an electron or a photon.
 In order to tell the difference, information from the silicon tracker is used.
@@ -78,9 +81,12 @@ Charged particles, like electrons, will leave hits in the tracker and follow a c
 So long as the tracker and ECAL communicate effectively with each other, then they help distinguish between electrons and photons.
 Charged hadrons interact only minimially with the ECAL, instead continuing on to the Hadron Calorimeter.
 Neutral hadrons can be detected by the ECAL preshower near the ECAL endcaps which helps distinguish a single photon from $\pi^{0}$ mesons as they decay into two photons with a narrow opening angle, making it look as if the two photons are a single photon.
-The preshower detector allows CMS to distinguish between low-energy diphoton pairs and single high-energy photons.
+The preshower detector allows CMS to distinguish between collimated, low-energy diphoton pairs and single high-energy photons.
 
-NEED SMOOTH TRANSITION INTO HCAL. What about those hadrons? They got through the ECAL... To detect hadrons effectively, we need a Hadron Calorimeter.
+From the original spray of particles that leave the interaction vertex, the short-lived particles have decayed into lighter, more stable, particles and the ECAL has filtered out most of the electrons and photons.
+The remainder of the spray is comprised of both hadronic matter and muons, however the hadrons are many times more numerous than the muons and so are filtered out next.
+% While the remainder of the spray of particles is comprised of some muons, the majority of it is   of the spray is mostly made up of hadronic matter---and the elusive muons--- which will be stopped by the hadronic  of the outAll that typically remains is hadronic matter and muons.
+%  To detect hadrons effectively, we need a Hadron Calorimeter.
 % That's what we see here with the blue dashed line (the photon) and the red line (the positron).
 
 \subsection{Hadron Calorimeter}
@@ -88,39 +94,39 @@ NEED SMOOTH TRANSITION INTO HCAL. What about those hadrons? They got through the
 
 % WHAT IT IS
 \textit{\textbf{Overview:}}
-The particles that survive the ECAL, typically only muons and hadrons, then enter the hadron calorimeter (HCAL).
-Its primary purpose is to absorb the hadronic matter emerging from the interaction point and measure the corresponding jet energies.
+The particles that survive the ECAL---typically only muons and hadrons---then enter the hadron calorimeter (HCAL).
+Its primary purpose is to absorb the hadronic matter emerging from the interaction point and to measure the corresponding jet energies.
 The absorbed jets cause the HCAL to scintillate photons which are then converted into electrical signals.
-These signals are used to deduce the original jet energies and any missing transverse energy (\MET) from the event.
+These signals help deduce the original jet energies and missing transverse energy (\MET) from the event.
 % emit proportionally-energetic scintillated 
 
 % STRUCTURE
 \textit{\textbf{Design:}}
-Dissimilar to the ECAL (subsec.~\ref{sec:ecal}) in material composition but similar in shape, the HCAL is a brass cylindrical scintillator.
+Dissimilar to the ECAL (Sec.~\ref{sec:ecal}) in material composition but similar to it in shape, the HCAL is a brass cylindrical scintillator.
 Although it has a barrel (HB) and two endcaps (HE), it has two more detectors than the ECAL: the outer calorimeter (HO) and the forward calorimeter (HF).
 The HB spans the pseudorapidity range $\abseta < 1.3$, the HE spans $1.3 < \abseta < 3$, and the HF spans $3 < \abseta < 5.2$, as shown in Fig.~\ref{fig:hcal_quadrant}.
-With a thickness of over $1\meter$, the HB is sandwiched between the barrels of the ECAL and the solenoid (subsec.~\ref{sec:solenoid}) at radial values $r = 1.77~\meter$ and $r = 2.95~\meter$, respectively.
-Because the HB and HE are located within the solenoid's strong magnetic field of 3.8 \tesla, they both were both constructed out of a non-magnetic absorber called \emph{C26000 cartridge brass}.
-This absorber has a density of 8.53 $\gram/\cm^{3}$ and an interaction length $(\lambda_I)$ of 16.42 \cm.
+With a thickness of over $1\meter$, the HB is sandwiched between the barrels of the ECAL and the solenoid (Sec.~\ref{sec:solenoid}) at radial values $r = 1.77\meter$ and $r = 2.95\meter$, respectively.
+Because the HB and HE are located within the solenoid's strong magnetic field of 3.8\tesla, they were both constructed out of a non-magnetic absorber called \emph{C26000 cartridge brass}.
+This absorber has a density of 8.53$\gram$/cm$^{3}$ and an interaction length $(\lambda_I)$ of 16.42\cm.
 The thickness of the HB increases as $1/\sin{\theta}$ so that at $\abseta = 0(1.3)$ the absorber thickness is $5.82(10.6)~\lambda_I$.
 The HB is composed of two half-barrels, where each half-barrel is built from 18 identical azimuthal wedges and each wedge spans 20$^\circ$.
 Each wedge is divided into four $\phi$ segments so that a single $\phi$ segment spans $\Delta \phi = 0.087$.
 
-Since the volume available to the HCAL is so limited, and in order to stop any particles that might traverse the entire HCAL and solenoid, the HO (the ``tail catcher'') is situated outside the barrel of the solenoid.
-The HF is located 11.2 \meter from the interaction point.
-
+Since the volume available to the HCAL is so limited---and in order to stop any particles that might traverse the entire HCAL and solenoid---the HO (the \emph{tail catcher}) is situated outside the barrel of the solenoid.
+The HF is located 11.2\meter from the interaction point.
 All tiles within a single $\phi$ segment are grouped together into a single tray unit.
 The scintillator is also segmented into 16 $\eta$ sectors, the first(last) of which is located at $\abseta = 0(1.3)$.
 This way each tile covers $(\Delta \eta, \Delta \phi) = (0.087, 0.087)$.
 Each layer has 108 trays.
-
 %%%%%%%%%%%%%%%%%%%%
 % HCAL Quadrant
-\begin{figure}[pbth]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.95\textwidth]{figures/cms/hcal/hcal_quadrants_longitudinalview.jpg}
-    \caption{
-        A cross-sectional quadrant of CMS showing the locations of the HCAL components:
+    \includegraphics[height=8cm]{figures/cms/hcal/hcal_quadrants_longitudinalview.jpg}
+    \caption
+        [Cross-sectional quadrant view of the HCAL components.]
+        {
+        A cross-sectional quadrant view of CMS showing the locations of the HCAL components:
         the barrel (HB), outer (HO), endcap (HE), and forward (HF) detectors.
         }
     \label{fig:hcal_quadrant}
@@ -141,3 +147,4 @@ The entire HCAL utilizes approximately 70,000 plastic scintillator tiles.
 The active material in the HB is 3.7-\mm-thick Kuraray SCSN81 plastic scintillator, selected for its radiation hardness and long-term stability.
 Hadron showers -> tiles scintillate -> scintillated photons are collected by 0.94-\mm-diameter green double-cladded wavelength shifting (WLS) fibers (Kuraray Y-11), which carry the light to hybrid photodiodes (HPD).
 
+% TODO: Write nice lead into the solenoid.

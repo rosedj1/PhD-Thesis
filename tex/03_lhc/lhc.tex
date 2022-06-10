@@ -1,13 +1,17 @@
+% TODO: Maybe in the \caption[], don't use a final period at the end within the square brackets? Check TOC.
 % Great animation about protons going through the CERN accelerator complex.
 % https://www.youtube.com/watch?v=FLrEghnKncA
 \chapter{THE LARGE HADRON COLLIDER}
 \label{ch:lhc}
 
 % OUTLINE
+% \section{Motivation for a Large Hadron Collider}
 \section{Motivation}
-Although the SM (Chapter~\ref{ch:theory}) has shown to be an astoundingly accurate framework so far, it must continue to be scrutinized by the barrage of measurements that either confirm or contradict its predictions.
+Although the SM
+% TODO:(Chapter~\ref{ch:theory})
+has shown to be an astoundingly accurate framework so far, it must continue to be scrutinized by the barrage of measurements that either confirm or contradict its predictions.
 % cross-examined
-Interestingly, a recent measurement of the mass of the \PW boson has shown significant deviation from SM predictions, with a sensitivity of 7$\sigma$ TODO:ref.
+Interestingly, a recent measurement of the mass of the \PW boson has shown significant deviation from SM predictions, with a sensitivity of 7$\sigma$~\cite{cdf_collaboration_high-precision_2022}.
 After all, undeniable fact comes from the reproducible results obtained from \emph{measurement}---not from some theoretical model which \emph{may} or \emph{may not} describe reality.
 Whenever the predictions of a model directly contradict the results from measurement, the model must necessarily be cast aside and replaced by one whose predictions concur with the results of measurement.
 % the truth of Nature
@@ -35,21 +39,23 @@ Such is the purpose of the world's largest and most powerful particle accelerato
 % (Fig.~\ref{fig:lhc_and_boosters}, Left).
 % The ring itself has a circumference of 26.7\Km, making its inscribed area (56.7$\Km^{2}$) almost four times greater than the area of the neighboring city of Geneva (15.9$\Km^{2}$).
 % This machine is not only a particle accelerator but also a proton-proton (\pp) collider, sending one beam of protons travelling clockwise and the other beam counterclockwise around the ring. 
-TODO:cleanup.
+% TODO:cleanup.
 Deep beneath the surface of the earth (50--175\meter), the LHC straddles the border shared by France and Switzerland.
-Sandwiched between the scenic Jura mountains to the northwest and the sprawling city of Geneva (French: Genève) to the southeast (Fig.~\ref{fig:lhc_on_map_and_complex}, Left), .
-To illustrate the enormous circumference (26.659\Km) the sheer size of this circular accelerator, Fig.~\ref{fig:lhc_on_map_and_complex} (Left) shows the LHC drawn on a map to .
+Sandwiched between the scenic Jura mountains to the northwest and the sprawling city of Geneva (French: Genève) to the southeast is CERN. % (Fig.~\ref{fig:lhc_on_map_and_complex}, Left).
+To illustrate the enormous circumference (26.659\Km) the sheer size of this circular accelerator, Fig.~\ref{fig:lhc_on_map_and_complex} (Left) shows the LHC drawn on a map.
 % Map and CERN complex.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
     \centering
     \includegraphics[width=0.48\textwidth,keepaspectratio]{figures/lhc/lhc_drawn_on_map_withpoints.png}
     \includegraphics[width=0.48\textwidth,keepaspectratio]{figures/lhc/cern_complex.png}
-        \caption{
-        (Left) The LHC ring (bigger ring) and the Super Proton Synchrotron (smaller ring) with the nearby town of Geneva for size comparison. 
-        The four red stars indicate the \pp collision points. 
-        (Right) The accelerator complex at CERN.
-        } 
+        \caption
+            [(Left) A map image of the LHC ring. (Right) The CERN accelerator complex]
+            {
+            (Left) The LHC ring (bigger ring) and the Super Proton Synchrotron (smaller ring) with the nearby town of Geneva for size comparison. 
+            The four red stars indicate the \pp collision points. 
+            (Right) The accelerator complex at CERN.
+            } 
         \label{fig:lhc_on_map_and_complex}
     \end{figure}
 %%%%%%%%%%%%%%%%%%%%
@@ -81,7 +87,7 @@ The 4 main particle detectors and their locations along the LHC are:
 % FASER	ForwArd Search ExpeRiment
 % SND	Scattering and Neutrino Detector
 
-The world-renowned feat of the digging, constructing, commissioning, and monitoring of the LHC was made possible by CERN:
+The world-renowned feat of digging the tunnel for, constructing, commissioning, and monitoring the LHC was made possible by CERN:
 % - Before the LHC, LEP was originally in the tunnel.
 %     - LEP ran from TODO--TODO.
 the European Organization for Nuclear Research (French: \emph{Conseil Européean pour la Recherche Nucléaire}).
@@ -103,47 +109,53 @@ Therefore, a natural way to explore the intricacies and inner workings of the LH
 The journey to discovery begins in a surprisingly small tank of hydrogen gas (\htwo) located in the LINAC4 building at the main CERN site.
 % , in which a proton that is bound to another proton as a molecule of H2 .
 % Pic of hydrogen source from here: https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.linac4
-Inside this tank, a proton---conveniently called \pname---and approximately 1\tentothe{11} other protons coexist in bound states as molecules of H2.
-Although the tank has a meager mass of TODO\Kg, it has enough protons inside to keep the LHC RUNNING for over 200\,000 years of constant operation.
+Inside this tank, a proton---conveniently called \pname---and approximately
+10$^\text{23}$
+% TODO: fix: $1\tentothe{11}$
+other protons coexist in bound states as molecules of H$_2$.
+Although the tank has a meager mass of 
+% TODO\Kg,
+10\Kg,
+it has enough protons inside to keep the LHC colliding protons for over \emph{200\,000 years} of constant operation.
 
-Protons get injected into Series of smaller accelerators
-    - The \emph{Linac4}---a linear particle accelerator---accelerates hydride ions (H$^-$) to 160\MeV which eventually make their way into the \emph{Proton Synchrotron Booster} (PSB).
-    - In the PSB, each hydride ion has its electron pair completely stripped away, leaving only the bare proton TODO: mention electric field?
-    - The protons then enter a series of circular accelerators, each machine feeding protons into the next while increasing the proton com energy by at least 1 order of magnitude.
-    - The flow 
-    - These protons are then accelerated to 2\GeV at which point they are injected into the \emph{Proton Synchrotron} (PS).
-    - The PS then increases the proton energy to 26\GeV to be fed into the \emph{Super Proton Synchrotron} (SPS).
-    - The penultimate step is for the SPS to further energize the protons to 450\GeV a accelerates protons to com energy
-Finally the protons enter the LHC.
+Protons get injected into a series of increasingly larger accelerators.
+It begins with the \emph{Linac4}---a linear particle accelerator---that accelerates hydride ions (H$^-$) to 160\MeV which eventually make their way into the \emph{Proton Synchrotron Booster} (PSB).
+In the PSB, each hydride ion has its electron pair completely stripped away, leaving only the bare proton.
+The protons then enter a series of circular accelerators, each machine feeding protons into the next while increasing the proton center-of-mass energy by at least 1 order of magnitude.
+\begin{itemize}
+    % TODO: mention electric field?
+    % \item The flow 
+    \item Protons are then accelerated to 2\GeV at which point they are injected into the \emph{Proton Synchrotron} (PS).
+    \item The PS then increases the proton energy to 26\GeV to be fed into the \emph{Super Proton Synchrotron} (SPS).
+    \item The penultimate step is for the SPS to further energize the protons to a center-of-mass energy of 450\GeV. % a accelerates protons to com energy
+    \item Finally the protons enter the LHC and are further accelerated to the maximum energy of 6.5\TeV using RF cavities to kick them.
+\end{itemize}
 
-Protons are further accelerated to the maximum energy of 6.5\TeV using RF cavities to kick them.
-- The protons would 
-- 1232 dipole magnets made of copper-clad niobium-titanium are used to turn the proton beams.
-- 392 TODO: 506? quadrupole magnets compress the proton bunches to make them more linear.
-- The cryogenics of the 96\tonne of superfluid helium-4
+The protons would travel in a straight line if not for the 1232 dipole magnets sprinkled along the LHC.
+They are made out of copper-clad niobium-titanium, require the cryogenics of 96\tonne of superfluid helium-4 to ultimately turn the proton beams.
+% TODO: Check numbers here and ref.
+There are also 506 quadrupole magnets that compress the proton bunches to make them as linear as possible before they collide.
+Finally two incoming proton bunches approach a common collision point.
+Beam pipes are conjoined in an ``X'' shape
+% (Fig. TODO)
+where 2 proton bunches cross---a \emph{bunch crossing} (BX).
+Out of more than 40 million \pp collisions that could have occurred, a mere 50 collisions take place on average (\ie only 0.0001\%).
+This is a testament to just how small protons truly are.
+% - Frequency of BX: considering that proton bunches are spaced 25\ns apart, this means 
 
-Finally the proton bunches approach a collision point.
-- Beam pipes are conjoined in an ``X'' shape (Fig. TODO) where 2 proton bunches cross---a \emph{bunch crossing} (BX).
-- Out of more than 40 million \pp collisions that could have occurred, a mere 50 collisions take place on average (\ie only 0.000\,1\%).
-    - This is a testament to just how small protons truly are.
-- Frequency of BX: considering that proton bunches are spaced 25\ns apart, this means 
 Just as the PS feeds protons into the SPS, which feeds protons into the LHC, so too is it being considered for the LHC to feed a new project---the 100\Km Future Circular Collider.
 
 In the event that \pname does not collide with any of the oncoming protons, then it is simply ``recycled'' and continues going around the LHC ring for another opportunity at a \pp collision.
 
+% TODO:
+% SPECS
+% - Luminosity
+% - rates
+% - data
 
-SPECS
-- Luminosity
-- rates
-- data
-
-N obs events = xs * eff * Lint 
-cross section is specific to the process
-efficiency is ideally unity.
-
-\section{High-Luminosity LHC}
-
-
+% N obs events = xs * eff * Lint 
+% cross section is specific to the process
+% efficiency is ideally unity.
 
 
 Contrary to what some people may think, protons are not sent one by one at each other, hoping for a collision.
@@ -156,16 +168,19 @@ It requires an incredibly strong magnetic field to turn the protons as they make
 Recall that charged particles bend in a magnetic field, via the Lorentz force. 
 Therefore, the LHC is equipped with 1232 dipole magnets distributed all along the length of the beam pipe to keep the proton bunches turning in the tunnel.
 The cross section of such a dipole magnet is shown in Fig.~\ref{fig:lhc_dipole_xs}.
-Each dipole magnet is 14.3\meter long, weighs 35\tonne, cost nearly 500\,KCHF to produce, and has nearly 11\,700 amps of current running through it. 
+Each dipole magnet is 14.3\meter long, weighs 35\tonne, cost nearly 500\,KCHF to produce, and has nearly 11\,700
+% TODO: units amps
+amps of current running through it. 
 Only with such massive currents is it possible to generate the appropriate magnetic field strength of 8\tesla to keep the protons turning. 
 The magnetic field is maintained by titanium-niobium coils, which are kept under cryogenic conditions using liquid helium to achieve the necessary temperature of 1.9\kelvin to reach a superconducting state; 
-this temperature is colder than that of outer space!
+this temperature is colder than that of outer space.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[pbth]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/lhc/lhc_dipole_xs.jpg}
-    \caption{
-    A cross section of one of the 1232 dipole magnets which span the entire length of the LHC tunnel.} 
+    \caption
+        [Cross section of an LHC dipole magnet.]
+        {A cross section of one of the 1232 dipole magnets which span the entire length of the LHC tunnel.} 
     \label{fig:lhc_dipole_xs}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
@@ -182,34 +197,39 @@ As the two bunches are just about to cross one another, they are squeezed down u
 During such a bunch crossing (BX), amazingly most of the protons just pass right by one another; 
 out of the possible 100 billion possible collisions that could have occurred, Fig.~\ref{plt:pileup} shows that on average only 32 collisions occurred per BX in the LHC 2018 run, according to a particle detector called CMS, described in Chapter~\ref{ch:cms}.
 It should be mentioned that the luminosity of the LHC is on the order of \LHigh. %$10^{34}$ Hz/cm$^2$.
-%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[pbth]
-\centering
-\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/lhc/pileup_pp_2018.png}
-    \caption{Histogram showing the distribution of the average number of \pp collisions per proton bunch crossing (pile up) which CMS recorded during the LHC 2018 run.} 
-    \label{plt:pileup}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%
 
-As the proton bunches whiz around the LHC, they are given ``kicks'' from radio-frequency (RF) cavities, which accelerate the protons to a max speed of 99.999996\%$c$.
+As the proton bunches whiz around the LHC, they are given ``kicks'' from radio-frequency (RF) cavities, which accelerate the protons to a max speed of 99.999\,996\%$c$.
 It is analgous to the timing required when pushing someone on a swing: push at just the right time to increase their momentum.
-At this speed, \emph{each proton} carries 6.5\TeV of energy, such that a single \pp collision contains a monstrous center-of-mass energy of $\sqrt{s} = 13\TeV$:
-more than enough energy to create new particles like top quarks, Higgs bosons, and potentially BSM particles.
+At this speed, \emph{each proton} carries 6.5\TeV of energy, such that a single \pp collision contains a monstrous center-of-mass energy of $\sqrt{s} = 13\TeV$---more than enough energy to create new particles like top quarks, Higgs bosons, and potentially BSM particles
+% TODO: Move this Fig ref.
+(Fig.~\ref{fig:pp_collision}).
+In order to analyze such interesting particles, one needs to detect the outgoing particles produced from \pp collisions.
+One such dedicated particle detector is located at Point 5---the Compact Muon Solenoid (CMS) detector---and will be described in the following chapter.
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}[pbth]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/lhc/proton_proton_quarksandgluons.jpg}
-        \caption{
-        Two protons can be smashed together at very high energies to have their partons interact and convert the high energies into new kinds of matter.} 
+    \includegraphics[height=7cm,keepaspectratio]{figures/lhc/pileup_pp_2018.png}
+        \caption
+            [Distribution of the average pile up during the LHC 2018 run.]
+            {Histogram showing the distribution of the average number of \pp collisions per proton bunch crossing (pile up) which CMS recorded during the LHC 2018 run.} 
+        \label{plt:pileup}
+    \end{figure}
+    %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+    \centering
+    \includegraphics[height=7cm,keepaspectratio]{figures/lhc/proton_proton_quarksandgluons.jpg}
+        \caption
+            [Diagram showing the constituents (\emph{partons}) of two protons interacting in a \pp collision.]
+            {Two protons can be smashed together at very high energies to have their constituent partons interact and convert their high energies into new kinds of matter.} 
         \label{fig:pp_collision}
     \end{figure}
     %%%%%%%%%%%%%%%%%%%%
 % The LHC has ushered in the era of ``TeV-scale physics'',
 % exploring the 
 % - which is about the same amount of energy of a really fat flying mosquito.
-In order to ``see'' such interesting particles, one needs to detect the outgoing particles produced from \pp collisions;
-one needs a dedicated \emph{particle detector}...
-The Compact Muon Solenoid detector should do the trick.
+
+
 % It takes a proton \~90 $\mu$s 
 % to make a complete revolution around the LHC moving at such a speed.
 
@@ -230,3 +250,7 @@ The Compact Muon Solenoid detector should do the trick.
 
 % Beginning in 2026 (FIXME), the LHC will undergo a ``Phase 2'' upgrade and become the High-Luminosity LHC.
 % This upgrade will increase the collider's luminosity by 10 fold (FIXME) and is predicted to deliver SO much data 3000 fb?.
+
+% TODO:
+% \section{High-Luminosity LHC}
+

@@ -10,8 +10,19 @@
 % (3) Put the '.bst' file in your working area.
 % E.g., JHEP bst file: https://jhep.sissa.it/jhep/help/JHEP/TeXclass/DOCS/JHEP.bst
 
-%=== Thoughts on different styles: ===%
-% JHEP: Reference titles are italicized, references in appearance-order, citation ranges look like 1--3. Bibtex has difficulty getting references unsorted (i.e., in appearance-order).
+%=== ...And now I find this note from the original UF LaTeX template... ===%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% Remember - You MUST get a .bst file that matches the Journal in your
+% field that you choose as your Reference example
+% NONE of these examples will satisfy the Graduate Editorial Office
+% if they don't match your Journal example!!!!
+% NOTE: If you use a numbered reference system and your references
+% are set in parentheses rather than brackets you need to select the
+% Natbib option "numbers sort and compress" in the packages.tex file
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%=== Notes on different styles: ===%
+% JHEP: I will use this style! Reference titles are italicized, sentence case (i.e., only the first word's first letter is uppercase), proper nouns are also uppercase, references are in appearance-order, citation ranges look like 1--3. 
 % Physical Letters B looks really good, except that it doesn't often include titles of refs!
 % Physical REVIEW Letters uses italicized titles.
 % Nature: Bibliography labels are like: 1., 2., instead of [1], [2], ..
@@ -51,12 +62,39 @@ The general guidelines for choosing references are:
 %Harvard: Particle Data Group, Zyla, P., Barnett, R.M., Beringer, J., Dahl, O., Dwyer, D.A., Groom, D.E., Lin, C.J., Lugovsky, K.S., Pianori, E. and Robinson, D.J., 2020. Review of particle physics. Progress of Theoretical and Experimental Physics, 2020(8), p.083C01.
 %Vancouver: Particle Data Group, Zyla P, Barnett RM, Beringer J, Dahl O, Dwyer DA, Groom DE, Lin CJ, Lugovsky KS, Pianori E, Robinson DJ. Review of particle physics. Progress of Theoretical and Experimental Physics. 2020 Aug;2020(8):083C01.
 
+%\bibliographystyle{bst/abbrv}
+%\bibliographystyle{bst/abbrvnat}
+%\bibliographystyle{bst/abbrvurl_uf}
+%\bibliographystyle{bst/alphaurl_uf}
+%\bibliographystyle{bst/apa-good}
+%\bibliographystyle{bst/Chicago_Web}
+%\bibliographystyle{bst/ecology_web}
+%\bibliographystyle{bst/IEEEtran}
+%\bibliographystyle{bst/mla_web}
+\bibliographystyle{bst/mla-good}
+%\bibliographystyle{bst/plainnat}
+%\bibliographystyle{bst/plainurl_uf}
+%\bibliographystyle{bst/Science_Web}
+%\bibliographystyle{bst/uf_econ}
+%\bibliographystyle{bst/uffull}
+%\bibliographystyle{bst/ufinit}
+%\bibliographystyle{bst/unsrtnat}
+%\bibliographystyle{bst/unsrturl_uf}
+%\bibliographystyle{bst/plain}
+%\bibliographystyle{bst/ufinit}
+%\bibliographystyle{bst/plainurl_uf}
+
+% N.B.: Curly braces:
+% * Protect the upper/lowercase of the word.
+% * Allow you to use commands.
+% * I don't think are required to use math env ($...$)
+
+% TODO: In key=title, get the sqrt symbol to have math mode font. 
+% TODO: Change all lepton l's to {$\ell$}
 
 %=== Higgs Discovery ===%
-% Jake pulled this citation using zotero.
-% * DELETED keys=abstract, file.
 @article{chatrchyan_observation_2013,
-	title = {Observation of a new boson with mass near 125 {GeV} in pp collisions at {$\sqrt{s}=7$ and $8\TeV$}},
+	title = {Observation of a new boson with mass near 125{\GeV} in pp collisions at $\sqrt{s}$ = 7 and 8{\TeV}},
 	volume = {2013},
 	issn = {1029-8479},
 	url = {https://doi.org/10.1007/JHEP06(2013)081},
@@ -65,22 +103,25 @@ The general guidelines for choosing references are:
 	number = {6},
 	urldate = {2022-06-06},
 	journal = {Journal of High Energy Physics},
-	author = {Chatrchyan, S. and Khachatryan, V. and Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Bergauer, T. and Dragicevic, M. and Er{\"o}, J. and Fabjan, C. and Friedl, M. and Fr{\"u}hwirth, R. and Ghete, V. M. and H{\"o}rmann, N. and Hrubec, J. and Jeitler, M. and Kiesenhofer, W. and Kn{\"u}nz, V. and Krammer, M. and Kr{\"a}tschmer, I. and Liko, D. and Mikulec, I. and Rabady, D. and Rahbaran, B. and Rohringer, C. and Rohringer, H. and Sch{\"o}fbeck, R. and Strauss, J. and Taurok, A. and Treberer-treberspurg, W. and Waltenberger, W. and Wulz, C.-E. and Mossolov, V. and Shumeiko, N. and Gonzalez, J. Suarez and Alderweireldt, S. and Bansal, M. and Bansal, S. and Cornelis, T. and De Wolf, E. A. and Janssen, X. and Knutsson, A. and Luyckx, S. and Mucibello, L. and Ochesanu, S. and Roland, B. and Rougny, R. and Van Haevermaet, H. and Van Mechelen, P. and Van Remortel, N. and Van Spilbeeck, A. and Blekman, F. and Blyweert, S. and D{\textquoteright}Hondt, J. and Kalogeropoulos, A. and Keaveney, J. and Maes, M. and Olbrechts, A. and Tavernier, S. and Van Doninck, W. and Van Mulders, P. and Van Onsem, G. P. and Villella, I. and Clerbaux, B. and De Lentdecker, G. and Gay, A. P. R. and Hreus, T. and L{\'e}onard, A. and Marage, P. E. and Mohammadi, A. and Reis, T. and Thomas, L. and Velde, C. Vander and Vanlaer, P. and Wang, J. and Adler, V. and Beernaert, K. and Benucci, L. and Cimmino, A. and Costantini, S. and Dildick, S. and Garcia, G. and Klein, B. and Lellouch, J. and Marinov, A. and Mccartin, J. and Rios, A. A. Ocampo and Ryckbosch, D. and Sigamani, M. and Strobbe, N. and Thyssen, F. and Tytgat, M. and Walsh, S. and Yazgan, E. and Zaganidis, N. and Basegmez, S. and Bruno, G. and Castello, R. and Caudron, A. and Ceard, L. and Delaere, C. and du Pree, T. and Favart, D. and Forthomme, L. and Giammanco, A. and Hollar, J. and Lemaitre, V. and Liao, J. and Militaru, O. and Nuttens, C. and Pagano, D. and Pin, A. and Piotrzkowski, K. and Popov, A. and Selvaggi, M. and Garcia, J. M. Vizan and Beliy, N. and Caebergs, T. and Daubie, E. and Hammad, G. H. and Alves, G. A. and Martins, M. Correa and Martins, T. and Pol, M. E. and Souza, M. H. G. and J{\'u}nior, W. L. Ald{\'a} and Carvalho, W. and Chinellato, J. and Cust{\'o}dio, A. and Da Costa, E. M. and De Jesus Damiao, D. and De Oliveira Martins, C. and De Souza, S. Fonseca and Malbouisson, H. and Malek, M. and Figueiredo, D. Matos and Mundim, L. and Nogima, H. and Da Silva, W. L. Prado and Santoro, A. and Jorge, L. Soares and Sznajder, A. and Manganote, E. J. Tonelli and Pereira, A. Vilela and Anjos, T. S. and Bernardes, C. A. and Dias, F. A. and Tomei, T. R. Fernandez Perez and Gregores, E. M. and Lagana, C. and Marinho, F. and Mercadante, P. G. and Novaes, S. F. and Padula, Sandra S. and Genchev, V. and Iaydjiev, P. and Piperov, S. and Rodozov, M. and Stoykova, S. and Sultanov, G. and Tcholakov, V. and Trayanov, R. and Vutova, M. and Dimitrov, A. and Hadjiiska, R. and Kozhuharov, V. and Litov, L. and Pavlov, B. and Petkov, P. and Bian, J. G. and Chen, G. M. and Chen, H. S. and Jiang, C. H. and Liang, D. and Liang, S. and Meng, X. and Tao, J. and Wang, J. and Wang, X. and Wang, Z. and Xiao, H. and Xu, M. and Asawatangtrakuldee, C. and Ban, Y. and Guo, Y. and Li, Q. and Li, W. and Liu, S. and Mao, Y. and Qian, S. J. and Wang, D. and Zhang, L. and Zou, W. and Avila, C. and Montoya, C. A. Carrillo and Gomez, J. P. and Moreno, B. Gomez and Sanabria, J. C. and Godinovic, N. and Lelas, D. and Plestina, R. and Polic, D. and Puljak, I. and Antunovic, Z. and Kovac, M. and Brigljevic, V. and Duric, S. and Kadija, K. and Luetic, J. and Mekterovic, D. and Morovic, S. and Tikvica, L. and Attikis, A. and Mavromanolakis, G. and Mousa, J. and Nicolaou, C. and Ptochos, F. and Razis, P. A. and Finger, M. and Finger, M. and Assran, Y. and Kamel, A. Ellithi and Mahmoud, M. A. and Mahrous, A. and Radi, A. and Kadastik, M. and M{\"u}ntel, M. and Murumaa, M. and Raidal, M. and Rebane, L. and Tiko, A. and Eerola, P. and Fedi, G. and Voutilainen, M. and H{\"a}rk{\"o}nen, J. and Karim{\"a}ki, V. and Kinnunen, R. and Kortelainen, M. J. and Lamp{\'e}n, T. and Lassila-Perini, K. and Lehti, S. and Lind{\'e}n, T. and Luukka, P. and M{\"a}enp{\"a}{\"a}, T. and Peltola, T. and Tuominen, E. and Tuominiemi, J. and Tuovinen, E. and Wendland, L. and Korpela, A. and Tuuva, T. and Besancon, M. and Choudhury, S. and Couderc, F. and Dejardin, M. and Denegri, D. and Fabbro, B. and Faure, J. L. and Ferri, F. and Ganjour, S. and Givernaud, A. and Gras, P. and de Monchenault, G. Hamel and Jarry, P. and Locci, E. and Malcles, J. and Millischer, L. and Nayak, A. and Rander, J. and Rosowsky, A. and Titov, M. and Baffioni, S. and Beaudette, F. and Benhabib, L. and Bianchini, L. and Bluj, M. and Busson, P. and Charlot, C. and Daci, N. and Dahms, T. and Dalchenko, M. and Dobrzynski, L. and Florent, A. and de Cassagnac, R. Granier and Haguenauer, M. and Min{\'e}, P. and Mironov, C. and Naranjo, I. N. and Nguyen, M. and Ochando, C. and Paganini, P. and Sabes, D. and Salerno, R. and Sirois, Y. and Veelken, C. and Zabi, A. and Agram, J.-L. and Andrea, J. and Bloch, D. and Bodin, D. and {The CMS collaboration}},
+	author = {Chatrchyan, S. and Khachatryan, V. and Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Bergauer, T. and Dragicevic, M. and Er{\"o}, J. and Fabjan, C. and Friedl, M. and Fr{\"u}hwirth, R. and Ghete, V. M. and H{\"o}rmann, N. and Bloch, D. and Bodin, D. and {The CMS collaboration}},
 	month = jun,
 	year = {2013},
 	keywords = {Hadron-Hadron Scattering},
 	pages = {81},
 }
 @article{chatrchyan_observation_2012,
-	title = {Observation of a new boson at a mass of 125 {GeV} with the {CMS} experiment at the {LHC}},
+	title = {Observation of a new boson at a mass of 125{\GeV} with the {CMS} experiment at the {LHC}},
 	volume = {716},
 	issn = {0370-2693},
 	url = {https://www.sciencedirect.com/science/article/pii/S0370269312008581},
-	doi = {https://doi.org/10.1016/j.physletb.2012.08.021},
-	abstract = {Results are presented from searches for the standard model Higgs boson in proton{\textendash}proton collisions at s=7 and 8 TeV in the Compact Muon Solenoid experiment at the LHC, using data samples corresponding to integrated luminosities of up to 5.1 fb-1 at 7 TeV and 5.3 fb-1 at 8 TeV. The search is performed in five decay modes: $\gamma$$\gamma$, ZZ, W+W-, $\tau$+$\tau$-, and bb{\textasciimacron}. An excess of events is observed above the expected background, with a local significance of 5.0 standard deviations, at a mass near 125 GeV, signalling the production of a new particle. The expected significance for a standard model Higgs boson of that mass is 5.8 standard deviations. The excess is most significant in the two decay modes with the best mass resolution, $\gamma$$\gamma$ and ZZ; a fit to these signals gives a mass of 125.3{\textpm}0.4(stat.){\textpm}0.5(syst.) GeV. The decay to two photons indicates that the new particle is a boson with spin different from one.},
+	doi = {10.1016/j.physletb.2012.08.021},
+	abstract = {Results are presented from searches for the standard model Higgs boson in proton–proton collisions at s=7 and 8 TeV in the Compact Muon Solenoid experiment at the LHC, using data samples corresponding to integrated luminosities of up to 5.1 fb−1 at 7 TeV and 5.3 fb−1 at 8 TeV. The search is performed in five decay modes: γγ, ZZ, W+W−, τ+τ−, and bb¯. An excess of events is observed above the expected background, with a local significance of 5.0 standard deviations, at a mass near 125 GeV, signalling the production of a new particle. The expected significance for a standard model Higgs boson of that mass is 5.8 standard deviations. The excess is most significant in the two decay modes with the best mass resolution, γγ and ZZ; a fit to these signals gives a mass of 125.3±0.4(stat.)±0.5(syst.) GeV. The decay to two photons indicates that the new particle is a boson with spin different from one.},
+	language = {en},
 	number = {1},
+	urldate = {2022-06-06},
 	journal = {Physics Letters B},
-	author = {Chatrchyan, S. and others},
+	author = {Chatrchyan, S. and Khachatryan, V. and Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Aguilo, E. and Bergauer, T. and Dragicevic, M. and Erö, J. and Fabjan, C. and Swanson, J. and Wenman, D.},
+	month = sep,
 	year = {2012},
 	keywords = {CMS, Higgs, Physics},
 	pages = {30--61},
@@ -96,30 +137,77 @@ The general guidelines for choosing references are:
 	number = {1},
 	urldate = {2022-06-06},
 	journal = {Physics Letters B},
-	author = {Aad, G. and Abajyan, T. and Abbott, B. and Abdallah, J. and Abdel Khalek, S. and Abdelalim, A. A. and Abdinov, O. and Aben, R. and Abi, B. and Abolins, M. and AbouZeid, O. S. and Abramowicz, H. and Abreu, H. and Acharya, B. S. and Adamczyk, L. and Adams, D. L. and Addy, T. N. and Adelman, J. and Adomeit, S. and Adragna, P. and Adye, T. and Aefsky, S. and Aguilar-Saavedra, J. A. and Agustoni, M. and Aharrouche, M. and Ahlen, S. P. and Ahles, F. and Ahmad, A. and Ahsan, M. and Aielli, G. and Akdogan, T. and {\r A}kesson, T. P. A. and Akimoto, G. and Akimov, A. V. and Alam, M. S. and Alam, M. A. and Albert, J. and Albrand, S. and Aleksa, M. and Aleksandrov, I. N. and Alessandria, F. and Alexa, C. and Alexander, G. and Alexandre, G. and Alexopoulos, T. and Alhroob, M. and Aliev, M. and Alimonti, G. and Alison, J. and Allbrooke, B. M. M. and Allport, P. P. and Allwood-Spiers, S. E. and Almond, J. and Aloisio, A. and Alon, R. and Alonso, A. and Alonso, F. and Altheimer, A. and Alvarez Gonzalez, B. and Alviggi, M. G. and Amako, K. and Amelung, C. and Ammosov, V. V. and Amor Dos Santos, S. P. and Amorim, A. and Amram, N. and Anastopoulos, C. and Ancu, L. S. and Andari, N. and Andeen, T. and Anders, C. F. and Anders, G. and Anderson, K. J. and Andreazza, A. and Andrei, V. and Andrieux, M. -L. and Anduaga, X. S. and Angelidakis, S. and Anger, P. and Angerami, A. and Anghinolfi, F. and Anisenkov, A. and Anjos, N. and Annovi, A. and Antonaki, A. and Antonelli, M. and Antonov, A. and Antos, J. and Anulli, F. and Aoki, M. and Aoun, S. and Aperio Bella, L. and Apolle, R. and Arabidze, G. and Aracena, I. and Arai, Y. and Arce, A. T. H. and Arfaoui, S. and Arguin, J. -F. and Arik, E. and Arik, M. and Armbruster, A. J. and Arnaez, O. and Arnal, V. and Arnault, C. and Artamonov, A. and Artoni, G. and Arutinov, D. and Asai, S. and Ask, S. and {\r A}sman, B. and Asquith, L. and Assamagan, K. and Astbury, A. and Atkinson, M. and Aubert, B. and Auge, E. and Augsten, K. and Aurousseau, M. and Avolio, G. and Avramidou, R. and Axen, D. and Azuelos, G. and Azuma, Y. and Baak, M. A. and Baccaglioni, G. and Bacci, C. and Bach, A. M. and Bachacou, H. and Bachas, K. and Backes, M. and Backhaus, M. and Backus Mayes, J. and Badescu, E. and Bagnaia, P. and Bahinipati, S. and Bai, Y. and Bailey, D. C. and Bain, T. and Baines, J. T. and Baker, O. K. and Baker, M. D. and Baker, S. and Balek, P. and Banas, E. and Banerjee, P. and Banerjee, Sw. and Banfi, D. and Bangert, A. and Bansal, V. and Bansil, H. S. and Barak, L. and Baranov, S. P. and Barbaro Galtieri, A. and Barber, T. and Barberio, E. L. and Barberis, D. and Barbero, M. and Bardin, D. Y. and Barillari, T. and Barisonzi, M. and Barklow, T. and Barlow, N. and Barnett, B. M. and Barnett, R. M. and Baroncelli, A. and Barone, G. and Barr, A. J. and Barreiro, F. and Barreiro Guimar{\~a}es da Costa, J. and Barrillon, P. and Bartoldus, R. and Barton, A. E. and Bartsch, V. and Basye, A. and Bates, R. L. and Batkova, L. and Batley, J. R. and Battaglia, A. and Battistin, M. and Bauer, F. and Bawa, H. S. and Beale, S. and Beau, T. and Beauchemin, P. H. and Beccherle, R. and Bechtle, P. and Beck, H. P. and Becker, A. K. and Becker, S. and Beckingham, M. and Becks, K. H. and Beddall, A. J. and Beddall, A. and Bedikian, S. and Bednyakov, V. A. and Bee, C. P. and Beemster, L. J. and Begel, M. and Behar Harpaz, S. and Behera, P. K. and Beimforde, M. and Belanger-Champagne, C. and Bell, P. J. and Bell, W. H. and Bella, G. and Bellagamba, L. and Bellomo, M. and Belloni, A. and Beloborodova, O. and Belotskiy, K. and Beltramello, O. and Benary, O. and Benchekroun, D. and Bendtz, K. and Benekos, N. and Benhammou, Y. and Benhar Noccioli, E. and Benitez Garcia, J. A. and Benjamin, D. P. and Benoit, M. and Bensinger, J. R. and Benslama, K. and Bentvelsen, S. and Berge, D. and Bergeaas Kuutmann, E. and Berger, N. and Berghaus, F. and Berglund, E. and Beringer, J. and Bernat, P. and Bernhard, R. and Bernius, C. and Bernlochner, F. U. and Berry, T. and Bertella, C. and Bertin, A. and Bertolucci, F. and Besana, M. I. and Besjes, G. J. and Besson, N. and Bethke, S. and Bhimji, W. and Bianchi, R. M. and Bianco, M. and Biebel, O. and Bieniek, S. P. and Bierwagen, K. and Biesiada, J. and Biglietti, M. and Bilokon, H. and Bindi, M. and Binet, S. and Bingul, A. and Bini, C. and Biscarat, C. and Bittner, B. and Black, K. M. and Blair, R. E. and Blanchard, J. -B. and Blanchot, G. and Blazek, T. and Bloch, I. and Blocker, C. and Blocki, J. and Blondel, A. and Blum, W. and Blumenschein, U. and Bobbink, G. J. and Bobrovnikov, V. B. and Bocchetta, S. S. and Bocci, A. and Boddy, C. R. and Boehler, M. and Boek, J. and Boelaert, N. and Bogaerts, J. A. and Bogdanchikov, A. and Bogouch, A. and Bohm, C. and Bohm, J. and Boisvert, V. and Bold, T. and Boldea, V. and Bolnet, N. M. and Bomben, M. and Bona, M. and Boonekamp, M. and Bordoni, S. and Borer, C. and Borisov, A. and Borissov, G. and Borjanovic, I. and Borri, M. and Borroni, S. and Bortolotto, V. and Bos, K. and Boscherini, D. and Bosman, M. and Boterenbrood, H. and Bouchami, J. and Boudreau, J. and Bouhova-Thacker, E. V. and Boumediene, D. and Bourdarios, C. and Bousson, N. and Boveia, A. and Boyd, J. and Boyko, I. R. and Bozovic-Jelisavcic, I. and Bracinik, J. and Branchini, P. and Brandenburg, G. W. and Brandt, A. and Brandt, G. and Brandt, O. and Bratzler, U. and Brau, B. and Brau, J. E. and Braun, H. M. and Brazzale, S. F. and Brelier, B. and Bremer, J. and Brendlinger, K. and Brenner, R. and Bressler, S. and Britton, D. and Brochu, F. M. and Brock, I. and Brock, R. and Broggi, F. and Bromberg, C. and Bronner, J. and Brooijmans, G. and Brooks, T. and Brooks, W. K. and Brown, G. and Brown, H. and Bruckman de Renstrom, P. A. and Bruncko, D. and Bruneliere, R. and Brunet, S. and Bruni, A. and Bruni, G. and Bruschi, M. and Buanes, T. and Buat, Q. and Bucci, F. and Buchanan, J. and Buchholz, P. and Buckingham, R. M. and Buckley, A. G. and Buda, S. I. and Budagov, I. A. and Budick, B. and B{\"u}scher, V. and Bugge, L. and Bulekov, O. and Bundock, A. C. and Bunse, M. and Buran, T. and Burckhart, H. and Burdin, S. and Burgess, T. and Burke, S. and Busato, E. and Bussey, P. and Buszello, C. P. and Butler, B. and Butler, J. M. and Buttar, C. M. and Butterworth, J. M. and Buttinger, W. and Cabrera Urb{\'a}n, S. and Caforio, D. and Cakir, O. and Calafiura, P. and Calderini, G. and Calfayan, P. and Calkins, R. and Caloba, L. P. and Caloi, R. and Calvet, D. and Calvet, S. and Camacho Toro, R. and Camarri, P. and Cameron, D. and Caminada, L. M. and Caminal Armadans, R. and Campana, S. and Campanelli, M. and Canale, V. and Canelli, F. and Canepa, A. and Cantero, J. and Cantrill, R. and Capasso, L. and Capeans Garrido, M. D. M. and Caprini, I. and Caprini, M. and Capriotti, D. and Capua, M. and Caputo, R. and Cardarelli, R. and Carli, T. and Carlino, G. and Carminati, L. and Caron, B. and Caron, S. and Carquin, E. and Carrillo-Montoya, G. D. and Carter, A. A. and Carter, J. R. and Carvalho, J. and Casadei, D. and Casado, M. P. and Cascella, M. and Caso, C. and Castaneda Hernandez, A. M. and Castaneda-Miranda, E. and Castillo Gimenez, V. and Castro, N. F. and Cataldi, G. and Catastini, P. and Catinaccio, A. and Catmore, J. R. and Cattai, A. and Cattani, G. and Caughron, S. and Cavaliere, V. and Cavalleri, P. and Cavalli, D. and Cavalli-Sforza, M. and Cavasinni, V. and Ceradini, F. and Cerqueira, A. S. and Cerri, A. and Cerrito, L. and Cerutti, F. and Cetin, S. A. and Chafaq, A. and Chakraborty, D. and Chalupkova, I. and Chan, K. and Chang, P. and Chapleau, B. and Chapman, J. D. and Chapman, J. W. and Chareyre, E. and Charlton, D. G. and Chavda, V. and Chavez Barajas, C. A. and Cheatham, S. and Chekanov, S. and Chekulaev, S. V. and Chelkov, G. A. and Chelstowska, M. A. and Chen, C. and Chen, H. and Chen, S. and Chen, X. and Chen, Y. and Cheng, Y. and Cheplakov, A. and Cherkaoui El Moursli, R. and Chernyatin, V. and Cheu, E. and Cheung, S. L. and Chevalier, L. and Chiefari, G. and Chikovani, L. and Childers, J. T. and Chilingarov, A. and Chiodini, G. and Chisholm, A. S. and Chislett, R. T. and Chitan, A. and Chizhov, M. V. and Choudalakis, G. and Chouridou, S. and Christidi, I. A. and Christov, A. and Chromek-Burckhart, D. and Chu, M. L. and Chudoba, J. and Ciapetti, G. and Ciftci, A. K. and Ciftci, R. and Cinca, D. and Cindro, V. and Ciocca, C. and Ciocio, A. and Cirilli, M. and Cirkovic, P. and Citron, Z. H. and Citterio, M. and Ciubancan, M. and Clark, A. and Clark, P. J. and Clarke, R. N. and Cleland, W. and Clemens, J. C. and Clement, B. and Clement, C. and Coadou, Y. and Cobal, M. and Coccaro, A. and Cochran, J. and Coffey, L. and Cogan, J. G. and Coggeshall, J. and Cogneras, E. and Colas, J. and Cole, S. and Colijn, A. P. and Collins, N. J. and Collins-Tooth, C. and Collot, J. and Colombo, T. and Colon, G. and Compostella, G. and Conde Mui{\~n}o, P. and Coniavitis, E. and Conidi, M. C. and Consonni, S. M. and Consorti, V. and Constantinescu, S. and Conta, C. and Conti, G. and Conventi, F. and Cooke, M. and Cooper, B. D. and Cooper-Sarkar, A. M. and Cooper-Smith, N. J. and Copic, K. and Cornelissen, T. and Corradi, M. and Corriveau, F. and Cortes-Gonzalez, A. and Cortiana, G. and Costa, G. and Costa, M. J. and Costanzo, D. and C{\^o}t{\'e}, D. and Courneyea, L. and Cowan, G. and Cowden, C. and Cox, B. E. and Cranmer, K. and Crescioli, F. and Cristinziani, M. and Crosetti, G. and Cr{\'e}p{\'e}-Renaudin, S. and Cuciuc, C. -M. and Cuenca Almenar, C. and Cuhadar Donszelmann, T. and Curatolo, M. and Curtis, C. J. and Cuthbert, C. and Cwetanski, P. and Czirr, H. and Czodrowski, P. and Czyczula, Z. and D'Auria, S. and D'Onofrio, M. and D'Orazio, A. and Da Cunha Sargedas De Sousa, M. J. and Da Via, C. and Dabrowski, W. and Dafinca, A. and Dai, T. and Dallapiccola, C. and Dam, M. and Dameri, M. and Zutshi, V. and Zwalinski, L.},
+	author = {Aad, G. and Abajyan, T. and Abbott, B. and Abdallah, J. and Abdel Khalek, S. and Abdelalim, A. A. and Abdinov, O. and Aben, R. and Abi, B. and Abolins, M. and Zutshi, V. and Zwalinski, L.},
 	month = sep,
 	year = {2012},
 	pages = {1--29},
 }
 
-
-
-@article{cms_exp,
-       author = {CMS Collaboration},
-        title = "{The CMS experiment at the CERN LHC}",
-      journal = {Journal of Instrumentation},
-         year = 2008,
-        month = aug,
-       volume = {3},
-       number = {8},
-        pages = {S08004},
-          doi = {10.1088/1748-0221/3/08/S08004},
-          url = {https://ui.adsabs.harvard.edu/abs/2008JInst...3S8004C},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+%=== Higgs Mass Measurements ===%
+% Example citations from JHEP article, doi:10.1007/JHEP06(2013)081:
+CDF Collaboration, D0 collaboration, T. Aaltonen et al., Combination of Tevatron
+CMS collaboration, Combined results of searches for the standard model Higgs boson in pp
+@article{PhysRevLett.114.191803,
+  title = {Combined Measurement of the {H}iggs Boson Mass in $pp$ Collisions at $\sqrt{s}$ = 7 and 8{\TeV} with the {ATLAS} and {CMS} Experiments},
+  author = {Aad, G. and Abbott, B. and Abdallah, J. and Abdinov, O. and Aben, R. and Abolins, M. and AbouZeid, O. S. and Abramowicz, H. and Abreu, H. and Abreu, R. and Taylor, D. and Woods, N.},
+  collaboration = {ATLAS Collaboration and CMS},
+  journal = {Phys. Rev. Lett.},
+  volume = {114},
+  issue = {19},
+  pages = {191803},
+  numpages = {33},
+  year = {2015},
+  month = {May},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.114.191803},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.114.191803}
+}
+@article{sirunyan_measurement_2020,
+	title = {A measurement of the {Higgs} boson mass in the diphoton decay channel},
+	volume = {805},
+	issn = {03702693},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S037026932030229X},
+	doi = {10.1016/j.physletb.2020.135425},
+	language = {en},
+	urldate = {2022-06-10},
+	journal = {Physics Letters B},
+	author = {Sirunyan, A.M. and Tumasyan, A. and Adam, W. and Ambrogi, F. and Bergauer, T. and Dragicevic, M. and Erö, J. and Escalante Del Valle, A. and Flechl, M. and Frühwirth, R. and Jeitler, M. and Teague, D. and Trembath-reichert, S.},
+	month = jun,
+	year = {2020},
+	pages = {135425},
+}
+@article{aaboud_measurement_2018,
+	title = {Measurement of the {Higgs} boson mass in the {H} {\textrightarrow} {ZZ$^\ast$} {\textrightarrow} 4{$\ell$} and {H} {\textrightarrow} $\gamma$$\gamma$ channels with $\sqrt{s}$ = 13{\TeV} pp collisions using the {ATLAS} detector},
+	volume = {784},
+	issn = {03702693},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0370269318305884},
+	doi = {10.1016/j.physletb.2018.07.050},
+	language = {en},
+	urldate = {2022-06-10},
+	journal = {Physics Letters B},
+	author = {Aaboud, M. and Aad, G. and Abbott, B. and Abdinov, O. and Abeloos, B. and Abidi, S.H. and AbouZeid, O.S. and Abraham, N.L. and Abramowicz, H. and Abreu, H. and Abulaiti, Y. and Zur Nedden, M. and Zwalinski, L.},
+	month = sep,
+	year = {2018},
+	pages = {345--366},
 }
 
-% The PDG.
-@article{pdg,
+%=== The PDG ===%
+@article{particle_data_group_review_2020,
+	title = {Review of {Particle} {Physics}},
+	volume = {2020},
+	issn = {2050-3911},
+	url = {https://doi.org/10.1093/ptep/ptaa104},
+	doi = {10.1093/ptep/ptaa104},
+	abstract = {The Review summarizes much of particle physics and cosmology. Using data from previous editions, plus 3,324 new measurements from 878 papers, we list, evaluate, and average measured properties of gauge bosons and the recently discovered Higgs boson, leptons, quarks, mesons, and baryons. We summarize searches for hypothetical particles such as supersymmetric particles, heavy bosons, axions, dark photons, etc. Particle properties and search limits are listed in Summary Tables. We give numerous tables, figures, formulae, and reviews of topics such as Higgs Boson Physics, Supersymmetry, Grand Unified Theories, Neutrino Mixing, Dark Energy, Dark Matter, Cosmology, Particle Detectors, Colliders, Probability and Statistics. Among the 120 reviews are many that are new or heavily revised, including a new review on High Energy Soft QCD and Diffraction and one on the Determination of CKM Angles from B Hadrons.The Review is divided into two volumes. Volume 1 includes the Summary Tables and 98 review articles. Volume 2 consists of the Particle Listings and contains also 22 reviews that address specific aspects of the data presented in the Listings.The complete Review (both volumes) is published online on the website of the Particle Data Group (pdg.lbl.gov) and in a journal. Volume 1 is available in print as the PDG Book. A Particle Physics Booklet with the Summary Tables and essential tables, figures, and equations from selected review articles is available in print and as a web version optimized for use on phones as well as an Android app.},
+	number = {8},
+	urldate = {2022-06-08},
+	journal = {Progress of Theoretical and Experimental Physics},
+	author = {{Particle Data Group} and Zyla, P A and Barnett, R M and Beringer, J and Dahl, O and Dwyer, D A and Groom, D E and Lin, C -J and Lugovsky, K S and Pianori, E and Schaffner, P and Zheng, W},
+	month = aug,
+	year = {2020},
+	pages = {083C01},
+}
+article{pdg,
     author = "Zyla, P.A. and others",
     title = "{Review of Particle Physics}",
     collaboration = "Particle Data Group",
@@ -141,23 +229,47 @@ article{PDG2020,
     pages = "083C01",
     year = "2020"
 }
-% From zotero:
-@article{particle_data_group_review_2020,
-	title = {Review of {Particle} {Physics}},
-	volume = {2020},
-	issn = {2050-3911},
-	url = {https://doi.org/10.1093/ptep/ptaa104},
-	doi = {10.1093/ptep/ptaa104},
-	abstract = {The Review summarizes much of particle physics and cosmology. Using data from previous editions, plus 3,324 new measurements from 878 papers, we list, evaluate, and average measured properties of gauge bosons and the recently discovered Higgs boson, leptons, quarks, mesons, and baryons. We summarize searches for hypothetical particles such as supersymmetric particles, heavy bosons, axions, dark photons, etc. Particle properties and search limits are listed in Summary Tables. We give numerous tables, figures, formulae, and reviews of topics such as Higgs Boson Physics, Supersymmetry, Grand Unified Theories, Neutrino Mixing, Dark Energy, Dark Matter, Cosmology, Particle Detectors, Colliders, Probability and Statistics. Among the 120 reviews are many that are new or heavily revised, including a new review on High Energy Soft QCD and Diffraction and one on the Determination of CKM Angles from B Hadrons.The Review is divided into two volumes. Volume 1 includes the Summary Tables and 98 review articles. Volume 2 consists of the Particle Listings and contains also 22 reviews that address specific aspects of the data presented in the Listings.The complete Review (both volumes) is published online on the website of the Particle Data Group (pdg.lbl.gov) and in a journal. Volume 1 is available in print as the PDG Book. A Particle Physics Booklet with the Summary Tables and essential tables, figures, and equations from selected review articles is available in print and as a web version optimized for use on phones as well as an Android app.},
-	number = {8},
-	urldate = {2022-06-08},
-	journal = {Progress of Theoretical and Experimental Physics},
-	author = {{Particle Data Group} and Zyla, P A and Barnett, R M and Beringer, J and Dahl, O and Dwyer, D A and Groom, D E and Lin, C -J and Lugovsky, K S and Pianori, E and Robinson, D J and Wohl, C G and Yao, W -M and Agashe, K and Aielli, G and Allanach, B C and Amsler, C and Antonelli, M and Aschenauer, E C and Asner, D M and Baer, H and Banerjee, Sw and Baudis, L and Bauer, C W and Beatty, J J and Belousov, V I and Bethke, S and Bettini, A and Biebel, O and Black, K M and Blucher, E and Buchmuller, O and Burkert, V and Bychkov, M A and Cahn, R N and Carena, M and Ceccucci, A and Cerri, A and Chakraborty, D and Chivukula, R Sekhar and Cowan, G and D'Ambrosio, G and Damour, T and de Florian, D and de Gouv{\^e}a, A and DeGrand, T and de Jong, P and Dissertori, G and Dobrescu, B A and D'Onofrio, M and Doser, M and Drees, M and Dreiner, H K and Eerola, P and Egede, U and Eidelman, S and Ellis, J and Erler, J and Ezhela, V V and Fetscher, W and Fields, B D and Foster, B and Freitas, A and Gallagher, H and Garren, L and Gerber, H -J and Gerbier, G and Gershon, T and Gershtein, Y and Gherghetta, T and Godizov, A A and Gonzalez-Garcia, M C and Goodman, M and Grab, C and Gritsan, A V and Grojean, C and Gr{\"u}newald, M and Gurtu, A and Gutsche, T and Haber, H E and Hanhart, C and Hashimoto, S and Hayato, Y and Hebecker, A and Heinemeyer, S and Heltsley, B and Hern{\'a}ndez-Rey, J J and Hikasa, K and Hisano, J and H{\"o}cker, A and Holder, J and Holtkamp, A and Huston, J and Hyodo, T and Johnson, K F and Kado, M and Karliner, M and Katz, U F and Kenzie, M and Khoze, V A and Klein, S R and Klempt, E and Kowalewski, R V and Krauss, F and Kreps, M and Krusche, B and Kwon, Y and Lahav, O and Laiho, J and Lellouch, L P and Lesgourgues, J and Liddle, A R and Ligeti, Z and Lippmann, C and Liss, T M and Littenberg, L and Lourengo, C and Lugovsky, S B and Lusiani, A and Makida, Y and Maltoni, F and Mannel, T and Manohar, A V and Marciano, W J and Masoni, A and Matthews, J and Mei{\ss}ner, U -G and Mikhasenko, M and Miller, D J and Milstead, D and Mitchell, R E and M{\"o}nig, K and Molaro, P and Moortgat, F and Moskovic, M and Nakamura, K and Narain, M and Nason, P and Navas, S and Neubert, M and Nevski, P and Nir, Y and Olive, K A and Patrignani, C and Peacock, J A and Petcov, S T and Petrov, V A and Pich, A and Piepke, A and Pomarol, A and Profumo, S and Quadt, A and Rabbertz, K and Rademacker, J and Raffelt, G and Ramani, H and Ramsey-Musolf, M and Ratcliff, B N and Richardson, P and Ringwald, A and Roesler, S and Rolli, S and Romaniouk, A and Rosenberg, L J and Rosner, J L and Rybka, G and Ryskin, M and Ryutin, R A and Sakai, Y and Salam, G P and Sarkar, S and Sauli, F and Schneider, O and Scholberg, K and Schwartz, A J and Schwiening, J and Scott, D and Sharma, V and Sharpe, S R and Shutt, T and Silari, M and Sj{\"o}strand, T and Skands, P and Skwarnicki, T and Smoot, G F and Soffer, A and Sozzi, M S and Spanier, S and Spiering, C and Stahl, A and Stone, S L and Sumino, Y and Sumiyoshi, T and Syphers, M J and Takahashi, F and Tanabashi, M and Tanaka, J and Ta{\v s}evsk{\'y}, M and Terashi, K and Terning, J and Thoma, U and Thorne, R S and Tiator, L and Titov, M and Tkachenko, N P and Tovey, D R and Trabelsi, K and Urquijo, P and Valencia, G and Van de Water, R and Varelas, N and Venanzoni, G and Verde, L and Vincter, M G and Vogel, P and Vogelsang, W and Vogt, A and Vorobyev, V and Wakely, S P and Walkowiak, W and Walter, C W and Wands, D and Wascko, M O and Weinberg, D H and Weinberg, E J and White, M and Wiencke, L R and Willocq, S and Woody, C L and Workman, R L and Yokoyama, M and Yoshida, R and Zanderighi, G and Zeller, G P and Zenin, O V and Zhu, R -Y and Zhu, S -L and Zimmermann, F and Anderson, J and Basaglia, T and Lugovsky, V S and Schaffner, P and Zheng, W},
+
+%=== The CMS Experiment ===%
+@article{collaboration_cms_2008,
+	title = {The {CMS} experiment at the {CERN} {LHC}},
+	volume = {3},
+	issn = {1748-0221},
+	url = {https://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08004},
+	doi = {10.1088/1748-0221/3/08/S08004},
+	number = {08},
+	urldate = {2022-06-10},
+	journal = {Journal of Instrumentation},
+      collaboration = {CMS},
+	author = {Collaboration, The CMS and Chatrchyan, S and Hmayakyan, G and Khachatryan, V and Sirunyan, A M and Adam, W and Bauer, T and Bergauer, T and Bergauer, H and Dragicevic, M and Punz, T and Riboni, P},
 	month = aug,
-	year = {2020},
-	pages = {083C01},
-	file = {Full Text PDF:/Users/Jake/Zotero/storage/L525XZ2W/Particle Data Group et al. - 2020 - Review of Particle Physics.pdf:application/pdf;Snapshot:/Users/Jake/Zotero/storage/UE75E9K5/5891211.html:text/html},
+	year = {2008},
+	pages = {S08004--S08004},
 }
+
+%=== W-Boson Mass Measurement ===%
+@article{cdf_collaboration_high-precision_2022,
+	title = {High-precision measurement of the \textit{{W}} boson mass with the {CDF} {II} detector},
+	volume = {376},
+	issn = {0036-8075, 1095-9203},
+	url = {https://www.science.org/doi/10.1126/science.abk1781},
+	doi = {10.1126/science.abk1781},
+	language = {en},
+	number = {6589},
+	urldate = {2022-06-10},
+	journal = {Science},
+      collaboration = {CDF},
+	author = {Zuc, S.},
+	month = apr,
+	year = {2022},
+	pages = {170--176},
+}
+	author = {{CDF Collaboration{\textdagger}{\textdaggerdbl}} and Aaltonen, T. and Amerio, S. and Amidei, D. and Anastassov, A. and Annovi, A. and Antos, J. and Apollinari, G. and Appel, J. A. and Arisawa, T. and Artikov, A. and Asaadi, J. and Ashmanskas, W. and Auerbach, B. and Aurisano, A. and Azfar, F. and Badgett, W. and Bae, T. and Barbaro-Galtieri, A. and Barnes, V. E. and Barnett, B. A. and Barria, P. and Bartos, P. and Bauce, M. and Bedeschi, F. and Behari, S. and Bellettini, G. and Bellinger, J. and Benjamin, D. and Beretvas, A. and Bhatti, A. and Bland, K. R. and Blumenfeld, B. and Bocci, A. and Bodek, A. and Bortoletto, D. and Boudreau, J. and Boveia, A. and Brigliadori, L. and Bromberg, C. and Brucken, E. and Budagov, J. and Budd, H. S. and Burkett, K. and Busetto, G. and Bussey, P. and Butti, P. and Buzatu, A. and Calamba, A. and Camarda, S. and Campanelli, M. and Carls, B. and Carlsmith, D. and Carosi, R. and Carrillo, S. and Casal, B. and Casarsa, M. and Castro, A. and Catastini, P. and Cauz, D. and Cavaliere, V. and Cerri, A. and Cerrito, L. and Chen, Y. C. and Chertok, M. and Chiarelli, G. and Chlachidze, G. and Cho, K. and Chokheli, D. and Clark, A. and Clarke, C. and Convery, M. E. and Conway, J. and Corbo, M. and Cordelli, M. and Cox, C. A. and Cox, D. J. and Cremonesi, M. and Cruz, D. and Cuevas, J. and Culbertson, R. and d{\textquoteright}Ascenzo, N. and Datta, M. and de Barbaro, P. and Demortier, L. and Deninno, M. and D{\textquoteright}Errico, M. and Devoto, F. and Di Canto, A. and Di Ruzza, B. and Dittmann, J. R. and Donati, S. and D{\textquoteright}Onofrio, M. and Dorigo, M. and Driutti, A. and Ebina, K. and Edgar, R. and Elagin, A. and Erbacher, R. and Errede, S. and Esham, B. and Farrington, S. and Fern{\'a}ndez Ramos, J. P. and Field, R. and Flanagan, G. and Forrest, R. and Franklin, M. and Freeman, J. C. and Frisch, H. and Funakoshi, Y. and Galloni, C. and Garfinkel, A. F. and Garosi, P. and Gerberich, H. and Gerchtein, E. and Giagu, S. and Giakoumopoulou, V. and Gibson, K. and Ginsburg, C. M. and Giokaris, N. and Giromini, P. and Glagolev, V. and Glenzinski, D. and Gold, M. and Goldin, D. and Golossanov, A. and Gomez, G. and Gomez-Ceballos, G. and Goncharov, M. and Gonz{\'a}lez L{\'o}pez, O. and Gorelov, I. and Goshaw, A. T. and Goulianos, K. and Gramellini, E. and Grosso-Pilcher, C. and Guimaraes da Costa, J. and Hahn, S. R. and Han, J. Y. and Happacher, F. and Hara, K. and Hare, M. and Harr, R. F. and Harrington-Taber, T. and Hatakeyama, K. and Hays, C. and Heinrich, J. and Herndon, M. and Hocker, A. and Hong, Z. and Hopkins, W. and Hou, S. and Hughes, R. E. and Husemann, U. and Hussein, M. and Huston, J. and Introzzi, G. and Iori, M. and Ivanov, A. and James, E. and Jang, D. and Jayatilaka, B. and Jeon, E. J. and Jindariani, S. and Jones, M. and Joo, K. K. and Jun, S. Y. and Junk, T. R. and Kambeitz, M. and Kamon, T. and Karchin, P. E. and Kasmi, A. and Kato, Y. and Ketchum, W. and Keung, J. and Kilminster, B. and Kim, D. H. and Kim, H. S. and Kim, J. E. and Kim, M. J. and Kim, S. H. and Kim, S. B. and Kim, Y. J. and Kim, Y. K. and Kimura, N. and Kirby, M. and Kondo, K. and Kong, D. J. and Konigsberg, J. and Kotwal, A. V. and Kreps, M. and Kroll, J. and Kruse, M. and Kuhr, T. and Kurata, M. and Laasanen, A. T. and Lammel, S. and Lancaster, M. and Lannon, K. and Latino, G. and Lee, H. S. and Lee, J. S. and Leo, S. and Leone, S. and Lewis, J. D. and Limosani, A. and Lipeles, E. and Lister, A. and Liu, Q. and Liu, T. and Lockwitz, S. and Loginov, A. and Lucchesi, D. and Luc{\`a}, A. and Lueck, J. and Lujan, P. and Lukens, P. and Lungu, G. and Lys, J. and Lysak, R. and Madrak, R. and Maestro, P. and Malik, S. and Manca, G. and Manousakis-Katsikakis, A. and Marchese, L. and Margaroli, F. and Marino, P. and Matera, K. and Mattson, M. E. and Mazzacane, A. and Mazzanti, P. and McNulty, R. and Mehta, A. and Mehtala, P. and Menzione, A. and Mesropian, C. and Miao, T. and Michielin, E. and Mietlicki, D. and Mitra, A. and Miyake, H. and Moed, S. and Moggi, N. and Moon, C. S. and Moore, R. and Morello, M. J. and Mukherjee, A. and Muller, Th. and Murat, P. and Mussini, M. and Nachtman, J. and Nagai, Y. and Naganoma, J. and Nakano, I. and Napier, A. and Nett, J. and Nigmanov, T. and Nodulman, L. and Noh, S. Y. and Norniella, O. and Oakes, L. and Oh, S. H. and Oh, Y. D. and Okusawa, T. and Orava, R. and Ortolan, L. and Pagliarone, C. and Palencia, E. and Palni, P. and Papadimitriou, V. and Parker, W. and Pauletta, G. and Paulini, M. and Paus, C. and Phillips, T. J. and Piacentino, G. and Pianori, E. and Pilot, J. and Pitts, K. and Plager, C. and Pondrom, L. and Poprocki, S. and Potamianos, K. and Pranko, A. and Prokoshin, F. and Ptohos, F. and Punzi, G. and Redondo Fern{\'a}ndez, I. and Renton, P. and Rescigno, M. and Rimondi, F. and Ristori, L. and Robson, A. and Rodriguez, T. and Rolli, S. and Ronzani, M. and Roser, R. and Rosner, J. L. and Ruffini, F. and Ruiz, A. and Russ, J. and Rusu, V. and Sakumoto, W. K. and Sakurai, Y. and Santi, L. and Sato, K. and Saveliev, V. and Savoy-Navarro, A. and Schlabach, P. and Schmidt, E. E. and Schwarz, T. and Scodellaro, L. and Scuri, F. and Seidel, S. and Seiya, Y. and Semenov, A. and Sforza, F. and Shalhout, S. Z. and Shears, T. and Shepard, P. F. and Shimojima, M. and Shochet, M. and Shreyber-Tecker, I. and Simonenko, A. and Sliwa, K. and Smith, J. R. and Snider, F. D. and Song, H. and Sorin, V. and St. Denis, R. and Stancari, M. and Stentz, D. and Strologas, J. and Sudo, Y. and Sukhanov, A. and Suslov, I. and Takemasa, K. and Takeuchi, Y. and Tang, J. and Tecchio, M. and Teng, P. K. and Thom, J. and Thomson, E. and Thukral, V. and Toback, D. and Tokar, S. and Tollefson, K. and Tomura, T. and Torre, S. and Torretta, D. and Totaro, P. and Trovato, M. and Ukegawa, F. and Uozumi, S. and V{\'a}zquez, F. and Velev, G. and Vellidis, K. and Vernieri, C. and Vidal, M. and Vilar, R. and Viz{\'a}n, J. and Vogel, M. and Volpi, G. and Wagner, P. and Wallny, R. and Wang, S. M. and Waters, D. and Wester, W. C. and Whiteson, D. and Wicklund, A. B. and Wilbur, S. and Williams, H. H. and Wilson, J. S. and Wilson, P. and Winer, B. L. and Wittich, P. and Wolbers, S. and Wolfmeister, H. and Wright, T. and Wu, X. and Wu, Z. and Yamamoto, K. and Yamato, D. and Yang, T. and Yang, U. K. and Yang, Y. C. and Yao, W.-M. and Yeh, G. P. and Yi, K. and Yoh, J. and Yorita, K. and Yoshida, T. and Yu, G. B. and Yu, I. and Zanetti, A. M. and Zeng, Y. and Zhou, C. and Zucchelli, S.},
+
+
+
+
+
 
 
 %=== Dark Matter citation ===%
@@ -188,20 +300,10 @@ article{PDG2020,
 %  publisher={Oxford University Press}
 %}
 
-%=== W-Boson Mass Measurement ===%
-@article{wmass,
-      author = {null null  and T. Aaltonen  and S. Amerio  and D. Amidei  and A. Anastassov  and A. Annovi  and J. Antos  and G. Apollinari  and J. A. Appel  and T. Arisawa  and A. Artikov  and J. Asaadi  and W. Ashmanskas  and B. Auerbach  and A. Aurisano  and F. Azfar  and W. Badgett  and T. Bae  and A. Barbaro-Galtieri  and V. E. Barnes  and B. A. Barnett  and P. Barria  and P. Bartos  and M. Bauce  and F. Bedeschi  and S. Behari  and G. Bellettini  and J. Bellinger  and D. Benjamin  and A. Beretvas  and A. Bhatti  and K. R. Bland  and B. Blumenfeld  and A. Bocci  and A. Bodek  and D. Bortoletto  and J. Boudreau  and A. Boveia  and L. Brigliadori  and C. Bromberg  and E. Brucken  and J. Budagov  and H. S. Budd  and K. Burkett  and G. Busetto  and P. Bussey  and P. Butti  and A. Buzatu  and A. Calamba  and S. Camarda  and M. Campanelli  and B. Carls  and D. Carlsmith  and R. Carosi  and S. Carrillo  and B. Casal  and M. Casarsa  and A. Castro  and P. Catastini  and D. Cauz  and V. Cavaliere  and A. Cerri  and L. Cerrito  and Y. C. Chen  and M. Chertok  and G. Chiarelli  and G. Chlachidze  and K. Cho  and D. Chokheli  and A. Clark  and C. Clarke  and M. E. Convery  and J. Conway  and M. Corbo  and M. Cordelli  and C. A. Cox  and D. J. Cox  and M. Cremonesi  and D. Cruz  and J. Cuevas  and R. Culbertson  and N. d’Ascenzo  and M. Datta  and P. de Barbaro  and L. Demortier  and M. Deninno  and M. D’Errico  and F. Devoto  and A. Di Canto  and B. Di Ruzza  and J. R. Dittmann  and S. Donati  and M. D’Onofrio  and M. Dorigo  and A. Driutti  and K. Ebina  and R. Edgar  and A. Elagin  and R. Erbacher  and S. Errede  and B. Esham  and S. Farrington  and J. P. Fernández Ramos  and R. Field  and G. Flanagan  and R. Forrest  and M. Franklin  and J. C. Freeman  and H. Frisch  and Y. Funakoshi  and C. Galloni  and A. F. Garfinkel  and P. Garosi  and H. Gerberich  and E. Gerchtein  and S. Giagu  and V. Giakoumopoulou  and K. Gibson  and C. M. Ginsburg  and N. Giokaris  and P. Giromini  and V. Glagolev  and D. Glenzinski  and M. Gold  and D. Goldin  and A. Golossanov  and G. Gomez  and G. Gomez-Ceballos  and M. Goncharov  and O. González López  and I. Gorelov  and A. T. Goshaw  and K. Goulianos  and E. Gramellini  and C. Grosso-Pilcher  and J. Guimaraes da Costa  and S. R. Hahn  and J. Y. Han  and F. Happacher  and K. Hara  and M. Hare  and R. F. Harr  and T. Harrington-Taber  and K. Hatakeyama  and C. Hays  and J. Heinrich  and M. Herndon  and A. Hocker  and Z. Hong  and W. Hopkins  and S. Hou  and R. E. Hughes  and U. Husemann  and M. Hussein  and J. Huston  and G. Introzzi  and M. Iori  and A. Ivanov  and E. James  and D. Jang  and B. Jayatilaka  and E. J. Jeon  and S. Jindariani  and M. Jones  and K. K. Joo  and S. Y. Jun  and T. R. Junk  and M. Kambeitz  and T. Kamon  and P. E. Karchin  and A. Kasmi  and Y. Kato  and W. Ketchum  and J. Keung  and B. Kilminster  and D. H. Kim  and H. S. Kim  and J. E. Kim  and M. J. Kim  and S. H. Kim  and S. B. Kim  and Y. J. Kim  and Y. K. Kim  and N. Kimura  and M. Kirby  and K. Kondo  and D. J. Kong  and J. Konigsberg  and A. V. Kotwal  and M. Kreps  and J. Kroll  and M. Kruse  and T. Kuhr  and M. Kurata  and A. T. Laasanen  and S. Lammel  and M. Lancaster  and K. Lannon  and G. Latino  and H. S. Lee  and J. S. Lee  and S. Leo  and S. Leone  and J. D. Lewis  and A. Limosani  and E. Lipeles  and A. Lister  and Q. Liu  and T. Liu  and S. Lockwitz  and A. Loginov  and D. Lucchesi  and A. Lucà  and J. Lueck  and P. Lujan  and P. Lukens  and G. Lungu  and J. Lys  and R. Lysak  and R. Madrak  and P. Maestro  and S. Malik  and G. Manca  and A. Manousakis-Katsikakis  and L. Marchese  and F. Margaroli  and P. Marino  and K. Matera  and M. E. Mattson  and A. Mazzacane  and P. Mazzanti  and R. McNulty  and A. Mehta  and P. Mehtala  and A. Menzione  and C. Mesropian  and T. Miao  and E. Michielin  and D. Mietlicki  and A. Mitra  and H. Miyake  and S. Moed  and N. Moggi  and C. S. Moon  and R. Moore  and M. J. Morello  and A. Mukherjee  and Th. Muller  and P. Murat  and M. Mussini  and J. Nachtman  and Y. Nagai  and J. Naganoma  and I. Nakano  and A. Napier  and J. Nett  and T. Nigmanov  and L. Nodulman  and S. Y. Noh  and O. Norniella  and L. Oakes  and S. H. Oh  and Y. D. Oh  and T. Okusawa  and R. Orava  and L. Ortolan  and C. Pagliarone  and E. Palencia  and P. Palni  and V. Papadimitriou  and W. Parker  and G. Pauletta  and M. Paulini  and C. Paus  and T. J. Phillips  and G. Piacentino  and E. Pianori  and J. Pilot  and K. Pitts  and C. Plager  and L. Pondrom  and S. Poprocki  and K. Potamianos  and A. Pranko  and F. Prokoshin  and F. Ptohos  and G. Punzi  and I. Redondo Fernández  and P. Renton  and M. Rescigno  and F. Rimondi  and L. Ristori  and A. Robson  and T. Rodriguez  and S. Rolli  and M. Ronzani  and R. Roser  and J. L. Rosner  and F. Ruffini  and A. Ruiz  and J. Russ  and V. Rusu  and W. K. Sakumoto  and Y. Sakurai  and L. Santi  and K. Sato  and V. Saveliev  and A. Savoy-Navarro  and P. Schlabach  and E. E. Schmidt  and T. Schwarz  and L. Scodellaro  and F. Scuri  and S. Seidel  and Y. Seiya  and A. Semenov  and F. Sforza  and S. Z. Shalhout  and T. Shears  and P. F. Shepard  and M. Shimojima  and M. Shochet  and I. Shreyber-Tecker  and A. Simonenko  and K. Sliwa  and J. R. Smith  and F. D. Snider  and H. Song  and V. Sorin  and R. St. Denis  and M. Stancari  and D. Stentz  and J. Strologas  and Y. Sudo  and A. Sukhanov  and I. Suslov  and K. Takemasa  and Y. Takeuchi  and J. Tang  and M. Tecchio  and P. K. Teng  and J. Thom  and E. Thomson  and V. Thukral  and D. Toback  and S. Tokar  and K. Tollefson  and T. Tomura  and S. Torre  and D. Torretta  and P. Totaro  and M. Trovato  and F. Ukegawa  and S. Uozumi  and F. Vázquez  and G. Velev  and K. Vellidis  and C. Vernieri  and M. Vidal  and R. Vilar  and J. Vizán  and M. Vogel  and G. Volpi  and P. Wagner  and R. Wallny  and S. M. Wang  and D. Waters  and W. C. Wester  and D. Whiteson  and A. B. Wicklund  and S. Wilbur  and H. H. Williams  and J. S. Wilson  and P. Wilson  and B. L. Winer  and P. Wittich  and S. Wolbers  and H. Wolfmeister  and T. Wright  and X. Wu  and Z. Wu  and K. Yamamoto  and D. Yamato  and T. Yang  and U. K. Yang  and Y. C. Yang  and W.-M. Yao  and G. P. Yeh  and K. Yi  and J. Yoh  and K. Yorita  and T. Yoshida  and G. B. Yu  and I. Yu  and A. M. Zanetti  and Y. Zeng  and C. Zhou  and S. Zucchelli },
-      title = {High-precision measurement of the <i>W</i> boson mass with the CDF II detector},
-      journal = {Science},
-      volume = {376},
-      number = {6589},
-      pages = {170-176},
-      year = {2022},
-      doi = {10.1126/science.abk1781},
-      URL = {https://www.science.org/doi/abs/10.1126/science.abk1781},
-      eprint = {https://www.science.org/doi/pdf/10.1126/science.abk1781},
-      abstract = {The mass of the W boson, a mediator of the weak force between elementary particles, is tightly constrained by the symmetries of the standard model of particle physics. The Higgs boson was the last missing component of the model. After observation of the Higgs boson, a measurement of the W boson mass provides a stringent test of the model. We measure the W boson mass, MW, using data corresponding to 8.8 inverse femtobarns of integrated luminosity collected in proton-antiproton collisions at a 1.96 tera–electron volt center-of-mass energy with the CDF II detector at the Fermilab Tevatron collider. A sample of approximately 4 million W boson candidates is used to obtain MW=80,433.5±6.4stat±6.9syst=80,433.5±9.4\&nbsp;MeV/c2, the precision of which exceeds that of all previous measurements combined (stat, statistical uncertainty; syst, systematic uncertainty; MeV, mega–electron volts; c, speed of light in a vacuum). This measurement is in significant tension with the standard model expectation. W bosons mediate the weak interaction, one of the fundamental forces in physics. Because the Standard Model (SM) of particle physics places tight constraints on the mass of the W boson, measuring the mass puts the SM to the test. The Collider Detector at Fermilab (CDF) Collaboration now reports a precise measurement of the W boson mass extracted from data taken at the Tevatron particle accelerator (see the Perspective by Campagnari and Mulders). Surprisingly, the researchers found that the mass of the boson was significantly higher than the SM predicts, with a discrepancy of 7 standard deviations. —JS Analysis of the data collected at the Tevatron particle collider finds that the W boson is heavier than expected.}
-}
+
+
+
+
 
 % HIG-16-041
 article{hig16041,

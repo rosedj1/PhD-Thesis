@@ -50,20 +50,23 @@ The SM has bore witness to many triumphs over its approximately 70-year developm
 it predicted the existence of quarks which were experimentally confirmed in the mid-1970s;
 it predicted the existence of the tau neutrino which was experimentally confirmed in 2000;
 its most groundbreaking prediction was experimentally confirmed on July 4, 2012---almost exactly 10 years ago from the date of this dissertation writing---when the ATLAS and CMS collaborations announced the discovery of the Higgs boson~\cite{chatrchyan_observation_2012, chatrchyan_observation_2013, aad_observation_2012}.
+% TODO: Define CMS and ATLAS here?
 
 % THE HIGGS IS IMPORTANT BECAUSE it was the missing piece of the SM.
 Quantum Field Theory is the mathematical and conceptual backbone of the SM.
 Within its framework, all particles are \emph{excitations} of their corresponding field so, \eg \emph{every} electron in the Universe is thought to be an excitation of the single electron field that permeates all of spacetime.
-The existence of the Higgs boson (\PH) suggests that its corresponding field exists---the \emph{Higgs field}---and that \PH is the quantum excitation of that field.
+The existence of the Higgs boson (\PH) suggests that its corresponding field exists---the \emph{Higgs field}---and, thus, \PH is the quantum excitation of that field.
 This all-pervasive Higgs field and its corresponding boson are generated mathematically via the Brout-Englert-Higgs (BEH) mechanism.
 Most SM particles---except for neutrinos, photons, and gluons---``acquire'' their mass by interacting with the Higgs field.
-This is also how the Higgs boson itself acquires its mass (\mH): by interacting with its own field!
+This is also how the Higgs boson itself acquires its mass (\mH); by interacting with its own field!
 
 The masses of SM particles \emph{depend} on the value of \mH\dots \emph{so what is its value?}
 Unfortunately, \mH is a free parameter of the SM, so theory is unable to provide a value for \mH based solely on other fundamental constants.
-Instead, the value of \mH must be measured by experiment---and has been measured multiple times~\cite{}.
-Although has already been measured, it is continually important to improve the measurement by lowering the uncertainties on (\ie increasing the precision on) the mass value.
-A more precise value of \mH improves theoretical limits on the masses of most of the other elementary particles and may very well determine the stability of our universe, as shown in Fig.~\ref{fig:universe_stability}.
+Instead, the value of \mH must be measured by experiment---and has been measured multiple times~\cite{PhysRevLett.114.191803, sirunyan_measurement_2020, aaboud_measurement_2018}.
+% TODO: Cite more mH measurements.
+Although \mH has already been measured, it is important to continually improve the measurement by lowering the uncertainties on (\ie increasing the precision on) the mass value.
+A more precise value of \mH is two-fold:
+first, it improves the theoretical limits on the masses of the other elementary particles and, second, it very well may determine the stability of our universe, as shown in Fig.~\ref{fig:universe_stability}.
 % it predicts that all particles---especially the electroweak bosons should be massless
 % ,  Particles interact with it and acquire their mass---all except neutrinos and massless bosons.
 % Since its conceptualization in 1964, the Higgs boson remained undetected for 48 years until its confirmed production at the LHC. 
@@ -90,24 +93,25 @@ The production of a Higgs boson is only feasible at conditions close to those th
 %   elusive Higgs boson (\PH) is ONLY MADE AT CRAZY CONDITIONS.
 This grand achievement is accomplished frequently by the Large Hadron Collider (LHC), located on the border of France and Switzerland.
 It is the largest and most powerful proton-proton (\pp) collider ever made.
-The LHC accelerates protons to near-light speeds and produces \pp collisions with center-of-mass energies as high as 13\TeV,
-Old and newly produced particles spew out of the collisions points and are analyzed by detectors like the aforementioned ATLAS and CMS experiments.
+The LHC accelerates protons to incredible speeds, very close to the speed of light.
+When these fast-moving protons collide, the \pp collisions can have a center-of-mass energy as high as 13\TeV.
+Newly produced particles spew out of the collision points and are analyzed by detectors like the aforementioned ATLAS and CMS experiments.
 These enormous particle detectors have thousands of scientists performing dozens of analyses to look for hints of beyond Standard Model (BSM) physics, extra dimensions, miniature black holes, and more.
+
 This dissertation utilizes data collected by the CMS experiment during the LHC Run 2 (2016--2018) to
 % look at two different analyses: HIGGSMASS and dilepton mass resonances in H->4l
-perform a precision measurement of the Higgs boson mass $\left( \mH \right)$.
+perform the world's best precision measurement of \mH to date.
 % This dissertation presents the world's most precise measurement of the Higgs boson mass (\mH) to date, using proton-proton collision data from the LHC Run 2, collected and analyzed by the CMS Experiment.
-
-The measurement of \mH presented in this dissertation utilizes the following improvements compared to previous measurements:
+This new measurement utilizes the following improvements compared to previous measurements:
 \begin{itemize}
     % More data.
-    \item Utilizing nearly four times as much collected data from Run 2 $\left( \lumiint = \lumiruntwo \right)$ \vs the data used for the 2016 measurement $\left( \lumiint = \lumisixteen \right)$.
+    \item Nearly four times as much collected data from Run 2 $\left( \lumiint = \lumiruntwo \right)$ \vs the data used for the 2016 measurement $\left( \lumiint = \lumisixteen \right)$.
     % Four final states (instead of three).
-    \item Four final-state categories are used: \fourmu, \foure, \twoetwomu, \twomutwoe.
+    \item Four final-state categories: \fourmu, \foure, \twoetwomu, \twomutwoe.
     In previous measurements, the last two final states (the mixed-flavor states) were combined, when truly they have different kinematical properties (depending on into which lepton pair the \Zone decayed):
     different peak widths (instrumental resolutions), different signal efficiencies, and different relative levels of reducible background.
     % Using UL reco (better electron pT resolution).
-    \item Ultra-Legacy (UL) reconstruction is used for muon, electron, photon, and jet tracks.
+    \item Ultra-Legacy (UL) reconstruction for muon, electron, photon, and jet tracks.
     This signficantly improves electron momenta and improves the other particle momenta, though to a lesser degree.
     % Vertex constraint.
     \item The measurements of muon \pt are improved by constraining the muon tracks to originate from the interaction vertex (also called a \emph{vertex constraint}).
@@ -122,7 +126,8 @@ The measurement of \mH presented in this dissertation utilizes the following imp
     This has the additional effect of significantly reducing the uncertainty on the per-event four-lepton mass resolution.
 \end{itemize}
 
-The following chapters of this dissertation begin with a thorough description of the CMS Experiment and its composite subdetectors in Chapter~\ref{ch:cms}.
+The following chapters of this dissertation begin by describing the function and engineering of the Large Hadron Collider in Chapter~\ref{ch:lhc}.
+Then, a thorough description of the CMS Experiment and its composite subdetectors is given in Chapter~\ref{ch:cms}.
 Next, the details of the precision measurement of the Higgs boson mass using the LHC Run 2 data is discussed in Chapter~\ref{ch:higgs_mass}.
 Finally, the results of the Higgs boson mass measurement analysis is summarized in Chapter~\ref{ch:conclusion}.
 % begins with a mathematical  the standard model (SM) of particle physics and its mathematical framework, including the Brout-Englert-Higgs (BEH) mechanism

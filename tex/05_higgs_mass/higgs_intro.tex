@@ -6,40 +6,51 @@ The Higgs boson was discovered in 2012 by the CMS and ATLAS collaborations.
 This was a momentous achievement in particle physics because the existence of the Higgs boson was required to complete the SM.
 In fact, it is sometimes referred to as the ``missing puzzle piece'' of the SM.
 The Higgs boson is one of a kind: it is the only fundamental scalar particle ever discovered so far.
-The unique boson could be a portal to new physics (\emph{beyond Standard Model physics}, BSM), \eg, by decaying into BSM low-mass dilepton mass resonances (Chapter~\ref{ch:dilep_res}).
+The unique boson could be a portal to new physics (\emph{beyond Standard Model physics}, BSM), \eg by decaying into BSM low-mass dilepton mass resonances
+% TODO (Chapter~\ref{ch:dilep_res})
+.
 In order to be certain that the recently discovered Higgs boson is truly the same as the one predicted by the SM, it is necessary to compare its measured properties to the predicted ones.
 
-Some properties of the Higgs boson can be predicted by the SM, like 
-    - There are many results on Higgs properties: spin, charge, decay processes, lifetime, mass.
-    - The last of these is the focus of this dissertation and is of particular importance to the Universe: depending on mH and mtop, the stability of the Universe.
+% Some properties of the Higgs boson can be predicted by the SM, like 
+%     - There are many results on Higgs properties: spin, charge, decay processes, lifetime, mass.
+%     - The last of these is the focus of this dissertation and is of particular importance to the Universe: depending on mH and mtop, the stability of the Universe.
 
-ALL previous mass measurements:
-    - Run 1:
-        - H->2gamma VALUE
-        - H->ZZ->4L VALUE
-    - Run 2:
-        - H->2gamma VALUE
-        - (2016) H->ZZ->4L VALUE
-        - H->bb
-        - H->mumu
-        - H->WW 
+% ALL previous mass measurements:
+%     - Run 1:
+%         - H->2gamma VALUE
+%         - H->ZZ->4L VALUE
+%     - Run 2:
+%         - H->2gamma VALUE
+%         - (2016) H->ZZ->4L VALUE
+%         - H->bb
+%         - H->mumu
+%         - H->WW 
 
-- Why this thesis is important:
-    - This thesis describes the methodology and results of the best precision measurement of mH to date by using the hZZ4l decay and Full Run 2 data set from CMS.
-    - Run 2 provides more data -> more precision on measurements of Higgs properties.
-    - In addition to more HZZ4l events, this analysis provides new techniques, specifically the VX constraint.
-    - Predict mH for Run 3, will start soon summer 2022 and provide an approximate 300? /fb of L int.
-    - In 2026(?), HLLHC provides even more data. ref snowmass paper.
+% - Why this thesis is important:
+%     - This thesis describes the methodology and results of the best precision measurement of mH to date by using the hZZ4l decay and Full Run 2 data set from CMS.
+%     - Run 2 provides more data -> more precision on measurements of Higgs properties.
+%     - In addition to more HZZ4l events, this analysis provides new techniques, specifically the VX constraint.
+%     - Predict mH for Run 3, will start soon summer 2022 and provide an approximate 300? /fb of L int.
+%     - In 2026(?), HLLHC provides even more data. ref snowmass paper.
 
-This chapter is structured as follows:
-\begin{itemize}                                                                          
-    \item Sec.~\ref{sec:analysis_overview}: General overview of the analysis of the Higgs boson mass measurement.
-    \item Sec.~\ref{sec:datasets_simul_trig}: Data sets, triggers, and simulation.
-    \item Sec.~\ref{sec:evt_sel}: Event reconstruction and selection.
-    \item Sec.~\ref{sec:bkg_estim}: Background estimation.
-    \item Sec.~\ref{sec:signal_model}: Signal modeling and improvements, including kinematic discriminant, per-event mass uncertainties, VXBS constraint, reference to ad hoc studies in appendix.
-    % \item Observables: Four-Lepton Invariant Mass, Per-Event Mass Uncertainty, Matrix Element-Based Kinematic Discriminant) (Sec.~\ref{sec:observables})
-    \item Sec.~\ref{sec:syst_uncert}: Systematic uncertainties.
-    \item Sec.~\ref{sec:results}: Results.
-    \item Sec.~\ref{sec:higgs_summary}: Summary.
-\end{itemize}
+This chapter describes the Higgs boson mass measurement using full Run 2 data from the LHC.
+First, a general overview of the analysis workflow is given in Sec.~\ref{sec:analysis_overview}.
+Then, the data sets and simulated samples are detailed in Sec.~\ref{sec:datasets_simul_trig}.
+Next, the event reconstruction and selection is described in Sec.~\ref{sec:evt_sel}.
+Afterwards, an analysis of the background estimation is given in Sec.~\ref{sec:bkg_estim}.
+Then, the signal modeling and improvements are laid out, which include the kinematic discriminant, per-event mass uncertainties, and the vertex constraint.
+% , and a reference to ad hoc studies in appendix in Sec.~\ref{sec:signal_model}.
+Penultimately, a treatment of the systematic uncertainties is detailed in Sec.~\ref{sec:syst_uncert}.
+Finally, the results of the mass measurement are specified in Sec.~\ref{sec:results}.
+
+% \begin{itemize}                                                                          
+%     \item Sec.~\ref{sec:analysis_overview}: General overview of the analysis of the Higgs boson mass measurement.
+%     \item Sec.~\ref{sec:datasets_simul_trig}: Data sets, triggers, and simulation.
+%     \item Sec.~\ref{sec:evt_sel}: Event reconstruction and selection.
+%     \item Sec.~\ref{sec:bkg_estim}: Background estimation.
+%     \item Sec.~\ref{sec:signal_model}: Signal modeling and improvements, including kinematic discriminant, per-event mass uncertainties, VXBS constraint, reference to ad hoc studies in appendix.
+%     % \item Observables: Four-Lepton Invariant Mass, Per-Event Mass Uncertainty, Matrix Element-Based Kinematic Discriminant) (Sec.~\ref{sec:observables})
+%     \item Sec.~\ref{sec:syst_uncert}: Systematic uncertainties.
+%     \item Sec.~\ref{sec:results}: Results.
+%     % \item Sec.~\ref{sec:higgs_summary}: Summary.
+% \end{itemize}

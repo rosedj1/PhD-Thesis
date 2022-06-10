@@ -1,3 +1,5 @@
+%=== Dissertation template borrowed from Xunwu Zuo (2021). ===%
+
 %% UF thesis template from https://helpdesk.ufl.edu/application-support-center/etd-technical-support/ms-word-and-latex-templates/
 %% LaTex template summer 2019
 
@@ -9,7 +11,7 @@
 \usepackage{ragged2e} % to make text fully justified
 \usepackage{tikz}%       tikz is used by almost everyone, but certainly by me for this.
 \usepackage[compat=1.1.0]{tikz-feynman}% for drawing feynman diagrams 
-\usepackage{pgfplots}%   pgfplots is tikz but better.
+% \usepackage{pgfplots}%   pgfplots is tikz but better.
 \usepackage{xspace}
 \xspaceaddexceptions{]\}}
 \usepackage{xcolor}
@@ -21,16 +23,16 @@
 \usepackage{amsmath}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
-\usepackage{multicol}
 
 \input{tex/definitions.tex}
+
 %=== N.B.: If you want to use biblatex, go into ufdissertation.cls and search for 'biblatex' (un)comment instructions.
 % \usepackage[sorting=none, backend=biber, style=phys, biblabel=brackets]{biblatex}
 % \usepackage[sorting=none]{biblatex}
 % \addbibresource{biblatex-phys.bib}  % If using biblatex: uncomment this.
 
 % Enable format for table, figure, object
-\haveTablestrue%        Uncomment this if you have tables in your thesis.
+% \haveTablestrue%        Uncomment this if you have tables in your thesis.
 \haveFigurestrue%       Uncomment this if you have figures in your thesis.
 %\haveObjectstrue%       Uncomment this if you have Objects in your thesis. This is almost certainly not the case however.
 
@@ -52,14 +54,19 @@
 \chair[Guenakh Mitselmakher]{Andrey Korytov}%                   Chair and Cochair (see comment block above).
 
 %% additional sections
-\setDedicationFile{tex/dedicationFile}%                 Dedication Page
-\setAcknowledgementsFile{tex/acknowledgementsFile}%     Acknowledgements Page
-\setAbstractFile{tex/abstractFile}%                     Abstract Page (This should only include the abstract itself)
-\setReferenceFile{referenceFile}{jhep}%         References. First argument is your bibtex source file (.bib) the second argument is your bibtex style file (.bst).
+% \setDedicationFile{tex/dedicationFile}% THIS                Dedication Page
+% \setAcknowledgementsFile{tex/acknowledgementsFile}% THIS    Acknowledgements Page
+% \setAbstractFile{tex/abstractFile}% THIS                    Abstract Page (This should only include the abstract itself)
+
+%=== Bibliography is printed in the command \setReferenceFile below. ===%
+% \bibliographystyle{plain}
+% \bibliography{referenceFile}
+\setReferenceFile{referenceFile}{jhep}% THIS        References. First argument is your bibtex source file (.bib) the second argument is your bibtex style file (.bst).
 % \setReferenceFile{referenceFile}{amsplain}
 % Use the style "unsrtnat" since it sorts references in cite order and shows url.
 % Other bibliographystyles: unsrtnat, apsrev, ieeetr, jhep (beautiful but doesn't show url).
-\setBiographicalFile{tex/biographyFile}%                Biography file of the Author (you).
+
+% \setBiographicalFile{tex/biographyFile}% THIS               Biography file of the Author (you).
 
 %%%% These are NOT required, so only use them if you actually need/have them.
 % \setAbbreviationsFile{tex/abbreviations}%           Abbreviations Page. Jake changed this to say "LIST OF ACRONYMS".
@@ -77,7 +84,7 @@
 %%%%%%%%%%%%%%%
 %--- Intro ---%
 %%%%%%%%%%%%%%%
-\input{tex/01_intro/intro.tex}
+% \input{tex/01_intro/intro.tex} % THIS
 %%%%%%%%%%%%%%%%%%%%%%%%
 %--- Standard Model ---%
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,14 +92,15 @@
 %%%%%%%%%%%%%
 %--- LHC ---%
 %%%%%%%%%%%%%
-% \input{tex/03_lhc/lhc.tex}
+% \input{tex/03_lhc/lhc.tex} % THIS
 %%%%%%%%%%%%%
 %--- CMS ---%
 %%%%%%%%%%%%%
-% \input{tex/04_cms/cms_intro.tex}
-% \input{tex/04_cms/tracker.tex}
-% \input{tex/04_cms/calorimeters.tex}
-% \input{tex/04_cms/solenoid.tex}
+\input{tex/04_cms/cms_intro.tex} % THIS
+\input{tex/04_cms/tracker.tex}
+\input{tex/04_cms/calorimeters.tex}
+\input{tex/04_cms/solenoid.tex}
+
 % \input{tex/04_cms/muon_system.tex}
 % \input{tex/04_cms/trigger.tex}
 % \input{tex/04_cms/event_reco.tex}
@@ -117,10 +125,6 @@
 %%%%%%%%%%%%%%%%%%%%
 %--- Conclusion ---%
 %%%%%%%%%%%%%%%%%%%%
-\input{tex/conclusion/conclusion.tex}
-
-%=== Bibliography is printed in the command \setReferenceFile above. ===%
-% \bibliographystyle{plain}
-% \bibliography{referenceFile}
+% \input{tex/conclusion.tex}
 %=========================================================%
 \end{document}

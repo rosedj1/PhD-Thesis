@@ -1,78 +1,83 @@
 \chapter{INTRODUCTION}
 \label{ch:intro}
 
-NEW~\cite{particle_data_group_review_2020}.
-
 % \textbf{Motivation---why you should read this thesis
 % What is this thesis about?}
 % At first glance, the Universe appears to be an overwhelmingly vast and complicated place.
 % However upon closer inspection, it is comprised of only a few different kinds of fundamental particles.
 % Particle physics has given rise to the Standard Model (SM) which mathematically describes these constituents and their interactions with each other.
-The Universe, while overwhelmingly vast, is comprised of a curiously small number of indivisible particles.
-As shown in Fig.~\ref{fig:particular_table}, these \emph{elementary} particles can be split into two main kinds: a mere 12 \emph{matter} particles (green and pink) that comprise all detectable matter and 4 \emph{force} particles (red) that convey forces between the matter particles.
-Although it is fascinating to wonder how can so much diversity can arise from just 16 ``simple'' building blocks, it is the mission of particle physicists to understand the underlying mathematical structure that describes Nature in as simple---and accurate---a theory as possible.
-The best theory developed so far is called the Standard Model (SM) of particle physics (see Chapter~\ref{ch:theory} for a mathematical overview).
-% Universe metastability.
+The Universe, while overwhelmingly vast, is built from a remarkably few kinds of elementary
+% comprised of curiously few
+% ---\emph{indivisible}---particles.
+(\ie indivisible) particles.
+% a curiously small number of elementary particle types.
+As shown in Fig.~\ref{fig:particular_table}, any elementary particle can be classified into 1 of these 3 categories:
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}[hbtp]
+\begin{figure}[!b]
     \centering
-    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/sm/particular_table_updated.png}
-        \caption{
-        TODO
-        }
+    \includegraphics[height=9cm,keepaspectratio]{figures/sm/particular_table_updated.png}
+        \caption
+            [The elementary particles described by the SM.]
+            {The elementary particles described by the SM.}
         \label{fig:particular_table}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
-% , the SM accurately describes most of the properties of the eleme
+matter particles (\emph{fermions}), force-carrying particles (\emph{gauge bosons}), and Higgs bosons.
+% ---the only scalar particle so far discovered.
+% There are 12 kinds of matter particles (\emph{fermions}), the 4 kinds of force-carrying particles (\emph{gauge bosons}), and the singular kind of Higgs boson---the only scalar particle so far discovered.
+% ---of which there are 6 kinds of quarks and 6 kinds of leptons---and the force-carrying particles (gauge \emph{bosons})---of which there are 4 kinds.
+There are 12 kinds of fermions which can be split evenly into 2 groups, depending on with which forces they interact:
+those that interact via the electromagnetic (EM) force and the weak nuclear force are classified as \emph{leptons}, of which there are 6 kinds (\emph{``flavors''}),
+whereas those that interact via the EM, weak, \emph{and} strong nuclear forces are classified as \emph{quarks}, of which there are also 6 flavors.
+There are 4 kinds of gauge bosons, each of which is a force carrier for a specific force
+(the gluon is said to \emph{mediate} the strong force, the photon mediates the EM force, while both the \PWpm and \PZ bosons mediate the weak force).
+% Depending on through which forces the particles interact,  split into 6 kinds of \emph{quarks} (strong, weak, and electromagnetic) and 6 kinds of \emph{leptons} (weak and electromagnetic).
+% Fermions can be split further into 6 kinds of quarks and 6 kinds of leptons,
+% while the 
+% only 12 kinds of \emph{matter} particles (green and pink) that comprise all detectable matter,
+% 4 \emph{force} particles (red) that convey forces between the matter particles.
+% TODO: Possibly introduce gauge bosons and the Higgs here.
+Thus, all the diversity and manifestations of reality come from only 17 kinds of ``building blocks''.
+% While it is fascinating to wonder how so much diversity can arise from just 17 ``simple'' building blocks, the mission of particle physicists is to understand the underlying mathematical structure that describes Nature in as concise---and accurate---a theory as possible.
+It is the mission of particle physicists to understand the underlying mathematical structure that describes Nature in as accurate---and hopefully \emph{concise}---a theory as possible.
+The best theory that stands today is called the Standard Model (SM) of particle physics.
 
+%(see Chapter~\ref{ch:theory} for a mathematical overview).
+% Universe metastability.
+% , the SM accurately describes most of the properties of the eleme
 % Although the SM will be mathematically outlined in Chapter~\ref{ch:theory}, it is 
 The SM has bore witness to many triumphs over its approximately 70-year development:
 it predicted the existence of quarks which were experimentally confirmed in the mid-1970s;
 it predicted the existence of the tau neutrino which was experimentally confirmed in 2000;
-its most groundbreaking prediction was experimentally confirmed on July 4, 2012---almost exactly 10 years ago from the date of this dissertation writing---when the ATLAS and CMS collaborations announced the discovery of the Higgs boson~\cite{Chatrchyan:2012xdj}.
+its most groundbreaking prediction was experimentally confirmed on July 4, 2012---almost exactly 10 years ago from the date of this dissertation writing---when the ATLAS and CMS collaborations announced the discovery of the Higgs boson~\cite{chatrchyan_observation_2012, chatrchyan_observation_2013, aad_observation_2012}.
 
-% Many properties of these particles---and their interactions with each other---are accurately described by the standard model (SM) of particle physics.
-% Problematically though, the SM predicts that the gauge bosons (the particles which convey forces) particles are massless.
-% The most significant triumph of the SM occurred on July 4$^\text{th}$ TODO:comma? 2012 when the ATLAS and CMS collaborations announced the discovery of the ``missing puzzle piece'' of the SM---the Higgs boson.
-% This discovery confirmed the SM's prediction that there should exist, which date back to 1964 via the Brout-Englert-Higgs mechanism
+% THE HIGGS IS IMPORTANT BECAUSE it was the missing piece of the SM.
+Quantum Field Theory is the mathematical and conceptual backbone of the SM.
+Within its framework, all particles are \emph{excitations} of their corresponding field so, \eg \emph{every} electron in the Universe is thought to be an excitation of the single electron field that permeates all of spacetime.
+The existence of the Higgs boson (\PH) suggests that its corresponding field exists---the \emph{Higgs field}---and that \PH is the quantum excitation of that field.
+This all-pervasive Higgs field and its corresponding boson are generated mathematically via the Brout-Englert-Higgs (BEH) mechanism.
+Most SM particles---except for neutrinos, photons, and gluons---``acquire'' their mass by interacting with the Higgs field.
+This is also how the Higgs boson itself acquires its mass (\mH): by interacting with its own field!
 
-% In the SM, particle interactions are conveyed by way of 3 fundamental forces, the strong, weak, and electromagnetic forces, while the 4th force---gravity---is neglected due to its negligible contribution at nuclear distances.
-% The seed of the most successful triumph of the SM dates back to 1964, when physicists Robert Brout, François Englert, and Peter Higgs , which occurred on July 4th, 2012, was possible its most spectacular: the when the Higgs boson was  The prediction capabilities of the SM are 
-% strong, weak, and electromagnetic interactions
-% By understanding the rules by which these particles interact, we can ;
-% this is the aim of the Standard Model (SM) of Particle Physics. 
-% The Standard Model (SM) is an impressively accurate mathematical theory which describes the fundamental particles of the universe and the rules for their possible interactions.
-% 
-%  are described mathematically by the impressively accurate Standard Model (SM) of Particle Physics.
-% Although there are four fundamental forces of nature, the SM takes into account three of the four forces in nature:
-The Higgs boson (\PH) is a critical piece of the SM because, without it,  it is the quantum excitation of the so-called Higgs field, an all-pervasive field throughout spacetime 
-Before 
-
-It is necessary to scrutinize the properties of this new particle to check whether it truly is the \PH predicted by the SM---or perhaps something else entirely.
-Thus, the Large Hadron Collider accelerates protons to near-light speeds 
-
-A major shortcoming of the SM is its inability to predict the masses of these particles.
-
-The SM was not able to predict the masses of these particles until 1964 when the Brout-Englert-Higgs mechanism suggested that 
-It wasn't until 1964 that the Brout-Englert-Higgs mechanism gave a self-consistent way to :
-by breaking the electroweak gauge symmetry of the vacuum would give rise to non-zero masses of the weak gauge bosons.
-This would yield a secondary effect too:
-there should exist a fundamental scalar boson which is the quantum of the so-called ``Higgs field''.
-On July 4th, 2012, this Higgs boson was discovered.
-
-This dissertation presents the world's most precise measurement of the Higgs boson mass (\mH) to date, using proton-proton collision data from the LHC Run 2, collected and analyzed by the CMS Experiment.
-The value of \mh has been measured previously TODO:CITE LOTS OF PEEPS~\cite{Chatrchyan:2013lba} but it is important to always strive for lower uncertainties (\ie to increase the precision) on the mass value, since the very stability of our universe theoretically depends on \mH, as shown in Fig.~\ref{fig:universe_stability}.
+The masses of SM particles \emph{depend} on the value of \mH\dots \emph{so what is its value?}
+Unfortunately, \mH is a free parameter of the SM, so theory is unable to provide a value for \mH based solely on other fundamental constants.
+Instead, the value of \mH must be measured by experiment---and has been measured multiple times~\cite{}.
+Although has already been measured, it is continually important to improve the measurement by lowering the uncertainties on (\ie increasing the precision on) the mass value.
+A more precise value of \mH improves theoretical limits on the masses of most of the other elementary particles and may very well determine the stability of our universe, as shown in Fig.~\ref{fig:universe_stability}.
+% it predicts that all particles---especially the electroweak bosons should be massless
+% ,  Particles interact with it and acquire their mass---all except neutrinos and massless bosons.
+% Since its conceptualization in 1964, the Higgs boson remained undetected for 48 years until its confirmed production at the LHC. 
+% SHOULD PROBABLY INCORPORATE THIS:
 % Additionally, the value of \mh is one of the free parameters of the SM and is theoretically linked to the very stability of our universe.
-Furthermore, the value of \mh sets limits on the masses of most of the other elementary particles.
 % Universe metastability.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[hbtp]
     \centering
     \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/intro/mtop_vs_mH_universestability.png}
         \caption
-        [Theoretical stability regions of our universe.]
+        [Theoretical stability regions of the Universe.]
         {
-            (Left) Theoretical stability regions of our universe based on the pole masses of the top quark $\left( \mass{t}^\text{pole} \right)$ and Higgs boson $\left( \mass{h}^\text{pole} \right)$.
+            (Left) Theoretical stability regions of the Universe based on the pole masses of the top quark $\left( \mass{t}^\text{pole} \right)$ and Higgs boson $\left( \mass{h}^\text{pole} \right)$.
             (Right) A closeup of the SM region of the left plot.
             The contours represent the 68\%, 95\%, and 99\% confidence levels based on the experimental uncertainties of $\mass{t}^\text{pole}$ and $\mass{h}^\text{pole}$.
             Plots taken from~\cite{univ_stab} and units added to all axes.
@@ -80,6 +85,18 @@ Furthermore, the value of \mh sets limits on the masses of most of the other ele
         \label{fig:universe_stability}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%
+
+The production of a Higgs boson is only feasible at conditions close to those thought to exist at the beginning of the Universe.
+%   elusive Higgs boson (\PH) is ONLY MADE AT CRAZY CONDITIONS.
+This grand achievement is accomplished frequently by the Large Hadron Collider (LHC), located on the border of France and Switzerland.
+It is the largest and most powerful proton-proton (\pp) collider ever made.
+The LHC accelerates protons to near-light speeds and produces \pp collisions with center-of-mass energies as high as 13\TeV,
+Old and newly produced particles spew out of the collisions points and are analyzed by detectors like the aforementioned ATLAS and CMS experiments.
+These enormous particle detectors have thousands of scientists performing dozens of analyses to look for hints of beyond Standard Model (BSM) physics, extra dimensions, miniature black holes, and more.
+This dissertation utilizes data collected by the CMS experiment during the LHC Run 2 (2016--2018) to
+% look at two different analyses: HIGGSMASS and dilepton mass resonances in H->4l
+perform a precision measurement of the Higgs boson mass $\left( \mH \right)$.
+% This dissertation presents the world's most precise measurement of the Higgs boson mass (\mH) to date, using proton-proton collision data from the LHC Run 2, collected and analyzed by the CMS Experiment.
 
 The measurement of \mH presented in this dissertation utilizes the following improvements compared to previous measurements:
 \begin{itemize}
@@ -105,11 +122,50 @@ The measurement of \mH presented in this dissertation utilizes the following imp
     This has the additional effect of significantly reducing the uncertainty on the per-event four-lepton mass resolution.
 \end{itemize}
 
-This dissertation is organized into the following chapters:
-Chapter~\ref{ch:intro} (\emph{this chapter}) discusses the importance and motivation for measuring the mass of the Higgs boson;
-Chapter~\ref{ch:theory} introduces the standard model (SM) of particle physics and its mathematical framework, including the Brout-Englert-Higgs (BEH) mechanism;
-Chapter~\ref{ch:lhc};
-Chapter~\ref{ch:cms};
-Chapter~\ref{ch:higgs_mass};
-Chapter~\ref{ch:dilep_res};
-Finally, Chapter~\ref{ch:conclusion}.
+The following chapters of this dissertation begin with a thorough description of the CMS Experiment and its composite subdetectors in Chapter~\ref{ch:cms}.
+Next, the details of the precision measurement of the Higgs boson mass using the LHC Run 2 data is discussed in Chapter~\ref{ch:higgs_mass}.
+Finally, the results of the Higgs boson mass measurement analysis is summarized in Chapter~\ref{ch:conclusion}.
+% begins with a mathematical  the standard model (SM) of particle physics and its mathematical framework, including the Brout-Englert-Higgs (BEH) mechanism
+
+% Chapter~\ref{ch:intro} (\emph{this chapter}) discusses the importance and motivation for measuring the mass of the Higgs boson;
+% Chapter~\ref{ch:theory} introduces the standard model (SM) of particle physics and its mathematical framework, including the Brout-Englert-Higgs (BEH) mechanism;
+% Chapter~\ref{ch:lhc};
+% Chapter~\ref{ch:cms};
+% Chapter~\ref{ch:higgs_mass};
+% Chapter~\ref{ch:dilep_res};
+% Finally, Chapter~\ref{ch:conclusion}.
+
+
+
+
+
+
+
+
+% Many properties of these particles---and their interactions with each other---are accurately described by the standard model (SM) of particle physics.
+% Problematically though, the SM predicts that the gauge bosons (the particles which convey forces) particles are massless.
+% The most significant triumph of the SM occurred on July 4$^\text{th}$ TODO:comma? 2012 when the ATLAS and CMS collaborations announced the discovery of the ``missing puzzle piece'' of the SM---the Higgs boson.
+
+% This discovery confirmed the SM's prediction that there should exist, which date back to 1964 via the Brout-Englert-Higgs mechanism
+% In the SM, particle interactions are conveyed by way of 3 fundamental forces, the strong, weak, and electromagnetic forces, while the 4th force---gravity---is neglected due to its negligible contribution at nuclear distances.
+% The seed of the most successful triumph of the SM dates back to 1964, when physicists Robert Brout, François Englert, and Peter Higgs , which occurred on July 4th, 2012, was possible its most spectacular: the when the Higgs boson was  The prediction capabilities of the SM are 
+% strong, weak, and electromagnetic interactions
+% By understanding the rules by which these particles interact, we can ;
+% this is the aim of the Standard Model (SM) of Particle Physics. 
+% The Standard Model (SM) is an impressively accurate mathematical theory which describes the fundamental particles of the universe and the rules for their possible interactions.
+% 
+%  are described mathematically by the impressively accurate Standard Model (SM) of Particle Physics.
+% Although there are four fundamental forces of nature, the SM takes into account three of the four forces in nature:
+% The Higgs boson (\PH) was the so-called a critical piece of the SM because, without it,  it is the quantum excitation of the so-called Higgs field, an all-pervasive field throughout spacetime 
+
+% It is necessary to scrutinize the properties of this new particle to check whether it truly is the \PH predicted by the SM---or perhaps something else entirely.
+
+% A major shortcoming of the SM is its inability to predict the masses of these particles.
+
+% The SM was not able to predict the masses of these particles until 1964 when the Brout-Englert-Higgs mechanism suggested that 
+% It wasn't until 1964 that the Brout-Englert-Higgs mechanism gave a self-consistent way to :
+% by breaking the electroweak gauge symmetry of the vacuum would give rise to non-zero masses of the weak gauge bosons.
+% This would yield a secondary effect too:
+% there should exist a fundamental scalar boson which is the quantum of the so-called ``Higgs field''.
+% On July 4th, 2012, this Higgs boson was discovered.
+

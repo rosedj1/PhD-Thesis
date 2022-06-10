@@ -21,6 +21,7 @@
 \usepackage{amsmath}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
+\usepackage{multicol}
 
 \input{tex/definitions.tex}
 %=== N.B.: If you want to use biblatex, go into ufdissertation.cls and search for 'biblatex' (un)comment instructions.
@@ -51,20 +52,17 @@
 \chair[Guenakh Mitselmakher]{Andrey Korytov}%                   Chair and Cochair (see comment block above).
 
 %% additional sections
-% \setDedicationFile{tex/dedicationFile}%                 Dedication Page
-% \setAcknowledgementsFile{tex/acknowledgementsFile}%     Acknowledgements Page
+\setDedicationFile{tex/dedicationFile}%                 Dedication Page
+\setAcknowledgementsFile{tex/acknowledgementsFile}%     Acknowledgements Page
 \setAbstractFile{tex/abstractFile}%                     Abstract Page (This should only include the abstract itself)
-% \setReferenceFile{referenceFile}{amsplain}%         References. First argument is your bibtex source file (.bib) the second argument is your bibtex style file (.bst).
-\setReferenceFile{referenceFile}{jhep}
+\setReferenceFile{referenceFile}{jhep}%         References. First argument is your bibtex source file (.bib) the second argument is your bibtex style file (.bst).
+% \setReferenceFile{referenceFile}{amsplain}
 % Use the style "unsrtnat" since it sorts references in cite order and shows url.
 % Other bibliographystyles: unsrtnat, apsrev, ieeetr, jhep (beautiful but doesn't show url).
-% \setReferenceFile{newboi}{unsrtnat}
-% \setReferenceFile{referenceFile}{ieeetr}
-%\setBiographicalFile{biographyFile}%                Biography file of the Author (you).
-
+\setBiographicalFile{tex/biographyFile}%                Biography file of the Author (you).
 
 %%%% These are NOT required, so only use them if you actually need/have them.
-% \setAbbreviationsFile{tex/abbreviations}%           Abbreviations Page
+% \setAbbreviationsFile{tex/abbreviations}%           Abbreviations Page. Jake changed this to say "LIST OF ACRONYMS".
 % \setAppendixFile{tex/appendix}%                     Appendix Content; hyperlinking might be weird.
 %\multipleAppendixtrue%                          Uncomment this if you have more than one appendix, 
 %%                                                   comment it if you have only one appendix.
@@ -73,7 +71,7 @@
 
 % \justify % so that all text is fully justified
 
-% main text
+%=== Main Text ===%
 \begin{document}
 %--- Structure of each chapter: tex/chapter/section.tex ---%
 %%%%%%%%%%%%%%%
@@ -119,7 +117,7 @@
 %%%%%%%%%%%%%%%%%%%%
 %--- Conclusion ---%
 %%%%%%%%%%%%%%%%%%%%
-% \input{tex/conclusion/conclusion.tex}
+\input{tex/conclusion/conclusion.tex}
 
 %=== Bibliography is printed in the command \setReferenceFile above. ===%
 % \bibliographystyle{plain}

@@ -637,7 +637,8 @@
 
     \ifExists{abbreviationsFile}
         {%                              If we have defined a abbreviations file, import it.
-            \chapter{LIST OF ABBREVIATIONS}
+            % \chapter{LIST OF ABBREVIATIONS}
+            \chapter{LIST OF ACRONYMS}
             \label{abbreviations}
             \input{\abbreviationsFile}% Abbreviations come after our lists.
         }

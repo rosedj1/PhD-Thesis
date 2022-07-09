@@ -14,6 +14,7 @@
                          \typeout{\@chapapp\space\thechapter.}%
                          \addcontentsline{toc}{chapter}%
                                    {\protect\numberline{\thechapter}#1}%
+                                   \addtocontents{lof}{\protect\addvspace{10\p@}}% <-- Gap in LoF
                        \else
                          \addcontentsline{toc}{chapter}{#1}%
                        \fi

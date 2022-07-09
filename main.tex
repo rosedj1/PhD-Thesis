@@ -23,6 +23,7 @@
 \usepackage{amsmath}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
+\usepackage{multirow}
 
 \input{tex/definitions.tex}
 
@@ -32,7 +33,7 @@
 % \addbibresource{biblatex-phys.bib}  % If using biblatex: uncomment this.
 
 % Enable format for table, figure, object
-% \haveTablestrue%        Uncomment this if you have tables in your thesis.
+\haveTablestrue%        Uncomment this if you have tables in your thesis.
 \haveFigurestrue%       Uncomment this if you have figures in your thesis.
 %\haveObjectstrue%       Uncomment this if you have Objects in your thesis. This is almost certainly not the case however.
 
@@ -50,14 +51,13 @@
 \author{Jake Rosenzweig}%                  Your Name
 \thesisType{Dissertation}%              Dissertation (PhD) or Thesis (Masters)
 \degreeYear{2022}%                      Intended graduation year (not the year you submit the thesis)
-\degreeMonth{August}%                   Month of graduation should be May, August, or December.
+\degreeMonth{December}%                   Month of graduation should be May, August, or December.
 \chair[Guenakh Mitselmakher]{Andrey Korytov}%                   Chair and Cochair (see comment block above).
 
 %% additional sections
 \setDedicationFile{tex/dedicationFile}% THIS                Dedication Page
 \setAcknowledgementsFile{tex/acknowledgementsFile}% THIS    Acknowledgements Page
 \setAbstractFile{tex/abstractFile}% THIS                    Abstract Page (This should only include the abstract itself)
-% \input{tex/abstractFile.tex}  % Don't use this; use \setAbstractFile above.
 
 %=== Bibliography is printed in the command \setReferenceFile below. ===%
 % \bibliographystyle{plain}
@@ -75,51 +75,53 @@
 %\multipleAppendixtrue%                          Uncomment this if you have more than one appendix, 
 %%                                                   comment it if you have only one appendix.
 
-% \justify % so that all text is fully justified
-
 %=== Main Text ===%
 \begin{document}
-%--- Structure of each chapter: tex/chapter/section.tex ---%
 %%%%%%%%%%%%%%%
 %--- Intro ---%
 %%%%%%%%%%%%%%%
-\input{tex/01_intro/intro.tex} % THIS
+\input{tex/01_intro/intro.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %--- Standard Model ---%
 %%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/02_theory/sm.tex}
+\input{tex/02_theory/sm.tex}
 %%%%%%%%%%%%%
 %--- LHC ---%
 %%%%%%%%%%%%%
-\input{tex/03_lhc/lhc.tex} % THIS
+\input{tex/03_lhc/lhc.tex}
 %%%%%%%%%%%%%
 %--- CMS ---%
 %%%%%%%%%%%%%
-\input{tex/04_cms/cms_intro.tex} % THIS
+\input{tex/04_cms/cms_intro.tex}
 \input{tex/04_cms/tracker.tex}
 \input{tex/04_cms/calorimeters.tex}
 \input{tex/04_cms/solenoid.tex}
-
-% \input{tex/04_cms/muon_system.tex}
-% \input{tex/04_cms/trigger.tex}
-% \input{tex/04_cms/event_reco.tex}
-% \input{tex/04_cms/event_sim.tex}
+\input{tex/04_cms/muon_system.tex}
+\input{tex/04_cms/trigger.tex}
+\input{tex/04_cms/event_reco.tex}
+%%%%%%%%%% \input{tex/04_cms/event_sim.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Higgs Mass Measurement ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{tex/05_higgs_mass/higgs_intro.tex} % THIS
+\input{tex/05_higgs_mass/higgs_intro.tex}
 \input{tex/05_higgs_mass/overview.tex}
-% \input{tex/05_higgs_mass/datasets_simul_trig.tex}
-% \input{tex/05_higgs_mass/event_reco_sel.tex}
+\input{tex/05_higgs_mass/datasets_simul_trig.tex}
+\input{tex/05_higgs_mass/event_reco_sel.tex}
 \input{tex/05_higgs_mass/backgrounds.tex}
-% \input{tex/05_higgs_mass/signal_modeling.tex}
-% \input{tex/05_higgs_mass/techniques.tex}
-% \input{tex/05_higgs_mass/syst_uncert.tex}
-% \input{tex/05_higgs_mass/results.tex}
+\input{tex/05_higgs_mass/signal_modeling.tex}
+\input{tex/05_higgs_mass/techniques.tex}
+\input{tex/05_higgs_mass/syst_uncert.tex}
+\input{tex/05_higgs_mass/results.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Search for Dilepton Resonances ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/06_dilep_res/dilep_res_intro.tex}
+\input{tex/06_dilep_res/dilep_res_intro.tex}
+\input{tex/06_dilep_res/overview.tex}
+\input{tex/06_dilep_res/datasets_simul_trig.tex}
+\input{tex/06_dilep_res/event_reco_sel.tex}
+\input{tex/06_dilep_res/backgrounds.tex}
+\input{tex/06_dilep_res/syst_uncert.tex}
+\input{tex/06_dilep_res/results.tex}
 %%%%%%%%%%%%%%%%%%%%
 %--- Conclusion ---%
 %%%%%%%%%%%%%%%%%%%%

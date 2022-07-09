@@ -1,21 +1,34 @@
 \section{Analysis Overview}
 \label{sec:analysis_overview}
-The first step to performing a precision measurement of the Higgs boson mass (\mH) is to ``observe'' many Higgs bosons.
+% TODO: Include something like this?
+% Higgs bosons produced:
+% \begin{itemize}
+% 	\item 2010: 776
+% 	\item 2011: 105K
+% 	\item 2012: ~500K?
+% 	\item 2016: 2M Higgs, 30 Higgs/min
+% 	\item 2017: 2.5M 
+% 	\item 2018: 3.5M
+% \end{itemize}
+The first step to performing a precision measurement of \mH is to ``observe'' many Higgs bosons.
 However, production of a Higgs boson is essentially nonexistent in everyday conditions and is still extremely rare even in the high-energy \pp collisions of the LHC (Chapter~\ref{ch:lhc}).
 At a center-of-mass energy of 13\TeV, the total inclusive inelastic cross section of two protons colliding is 70\mb.
 % TODO: CITE.
-Comparing this to the production cross section of a Higgs boson $\left( \sigma_{\pp \to \PH} = 59\pb \right)$
-% (TODO:cite sigma(pptoH) = 59 pb)
+Comparing this cross section to the cross section of Higgs boson production $\left( \sigma_{\pp \to \PH} = 59\pb \right)$
+% TODO:cite sigma(pptoH) = 59 pb
 shows that a Higgs boson is produced in approximately one out of every \emph{billion} \pp collisions---a rare event indeed.
 % TODO CITE
 
-To complicate matters further, the Higgs boson has a \emph{very} short mean lifetime of only $1.6 \tentotheminus{22}\snd$~\cite{particle_data_group_review_2020}.
-Thus, the Higgs boson is not directly detected by CMS (Chapter~\ref{ch:cms}) but is instead \emph{inferred} from its stable decay products that enter the various subdetectors.
-Among all the fundamental particles so far discovered, the Higgs boson bears the second heaviest mass (approximately 125\GeV), the first belonging to the top quark.
+To complicate matters further, the Higgs boson has a \emph{very} short mean lifetime of only $1.6 \tentotheminus{22}\snd$. %~\cite{particle_data_group_review_2020}.
+% TODO: Get citation other than PDG.
+Thus, the existence of the Higgs boson is not \emph{directly} detected by CMS (Chapter~\ref{ch:cms}) but is instead \emph{inferred} from its stable decay products which enter the various subdetectors.
+Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass (approximately 125\GeV),
+%  while the heaviest particle is the top quark.
 % TODO:possibly refer back to a section where I mention the quarks individually? (Sec.~\ref{sec:sm}).
-This gives the scalar boson sufficient energy to decay into at least 9 different final states, where each decay occurs with a different probability---the \emph{branching fraction} or \emph{branching ratio} (\br)---whose value depends on \mH, as shown in Fig.~\ref{fig:higgs_br}.
+which gives the scalar boson sufficient energy to decay into at least 9 different final states.
+Each decay mode occurs with a different probability---the \emph{branching fraction} or \emph{branching ratio} (\br)---whose value depends on \mH, as shown in Fig.~\ref{fig:higgs_br}.
 % \textcolor{red}{MENTION THAT NOT ALL DECAYS MAKE ON-SHELL PARTICLES?}
-The question then becomes, \emph{``Which Higgs boson decay mode is most useful for the measurement of \mH?''}.
+The question then becomes, \emph{``Which Higgs boson decay mode is the most useful for the measurement of \mH?''}
 \begin{figure}[!htbp]
     \begin{center}
         % Figures come from:
@@ -36,9 +49,13 @@ The question then becomes, \emph{``Which Higgs boson decay mode is most useful f
 % Now, instead of just a deposit of energy in the ECAL and corresponding hits in the silicon tracker, the particle is identified as a newly produced electron.
 % CMS records which kinds of objects came from which events and stores the information in \emph{data sets} (TODO: ref Sec. future).
 
-Owing to its large signal-to-background ratio of approximately 2 and its relatively rare four-lepton final state, the \hzzfourl decay channel is chosen and is called the \emph{signal process}.
-On average, a Higgs boson will decay into two \PZ bosons (one on-shell and one off-shell) only 2.6\% of the time.
+Owing to its large signal-to-background ratio of approximately 2
+% TODO:cite HIG-19-001?
+and its relatively rare four-lepton final state, the \hzzfourl decay channel is chosen and is called the \emph{signal process}.
+On average, a Higgs boson will decay into two \PZ bosons (one on-shell and the other off-shell) only 2.6\% of the time.
+% TODO:cite
 In turn, each \PZ boson \emph{may} decay into two opposite-sign, same flavor (OSSF) leptons (\Ztolplm, where $\ell = \Pe, \mu$) on average approximately 6.7\% of the time.
+% TODO:cite
 This signal process then gives rise to four distinct final states: \foure, \fourmu, \twoetwomu, \twomutwoe.
 The branching ratio for the overall signal process is then calculated as: % B(Z->ee)=0.033632, B(Z->mumu)=0.033662
 \begin{equation*}
@@ -46,36 +63,190 @@ The branching ratio for the overall signal process is then calculated as: % B(Z-
 \end{equation*}
 Thus, a signal event is expected to be produced only once in about every \emph{trillion} \pp collisions.
 
-The strategy is then to search the \pp collision data collected and analyzed by the CMS Experiment for all the detected \hzzfourl events.
+The strategy is then to search the \pp collision data collected and analyzed by CMS for all the detected \hzzfourl events.
 The task is not so straightforward;
 events in the data are categorized---not by the entire decay process---but by their final state, based on which triggers fired to collect which events.
 % TODO: uncomment the line below.
-% Section~\ref{sec:datasets_simul_trig} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
-For each chosen event, the subdetectors of CMS (Secs.~\ref{sec:tracker}--\ref{sec:solenoid}) provide a plethora of track and energy-detection information to reconstruct \emph{objects}---representations of the underlying particles within the event.
-The reconstructed objects are then assembled in a fashion that checks if the logic coincides with the signal process of interest: \hzzfourl.  % TODO: Clean up this sentence.
+% Section~\ref{sec:analyzed_data} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
+For each chosen event, the subdetectors of CMS (Secs.~\ref{sec:tracker}--\ref{sec:muon_sys}) provide a plethora of track and energy-detection information to reconstruct \emph{objects}, which are representations of the underlying particles within the event.
+The reconstructed objects are then assembled in a fashion that checks if the decay logic coincides with the signal process of interest: \hzzfourl.
+% TODO: Clean up this sentence.
 For example, a pair of OSSF lepton-like objects should appear to come from a \PZ-like object---\ie having a nominal mass of approximately 91\GeV and zero net electric charge---instead of, say, appearing to come from a \PH-like object.
 Two such \PZ-like objects must be formed and should appear to come from a \PH-like object.
 % OSSF-dilepton objects should each appear to come from a \PZ-boson-like object (\eg having a nominal mass of approximately 91\GeV and zero net electric charge)---instead of, say, coming from a Higgs-boson-like object.
-All throughout, the reconstructed event must obey physics conservation laws (energy, momentum, charge, \etc) and the associated objects may even be required to pass certain detector selection criteria (\eg $\pt^\mu > 5\GeV$).
+All throughout, the reconstructed event must obey all physics conservation laws (energy, momentum, charge, \etc)
+Furthermore, the associated objects are often required to pass certain detector selection criteria (\eg $\pt^\mu > 5\GeV$).
 % This process hinges on the conservation of momentum, since in the longitudinal ($z$) direction the \pp collision has initial and final.
 % Specifically, the 
 %     - The \PZ boson has a precisely measured mass of TODO a neutral particle, so the two leptons into which it decays should combine to Group two leptons together, 
 %     - Form two different pairs of opposite-sign, same-flavor (OSSF) leptons
 %     - If it appears that the to select specific hzz4l events (\emph{event selection}).
 These criteria are analysis-specific and are collectively called the \emph{event selection} of the analysis.
-% TODO: The event selection for this analysis is described in Sec.~\ref{sec:evt_sel}.  % TODO: ref may be wrong.
+% TODO: The event selection for this analysis is described in Sec.~\ref{sec:evt_sel}.
+% TODO: ref may be wrong.
 
-Although the event selection is constructed to select only signal events, it is not guaranteed;
+Although the event selection is devised to ideally select only signal events, it is not guaranteed;
 there are certain physics process that have exactly the same initial and final states as the signal process.
 Such processes ``contaminate'' the collected signal events and are called \emph{background processes}.
-Concretely, Fig.~\ref{fig:feyndiag_sig_vs_bkg} shows how identical initial state gluons can react to produce exactly the same final state particles, while producing different intermediate particles:
+Concretely, Fig.~\ref{fig:feyndiag_sig_vs_bkg} shows how identical initial-state gluons can react to produce exactly the same final-state particles, while producing different intermediate particles:
 the signal process (Left), initiated by gluon-gluon fusion \vs a background process (Right) which skips the intermediate Higgs boson.
-It is imperative for all physics analyses to maximize the number of collected signal events while minimizing the number of collected background events.
+It is imperative for particle physics analyses to maximize the number of collected signal events while minimizing the number of collected background events.
 Section~\ref{sec:bkg_estim} discusses the associated background processes and how to estimate the number of events these contribute to the signal region.
+%=== How to draw Feynman diagrams in LaTeX.
+% Taken from Xunwu's code 
+% \begin{figure}[!htb]
+%     \centering 
+%     \captionsetup{justification=centering}
+%     \begin{subfigure}[b]{0.45\textwidth} % b for bottom alignment so caption is at the same height
+%         \centering
+%         \feynmandiagram[horizontal=g1 to t1, horizontal=t2 to h] {
+%             g1 [particle = \Pg] -- [gluon] t1,
+%             t1 -- [fermion, edge label = \Pqt] t2 -- [fermion, edge label = \Pqt] t3 -- [fermion, edge label = \Pqt] t1,
+%             g2 [particle = \Pg] -- [gluon] t3,
+%             t2 -- [scalar] h [particle = \PH],
+%             g1 -- [draw=none] g2,
+%         };
+
+%         \caption*{\ggH}
+%     \end{subfigure} 
+%     %to put these two diagrams side by side. no empty line in between these two blocks, otherwise it indicates an empty line in the pdf
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[horizontal=b to h]{
+%             q1 [particle = $\Pq_{1}$] -- [fermion] a -- [fermion] aq1 [particle = $\Pq^\prime_{1}$],
+%             a -- [boson, edge label = \PV] b -- [boson, edge label = \PV] c,
+%             b -- [scalar] h [particle = \PH],
+%             aq2 [particle = $\Pq_{2}$] -- [fermion] c -- [fermion] q2 [particle = $\Pq^\prime_{2}$],
+
+%             q1 -- [draw = none] n -- [draw = none] aq2,
+%             a -- [draw = none] c,
+%             aq1 -- [draw = none] h -- [draw = none] q2,
+
+%         };
+%         \caption*{\qqH}
+%     \end{subfigure}
+
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[horizontal=a to b] {
+%             q [particle = \Pq] -- [fermion] a -- [anti fermion] aq [particle = $\Pq^\prime$],
+%             a -- [boson, edge label = \PV] b,
+%             v [particle = \PV] -- [boson] b -- [scalar] h [particle = \PH],
+%         };
+%         \caption*{\VH}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[horizontal=b to h]{
+%             g1 [particle = \Pg] -- [gluon] a -- [fermion] t1 [particle = \Pqt],
+%             a -- [anti fermion, edge label = \Paqt] b -- [anti fermion, edge label = \Pqt] c,
+%             b -- [scalar] h [particle = \PH],
+%             g2 [particle = \Pg] -- [gluon] c -- [anti fermion] t2 [particle = \Paqt],
+
+%             g1 -- [draw = none] n -- [draw = none] g2,
+%             a -- [draw = none] c,
+%             t1 -- [draw = none] h -- [draw = none] t2,
+%         };
+%         \caption*{\ttH}
+%     \end{subfigure}
+%     \caption{Main production modes of the Higgs boson.}
+%     \label{fig:main_higgs_modes}
+% \end{figure}
+
+
+
+% \begin{figure*}[!htb]
+%     \centering
+%     \captionsetup{justification=centering}
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[horizontal=b to h]{
+%             g1 [particle = \Pg] -- [gluon] a -- [fermion] b1 [particle = \Pqb],
+%             a -- [anti fermion, edge label = \Paqb] b -- [anti fermion, edge label = \Pqb] c,
+%             b -- [scalar] h [particle = \PH],
+%             g2 [particle = \Pg] -- [gluon] c -- [anti fermion] b2 [particle = \Paqb],
+
+%             g1 -- [draw = none] n -- [draw = none] g2,
+%             a -- [draw = none] c,
+%             b1 -- [draw = none] h -- [draw = none] b2,
+%         };
+%         \caption*{\bbH}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[horizontal=a to b] {
+%             g [particle = \Pg] -- [gluon] a -- [anti fermion] qb [particle = \Pqb],
+%             a -- [fermion, edge label = \Pqb] b,
+%             w [particle = $\PW^{-}$] -- [boson] b -- [fermion, edge label = \Pqt] th -- [fermion] t [particle = \Pqt],
+%             th -- [scalar] h [particle = \PH],
+%             t -- [draw = none] h -- [draw = none] w, 
+%         };
+%         \caption*{\tHW}
+%     \end{subfigure}
+
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[vertical=a to b] {
+%             q [particle = \Pq] -- [fermion] a -- [fermion] aq [particle = \Pq'],
+%             a -- [boson, edge label = \PW] b,
+%             qb [particle = \Pqb] -- [fermion] b -- [fermion, edge label = \Pqt] c,
+%             c -- [scalar] h [particle = \PH],
+%             c -- [fermion] t [particle = \Pqt],
+%             q -- [draw = none] n -- [draw = none] qb,
+%             aq -- [draw = none] h -- [draw = none] c,
+%             aq -- [draw = none] h -- [draw = none] t,
+%         };
+%         \caption*{\tHq}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[horizontal=b to h]{
+%             q1 [particle = \Pq] -- [fermion] a -- [fermion] q2 [particle = $\Pq^\prime$],
+%             a -- [boson, edge label = \PW] b -- [boson, edge label = \PW] c,
+%             b -- [scalar] h [particle = \PH],
+%             qb [particle = \Pqb] -- [fermion] c -- [fermion] qt [particle = \Pqt],
+
+%             q1 -- [draw = none] n -- [draw = none] qb,
+%             a -- [draw = none] c,
+%             q2 -- [draw = none] h -- [draw = none] qt,
+%         };
+%         \caption*{\tHq}
+%     \end{subfigure}
+
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[horizontal=g1 to q1, horizontal=q2 to z] {
+%             g1 [particle = \Pg] -- [gluon] q1,
+%             q1 -- [fermion, edge label' = \Pq] q2 -- [fermion, edge label' = \Pq] q3 -- [fermion, edge label' = \Pq] q1,
+%             g2 [particle = \Pg] -- [gluon] q3,
+%             q2 -- [boson, edge label = \PZ] z ,
+%             z -- [boson] z2 [particle = \PZ],
+%             z -- [scalar] h [particle = \PH],
+%             g1 -- [draw=none] g2,
+%         };
+%         \caption*{\ggZH}
+%     \end{subfigure} 
+%     \begin{subfigure}[b]{0.45\textwidth}
+%         \centering
+%         \feynmandiagram[horizontal=t1 to t2] {
+%             g1 [particle = \Pg] -- [gluon] t1 -- [fermion, edge label = \Pqt] t2 -- [boson] z [particle = \PZ],
+%             g2 [particle = \Pg] -- [gluon] t4 -- [anti fermion, edge label = \Pqt] t3 -- [scalar] h [particle = \PH],
+%             t1 -- [anti fermion, edge label = \Pqt] t4,
+%             t2 -- [fermion, edge label = \Pqt] t3,
+%             g1 -- [draw = none] g2,
+%             z -- [draw = none] h,
+%         };
+%         \caption*{\ggZH}
+%     \end{subfigure} 
+%     \caption{Examples of minor Higgs boson production modes.}
+%     \label{fig:minor_higgs_modes}
+% \end{figure*}
 \begin{figure}[!htbp]
 	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/placeholder.png}  % TODO.
-		\includegraphics[width=0.48\textwidth]{figures/placeholder.png}  % TODO.
+		\includegraphics[width=0.48\textwidth]{figures/placeholder.png}
+		% TODO.
+		\includegraphics[width=0.48\textwidth]{figures/placeholder.png}
+		% TODO.
 		\caption
 			[Feynman diagrams for the \gghzzfourl and \ggzzstarfourl processes.]
 			{
@@ -87,23 +258,25 @@ Section~\ref{sec:bkg_estim} discusses the associated background processes and ho
 \end{figure}
 
 Before drawing conclusions from the data themselves, it is necessary for particle physicists to make predictions about their analysis using simulated events or \emph{simulation}.
-These events simulate a specific process (\eg $\pp \to \hzzfourl$), governed by some theoretical framework that is programmed mathematically into a software package.
+Such events simulate a specific process (\eg $\pp \to \hzzfourl$), governed by some theoretical framework that is programmed mathematically into a software package.
 % events from simulated particle physics collisions--- are created by software physicists have created software packages that simulate particle physics collisions,
 % the resulting particle transformations using various theoretical frameworks,
 % and even the interactions that particles have with the virtual detectors, through which they traverse.
-Programs like \MGvATNLO and \POWHEG can simulate millions of rare (or even \emph{fictitious}) events in just a single day, whereas the same event in actual data might otherwise take decades---\emph{or not at all!}% might otherwise take many years to observe in data.
+Computer programs like \MGvATNLO and \POWHEG can simulate millions of rare (or even \emph{fictitious}) events in just a single day, whereas gathering the same number of events in CMS data might otherwise take \emph{decades}!
+% might otherwise take many years to observe in data.
 Furthermore, software can even simulate the particles as they travel through the simulated detectors.
 Programs like \GEANTfour show analysts what to expect as the particles interact with a virtual version of the CMS detector.
-Predictions from simulation can then be compared to the truth---the data---as a way to check the accuracy of the analysis.
+Predictions from simulation can then be compared to the truth---\emph{the data}---as a way to check the accuracy of the analysis.
 For example, a surplus of events in data where none was expected may lead to the discovery of new particles, as was the case for the discovery of the Higgs boson.
+% TODO:cite.
 % agreement or deviations in what was expected.
-% TODO: The simulated events for this analysis are described in Sec.~\ref{sec:datasets_simul_trig}.
+% TODO: The simulated events for this analysis are described in Sec.~\ref{sec:analyzed_data}.
 
-So how is the measurement of \mH obtained?
+\emph{So how is the measurement of \mH obtained?}
 Since the signal process is \hzzfourl, conservation of energy leads one to expect that $\mfourl \approx \mH$.
-Although this is not how the final measurement is obtained, it is a logical starting point.
-The distribution of \mfourl values reveals that the Higgs boson mass resonance stands well above the distribution of expected background events (Fig.~\ref{fig:m4l_run2}).
-Simulated signal events are then used to predict the \emph{line shape} of this signal peak
+Although this is not how the final measurement is obtained, it is a reasonable starting point.
+The distribution of \mfourl values reveals that the Higgs boson mass resonance stands well above the distribution of expected background events, as shown in Fig.~\ref{fig:m4l_run2}.
+Simulated signal events are then used to predict the \emph{line shape} of this signal peak.
 % (Sec.~\ref{sec:signal_model}).
 This signal modeling is performed using a double-sided Crystal Ball function to fit the line shape, for various mass points of \mH, in each of the four final states.
 % m4l dist Full Run 2.
@@ -113,16 +286,27 @@ This signal modeling is performed using a double-sided Crystal Ball function to 
     \includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/higgsmassmeas/m4l_FullRun2_epjc.jpeg}
 		\caption
 			[Distribution of \mfourl from \hzzfourl events using Full Run 2 data.]
-			{Distribution of \mfourl from \hzzfourl events using Full Run 2 data.}
+			{Distribution of \mfourl from \hzzfourl events using Full Run 2 data. Plot taken from .
+			% TODO:cite HIG-19-001
+			}
         \label{fig:m4l_run2}
 \end{figure}
 
-The precision of the measurement of \mH is improved by implementing several techniques:
+The precision on the measured value of \mH is improved by implementing several techniques:
+% \begin{itemize}
+% 	\item calculating a per-event matrix element kinematic discriminant
+% 	\item deriving correction factors for the uncertainty on \mfourl within various regions of phase space
+% 	\item reevaluating the lepton \pt values using a \Zone mass constraint
+% 	\item constraining the four muon tracks to the selected vertex (\emph{vertex constraint})
+% \end{itemize}
 calculating a per-event matrix element kinematic discriminant,
-deriving correction factors for \mfourl uncertainty for various regions of phase space,
+deriving correction factors for the uncertainty on \mfourl within various regions of
+% TODO: which phase space? (pT, eta, phi)?
+phase space,
 reevaluating the lepton \pt values using a \Zone mass constraint,
 and constraining the four muon tracks to the selected vertex (\emph{vertex constraint}).
-% The implementation of these techniques is discussed in Sec.~\ref{sec:techniques}.
+The implementation of these techniques is discussed in Sec.~\ref{sec:techniques}.
+
 % The first technique is called the \Zone mass constraint, which uses the benefit of the mostly on-shell \Zone mass resonance to reevaluate the momenta of the two leptons that built the \Zone, on a per-event basis.
 % This improves the overall lepton momentum resolution, thereby improving the resolution of the \mH peak.
 % The second technique is per-event mass uncertainty.
@@ -135,31 +319,29 @@ and constraining the four muon tracks to the selected vertex (\emph{vertex const
 % - Per-event 
 
 Important in any scientific analysis is the careful study of all the associated uncertainties that inherently come with making \emph{any} measurement.
-The two main kinds of uncertainties are either \emph{statistical}, which depend on the number of data points used to the make the measurement, or \emph{systematic}, which depend on the instrumentation precision used to make the measurement.
+There are two main kinds of uncertainties:
+the first is \emph{statistical} uncertainty, which depends on how many data points were collected to make the measurement,
+while the second is \emph{systematic} uncertainty, which depends on the precision of the instruments used to make the measurement.
+% TODO: Mention theoretical uncertainties?
 The systematic uncertainties for this analysis include:
 \begin{itemize}
-	\item \lumiint
-	% TODO
-	(2.5\%)
-	\item Lepton identification and reconstruction efficiencies (
-		% TODO
-		2.5--9\%)
-	\item Lepton energy scale
+	\item \lumiint (2.5\%). % TODO: confirm number and cite.
+	\item Lepton identification and reconstruction efficiencies (2.5--9\%). % TODO: confirm number.
+	\item Lepton energy scale. % TODO: get number.
 	% \item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG.
-	\item Estimation of the reducible background (40\%).
+	\item Estimation of the reducible background (40\%). % TODO: cite.
 \end{itemize}
 The systematic theoretical uncertainties include:
 \begin{itemize}
-	\item Renormalization and factorization scale uncertainties.
-	\item Choice of the set of parton distribution functions.
+	\item Renormalization and factorization scale uncertainties.  % TODO: Get number and cite.
+	\item Choice of the set of parton distribution functions. % TODO: Get number and cite.
 	% \item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG
-	\item Branching fraction uncertainties for signal and background processes.
+	\item Branching fraction uncertainties for signal and background processes. % TODO: Get number and cite.
 \end{itemize}
 % These uncertainties are discussed in Sec.~\ref{sec:syst_uncert}.
 
-% TODO: Fix below.
-Finally, a likelihood fit is performed on the \mH spectrum to extract the most likely value of \mH.
-% The results are summarized in Sec.~\ref{sec:results}.
+All of these ingredients are used in the final measurement, which is obtained via a likelihood fit on the \mH spectrum to extract the most likely value of \mH.
+The results of the precision measurement of \mH are summarized in Sec.~\ref{sec:results}.
 
 
 

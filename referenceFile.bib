@@ -88,14 +88,23 @@ The general guidelines for choosing references are:
 
 % N.B.: Curly braces:
 % * Protect the upper/lowercase of the word.
-% * Allow you to use commands.
+% * Allow you to use commands, e.g., ...mass near 125{\GeV}
 % * I don't think are required to use math env ($...$)
+% * I think if you do: "{...}", then letter case is protected (so you don't have to do: {The {H}iggs boson...}).
+
+% Xunwu's changes to the original citation taken from url:
+% * Added key=number and made the value=(reportNumber's value).
+% * In number's value, changed comma to dot to separate strings.
+% * Removed ", CMS-TDR-12" from reportNumber.
+% This techreport printout looks like this:
+% <author>, <title>, Technical Report <number>, <month> <year>. <url>
 
 % TODO: In key=title, get the sqrt symbol to have math mode font. 
 % TODO: Change all lepton l's to {$\ell$}
 
 % REMINDER: I will use JHEP citation style:
-% Reference titles are italicized, sentence case (i.e., only the first word's first letter is uppercase), proper nouns are also uppercase, references are in appearance-order, citation ranges look like 1--3. 
+% Reference titles are italicized, sentence case (i.e., only the first word's first letter is uppercase), proper nouns are also uppercase, references are in appearance-order, citation ranges look like 1--3 (and use an en dash). 
+% So if this is in the title: "pp collisions at sqrt{s} = 7 TeV", everything EXCEPT the 7 is italicized. The "=" is in math mode.
 % Interestingly, JHEP uses lowercase "ref.", "refs.", "section", "figure", "figures". Doesn't use "fig." or "sec.".
 % The reference label (e.g., [2]) can be put directly after the thing which it references or at the end of the sentence.
 
@@ -304,7 +313,6 @@ article{PDG2020,
 }
 	author = {{CDF Collaboration{\textdagger}{\textdaggerdbl}} and Aaltonen, T. and Amerio, S. and Amidei, D. and Anastassov, A. and Annovi, A. and Antos, J. and Apollinari, G. and Appel, J. A. and Arisawa, T. and Artikov, A. and Asaadi, J. and Ashmanskas, W. and Auerbach, B. and Aurisano, A. and Azfar, F. and Badgett, W. and Bae, T. and Barbaro-Galtieri, A. and Barnes, V. E. and Barnett, B. A. and Barria, P. and Bartos, P. and Bauce, M. and Bedeschi, F. and Behari, S. and Bellettini, G. and Bellinger, J. and Benjamin, D. and Beretvas, A. and Bhatti, A. and Bland, K. R. and Blumenfeld, B. and Bocci, A. and Bodek, A. and Bortoletto, D. and Boudreau, J. and Boveia, A. and Brigliadori, L. and Bromberg, C. and Brucken, E. and Budagov, J. and Budd, H. S. and Burkett, K. and Busetto, G. and Bussey, P. and Butti, P. and Buzatu, A. and Calamba, A. and Camarda, S. and Campanelli, M. and Carls, B. and Carlsmith, D. and Carosi, R. and Carrillo, S. and Casal, B. and Casarsa, M. and Castro, A. and Catastini, P. and Cauz, D. and Cavaliere, V. and Cerri, A. and Cerrito, L. and Chen, Y. C. and Chertok, M. and Chiarelli, G. and Chlachidze, G. and Cho, K. and Chokheli, D. and Clark, A. and Clarke, C. and Convery, M. E. and Conway, J. and Corbo, M. and Cordelli, M. and Cox, C. A. and Cox, D. J. and Cremonesi, M. and Cruz, D. and Cuevas, J. and Culbertson, R. and d{\textquoteright}Ascenzo, N. and Datta, M. and de Barbaro, P. and Demortier, L. and Deninno, M. and D{\textquoteright}Errico, M. and Devoto, F. and Di Canto, A. and Di Ruzza, B. and Dittmann, J. R. and Donati, S. and D{\textquoteright}Onofrio, M. and Dorigo, M. and Driutti, A. and Ebina, K. and Edgar, R. and Elagin, A. and Erbacher, R. and Errede, S. and Esham, B. and Farrington, S. and Fern{\'a}ndez Ramos, J. P. and Field, R. and Flanagan, G. and Forrest, R. and Franklin, M. and Freeman, J. C. and Frisch, H. and Funakoshi, Y. and Galloni, C. and Garfinkel, A. F. and Garosi, P. and Gerberich, H. and Gerchtein, E. and Giagu, S. and Giakoumopoulou, V. and Gibson, K. and Ginsburg, C. M. and Giokaris, N. and Giromini, P. and Glagolev, V. and Glenzinski, D. and Gold, M. and Goldin, D. and Golossanov, A. and Gomez, G. and Gomez-Ceballos, G. and Goncharov, M. and Gonz{\'a}lez L{\'o}pez, O. and Gorelov, I. and Goshaw, A. T. and Goulianos, K. and Gramellini, E. and Grosso-Pilcher, C. and Guimaraes da Costa, J. and Hahn, S. R. and Han, J. Y. and Happacher, F. and Hara, K. and Hare, M. and Harr, R. F. and Harrington-Taber, T. and Hatakeyama, K. and Hays, C. and Heinrich, J. and Herndon, M. and Hocker, A. and Hong, Z. and Hopkins, W. and Hou, S. and Hughes, R. E. and Husemann, U. and Hussein, M. and Huston, J. and Introzzi, G. and Iori, M. and Ivanov, A. and James, E. and Jang, D. and Jayatilaka, B. and Jeon, E. J. and Jindariani, S. and Jones, M. and Joo, K. K. and Jun, S. Y. and Junk, T. R. and Kambeitz, M. and Kamon, T. and Karchin, P. E. and Kasmi, A. and Kato, Y. and Ketchum, W. and Keung, J. and Kilminster, B. and Kim, D. H. and Kim, H. S. and Kim, J. E. and Kim, M. J. and Kim, S. H. and Kim, S. B. and Kim, Y. J. and Kim, Y. K. and Kimura, N. and Kirby, M. and Kondo, K. and Kong, D. J. and Konigsberg, J. and Kotwal, A. V. and Kreps, M. and Kroll, J. and Kruse, M. and Kuhr, T. and Kurata, M. and Laasanen, A. T. and Lammel, S. and Lancaster, M. and Lannon, K. and Latino, G. and Lee, H. S. and Lee, J. S. and Leo, S. and Leone, S. and Lewis, J. D. and Limosani, A. and Lipeles, E. and Lister, A. and Liu, Q. and Liu, T. and Lockwitz, S. and Loginov, A. and Lucchesi, D. and Luc{\`a}, A. and Lueck, J. and Lujan, P. and Lukens, P. and Lungu, G. and Lys, J. and Lysak, R. and Madrak, R. and Maestro, P. and Malik, S. and Manca, G. and Manousakis-Katsikakis, A. and Marchese, L. and Margaroli, F. and Marino, P. and Matera, K. and Mattson, M. E. and Mazzacane, A. and Mazzanti, P. and McNulty, R. and Mehta, A. and Mehtala, P. and Menzione, A. and Mesropian, C. and Miao, T. and Michielin, E. and Mietlicki, D. and Mitra, A. and Miyake, H. and Moed, S. and Moggi, N. and Moon, C. S. and Moore, R. and Morello, M. J. and Mukherjee, A. and Muller, Th. and Murat, P. and Mussini, M. and Nachtman, J. and Nagai, Y. and Naganoma, J. and Nakano, I. and Napier, A. and Nett, J. and Nigmanov, T. and Nodulman, L. and Noh, S. Y. and Norniella, O. and Oakes, L. and Oh, S. H. and Oh, Y. D. and Okusawa, T. and Orava, R. and Ortolan, L. and Pagliarone, C. and Palencia, E. and Palni, P. and Papadimitriou, V. and Parker, W. and Pauletta, G. and Paulini, M. and Paus, C. and Phillips, T. J. and Piacentino, G. and Pianori, E. and Pilot, J. and Pitts, K. and Plager, C. and Pondrom, L. and Poprocki, S. and Potamianos, K. and Pranko, A. and Prokoshin, F. and Ptohos, F. and Punzi, G. and Redondo Fern{\'a}ndez, I. and Renton, P. and Rescigno, M. and Rimondi, F. and Ristori, L. and Robson, A. and Rodriguez, T. and Rolli, S. and Ronzani, M. and Roser, R. and Rosner, J. L. and Ruffini, F. and Ruiz, A. and Russ, J. and Rusu, V. and Sakumoto, W. K. and Sakurai, Y. and Santi, L. and Sato, K. and Saveliev, V. and Savoy-Navarro, A. and Schlabach, P. and Schmidt, E. E. and Schwarz, T. and Scodellaro, L. and Scuri, F. and Seidel, S. and Seiya, Y. and Semenov, A. and Sforza, F. and Shalhout, S. Z. and Shears, T. and Shepard, P. F. and Shimojima, M. and Shochet, M. and Shreyber-Tecker, I. and Simonenko, A. and Sliwa, K. and Smith, J. R. and Snider, F. D. and Song, H. and Sorin, V. and St. Denis, R. and Stancari, M. and Stentz, D. and Strologas, J. and Sudo, Y. and Sukhanov, A. and Suslov, I. and Takemasa, K. and Takeuchi, Y. and Tang, J. and Tecchio, M. and Teng, P. K. and Thom, J. and Thomson, E. and Thukral, V. and Toback, D. and Tokar, S. and Tollefson, K. and Tomura, T. and Torre, S. and Torretta, D. and Totaro, P. and Trovato, M. and Ukegawa, F. and Uozumi, S. and V{\'a}zquez, F. and Velev, G. and Vellidis, K. and Vernieri, C. and Vidal, M. and Vilar, R. and Viz{\'a}n, J. and Vogel, M. and Volpi, G. and Wagner, P. and Wallny, R. and Wang, S. M. and Waters, D. and Wester, W. C. and Whiteson, D. and Wicklund, A. B. and Wilbur, S. and Williams, H. H. and Wilson, J. S. and Wilson, P. and Winer, B. L. and Wittich, P. and Wolbers, S. and Wolfmeister, H. and Wright, T. and Wu, X. and Wu, Z. and Yamamoto, K. and Yamato, D. and Yang, T. and Yang, U. K. and Yang, Y. C. and Yao, W.-M. and Yeh, G. P. and Yi, K. and Yoh, J. and Yorita, K. and Yoshida, T. and Yu, G. B. and Yu, I. and Zanetti, A. M. and Zeng, Y. and Zhou, C. and Zucchelli, S.},
 
-
 %=== The CMS Experiment ===%
 @article{collaboration_cms_2008,
 	title = {The {CMS} experiment at the {CERN} {LHC}},
@@ -314,16 +322,73 @@ article{PDG2020,
 	doi = {10.1088/1748-0221/3/08/S08004},
 	number = {08},
 	urldate = {2022-06-10},
-	journal = {Journal of Instrumentation},
+	journal = {J. Inst.},
       collaboration = {CMS},
 	author = {Collaboration, The CMS and Chatrchyan, S and Hmayakyan, G and Khachatryan, V and Sirunyan, A M and Adam, W and Bauer, T and Bergauer, T and Bergauer, H and Dragicevic, M and Punz, T and Riboni, P},
 	month = aug,
 	year = {2008},
 	pages = {S08004--S08004},
 }
-
-
-
+% Electron Reconstruction
+@article{Ereco_performance_2015,
+	title = {Performance of electron reconstruction and selection with the {CMS} detector in proton-proton collisions at $\sqrt{s} = 8${\TeV}},
+	volume = {10},
+	issn = {1748-0221},
+	doi = {10.1088/1748-0221/10/06/P06005},
+	language = {en},
+	number = {06},
+	urldate = {2022-07-23},
+	journal = {J. Inst.},
+      collaboration = {CMS},
+	month = jun,
+	year = {2015},
+	pages = {P06005--P06005},
+	url = {https://iopscience.iop.org/article/10.1088/1748-0221/10/06/P06005},
+}
+% Gaussian-sum filter
+@article{gsf,
+	doi = {10.1088/0954-3899/31/9/n01},
+	year = 2005,
+	month = {jul},
+	publisher = {{IOP} Publishing},
+	volume = {31},
+	number = {9},
+	pages = {N9--N20},
+	author = {W Adam and others},
+	title = {Reconstruction of electrons with the {G}aussian-sum filter in the {CMS} tracker at the {LHC}},
+	journal = {Journal of Physics G: Nuclear and Particle Physics},
+	url = {https://doi.org/10.1088/0954-3899/31/9/n01},
+}
+	author = {W Adam and R Frühwirth and A Strandlie and T Todorov},
+% 
+@article{general_track_reco,
+	doi = {10.1088/1748-0221/9/10/p10009},
+	year = 2014,
+	month = {oct},
+	publisher = {{IOP} Publishing},
+	volume = {9},
+	number = {10},
+	pages = {P10009--P10009},
+      collaboration = {CMS},
+	title = {Description and performance of track and primary-vertex reconstruction with the {CMS} tracker},
+	journal = {Journal of Instrumentation},
+	url = {https://doi.org/10.1088/1748-0221/9/10/p10009},
+}
+% Muon Reco.
+@article{reco_muon,
+	doi = {10.1088/1748-0221/7/10/p10002},
+	year = 2012,
+	month = {oct},
+	publisher = {{IOP} Publishing},
+	volume = {7},
+	number = {10},
+	pages = {P10002--P10002},
+	author = {The CMS collaboration},
+      collaboration = {CMS},
+	title = "{Performance of {CMS} muon reconstruction in pp collision events at {$\sqrt{s} = 7\TeV$}}",
+	journal = {J. Inst.},
+	url = {https://doi.org/10.1088/1748-0221/7/10/p10002},
+}
 
 
 % HIG-16-041

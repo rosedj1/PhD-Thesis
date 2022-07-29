@@ -75,27 +75,17 @@ If an event contains more than one \ZZ candidate that passes the selection crite
 % \label{sec:zz_sel}
 % Words.
 
-%=== Filippo is waiting to put a plot/table here to show the events lost as the cutflow proceeds. ===%
-
-% \begin{table}[H]
-% \caption{Feasible triples for highly variable Grid, MLMMH.}
-% \label{tbl1}
-% \begin{tabularx}{6.5 in}{r l X}
-% \hline {{Time (s)}} & {{Triple chosen}} & {{Other feasible triples}} \\ \hline
-% 0 & (1, 11, 13725) & (1, 12, 10980), (1, 13, 8235), (2, 2, 0), (3, 1, 0) \\
-% 2745 & (1, 12, 10980) & (1, 13, 8235), (2, 2, 0), (2, 3, 0), (3, 1, 0) \\
-% 5490 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-% \hline
-% \end{tabularx}
-% \end{table}
-
+After the full analysis selection is implemented in each of the \fourl final states,
+the expected and observed yields for the signal and background processes are given in Tables~\ref{tab:yield_sr_105to140} and~\ref{tab:yield_sr_70to170},
+which count events within the narrow signal region $\left(105 < \mfourl < 140\GeV\right)$ and wide signal region $\left(70 < \mfourl < 170\GeV\right)$, respectively.
+%=== Filippo is waiting to put cutflow table here. ===%
 \begin{table}[!htb]
     \centering
     % \captionsetup{justification=centering}
     \topcaption
-        [Yields in the narrow signal region $\left(105 < \mfourl < 140\GeV\right)$]
+        [Yields in the narrow signal region $105 < \mfourl < 140\GeV$]
         {Number of expected and observed yields of signal and background processes within the narrow signal region $105 < \mfourl < 140\GeV$ after the full event selection, split into the four final states.}
-    \begin{tabular}{llllll}
+    \begin{tabular}{lrrrrr}
         \hline
     Process                                 & \fourmu   & \foure    & \twoetwomu    & \twomutwoe    & Inclusive    \\
         \hline
@@ -108,7 +98,7 @@ If an event contains more than one \ZZ candidate that passes the selection crite
         \hline
     Total Expected                          &   221.4   & 103.7     & 162.3         & 117.1         &   604.5   \\
         \hline
-    Total Observed                          &   -       &   -       &   -           &   -           &   -       \\
+    Total Observed                          &   ---       &   ---       &   ---           &   ---           &   ---           \\
         \hline
     \end{tabular}
     \label{tab:yield_sr_105to140}
@@ -117,9 +107,10 @@ If an event contains more than one \ZZ candidate that passes the selection crite
     \centering
     % \captionsetup{justification=centering}
     \topcaption
-        [Yields in the wide signal region $\left(70 < \mfourl < 170\GeV\right)$]
+        [Yields in the wide signal region $70 < \mfourl < 170\GeV$]
         {Number of expected and observed yields of signal and background processes within the wide signal region $70 < \mfourl < 170\GeV$ after the full event selection, split into the four final states.}
-    \begin{tabular}{llllll}
+    % \begin{tabular}{llllll}
+    \begin{tabular}{lrrrrr}
         \hline
     Process                                 &   \fourmu &   \foure  &   \twoetwomu  &   \twomutwoe  &   Inclusive   \\
         \hline
@@ -132,12 +123,62 @@ If an event contains more than one \ZZ candidate that passes the selection crite
         \hline
     Total Expected                          &  679.0    &	287.2	&   387.4	    &   278.8	    &   1632.3      \\
         \hline
-    Total Observed                          &   -       &   -       &   -           &   -           &   -           \\
+    Total Observed                          &   ---       &   ---       &   ---           &   ---           &   ---           \\
         \hline
     \end{tabular}
     \label{tab:yield_sr_70to170}
 \end{table}
 
+%=== TODO: Put "A" beneath first subfigure, "B" beneath second, etc.
+% Reference subfigs like: ~\subref{s}
+% \begin{figure}[!htb]
+%     \centering
+% PLOTS GO HERE
+%     \begin{subfigure}{0.3\textwidth}
+%         \includegraphics[width=\textwidth]{example-image}
+%         \caption{First subfigure.}
+%         \label{fig:first}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}{0.3\textwidth}
+%         \includegraphics[width=\textwidth]{example-image}
+%         \caption{Second subfigure.}
+%         \label{fig:second}
+%     \end{subfigure}
+%     \hfill
+%     \begin{subfigure}{0.3\textwidth}
+%         \includegraphics[width=\textwidth]{example-image}
+%         \caption{Third subfigure.}
+%         \label{fig:third}
+%     \end{subfigure}
+            
+%     \caption{Subreferences in \LaTeX.}
+%     \label{fig:figures}
+%     \end{figure}
 
+% \begin{figure}[!htb]
+%     \centering
+%     % width=0.48\textwidth
+%     \includegraphics[height=5.5cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_4mu.png}
+%     \includegraphics[height=5.5cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_4e.png}
+%     \includegraphics[height=5.5cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_2e2mu.png}
+%     \includegraphics[height=5.5cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_2mu2e.png}
+%     \includegraphics[height=7.0cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_inclus.png}
+%     \caption
+%         [Some words here.]
+%         {Distribution of the four-lepton invariant mass for each final state. A) blah blah}
+%     \label{fig:dist_m4l_fullsel}
+% \end{figure}
 
-
+\begin{multiFigure}
+    \centering
+    \addFigure{0.48}{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_4mu.png}
+    \addFigure{0.48}{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_4e.png}
+    \addFigure{0.48}{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_2e2mu.png}
+    \addFigure{0.48}{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_2mu2e.png}
+    \addFigure{0.60}{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_inclus.png}
+    % \addFigure[Z]{0.6}{./theworld.png}  % <== Control the label.
+    \captionof{figure}  % Type of caption.
+        [Distribution of the four-lepton invariant mass for each final state.]
+        {Distribution of the four-lepton invariant mass for each final state.}
+\end{multiFigure}

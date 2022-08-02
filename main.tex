@@ -27,6 +27,20 @@
 
 \usepackage{tabularx}
 
+% For Suzanne's Feynman diagrams.
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\pgfdeclarepatternformonly{south west lines}{\pgfqpoint{-0pt}{-0pt}}{\pgfqpoint{3pt}{3pt}}{\pgfqpoint{3pt}{3pt}}{
+    \pgfsetlinewidth{0.4pt}
+    \pgfpathmoveto{\pgfqpoint{0pt}{0pt}}
+    \pgfpathlineto{\pgfqpoint{3pt}{3pt}}
+    \pgfpathmoveto{\pgfqpoint{2.8pt}{-.2pt}}
+    \pgfpathlineto{\pgfqpoint{3.2pt}{.2pt}}
+    \pgfpathmoveto{\pgfqpoint{-.2pt}{2.8pt}}
+    \pgfpathlineto{\pgfqpoint{.2pt}{3.2pt}}
+    \pgfusepath{stroke}
+}
+
 \input{tex/definitions.tex}
 
 %=== N.B.: If you want to use biblatex, go into ufdissertation.cls and search for 'biblatex' (un)comment instructions.
@@ -94,7 +108,7 @@
 %%%%%%%%%%%%%
 %--- CMS ---%
 %%%%%%%%%%%%%
-\input{tex/04_cms/cms_intro.tex}
+% \input{tex/04_cms/cms_intro.tex}
 % \input{tex/04_cms/tracker.tex}
 % \input{tex/04_cms/calorimeters.tex}
 % \input{tex/04_cms/solenoid.tex}
@@ -108,7 +122,7 @@
 % \input{tex/05_higgs_mass/higgs_intro.tex}
 % \input{tex/05_higgs_mass/overview.tex}
 % \input{tex/05_higgs_mass/datasets_simul_trig.tex}
-\input{tex/05_higgs_mass/event_sel.tex}               % Fill out subsections.
+% \input{tex/05_higgs_mass/event_sel.tex}               % Fill out subsections.
 % \input{tex/05_higgs_mass/backgrounds.tex}             % Done?
 % \input{tex/05_higgs_mass/signal_modeling.tex}
 % \input{tex/05_higgs_mass/techniques.tex}
@@ -117,8 +131,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Search for Dilepton Resonances ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/06_dilep_res/dilep_res_intro.tex}
-% \input{tex/06_dilep_res/overview.tex}
+\input{tex/06_dilep_res/dilep_res_intro.tex}
+\input{tex/06_dilep_res/overview.tex}
 % \input{tex/06_dilep_res/datasets_simul_trig.tex}
 % \input{tex/06_dilep_res/event_sel.tex}
 % \input{tex/06_dilep_res/backgrounds.tex}

@@ -39,7 +39,6 @@
 % (2) If 3 or more authors, only keep the first author and replace second onward with "and others" (this will be replaced by "et al.").
 % (3) Make sure that key=url is filled out.
 
-% TODO: Are quotes around titles necessary?
 % DOI = Digital Object Identifier. A unique and never-changing string assigned to online (journal) articles, books, and other works.
 
 CMS recommendations:
@@ -101,6 +100,7 @@ The general guidelines for choosing references are:
 
 % TODO: In key=title, get the sqrt symbol to have math mode font. 
 % TODO: Change all lepton l's to {$\ell$}
+% TODO: Are quotes around titles necessary?
 
 %=== FINAL DECISION: I will use JHEP citation style. ===%
 % Reference titles are italicized, sentence case (i.e., only the first word's first letter is uppercase), proper nouns are also uppercase, references are in appearance-order, citation ranges look like 1--3 (and use an en dash). 
@@ -108,6 +108,11 @@ The general guidelines for choosing references are:
 % Interestingly, JHEP uses lowercase "ref.", "refs.", "section", "figure", "figures", "table", "tables 12--14". Doesn't use "fig.", "sec.", or "tab.".
 % The reference label (e.g., [2]) can be put directly after the thing which it references or at the end of the sentence.
 % Introduce abbreviations in parentheses: "The standard model (SM)...the SM Higgs boson (H)."
+% Lowercase 'c' when saying 'CMS collaboration'.
+% When to use 'et al.'? I can't say for sure in JHEP style... I've seen:
+% * 'M. Della Negra et al., Muon trigger...'
+% * 'CDF Collaboration, D0 collaboration, T. Aaltonen et al., Combination of...'
+% * 'M. Anfreville, D. Bailleux, J. Bard, A. Bornheim, C. Bouchand et al., Laser monitoring...'
 
 %=== Higgs Discovery ===%
 @article{chatrchyan_observation_2013,
@@ -439,7 +444,25 @@ techreport{hig16041,
   doi = {10.1103/PhysRevD.97.056006},
   url = {https://link.aps.org/doi/10.1103/PhysRevD.97.056006}
 }
-                       
+
+%=== Statistics ===%
+@article{cowan_asymptotic_2011,
+	title = {Asymptotic formulae for likelihood-based tests of new physics},
+	volume = {71},
+	issn = {1434-6044, 1434-6052},
+	url = {http://link.springer.com/10.1140/epjc/s10052-011-1554-0},
+	doi = {10.1140/epjc/s10052-011-1554-0},
+	abstract = {We describe likelihood-based statistical tests for use in high energy physics for the discovery of new phenomena and for construction of conﬁdence intervals on model parameters. We focus on the properties of the test procedures that allow one to account for systematic uncertainties. Explicit formulae for the asymptotic distributions of test statistics are derived using results of Wilks and Wald. We motivate and justify the use of a representative data set, called the “Asimov data set”, which provides a simple method to obtain the median experimental sensitivity of a search or measurement as well as ﬂuctuations about this expectation.},
+	language = {en},
+	number = {2},
+	urldate = {2022-08-03},
+	journal = {Eur. Phys. J. C},
+	author = {Cowan, Glen and Cranmer, Kyle and Gross, Eilam and Vitells, Ofer},
+	month = feb,
+	year = {2011},
+	pages = {1554},
+}
+	author = {Cowan, Glen and Cranmer, Kyle and Gross, Eilam and Vitells, Ofer},
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Xunwu's references below. ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

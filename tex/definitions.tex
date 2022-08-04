@@ -40,6 +40,7 @@
 
 % Some shorthand
 % turn off italics
+% Some sources suggest to not use the \mbox commands.
 \newcommand{\etal}{\mbox{et al.}\xspace} %et al. - no preceding comma
 \newcommand{\ie}{\mbox{i.e.,}\xspace}     %i.e.
 \newcommand{\eg}{\mbox{e.g.,}\xspace}     %e.g.
@@ -57,7 +58,6 @@
 
 % Units.
 % Xunwu used `\,` (a kern) at the beginning of each unit.
-% Jake, consider getting rid of \mbox below!
 \newcommand{\de}{\ensuremath{^\circ}}
 \newcommand{\tentothe}[1]{\ensuremath{\times \text{10}^\text{#1}}}
 \newcommand{\tentotheminus}[1]{\ensuremath{\times \text{10}^\text{$-$#1}}}
@@ -110,9 +110,9 @@
 % Cross section.
 \newcommand{\mb}{\ensuremath{\,\text{mb}}\xspace}
 \newcommand{\pb}{\ensuremath{\,\text{pb}}\xspace}
+\newcommand{\pbparen}{\ensuremath{\,(\text{pb})}\xspace}
 \newcommand{\fb}{\ensuremath{\,\text{fb}}\xspace}
 % Luminosity.
-%--- Don't use the \mbox commands. ---%
 % \newcommand{\abinv} {\mbox{\ensuremath{\,\text{ab}^{-1}}}\xspace}
 % \newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^{-1}}}\xspace}
 \newcommand{\fbinv}{\ensuremath{\,\text{fb}^{\text{$-$}1}}\xspace}
@@ -135,6 +135,8 @@
 \newcommand{\lum}{\ensuremath{\,\text{(lumi)}}\xspace}
 \newcommand{\lumisixteen}{\ensuremath{35.9\fbinv}\xspace}
 \newcommand{\lumiruntwo}{\ensuremath{137.1\fbinv}\xspace}
+% Branching ratio.
+% \newcommand{}{}
 
 % analysis tools
 \newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}  % \textsc is "small caps".

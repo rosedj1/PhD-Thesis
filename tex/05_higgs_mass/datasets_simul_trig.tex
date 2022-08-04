@@ -21,7 +21,7 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %=== Triggers 2016 (for pre- and post-VFP) ===%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[!ht]
+\begin{table}[h]
     % \small
     % \centering
     \topcaption
@@ -29,7 +29,7 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
         {Trigger paths used to collect 2016 data (pre- and post-VFP) for the measurement of \mh.}
 		\begin{tabular}{|lll|}
 		\hline      
-            HLT Path                                                        & Prescale          & Primary Data Set \\
+            HLT path                                                        & Prescale          & Primary data set \\
         \hline
             % TODO: Confirm with Filippo that these paths are correct.
             % TODO: Where can I find all the list of triggers? How do we know these are the best triggers to use and that we didn't miss any?
@@ -151,7 +151,7 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
 %%%%%%%%%%%%%%%%%%%%%%%
 %=== Triggers 2017 ===%
 %%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[!ht]	
+\begin{table}[h]
     % \small
     % \centering
     \topcaption
@@ -159,7 +159,7 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
         {Trigger paths used to collect 2017 data for the measurement of \mh.}
 		\begin{tabular}{|lll|}
 		\hline      
-        HLT Path                                                        & Prescale          & Primary Data Set \\
+        HLT path                                                        & Prescale          & Primary data set \\
         \hline
             % TODO: Confirm with Filippo that these paths are correct.
             % TODO: Where can I find all the list of triggers? How do we know these are the best triggers to use and that we didn't miss any?
@@ -234,7 +234,7 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
 %%%%%%%%%%%%%%%%%%%%%%%
 %=== Triggers 2018 ===%
 %%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[!ht]	
+\begin{table}[h]
     % \small
     % \centering
     \topcaption
@@ -242,7 +242,7 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
         {Trigger paths used to collect 2018 data for the measurement of \mh.}
 		\begin{tabular}{|lcl|}
 		\hline      
-        HLT Path                                                        & Prescale          & Primary Data Set \\
+        HLT path                                                        & Prescale          & Primary data set \\
         \hline
         % TODO: Confirm with Filippo that these paths are correct.
         % TODO: Where can I find all the list of triggers? How do we know these are the best triggers to use and that we didn't miss any?
@@ -318,164 +318,295 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
 \label{sec:datasets}
 % TODO: Should this be split into pre and post-VFP?
 %=== Data sets 2016.
-\begin{table}[!ht]	
+\begin{table}[h]
     %  \captionsetup{justification=justified}
     \small
     \centering
     \topcaption
         [Data sets used for 2016 UL]
-        {Names and integrated luminosities $\left( \lumiint \right)$ of the 2016 UL data sets, where $\text{(1)} = \text{MINIAOD}$.}
+        {Names of the UL 2016 data sets and the corresponding integrated luminosities $\left( \lumiint \right)$.}
+        % {Names and integrated luminosities $\left( \lumiint \right)$ of the 2016 UL data sets, where $\text{(1)} = \text{MINIAOD}$.}
 		\begin{tabular}{|lc|}
 		\hline      
-        Data Set Name & \lumiint (\fbinv) \\
+        Data set name & Integrated luminosity (\fbinv) \\
         %$\left( \fbinv \right)$ 
         \hline
         % TODO: Update Lints.
-        /DoubleEG/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v1/(1)	& \\
-        /SingleElectron/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleMuon/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v1/MINIAOD	& \\
+        /SingleElectron/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleMuon/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016B-ver1\_HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
-        /DoubleEG/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v3/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v1/(1)	& \\
-        /SingleElectron/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleMuon/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v3/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v1/MINIAOD	& \\
+        /SingleElectron/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleMuon/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016B-ver2\_HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
-        /DoubleEG/Run2016C-HIPM\_UL2016\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016C-HIPM\_UL2016\_MiniAODv2-v1/(1)	& \\
-        /SingleElectron/Run2016C-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleMuon/Run2016C-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016C-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016C-HIPM\_UL2016\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016C-HIPM\_UL2016\_MiniAODv2-v1/MINIAOD	& \\
+        /SingleElectron/Run2016C-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleMuon/Run2016C-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016C-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
-        /DoubleEG/Run2016D-HIPM\_UL2016\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016D-HIPM\_UL2016\_MiniAODv2-v1/(1)	& \\
-        /SingleElectron/Run2016D-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleMuon/Run2016D-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016D-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016D-HIPM\_UL2016\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016D-HIPM\_UL2016\_MiniAODv2-v1/MINIAOD	& \\
+        /SingleElectron/Run2016D-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleMuon/Run2016D-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016D-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
-        /DoubleEG/Run2016E-HIPM\_UL2016\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016E-HIPM\_UL2016\_MiniAODv2-v1/(1)	& \\
-        /SingleElectron/Run2016E-HIPM\_UL2016\_MiniAODv2-v5/(1)	& \\
-        /SingleMuon/Run2016E-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016E-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016E-HIPM\_UL2016\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016E-HIPM\_UL2016\_MiniAODv2-v1/MINIAOD	& \\
+        /SingleElectron/Run2016E-HIPM\_UL2016\_MiniAODv2-v5/MINIAOD	& \\
+        /SingleMuon/Run2016E-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016E-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
-        /DoubleEG/Run2016F-HIPM\_UL2016\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016F-HIPM\_UL2016\_MiniAODv2-v1/(1)	& \\
-        /SingleElectron/Run2016F-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleMuon/Run2016F-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016F-HIPM\_UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016F-HIPM\_UL2016\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016F-HIPM\_UL2016\_MiniAODv2-v1/MINIAOD	& \\
+        /SingleElectron/Run2016F-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleMuon/Run2016F-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016F-HIPM\_UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
-        /DoubleEG/Run2016F-UL2016\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016F-UL2016\_MiniAODv2-v1/(1)	& \\
-        /SingleElectron/Run2016F-UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleMuon/Run2016F-UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016F-UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016F-UL2016\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016F-UL2016\_MiniAODv2-v1/MINIAOD	& \\
+        /SingleElectron/Run2016F-UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleMuon/Run2016F-UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016F-UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
-        /DoubleEG/Run2016G-UL2016\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016G-UL2016\_MiniAODv2-v1/(1)	& \\
-        /SingleElectron/Run2016G-UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleMuon/Run2016G-UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016G-UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016G-UL2016\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016G-UL2016\_MiniAODv2-v1/MINIAOD	& \\
+        /SingleElectron/Run2016G-UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleMuon/Run2016G-UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016G-UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
-        /DoubleEG/Run2016H-UL2016\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /DoubleMuon/Run2016H-UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleElectron/Run2016H-UL2016\_MiniAODv2-v2/(1)	& \\
-        /SingleMuon/Run2016H-UL2016\_MiniAODv2-v2/(1)	& \\
-        /MuonEG/Run2016H-UL2016\_MiniAODv2-v2/(1)	& \\
+        /DoubleEG/Run2016H-UL2016\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /DoubleMuon/Run2016H-UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleElectron/Run2016H-UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /SingleMuon/Run2016H-UL2016\_MiniAODv2-v2/MINIAOD	& \\
+        /MuonEG/Run2016H-UL2016\_MiniAODv2-v2/MINIAOD	& \\
         \hline
 		\end{tabular}
 	\label{table:2016_dataSamples}
 \end{table}
 %=== Data sets 2017.
-\begin{table}[!ht]	
+\begin{table}[h]
     %  \captionsetup{justification=justified}
     \small
     \centering
     \topcaption
         [UL data sets used for 2017]
-        {Names of the UL 2017 data sets and the corresponding integrated luminosities $\left( \lumiint \right)$. $\text{(1)} = \text{MINIAOD}$}
+        {Names of the UL 2017 data sets and the corresponding integrated luminosities $\left( \lumiint \right)$.}
 		\begin{tabular}{|lc|}
 		\hline      
-        Data Set Name & Integrated Luminosity (\fbinv) \\
+        Data set name & Integrated luminosity (\fbinv) \\
         %$\left( \fbinv \right)$ 
         \hline
         % TODO: Update Lints.
-        /SingleMuon/Run2017B-UL2017\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /SingleElectron/Run2017B-UL2017\_MiniAODv2-v1/(1)	&	\\
-        /DoubleMuon/Run2017B-UL2017\_MiniAODv2-v1/(1)	&	\\
-        /DoubleEG/Run2017B-UL2017\_MiniAODv2-v1/(1)	&	\\
-        /MuonEG/Run2017B-UL2017\_MiniAODv2-v1/(1)	&	\\
+        /SingleMuon/Run2017B-UL2017\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /SingleElectron/Run2017B-UL2017\_MiniAODv2-v1/MINIAOD	&	\\
+        /DoubleMuon/Run2017B-UL2017\_MiniAODv2-v1/MINIAOD	&	\\
+        /DoubleEG/Run2017B-UL2017\_MiniAODv2-v1/MINIAOD	&	\\
+        /MuonEG/Run2017B-UL2017\_MiniAODv2-v1/MINIAOD	&	\\
         \hline
-        /SingleMuon/Run2017C-UL2017\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /SingleElectron/Run2017C-UL2017\_MiniAODv2-v1/(1)	& \\
-        /DoubleMuon/Run2017C-UL2017\_MiniAODv2-v1/(1)	& \\
-        /DoubleEG/Run2017C-UL2017\_MiniAODv2-v1/(1)	& \\
-        /MuonEG/Run2017C-UL2017\_MiniAODv2-v1/(1)	& \\
+        /SingleMuon/Run2017C-UL2017\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /SingleElectron/Run2017C-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /DoubleMuon/Run2017C-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /DoubleEG/Run2017C-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /MuonEG/Run2017C-UL2017\_MiniAODv2-v1/MINIAOD	& \\
         \hline
-        /SingleElectron/Run2017D-UL2017\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /SingleMuon/Run2017D-UL2017\_MiniAODv2-v1/(1)	& \\
-        /DoubleMuon/Run2017D-UL2017\_MiniAODv2-v1/(1)	& \\
-        /DoubleEG/Run2017D-UL2017\_MiniAODv2-v1/(1)	& \\
-        /MuonEG/Run2017D-UL2017\_MiniAODv2-v1/(1)	& \\
+        /SingleElectron/Run2017D-UL2017\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /SingleMuon/Run2017D-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /DoubleMuon/Run2017D-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /DoubleEG/Run2017D-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /MuonEG/Run2017D-UL2017\_MiniAODv2-v1/MINIAOD	& \\
         \hline
-        /SingleElectron/Run2017E-UL2017\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /SingleMuon/Run2017E-UL2017\_MiniAODv2-v1/(1)	& \\
-        /DoubleMuon/Run2017E-UL2017\_MiniAODv2-v2/(1)	& \\
-        /DoubleEG/Run2017E-UL2017\_MiniAODv2-v1/(1)	& \\
-        /MuonEG/Run2017E-UL2017\_MiniAODv2-v1/(1)	& \\
+        /SingleElectron/Run2017E-UL2017\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /SingleMuon/Run2017E-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /DoubleMuon/Run2017E-UL2017\_MiniAODv2-v2/MINIAOD	& \\
+        /DoubleEG/Run2017E-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /MuonEG/Run2017E-UL2017\_MiniAODv2-v1/MINIAOD	& \\
         \hline
-        /SingleElectron/Run2017F-UL2017\_MiniAODv2-v1/(1) & \multirow{5}{*}{TODO} \\
-        /SingleMuon/Run2017F-UL2017\_MiniAODv2-v1/(1)	& \\
-        /DoubleMuon/Run2017F-UL2017\_MiniAODv2-v1/(1)	& \\
-        /DoubleEG/Run2017F-UL2017\_MiniAODv2-v1/(1)	& \\
-        /MuonEG/Run2017F-UL2017\_MiniAODv2-v1/(1)	& \\
+        /SingleElectron/Run2017F-UL2017\_MiniAODv2-v1/MINIAOD & \multirow{5}{*}{TODO} \\
+        /SingleMuon/Run2017F-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /DoubleMuon/Run2017F-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /DoubleEG/Run2017F-UL2017\_MiniAODv2-v1/MINIAOD	& \\
+        /MuonEG/Run2017F-UL2017\_MiniAODv2-v1/MINIAOD	& \\
         \hline	
 		\end{tabular}
 	\label{table:2017_dataSamples}
 \end{table}
 %=== Data sets 2018.
-\begin{table}[!ht]	
+\begin{table}[h]
     %  \captionsetup{justification=justified}
     \small
     \centering
     \topcaption
     [UL data sets used for 2018]
-    {Names of the UL 2018 data sets and the corresponding integrated luminosities $\left( \lumiint \right)$. $\text{(1)} = \text{MINIAOD}$}
+    {Names of the UL 2018 data sets and the corresponding integrated luminosities $\left( \lumiint \right)$.}
 		\begin{tabular}{|lc|}
 		\hline      
-        Data Set Name & Integrated Luminosity (\fbinv) \\
+        Data set name & Integrated luminosity (\fbinv) \\
         %$\left( \fbinv \right)$ 
         \hline
         % TODO: Update Lints.
-		/SingleMuon/Run2018A-UL2018\_MiniAODv2-v3/(1) & \multirow{4}{*}{TODO} \\
-		/DoubleMuon/Run2018A-UL2018\_MiniAODv2-v1/(1) & \\
-		/EGamma/Run2018A-UL201\_MiniAODv2-v1/(1) & \\
-		/MuonEG/Run2018A-UL2018\_MiniAODv2-v1/(1) & \\
+		/SingleMuon/Run2018A-UL2018\_MiniAODv2-v3/MINIAOD & \multirow{4}{*}{TODO} \\
+		/DoubleMuon/Run2018A-UL2018\_MiniAODv2-v1/MINIAOD & \\
+		/EGamma/Run2018A-UL201\_MiniAODv2-v1/MINIAOD & \\
+		/MuonEG/Run2018A-UL2018\_MiniAODv2-v1/MINIAOD & \\
 		\hline
-		/SingleMuon/Run2018B-UL2018\_MiniAODv2-v2/(1) & \multirow{4}{*}{TODO} \\
-		/DoubleMuon/Run2018B-UL2018\_MiniAODv2-v1/(1)	&  \\
-		/EGamma/Run2018B-UL2018\_MiniAODv2-v1/(1)	&	\\
-		/MuonEG/Run2018B-UL2018\_MiniAODv2-v1/(1)	&	\\
+		/SingleMuon/Run2018B-UL2018\_MiniAODv2-v2/MINIAOD & \multirow{4}{*}{TODO} \\
+		/DoubleMuon/Run2018B-UL2018\_MiniAODv2-v1/MINIAOD	&  \\
+		/EGamma/Run2018B-UL2018\_MiniAODv2-v1/MINIAOD	&	\\
+		/MuonEG/Run2018B-UL2018\_MiniAODv2-v1/MINIAOD	&	\\
 		\hline
-		/SingleMuon/Run2018C-UL2018\_MiniAODv2-v2/(1) & \multirow{4}{*}{TODO} \\
-		/DoubleMuon/Run2018C-UL2018\_MiniAODv2-v1/(1)	&	\\
-		/EGamma/Run2018C-UL2018\_MiniAODv2-v1/(1)	&	\\
-		/MuonEG/Run2018C-UL2018\_MiniAODv2-v1/(1)	&	\\
+		/SingleMuon/Run2018C-UL2018\_MiniAODv2-v2/MINIAOD & \multirow{4}{*}{TODO} \\
+		/DoubleMuon/Run2018C-UL2018\_MiniAODv2-v1/MINIAOD	&	\\
+		/EGamma/Run2018C-UL2018\_MiniAODv2-v1/MINIAOD	&	\\
+		/MuonEG/Run2018C-UL2018\_MiniAODv2-v1/MINIAOD	&	\\
 		\hline
-		/SingleMuon/Run2018D-UL2018\_MiniAODv2-v3/(1) & \multirow{4}{*}{TODO} \\
-		/DoubleMuon/Run2018D-UL2018\_MiniAODv2-v1/(1)	&	\\
-		/EGamma/Run2018D-UL2018\_MiniAODv2-v1/(1)	&	\\
-		/MuonEG/Run2018D-UL2018\_MiniAODv2-v1/(1)	&	\\
+		/SingleMuon/Run2018D-UL2018\_MiniAODv2-v3/MINIAOD & \multirow{4}{*}{TODO} \\
+		/DoubleMuon/Run2018D-UL2018\_MiniAODv2-v1/MINIAOD	&	\\
+		/EGamma/Run2018D-UL2018\_MiniAODv2-v1/MINIAOD	&	\\
+		/MuonEG/Run2018D-UL2018\_MiniAODv2-v1/MINIAOD	&	\\
 		\hline	
 		\end{tabular}
 	\label{table:2018_dataSamples}
 \end{table}
-
 
 \subsection{Simulated Events}
 % Monte Carlo refers to a simulation technique.
 % Therefore "Monte Carlo events" makes no sense, while "Monte Carlo program" is fine.
 % Use "simulated events" instead (NOT "simulation" samples!).
 \label{sec:sim_samples}
+
+The data set names containing the simulated events for signal and background processes are listed in Tables~\ref{table:2016_simSamples}--\ref{table:2018_simSamples}.
+% TODO: Cross-check all data sets against DAS.
+\begin{table}[h]
+    \small
+    \captionof{table}
+        [Names of simulated signal and background samples for 2016 data.]
+        {Names of simulated signal and background samples for 2016 data. \\
+        $[1]$ ``RunIISummer20UL16MiniAODv2-106X\_mcRun2\_asymptotic\_v17-v2/MINIAODSIM''
+        \\
+        or
+        \\
+        ``RunIISummer20UL16MiniAODAPVv2-106X\_mcRun2\_asymptotic\_preVFP\_v11-v2/MINIAODSIM''}
+	\begin{tabular}{|ll|}
+		\hline      
+        Name of signal data set & $\sigma \times \mathcal{B}\pbparen$ \\
+        \hline
+		GluGluHToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV709\_pythia8/[1]	&	0.01333521	\\
+		VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV709\_pythia8/[1]	&	0.001038159	\\
+		WplusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV709\_pythia8/[1]	&	0.0002305562	\\
+		WminusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV709\_pythia8/[1]	&	0.0001462348	\\
+		ZH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2-minlo-HZJ\_JHUGenV709\_pythia8/[1]	&	0.0005321759	\\
+		ttH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2\_JHUGenV709\_pythia8/[1]	&	0.0003639351	\\
+		bbH\_HToZZTo4L\_M125\_13TeV\_JHUgenV702\_pythia8/[1]	&	0.0001339560	\\
+		tqH\_HToZZTo4L\_M125\_TuneCP5\_13TeV-jhugenv7011\-pythia8/[1]	&	0.0000857830	\\
+		\hline	
+		\hline	
+        Name of background data set & $\sigma \times \mathcal{B}\pbparen$ \\
+		\hline	
+		ZZTo4L\_13TeV\_powheg\_pythia8/[1]	&	1.256	\\
+		GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8/[1]	&	0.00158549	\\
+		GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8/[1]	&	0.00158549	\\
+		GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8/[1]	&	0.00158549	\\
+		GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8/[1]	&	0.0031942	\\
+		GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8/[1]	&	0.0031942	\\
+		GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8/[1]	&	0.0031942	\\
+        \hline
+        \end{tabular}
+    \label{table:2016_simSamples}
+\end{table}
+\begin{table}[h]
+    \small
+    \captionof{table}
+        [Names of simulated signal and background samples for 2017 data.]
+        {Names of simulated signal and background samples for 2017 data. \\
+        $[2]$ ``RunIISummer20UL17MiniAODv2-106X\_mc2017\_realistic\_v9/MINIAODSIM''}
+	\begin{tabular}{|ll|}
+		\hline      
+        Name of signal data set & $\sigma \times \mathcal{B}\pbparen$ \\
+        \hline
+		GluGluHToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[2]	&	0.01333521	\\
+		VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[2]	&	0.001038159	\\
+		WplusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV7011\_pythia8/[2]	&	0.0002305562	\\
+		WminusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV7011\_pythia8/[2]	&	0.0001462348	\\
+		ZH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2-minlo-HZJ\_JHUGenV7011\_pythia8/[2]	&	0.0005321759	\\
+		ttH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[2]	&	0.0003639351	\\
+		bbH\_HToZZTo4L\_M125\_13TeV\_JHUGenV7011\_pythia8/[2]	&	0.0001339560	\\
+		tqH\_HToZZTo4L\_M125\_TuneCP5\_13TeV-jhugenv7011\-pythia8/[1]	&	0.0000857830	\\
+		\hline	
+		\hline	
+        Name of background data set & $\sigma \times \mathcal{B}\pbparen$ \\
+		\hline	
+		ZZTo4L\_13TeV\_powheg\_pythia8/[2]	&	1.256	\\
+		GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8/[2]	&	0.00158549	\\
+		GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8/[2]	&	0.00158549	\\
+		GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8/[2]	&	0.00158549	\\
+		GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8/[2]	&	0.0031942	\\
+		GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8/[2]	&	0.0031942	\\
+		GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8/[2]	&	0.0031942	\\
+        \hline
+        \end{tabular}
+    \label{table:2017_simSamples}
+\end{table}
+\begin{table}[h]
+    \small
+    \captionof{table}
+        [Names of simulated signal and background samples for 2018 data.]
+        {Names of simulated signal and background samples for 2018 data. \\
+        $[3]$ ``RunIISummer20UL18MiniAODv2-106X\_upgrade2018\_realistic\_v16\_L1v1/MINIAODSIM''}
+	\begin{tabular}{|ll|}
+		\hline      
+        Name of signal data set & $\sigma \times \mathcal{B}\pbparen$ \\
+        \hline
+		GluGluHToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[3]	&	0.01333521	\\
+		VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[3]	&	0.001038159	\\
+		WplusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV7011\_pythia8/[3]	&	0.0002305562	\\
+		WminusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV7011\_pythia8/[3]	&	0.0001462348	\\
+		ZH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2-minlo-HZJ\_JHUGenV7011\_pythia8/[3]	&	0.0005321759	\\
+		ttH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[3]	&	0.0003639351	\\
+		bbH\_HToZZTo4L\_M125\_TuneCP2\_13TeV-JHUGenV7011\_pythia8/[3]	&	0.0001339560	\\
+		tqH\_HToZZTo4L\_M125\_TuneCP5\_13TeV-jhugenv7011\-pythia8/[1]	&	0.0000857830	\\
+		\hline	
+		\hline	
+        Name of background data set & $\sigma \times \mathcal{B}\pbparen$ \\
+		\hline	
+		ZZTo4L\_TuneCP5\_13TeV\_powheg\_pythia8/[3]	&	1.256	\\
+		GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8/[3]	&	0.00158549	\\
+		GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8/[3]	&	0.00158549	\\
+		GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8/[3]	&	0.00158549	\\
+		GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8/[3]	&	0.0031942	\\
+		GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8/[3]	&	0.0031942	\\
+		GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8/[3]	&	0.0031942	\\
+        \hline
+        \end{tabular}
+    \label{table:2018_simSamples}
+\end{table}
+
+% TODO: Reword.
+% TODO: CONTAINS DATA.
+\subsection{PileUp reweight}
+Simulated samples are reweighted taking into account pileUp distribution. PileUp weight is extracted 
+for each year matching simulation and data distribution. The minimum bias cross-section used for each year is 69.2 mb.
+PileUp distributions for each year are shown in Fig.~\ref{fig:pileUpReweight}.
+
+\clearpage
+% \newpage
+% \pagebreak
+
+\begin{multiFigure}
+    \centering
+    % \includegraphics[width=0.55\textwidth]{figures/higgsmassmeas/Reweighted_2016.pdf}
+    % \includegraphics[width=0.55\textwidth]{figures/higgsmassmeas/Reweighted_2017.pdf}
+    % \includegraphics[width=0.55\textwidth]{figures/higgsmassmeas/Reweighted_2018.pdf}
+    \addFigure{0.60}{figures/higgsmassmeas/Reweighted_2016.pdf}
+    \addFigure{0.60}{figures/higgsmassmeas/Reweighted_2017.pdf}
+    \addFigure{0.60}{figures/higgsmassmeas/Reweighted_2018.pdf}
+    \captionof{figure}
+        [words]
+        {TODO:REWORD Data--simulation pileUp distributions: left 2016 (for pre and post-VFP), right 2017, bottom 2018. Up (down) scale has been obtained using 72.4 (66)\mb.}
+    \label{fig:pileUpReweight}
+\end{multiFigure}

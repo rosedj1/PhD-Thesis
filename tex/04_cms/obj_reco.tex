@@ -1,0 +1,51 @@
+% Will describe how CMS generally reconstructs objects.
+% HZZ4L object selection is described in Higgs Mass chapter.
+\section{Object Reconstruction}
+\label{sec:obj_reco}
+A single \pp collision yields thousands of particles, each of which must be identified by the CMS detector in order to be used in physics analyses.
+The primary software for object identification within CMS is called Particle Flow. % TODO: special font for Particle Flow? % TODO: ref
+% The \pp collision itself is called the \emph{primary vertex} and must be carefully reconstructed (Sec.~\ref{sec:track_vertex_reco}).
+Electron and photon objects are reconstructed (Sec.~\ref{sec:egamma_reco}) using the silicon tracker (Sec.~\ref{sec:tracker}) and ECAL (Sec.~\ref{sec:ecal}) systems.
+The reconstruction of muon objects (Sec.~\ref{sec:muon_reco}) uses information from all subdetectors, the most important of which are the silicon tracker and muon system (Sec.~\ref{sec:muon_sys}).
+Tau objects are the final type of charged leptons to be reconstructed (Sec.~\ref{sec:tau_reco}), which may decay hadronically---thus leaving hadronic energy signatures in the HCAL---and by the silicon tracker detecting a displaced secondary vertex, thanks to the relatively long lifetime of the tau lepton.  % TODO: Bleh. I don't like this sentence. Ref.    displaced secondary vertex coupled with ECAL .
+Hadronic matter is grouped into jet objects, each of which is carefully reconstructed (Sec.~\ref{sec:jet_reco}.) using information from the silicon tracker, ECAL, and HCAL (Sec.~\ref{sec:hcal}).
+Finally, after accounting for all the momenta and energies of the observed particles, the missing transverse energy $\left( \MET \right)$ is evaluated (Sec.~\ref{sec:met_reco}).
+
+% \subsection{Vertex and Track Reconstruction}
+% \label{sec:track_vertex_reco}
+
+\subsection{Electron and Photon Reconstruction}
+\label{sec:egamma_reco}
+Electrons and photons both leave energy deposits within the crystals of the ECAL---so how are the two kinds of particles differentiated from one another?
+Since photons are electrically neutral, the silion tracker will not detect them.
+Another consequence of their neutrality is that photons do not bend in a magnetic field;
+their energy deposits will point radially back to the vertex from which they originated.
+On the other hand, electrons \emph{are} charged and so will not only be detected within the layers of the silicon tracker but will also reveal a curved track.
+Hence, the energy deposits from electrons within the ECAL will not necessarily point towards the vertex from which the electron came~\cite{Ereco_performance_2015}.
+
+Within CMS, track fitting and pattern recognition typically occur within a single framework called the Combinatorial Track Finder (CTF), which is an extension of the Kalman filter~\cite{general_track_reco}.
+However, the reconstruction of tracks of charged particles is computationally difficult  the CTF 
+As electrons pass through matter, they may radiate away some of their energy in the form of bremsstrahlung photons.
+The distribution of this energy loss is extremely non-Gaussian and is not accurately modeled by the Kalman Filter.
+Instead, the CMS tracker uses a Gaussian-sum filter (GSF) algorithm~\cite{gsf} to model the energy-loss distribution as a mixture of Gaussian functions.
+This ultimately improves the momentum resolution of electrons.
+
+\subsection{Muon Reconstruction}
+\label{sec:muon_reco}
+The most reliable muon detection occurs when both the silicon tracker \emph{and} the muon system both register hits corresponding to the same particle object.
+When both subsystems detect such a particle---most likely a muon---it is called a \emph{global muon}.
+This can be compared to the situation when only the muon system registers hits, in which case this is most likely a \emph{standalone muon}.
+The opposite case occurs when only the tracker registers hits and the corresponding particle is termed a \emph{tracker muon}~\cite{reco_muon}.
+
+\subsection{Tau Reconstruction}
+\label{sec:tau_reco}
+
+\subsection{Jet Reconstruction}
+\label{sec:jet_reco}
+\subsubsection{Jet Energy Correction}
+\label{sec:jec}
+\subsubsection{Tagging \Pqb-Jets}
+\label{sec:btag}
+
+\subsection{MET Reconstruction}
+\label{sec:met_reco}

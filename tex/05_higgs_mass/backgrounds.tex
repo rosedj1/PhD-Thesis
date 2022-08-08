@@ -25,7 +25,7 @@ The two IBs for this analysis are:
 While IB processes produce 4 prompt leptons, RB processes produce varying numbers of prompt and nonprompt leptons.
 Nonprompt leptons emerge from 3 main sources:
 \begin{itemize}
-    \item misidentifying light-flavor hadrons (\eg, $\pi^{\pm}$) as leptons,
+    \item misidentifying light-flavor hadrons (\eg $\pi^{\pm}$) as leptons,
     \item heavy-flavor hadrons that decay mid-flight into leptons,
     \item and the asymmetric conversion of photons into electrons.
 \end{itemize}
@@ -50,7 +50,7 @@ The careful estimation of these RB contributions to the 4P region is necessary f
 % \label{sec:os_method}
 The goal of the OS Method is to estimate the number of opposite-sign same-flavor (OSSF) \fourl events produced by RB process that ``contaminate'' the 4P region $\left( \nfourPRB \right)$, given by Eq.~\ref{eqn:rbe_formula_final}.
 % Since the $4\ell$ final state of the signal process consists of 2 pairs of OSSF leptons, the method is called the \emph{OS Method}.
-However, the typical approach of using simulated samples does not model RB well, since RB processes (\eg, \Zplusjets) rely on higher-order effects like jet modelling which are not yet accurately simulated.
+However, the typical approach of using simulated samples does not model RB well, since RB processes (\eg \Zplusjets) rely on higher-order effects like jet modelling which are not yet accurately simulated.
 Instead, a data-driven approach is used.
 
 The logic of the OS Method is to study events in data that are similar to, but not exactly the same as, those found in the 4P region.
@@ -77,7 +77,7 @@ To simplify the equations that follow, $\hat{w}^k$ is set to unity.
 %  \effprpass(\ell_1^k) is the efficiency of reconstructing $\ell_1$ from event $k$ as a \mathbf{P}TS lepton
 % and \effnpfail(\ell_3^k) is the efficiency of reconstructing $\ell_3$ from event $k$ as a \mathbf{F}TS lepton
 % where $\epsilon^{\mathrm{pr|np}}_{\mathrm{P|F}}$ is the efficiency of reconstructing a prompt/nonprompt lepton passing/failing tight selections.
-If the reconstruction efficiencies of a particular category are the same for all $j$ leptons across all $k$ events $\left( \eg, ~ \effprpass(\ell_j^k) \equiv \effprpass \right)$, then Eq.~\ref{eqn:wt_2prto2p2f} reduces to:
+If the reconstruction efficiencies of a particular category are the same for all $j$ leptons across all $k$ events $\left( \eg ~ \effprpass(\ell_j^k) \equiv \effprpass \right)$, then Eq.~\ref{eqn:wt_2prto2p2f} reduces to:
 \begin{equation}
 	\label{eqn:wt_2prto2p2f_simp}
 	\wgttwoprompttotwoPtwoF^k = 
@@ -91,9 +91,7 @@ Such an event would then fall into the 3P1F CR and, allowing for only one nonpro
 	\label{eqn:wt_2prto3p1f}
 	\wgttwoprompttothreePoneF^k
 	&= \left( \effprpass \right)^2 
-	\left[
-		\effnppass(\ell_1^k) \cdot \effnpfail(\ell_2^k) + \effnpfail(\ell_1^k) \cdot \effnppass(\ell_2^k)
-	\right]
+	\left[ \effnppass(\ell_1^k) \cdot \effnpfail(\ell_2^k) + \effnpfail(\ell_1^k) \cdot \effnppass(\ell_2^k) \right]
 	\notag
 	\\
 	&= \left( \effprpass \right)^2

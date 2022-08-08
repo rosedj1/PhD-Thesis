@@ -11,7 +11,7 @@
 \usepackage{ragged2e} % to make text fully justified
 \usepackage{tikz}%       tikz is used by almost everyone, but certainly by me for this.
 \usepackage[compat=1.1.0]{tikz-feynman}% for drawing feynman diagrams 
-% \usepackage{pgfplots}%   pgfplots is tikz but better.
+\usepackage{pgfplots}%   pgfplots is tikz but better.
 \usepackage{xspace}
 \xspaceaddexceptions{]\}}
 \usepackage{xcolor}
@@ -24,6 +24,22 @@
 \usepackage{newtxtext}
 \usepackage{newtxmath}
 \usepackage{multirow}
+
+\usepackage{tabularx}
+
+% For Suzanne's Feynman diagrams.
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\pgfdeclarepatternformonly{south west lines}{\pgfqpoint{-0pt}{-0pt}}{\pgfqpoint{3pt}{3pt}}{\pgfqpoint{3pt}{3pt}}{
+    \pgfsetlinewidth{0.4pt}
+    \pgfpathmoveto{\pgfqpoint{0pt}{0pt}}
+    \pgfpathlineto{\pgfqpoint{3pt}{3pt}}
+    \pgfpathmoveto{\pgfqpoint{2.8pt}{-.2pt}}
+    \pgfpathlineto{\pgfqpoint{3.2pt}{.2pt}}
+    \pgfpathmoveto{\pgfqpoint{-.2pt}{2.8pt}}
+    \pgfpathlineto{\pgfqpoint{.2pt}{3.2pt}}
+    \pgfusepath{stroke}
+}
 
 \input{tex/definitions.tex}
 
@@ -45,7 +61,7 @@
 %           If John was your chair and you had no cochair, you can simply use \chair{John}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author info
-\title{Precision Measurement of the Higgs Boson Mass and Search for Dilepton Mass Resonances in $\text{H} \to 4\ell$ Decays Using the CMS Detector at the LHC}
+\title{Precision Measurement of the Higgs Boson Mass and Search for Dilepton Mass Resonances in $\htofourl$ Decays Using the CMS Detector at the LHC}
 \degreeType{Doctor of Philosophy}         % Official name of your degree; eg "Doctorate of Philosophy".
 \major{Physics}                              % Your official Department.
 \author{Jake Rosenzweig}%                  Your Name
@@ -80,51 +96,51 @@
 %%%%%%%%%%%%%%%
 %--- Intro ---%
 %%%%%%%%%%%%%%%
-\input{tex/01_intro/intro.tex}
+% \input{tex/01_intro/intro.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %--- Standard Model ---%
 %%%%%%%%%%%%%%%%%%%%%%%%
-\input{tex/02_theory/sm.tex}
+% \input{tex/02_theory/sm.tex}
 %%%%%%%%%%%%%
 %--- LHC ---%
 %%%%%%%%%%%%%
-\input{tex/03_lhc/lhc.tex}
+% \input{tex/03_lhc/lhc.tex}
 %%%%%%%%%%%%%
 %--- CMS ---%
 %%%%%%%%%%%%%
-\input{tex/04_cms/cms_intro.tex}
-\input{tex/04_cms/tracker.tex}
-\input{tex/04_cms/calorimeters.tex}
-\input{tex/04_cms/solenoid.tex}
-\input{tex/04_cms/muon_system.tex}
-\input{tex/04_cms/trigger.tex}
-\input{tex/04_cms/event_reco.tex}
+% \input{tex/04_cms/cms_intro.tex}
+% \input{tex/04_cms/tracker.tex}
+% \input{tex/04_cms/calorimeters.tex}
+% \input{tex/04_cms/solenoid.tex}
+% \input{tex/04_cms/muon_system.tex}
+% \input{tex/04_cms/trigger.tex}
+% \input{tex/04_cms/obj_reco.tex}
 %%%%%%%%%% \input{tex/04_cms/event_sim.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Higgs Mass Measurement ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{tex/05_higgs_mass/higgs_intro.tex}
-\input{tex/05_higgs_mass/overview.tex}
-\input{tex/05_higgs_mass/datasets_simul_trig.tex}
-\input{tex/05_higgs_mass/event_reco_sel.tex}
-\input{tex/05_higgs_mass/backgrounds.tex}
-\input{tex/05_higgs_mass/signal_modeling.tex}
-\input{tex/05_higgs_mass/techniques.tex}
-\input{tex/05_higgs_mass/syst_uncert.tex}
-\input{tex/05_higgs_mass/results.tex}
+% \input{tex/05_higgs_mass/higgs_intro.tex}
+% \input{tex/05_higgs_mass/overview.tex}
+% \input{tex/05_higgs_mass/datasets_simul_trig.tex}
+% \input{tex/05_higgs_mass/event_sel.tex}               % Fill out subsections.
+% \input{tex/05_higgs_mass/backgrounds.tex}             % Done?
+% \input{tex/05_higgs_mass/techniques.tex}
+% \input{tex/05_higgs_mass/signal_modeling.tex}
+% \input{tex/05_higgs_mass/syst_uncert.tex}
+% \input{tex/05_higgs_mass/results.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Search for Dilepton Resonances ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tex/06_dilep_res/dilep_res_intro.tex}
-\input{tex/06_dilep_res/overview.tex}
+% \input{tex/06_dilep_res/overview.tex}
 \input{tex/06_dilep_res/datasets_simul_trig.tex}
-\input{tex/06_dilep_res/event_reco_sel.tex}
-\input{tex/06_dilep_res/backgrounds.tex}
-\input{tex/06_dilep_res/syst_uncert.tex}
-\input{tex/06_dilep_res/results.tex}
+% \input{tex/06_dilep_res/event_sel.tex}
+% \input{tex/06_dilep_res/backgrounds.tex}
+% \input{tex/06_dilep_res/syst_uncert.tex}
+% \input{tex/06_dilep_res/results.tex}
 %%%%%%%%%%%%%%%%%%%%
 %--- Conclusion ---%
 %%%%%%%%%%%%%%%%%%%%
-\input{tex/conclusion.tex}
+% \input{tex/conclusion.tex}
 %=========================================================%
 \end{document}

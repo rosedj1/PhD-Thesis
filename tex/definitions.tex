@@ -40,6 +40,7 @@
 
 % Some shorthand
 % turn off italics
+% Some sources suggest to not use the \mbox commands.
 \newcommand{\etal}{\mbox{et al.}\xspace} %et al. - no preceding comma
 \newcommand{\ie}{\mbox{i.e.,}\xspace}     %i.e.
 \newcommand{\eg}{\mbox{e.g.,}\xspace}     %e.g.
@@ -57,7 +58,6 @@
 
 % Units.
 % Xunwu used `\,` (a kern) at the beginning of each unit.
-% Jake, consider getting rid of \mbox below!
 \newcommand{\de}{\ensuremath{^\circ}}
 \newcommand{\tentothe}[1]{\ensuremath{\times \text{10}^\text{#1}}}
 \newcommand{\tentotheminus}[1]{\ensuremath{\times \text{10}^\text{$-$#1}}}
@@ -78,12 +78,12 @@
 \newcommand{\Km}{\ensuremath{\,\text{Km}}\xspace}
 \newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
 \newcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
-\newcommand{\mum}{\ensuremath{\,\mu\text{m}}\xspace}
+\newcommand{\mum}{\ensuremath{\,\text{\textmu}\text{m}}\xspace}
 \newcommand{\micron}{\mum}
 \newcommand{\nm}{\ensuremath{\,\text{nm}}\xspace}
 % Time.
 \newcommand{\ms}{\ensuremath{\,\text{ms}}\xspace}
-\newcommand{\mus}{\ensuremath{\,\mu\text{s}}\xspace}
+\newcommand{\mus}{\ensuremath{\,\text{\textmu}\text{s}}\xspace}
 \newcommand{\ns}{\ensuremath{\,\text{ns}}\xspace}
 % Energy.
 \newcommand{\KJ}{\ensuremath{\,\text{KJ}}\xspace}
@@ -110,16 +110,16 @@
 % Cross section.
 \newcommand{\mb}{\ensuremath{\,\text{mb}}\xspace}
 \newcommand{\pb}{\ensuremath{\,\text{pb}}\xspace}
+\newcommand{\pbparen}{\ensuremath{\,(\text{pb})}\xspace}
 \newcommand{\fb}{\ensuremath{\,\text{fb}}\xspace}
 % Luminosity.
-%--- Don't use the \mbox commands. ---%
 % \newcommand{\abinv} {\mbox{\ensuremath{\,\text{ab}^{-1}}}\xspace}
 % \newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^{-1}}}\xspace}
 \newcommand{\fbinv}{\ensuremath{\,\text{fb}^{\text{$-$}1}}\xspace}
 % \newcommand{\invfb}{\ensuremath{\mbox{fb}^{\scriptscriptstyle -1}}\xspace}  % Xunwu's usage.
 % \newcommand{\pbinv} {\mbox{\ensuremath{\,\text{pb}^{-1}}}\xspace}
 % \newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^{-1}}}\xspace}
-\newcommand{\mubinv} {\ensuremath{\,\mu\text{b}^{-1}}\xspace}
+\newcommand{\mubinv} {\ensuremath{\,\text{\textmu}\text{b}^{-1}}\xspace}
 \newcommand{\mbinv} {\ensuremath{\,\text{mb}^{-1}}\xspace}
 \newcommand{\percms}{\ensuremath{\,\text{cm}^{-2}\,\text{s}^{-1}}\xspace}
 \newcommand{\lumiint}{\ensuremath{\lumi_\text{int}}\xspace}
@@ -135,6 +135,8 @@
 \newcommand{\lum}{\ensuremath{\,\text{(lumi)}}\xspace}
 \newcommand{\lumisixteen}{\ensuremath{35.9\fbinv}\xspace}
 \newcommand{\lumiruntwo}{\ensuremath{137.1\fbinv}\xspace}
+% Branching ratio.
+% \newcommand{}{}
 
 % analysis tools
 \newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}  % \textsc is "small caps".
@@ -143,13 +145,14 @@
 \newcommand{\HERWIGSeven}{{\textsc{HERWIG7}}\xspace}
 \newcommand{\MADGRAPH} {\textsc{MadGraph}\xspace}
 \newcommand{\MCATNLO} {\textsc{mc@nlo}\xspace}
-\newcommand{\MCFM} {{\textsc{mcfm}}\xspace} % \newcommand{\MCFM} {\textsc{mcfm}\xspace}
+\newcommand{\MCFM} {{\textsc{mcfm}}\xspace}
 \newcommand{\POWHEG} {{\textsc{powheg}}\xspace}
 \newcommand{\PYTHIA} {{\textsc{pythia}}\xspace}
 \newcommand{\SHERPA} {{\textsc{sherpa}}\xspace}
 \newcommand{\TOPpp} {{\textsc{TOP++}}\xspace}
 \newcommand{\MGvATNLO} {\MADGRAPH{}5\_a\MCATNLO}
 \newcommand{\FEWZ} {{\textsc{fewz}}\xspace}
+\newcommand{\JHUGEN} {\textsc{JHUGen}\xspace}
 
 %=== Math ===%
 % absolute value
@@ -174,6 +177,7 @@
 \newcommand{\abseta}{\ensuremath{\abs{\eta}}\xspace}
 \newcommand{\PT}{\ensuremath{p_{\mathrm{T}}}\xspace}
 \newcommand{\pt}{\PT}
+\newcommand{\pT}{\PT}
 \newcommand{\ET}{\ensuremath{E_{\mathrm{T}}}\xspace}
 \newcommand{\et}{\ET}
 \newcommand{\MT}{\ensuremath{M_{\mathrm{T}}}\xspace}
@@ -203,6 +207,8 @@
 % Mass commands.
 \providecommand{\mass}[1]{\ensuremath{m_{#1}}\xspace}
 \providecommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
+\providecommand{\mZ}{\ensuremath{m_{\PZ}}\xspace}
+\providecommand{\mZD}{\ensuremath{m_{\PZD}}\xspace}
 
 %=== Higgs mass symbols ===%
 \providecommand{\mh}{\ensuremath{m_{\PH}}\xspace}
@@ -212,8 +218,6 @@
 \providecommand{\relmfourlerr}{\ensuremath{\frac{\mfourlerr}{\mfourl}}\xspace}
 \providecommand{\Dkinbkg}{\ensuremath{\mathcal{D}^{\text{kin}}_{\text{bkg}}}\xspace}
 
-
-
 %=== Particles ===%
 \newcommand{\Pn}{\ensuremath{\mathrm{n}}}
 \newcommand{\Pp}{\ensuremath{\mathrm{p}}}
@@ -222,9 +226,13 @@
 \newcommand{\PWpm}{\ensuremath{\mathrm{W}^\pm}\xspace}
 \newcommand{\PX}{\ensuremath{\mathrm{X}}\xspace}
 \newcommand{\PZ}{\ensuremath{\mathrm{Z}}\xspace}
+\newcommand{\PZD}{\ensuremath{\mathrm{Z}_\text{D}}\xspace}
 \newcommand{\PH}{\ensuremath{\mathrm{H}}\xspace}
 \newcommand{\Pe}{\ensuremath{\mathrm{e}}\xspace}
+\newcommand{\Pmu}{\ensuremath{\text{\textmu}}\xspace}
 \newcommand{\Pg}{\ensuremath{\mathrm{g}}\xspace}
+\newcommand{\Pc}{\ensuremath{\mathrm{c}}\xspace}
+\newcommand{\Pac}{\ensuremath{\overline{\Pc}}\xspace}
 \newcommand{\Pq}{\ensuremath{\mathrm{q}}\xspace}
 \newcommand{\Paq}{\ensuremath{\overline{\Pq}}\xspace}
 \newcommand{\Pqb}{\ensuremath{\mathrm{b}}\xspace}
@@ -233,6 +241,7 @@
 \newcommand{\Paqt}{\ensuremath{\overline{\Pqt}}\xspace}
 \newcommand{\PGn}{\ensuremath{\nu}\xspace} % generic neutrino
 \newcommand{\PAGn}{\ensuremath{\overline{\nu}}\xspace} % generic neutrino
+\providecommand{\jpsi}{\ensuremath{J / \psi}\xspace}
 \newcommand{\pname}{\text{P. Roton}\xspace}
 % Modified.
 \newcommand{\Zone}{\ensuremath{\PZ_{\mathrm{1}}}\xspace}
@@ -243,13 +252,16 @@
 \newcommand{\ellpellm}{\ensuremath{\ell^+ \ell^-}\xspace}
 \newcommand{\ee}{\ensuremath{\Pe^+ \Pe^-}\xspace}
 \newcommand{\fourl}{\ensuremath{4\ell}\xspace}
-\newcommand{\fourmu}{\ensuremath{4\mu}\xspace}
+\newcommand{\fourmu}{\ensuremath{4\Pmu}\xspace}
 \newcommand{\foure}{\ensuremath{4\Pe}\xspace}
-\newcommand{\twoetwomu}{\ensuremath{2\Pe2\mu}\xspace}
-\newcommand{\twomutwoe}{\ensuremath{2\mu2\Pe}\xspace}
+\newcommand{\twoetwomu}{\ensuremath{2\Pe 2\Pmu}\xspace}
+\newcommand{\twomutwoe}{\ensuremath{2\Pmu 2\Pe}\xspace}
+\newcommand{\zzd}{\ensuremath{\PZ \PZD}\xspace}
+\newcommand{\zdzd}{\ensuremath{\PZD \PZD}\xspace}
 \newcommand{\ZX}{\ensuremath{\PZ \PX}\xspace}
 \newcommand{\XX}{\ensuremath{\PX \PX}\xspace}
-\newcommand{\htwo}{\ensuremath{\text{H}_2}\xspace}
+\newcommand{\htwo}{\ensuremath{\text{H}_2}\xspace}  % Hydrogen gas.
+\newcommand{\ttbarh}{\ensuremath{\ttbar \PH}\xspace}
 % Xunwu's.
 \providecommand{\ttH}{\ensuremath{\Pqt\Paqt\PH}\xspace}
 \providecommand{\ggH}{\ensuremath{\Pg\Pg\PH}\xspace}
@@ -264,6 +276,7 @@
 \providecommand{\ggZH}{\ensuremath{\Pg\Pg\PZ\PH}\xspace}
 \providecommand{\DY}{\mbox{DY}\xspace}
 \providecommand{\ttbar}{\ensuremath{\Pqt\Paqt}\xspace}
+\providecommand{\ggzz}{\ggZZ}
 \providecommand{\ggZZ}{\ensuremath{\Pg\Pg\PZ\PZ}\xspace}
 \providecommand{\WZ}{\ensuremath{\PW\PZ}\xspace}
 \providecommand{\ZZ}{\ensuremath{\PZ\PZ}\xspace}
@@ -282,12 +295,19 @@
 
 % Reactions/Processes.
 \newcommand{\Ztolplm}{\ensuremath{\PZ \to \ellpellm}\xspace}
-\newcommand{\hmm}{\ensuremath{\PH \to \mu\mu}\xspace}
-\newcommand{\zmm}{\ensuremath{\PZ \to \mu\mu}\xspace}
+\newcommand{\hmm}{\ensuremath{\PH \to \Pmu\Pmu}\xspace}
+\newcommand{\zmm}{\ensuremath{\PZ \to \Pmu\Pmu}\xspace}
+\newcommand{\htoxx}{\ensuremath{\PH \to \XX}\xspace}
+\newcommand{\htozx}{\ensuremath{\PH \to \ZX}\xspace}
+\newcommand{\htozzd}{\ensuremath{\PH \to \zzd}\xspace}
+\newcommand{\htozdzd}{\ensuremath{\PH \to \zdzd}\xspace}
 \newcommand{\htozz}{\ensuremath{\PH \to \PZ\PZ^{\ast}}\xspace}
+\newcommand{\htozznostar}{\ensuremath{\PH \to \PZ\PZ}\xspace}
 \newcommand{\htoyy}{\ensuremath{\PH \to \gamma\gamma}\xspace}
 \newcommand{\htofourl}{\ensuremath{\PH \to \fourl}\xspace}
 \newcommand{\hzzfourl}{\ensuremath{\htozz \to \fourl}\xspace}
+\newcommand{\hzxfourl}{\ensuremath{\htozx \to \fourl}\xspace}
+\newcommand{\hxxfourl}{\ensuremath{\htoxx \to \fourl}\xspace}
 \newcommand{\hzxxxfourl}{\ensuremath{\PH \to \ZX / \XX \to \fourl}\xspace}
 
 %=== RedBkg ===%
@@ -324,14 +344,18 @@
 
 \newcommand{\ggzzfourl}{\ensuremath{\mathrm{gg \to \PZ\PZ \to 4\ell}}\xspace}
 \newcommand{\ggzzstarfourl}{\ensuremath{\mathrm{gg \to \PZ\PZ^\ast \to 4\ell}}\xspace}
-\newcommand{\qqzzfourl}{\ensuremath{\mathrm{q\bar{q} \to \PZ\PZ \to 4\ell}}\xspace}
+\newcommand{\qqzz}{\ensuremath{\mathrm{q\bar{q} \to \PZ\PZ}}\xspace}
+\newcommand{\qqzzfourl}{\ensuremath{\qqzz \to 4\ell}\xspace}
 \newcommand{\qqggzzfourl}{\ensuremath{\mathrm{q\bar{q}/ \ggzzfourl}}\xspace}
+\newcommand{\gghtofourl}{\ensuremath{\mathrm{gg \to \PH \to \fourl}}\xspace}
 \newcommand{\gghzzfourl}{\ensuremath{\mathrm{gg \to \hzzfourl}}\xspace}
+
+%=== Dilepton Resonance ===%
 
 % To-be sorted.
 \newcommand{\br}{\ensuremath{\mathcal{B}}\xspace}
 \newcommand{\BRof}[1]{\ensuremath{{\mathcal{B} \left( #1 \right)}}\xspace}
-\newcommand{\brhmm}{\ensuremath{{\mathcal{B}(\PH \to \mu\mu)}}\xspace}
+\newcommand{\brhmm}{\ensuremath{{\mathcal{B}(\PH \to \Pmu\Pmu)}}\xspace}
 \newcommand{\brhff}{\ensuremath{{\mathcal{B}(\PH \to f\overline{f})}}\xspace}
 \newcommand{\detajj}{\ensuremath{\Delta\eta_{\mathrm{jj}}}\xspace}
 \newcommand{\dphijj}{\ensuremath{\Delta\phi_{\mathrm{jj}}}\xspace}
@@ -342,7 +366,3 @@
 \newcommand{\dzeroBS}{\ensuremath{\text{d0}_{\text{BS}}}\xspace}
 
 \newcommand{\dptoverptsquare}{\ensuremath{(\pt^{Roch} - \pt^{Gen})/\pt^2}\xspace}
-
-\newcommand{\RochCorr}{\textit{Rochester correction}\xspace}
-\newcommand{\FSR}{\textit{FSR recovery}\xspace}
-\newcommand{\GeoFit}{\textit{GeoFit correction}\xspace}

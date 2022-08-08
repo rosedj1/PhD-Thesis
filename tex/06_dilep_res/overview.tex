@@ -1,1 +1,99 @@
 \section{Overview}
+This analysis searches for exotic decays of the Higgs boson (\PH) using data collected by the CMS experiment (Chapter~\ref{ch:cms}) from the \pp collisions produced at the CERN LHC (Chapter~\ref{ch:lhc}) at a center-of-mass energy of 13\TeV during the Run 2 period (2016--2018).
+Two different decay mechanisms are considered: \htozx and \htoxx.
+Here, \PX represents a BSM particle that may decay into a pair of OSSF leptons, though only electrons and muons are considered.
+Because the \PZ is the SM \PZ boson, this decay process yields the same four-lepton (\fourl) final states that were found in the Higgs boson mass measurement analysis (Chapter~\ref{ch:higgs_mass}):
+\foure, \fourmu, \twoetwomu, and \twomutwoe.
+The \fourl final state was chosen due to its clean signature and large signal-to-background ratio.
+
+Not only is \PX a theoretical BSM particle, it is speculated to interact with SM particles via the ``dark'' sector.
+Such dark sector particles are described within the theoretical framework of the ``hidden Abelian Higgs model'' (HAHM) TODO:refs7--11 from EJPC.
+Within the context of the HAHM, \PX is the dark photon $\left( \PZD \right)$.
+This dark particle mediates a dark $U(1)_\text{D}$ gauge symmetry that is spontaneously broken by a theoretical dark Higgs mechanism.
+
+The search for \PZD begins with a SM decay of \htozznostar.
+Then, via the dark sector, one of the \PZ bosons \emph{mixes} with \PZD, as determined by the kinetic-mixing parameter $\varepsilon$.
+The \PZD and the other \PZ then decay into OSSF lepton pairs to yield one of the four different \fourl final states.
+This decay process is shown in Fig.~\ref{fig:feyn_diag_hzzd4l_hzdzd4l} (Left).
+The other mode of \PZD production occurs when a \PH mixes with a dark Higgs boson ($s$), as governed by the Higgs-mixing parameter $\kappa$.  % TODO:get fancier kappa
+Then, the $s$ decays into two identical \PZD particles which decay promptly to give one of the \fourl final states.
+This decay process is shown in Fig.~\ref{fig:feyn_diag_hzzd4l_hzdzd4l} (Right).
+%=== Suzanne's Feynman diagram code. ===%
+% \begin{figure}[ht]
+%     \centering
+%     \begin{tikzpicture}
+%     \begin{feynman}[large]
+%         \vertex (h) {$h$}; % h at beginning 
+%         \vertex [right=1cm of h] (ZZ); % h -> ZZ vertex
+%         \node [circle, fill=black, inner sep=2pt, above right = 1cm and 1.25cm of ZZ] (Z1); % black dot node at epsilon (control size with ) 
+%         \node [above left = 7pt and 7pt of Z1] (e) {$\epsilon$}; % node with epsilon text
+%         \vertex [below right = 1cm and 2.5cm of ZZ] (Z2); % h -> ZZ bottom Z
+%         \vertex [above right = 0.5cm and 1.25cm of Z2] (Z2l1) {$l$}; % bottom Z -> ll (top l)
+%         \vertex [below right = 0.5cm and 1.25cm of Z2] (Z2l2) {$l$}; % bottom Z -> ll (bottom l)
+%         \vertex [above right = 1cm and 1.25cm of Z1] (ZD); % ZD
+%         \vertex [above right = 0.5cm and 1.25cm of ZD] (ZDl1) {$l$}; % ZD -> ll (top l)
+%         \vertex [below right = 0.5cm and 1.25cm of ZD] (ZDl2) {$l$}; % ZD -> ll (bottom l)
+%         \diagram* {
+%             (h) -- [scalar] (ZZ),
+%             (ZZ) -- [boson, edge label=$Z$] (Z1),
+%             (ZZ) -- [boson, edge label=$Z$] (Z2),
+%             (Z1) -- [boson, edge label=$Z_D$] (ZD),
+%             (ZDl2) -- [fermion] (ZD) -- [fermion] (ZDl1);
+%             (Z2l2) -- [fermion] (Z2) -- [fermion] (Z2l1);
+%         };
+%     \end{feynman}
+%     \end{tikzpicture}
+% \end{figure}
+% \newpage
+% \begin{figure}[ht]
+%     \centering
+%     \begin{tikzpicture}
+%     \begin{feynman}[large]
+%         \vertex (h) {$h$}; % h at beginning 
+%         \node [circle, fill=black, inner sep=2pt, right=1.5cm of h] (kappa); % black dot at kappa node
+%         \node [above left = 7pt and 7pt of kappa] {$\kappa$}; % node with kappa text
+%         \vertex [right=1.5cm of kappa] (s); % s -> ZDZD vertex
+%         \vertex [above right = 2cm and 1cm of s] (Z1); % top ZD
+%         \vertex [below right = 2cm and 1cm of s] (Z2); % bottom ZD
+%         \vertex [above right = 0.5cm and 1.25cm of Z2] (Z2l1) {$l$}; % top l of top Z
+%         \vertex [below right = 0.5cm and 1.25cm of Z2] (Z2l2) {$l$}; % bottom l of top Z
+%         \vertex [above right = 0.5cm and 1.25cm of Z1] (Z1l1) {$l$}; % top l of bottom Z
+%         \vertex [below right = 0.5cm and 1.25cm of Z1] (Z1l2) {$l$}; % bottom l of bottom Z
+%         \diagram* {
+%             (h) -- [scalar] (kappa),
+%             (kappa) -- [scalar, edge label=$s$, below] (s),
+%             (s) -- [boson, edge label=$Z_D$] (Z1),
+%             (s) -- [boson, edge label=$Z_D$] (Z2),
+%             (Z1l2) -- [fermion] (Z1) -- [fermion] (Z1l1);
+%             (Z2l2) -- [fermion] (Z2) -- [fermion] (Z2l1);
+%         };
+%     \end{feynman}
+%     \end{tikzpicture}
+% \end{figure}
+%%%%%%%%%%%%%%%%%%%%
+% H->Z(Zd)Zd->4L Feynman Diagrams.
+%%%%%%%%%%%%%%%%%%%%
+\begin{multiFigure}
+    % \begin{figure}[pbth]
+        \centering
+        % \includegraphics[height=8cm]{figures/dilep_res/feynman_diagram_hzzd4l_hzdzd4l.jpeg}
+        \addFigure{0.48}{figures/dilep_res/feynman_diagram_hzzd4l.pdf}
+        \addFigure{0.48}{figures/dilep_res/feynman_diagram_hzdzd4l.pdf}
+        \captionof{figure}
+            [Exotic decays of the Higgs boson to the \fourl final state.]
+            {Exotic decays of the Higgs boson ($h$) to the \fourl final state within the context of the HAHM.
+            A) Higgs boson decays into two SM \PZ bosons, one of which kinetically mixes with the dark photon $\left(\PZD\right)$.
+            B) Higgs boson mixes with a dark Higgs boson ($s$) via the Higgs-mixing mechanism, governed by the Higgs-mixing parameter $\kappa$.
+            The dark Higgs then decays into two identical dark photons, each of which decays into two OSSF leptons.}
+        \label{fig:feyn_diag_hzzd4l_hzdzd4l}
+\end{multiFigure}
+This analysis assumes a narrow-width approximation for \PZD decays so that the dark photon is confined to its on-mass shell.
+Thus, for any given dark photon mass hypothesis, \PZD is assumed to always have that singular mass value.
+This limitation on the mass of \PZD $\left(\mZD\right)$ in conjunction with the narrow-width nature of the Higgs boson mass resonance $\left( \mH \approx 125\GeV \right)$ kinematically constrains the search region of the analysis.
+Specifically, the \htozzd $\left(\htozdzd\right)$ process has the upper limit
+$\mZD < \mH - \mZ \approx 35\GeV    \left(\mZD < \mH / 2 \approx 62.5\GeV\right)$.
+Finally, to avoid the ubiquitous but unwanted reconstruction of an intermediate $\jpsi \left(\Pc\Pac\right)$ meson,
+which has a precisely measured mass of $3.096\,900 \pm 0.000\,006\GeV$~\cite{particle_data_group_review_2020},
+the mass range chosen for this analysis is $4.0 < \mZD < 35.0\GeV \left(62.5\GeV\right)$.
+
+This low-mass dilepton resonance search has a similar  to the aforementioned Higgs boson mass measurement analysis described in 

@@ -1,5 +1,64 @@
 \section{Results}
 \label{sec:results_dilep}
+An analysis of the \mZtwo spectrum is performed to look for any possible low-mass dilepton resonances.
+In the case of \htozdzd, in which both of the daughter particles are identical, then a peak in the \mZtwo spectrum is expected at $(\mZone + \mZtwo) / 2$.
+
+A simple counting experiment is performed in many bins across the \mZtwo spectrum.
+Using events selected from the \zzd event selection, 353 mass hypotheses \mass{i} are considered for \mZtwo.
+The idea is to scan over the entire \mZtwo range $(4.20\text{--}34.98 \GeV)$ in very fine \mZtwo bins, while avoiding the $\Upsilon$ $\bbbar$ bound states.  % TODO: Italicize Upsilon!
+To achieve the desired bin width fineness, each subsequent mass hypothesis is increased by 0.5\% of its previous value.
+Thus, the mass hypotheses are given by:
+\begin{align*}
+    \mass{i} = 4.20 \times 1.005^{i} \GeV,
+    \text{ where } i = 0,1,2, \ldots, 129, 202, 203, 204, \ldots, 425.
+\end{align*}
+The bin width is chosen to be two times the \mZtwo resolution.
+Concretely, the bin width is equal to 0.04 $(0.10) \times \mass{i}$ for the \fourmu and \twoetwomu (\foure and \twomutwoe) final states.
+
+For each $\mass{i}$, an overall likelihood model $(\lhoodm)$ is defined as:
+\begin{equation*}
+    \lhoodm =
+    \lhoodSR %\left( n_\text{tot}^\text{SR} \right)
+    \lhoodsb, %\left( n_\text{tot}^\text{sb} \right)
+\end{equation*}
+where \lhoodSR is the likelihood that the parameters of interest $\left( \theta_k \right)$ describe the number of events $\left( n^\text{SR}_{\mass{i}, \ell} \right)$ found inside the signal region (SR) for this \mass{i} in a given final state $(\ell)$,
+and similarly, \lhoodsb is the likelihood that the same parameters describe the number of events $\left( n^\text{sb}_{\mass{i}, \ell} \right)$ found inside the sidebands (sb)---\ie outside the SR---for this \mass{i} in a given final state $(\ell)$.
+
+Both likelihoods for a given \mass{i} are themselves products of Poisson probabilities\footnote
+{
+    If the number of expected events (on average) is $\lambda$, then the probability to observe $x$ events is given by the Poisson distribution:
+    $\poisson{x \middlepipe \lambda} = \frac{e^{-\lambda} \lambda^x}{x!}$
+},
+which are defined as:
+\begin{align*}
+    \lhoodSR &= \prod_\ell{
+        \poisson{
+            n^\text{SR}_{\mass{i},\ell}
+            \middlepipe
+            \mu n_{s, \mass{i}, \ell} \rho_{s, \mass{i}, \ell} + \mu_\PH n_{\PH, \mass{i}, \ell} + 
+            \sum_b{
+                n_{b, \mass{i}, \ell} \rho_{b, \mass{i}, \ell}
+                }
+            }
+    }
+    \\
+    \text{and} &
+    \\
+    \lhoodsb &= \prod_\ell{
+        \poisson{
+            n^\text{sb}_{\ell}
+            \middlepipe
+            \mu_\PH n_{\PH, \ell} + 
+            \sum_b{
+                n_{b, \ell} \rho_{b, \ell}
+                }
+            }
+    },
+\end{align*}
+where $\mu$ is the signal strength parameter, 
+
+$n_\ell$ is the number of 
+
 CL$_\text{s}$~\cite{cowan_asymptotic_2011}.
 
 \begin{multiFigure}

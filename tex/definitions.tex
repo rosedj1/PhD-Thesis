@@ -123,7 +123,7 @@
 \newcommand{\mbinv} {\ensuremath{\,\text{mb}^{-1}}\xspace}
 \newcommand{\percms}{\ensuremath{\,\text{cm}^{-2}\,\text{s}^{-1}}\xspace}
 \newcommand{\lumiint}{\ensuremath{\lumi_\text{int}}\xspace}
-\newcommand{\lumi}{\ensuremath{\mathcal{L}}\xspace}
+\newcommand{\lumi}{\ensuremath{L}\xspace}
 \newcommand{\Lumi}{\lumi}
 % Luminosity values.
 \newcommand{\LvLow}  {\ensuremath{\lumi = \text{10}^\text{32}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
@@ -136,6 +136,11 @@
 \newcommand{\lumisixteen}{\ensuremath{35.9\fbinv}\xspace}
 \newcommand{\lumiruntwo}{\ensuremath{137.1\fbinv}\xspace}
 % Branching ratio.
+\newcommand{\br}{\ensuremath{\mathcal{B}}\xspace}
+\newcommand{\brof}[1]{\ensuremath{\mathcal{B} \left( #1 \right)}\xspace}
+% \newcommand{\BRof}[1]{\ensuremath{{\mathcal{B} \left( #1 \right)}}\xspace}
+\newcommand{\brhmm}{\ensuremath{{\mathcal{B}(\PH \to \Pmu\Pmu)}}\xspace}
+\newcommand{\brhff}{\ensuremath{{\mathcal{B}(\PH \to f\overline{f})}}\xspace}
 % \newcommand{}{}
 
 % analysis tools
@@ -166,10 +171,15 @@
 \newcommand{\CL}{\ensuremath{\text{CL}}\xspace} % needs to be overridden to C.L. for APS. Look out for \CL.
 \newcommand{\CLs}{\ensuremath{\text{CL}_\text{s}}\xspace}
 \newcommand{\CLsb}{\ensuremath{\text{CL}_\text{s+b}}\xspace}
-\newcommand{\stat}{\ensuremath{\,\text{(stat)}}\xspace}
-\newcommand{\syst}{\ensuremath{\,\text{(syst)}}\xspace}
-\newcommand{\theo}{\ensuremath{\,\text{(theo)}}\xspace}
+\newcommand{\stat}{\ensuremath{\,\text{(stat.)}}\xspace}
+\newcommand{\syst}{\ensuremath{\,\text{(syst.)}}\xspace}
+\newcommand{\theo}{\ensuremath{\,\text{(theo.)}}\xspace}
 \newcommand{\SoB}{\ensuremath{S/B}\xspace}
+\newcommand{\lhood}{\ensuremath{\mathcal{L}}\xspace}
+\newcommand{\lhoodm}{\ensuremath{\mathcal{L}_{\mass{i}}}\xspace}
+\newcommand{\lhoodSR}{\ensuremath{\mathcal{L}^\text{SR}_{\mass{i}}}\xspace}
+\newcommand{\lhoodsb}{\ensuremath{\mathcal{L}^\text{sb}_{\mass{i}}}\xspace}
+\providecommand{\poisson}[1]{\ensuremath{\text{Po}\left( #1 \right)}\xspace}
 %  Experiments
 \newcommand{\DZERO}{D0\xspace}     %etc.
 
@@ -209,6 +219,8 @@
 \providecommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
 \providecommand{\mZ}{\ensuremath{m_{\PZ}}\xspace}
 \providecommand{\mZD}{\ensuremath{m_{\PZD}}\xspace}
+\providecommand{\mZone}{\ensuremath{m_{\Zone}}\xspace}
+\providecommand{\mZtwo}{\ensuremath{m_{\Ztwo}}\xspace}
 
 %=== Higgs mass symbols ===%
 \providecommand{\mh}{\ensuremath{m_{\PH}}\xspace}
@@ -248,9 +260,14 @@
 \newcommand{\Ztwo}{\ensuremath{\PZ_{\mathrm{2}}}\xspace}
 
 %=== Particle combos. ===%
+\providecommand{\ttbar}{\ensuremath{\Pqt \Paqt}\xspace}
+\providecommand{\bbbar}{\ensuremath{\Pqb \Paqb}\xspace}
 \newcommand{\pp}{\ensuremath{\Pp \Pp}\xspace}
 \newcommand{\ellpellm}{\ensuremath{\ell^+ \ell^-}\xspace}
-\newcommand{\ee}{\ensuremath{\Pe^+ \Pe^-}\xspace}
+\newcommand{\ee}{\ensuremath{\Pe \Pe}\xspace}
+\newcommand{\eepm}{\ensuremath{\Pe^+ \Pe^-}\xspace}
+\newcommand{\mumu}{\ensuremath{\Pmu \Pmu}\xspace}
+\newcommand{\mumupm}{\ensuremath{\Pmu^+ \Pmu^-}\xspace}
 \newcommand{\fourl}{\ensuremath{4\ell}\xspace}
 \newcommand{\fourmu}{\ensuremath{4\Pmu}\xspace}
 \newcommand{\foure}{\ensuremath{4\Pe}\xspace}
@@ -275,7 +292,6 @@
 \providecommand{\qqZH}{\ensuremath{\Pq\Pq\PZ\PH}\xspace}
 \providecommand{\ggZH}{\ensuremath{\Pg\Pg\PZ\PH}\xspace}
 \providecommand{\DY}{\mbox{DY}\xspace}
-\providecommand{\ttbar}{\ensuremath{\Pqt\Paqt}\xspace}
 \providecommand{\ggzz}{\ggZZ}
 \providecommand{\ggZZ}{\ensuremath{\Pg\Pg\PZ\PZ}\xspace}
 \providecommand{\WZ}{\ensuremath{\PW\PZ}\xspace}
@@ -309,6 +325,7 @@
 \newcommand{\hzxfourl}{\ensuremath{\htozx \to \fourl}\xspace}
 \newcommand{\hxxfourl}{\ensuremath{\htoxx \to \fourl}\xspace}
 \newcommand{\hzxxxfourl}{\ensuremath{\PH \to \ZX / \XX \to \fourl}\xspace}
+\newcommand{\zdtoeepmormumupm}{\ensuremath{\PZD \to \eepm \text{ or } \mumupm}\xspace}
 
 %=== RedBkg ===%
 \newcommand{\looselep}{\ensuremath{\ell_{\mathrm{L}}}\xspace}
@@ -353,10 +370,6 @@
 %=== Dilepton Resonance ===%
 
 % To-be sorted.
-\newcommand{\br}{\ensuremath{\mathcal{B}}\xspace}
-\newcommand{\BRof}[1]{\ensuremath{{\mathcal{B} \left( #1 \right)}}\xspace}
-\newcommand{\brhmm}{\ensuremath{{\mathcal{B}(\PH \to \Pmu\Pmu)}}\xspace}
-\newcommand{\brhff}{\ensuremath{{\mathcal{B}(\PH \to f\overline{f})}}\xspace}
 \newcommand{\detajj}{\ensuremath{\Delta\eta_{\mathrm{jj}}}\xspace}
 \newcommand{\dphijj}{\ensuremath{\Delta\phi_{\mathrm{jj}}}\xspace}
 

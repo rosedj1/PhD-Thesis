@@ -3,33 +3,37 @@
 An analysis of the \mZtwo spectrum is performed to look for any possible low-mass dilepton resonances.
 In the case of \htozdzd, in which both of the daughter particles are identical, then a peak in the \mZtwo spectrum is expected at $(\mZone + \mZtwo) / 2$.
 
-A simple counting experiment is performed in many bins across the \mZtwo spectrum.
-Using events selected from the \zzd event selection, 353 mass hypotheses \mass{i} are considered for \mZtwo.
+A cut-and-count analysis is performed in many bins across the \mZtwo spectrum.
+Using events selected from the \zzd event selection, 353 mass hypotheses $\left( \mass{i} \right)$ are considered for \mZtwo.
 The idea is to scan over the entire \mZtwo range $(4.20\text{--}34.98 \GeV)$ in very fine \mZtwo bins, while avoiding the $\Upsilon$ $\bbbar$ bound states.  % TODO: Italicize Upsilon!
-To achieve the desired bin width fineness, each subsequent mass hypothesis is increased by 0.5\% of its previous value.
-Thus, the mass hypotheses are given by:
+To achieve the large number of bins across only a range of $\approx$30\GeV, each subsequent mass hypothesis (\mass{i+1}) is selected to be only 0.5\% larger than the previous \mass{i}.
+Thus, the mass hypotheses are given by the formula:
 \begin{align*}
     \mass{i} = 4.20 \times 1.005^{i} \GeV,
     \text{ where } i = 0,1,2, \ldots, 129, 202, 203, 204, \ldots, 425.
 \end{align*}
-The bin width is chosen to be two times the \mZtwo resolution.
-Concretely, the bin width is equal to 0.04 $(0.10) \times \mass{i}$ for the \fourmu and \twoetwomu (\foure and \twomutwoe) final states.
+In order to achieve the desired bin width fineness, the bin width is chosen to be two times the \mZtwo resolution:
+0.04 $(0.10) \times \mass{i}$ for the \fourmu and \twoetwomu (\foure and \twomutwoe) final states.
+The bin centers themselves are located at \mass{i}.
+The \zdzd selection has two main differences compared to the aforementioned \zzd selection:
+firstly, 462 mass hypotheses are used on account of the larger kinematical phase space of \mZtwo ($4 < \mZD < 62.5\GeV$),
+and secondly, rectangular regions in the $\mZone \text{--} \mZtwo$ plane are used for the counting experiments, where \mass{i} is the center of the bin.
 
-For each $\mass{i}$, an overall likelihood model $(\lhoodm)$ is defined as:
+For each $\mass{i}$, an overall likelihood model $(\lhoodm)$ is constructed and maximized to solve for the parameters of interest, which include the signal strength modifier $\left( \mu = \sigma / \sigma_\text{theo} \right)$ and the nuisance parameters ($\rho$).
+The model is defined as:
 \begin{equation*}
     \lhoodm =
     \lhoodSR %\left( n_\text{tot}^\text{SR} \right)
     \lhoodsb, %\left( n_\text{tot}^\text{sb} \right)
 \end{equation*}
-where \lhoodSR is the likelihood that the parameters of interest $\left( \theta_k \right)$ describe the number of events $\left( n^\text{SR}_{\mass{i}, \ell} \right)$ found inside the signal region (SR) for this \mass{i} in a given final state $(\ell)$,
-and similarly, \lhoodsb is the likelihood that the same parameters describe the number of events $\left( n^\text{sb}_{\mass{i}, \ell} \right)$ found inside the sidebands (sb)---\ie outside the SR---for this \mass{i} in a given final state $(\ell)$.
+where \lhoodSR is the likelihood that the parameters of interest $\left( \theta_k \right)$ describe the total observed number of events $\left( n^\text{SR}_{\mass{i}, \ell} \right)$ found inside the signal region (SR) for this \mass{i} in a given final state $(\ell)$,
+and similarly, \lhoodsb is the likelihood that the parameters describe the total observed number of events $\left( n^\text{sb}_{\mass{i}, \ell} \right)$ found inside the sidebands (sb)---\ie outside the SR---for this \mass{i} in a given final state $(\ell)$.
 
 Both likelihoods for a given \mass{i} are themselves products of Poisson probabilities\footnote
 {
     If the number of expected events (on average) is $\lambda$, then the probability to observe $x$ events is given by the Poisson distribution:
     $\poisson{x \middlepipe \lambda} = \frac{e^{-\lambda} \lambda^x}{x!}$
-},
-which are defined as:
+}:
 \begin{align*}
     \lhoodSR &= \prod_\ell{
         \poisson{
@@ -55,11 +59,13 @@ which are defined as:
             }
     },
 \end{align*}
-where $\mu$ is the signal strength parameter, 
+where $\mu$ is the signal strength parameter,
+$\mu_\PH$ is the free-floating normalization parameter for the SM Higgs boson background process,
+$n_{k, \mass{i}, \ell}$ is the number of events observed in the mass window for mass hypothesis \mass{i} from a source $k$ (where $s=$ signal, $b=$ background, $\PH=$ SM Higgs background) that belongs to lepton category $\ell$,
+$n_{k, \ell}$ is the number of events observed \emph{outside} the mass window,
+and lastly $\rho$ represents the profiled nuisance parameters with systematic uncertainties included.
 
-$n_\ell$ is the number of 
-
-CL$_\text{s}$~\cite{cowan_asymptotic_2011}.
+For each mass hypothesis, exclusion limits at the 95\% confidence level are extracted using an asymptotic formulation of the modified frequentist \CLs criterion~\cite{cowan_asymptotic_2011, higgs_combo_proc_2011}.
 
 \begin{multiFigure}
         \centering

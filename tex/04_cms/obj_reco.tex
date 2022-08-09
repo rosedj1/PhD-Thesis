@@ -45,21 +45,29 @@ The tracker and muon systems exhibit high reconstruction efficiency, and about 9
 \subsection{Tau Reconstruction}
 \label{sec:tau_reco}
 
-Tau leptons are characterized by a mean lifetime of about $2.9\times10^{-13}\;\text{s}$, meaning they decay within a few millimeters from their production point for the typical Lorentz boosts at the LHC. Fully leptonic decays are reconstructed in a similar way as other leptons, semileptonic decays to hardrons and a neutrino result in small and collimated hadron jetss requiring a specific reconstruction algorithm. 
-
-
-
-
+Tau leptons are characterized by a mean lifetime of about $2.9\times10^{-13}\;\text{s}$, meaning they decay within a few millimeters from their production point for the typical Lorentz boosts at the LHC. Fully leptonic decays are reconstructed in a similar way as other leptons, semileptonic decays to hadrons ($\tau_\text{h}$) and a neutrino result in small and collimated hadron jets requiring a specific reconstruction algorithm. The $\tau_\text{h}$ reconstruction algorithm should be able to determine the $\tau$ decay mode, identify PF candidates associated with both charged hadrons and photons from $\pi^0 \rightarrow \gamma\gamma$ decays, and regroup them together to estimate the $\tau_\text{h}$ kinematic properties. The hadrons plus strips (HPS) algorithm~\cite{CMS:2011eio,CMS:2015pac} analyzes PF candidates and assesses their compatibility with $\tau_\text{h}$ objects. Contributions from neutral pions can appear either directly as photon PF candidates or as electron candidates clustered inside the jet, therefore these candidates with $p_T > 0.5 \;\text{GeV}$ are clustered into ``strips'' using an iterative procedure. A dynamic strip construction was introduced in Run 2 and defined the $\Delta\eta$ and $\Delta\phi$ clustering window sizes as functions of the strip $p_T$ to ensure an optimal collection of the energy and to minimize the impact of background.
 
 
 \subsection{Jet Reconstruction}
 \label{sec:jet_reco}
 
+Quarks and gluons undergo a hadronization process, requiring the recollection and measurement of the hadronization products in order to estimate their initial momentum. Jest resulting from this process are reconstructed by clustering the PF candidates with the anti-$k_T$ algorithm~\cite{Cacciari:2008gp,Cacciari:2011ma}, which combines candidates that are close to each other based on a metric that is defined to produce jets of an approximate conic shape clustered around the hardest particles in the event. The size of the jet cone is determined by the distance parameter R at which the algorithm is operated, typically $R=0.4$ and $R0.8$. The anti-$k_T$ algorithm is resilient against infrared and collinear events, i.e., it is not affected by soft radiation or collinear parton splitting. 
 
-\subsubsection{Jet Energy Correction}
-\label{sec:jec}
-\subsubsection{Tagging \Pqb-Jets}
-\label{sec:btag}
+The four jet momentum is calculated as the vector sum of the four momenta of the clustered candidates and a set of corrections are applied to calibrate the jet response using the information of particles generated in a simulation. These corrections of the jet energy scale take into account the contribution of pileup in the event, nonlinearities in the detector response to hadrons, and residual differences between the data and the simulation used during calibration. Corrections are validated using dijet, multijet, $\gamma$+jets, and leptonic $Z$+jets events~\cite{collaboration_2011,CMS:2016lmd}. Typical jet resolutions are about 15-20\% for jets at $30 \;\text{GeV}$, 10\% at $100\;\text{GeV}$, and 5\% at $1\;\text{TeV}$.
+
+
+% \subsubsection{Jet Energy Correction}
+% \label{sec:jec}
+% \subsubsection{Tagging \Pqb-Jets}
+% \label{sec:btag}
 
 \subsection{MET Reconstruction}
 \label{sec:met_reco}
+
+Neutrinos are undetectable final state particles; however, their presence can be indirectly inferred by an imbalance of the total transverse momentum vector sum. The negative projection of this vector onto the transverse plane is denoted as missing transverse momentum, $\vec{p}_T^{\text{miss}}$. A bias can be introduced in the $\vec{p}_T^{\text{miss}}$ determination through inefficiencies within the tracking algorithm, minimal thresholds in the calorimeter energy estimation, and nonlinearities of the energy response for hadronic particles within the calorimeters, thus a correction is applied by propagating the jet energy corrections into the calculation. The corrected vector is estimated to be
+
+\begin{equation}
+\vec{p}_T^{\text{miss,corr}} = \vec{p}_T^{\text{miss}} - \sum\limits_\text{jets} \left(\vec{p}_T^{\text{corr}}-\vec{p}_T\right)
+\end{equation}
+
+taking into account the difference between intial jet $\vec{p}_T$ and its corrected value $\vec{p}_T^{\text{corr}}$. If a muon is identified within the jet cone, its four momentum is subtracted from the jet momentum when computing the correction and then added back into the $\vec{p}_T^{\text{miss}}$ sum.

@@ -244,9 +244,7 @@ To assist in determining muon \pt and timing, the DT system delivers the followi
 the position of the center of gravity (to a precision of 1.5\mm) and the corresponding angle (to a precision of 20 mrad), w.r.t. the SL reference frame.
 The total resolution of a DT in $r$-$\phi$ is about 100\mum which is comparable to the deviation caused by multiple scattering, for a muon with $\pt \le 200\GeV$.
 
-The gas gain is comparable to that of a CSC (about 100,000).
-
-The maximum drift distance in a DT is 21\mm, as can be seen in Fig.~\ref{fig:dt_cell}, which corresponds to a drift time of 380~\ns.
+The gas gain is comparable to that of a CSC (about 100,000). The maximum drift distance in a DT is 21\mm, as can be seen in Fig.~\ref{fig:dt_cell}, which corresponds to a drift time of 380~\ns.
 This value 
 
 \subsection{Resistive Plate Chambers}
@@ -255,35 +253,32 @@ This value
 \textbf{\textit{Overview:}}
 Even though CSCs~\ref{sec:csc} and DTs~\ref{sec:dt} cover the entire pseudorapidity range of $0 < \abseta < 2.4$, redundancy is important.
 Therefore, resistive plate chambers (RPCs) are placed in both the endcaps and barrel to provide excellent timing and spatial resolution, comparable to that of scintillators, to supplement the measurements of the CSC and DT systems.
-An RPC is a gaseous parallel-plate detector
-
-RPC has better time resolution than the 25~\ns between two continguous \pp bunch crossings.
+RPCs are fast gaseous detectors that serve as a muon trigger system. Muons traversing through the RPCs ionize the gas and cause an avalanche, which is measured by the plate.
 
 \textbf{\textit{Design:}}
+RPCs consist of two highly-resistive parallel plates (bakelite electrodes), one positively-charged and the other negatively-charged, separated by a 2-mm gap of gaseous volume. The gas is a three-component mixture composed of 95.2\% C$_2$H$_2$F$_4$, 4.5\% $i$C$_4$HO (isobutane), and 0.4\% SF$_6$ with a 35-40\% humidity at 21$^\circ$C.
 
-Gas mixture comprised of 96.2\% C$_{2}$H$_{2}$F$_{4}$ (1,1,1,2-tetrafluoroethane) $+$ 3.5\% $i$C$_{4}$H$_10$ (isobutane) $+$ 
+% Gas mixture comprised of 96.2\% C$_{2}$H$_{2}$F$_{4}$ (1,1,1,2-tetrafluoroethane) $+$ 3.5\% $i$C$_{4}$H$_10$ (isobutane) $+$ 
 
 The RPC system consists of 480 rectangular chambers that are oriented parallel to the beam pipe.
 A single RPC is 2.455~\mm long 
 
 
 \textbf{\textit{Physics:}}
+RPC has better time resolution than the 25~\ns between two continguous \pp bunch crossings.
 
 \subsection{Gas Electron Multipliers}
 \label{sec:gem}
 
 \textbf{\textit{Overview:}}
+Gas Electron Multipliers (GEM) are a new addition to the CMS muon system and will complement existing detectors in the forward regions close to the beampipe where radiation levels and event rates will significantly increase during Phase-2 of the LHC. GEM systems in the endcaps will improve the measurement of the polar muon bending angle, allowing the muon trigger to cope with higher rates. The GEMs will further extend the muon system coverage in the far forward regions. 
 
 \textbf{\textit{Design:}}
+GEMs are gaseous detectors featuring a GEM foil, which consists of a 50 \micron thick insulating polymer (polyimide) encased on top and bottom by copper conductors. Microscopic holes are etched in a regular hexagonal pattern throughout the foil. The GEM chambers consist of two PCBs containing the gas volume filled with an Ar/CO$_2$ gas mixture separated by a stack of three GEM foils. The GEMs feature a large area of about 0.5 m$^2$. The first batch comprising 144 chambers was installed during Long Shutdown 2 on the first disk of the two endcaps. These chambers will contribute to data-taking from Run 3 fo the LHC. Additionally, two more disks of GEM chambers will be installed in each endcap during 2024-2026, before Phase-2 of the LHC. 
 
 \textbf{\textit{Physics:}}
 
-(GEM)
-
-Located in the forward region.
-Filled with Ar/CO2 gas mixture.
-The first GEMs At the time of this dissertation writing, 
-
+The chambers are filled with an Ar/CO$_2$ gas mixture, which is ionized by muons traversing the detector system, generating a potential difference across the foils, which generates sharp electric fields in the holes. Electrons created during the ionization process drift towards the foil and are multiplied in the holes, resulting in an electron avalanche that induces a readout signal on finely-spaced strips.
 
 
 

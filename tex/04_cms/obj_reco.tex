@@ -32,16 +32,30 @@ This ultimately improves the momentum resolution of electrons.
 
 \subsection{Muon Reconstruction}
 \label{sec:muon_reco}
+
+Muons leave a very clean signature in the CMS detector thanks to their interactions in the muon spectrometers. Consequently, muon tracks are reconstructed by dedicated algorithms that are independent from the iterative PF identification system used to reconstruct other particles. These algorithms are based on a Kalman filter method that accounts for the muon energy loss in the detector materials.
+
 The most reliable muon detection occurs when both the silicon tracker \emph{and} the muon system both register hits corresponding to the same particle object.
 When both subsystems detect such a particle---most likely a muon---it is called a \emph{global muon}.
-This can be compared to the situation when only the muon system registers hits, in which case this is most likely a \emph{standalone muon}.
+This can be compared to the situation when only the muon system registers hits, in which case this is most likely a \emph{standalone muon} and must be rejected due to its worse momentum resolution and higher contamination from cosmic ray background.
 The opposite case occurs when only the tracker registers hits and the corresponding particle is termed a \emph{tracker muon}~\cite{reco_muon}.
+
+The tracker and muon systems exhibit high reconstruction efficiency, and about 99\% of muons are reconstructed either as tracker or global muons, and candidates sharing the same inner tracks are merged into a single object. Muon charge and momentum assignments are calculated from tracker measurements for muons with $p_T < 200 \;\text{GeV}$, since multiple scattering effects may degrade the muon detector measurements. The global track curvature is instead used for muons with $p_T > 200 \;\text{GeV}$ if the charge-to-momentum ratio agrees within two standard deviations from the tracker-only measurement. The muon transverse momentum resolution thus ranges from 1 to 6\% depending on the $\eta$ coordinate for muons with $p_T < 100 \;\text{GeV}$, which is better than the 10\% resolution for central muons of $p_T = 1 \;\text{TeV}$.
 
 \subsection{Tau Reconstruction}
 \label{sec:tau_reco}
 
+Tau leptons are characterized by a mean lifetime of about $2.9\times10^{-13}\;\text{s}$, meaning they decay within a few millimeters from their production point for the typical Lorentz boosts at the LHC. Fully leptonic decays are reconstructed in a similar way as other leptons, semileptonic decays to hardrons and a neutrino result in small and collimated hadron jetss requiring a specific reconstruction algorithm. 
+
+
+
+
+
+
 \subsection{Jet Reconstruction}
 \label{sec:jet_reco}
+
+
 \subsubsection{Jet Energy Correction}
 \label{sec:jec}
 \subsubsection{Tagging \Pqb-Jets}

@@ -1,29 +1,21 @@
 \section{Trigger System}
 \label{sec:trigger}
 
+Collection of collision data by CMS for each and every interaction under nominal LHC conditions would require 40 TB/sec, which is an insurmountable task for the CERN computing farm, whose processing is limited by CPU performance and storage capacity. Moreover, most proton collisions at the LHC arise from soft interactions and are highly unlikely to contain signatures of new physics, meaning they are of little interest. Hence a trigger system is designed to reduce the event collection rate to 100 kHz by rejecting uninteresting events while keeping potentially interesting events. CMS implements a two-stage trigger system, the first of which is the Level-1 (L1) trigger, which filters events and passes them to the High-Level Trigger (HLT).
+
+Triggers may be prescaled for two reasons: different physics processes are characterized by different cross sections and the trigger must keep up with luminosity changes. For the former, a prescale may be used to keep large inputs under control by, for example, recording only 1 out of every $x$ number of particular collisions, where $x$ is the prescale value. This may be implemented if a process is far more likely to be recorded in order to reduce the rate. For the latter, it is important to note that as the luminosity drops, prescales can be relaxed and can therefore change within the same fill. A trigger can be prescaled at both levels in the CMS trigger system.
+
 \subsection{The Level-1 Trigger}
 \label{sec:L1_trig}
 
-Trigger system helps to manage the enormous collision rate at 
-Size of 1 event is about 3 MB.
-This would be TB of data per second, which isn't feasible.
-Two stages of a trigger system: Level 1 Trigger (L1) and the High Level Trigger (HLT).
+The Level-1 trigger reduces the event rate from 50 MHz to 100 kHz with a latency of 3.2 \micron s by utilizing Field Programmable Gate Arrays (FPGAs) and Application Specific Integrated Circuits (ASICs). The L1 trigger uses only coarsely segmented data from the calorimeters and muon detectors while maintaining all of the high-resoluation data in pipeline memories in the front-end electronics. The L1 trigger features several algorithms (L1 bits or seeds) to store a general description of the event content from events that are accepted, which is passed to the HLT for further event processing.
 
-L1 Trigger has about a trigger rate of 100 KHz as a hard limit.
-It's latency is only 3.2 microsec.
-
-At the start of a fill in the LHC, the trigger rate is maximum.
-INSERT L1 trigger rate plot.
-
-In order to remain at the maximal L1 trigger, prescales are implemented which switch on new triggers, while turning off others.
-Collision data which passes certain triggers can be ``parked'' on disk and analyzed later (FIXME e.g., during Long Shutdowns)  Data parking is used to 
-Data scouting: 
-The HLT has a trigger rate of about 1.5 KHz.
-It can write out about 5 GB/s to disk and has a much higher latency of 0.5 s compared to the L1 Trigger.
 
 \subsection{The High-Level Trigger}
 \label{sec:hlt}
 
-Only record 1K events/s some events only occur only once per 10B collisions!
+The High-Level trigger is a software system organized into a set of algorithms known as ``paths'' designed to select specific event topologies, thus reducing the output rate from 100 kHz to approximately 1 kHz. Each path comprises steps (modules) that reconstruct high-level objects and implements decisions based on their properties. Each path can be modified by changing its modules or by defining new ones, maximizing the flexibility of the software.
 
-Use the GIF of the m4l plot with growing Data.
+The guiding principles for the construction of HLT paths are regional reconstruction, focusing only on detectors regions designated as interesting by the L1 seeds, and fast event veto, discarding uninteresting events as soon as possible to optimize trigger timing.
+
+Selected events are stored in different Primary Datasets (PD) to be used for offline analyses. A PD groups events with similar topologies and is generally fed by more than one HLT path.

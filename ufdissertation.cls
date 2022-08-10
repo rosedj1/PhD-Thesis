@@ -192,7 +192,8 @@
 \setcounter{figCount}{1}%   We will start at 1 due to how stepping it works.
 
 \newcommand{\addFigure}[3][\Alph{figCount}]{%   Command to manually add a figure
-    \parbox{#2\textwidth}{\centering #1 \\ \includegraphics[width=#2\textwidth]{#3}}
+    \parbox{#2\textwidth}
+    {\centering #1 \\ \includegraphics[width=#2\textwidth]{#3}}
     \stepcounter{figCount}
     }
 
@@ -201,8 +202,10 @@
     {% Begin Environment Code
         \setcounter{figCount}{1}
         \minipage\textwidth
+        \vspace{0.25cm}  % Jake added this to make a little space between fig and text above fig.
     }
     {% End Environment Code
+        \vspace{0.25cm}  % Jake added this to make a little space between fig and text below fig.
         \endminipage
     }
 

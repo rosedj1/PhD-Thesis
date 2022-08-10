@@ -1,23 +1,21 @@
 \section{Overview}
 This analysis searches for exotic decays of the Higgs boson (\PH) using data collected by the CMS experiment (Chapter~\ref{ch:cms}) from the \pp collisions produced at the CERN LHC (Chapter~\ref{ch:lhc}) at a center-of-mass energy of 13\TeV during the Run 2 period (2016--2018).
 Two different decay mechanisms are considered: \htozx and \htoxx.
-Here, \PX represents a BSM particle that may decay into a pair of OSSF leptons, though only electrons and muons are considered.
+Here, \PX represents a BSM particle that decays into a pair of OSSF leptons, though only electrons and muons are considered.
 Because the \PZ is the SM \PZ boson, this decay process yields the same four-lepton (\fourl) final states that were found in the Higgs boson mass measurement analysis (Chapter~\ref{ch:higgs_mass}):
 \foure, \fourmu, \twoetwomu, and \twomutwoe.
 The \fourl final state was chosen due to its clean signature and large signal-to-background ratio.
 
-Not only is \PX a theoretical BSM particle, it is speculated to interact with SM particles via the ``dark'' sector.
-Such dark sector particles are described within the theoretical framework of the ``hidden Abelian Higgs model'' (HAHM) TODO:refs7--11 from EJPC.
-Within the context of the HAHM, \PX is the dark photon $\left( \PZD \right)$.
-This dark particle mediates a dark $U(1)_\text{D}$ gauge symmetry that is spontaneously broken by a theoretical dark Higgs mechanism.
+Within the theoretical framework of the ``Hidden Abelian Higgs Model'' (HAHM) (TODO:refs7--11 from EJPC), the BSM particle \PX is speculated to interact with SM particles via the ``dark'' sector.
+In this model, \PX is the dark photon $\left( \PZD \right)$ and mediates a dark $U(1)_\text{D}$ gauge symmetry that is spontaneously broken by a theoretical dark Higgs mechanism.
 
 The search for \PZD begins with a SM decay of \htozznostar.
 Then, via the dark sector, one of the \PZ bosons \emph{mixes} with \PZD, as determined by the kinetic-mixing parameter $\varepsilon$.
-The \PZD and the other \PZ then decay into OSSF lepton pairs to yield one of the four different \fourl final states.
-This decay process is shown in Fig.~\ref{fig:feyn_diag_hzzd4l_hzdzd4l} (Left).
-The other mode of \PZD production occurs when a \PH mixes with a dark Higgs boson ($s$), as governed by the Higgs-mixing parameter $\kappa$.  % TODO:get fancier kappa
-Then, the $s$ decays into two identical \PZD particles which decay promptly to give one of the \fourl final states.
-This decay process is shown in Fig.~\ref{fig:feyn_diag_hzzd4l_hzdzd4l} (Right).
+Next, the \PZD and the \PZ bosons both decay into OSSF lepton pairs to yield one of the four different \fourl final states.
+This decay process is shown in Fig.~\ref{fig:feyn_diag_hzzd4l_hzdzd4l} (A).
+The other mode of \PZD production occurs when \PH mixes with a dark Higgs boson ($s$), as governed by the Higgs-mixing parameter $\kappa$.  % TODO:get fancier kappa
+In this case, the $s$ decays into two identical \PZD particles which decay promptly to give one of the \fourl final states.
+This decay process is shown in Fig.~\ref{fig:feyn_diag_hzzd4l_hzdzd4l} (B).
 %=== Suzanne's Feynman diagram code. ===%
 % \begin{figure}[ht]
 %     \centering
@@ -87,13 +85,35 @@ This decay process is shown in Fig.~\ref{fig:feyn_diag_hzzd4l_hzdzd4l} (Right).
             The dark Higgs then decays into two identical dark photons, each of which decays into two OSSF leptons.}
         \label{fig:feyn_diag_hzzd4l_hzdzd4l}
 \end{multiFigure}
+
 This analysis assumes a narrow-width approximation for \PZD decays so that the dark photon is confined to its on-mass shell.
 Thus, for any given dark photon mass hypothesis, \PZD is assumed to always have that singular mass value.
 This limitation on the mass of \PZD $\left(\mZD\right)$ in conjunction with the narrow-width nature of the Higgs boson mass resonance $\left( \mH \approx 125\GeV \right)$ kinematically constrains the search region of the analysis.
 Specifically, the \htozzd $\left(\htozdzd\right)$ process has the upper limit
 $\mZD < \mH - \mZ \approx 35\GeV    \left(\mZD < \mH / 2 \approx 62.5\GeV\right)$.
-Finally, to avoid the ubiquitous but unwanted reconstruction of an intermediate $\jpsi \left(\Pc\Pac\right)$ meson,
-which has a precisely measured mass of $3.096\,900 \pm 0.000\,006\GeV$~\cite{particle_data_group_review_2020},
-the mass range chosen for this analysis is $4.0 < \mZD < 35.0\GeV \left(62.5\GeV\right)$.
+Finally, to avoid the ubiquitous but unwanted reconstruction of intermediate mass resonances that often decay into dilepton final states,
+like the $\jpsi$ $\Pc\Pac$ bound state meson $\left( \mass{\jpsi} \approx 3.1\GeV \right)$~\cite{particle_data_group_review_2020}
+% More precise J/psi mass: 3.096\,900 \pm 0.000\,006\GeV
+and the $\varUpsilon$ $\bbbar$ bound state meson $\left( \mass{\varUpsilon} \approx 10.0\GeV \right)$~\cite{particle_data_group_review_2020},
+the mass range chosen for this analysis is $4.0 < \mZD < 35.0\GeV \left(62.5\GeV\right)$ while excluding the mass window $8.0 < \mass{\varUpsilon} < 11.5\GeV$.
 
-This low-mass dilepton resonance search has a similar  to the aforementioned Higgs boson mass measurement analysis described in 
+The search for \PZD uses many of the same procedures found in the Higgs boson mass measurement analysis detailed in Chapter~\ref{ch:higgs_mass}.
+However, the search for \PZD uses ``ReReco'' reconstruction instead of Ultra Legacy, since the Ultra Legacy reconstruction was not available at the time.
+The trigger paths used to select relevant \pp collision data are given in Sec.~\ref{sec:trig_dilep}.
+The names of the data sets used along with their corresponding \lumiint are detailed in Sec.~\ref{sec:datasets_dilep}.
+Finally, the details of the data sets that contain the relevant simulated events are listed in Sec.~\ref{sec:sim_samples_dilep}.
+
+The event selection for the search for \PZD (Sec.~\ref{sec:evt_sel_dilep}) is very similar to the event selection outlined in (Sec.~\ref{sec:evt_sel}), with just a few differences to optimize for the selection of low-mass dilepton candidates.
+In particular, since low-mass dilepton candidates are desired must have an invariant mass that falls outside the mass window corresponding to the $\varUpsilon$ \bbbar bound states $\left( 8.0 < \mass{\varUpsilon} < 11.5\GeV \right)$. 
+In the \zdzd search, \mZone and \mZtwo must be between 4\GeV and 62.5\GeV.
+
+As much as particle physicists hoped to observe the so-called ``golden channel'' $\left( \hzzfourl \right)$
+% , in which the SM Higgs boson decays into the \fourl final state,
+this analysis is---\emph{ironically}---contaminated by the golden channel!
+Thus, the irreducible background processes for this analysis include \htofourl decays, rare backgrounds such as $\ttbar + \PZ$ and triboson production, along with the same processes described in Sec.~\ref{sec:bkg_irred}.
+Furthermore, the reducible background (RB) processes are exactly the same as those mentioned in Sec.~\ref{sec:redbkg}.
+The OS method (Sec.~\ref{sec:os_method}) is again used to estimate the contribution from RB processes.
+A summary of the analysis of the background processes and misidentification rates of leptons is given in Sec.~\ref{sec:bkg_estim_dilep}.
+
+% syst_uncert
+% results

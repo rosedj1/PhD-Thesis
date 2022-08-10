@@ -1,9 +1,9 @@
 \section{Analyzed Data}
 \label{sec:analyzed_data}
-The CMS experiment recorded LHC~\ref{ch:lhc} data during 2016, 2017, and 2018 (collectively called Run 2), corresponding to an integrated luminosity of \lumiruntwo.
+The CMS experiment collected data produced by the LHC~\ref{ch:lhc} during 2016, 2017, and 2018 (collectively called Run 2), corresponding to an integrated luminosity of \lumiruntwo.
 These events were categorized by the trigger system~\ref{sec:trigger} into different data sets, depending on which triggers ``fired'', \ie whether the event passed the trigger criteria or not.
 The names of the data sets are listed in Tables~\ref{table:2016_dataSamples}--\ref{table:2018_dataSamples} and follow the format \texttt{/object\_type/campaign/datatier}.
-This analysis uses the ultra legacy (UL) reconstruction~\cite{}.
+This analysis uses the ultra legacy (UL) reconstruction TODO:CITE.
 % TODO: Cite some UL source.
 It should be noted that the 2016 data are split into 2 different reconstruction versions, starting at Run2016F:
 the first version is ``pre-VFP'', which uses HIP mitigation (HIPM) in the reconstruction, and the second is ``post-VFP'', which uses the default reconstruction.
@@ -16,7 +16,7 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
 %     \item  ``post-VFP'', which uses the default reconstruction
 % \end{itemize}
 % TODO: Possibly convert data set names in table to monowidth. Do so with \texttt{}.
-\subsection{Triggers}
+\subsection{Trigger Paths}
 \label{sec:trig}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %=== Triggers 2016 (for pre- and post-VFP) ===%
@@ -316,6 +316,7 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
 
 \subsection{Data Sets}
 \label{sec:datasets}
+The UL data set names, which contain the events collected by CMS that are used in the measurement of \mH, for 2016, 2017, and 2018, are listed in Tables~\ref{table:2016_dataSamples}, \ref{table:2017_dataSamples}, and \ref{table:2018_dataSamples}, respectively.
 % TODO: Should this be split into pre and post-VFP?
 %=== Data sets 2016.
 \begin{table}[h]
@@ -588,25 +589,24 @@ The data set names containing the simulated events for signal and background pro
 
 % TODO: Reword.
 % TODO: CONTAINS DATA.
-\subsection{PileUp reweight}
-Simulated samples are reweighted taking into account pileUp distribution. PileUp weight is extracted 
-for each year matching simulation and data distribution. The minimum bias cross-section used for each year is 69.2 mb.
-PileUp distributions for each year are shown in Fig.~\ref{fig:pileUpReweight}.
-
-\clearpage
-% \newpage
-% \pagebreak
-
+\subsection{Pileup Reweighting}
+Simulated samples are reweighted by taking into account the pileup distribution.
+The pileup weight is extracted for each year by comparing simulation and data distributions.
+The minimum bias cross section used for each year is 69.2\mb.
+Pileup distributions for each year are shown in Fig.~\ref{fig:pileupReweight}.
 \begin{multiFigure}
     \centering
     % \includegraphics[width=0.55\textwidth]{figures/higgsmassmeas/Reweighted_2016.pdf}
     % \includegraphics[width=0.55\textwidth]{figures/higgsmassmeas/Reweighted_2017.pdf}
     % \includegraphics[width=0.55\textwidth]{figures/higgsmassmeas/Reweighted_2018.pdf}
-    \addFigure{0.60}{figures/higgsmassmeas/Reweighted_2016.pdf}
-    \addFigure{0.60}{figures/higgsmassmeas/Reweighted_2017.pdf}
-    \addFigure{0.60}{figures/higgsmassmeas/Reweighted_2018.pdf}
+    \addFigure{0.48}{figures/higgsmassmeas/Reweighted_2016.pdf}
+    \addFigure{0.48}{figures/higgsmassmeas/Reweighted_2017.pdf}
+    \addFigure{0.48}{figures/higgsmassmeas/Reweighted_2018.pdf}
     \captionof{figure}
-        [words]
-        {TODO:REWORD Data--simulation pileUp distributions: left 2016 (for pre and post-VFP), right 2017, bottom 2018. Up (down) scale has been obtained using 72.4 (66)\mb.}
-    \label{fig:pileUpReweight}
+        [TODO:REWORD Data--simulation pileup distributions]
+        {TODO:REWORD Data--simulation pileup distributions: left 2016 (for pre- and post-VFP), right 2017, bottom 2018. Up (down) scale has been obtained using 72.4 (66)\mb.
+        A)
+        B)
+        C)}
+    \label{fig:pileupReweight}
 \end{multiFigure}

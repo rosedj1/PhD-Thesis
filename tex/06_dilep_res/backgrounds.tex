@@ -1,1 +1,40 @@
-\section{Backgrounds}
+\section{Background Estimation}
+\label{sec:bkg_estim_dilep}
+The same background processes that were considered in Sec.~\ref{sec:bkg_estim} were also analyzed in this analysis, plus these additional processes:
+\begin{itemize}
+    \item SM decays of \htofourl are considered as irreducible background (IB)
+    \item the rare backgrounds $\ttbar + \PZ$ and triboson production ($\PV\PV\PV$) are included as IB processes
+\end{itemize}
+
+The OS Method (Sec.~\ref{sec:os_method}) is used to estimate how many nonsignal events contribute to the four-prompt-lepton signal region (SR).
+Events are split into 2 control regions (CRs) that are mutually orthogonal and orthogonal to the SR.
+The 2P2F (3P1F) CR is built from those events which have 2 (3) leptons passing tight selection and 2 (1) failing leptons.
+These CRs help model those reducible background events with 2 (3) prompt leptons, whose nonprompt leptons pass tight selection when ideally they should not.
+By showing good agreement between data and simulated events in the 2P2F and 3P1F CRs, then the RB estimate to the SR becomes more confident.
+
+The misidentification rates $f_{\Pmu}$ $(f_{\Pe})$ for muons (electrons) are estimated using \ztolplm events.
+The two leptons forming the \PZ candidate must pass tight selection but a third lepton is required to pass loose selection criteria.
+This third lepton definitely does not originate from the \PZ vertex (\ie it is not \emph{prompt}) and so the frequency of this third lepton passing tight selection---the misidentification rate---is calculated.
+Low-mass resonances are eliminated by requiring $\mass{2\ell} > 4\GeV$.
+Finally, in order to ensure that the lepton pair comes from a \PZ boson instead of photon conversions, the 2 leptons forming the \PZ candidate must satisfy $\abs{\mass{\lplm} - \mass{\PZ_{\text{PDG}}}} < 7\GeV$.
+Plots of the calculated misidentification rates are shown in Fig.~\ref{fig:fakerates}.
+\begin{multiFigure}
+    % \centering
+    \addFigure{0.48}{figures/dilep_res/fakerates_dilep_mass_elec_2016.jpeg}
+    \addFigure{0.48}{figures/dilep_res/fakerates_dilep_mass_muon_2016.jpeg}
+    \addFigure{0.48}{figures/dilep_res/fakerates_dilep_mass_elec_2017.jpeg}
+    \addFigure{0.48}{figures/dilep_res/fakerates_dilep_mass_muon_2017.jpeg}
+    \addFigure{0.48}{figures/dilep_res/fakerates_dilep_mass_elec_2018.jpeg}
+    \addFigure{0.48}{figures/dilep_res/fakerates_dilep_mass_muon_2018.jpeg}
+    \captionof{figure}
+        [Misidentification rates of leptons in $\ztolplm + \text{L}$ events.]
+        {TODO:More info. Misidentification rates of leptons using 2016 data.
+        A) Electrons 2016.
+        B) Muons 2016.
+        C) Electrons 2017.
+        D) Muons 2017.
+        E) Electrons 2018.
+        F) Muons 2018.
+        }
+    \label{fig:fakerates}
+\end{multiFigure}

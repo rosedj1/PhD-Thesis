@@ -1,0 +1,211 @@
+\subsection{Vertex+Beamspot Constraint: VX+BS}
+% \subsection{Methodology}
+% so they all come from the primary vertex 
+%interaction. \\
+Leptons produced from the \hzzfourl channel should originate from the \pp collision point---the primary vertex---since the \PH boson and both \PZ bosons decay promptly after being formed.
+% TODO: Explain why electrons are not given the vertex+beamspot constraint.
+The primary vertex from which the muons originate can be approximated to come from the more general \emph{beamspot}, \ie the luminous region in the $x$-$y$ plane where the \pp bunches cross.
+Thus, if the muon tracks are constrained to come from their vertex of origination ($\approx$beamspot), then one should expect a more accurate measurement of muon momentum and resolution.
+The updated muon kinematical variables then get propagated into a more accurate estimate of the \mH value per event.
+This process of constraining muon tracks to a vertex that is compatible with the beamspot is called the \emph{vertex+beamspot constraint} (VX+BS).
+
+The pixel upgrade in the middle of Run 2 allowed for a more collimated (more precise) \pp beamspot.
+Figure~\ref{fig:BeamY_vs_Y} shows the beamspot for 2018 Run D as compared to 2016 Run G.
+Both the X and Y widths of the beamspot are smaller ($X_{2018} \approx 9 \mu m$ vs $X_{2016} \approx 14 \mu m$ and $Y_{2018} \approx 7 \mu m$ vs $Y_{2016} \approx 9 \mu m$), giving a better constraint when it is used in the track reconstruction.
+% Beamspot information has been investigated in order to try to understand the reason why 2018 results have a two times better results.
+% In Fig.~\ref{fig:BeamY_vs_Y}, the beamspot width (Y vs X) is shown for 2016 RunG and 2018 RunD.
+% On the other hand, Fig.~\ref{fig:BeamXY_vs_Lumi} shows the width X and Y as a function of lumi section.
+% As can be seen, in 2018, both X and Y widths of the beamspot are smaller ($X_{2018} \approx 9 \mu m$ vs $X_{2016} \approx 14 \mu m$ and $Y_{2018} \approx 7 \mu m$ vs $Y_{2016} \approx 9 \mu m$), letting a better constraint when it is used in the track reconstruction.
+%=== Beamspot width Y vs. width X.
+\begin{figure}[!htbp]
+\begin{center}
+	\includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/vxbs/beamspot_width_2016RunG_vs_2018RunD.png}
+	% \includegraphics[width=0.45\textwidth]{Figures/VXBS/2018D_VS_width_y_vs_x.pdf}
+  	% \includegraphics[width=0.45\textwidth]{Figures/VXBS/2016G_VS_width_y_vs_x.pdf}
+	\caption{Y vs X width of beamspot for 2018 RunD on the left and 2016 RunG on the right.}
+\label{fig:BeamY_vs_Y}
+\end{center}
+\end{figure}
+% TODO: Include BS vs. lumi?
+%=== Beamspot width as a function of lumi section. 
+% \begin{figure}[!htbp]
+% \begin{center}
+% 	\includegraphics[width=0.45\textwidth]{Figures/VXBS/2018_BS_width_x.pdf}
+% 	\includegraphics[width=0.45\textwidth]{Figures/VXBS/2018_BS_width_y.pdf}
+% 	\includegraphics[width=0.45\textwidth]{Figures/VXBS/2016_BS_width_x.pdf}
+% 	\includegraphics[width=0.45\textwidth]{Figures/VXBS/2016_BS_width_y.pdf}
+% 	\caption{X (left) and Y (right) width of the beamspot as a function of lumi section for 
+% 	2018 RunD (top) and 2016 RunG (bottom).}
+% \label{fig:BeamXY_vs_Lumi}
+% \end{center}
+% \end{figure}
+Once the event is selected, the vertex+beamspot constraint is applied.
+
+TODO:REWORD Muon reconstruction currently used does not take into account any information about the 
+vertex production of the lepton itself. % and in the Higgs boson decay, all the leptons are prompt.
+In the VX+BS approach, the four tracks from Higgs boson decay are constrained looking for a common 
+vertex (VX) that must be compatible with the beamspot (BS). 
+While muons information are updated after this procedure,
+electrons are used only to constrain the position of the common vertex, 
+leaving their kinematic information unaltered. \\
+This method has been checked in DATA and in simulation, using Z boson events (60--120 GeV)
+decaying into two muons: muon \pT resolution and mass resolution improves by about 5-10\%. 
+\textbf{This method received the green light from MuonPOG.}\\
+(\textbf{Following studies within MuonPOG have been performed using UL-Summer19/20 samples.})
+Figures~\ref{fig:Resolution_pT} and~\ref{fig:Resolution_eta} show muon resolution respectively 
+as a function of \pT and $|\eta|$ for 2018, 2017 and 2016.
+As can been seen, resolution improves by about 10$\%$ in 2018 and roughly 5$\%$ in 2016 and 2017.
+\begin{figure}[!htbp]
+\begin{center}
+	\includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/vxbs/vxbs_muon_pTresol_vs_pT.png}
+    \caption
+    [Muon \pT resolution as a function of \pT before and after VX+BS.]
+    {TODO: Use actual PDFs. Muon \pT resolution as a function of \pT, for 2018 (top left), 2017 (top right) 
+and 2016 (bottom, split in post- and pre-VFP), with (red) and without (black) VXBS constraint.}
+\label{fig:Resolution_pT}
+\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+	\includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/vxbs/vxbs_muon_pTresol_vs_eta.png}
+    \caption
+    [Muon \pT resolution as a function of \pT before and after VX+BS.]
+    {TODO: Use actual PDFs. Muon \pT resolution as a function of \abseta, for 2018 (top left), 2017 (top right) 
+and 2016 (bottom, split in post- and pre-VFP), with (red) and without (black) VXBS constraint.}
+\label{fig:Resolution_eta}
+\end{center}
+\end{figure}
+
+Figure~\ref{UL_ZBoson_DataMC_comparison_VXBS} shows Data-MC comparison, with and without VXBS constraint.
+The mean and the $\sigma$ reported on the plots are the once of the DSCB used to fit the distribution (convolved with a BW) and that simulate the detector effect.
+As can been seen, the \PZ boson resolution gets improved comparably to that of the improvement of muon \pT resolution:
+7\%(8\%) for 2018 DATA (MC), 5\%(4\%) for 2017, 5\%(6\%) for post-VFP and 5\%(5\%) for 2016 pre-VFP. 
+\begin{figure}[!htbp]
+\begin{center}
+	\includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/vxbs/vxbs_mZdist_2017_2018.png}
+	% \includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/vxbs/vxbs_mZdist_2016preVFP_2016postVFP.png}
+    \caption
+        [\PZ boson mass distributions in data and MC, with and without VX+BS constraint]
+        {TODO: REWORD \PZ boson mass distributions in data and MC, without (left) and with (right) VX+BS constraint,
+        for 2018 (top), 2017 (middle top), 2016 post-VFP (middle bottom) and 2016 pre-VFP (bottom).
+        }
+\label{UL_ZBoson_DataMC_comparison_VXBS}
+\end{center}
+\end{figure}
+
+More on beamspot constraint studies can be found in Appendix TODO:Link not showing up~\ref{app:adhoc_studies}.
+
+				%In this mass window, as can be seen in \figurename~\ref{pT_res_VXBS} the muon \pT resolution 
+				%improves by about 5-10\%; simular improvement has been observed in the \textbf{UL samples used}
+				%Z boson resolution, in both DATA and MC (\figurename~\ref{Zboson_baseline} vs 
+				%~\figurename~\ref{Zboson_VXBS})
+				%\begin{figure}[!htbp]
+				%\begin{center}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/pT_res_2016pre.pdf}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/pT_res_2016post.pdf}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/pT_res_2017.pdf}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/pT_res_2018.pdf}
+				%\caption{muon \pT resolution for 2016-preVBF (on the top left), 
+				%2016-postVBF (on the top right), 
+				%2017 (on the bottom left), 
+				%2018 (on the bottom right), 
+				%The bottom panel shows the improvement compared with 
+				%the baseline reconstruction.}
+				%\label{pT_res_VXBS}
+				%\end{center}
+				%\end{figure}
+				%
+				%\begin{figure}[!htbp]
+				%\begin{center}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/BaselineMass_2016pre.pdf}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/BaselineMass_2016post.pdf}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/BaselineMass_2017.pdf} 
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/BaselineMass_2018.pdf} 
+				%\caption{Dimuon mass distribution using baseline reconstruction, 
+				%2016-preVBF (on the top left), 
+				%2016-postVBF (on the top right), 
+				%2017 (on the bottom left), 
+				%2018 (on the bottom right), 
+				%Black dots are DATA, red histogram is MC. Ratio plot is shown in the bottom panel.}
+				%\label{Zboson_baseline}
+				%\end{center}
+				%\end{figure}
+				%\begin{figure}[!htbp]
+				%\begin{center}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/VXBSMass_2016pre.pdf}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/VXBSMass_2016post.pdf}
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/VXBSMass_2017.pdf} 
+				%		\includegraphics[width=0.35\textwidth]{Figures/VXBS/Zboson/VXBSMass_2018.pdf} 
+				%\caption{Dimuon mass distribution using VXBS reconstruction, 
+				%2016-preVBF (on the top left), 
+				%2016-postVBF (on the top right), 
+				%2017 (on the bottom left), 
+				%2018 (on the bottom right), 
+				%Black dots are DATA, red histogram is MC. Ratio plot is shown in the bottom panel.}
+				%\label{Zboson_VXBS}
+				%\end{center}
+				%\end{figure}
+
+%=== 1D likelihood fit after VX+BS ===%
+The updated invariant mass distributions, after applying the VX+BS constraint, are shown in Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}.
+\begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_4mu.pdf}
+        \includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_4e.pdf}
+        \includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_2e2mu.pdf}
+        \includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_2mu2e.pdf}
+        \caption
+            [Four-lepton invariant mass distribution, after applying the VX+BS constraint]
+            {TODO: Convert to multiFigure: Four-lepton invariant mass distribution, after applying the VX+BS constraint, in 
+            the signal region ([105-140]\GeV) using ggH events, with the DSCB fit for 2018: 4$\mu$ (top left),
+            4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+    \label{fig:1D_VXBS_mass_2018_ggH}
+    \end{center}
+    \end{figure}
+As can been seen, comparing these new distributions (Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}, Right) with the ones before beamspot constraint (Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}, Left), the $\sigma$ in 4$\mu$ final state has improved by 7$\%$, 4e is not affected (as expected), while mixed flavor final states show an improvement of a few percent.
+
+\subsubsection{Expected \mH measurement uncertainties (MC)}
+The expected $\mass{H}$ measurement uncertainties comparing VX+BS constraint to the baseline expectations can be seen in Table~\ref{table:1D_model_result_fs_BS} split by final state or in Table~\ref{table:1D_model_result_year_BS} split by year.
+
+\begin{table}[ht]	
+\begin{center}
+    \topcaption
+        [Expected Higgs boson mass uncertainty measured with 1D model, with and without VXBS, by final state]
+        {Expected Higgs boson mass uncertainty measured with 1D model, with and without
+        VX+BS for different final states. All mass values are given in \MeVns.
+        Statistical-only results are considered at this stage of the analysis.
+        }
+    \begin{tabular}{ccccccc}
+            \hline			
+        Expected uncertainty (\MeVns)	&	4$\mu$	&	4e	&	2e2$\mu$	&2$\mu$2e	& inclusive	& Rel. Improvement \\
+            \hline			
+        1$D_{VXBS}$  (No bkg)	&	137	&	394	&	275	&	266	&	108 &	-4\%	\\
+            1D	(No bkg) &	147	&	394	&	276	&	273	&	112	&	-	\\
+        %	1$D_{VXBS}$  (No bkg)	&	144	&	466	&	313	&	291	&	116	&	-4\%	\\	
+        %	1D	(No bkg) &	153	&	466	&	315	&	300	&	121 	&	- \\
+            \hline
+    \end{tabular}
+    \label{table:1D_model_result_fs_BS}
+\end{center}
+\end{table}
+\begin{table}[ht]	
+\begin{center}
+    \topcaption
+        [Expected Higgs boson mass uncertainty measured with 1D model, with and without VXBS, by year]
+        {Expected Higgs boson mass uncertainty measured with 1D model, with and without
+        VX+BS for different years. All mass values are given in \MeVns.
+        Statistical-only results are considered at this stage of the analysis.
+        }
+    \begin{tabular}{ccccc}
+        \hline			
+    Expected uncertainty (\MeVns)	&	2016 pre-VFP	&	2016 post-VFP	&	2017	&	2018	\\
+        \hline			
+        1$D_{VXBS}$	(No bkg)	&	291	&	301	&	198	&	162	\\
+        1D (No bkg)	&	304	&	314	&	207	&	170	\\
+    %	1$D_{VXBS}$	(No bkg)	&	227	&	212	&	173	\\
+    %	1D (No bkg)	&	234	&	222	&	182	\\
+        \hline
+    \end{tabular}
+    \label{table:1D_model_result_year_BS}
+\end{center}
+\end{table}

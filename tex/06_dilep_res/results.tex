@@ -1,11 +1,31 @@
 \section{Results}
 \label{sec:results_dilep}
-An analysis of the \mZtwo spectrum is performed to look for any possible low-mass dilepton resonances.
-In the case of \htozdzd, in which both of the daughter particles are identical, then a peak in the \mZtwo spectrum is expected at $(\mZone + \mZtwo) / 2$.
+A counting experiment (``cut-and-count analysis'') is performed in many bins across the \mZtwo spectrum to look for any possible low-mass dilepton resonances.
+In the case of \htozdzd, where both of the daughter particles are identical, then a peak in the \mZtwo spectrum is expected at $(\mZone + \mZtwo) / 2$.
+The \mZtwo distributions for the \htozzd and \htozdzd processes, categorized by the \mZtwo final states, can be seen in Figs.~\ref{fig:yield_hzzd_mZ2} and~\ref{fig:yield_hzdzd_mZ12}, respectively.
+% 2\Pe and 2\Pmu final states are shown in Fig.~\ref{fig:yield_hzzd_mZ2} (A) and (B), respectively.
+\begin{multiFigure}
+    \centering
+    \addFigure{0.48}{figures/dilep_res/yield_hzzd_mZ2_2mu.pdf}
+    \addFigure{0.48}{figures/dilep_res/yield_hzzd_mZ2_2e.pdf}
+    \captionof{figure}
+        [Event yield within the distribution of \mZtwo in the \htozzd channel]
+        {Event yield within the distribution of \mZtwo in the \htozzd channel.}
+    \label{fig:yield_hzzd_mZ2}
+\end{multiFigure}
+\begin{multiFigure}
+    \centering
+    \addFigure{0.48}{figures/dilep_res/yield_hzdzd_mZ12_4mu.pdf}
+    \addFigure{0.48}{figures/dilep_res/yield_hzdzd_mZ12_4e.pdf}
+    \addFigure{0.48}{figures/dilep_res/yield_hzdzd_mZ12_2e2mu.pdf}
+    \captionof{figure}
+        [Event yield within the distribution of \mZtwo in the \htozdzd channel]
+        {Event yield within the distribution of \mZtwo in the \htozdzd channel.}
+    \label{fig:yield_hzdzd_mZ12}
+\end{multiFigure}
 
-A cut-and-count analysis is performed in many bins across the \mZtwo spectrum.
-Using events selected from the \zzd event selection, 353 mass hypotheses $\left( \mass{i} \right)$ are considered for \mZtwo.
-The idea is to scan over the entire \mZtwo range $(4.20\text{--}34.98 \GeV)$ in very fine \mZtwo bins, while avoiding the $\Upsilon$ $\bbbar$ bound states.  % TODO: Italicize Upsilon!
+Using events selected from the \htozzd channel, 353 mass hypotheses $\left( \mass{i} \right)$ are considered for \mZtwo.
+The idea is to scan over the entire \mZtwo range $(4.20\text{--}34.98 \GeV)$ in very fine \mZtwo bins, while avoiding the $\varUpsilon$ $\bbbar$ bound states.  % TODO: Italicize Upsilon!
 To achieve the large number of bins across only a range of $\approx$30\GeV, each subsequent mass hypothesis (\mass{i+1}) is selected to be only 0.5\% larger than the previous \mass{i}.
 Thus, the mass hypotheses are given by the formula:
 \begin{align*}
@@ -26,7 +46,7 @@ The model is defined as:
     \lhoodSR %\left( n_\text{tot}^\text{SR} \right)
     \lhoodsb, %\left( n_\text{tot}^\text{sb} \right)
 \end{equation*}
-where \lhoodSR is the likelihood that the parameters of interest $\left( \theta_k \right)$ describe the total observed number of events $\left( n^\text{SR}_{\mass{i}, \ell} \right)$ found inside the signal region (SR) for this \mass{i} in a given final state $(\ell)$,
+where $\lhoodSR$ is the likelihood that the parameters of interest describe the total observed number of events $\left( n^\text{SR}_{\mass{i}, \ell} \right)$ found inside the signal region (SR) for this \mass{i} in a given final state $(\ell)$,
 and similarly, \lhoodsb is the likelihood that the parameters describe the total observed number of events $\left( n^\text{sb}_{\mass{i}, \ell} \right)$ found inside the sidebands (sb)---\ie outside the SR---for this \mass{i} in a given final state $(\ell)$.
 
 Both likelihoods for a given \mass{i} are themselves products of Poisson probabilities\footnote
@@ -65,57 +85,45 @@ $n_{k, \mass{i}, \ell}$ is the number of events observed in the mass window for 
 $n_{k, \ell}$ is the number of events observed \emph{outside} the mass window,
 and lastly $\rho$ represents the profiled nuisance parameters with systematic uncertainties included.
 
-For each mass hypothesis, exclusion limits at the 95\% confidence level are extracted using an asymptotic formulation of the modified frequentist \CLs criterion~\cite{cowan_asymptotic_2011, higgs_combo_proc_2011}.
-
-\begin{multiFigure}
-        \centering
-        \addFigure{0.48}{figures/dilep_res/yield_hzzd_mZ2_2mu.pdf}
-        \addFigure{0.48}{figures/dilep_res/yield_hzzd_mZ2_2e.pdf}
-        \captionof{figure}
-            [test]
-            {testing more}
-        \label{fig:yield_hzzd_mZ2}
-\end{multiFigure}
-
-\begin{multiFigure}
-        \centering
-        \addFigure{0.48}{figures/dilep_res/yield_hzdzd_mZ12_4mu.pdf}
-        \addFigure{0.48}{figures/dilep_res/yield_hzdzd_mZ12_4e.pdf}
-        \addFigure{0.48}{figures/dilep_res/yield_hzdzd_mZ12_2e2mu.pdf}
-        % \captionof{figure}
-            % []
-            % {}
-        \label{fig:yield_hzdzd_mZ12}
-\end{multiFigure}
-
+For each mass hypothesis, exclusion limits at the 95\% confidence level are set using an asymptotic formulation of the modified frequentist \CLs criterion~\cite{cowan_asymptotic_2011, higgs_combo_proc_2011} for the \zzd analysis and the full \CLs approach for the \zdzd analysis.
+Figures~\ref{fig:exclus_lim_BR_hzzd} and~\ref{fig:exclus_lim_BR_hzdzd} show the limits set on the branching fractions considering the \zzd and \zdzd selections, respectively.
+Finally, Fig.~\ref{fig:exclus_lim_kappa} shows limits set on the Higgs-mixing parameter ($\kappa$) and thus the branching fraction of \htozdzd.
 \begin{multiFigure}
         \centering
         \addFigure{0.48}{figures/dilep_res/exclus_lim_BR_hzzd_2mu.pdf}
         \addFigure{0.48}{figures/dilep_res/exclus_lim_BR_hzzd_2e.pdf}
         \addFigure{0.48}{figures/dilep_res/exclus_lim_BR_hzzd_2mu_or_2e.pdf}
         \captionof{figure}
-            []
-            {}
+            [TODO: Expected and observed exclusion limits on $\brof{\htozzd} \times \brof{\PZD \to \ell\ell}$]
+            {TODO:
+            Expected and observed exclusion limits at the 95\% confidence level on $\brof{\htozzd} \times \brof{\PZD \to \ell\ell}$.
+            A) $\PZD \to \mumu$.
+            B) $\PZD \to \ee$.
+            C) Democratic decays of $\zdtoeepmormumupm$.
+            }
         \label{fig:exclus_lim_BR_hzzd}
 \end{multiFigure}
-
 \begin{multiFigure}
         \centering
         \addFigure{0.48}{figures/dilep_res/exclus_lim_BR_hzdzd_2mu.pdf}
         \addFigure{0.48}{figures/dilep_res/exclus_lim_BR_hzdzd_2e.pdf}
         \addFigure{0.48}{figures/dilep_res/exclus_lim_BR_hzdzd_2mu_or_2e.pdf}
-        % \captionof{figure}
-            % []
-            % {}
+        \captionof{figure}
+            [TODO: Expected and observed exclusion limits on $\brof{\htozdzd} \times \brof{\PZD \to \ell\ell}$]
+            {TODO:
+            Expected and observed exclusion limits at the 95\% confidence level on $\brof{\htozdzd} \times \brof{\PZD \to \ell\ell}$.
+            A) $\PZD \to \mumu$.
+            B) $\PZD \to \ee$.
+            C) Democratic decays of $\zdtoeepmormumupm$.
+            }
         \label{fig:exclus_lim_BR_hzdzd}
 \end{multiFigure}
-
 \begin{multiFigure}
         \centering
         \addFigure{0.48}{figures/dilep_res/exclus_lim_kappa.pdf}
-        % \captionof{figure}
-            % []
-            % {}
+        \captionof{figure}
+            [TODO: Expected and observed exclusion limits on the Higgs-mixing parameter.]
+            {TODO: Expected and observed exclusion limits on the Higgs-mixing parameter.}
         \label{fig:exclus_lim_kappa}
 \end{multiFigure}
 

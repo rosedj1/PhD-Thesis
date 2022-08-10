@@ -20,14 +20,64 @@ The two IBs for this analysis are:
     \item \qqzzfourl (quark-antiquark annihilation).
 \end{itemize}
 
+\subsubsection{ggZZ background}
+Following the prescription of TODO:CITE HIG-19-001,
+% ~\cite{HIG_19_001}
+the \ggzzfourl background 
+is reweighted by a $K$ factor to reach NNLO precision.
+%\figurename~\ref{Mass_comparison_ggZZ} shows a comparison of the ggZZ background in different final 
+%states, for different years, for different reconstruction.
+%\begin{figure}[!htbp]
+%\begin{center}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%\caption{ggZZ mass distribution for 2016 on top ($4\mu$ on the left 4e on the right),
+%2017 in the middle (4$\mu$ on the left 2e2$\mu$ on the right),
+%2018 on bottom (4e on the left 2$\mu$2e on the right),
+%Four different approaches are shown: baseline (black), refit+baseline (red), VXBS (green)
+%and VXBS+refit (blue).}
+%\label{Mass_comparison_ggZZ}
+%\end{center}
+%\end{figure}
+
+\subsubsection{qqZZ background}
+%qqZZ with k.qqZZ.ewk and k.qqZZ.qcd.M
+The \qqzzfourl background is generated at NLO and then scaled to NNLO using NNLO/NLO $K$ factors,
+as a function of \mass{\ZZ}. Additional NLO electroweak corrections, which depend on the initial state quark flavors and their
+kinematic variables, are also applied to this process in the region $\mass{\ZZ} > 2\mass{\PZ}$, where the corrections have been computed. 
+For more details and plots, see TODO:CITE HIG-19-001.
+% ~\cite{HIG_19_001}.
+%\figurename~\ref{Mass_comparison_qqZZ} shows a comparison of the qqZZ background in different final 
+%states, for different years, for different reconstruction.
+%\begin{figure}[!htbp]
+%\begin{center}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%\caption{ggZZ mass distribution for 2016 on top ($4\mu$ on the left 4e on the right),
+%2017 in the middle (4$\mu$ on the left 2e2$\mu$ on the right),
+%2018 on bottom (4e on the left 2$\mu$2e on the right),
+%Four different approaches are shown: baseline (black), refit+baseline (red), VXBS (green)
+%and VXBS+refit (blue).}
+%\label{Mass_comparison_qqZZ}
+%\end{center}
+%\end{figure}
+
 \subsection{Reducible Background}
 \label{sec:redbkg}
 While IB processes produce 4 prompt leptons, RB processes produce varying numbers of prompt and nonprompt leptons.
 Nonprompt leptons emerge from 3 main sources:
 \begin{itemize}
-    \item misidentifying light-flavor hadrons (\eg $\pi^{\pm}$) as leptons,
-    \item heavy-flavor hadrons that decay mid-flight into leptons,
-    \item and the asymmetric conversion of photons into electrons.
+    \item misidentifying light-flavor hadrons (\eg $\pi^{\pm}$) as leptons
+    \item heavy-flavor hadrons that decay mid-flight into leptons
+    \item the asymmetric conversion of photons into electrons
 \end{itemize}
 
 This analysis is tailored to efficiently reconstruct prompt(nonprompt) leptons as PTS(FTS) leptons.
@@ -47,7 +97,7 @@ Examples of RB processes for this analysis include:
 The careful estimation of these RB contributions to the 4P region is necessary for the precise measurement of the Higgs boson mass.
 
 \subsubsection{OS Method}
-% \label{sec:os_method}
+\label{sec:os_method}
 The goal of the OS Method is to estimate the number of opposite-sign same-flavor (OSSF) \fourl events produced by RB process that ``contaminate'' the 4P region $\left( \nfourPRB \right)$, given by Eq.~\ref{eqn:rbe_formula_final}.
 % Since the $4\ell$ final state of the signal process consists of 2 pairs of OSSF leptons, the method is called the \emph{OS Method}.
 However, the typical approach of using simulated samples does not model RB well, since RB processes (\eg \Zplusjets) rely on higher-order effects like jet modelling which are not yet accurately simulated.
@@ -59,8 +109,7 @@ Thus, events in data are sorted into 2 control regions (CRs), both of which are 
 	\item the \emph{3P1F} CR (built from 3 PTS and 1 FTS leptons)
 	\item the \emph{2P2F} CR (built from 2 PTS and 2 FTS leptons).
 \end{itemize}
-The event selection for the 2P2F and 3P1F CRs is almost identical to that of the SR,
-% TODO: (Sec.~\ref{sec:zz_sel}),
+The event selection for the 2P2F and 3P1F CRs is almost identical to that of the SR, TODO:REF TO EVT SEL %Sec.~\ref{sec:zz_sel}),
 except that the FTS lepton(s) are required to build the \Ztwo.
 The events that contribute mostly to the 2P2F(3P1F) CR are those that produce 2(3) prompt and 2(1) nonprompt leptons and are called \emph{2pr}(\emph{3pr}) events.
 Similarly, the events that contribute mostly to the 4P SR are those that produce 4 prompt leptons and are called \emph{4pr} events.
@@ -91,7 +140,9 @@ Such an event would then fall into the 3P1F CR and, allowing for only one nonpro
 	\label{eqn:wt_2prto3p1f}
 	\wgttwoprompttothreePoneF^k
 	&= \left( \effprpass \right)^2 
-	\left[ \effnppass(\ell_1^k) \cdot \effnpfail(\ell_2^k) + \effnpfail(\ell_1^k) \cdot \effnppass(\ell_2^k) \right]
+	\left[
+		\effnppass(\ell_1^k) \cdot \effnpfail(\ell_2^k) + \effnpfail(\ell_1^k) \cdot \effnppass(\ell_2^k)
+	\right]
 	\notag
 	\\
 	&= \left( \effprpass \right)^2
@@ -110,6 +161,7 @@ allows Eq.~\ref{eqn:wt_2prto3p1f} to be written as
 	\label{eqn:wt_2prto3p1f_simp}
 	\wgttwoprompttothreePoneF^k = 2 \epsilon^2 f (1-f).
 \end{equation}
+The prediction of Eq.~\ref{eqn:wt_2prto3p1f_simp} can be seen in Figs.~\ref{cr_plots_3p1f_2016prevfp}--\ref{cr_plots_3p1f_2018} (red line) for 2016--2018 UL data.
 
 Even more rarely, both nonprompt leptons from a 2pr event may be misidentified as PTS leptons.
 In this case, event $k$ contributes to the 4P region an effective weight of
@@ -186,7 +238,7 @@ This is achieved by relating \xtwoprompt to \ntwoPtwoF using Eq.~\ref{eqn:wt_2pr
 			[Diagram showing how RB prompt-lepton processes contribute to observed PTS-lepton events.]
 			{
 			Contributions of per-event weights (boxed values) of various $n$-prompt-lepton processes ($X_{n\text{pr}}$, in parentheses) to the total numbers of events in the observed control regions $\left( \ntwoPtwoF, \nthreePoneF \right)$ and signal region $\left( \nfourP \right)$.
-			The labels ``RB'' and ``IB'' indicate those contributions which comprise the reducible and irreducible backgrounds, respectively.
+			The labels ``IB'' and ``RB'' indicate those contributions which comprise the irreducible and reducible backgrounds, respectively.
 			}
 		\label{fig:prompt_to_crs}
 	\end{center}
@@ -246,12 +298,8 @@ and by summing over the total number of raw yields per CR:
 	- \sum_{k=1}^{N_{\text{3P1F}}^{\ZZ}} \hat{w}^{k}_{\ZZ} \frac{f_k}{1 - f_k},
 \end{equation}
 where $f_{1,j}$ and $f_{2,j}$ are the misidentification rates of the first and second FTS leptons, respectively, found in the $j^{\text{th}}$ 2P2F event
-and $\hat{w}^k_{\ZZ}$ accounts for the differential QCD and electroweak $K$ factors.
-% TODO:defined in Sec.~\ref{sec:bkg_irred}.
+and $\hat{w}^k_{\ZZ}$ accounts for the differential QCD and electroweak $K$ factors defined in TODO:REF $sec:bkg_irred$. %Sec.~\ref{sec:bkg_irred}.
 % The plots in \figurename~\ref{FINAL RBE PLOTS} make use of Eq.~\ref{eqn:rbe_formula_final}.
-
-% TODO:MOVE the line below to some place better?
-The prediction of Eq.~\ref{eqn:wt_2prto3p1f_simp} can be seen in Figs.~\ref{cr_plots_3p1f_2016prevfp}--\ref{cr_plots_3p1f_2018} (red line) for 2016--2018 UL data.
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_4mu.pdf}
@@ -420,11 +468,11 @@ The misidentification rate is calculated by simply counting the number of nonpro
 		N^{\mathrm{np}}_{\mathrm{L}}
 		}.
 \end{equation}
-The $\pt^e$ bin edges are [5--10--20--30--40--50--80]\GeV and the $\pt^{\mu}$ bin edges are [5--7--10--20--30--40--50--80]\GeV.
+The $\pt^\Pe$ bin edges are [5--10--20--30--40--50--80]\GeV and the $\pt^{\mu}$ bin edges are [5--7--10--20--30--40--50--80]\GeV.
 % Since the 2P2F, 3P1F, and 4P regions all contain an unreliable
 The nonprompt leptons used to measure $f$ are taken from events in data with a signature like that of \ZplusL, where Z is a Z boson and \looselep is a loose lepton ($\Pe, \mu$).
 By construction, this region of events is orthogonal to the 2P2F, 3P1F, and 4P regions, and provides a clean source of \looselep.
-The loose lepton, whose selection is defined in Sections~\ref{sec:el_sel} and~\ref{sec:mu_sel}, is also called the \emph{probe} lepton.
+The loose lepton, whose selection is defined in Secs.~\ref{sec:el_sel} and~\ref{sec:mu_sel}, is also called the \emph{probe} lepton.
 The probe lepton is either a PTS or FTS lepton and is counted towards both the numerator and denominator of Eq.~\ref{eqn:fr_calc}. 
 
 Events are selected that satisfy the following criteria:
@@ -493,3 +541,86 @@ The final misidentification rates used in the OS Method for electrons and muons 
 \end{figure}
 % \subsubsection{OS Method event selection}
 % \label{osmethod_evtsel}
+
+
+\subsubsection{Background fitting}
+The background is modelled by fitting the four-lepton mass distribution in the range 70--770\GeV
+with a Landau function (fitting each final state independently).
+Examples of the fit for 2018 are reported in \figurename~\ref{ZX_models_2018}.
+% TODO: Get 2017 and 2016 plots?
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_4mu.pdf}
+		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_4e.pdf}
+		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_2e2mu.pdf}
+		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_2mu2e.pdf}
+		\caption{2018 \ZplusX Landau modelling, split in four different final states:
+		4$\mu$ top left 4e top right, 2e2$\mu$ bottom left, 2$\mu$2e bottom right.}
+		\label{ZX_models_2018}
+	\end{center}
+\end{figure}
+When applying categorisation, the very low statistics in each bin prevents a fit of the distribution.
+In this case, the shapes are obtained directly from the inclusive distributions in each final state.
+%is currently obtained, for 2017 and 2018,
+%scaling according to the luminosity the shape of the Z+X contribution evaluated in \cite{HIG_16_041} 
+%for 2016. From these values, its contribution in each bin is obtained scaling according to the 
+%$qq\rightarrow ZZ$ background as follows
+%\[
+%\frac{(Z+X)_{bin~i}}{(Z+X)_{incl}} = \frac{(qqZZ)_{bin~i}}{(qqZZ)_{incl}}
+%\]
+%This background will be evaluated properly, following next steps.
+
+% \subsubsection{Predictions}
+% Section to be filled.
+
+% \subsubsection{Validation using wrong-flavour-wrong-charge control sample}
+% Section to be filled.
+
+\subsubsection{Background impact on mass measurement}
+All the results shown so far were obtained in the case of a perfect background rejection. 
+Tables~\ref{table:bkg_impact} and~\ref{table:bkg_impact_year} show results in the 
+realistic case of signal + background. 
+Irreducible backgrounds have been fit with a Bernstein polynomial of degree three.
+%Examples of the fits are shown for 2018 in \figurename~\reg{ggZZ_fit} and \figurename~\reg{ggZZ_fit}, for $gg\rightarrow ZZ$ and $qq\rightarrow ZZ$ respectively.
+\begin{table}[ht]	
+\begin{center}
+	\topcaption{Expected Higgs boson mass uncertainty measured implementing the categorisation,
+	for different final state, with and without background contribution. 
+	All mass values are given in \MeV.  
+	Statistical only results are considered at this stage of the analysis.
+	}
+	\begin{tabular}{ccccccc}
+		\hline			
+	Expected uncertainty	&	4$\mu$	&	4e	&	2e2$\mu$	&2$\mu$2e	& inclusive	&	Rel. Improvement \\
+		\hline			
+		N-1$D'_{VXBS}$	&	143	&	391	&	249	&	282	&	109	&	+17\%	\\
+		N-1$D'_{VXBS}$ (No bkg)	&	124	&	319	&	203	&	236	&	92	&	-6\%	\\
+	%	N-1$D'_{VXBS}$	&	148	&	465	&	271	&	310	&	116	&	+18\%	\\
+	%	N-1$D'_{VXBS}$ (No bkg)	&	128	&	371	&	227	&	253	&	98	&	-	\\
+		\hline
+	%relative improvement	&	-	&	-	&	-	&	-	&	-	\\
+		%\hline
+	\end{tabular}
+	\label{table:bkg_impact}
+\end{center}
+\end{table}
+\begin{table}[ht]	
+\begin{center}
+	\topcaption{Expected Higgs boson mass uncertainty measured implementing the categorisation,
+	for different years, with and without background contribution.
+	All mass values are given in \MeV.  
+	Statistical only results are considered at this stage of the analysis.
+	}
+	\begin{tabular}{ccccc}
+	\hline			
+	Expected uncertainty	&	2016 pre-VFP	&	2016 post-VFP	&	2017	&	2018	\\
+	\hline		
+		N-1$D'_{VXBS}$	&	295	&	307	&	200	&	164	\\
+		N-1$D'_{VXBS}$ (no-bkg)	&	247	&	255	&	170	&	140	\\
+	%	N-1$D'_{VXBS}$	&	229	&	214	&	172	\\
+	%	N-1$D'_{VXBS}$ (no-bkg)	&	192	&	180	&	147	\\
+	\hline
+	\end{tabular}
+	\label{table:bkg_impact_year}
+\end{center}
+\end{table}

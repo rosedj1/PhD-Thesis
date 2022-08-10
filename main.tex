@@ -1,7 +1,19 @@
-%=== Dissertation template borrowed from Xunwu Zuo (2021). ===%
+%=== Dissertation template borrowed from Dr. Xunwu Zuo (2021). ===%
 
 %% UF thesis template from https://helpdesk.ufl.edu/application-support-center/etd-technical-support/ms-word-and-latex-templates/
 %% LaTex template summer 2019
+
+%=== NOTES TO FUTURE USERS ===%
+% Inside ufdissertation.cls you'll find this custom environment command:
+% \begin{multiFigure}
+%     \centering
+%     \addFigure{0.96}{path/to/fig}
+%     \captionof{figure}
+%         []
+%         {}
+%     \label{fig:X}
+% \end{multiFigure}
+% * Make sure that there is NO NEWLINE between \begin{multiFigure} and the line ABOVE it (otherwise your figs will be off-center)!
 
 \documentclass{ufdissertation}\sloppy
 
@@ -17,7 +29,7 @@
 \usepackage{xcolor}
 \usepackage{caption}
 \usepackage{subcaption} % allowing to use subfigure inside figure
-% \usepackage{topcapt} % allow \topcaption
+\usepackage{topcapt} % allow \topcaption
 \usepackage{graphicx} % allow \resizebox
 %\usepackage{amsrefs}%   amsrefs contains the .bibtex style content for mathematician papers.
 \usepackage{amsmath}
@@ -71,36 +83,35 @@
 \chair[Guenakh Mitselmakher]{Andrey Korytov}%                   Chair and Cochair (see comment block above).
 
 %% additional sections
-\setDedicationFile{tex/dedicationFile}% THIS                Dedication Page
-\setAcknowledgementsFile{tex/acknowledgementsFile}% THIS    Acknowledgements Page
-\setAbstractFile{tex/abstractFile}% THIS                    Abstract Page (This should only include the abstract itself)
+% \setDedicationFile{tex/dedicationFile}%                Dedication Page
+% \setAcknowledgementsFile{tex/acknowledgementsFile}%    Acknowledgements Page
+% \setBiographicalFile{tex/biographyFile}%               Biography file of the Author (you).
+\setAbstractFile{tex/abstractFile}%                    Abstract Page (This should only include the abstract itself)
 
 %=== Bibliography is printed in the command \setReferenceFile below. ===%
 % \bibliographystyle{plain}
 % \bibliography{referenceFile}
-\setReferenceFile{referenceFile}{jhep}% THIS        References. First argument is your bibtex source file (.bib) the second argument is your bibtex style file (.bst).
+\setReferenceFile{referenceFile}{jhep}%        References. First argument is your bibtex source file (.bib) the second argument is your bibtex style file (.bst).
 % \setReferenceFile{referenceFile}{amsplain}
 % Use the style "unsrtnat" since it sorts references in cite order and shows url.
 % Other bibliographystyles: unsrtnat, apsrev, ieeetr, jhep (beautiful but doesn't show url).
 
-\setBiographicalFile{tex/biographyFile}% THIS               Biography file of the Author (you).
 
 %%%% These are NOT required, so only use them if you actually need/have them.
 % \setAbbreviationsFile{tex/abbreviations}%           Abbreviations Page. Jake changed this to say "LIST OF ACRONYMS".
 % \setAppendixFile{tex/appendix}%                     Appendix Content; hyperlinking might be weird.
-%\multipleAppendixtrue%                          Uncomment this if you have more than one appendix, 
-%%                                                   comment it if you have only one appendix.
+% \multipleAppendixtrue%                          Uncomment this if you have more than one appendix, otherwise leave it commented. This adds "A", "B" in the TOC next to each Appendix entry.
 
 %=== Main Text ===%
 \begin{document}
 %%%%%%%%%%%%%%%
 %--- Intro ---%
 %%%%%%%%%%%%%%%
-\input{tex/01_intro/intro.tex}
+% \input{tex/01_intro/intro.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %--- Standard Model ---%
 %%%%%%%%%%%%%%%%%%%%%%%%
-\input{tex/02_theory/sm.tex}
+% \input{tex/02_theory/sm.tex}
 %%%%%%%%%%%%%
 %--- LHC ---%
 %%%%%%%%%%%%%
@@ -119,21 +130,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Higgs Mass Measurement ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/05_higgs_mass/higgs_intro.tex}
+\input{tex/05_higgs_mass/higgs_intro.tex}
 % \input{tex/05_higgs_mass/overview.tex}
 % \input{tex/05_higgs_mass/datasets_simul_trig.tex}
-% \input{tex/05_higgs_mass/event_sel.tex}               % Fill out subsections.
-% \input{tex/05_higgs_mass/backgrounds.tex}             % Done?
-% \input{tex/05_higgs_mass/techniques.tex}
+% \input{tex/05_higgs_mass/obj_and_event_sel.tex}               % Fill out subsections.
 % \input{tex/05_higgs_mass/signal_modeling.tex}
-% \input{tex/05_higgs_mass/syst_uncert.tex}
-% \input{tex/05_higgs_mass/results.tex}
+% \input{tex/05_higgs_mass/techniques.tex}
+\input{tex/05_higgs_mass/backgrounds.tex}             % Done?
+\input{tex/05_higgs_mass/syst_uncert.tex}
+\input{tex/05_higgs_mass/results.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Search for Dilepton Resonances ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \input{tex/06_dilep_res/dilep_res_intro.tex}
 % \input{tex/06_dilep_res/overview.tex}
 % \input{tex/06_dilep_res/datasets_simul_trig.tex}
+% TODO: Include object selection in event_sel.tex?
 % \input{tex/06_dilep_res/event_sel.tex}
 % \input{tex/06_dilep_res/backgrounds.tex}
 % \input{tex/06_dilep_res/syst_uncert.tex}
@@ -141,6 +153,6 @@
 %%%%%%%%%%%%%%%%%%%%
 %--- Conclusion ---%
 %%%%%%%%%%%%%%%%%%%%
-% \input{tex/conclusion.tex}  % Done.
+% \input{tex/conclusion.tex}
 %=========================================================%
 \end{document}

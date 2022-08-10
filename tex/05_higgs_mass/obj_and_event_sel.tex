@@ -1,11 +1,11 @@
 % This section was Event Reconstruction and Selection but now just making it Event Selection.
-\section{Event Selection}
+\section{Object and Event Selection}
 \label{sec:evt_sel}
 % Amidst the chaotic particle deluge that arises from \pp collisions, the events that appear to follow the decay chain and properties of the \hzzfourl signal are carefully selected.
-Amidst the chaotic particle deluge that arises from \pp collisions, events are carefully selected that appear to follow the decay chain and properties of the \hzzfourl signal.
+Amidst the chaotic particle deluge that arises from \pp collisions, those events which appear to follow the decay chain and properties of the \hzzfourl signal must be carefully selected.
 % Amidst the chaotic particle deluge that arises from \pp collisions, the desired \hzzfourl signal events must be carefully separated out from the rest of the particles.
 %  that appear to follow the decay chain and properties of the .
-Crafting a well-designed \emph{event selection} that identifies these signal events---while throwing away the non-signal events---is the goal.
+Crafting a well-designed \emph{event selection} that identifies these signal events---while throwing away the nonsignal events---is the goal.
 By implementing a rigorous trigger selection,
 % (Sec.~\ref{sec:trigger_sel})
 vertex selection,
@@ -15,7 +15,20 @@ final-state object selection,
 and \ZZ-candidate selection,
 % (Sec.~\ref{sec:zz_sel})
 the purity of the signal process is optimized and, by extension, so is the precision on the measurement of \mH.
-The aforementioned selections are summarized in Ref.~\cite{TODO:AN-19-139v6---HIG-19-001}.
+
+As part of the event selection, the particle objects within the selected events must pass certain kinematical criteria to be considered for the analysis.
+The object selection used in this analysis is summarized in Table~\ref{table:obj_sel_higgs} and the step-by-step event selection can be found in TODO:Ref HIG-19-001 EPJC.
+TODO:Define $\Delta R, \mathcal{I}^\gamma_{\text{PF}}$
+\begin{figure}
+    \centering
+    \topcaption
+        [TODO:Change to proper table.]
+        {TODO:Change to proper table.
+        From Ref.TODO:AN-19-139v6.
+        TODO:Need to show Tables 11--14 (below).}
+    \includegraphics[width=0.90\textwidth]{figures/higgsmassmeas/table_objsel_hzz4l.png}
+    \label{table:obj_sel_higgs}
+\end{figure}
 
 % TODO: Fill out these subsections.
 % \subsection{Trigger Selection}
@@ -58,9 +71,9 @@ The aforementioned selections are summarized in Ref.~\cite{TODO:AN-19-139v6---HI
 % %         % https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG?redirectedfrom=LHCPhysics.LHCHXSWG#Higgs_cross_sections_and_decay_b
 % % 		\includegraphics[height=20cm]{figures/higgsmassmeas/table_objsel_hzz4l.png}
 % % 		\caption
-% % 			[Branching ratios of Higgs boson decays as a function of the Higgs boson mass.]
+% % 			[branching fractions of Higgs boson decays as a function of the Higgs boson mass.]
 % % 			{
-% %             The branching ratios of various Higgs boson decays as a function of the Higgs boson mass
+% %             The branching fractions of various Higgs boson decays as a function of the Higgs boson mass
 % %             over a wide range (Left) and a narrow range (Right) of values.
 % %             }
 % % 		\label{fig:objsel}
@@ -68,7 +81,7 @@ The aforementioned selections are summarized in Ref.~\cite{TODO:AN-19-139v6---HI
 % % \end{figure}
 
 % \subsection{\ZZ Candidate Selection}
-If an event contains more than one \ZZ candidate that passes the selection criteria, then the candidate with the highest value of \Dkinbkg is selected as the overall \ZZ candidate for the event.
+% If an event contains more than one \ZZ candidate that passes the selection criteria, then the candidate with the highest value of \Dkinbkg is selected as the overall \ZZ candidate for the event.
 % % \subsection{\mathbf{\ZZ} Candidate Selection}
 % % \subsection{\boldmath{\ZZ} Candidate Selection}
 % % \subsection{\ZZ Candidate Selection}
@@ -76,7 +89,7 @@ If an event contains more than one \ZZ candidate that passes the selection crite
 % Words.
 
 After the full analysis selection is implemented in each of the \fourl final states,
-the expected and observed yields for the signal and background processes are given in Tables~\ref{tab:yield_sr_105to140} and~\ref{tab:yield_sr_70to170},
+the expected yields for the signal and background processes are given in Tables~\ref{tab:yield_sr_105to140} and~\ref{tab:yield_sr_70to170},
 which count events within the narrow signal region $\left(105 < \mfourl < 140\GeV\right)$ and wide signal region $\left(70 < \mfourl < 170\GeV\right)$, respectively.
 %=== Filippo is waiting to put cutflow table here. ===%
 \begin{table}[!htb]
@@ -84,7 +97,7 @@ which count events within the narrow signal region $\left(105 < \mfourl < 140\Ge
     % \captionsetup{justification=centering}
     \topcaption
         [Yields in the narrow signal region $105 < \mfourl < 140\GeV$]
-        {Number of expected and observed yields of signal and background processes within the narrow signal region $105 < \mfourl < 140\GeV$ after the full event selection using \lumiruntwo, split into the four final states.}
+        {Number of expected yields of signal and background processes within the narrow signal region $105 < \mfourl < 140\GeV$ after the full event selection using \lumiruntwo, split into the four final states.}
     \begin{tabular}{lrrrrr}
         \hline
     Process                                 & \fourmu   & \foure    & \twoetwomu    & \twomutwoe    & Inclusive    \\
@@ -98,8 +111,8 @@ which count events within the narrow signal region $\left(105 < \mfourl < 140\Ge
         \hline
     Total Expected                          &   221.4   & 103.7     & 162.3         & 117.1         &   604.5   \\
         \hline
-    Total Observed                          &   ---       &   ---       &   ---           &   ---           &   ---           \\
-        \hline
+    % Total Observed                          &   ---       &   ---       &   ---           &   ---           &   ---           \\
+    %     \hline
     \end{tabular}
     \label{tab:yield_sr_105to140}
 \end{table}
@@ -108,7 +121,7 @@ which count events within the narrow signal region $\left(105 < \mfourl < 140\Ge
     % \captionsetup{justification=centering}
     \topcaption
         [Yields in the wide signal region $70 < \mfourl < 170\GeV$]
-        {Number of expected and observed yields of signal and background processes within the wide signal region $70 < \mfourl < 170\GeV$ after the full event selection using \lumiruntwo, split into the four final states.}
+        {Number of expected yields of signal and background processes within the wide signal region $70 < \mfourl < 170\GeV$ after the full event selection using \lumiruntwo, split into the four final states.}
     % \begin{tabular}{llllll}
     \begin{tabular}{lrrrrr}
         \hline
@@ -123,12 +136,11 @@ which count events within the narrow signal region $\left(105 < \mfourl < 140\Ge
         \hline
     Total Expected                          &  679.0    &	287.2	&   387.4	    &   278.8	    &   1632.3      \\
         \hline
-    Total Observed                          &   ---       &   ---       &   ---           &   ---           &   ---           \\
-        \hline
+    % Total Observed                          &   ---       &   ---       &   ---           &   ---           &   ---           \\
+    %     \hline
     \end{tabular}
     \label{tab:yield_sr_70to170}
 \end{table}
-
 %=== TODO: Put "A" beneath first subfigure, "B" beneath second, etc.
 % Reference subfigs like: ~\subref{s}
 % \begin{figure}[!htb]
@@ -151,11 +163,9 @@ which count events within the narrow signal region $\left(105 < \mfourl < 140\Ge
 %         \caption{Third subfigure.}
 %         \label{fig:third}
 %     \end{subfigure}
-            
 %     \caption{Subreferences in \LaTeX.}
 %     \label{fig:figures}
 %     \end{figure}
-
 % \begin{figure}[!htb]
 %     \centering
 %     % width=0.48\textwidth
@@ -169,7 +179,6 @@ which count events within the narrow signal region $\left(105 < \mfourl < 140\Ge
 %         {Distribution of the four-lepton invariant mass for each final state. A) blah blah}
 %     \label{fig:dist_m4l_fullsel}
 % \end{figure}
-
 \begin{multiFigure}
     \centering
     \addFigure{0.48}{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_4mu.png}

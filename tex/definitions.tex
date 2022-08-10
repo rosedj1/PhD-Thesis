@@ -135,7 +135,7 @@
 \newcommand{\lum}{\ensuremath{\,\text{(lumi)}}\xspace}
 \newcommand{\lumisixteen}{\ensuremath{35.9\fbinv}\xspace}
 \newcommand{\lumiruntwo}{\ensuremath{137.1\fbinv}\xspace}
-% Branching ratio.
+% branching fraction.
 \newcommand{\br}{\ensuremath{\mathcal{B}}\xspace}
 \newcommand{\brof}[1]{\ensuremath{\mathcal{B} \left( #1 \right)}\xspace}
 % \newcommand{\BRof}[1]{\ensuremath{{\mathcal{B} \left( #1 \right)}}\xspace}
@@ -179,7 +179,7 @@
 \newcommand{\lhoodm}{\ensuremath{\mathcal{L}_{\mass{i}}}\xspace}
 \newcommand{\lhoodSR}{\ensuremath{\mathcal{L}^\text{SR}_{\mass{i}}}\xspace}
 \newcommand{\lhoodsb}{\ensuremath{\mathcal{L}^\text{sb}_{\mass{i}}}\xspace}
-\providecommand{\poisson}[1]{\ensuremath{\text{Po}\left( #1 \right)}\xspace}
+\providecommand{\poisson}[1]{\ensuremath{\text{Pois}\left( #1 \right)}\xspace}
 %  Experiments
 \newcommand{\DZERO}{D0\xspace}     %etc.
 
@@ -188,6 +188,9 @@
 \newcommand{\PT}{\ensuremath{p_{\mathrm{T}}}\xspace}
 \newcommand{\pt}{\PT}
 \newcommand{\pT}{\PT}
+\newcommand{\ptl}{\ensuremath{\PT^{\ell}}\xspace}
+\newcommand{\pte}{\ensuremath{\PT^{\Pe}}\xspace}
+\newcommand{\ptmu}{\ensuremath{\PT^{\Pmu}}\xspace}
 \newcommand{\ET}{\ensuremath{E_{\mathrm{T}}}\xspace}
 \newcommand{\et}{\ET}
 \newcommand{\MT}{\ensuremath{M_{\mathrm{T}}}\xspace}
@@ -226,8 +229,9 @@
 \providecommand{\mh}{\ensuremath{m_{\PH}}\xspace}
 \providecommand{\mH}{\mh}
 \providecommand{\mfourl}{\ensuremath{m_{\fourl}}\xspace}
-\providecommand{\mfourlerr}{\ensuremath{\sigma_{\mfourl}}\xspace}
+\providecommand{\mfourlerr}{\ensuremath{\delta \mfourl}\xspace}
 \providecommand{\relmfourlerr}{\ensuremath{\frac{\mfourlerr}{\mfourl}}\xspace}
+\providecommand{\relmfourlerrflat}{\ensuremath{\mfourlerr / \mfourl}\xspace}
 \providecommand{\Dkinbkg}{\ensuremath{\mathcal{D}^{\text{kin}}_{\text{bkg}}}\xspace}
 
 %=== Particles ===%
@@ -244,15 +248,15 @@
 \newcommand{\Pmu}{\ensuremath{\text{\textmu}}\xspace}
 \newcommand{\Pg}{\ensuremath{\mathrm{g}}\xspace}
 \newcommand{\Pc}{\ensuremath{\mathrm{c}}\xspace}
-\newcommand{\Pac}{\ensuremath{\overline{\Pc}}\xspace}
+\newcommand{\Pac}{\ensuremath{\bar{\Pc}}\xspace}  % Xunwu had used \overline instead of \bar.
 \newcommand{\Pq}{\ensuremath{\mathrm{q}}\xspace}
-\newcommand{\Paq}{\ensuremath{\overline{\Pq}}\xspace}
+\newcommand{\Paq}{\ensuremath{\bar{\Pq}}\xspace}
 \newcommand{\Pqb}{\ensuremath{\mathrm{b}}\xspace}
-\newcommand{\Paqb}{\ensuremath{\overline{\Pqb}}\xspace}
+\newcommand{\Paqb}{\ensuremath{\bar{\Pqb}}\xspace}
 \newcommand{\Pqt}{\ensuremath{\mathrm{t}}\xspace}
-\newcommand{\Paqt}{\ensuremath{\overline{\Pqt}}\xspace}
+\newcommand{\Paqt}{\ensuremath{\bar{\Pqt}}\xspace}
 \newcommand{\PGn}{\ensuremath{\nu}\xspace} % generic neutrino
-\newcommand{\PAGn}{\ensuremath{\overline{\nu}}\xspace} % generic neutrino
+\newcommand{\PAGn}{\ensuremath{\bar{\nu}}\xspace} % generic neutrino
 \providecommand{\jpsi}{\ensuremath{J / \psi}\xspace}
 \newcommand{\pname}{\text{P. Roton}\xspace}
 % Modified.
@@ -263,7 +267,7 @@
 \providecommand{\ttbar}{\ensuremath{\Pqt \Paqt}\xspace}
 \providecommand{\bbbar}{\ensuremath{\Pqb \Paqb}\xspace}
 \newcommand{\pp}{\ensuremath{\Pp \Pp}\xspace}
-\newcommand{\ellpellm}{\ensuremath{\ell^+ \ell^-}\xspace}
+\newcommand{\lplm}{\ensuremath{\ell^+ \ell^-}\xspace}
 \newcommand{\ee}{\ensuremath{\Pe \Pe}\xspace}
 \newcommand{\eepm}{\ensuremath{\Pe^+ \Pe^-}\xspace}
 \newcommand{\mumu}{\ensuremath{\Pmu \Pmu}\xspace}
@@ -310,7 +314,9 @@
 \newcommand{\kappazi}{\ensuremath{\kappa_{i}\smash[b]{^{\PGn\PAGn}}}\xspace}
 
 % Reactions/Processes.
-\newcommand{\Ztolplm}{\ensuremath{\PZ \to \ellpellm}\xspace}
+\newcommand{\ztoee}{\ensuremath{\PZ \to \ee}\xspace}
+\newcommand{\ztomumu}{\ensuremath{\PZ \to \mumu}\xspace}
+\newcommand{\ztolplm}{\ensuremath{\PZ \to \lplm}\xspace}
 \newcommand{\hmm}{\ensuremath{\PH \to \Pmu\Pmu}\xspace}
 \newcommand{\zmm}{\ensuremath{\PZ \to \Pmu\Pmu}\xspace}
 \newcommand{\htoxx}{\ensuremath{\PH \to \XX}\xspace}
@@ -369,6 +375,14 @@
 
 %=== Dilepton Resonance ===%
 
+
+%=== Impact Parameter Studies ===%
+\providecommand{\dzero}{\ensuremath{d_{0}}\xspace}
+\providecommand{\qdzero}{\ensuremath{q \dzero}\xspace}
+\providecommand{\pTreco}{\ensuremath{p_{\mathrm{T}}^{\mathrm{reco}}}\xspace}
+\providecommand{\pTgen}{\ensuremath{p_{\mathrm{T}}^{\mathrm{gen}}}\xspace}
+\providecommand{\pTcorr}{\ensuremath{p_{\mathrm{T}}^{\mathrm{corr}}}\xspace}
+\providecommand{\pTmismeas}{\ensuremath{\Delta \pT / \pT}\xspace}
 % To-be sorted.
 \newcommand{\detajj}{\ensuremath{\Delta\eta_{\mathrm{jj}}}\xspace}
 \newcommand{\dphijj}{\ensuremath{\Delta\phi_{\mathrm{jj}}}\xspace}

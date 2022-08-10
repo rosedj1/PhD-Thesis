@@ -1,62 +1,20 @@
 \section{Signal Modeling}
 \label{sec:signal_model}
-
-% % TODO: add a reference to ad hoc studies in appendix in this section?
-
-% \subsection{\texorpdfstring{\Zone}{Z1} Mass Constraint}  % TODO: Makes Z1 in subsection title NOT bold.
-% % \subsection{\texorpdfstring{\boldmath{\Zone}}{Z1} Mass Constraint} % TODO: Although \boldmath makes \subsection bold, it also makes the TOC entry bold.
-
-% \subsection{Per-Event Relative Mass Error Categorization}
-% \subsection{VXBS Constraint}
-
-% %=== Hualin's thesis ===%
-% % \subsubsection{Computation of Per-Event Mass Uncertainties}
-% % \subsubsection{Correction of Lepton Momentum Uncertainties}
-% % \subsubsection{Model and Procedure to Derive Corrections}
-% % \subsubsection{Validation of Corrections}
-% %=== AN-19-248 ===%
-% % \subsubsection{motivation}
-% % \subsubsection{model and procedure to derive Corrections}
-% % \subsubsection{validation of corrections (MC, data)}
-
-% \subsection{Matrix Element-Based Kinematic Discriminant}
-
-% \begin{table}[ht]
-%     \begin{center}
-%     \begin{tabular}{|c|cccc|c|}
-%     \hline			
-%     Expected uncertainty	&	4$\mu$	&	4e	&	2e2$\mu$	&2$\mu$2e	& Inclusive	\\
-%     \hline			
-%         1D	(No bkg) &	153	&	466	&	315	&	300	&	121	\\
-%     \hline
-%     \end{tabular}
-%     \end{center}
-%     \caption{
-%         %=== Below is the description from AN-19-248. ==%
-%         % Expected Higgs boson mass uncertainty measured with 1D model 
-%         % for different final states. All mass values are given in \MeV.
-%         % Statistical only results are considered at this stage of the analysis.
-%         }
-%     \label{table:model_result_fs_1D}
-%     \end{table}
-
-
-
-
 %=== FROM AN but modified. ===%
 %\subsection{Signal correction}
 %\label{sec:SignalCorrection}
 %The dominant POWHEG ggF process is reweighted to the NNLOPS one, using bins of generated Higgs 
 %$p_{T}$ and number of generated jets. More details in \cite{HIG_19_001}.
 % TODO:REWORD
+
 \subsection{Signal Normalization}
 \label{sec:SignalNormalization}
-The normalization of the Higgs boson signal is obtained, from simulation, 
+TODO:REWORD The normalization of the Higgs boson signal is obtained, from simulation, 
 looking at the expected signal yields in the range [105, 140] GeV, 
-for five simulated mass points (120, 124, 125, 126 and 130 GeV).
+for five simulated mass points (120, 124, 125, 126, and 130 GeV).
 A second order polynomial function is used to extract the dependence of the normalization from $m_{H}$.
 Fits are performed separately for each production mode, for each decay channel and for each year. 
-Examples of the fits can be observed in Fig.~\ref{fig:signal_normalization}
+Examples of the fits are shown in Fig.~\ref{fig:signal_normalization}
 \begin{multiFigure}
     \centering
     \addFigure{0.48}{figures/higgsmassmeas/signal_norm/NoZ1/2016pre_ggH_yield.pdf}
@@ -64,8 +22,13 @@ Examples of the fits can be observed in Fig.~\ref{fig:signal_normalization}
     \addFigure{0.48}{figures/higgsmassmeas/signal_norm/NoZ1/2017_ggH_yield.pdf}
     \addFigure{0.48}{figures/higgsmassmeas/signal_norm/NoZ1/2018_ggH_yield.pdf}
     \captionof{figure}
-        [TODO]
-        {Normalization fit for ggH, in different decay channels, as a function of mass, for 2016 on top (pre-VFP on the left, post-VFP on the right), 2017 on bottom left, 2018 on the bottom right.}
+        [Normalization fit for ggH signal in different final states (expected yield \vs $\mH / 125\GeV$).]
+        {Normalization fit for ggH signal in different final states (expected yield \vs $\mH / 125\GeV$) for all years.
+        A) 2016 pre-VFP.
+        B) 2016 post-VFP.
+        C) 2017.
+        D) 2018.
+        }
     \label{fig:signal_normalization}
 \end{multiFigure}
 %%%%%%% 
@@ -96,9 +59,9 @@ Examples of the fits can be observed in Fig.~\ref{fig:signal_normalization}
 %	\end{center}
 %\end{figure}
 
-\subsection{Parameterizing the Signal Mass Line Shape}
+\subsection{Parameterizing the Signal Line Shape}
 \label{sec:SignalParametrization}
-The signal lineshape is obtained from the fit of the Higgs boson mass distribution, 
+TODO:REWORD The signal lineshape is obtained from the fit of the Higgs boson mass distribution, 
 in the range [105, 140] GeV, using a double-sided Crystal Ball (DSCB) function, which
 has 6 parameters.
 %This function has six independent parameters, 
@@ -107,20 +70,21 @@ has 6 parameters.
 %originating from leptons emitting brem in the tracker material, present for both electrons and muons, 
 %and from the non-Gaussian mis-measurements specific to interactions of electrons with the detector material 
 %(each side of the distribution is described by two parameters, n and $\alpha$).\\
- Fit parameters are derived as a function of mass, using a first order polynomial:
+ Fit parameters $\theta^i$ are derived as a function of \mH, using a first-order polynomial:
 %\textbf{Compare first vs second order formula: current results with second one}
- \[
- param^{i}_{DSCB} = a^i + b^{i}~(m_{H} - 125)% + c~(m_{H} - 125)^{2}
- \]
- 
- First, from the fit of the only 125 GeV sample, the ``a'' term for each parameter is extracted
- (``b'' term in this case is not taken into account). Then, a second fit is performed: this time,
- ``a'' is fixed to the value found before, while ``b'' is kept free to float
-     when fitting all five different mass points (120, 124, 125, 126, 130\GeV) simultaneously. \\
- The fit is performed separately, for each production mode, for each decay channel, in each year. 
- To take into account the non-resonant contribution in the case of VH and ttH production modes, the 
-     DSCB is convoluted with a Landau function that describes the possibility for a 
-     lepton from the Higgs boson decay to be lost or not selected.\\
+\[
+\theta^{i}_\text{DSCB} = a^i + b^{i}~(\mH - 125)% + c~(m_{H} - 125)^{2}
+\]
+
+First, fitting only the 125 GeV sample, the $a^i$ term for each parameter is extracted
+($b^i$ is not yet taken into account).
+Then, a second fit is performed:
+this time, $a^i$ is fixed to the value found before, while $b^i$ is kept free to float when fitting all five different mass points (120, 124, 125, 126, 130\GeV) simultaneously.
+
+The fit is performed separately, for each production mode, for each decay channel, for each year. 
+To take into account the non-resonant contribution in the case of VH and ttH production modes, the 
+DSCB is convoluted with a Landau function that describes the possibility for a 
+lepton from the Higgs boson decay to be lost or not selected.\\
 %%%%%%% 
 %%%%%%% 
 % plots about normalisation will be shown only for 1D_VXBS_Z1 configuration
@@ -235,26 +199,62 @@ has 6 parameters.
 %	\label{signal_lineshape_2018_full_2}
 %	\end{center}
 %\end{figure}
-% TODO:REWORD
- \subsection{Building the 1D pdf}
- Higgs boson mass measurement is firstly extracted from a one-dimentional likelihood function 
- $\mathcal{L}$($m_{4\ell}|m_{H}$), where $m_{H}$ is fixed to the value of 125 GeV. 
- The model and the normalisation used for the signal are described in \ref{sec:SignalNormalization}.\\
- As referece, Fig.~\ref{fig:1D_mass_2018_ggH} shows the four-lepton invariant mass distribution in 
- the signal region ([105-140]\GeV) using ggF events, with the DSCB fit for 2018, split in four 
- different final states.
- \begin{multiFigure}
+\subsection{Building the 1D pdf}
+The measurement of \mH is extracted by maximizing the one-dimensional likelihood function $\lhood \left( \mH \middlepipe \mfourl \right)$ using the \mfourl spectrum.  % TODO: Filippo has: "where $m_{H}$ is fixed to the value of 125 GeV." but this doesn't make sense. 
+The model and the normalization used for the signal are described in Sec.~\ref{sec:SignalNormalization}.
+The DSCB fits of the four-lepton invariant mass distributions are shown in Figure.~\ref{fig:1D_mass_2018_ggH} for the signal region 105--140\GeV using simulated ggH events, split into the four different final states.
+% TODO: 2017 or 2016 plots?
+\begin{multiFigure}
     \centering
     \addFigure{0.48}{figures/higgsmassmeas/ggH_MassDistribution/1D_mass_2018_ggH_4mu.pdf}
     \addFigure{0.48}{figures/higgsmassmeas/ggH_MassDistribution/1D_mass_2018_ggH_4e.pdf}
     \addFigure{0.48}{figures/higgsmassmeas/ggH_MassDistribution/1D_mass_2018_ggH_2e2mu.pdf}
     \addFigure{0.48}{figures/higgsmassmeas/ggH_MassDistribution/1D_mass_2018_ggH_2mu2e.pdf}
     \captionof{figure}
-        [TODO]
-        {Four-lepton invariant mass distribution in the signal region ([105--140]\GeV) using ggH events, with the DSCB fit for 2018: 4\Pmu (top left), 4e (top right), 2e2\Pmu (bottom left), $2\Pmu2\Pe$ (bottom right).}
+        [TODO: Four-lepton invariant mass distributions in the signal region (105--140\GeV) using ggH events]
+        {TODO:LABEL A--D: Four-lepton invariant mass distributions in the signal region ([105--140]\GeV) using ggH events, with the DSCB fit for 2018: 4\Pmu (top left), 4e (top right), 2e2\Pmu (bottom left), $2\Pmu2\Pe$ (bottom right).}
     \label{fig:1D_mass_2018_ggH}
 \end{multiFigure}
 
+\subsubsection{Expected uncertainties on \mH before improvements}
+Assuming perfect background rejection and neglecting any systematic uncertainties, the expected uncertainty on the measurement of \mH is shown in Tables~\ref{table:1D_model_result_fs} and~\ref{table:1D_model_result_year}, split by final state and by year, respectively.
+% TODO: Consider using tabularx
+%=== By final state.
+\begin{table}[!ht]
+    % \small
+    \centering
+    \topcaption
+        [Expected Higgs boson mass uncertainty measured with the 1D model]
+        {Expected Higgs boson mass uncertainty measured with the 1D model for different final states.
+        All mass uncertainties are reported in $\MeVns$ and are statistical-only.
+        }
+	\begin{tabular}{|cccccc|}
+            \hline      
+        Expected uncertainty $(\MeVns)$	&	\fourmu	&	\foure	&	\twoetwomu	& \twomutwoe	& Inclusive	\\
+            \hline
+        1D	(No bkg) &	147	&	394	&	276	&	273	&	112	\\
+            \hline
+        \end{tabular}
+    \label{table:1D_model_result_fs}
+\end{table}
+%=== By year.
+\begin{table}[!ht]
+    % \small
+    \centering
+    \topcaption
+        [Expected Higgs boson mass uncertainty measured with the 1D model]
+        {Expected Higgs boson mass uncertainty measured with the 1D model for different years during Run 2.
+        All mass uncertainties are reported in $\MeVns$ and are statistical-only.
+        }
+	\begin{tabular}{|ccccc|}
+            \hline      
+        Expected uncertainty $(\MeVns)$	&	2016 pre-VFP	&	2016 post-VFP	&	2017	&	2018	\\
+            \hline
+        1D (No bkg)	&	304	&	314	&	207	&	170	\\
+            \hline
+        \end{tabular}
+    \label{table:1D_model_result_year}
+\end{table}
 %The 1D likelihood scans vs \mH, while profiling signal strength $\mu$ as all other nuisance parameters, are 
 %shown in \figurename~\ref{1D_model}. 
 %%All systematic errors are included. In order to estimate the 

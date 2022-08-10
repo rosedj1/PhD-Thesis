@@ -303,8 +303,7 @@ deriving correction factors for the uncertainty on lepton \pt $\left( \ptl \righ
 constraining the four muon tracks to a vertex that is compatible with the beamspot (\emph{vertex+beamspot constraint}),
 % TODO: within various regions of which phase space? (pT, eta, phi)?
 reevaluating the \ptl values using a \Zone mass constraint per event,
-splitting events by final state and binning them in relative \mfourl error (\relmfourlerrflat) to avoid an observed correlation between \relmfourlerrflat and \Dkinbkg,
-and lastly, calculating a matrix element kinematic discriminant $\left( \Dkinbkg \right)$ per event to differentiate signal-like events from background-like events.
+and lastly, splitting events by final state and binning them in relative \mfourl error (\relmfourlerrflat) to avoid an observed correlation between \relmfourlerrflat and \Dkinbkg,
 The implementation of these techniques is discussed in Sec.~\ref{sec:techniques}.
 
 % The first technique is called the \Zone mass constraint, which uses the benefit of the mostly on-shell \Zone mass resonance to reevaluate the momenta of the two leptons that built the \Zone, on a per-event basis.
@@ -317,6 +316,8 @@ The implementation of these techniques is discussed in Sec.~\ref{sec:techniques}
 % 	- Therefore just perform constraint on mZ1.
 % 	- Idea is to reevaluate the lepton
 % - Per-event 
+A matrix element kinematic discriminant $\left( \Dkinbkg \right)$ is calculated on a per-event basis to differentiate signal-like events from background-like events.
+TODO:Incorporate this into techniques above?
 
 Important in any scientific analysis is the careful study of all the associated uncertainties that inherently come with making \emph{any} measurement.
 There are two main kinds of uncertainties:

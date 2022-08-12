@@ -1,16 +1,72 @@
 \section{Systematic Uncertainties}
 \label{sec:syst_uncert}
+The systematic uncertainties involved in this analysis are detailed in TODO:CITE HIG-19-001.
+For reference, the systematic uncertainties are summarized below:
 \begin{itemize}
-	\item \lumiint (2.5\%). % TODO: confirm number and cite.
-	\item Lepton identification and reconstruction efficiencies (2.5--9\%). % TODO: confirm number.
-	\item Lepton energy scale. % TODO: get number.
+	\item \lumiint (2.5\%) TODO: confirm number and cite.
+	\item Lepton momentum scale and resolution (conservative values from extensive analysis are given in \tablename~\ref{table:ScaleRes_syst}.)
+	\item Lepton identification and reconstruction efficiencies (2.5--9\%), depending on the final state % TODO: confirm number.
+	\item Lepton energy scale
 	% \item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG.
-	\item Estimation of the reducible background (40\%). % TODO: cite.
+	\item Estimation of the reducible background (31\%) TODO: cite.
 \end{itemize}
-The systematic theoretical uncertainties include:
+\begin{table}[ht]
+	\begin{center}
+		\topcaption
+		% []
+		{Impact of the lepton scale and resolution.}
+                \begin{tabular}{ccccc}
+		\hline
+		Syst	&	4$\mu$	&	4e	&	2e2$\mu$	&	2$\mu$2e	\\
+		\hline
+		Muon scale	&	0.01\%	&	---	&	0.01\%	&	0.01\%	\\
+		Electron scale	&	---	&	0.06\%	&	0.06\%	&	0.06\%	\\
+		\hline
+		Muon resoltuon	&	3\%	&	---	&	3\%	&	3\%	\\
+		Electron resolution	&	---	&	10\%	&       10\%&       10\%	\\
+		\hline
+		\end{tabular}
+		\label{table:ScaleRes_syst}
+	\end{center}
+\end{table}
+
+The theoretical systematic uncertainties include:
 \begin{itemize}
-	\item Renormalization and factorization scale uncertainties.  % TODO: Get number and cite.
-	\item Choice of the set of parton distribution functions. % TODO: Get number and cite.
+	\item Renormalization and factorization scale uncertainties  TODO: Get number and cite.
+	\item Choice of the set of parton distribution functions TODO: Get number and cite.
 	% \item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG
-	\item Branching fraction uncertainties for signal and background processes. % TODO: Get number and cite.
+	\item Additional uncertainty of 10\% on the $K$ factor used for \ggzzfourl prediction is applied
+	\item Branching fraction uncertainties for signal and background processes TODO: Get number and cite.
 \end{itemize}
+and are summarized in \tablename~\ref{table:theo_syst}.
+A systematic uncertainty of 2\% on the branching fraction of \hzzfourl only affects the signal yield is also considered. 
+\begin{table}[ht]	
+	\begin{center}
+		\topcaption
+		% TODO: []
+		{Summary of the systematic uncertainties.}
+		\begin{tabular}{cccc}
+		\hline
+		\multicolumn{4}{c}{Theory uncertainties} \\
+		\hline
+		Name & 2016 & 2017 & 2018 \\
+		\hline
+		\hline
+		QCD scale ggH	& \multicolumn{3}{c}{$\pm$3.9\%} \\
+		QCD scale VBF	& \multicolumn{3}{c}{+0.4/-0.3\%} \\
+		QCD scale WH	& \multicolumn{3}{c}{+0.5/-0.7\%} \\
+		QCD scale ZH	& \multicolumn{3}{c}{+3.8/-3.1\%} \\
+		QCD scale ttH	& \multicolumn{3}{c}{+5.8/-9.2\%} \\
+		\hline
+		\hline
+		QCD scale qqZZ	& \multicolumn{3}{c}{+3.2/-4.2\%} \\
+		QCD scale ggZZ	& \multicolumn{3}{c}{$\pm$3.9\%} \\
+		\hline
+		\hline
+		PDF set gg	& \multicolumn{3}{c}{$\pm$3.2\%} \\
+		PDF set qq	& \multicolumn{3}{c}{$\pm$2.1\%} \\
+		\hline
+		\end{tabular}
+		\label{table:theo_syst}
+	\end{center}
+\end{table}

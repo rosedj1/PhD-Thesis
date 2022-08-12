@@ -1,3 +1,220 @@
 \section{Results}
 \label{sec:results}
-Words.
+Final results are summarised in \tablename~\ref{table:2D_refit_result_finals} (split by final states) and in \tablename~\ref{table:2D_refit_result_finals_year} (per year).
+Starting point is the 1D scenario, with all irreducible and reducible backgrounds considered.
+Furthermore, improvements to lepton momentum are included leading to a global impact of 15\%.
+Categorization improves results by about 8\%;
+the kinematic discriminant is included last to build the N-2D likelihood and has an impact of a few percent (4\%).
+%%\begin{figure}[!htbp]
+%%	\begin{center}
+%%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
+%%		\caption{1D likelihood scan as a function of mass for the different fit scenaria 
+%%		for the combination of all final states. Solid lines represents the scan with full 
+%%		uncertainties included, dashedlines statistical error only.  
+%%		Results with $Z_{1}$ mass constraint are shown on the left and without on the right.}
+%%		\label{3D_refit}
+%%	\end{center}
+%%\end{figure}
+%
+\begin{table}[ht]	
+\begin{center}
+    \topcaption
+    %TODO []
+    {Observed and expected Higgs boson mass measurement uncertainty, 
+    given in \MeVns, for four different final states.}
+    \begin{tabular}{ccccccc}
+    \hline			
+    Observed uncertainty	&	4$\mu$	&	4e	&	2e2$\mu$	&2$\mu$2e	& inclusive & Rel. Improvement \\
+    \hline			
+    N-2$D'_{VXBS}$ with syst	&	---	&	---	&	---	&	---	&	---	&	---	\\
+    N-2$D'_{VXBS}$	&	---	&	---	&	---	&	---	&	---	&	---	\\
+    \hline			
+    \hline			
+    Expected uncertainty	&	4$\mu$	&	4e	&	2e2$\mu$	&2$\mu$2e	& inclusive & Rel. Improvement \\
+    \hline			
+    Total	&	139	&	383	&	241	&	275	&	107	&	---	\\
+    \hline
+    Syst impact	&	17	&	87	&	44	&	41	&	21	&	---	\\
+    \hline
+    \multicolumn{7}{c}{Stat only}\\
+    \hline
+        N-2$D'_{VXBS}$	&	138	&	373	&	237	&	272	&	105	&	-4\%	\\
+        N-1$D'_{VXBS}$	&	143	&	391	&	249	&	282	&	109	&	-8\%	\\
+        1$D'_{VXBS}$	&	155	&	452	&	280	&	315	&	119	&	-8\%	\\
+        1$D_{VXBS}$	&	165	&	508	&	356	&	330	&	130	&	-5\%	\\
+        1D	&	177	&	508	&	356	&	339	&	137	&	---	\\
+    %N-2$D'_{VXBS}$ \textbf{with syst}	&	154	&	582	&	327	&	354	&	135	&	+20\% \\
+    %N-2$D'_{VXBS}$	&	143	&	440	&	266	&	300	&	112	&	-3\%	\\
+    %N-1$D'_{VXBS}$	&	148	&	465	&	271	&	310	&	116	&	+18\%	\\
+    %N-1$D'_{VXBS}$ (No bkg)	&	128	&	371	&	227	&	253	&	98	&	-7\%	\\
+    %1$D'_{VXBS}$ (No bkg)	&	134	&	424	&	250	&	279	&	105	&	-9\%	\\
+    %1$D_{VXBS}$  (No bkg)	&	144	&	466	&	313	&	291	&	116	&	-4\%	\\	
+    %1D	(No bkg) &	153	&	466	&	315	&	300	&	121 	&	- \\
+    \hline			
+    \end{tabular}
+    \label{table:2D_refit_result_finals}
+\end{center}
+\end{table}
+
+% TODO: Make all proper negative signs in tables.
+\begin{table}[ht]	
+\begin{center}
+    \topcaption
+    % TODO: []
+    {Observed and expected Higgs boson mass measurement uncertainty, 
+    given in \MeVns, for three different years.}
+    \begin{tabular}{ccccc}
+    \hline			
+    Observed uncertainty	&	2016 pre-VFP	&	2016 post-VFP	&	2017	&	2018	\\
+    \hline			
+    N-2$D'_{VXBS}$ with syst	&	---	&	---	&	---	&	---\\
+    N-2$D'_{VXBS}$	&	---	&	---	&	---	&	---\\
+    \hline			
+    \hline			
+    Expected uncertainty	&	2016 pre-VFP	&	2016 post-VFP	&	2017	&	2018	\\
+    \hline			
+    Total	&	284	&	295	&	194	&	160	\\
+    \hline			
+    Syst impact	&	24	&	24	&	20	&	18	\\
+    \hline
+    \multicolumn{5}{c}{Stat only}\\
+    \hline
+    N-2$D'_{VXBS}$	&	283	&	294	&	193	&	159	\\
+    N-1$D'_{VXBS}$	&	295	&	307	&	200	&	164	\\
+    1$D'_{VXBS}$	&	323	&	337	&	219	&	178	\\
+    1$D_{VXBS}$		&	355	&	370	&	270	&	196	\\
+    1D				&	374	&	388	&	254	&	209	\\
+    \hline			
+    \end{tabular}
+    \label{table:2D_refit_result_finals_year}
+\end{center}
+\end{table}
+\figurename~\ref{mass_scan} shows the 1D likelihood scans as a function of mass.
+Results are dominant by 4$\mu$ final state since electron part is affected by the scale.
+\begin{figure}[!htbp]
+\begin{center}
+	\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Impact/MassScanSyst_FullRun2.pdf}
+	\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Impact/MassScanSyst_FullRun2_FS.pdf}
+	\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Impact/MassScanSyst_FullRun2_year.pdf}
+	\caption{TODO: Double check with Higgs conveners that I can use this plot!!! 1D likelihood scan as a function of mass: top showing the impact of the systematics;
+	middle, looking at each final state; bottom split per yeaar.}
+	\label{mass_scan}
+\end{center}
+\end{figure}
+
+\subsection{Dominant systematics}
+\figurename~\ref{mass_impact} shows the impact of the different systematic uncertainties: as can be seen,
+the dominant ones are the lepton momentum scale and resolution.
+\begin{figure}[!htbp]
+\begin{center}
+	\includegraphics[width=0.55\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Impact/impacts_V2.pdf}
+	\includegraphics[width=0.45\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Impact/impacts_V3_UL2018.pdf}
+	\includegraphics[width=0.45\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Impact/impacts_V3_UL2017.pdf}
+	\includegraphics[width=0.45\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Impact/impacts_V3_UL20165.pdf}
+	\includegraphics[width=0.45\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Impact/impacts_V3_UL20160.pdf}
+	\caption{Impact plot: top Full Run II, middle left 2018, middle right 2017, bottom
+	2016 (left pre- right post-VFP).}
+	\label{mass_impact}
+\end{center}
+\end{figure}
+
+\subsection{Comparison with older CMS results}
+\tablename~\ref{table:2D_refit_result_finals_2016} shows the expected mass measurement uncertainties for only 2016. 
+%\tablename~\ref{table:2D_refit_result_finals_2016_whtBkg} shows similar
+%results considering momentum improvements and categorizations on top of background effect.
+%\begin{table}[ht]	
+%\begin{center}
+%\begin{tabular}{|c|cccc|c|c|}
+%\hline			
+%Expected uncertainty	&	4$\mu$	&	4e	&	2e2$\mu$	&2$\mu$2e	& inclusive & Rel. Improvement \\
+%\hline			
+%N-2$D'_{VXBS}$ \textbf{with syst}	&	298	&	929	&	547	&	608	&	241	&	-9\%	\\
+%N-2$D'_{VXBS}$	&	289	&	844	&	511	&	575	&	221	&	-3\%	\\
+%N-1$D'_{VXBS}$	&	298	&	895	&	532	&	596	&	229	&	+19\%	\\
+%N-1$D'_{VXBS}$ (No bkg)	&	255	&	704	&	433	&	487	&	192	&	-7\%	\\
+%1$D'_{VXBS}$ (No bkg)	&	268	&	810	&	477	&	533	&	206	&	-9\%	\\
+%1$D_{VXBS}$  (No bkg)	&	290	&	880	&	586	&	558	&	227	&	-3\%	\\
+%1D	(No bkg)	&	303	&	880	&	590	&	569	&	234	&	- \\
+%\hline			
+%\end{tabular}
+%\end{center}
+%\caption{Expected Higgs boson mass measurement uncertainty, given in \MeV, for four different final 
+%states only for 2016.}
+%\label{table:2D_refit_result_finals_2016}
+%\end{table}
+\begin{table}[ht]	
+\begin{center}
+    \topcaption{Expected Higgs boson mass measurement uncertainty, given in \MeVns, for four different final 
+    states only for 2016, looking at the impact of each improvement on top of the background effect.
+    {\color{red}{Obtained scaling to full 2016 luminosity, 2016 post-VFP samples} }
+    }
+    \begin{tabular}{ccccccc}
+    \hline			
+    Expected uncertainty	&	4$\mu$	&	4e	&	2e2$\mu$	&2$\mu$2e	& inclusive & Rel. Improvement \\
+    \hline			
+    Total	&	268	&	725	&	440	&	524	&	205	&	---\\
+    \hline
+    Syst impact	&	23	&	200	&	98	&	102	&	53	&	---\\
+    \hline
+    \multicolumn{7}{c}{Stat only}\\
+    \hline
+    N-2$D'_{VXBS}$	&	267	&	697	&	429	&	514	&	198	&	-4\%	 \\
+    N-1$D'_{VXBS}$	&	278	&	730	&	454	&	535	&	206 &	-9\%	 \\
+    1$D'_{VXBS}$	&	294	&	869	&	513	&	603	&	226	&	-9\%	 \\
+    1$D_{VXBS}$	&	314	&	1000	&	656	&	629	&	249	&	-4\%	 \\
+    1D	&	335	&	1000	&	660	&	651	&	261	&	---	 \\
+    \hline			
+    \end{tabular}
+    \label{table:2D_refit_result_finals_2016}
+\end{center}
+\end{table}
+To have an easier comparison with published results, \tablename~\ref{table:old_method_result_finals_2016} summarizes expected mass uncertainties using the 3D likelihood.
+\begin{table}[ht]	
+\begin{center}
+    \topcaption
+    % TODO: []
+    {Expected 2016 Higgs boson mass measurement uncertainty, evaluated using 3D likelihood fit, with
+    Z1 refit, given in \MeV. {\color{red}{Obtained scaling to full 2016 luminosity, 2016 post-VFP samples}}.}
+    \begin{tabular}{ccc}
+    \hline			
+    Expected uncertainty	&	Reproduced results & HIG-16-041	\\
+    \hline			
+    3D refit (syst)	&	92	&	90 \\
+    3D refit (stat)	&	239	&	240	\\	
+    \hline			
+    \hline			
+    2D refit (stat+syst)	&	277	&	---	\\
+    1D refit (stat+syst)	&	285	&	---	\\
+    1D  (stat+syst)	&	313	&	---	\\
+    \hline			
+    \end{tabular}
+    \label{table:old_method_result_finals_2016}
+\end{center}
+\end{table}
+
+
+
+%The comparison of the newest results and the previous ones from CMS \cite{HIG_16_041} is shown in 
+%~\tablename~\ref{table:CMS_old_vs_new}.
+%
+%\begin{table}[ht]	
+%\begin{center}
+%\begin{tabular}{|c|c|c|}
+%	\hline			
+%	Expected uncertainty	&	HIG-16-041	&	New	\\
+%	\hline			
+%	final results	&	-0.257/+0.255	 \textbf{0.104} \\
+%	\hline			
+%	3D model + refit (3D')	&	-0.257/+0.255	&	-0.128/+0.127 \\
+%	\hline			
+%\end{tabular}
+%\end{center}
+%\caption{ Best fit values for the mass of the Higgs boson measured in the $4\ell$ final states, 
+%		with 3D model, with (top row) and without (bottom row) $Z_{1}$ constraint. 
+%		All mass values are given in \GeV. The uncertainties are the total statistical 
+%		plus systematic uncertainty.}
+%\label{table:CMS_old_vs_new}
+%\end{table}
+
+

@@ -19,9 +19,9 @@ Fifth, \emph{are we certain that the Higgs boson discovered in 2012 is the same 
 To check this, it is necessary to compare the Higgs boson's measured properties to its predicted ones.
 One such property is the mass of the Higgs boson $\left( \mH \right)$.
 
-This chapter details the steps taken to measure \mH using full Run 2 data from the LHC collected by the CMS detector.
-Although many previous measurements of \mH have already been made (\eg by the ATLAS and CMS collaborations as shown in Fig.~\ref{fig:atlas_cms_mH_meas}), the recipe for the measurement presented in this dissertation is predicted to give world's most precise value of \mH.
-% ATLAS and CMS measurements of mH.
+Although many previous measurements of \mH have already been made (\eg by the ATLAS and CMS collaborations as shown in Fig.~\ref{fig:atlas_cms_mH_meas}), this chapter presents a recipe for the measurement of \mH that is predicted to give the world's most precise value of \mH to date, once the data are unblinded.
+% The measurement of \mH will use full Run 2 data from the LHC collected by the CMS detector.
+%=== ATLAS and CMS measurements of mH.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[hbtp]
     \centering
@@ -37,21 +37,44 @@ Although many previous measurements of \mH have already been made (\eg by the AT
 % Some properties of the Higgs boson can be predicted by the SM, like 
 %     - There are many results on Higgs properties: spin, charge, decay processes, lifetime, mass.
 %     - The last of these is the focus of this dissertation and is of particular importance to the Universe: depending on mH and mtop, the stability of the Universe.
-
 % - Why this thesis is important:
 %     - This thesis describes the methodology and results of the best precision measurement of mH to date by using the hZZ4l decay and Full Run 2 data set from CMS.
 %     - Run 2 provides more data -> more precision on measurements of Higgs properties.
 %     - In addition to more HZZ4l events, this analysis provides new techniques, specifically the VX constraint.
 %     - Predict mH for Run 3, will start soon summer 2022 and provide an approximate 300? /fb of L int.
 %     - In 2026(?), HLLHC provides even more data. ref snowmass paper.
+The estimate for the lowest uncertainties on \mH comes from the following improvements compared to previous measurements:
+\begin{itemize}
+    % More data.
+    \item Nearly four times as much collected data from Run 2 $\left( \lumiint = \lumiruntwo \right)$ \vs the data used for the 2016 measurement $\left( \lumiint = \lumisixteen \right)$.
+    % Four final states (instead of three).
+    \item Four final-state categories: \fourmu, \foure, \twoetwomu, \twomutwoe.
+    In previous measurements, the last two final states (the mixed-flavor states) were combined, when truly they have different kinematical properties (depending on into which lepton pair the \Zone decayed):
+    different peak widths (instrumental resolutions), different signal efficiencies, and different relative levels of reducible background.
+    % Using UL reco (better electron pT resolution).
+    \item Ultra-Legacy (UL) reconstruction for muon, electron, photon, and jet tracks.
+    This signficantly improves electron momenta and improves the other particle momenta, though to a lesser degree.
+    % Vertex constraint.
+    \item The measurements of muon \pt are improved by constraining the muon tracks to originate from the interaction vertex (also called a \emph{vertex+beamspot constraint}).
+    \item When extracting the value of \mH in past measurements, a 3D $\text{pdf} \left( \mfourl, \mfourlerr, \Dkinbkg \right)$ was built into a factorized form
+    $f \left( \mfourl, \mfourlerr \middlepipe \mH \right)   \cdot   g\left( \Dkinbkg \middlepipe \mfourl \right)$,
+    which was later found to contain an existing correlation between \mfourlerr and \Dkinbkg.
+    To account for this correlation, now the events are split into 9 categories based on the per-event \emph{relative} mass uncertainty $\left( \relmfourlerr \right)$ and, for each, a 2D $\text{pdf} \left( \mfourl, \Dkinbkg \middlepipe \mh \right)$ is built.
+    % Z1 mass constraint.
+    % \item Just as was done in the 2016 \mH measurement~\cite{}TODO:CITE, a \Zone mass constraint is imposed on events with the \fourmu and \twomutwoe final states to improve the momenta of the two muons comprising the \Zone.
+    % The improvement here is that now the muon tracks are constrained to come from the interaction vertex in the fit (sometimes called a \emph{vertex constraint}).
+    \item The systematic uncertainties on electron and muon momentum scales $\left( \pt^{\Pe, \mu} \right)$ are reduced, thanks to a more detailed analysis on the uncertainties.
+    This has the additional effect of significantly reducing the uncertainty on the per-event four-lepton mass resolution.
+\end{itemize}
 
+The layout of the remainder of this chapter is as follows:
 First, a general overview of the logic and analysis workflow for the \mH measurement is motivated in Sec.~\ref{sec:analysis_overview}.
 The specific data sets, simulated samples, and triggers used in the analysis are then detailed in Sec.~\ref{sec:analyzed_data}.
 Then the event reconstruction and event selection are described in Sec.~\ref{sec:evt_sel}.
 Afterwards, an analysis of the background estimation is given in Sec.~\ref{sec:bkg_estim}.
 The signal modeling and improvements utilized in this measurement are then laid out, which include the kinematic discriminant, per-event mass uncertainties, and the vertex constraint in Sec.~\ref{sec:signal_model}.
 A treatment of the systematic uncertainties follows in Sec.~\ref{sec:syst_uncert}.
-The chapter concludes with the expected \mH measurement in Sec.~\ref{sec:results} once the data are unblinded.
+The chapter concludes with the expected uncertainties on the \mH measurement in Sec.~\ref{sec:results}, considering Full Run 2 data from the LHC.
 
 % \begin{itemize}                                                                          
 %     \item Sec.~\ref{sec:analysis_overview}: General overview of the analysis of the Higgs boson mass measurement.

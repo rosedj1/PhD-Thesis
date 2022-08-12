@@ -48,18 +48,18 @@ The best theory that stands today is called the Standard Model (SM) of particle 
 The SM has bore witness to many triumphs over its approximately 70-year development:
 it predicted the existence of quarks which were experimentally confirmed in the mid-1970s;
 it predicted the existence of the tau neutrino which was experimentally confirmed in 2000;
-its most groundbreaking prediction was experimentally confirmed on July 4, 2012---just shy of 10.5 years ago from the date of this dissertation writing---when the ATLAS and CMS collaborations announced the discovery of the Higgs boson~\cite{chatrchyan_observation_2012, chatrchyan_observation_2013, aad_observation_2012}.
+its most groundbreaking prediction was experimentally confirmed on July 4, 2012---just shy of 10 years ago from the date of this dissertation writing---when the ATLAS and CMS collaborations announced the discovery of the Higgs boson~\cite{chatrchyan_observation_2012, chatrchyan_observation_2013, aad_observation_2012}.
 % TODO: Define CMS and ATLAS here?
 
 % THE HIGGS IS IMPORTANT BECAUSE it was the missing piece of the SM.
 Quantum Field Theory is the mathematical and conceptual backbone of the SM.
-Within its framework, all particles are \emph{excitations} of their corresponding field so, \eg \emph{every} electron in the Universe is thought to be an excitation of the single electron field that permeates all of spacetime.
+Within its framework, all particles are \emph{excitations} of their corresponding field so, \eg \emph{every} electron in the Universe is thought to be an excitation of the one and only electron field that permeates all of spacetime.
 The existence of the Higgs boson (\PH) suggests that its corresponding field exists---the \emph{Higgs field}---and, thus, \PH is the quantum excitation of that field.
 This all-pervasive Higgs field and its corresponding boson are generated mathematically via the Brout-Englert-Higgs (BEH) mechanism.
 Most SM particles---except for neutrinos, photons, and gluons---``acquire'' their mass by interacting with the Higgs field.
 This is also how the Higgs boson itself acquires its mass (\mH); by interacting with its own field!
 
-The masses of SM particles \emph{depend} on the value of \mH\dots \emph{so what is its value?}
+The masses of SM particles \emph{depend} on the value of \mH\ldots \emph{so what is its value?}
 Unfortunately, \mH is a free parameter of the SM, so theory is unable to provide a value for \mH based solely on other fundamental constants.
 Instead, the value of \mH must be measured by experiment---and has been measured multiple times~\cite{PhysRevLett.114.191803, sirunyan_measurement_2020, aaboud_measurement_2018}.
 % TODO: Cite more mH measurements.
@@ -91,44 +91,25 @@ first, it improves the theoretical limits on the masses of the other elementary 
 The production of a Higgs boson is only feasible at conditions close to those thought to exist at the beginning of the Universe.
 %   elusive Higgs boson (\PH) is ONLY MADE AT CRAZY CONDITIONS.
 This grand achievement is accomplished frequently by the Large Hadron Collider (LHC), located on the border of France and Switzerland.
-It is the largest and most powerful proton-proton (\pp) collider ever made.
+It is the largest and most powerful proton--proton (\pp) collider ever made.
 The LHC accelerates protons to incredible speeds, very close to the speed of light.
 When these fast-moving protons collide, the \pp collisions can have a center-of-mass energy as high as 13\TeV.
 Newly produced particles spew out of the collision points and are analyzed by detectors like the aforementioned ATLAS and CMS experiments.
 These enormous particle detectors have thousands of scientists performing dozens of analyses to look for hints of beyond Standard Model (BSM) physics, extra dimensions, miniature black holes, and more.
 
-This dissertation utilizes data collected by the CMS experiment during the LHC Run 2 (2016--2018) to
-% look at two different analyses: HIGGSMASS and dilepton mass resonances in H->4l
-perform the world's best precision measurement of \mH to date.
-% This dissertation presents the world's most precise measurement of the Higgs boson mass (\mH) to date, using proton-proton collision data from the LHC Run 2, collected and analyzed by the CMS Experiment.
-This new measurement utilizes the following improvements compared to previous measurements:
-\begin{itemize}
-    % More data.
-    \item Nearly four times as much collected data from Run 2 $\left( \lumiint = \lumiruntwo \right)$ \vs the data used for the 2016 measurement $\left( \lumiint = \lumisixteen \right)$.
-    % Four final states (instead of three).
-    \item Four final-state categories: \fourmu, \foure, \twoetwomu, \twomutwoe.
-    In previous measurements, the last two final states (the mixed-flavor states) were combined, when truly they have different kinematical properties (depending on into which lepton pair the \Zone decayed):
-    different peak widths (instrumental resolutions), different signal efficiencies, and different relative levels of reducible background.
-    % Using UL reco (better electron pT resolution).
-    \item Ultra-Legacy (UL) reconstruction for muon, electron, photon, and jet tracks.
-    This signficantly improves electron momenta and improves the other particle momenta, though to a lesser degree.
-    % Vertex constraint.
-    \item The measurements of muon \pt are improved by constraining the muon tracks to originate from the interaction vertex (also called a \emph{vertex constraint}).
-    \item When extracting the value of \mH in past measurements, a 3D $\text{pdf} \left( \mfourl, \mfourlerr, \Dkinbkg \right)$ was built into a factorized form
-    $f \left( \mfourl, \mfourlerr \middlepipe \mH \right)   \cdot   g\left( \Dkinbkg \middlepipe \mfourl \right)$,
-    which was later found to contain an existing correlation between \mfourlerr and \Dkinbkg.
-    To account for this correlation, now the events are split into 9 categories based on the per-event \emph{relative} mass uncertainty $\left( \relmfourlerr \right)$ and, for each, a 2D $\text{pdf} \left( \mfourl, \Dkinbkg \middlepipe \mh \right)$ is built.
-    % Z1 mass constraint.
-    % \item Just as was done in the 2016 \mH measurement~\cite{}TODO:CITE, a \Zone mass constraint is imposed on events with the \fourmu and \twomutwoe final states to improve the momenta of the two muons comprising the \Zone.
-    % The improvement here is that now the muon tracks are constrained to come from the interaction vertex in the fit (sometimes called a \emph{vertex constraint}).
-    \item The systematic uncertainties on electron and muon momentum scales $\left( \pt^{\Pe, \mu} \right)$ are reduced, thanks to a more detailed analysis on the uncertainties.
-    This has the additional effect of significantly reducing the uncertainty on the per-event four-lepton mass resolution.
-\end{itemize}
+This dissertation summarizes the results from two different, but related, analyses.
+The first analysis lays out the steps necessary in order to perform the world's best precision measurement of \mH to date, using data collected by the CMS experiment during the LHC Run 2 (2016--2018).
+Although this dissertation was completed before the data could be unblinded and before the final measurement of \mH could be made,
+expectations on the uncertainties of \mH are set and are predicted to reduce the world's current best precision from 14\MeV down to 11\MeV.
+% presents the work done thus far in what is expected to be the world's most precise measurement of \mH.
+The second analysis details the search for low-mass dilepton resonances in \htofourl decays and sets limits on related BSM branching fractions and on the Higgs-mixing parameter.
+% This dissertation presents the world's most precise measurement of the Higgs boson mass (\mH) to date, using proton--proton collision data from the LHC Run 2, collected and analyzed by the CMS Experiment.
 
 The following chapters of this dissertation begin by describing the function and engineering of the Large Hadron Collider in Chapter~\ref{ch:lhc}.
-Then, a thorough description of the CMS Experiment and its composite subdetectors is given in Chapter~\ref{ch:cms}.
-Next, the details of the precision measurement of the Higgs boson mass using the LHC Run 2 data is discussed in Chapter~\ref{ch:higgs_mass}.
-Finally, the results of the Higgs boson mass measurement analysis is summarized in Chapter~\ref{ch:conclusion}.
+Then, a thorough description of the CMS experiment and its composite subdetectors is given in Chapter~\ref{ch:cms}.
+Next, the first of two analyses---expectations for the precision measurement of the Higgs boson mass using the LHC Run 2 data---is detailed in Chapter~\ref{ch:higgs_mass}.
+Afterwards, a the second of two analyses---a search for low-mass dilepton resonances in \htofourl decays---is outlined in Chapter~\ref{ch:dilep_res}.
+Finally, the results of the expectations for the Higgs boson mass measurement is summarized in Chapter~\ref{ch:conclusion}.
 % begins with a mathematical  the standard model (SM) of particle physics and its mathematical framework, including the Brout-Englert-Higgs (BEH) mechanism
 
 % Chapter~\ref{ch:intro} (\emph{this chapter}) discusses the importance and motivation for measuring the mass of the Higgs boson;

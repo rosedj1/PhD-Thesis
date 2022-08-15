@@ -6,14 +6,18 @@
 \usepackage{amsmath}
 \usepackage{times}
 \usepackage[utf8]{inputenc}
-\renewcommand{\arraystretch}{2}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{B}{>{\hsize=.15\hsize}Y}
+\newcolumntype{M}{>{\hsize=.25\hsize}Y}
+\newcolumntype{S}{>{\hsize=.05\hsize}Y}
 
 \begin{document}
     
 %% Change \toperule to \hline\hline if you prefer the two separate lines in the table
 
-\begin{table}\centering
-    \begin{tabularx}{.9\textwidth}{XccX}\toprule
+\begin{table}\centering\renewcommand{\arraystretch}{2}
+    \begin{tabularx}{.9\textwidth}{>{\hsize=.3\hsize}X>{\hsize=.2\hsize}c>{\hsize=.2\hsize}c>{\hsize=.3\hsize}X}\toprule
         \multicolumn{4}{c}{\textbf{Electrons}} \\ \hline
         & $p_T^e > 7 \;\text{GeV}$ & $|\eta^e| < 2.5$ & \\
         & $d_{xy} < 0.5 \;\text{cm}$ & $d_{z} < 1 \;\text{cm}$ & \\
@@ -40,7 +44,36 @@
         \multicolumn{4}{c}{Cut-based jet ID (tight WP)} \\
         \multicolumn{4}{c}{Jet pileup ID (tight WP)} \\
         \multicolumn{4}{c}{Deep CSV b-tagging (medium WP)} \\ \toprule
+    \end{tabularx}
+\end{table}
 
+\begin{table}
+    \begin{tabularx}{\textwidth}{BMSSSSSSSS}
+        \multicolumn{9}{c}{\textbf{A}} \\ \toprule
+        & \multicolumn{2}{c}{\textbf{2016 pre-VFP}} & \multicolumn{2}{c}{\textbf{2016 post-VFP}} & \multicolumn{2}{c}{\textbf{2017}} & \multicolumn{2}{c}{\textbf{2018}} \\ \toprule
+
+        && \multicolumn{8}{c}{Muons} \\
+        \multicolumn{2}{c}{$0 < |\eta| < 0.9$} & 1.05 & 1.248 & 1.043 & 1.214 & 1.047 & 1.183 & 1.019 & 1.227 \\
+        \multicolumn{2}{c}{$0.9 < |\eta| < 1.8$} & 1.187 & 1.256 & 1.204 & 1.234 & 1.219 & 1.223 & 1.206 & 1.236 \\
+        \multicolumn{2}{c}{$1.8 < |\eta| < 2.4$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\ \toprule
+
+        && \multicolumn{8}{c}{ECAL electrons} \\ 
+        $0 < |\eta| < 0.8$ & $\delta p_T/p_T < 0.01$ & 1.648 & 1.619 & 1.645 & 1.646 & 1.690 & 1.633 & 1.676 & 1.661 \\
+        $0 < |\eta| < 0.8$ & $0.01 < \delta p_T/p_T < 0.015$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $0 < |\eta| < 0.8$ & $0.015 < \delta p_T/p_T < 0.025$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $0 < |\eta| < 1$ & $0.025 < \delta p_T/p_T < 1$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $\delta p_T/p_T < 0.02$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $0.03 < \delta p_T/p_T < 0.04$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $0.04 < \delta p_T/p_T < 0.05$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $0.05 < \delta p_T/p_T < 0.06$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $0.8 < |\eta| < 2.5$ & $\delta p_T/p_T < 0.025$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $0.06 < \delta p_T/p_T < 1$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\ \toprule
+        
+        && \multicolumn{8}{c}{tracker electrons} \\ 
+        \multicolumn{2}{c}{$0 < |\eta| < 1.44$} & 1.05 & 1.248 & 1.043 & 1.214 & 1.047 & 1.183 & 1.019 & 1.227 \\
+        \multicolumn{2}{c}{$1.44 < |\eta| < 1.6$} & 1.187 & 1.256 & 1.204 & 1.234 & 1.219 & 1.223 & 1.206 & 1.236 \\
+        \multicolumn{2}{c}{$1.6 < |\eta| < 2$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\
+        \multicolumn{2}{c}{$2 < |\eta| < 2.5$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\ \hline
     \end{tabularx}
 \end{table}
 

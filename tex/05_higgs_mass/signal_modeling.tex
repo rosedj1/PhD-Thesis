@@ -9,7 +9,7 @@
 
 \subsection{Signal Normalization}
 \label{sec:SignalNormalization}
-TODO:REWORD The normalization of the Higgs boson signal is obtained, from simulation, 
+TODO:REWORD The normalization of the Higgs boson signal is obtained from simulation, 
 looking at the expected signal yields in the range [105, 140] GeV, 
 for five simulated mass points (120, 124, 125, 126, and 130 GeV).
 A second order polynomial function is used to extract the dependence of the normalization from $m_{H}$.
@@ -22,12 +22,12 @@ Examples of the fits are shown in Fig.~\ref{fig:signal_normalization}
     \addFigure{0.48}{figures/higgsmassmeas/signal_norm/NoZ1/2017_ggH_yield.pdf}
     \addFigure{0.48}{figures/higgsmassmeas/signal_norm/NoZ1/2018_ggH_yield.pdf}
     \captionof{figure}
-        [Normalization fit for ggH signal in different final states (expected yield \vs $\mH / 125\GeV$).]
-        {Normalization fit for ggH signal in different final states (expected yield \vs $\mH / 125\GeV$) for all years.
-        A) 2016 pre-VFP.
-        B) 2016 post-VFP.
-        C) 2017.
-        D) 2018.
+        [Normalization fit for the ggH signal in different final states]
+        {Normalization fit for the ggH signal in different final states (expected yield \vs $\mH / 125\GeV$) for all years during Run 2.
+        \;A) 2016 pre-VFP.
+        \;B) 2016 post-VFP.
+        \;C) 2017.
+        \;D) 2018.
         }
     \label{fig:signal_normalization}
 \end{multiFigure}
@@ -62,27 +62,25 @@ Examples of the fits are shown in Fig.~\ref{fig:signal_normalization}
 \subsection{Parameterizing the Signal Line Shape}
 \label{sec:SignalParametrization}
 TODO:REWORD The signal lineshape is obtained from the fit of the Higgs boson mass distribution, 
-in the range [105, 140] GeV, using a double-sided Crystal Ball (DSCB) function, which
-has 6 parameters.
+in the range [105, 140]\GeV, using a double-sided Crystal Ball (DSCB) function, which has 6 parameters.
 %This function has six independent parameters, 
 %with a Gaussian core ($\sigma_{m}$) that describes the four-lepton mass resolution function and 
 %the systematic mass shift ($\Delta m_{H}$) of the peak, and the left- and right-hand tail 
 %originating from leptons emitting brem in the tracker material, present for both electrons and muons, 
 %and from the non-Gaussian mis-measurements specific to interactions of electrons with the detector material 
 %(each side of the distribution is described by two parameters, n and $\alpha$).\\
- Fit parameters $\theta^i$ are derived as a function of \mH, using a first-order polynomial:
+Fit parameters $\theta^i$ are derived as a function of \mH, using a first-order polynomial:
 %\textbf{Compare first vs second order formula: current results with second one}
 \[
 \theta^{i}_\text{DSCB} = a^i + b^{i}~(\mH - 125)% + c~(m_{H} - 125)^{2}
 \]
 
-First, fitting only the 125 GeV sample, the $a^i$ term for each parameter is extracted
-($b^i$ is not yet taken into account).
+First, fitting only the 125\GeV sample, the $a^i$ term for each parameter is extracted ($b^i$ is not yet taken into account).
 Then, a second fit is performed:
 this time, $a^i$ is fixed to the value found before, while $b^i$ is kept free to float when fitting all five different mass points (120, 124, 125, 126, 130\GeV) simultaneously.
 
 The fit is performed separately, for each production mode, for each decay channel, for each year. 
-To take into account the non-resonant contribution in the case of VH and ttH production modes, the 
+To take into account the non-resonant contribution in the case of $\PV\PH$ and $\ttbarh$ production modes, the 
 DSCB is convoluted with a Landau function that describes the possibility for a 
 lepton from the Higgs boson decay to be lost or not selected.\\
 %%%%%%% 
@@ -211,8 +209,13 @@ The DSCB fits of the four-lepton invariant mass distributions are shown in Figur
     \addFigure{0.48}{figures/higgsmassmeas/ggH_MassDistribution/1D_mass_2018_ggH_2e2mu.pdf}
     \addFigure{0.48}{figures/higgsmassmeas/ggH_MassDistribution/1D_mass_2018_ggH_2mu2e.pdf}
     \captionof{figure}
-        [TODO: Four-lepton invariant mass distributions in the signal region (105--140\GeV) using ggH events]
-        {TODO:LABEL A--D: Four-lepton invariant mass distributions in the signal region ([105--140]\GeV) using ggH events, with the DSCB fit for 2018: 4\Pmu (top left), 4e (top right), 2e2\Pmu (bottom left), $2\Pmu2\Pe$ (bottom right).}
+        [Distributions of \mfourl in the signal region (105--140\GeV) using simulated ggH events]
+        {Distributions of \mfourl in the signal region (105--140\GeV) using simulated ggH events, fitted with a DSCB function using 2018 samples.
+        \;A) \fourmu.
+        \;B) \foure.
+        \;C) \twoetwomu.
+        \;D) \twomutwoe.
+    }
     \label{fig:1D_mass_2018_ggH}
 \end{multiFigure}
 

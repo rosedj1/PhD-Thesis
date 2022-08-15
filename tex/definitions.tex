@@ -46,21 +46,15 @@
 \newcommand{\eg}{\mbox{e.g.,}\xspace}     %e.g.
 \newcommand{\etc}{\mbox{etc.}\xspace}     %etc.
 \newcommand{\vs}{\mbox{vs.}\xspace}      %vs. No slant according to HIG-16-041 and HIG-19-001.
-\newcommand {\mdash}{\ensuremath{\text{---}}} % for use within formulas
+\newcommand{\mdash}{\ensuremath{\text{---}}} % for use within formulas
 \providecommand {\NA}{\ensuremath{\text{---}}}    % for Not applicable (or available). Needs to be renewcommanded for APS to \cdots
 \providecommand{\middlepipe}{\ensuremath{\; \middle| \;}\xspace{}}  % The spacing to the left and right of \middle is weird, so manually fix it.
 
 % \providecommand{\paren}[1]{\ensuremath{\left( \text{#1} \right)}\xspace}  % Ends up spacing out the internal text too much.
-% some terms whose definition we may change
-\newcommand {\Lone}{Level-1\xspace} % Level-1 or L1 ?
-\newcommand {\Ltwo}{Level-2\xspace}
-\newcommand {\Lthree}{Level-3\xspace}
-
 % Units.
-% Xunwu used `\,` (a kern) at the beginning of each unit.
-\newcommand{\de}{\ensuremath{^\circ}}
-\newcommand{\tentothe}[1]{\ensuremath{\times \text{10}^\text{#1}}}
-\newcommand{\tentotheminus}[1]{\ensuremath{\times \text{10}^\text{$-$#1}}}
+\newcommand{\degrees}{\ensuremath{^\circ}\xspace}
+\newcommand{\tentothe}[1]{\ensuremath{\text{10}^\text{#1}}}
+\newcommand{\tentotheminus}[1]{\ensuremath{\tentothe{$-$#1}}}
 \newcommand{\unit}[1]{\ensuremath{\text{\,#1}}\xspace}
 % Base units.
 \newcommand{\tesla}{\ensuremath{\,\text{T}}\xspace}
@@ -68,7 +62,8 @@
 \newcommand{\meter}{\ensuremath{\,\text{m}}\xspace}
 \newcommand{\snd}{\ensuremath{\,\text{s}}\xspace}
 % Mass.
-\newcommand{\Kg}{\ensuremath{\,\text{Kg}}\xspace}
+\newcommand{\Kgns}{\ensuremath{\text{Kg}}\xspace}  % To leading thin space (kern).
+\newcommand{\Kg}{\ensuremath{\,\Kgns}\xspace}
 \newcommand{\tonne}{\ensuremath{\,\text{t}}\xspace}
 % Volume.
 \newcommand{\mL}{\ensuremath{\,\text{mL}}\xspace}
@@ -76,14 +71,18 @@
 \newcommand{\kelvin}{\ensuremath{\,\text{K}}\xspace}
 % Length.
 \newcommand{\Km}{\ensuremath{\,\text{Km}}\xspace}
-\newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
-\newcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
-\newcommand{\mum}{\ensuremath{\,\text{\textmu}\text{m}}\xspace}
+\newcommand{\cmns}{\ensuremath{\text{cm}}\xspace}
+\newcommand{\cm}{\ensuremath{\,\cmns}\xspace}
+\newcommand{\mmns}{\ensuremath{\text{mm}}\xspace}  % No leading thin space.
+\newcommand{\mm}{\ensuremath{\,\mmns}\xspace}
+\newcommand{\mumns}{\ensuremath{\text{\textmu}\text{m}}\xspace}  % No leading thin space.
+\newcommand{\mum}{\ensuremath{\,\mumns}\xspace}
 \newcommand{\micron}{\mum}
 \newcommand{\nm}{\ensuremath{\,\text{nm}}\xspace}
 % Time.
 \newcommand{\ms}{\ensuremath{\,\text{ms}}\xspace}
-\newcommand{\mus}{\ensuremath{\,\text{\textmu}\text{s}}\xspace}
+\newcommand{\musns}{\ensuremath{\text{\textmu}\text{s}}\xspace}  % No leading thin space.
+\newcommand{\mus}{\ensuremath{\,\musns}\xspace}
 \newcommand{\ns}{\ensuremath{\,\text{ns}}\xspace}
 % Energy.
 \newcommand{\KJ}{\ensuremath{\,\text{KJ}}\xspace}
@@ -107,6 +106,14 @@
 \newcommand{\GeVcc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
 \newcommand{\GeVccns}{\ensuremath{{\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace} % no leading thinspace
 \newcommand{\TeVcc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+% Memory.
+\providecommand{\KB}{\ensuremath{\,\text{KB}}\xspace}
+\providecommand{\MB}{\ensuremath{\,\text{MB}}\xspace}
+\providecommand{\TB}{\ensuremath{\,\text{TB}}\xspace}
+% Frequency.
+\providecommand{\KHz}{\ensuremath{\,\text{KHz}}\xspace}
+\providecommand{\MHz}{\ensuremath{\,\text{MHz}}\xspace}
+
 % Cross section.
 \newcommand{\mb}{\ensuremath{\,\text{mb}}\xspace}
 \newcommand{\pb}{\ensuremath{\,\text{pb}}\xspace}
@@ -125,6 +132,7 @@
 \newcommand{\lumiint}{\ensuremath{\lumi_\text{int}}\xspace}
 \newcommand{\lumi}{\ensuremath{L}\xspace}
 \newcommand{\Lumi}{\lumi}
+
 % Luminosity values.
 \newcommand{\LvLow}  {\ensuremath{\lumi = \text{10}^\text{32}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
 \newcommand{\LLow}   {\ensuremath{\lumi = \text{10}^\text{33}\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
@@ -135,13 +143,13 @@
 \newcommand{\lum}{\ensuremath{\,\text{(lumi)}}\xspace}
 \newcommand{\lumisixteen}{\ensuremath{35.9\fbinv}\xspace}
 \newcommand{\lumiruntwo}{\ensuremath{137.1\fbinv}\xspace}
+% some terms whose definition we may change
+\newcommand{\Lone}{Level-1\xspace} % Level-1 or L1 ?
+\newcommand{\Ltwo}{Level-2\xspace}
+\newcommand{\Lthree}{Level-3\xspace}
 % branching fraction.
 \newcommand{\br}{\ensuremath{\mathcal{B}}\xspace}
 \newcommand{\brof}[1]{\ensuremath{\mathcal{B} \left( #1 \right)}\xspace}
-% \newcommand{\BRof}[1]{\ensuremath{{\mathcal{B} \left( #1 \right)}}\xspace}
-\newcommand{\brhmm}{\ensuremath{{\mathcal{B}(\PH \to \Pmu\Pmu)}}\xspace}
-\newcommand{\brhff}{\ensuremath{{\mathcal{B}(\PH \to f\overline{f})}}\xspace}
-% \newcommand{}{}
 
 % analysis tools
 \newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}  % \textsc is "small caps".
@@ -283,24 +291,6 @@
 \newcommand{\XX}{\ensuremath{\PX \PX}\xspace}
 \newcommand{\htwo}{\ensuremath{\text{H}_2}\xspace}  % Hydrogen gas.
 \newcommand{\ttbarh}{\ensuremath{\ttbar \PH}\xspace}
-% Xunwu's.
-\providecommand{\ttH}{\ensuremath{\Pqt\Paqt\PH}\xspace}
-\providecommand{\ggH}{\ensuremath{\Pg\Pg\PH}\xspace}
-\providecommand{\qqH}{\mbox{VBF}\xspace}
-\providecommand{\ZH}{\ensuremath{\PZ\PH}\xspace}
-\providecommand{\WH}{\ensuremath{\PW\PH}\xspace}
-\providecommand{\VH}{\ensuremath{\PV\PH}\xspace}
-\providecommand{\bbH}{\ensuremath{\Pqb\Paqb\PH}\xspace}
-\providecommand{\tHq}{\ensuremath{\Pqt\PH\Pq}\xspace}
-\providecommand{\tHW}{\ensuremath{\Pqt\PH\PW}\xspace}
-\providecommand{\qqZH}{\ensuremath{\Pq\Pq\PZ\PH}\xspace}
-\providecommand{\ggZH}{\ensuremath{\Pg\Pg\PZ\PH}\xspace}
-\providecommand{\DY}{\mbox{DY}\xspace}
-\providecommand{\ggzz}{\ggZZ}
-\providecommand{\ggZZ}{\ensuremath{\Pg\Pg\PZ\PZ}\xspace}
-\providecommand{\WZ}{\ensuremath{\PW\PZ}\xspace}
-\providecommand{\ZZ}{\ensuremath{\PZ\PZ}\xspace}
-\providecommand{\VVV}{\ensuremath{\PV\PV\PV}\xspace}
 
 \newcommand{\Zee}{\ensuremath{\PZ(\Pe\Pe)}\xspace}
 \newcommand{\Zll}{\ensuremath{\PZ(\ell\ell)}\xspace}
@@ -393,3 +383,24 @@
 \newcommand{\dzeroBS}{\ensuremath{\text{d0}_{\text{BS}}}\xspace}
 
 \newcommand{\dptoverptsquare}{\ensuremath{(\pt^{Roch} - \pt^{Gen})/\pt^2}\xspace}
+
+% Xunwu's.
+\providecommand{\ttH}{\ensuremath{\Pqt\Paqt\PH}\xspace}
+\providecommand{\ggH}{\ensuremath{\Pg\Pg\PH}\xspace}
+\providecommand{\qqH}{\mbox{VBF}\xspace}
+\providecommand{\ZH}{\ensuremath{\PZ\PH}\xspace}
+\providecommand{\WH}{\ensuremath{\PW\PH}\xspace}
+\providecommand{\VH}{\ensuremath{\PV\PH}\xspace}
+\providecommand{\bbH}{\ensuremath{\Pqb\Paqb\PH}\xspace}
+\providecommand{\tHq}{\ensuremath{\Pqt\PH\Pq}\xspace}
+\providecommand{\tHW}{\ensuremath{\Pqt\PH\PW}\xspace}
+\providecommand{\qqZH}{\ensuremath{\Pq\Pq\PZ\PH}\xspace}
+\providecommand{\ggZH}{\ensuremath{\Pg\Pg\PZ\PH}\xspace}
+\providecommand{\DY}{\mbox{DY}\xspace}
+\providecommand{\ggzz}{\ggZZ}
+\providecommand{\ggZZ}{\ensuremath{\Pg\Pg\PZ\PZ}\xspace}
+\providecommand{\WZ}{\ensuremath{\PW\PZ}\xspace}
+\providecommand{\ZZ}{\ensuremath{\PZ\PZ}\xspace}
+\providecommand{\VVV}{\ensuremath{\PV\PV\PV}\xspace}
+\newcommand{\brhmm}{\ensuremath{{\mathcal{B}(\PH \to \Pmu\Pmu)}}\xspace}
+\newcommand{\brhff}{\ensuremath{{\mathcal{B}(\PH \to f\overline{f})}}\xspace}

@@ -16,7 +16,7 @@ As shown in Fig.~\ref{fig:particular_table}, any elementary particle can be clas
     \centering
     \includegraphics[height=9cm,keepaspectratio]{figures/sm/particular_table_updated.png}
         \caption
-            [The elementary particles described by the SM.]
+            [The elementary particles described by the SM]
             {The elementary particles described by the SM.}
         \label{fig:particular_table}
 \end{figure}
@@ -71,21 +71,22 @@ first, it improves the theoretical limits on the masses of the other elementary 
 % Since its conceptualization in 1964, the Higgs boson remained undetected for 48 years until its confirmed production at the LHC. 
 % SHOULD PROBABLY INCORPORATE THIS:
 % Additionally, the value of \mh is one of the free parameters of the SM and is theoretically linked to the very stability of our universe.
-% Universe metastability.
+% Universe metastability. 
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}[hbtp]
+\begin{multiFigure}
     \centering
-    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/intro/mtop_vs_mH_universestability.png}
-        \caption
-        [Theoretical stability regions of the Universe.]
-        {
-            (Left) Theoretical stability regions of the Universe based on the pole masses of the top quark $\left( \mass{t}^\text{pole} \right)$ and Higgs boson $\left( \mass{h}^\text{pole} \right)$.
-            (Right) A closeup of the SM region of the left plot.
-            The contours represent the 68\%, 95\%, and 99\% confidence levels based on the experimental uncertainties of $\mass{t}^\text{pole}$ and $\mass{h}^\text{pole}$.
-            Plots taken from~\cite{univ_stab} and units added to all axes.
+    \addFigure{0.48}{figures/intro/mtop_vs_mH_universestability_zoomout.png}
+    \addFigure{0.48}{figures/intro/mtop_vs_mH_universestability_zoomin.png}
+    \captionof{figure}
+        [Theoretical stability regions of the Universe]
+        {Theoretical stability regions of the Universe.
+        A) Stability regions of the Universe based on the pole masses of the top quark $\left( \mass{t}^\text{pole} \right)$ and Higgs boson $\left( \mass{h}^\text{pole} \right)$.
+        B) Closeup of the SM region in (A).
+        The contours represent 68\%, 95\%, and 99\% confidence levels based on the experimental uncertainties of $\mass{t}^\text{pole}$ and $\mass{h}^\text{pole}$.
+        Plots taken from~\cite{univ_stab} and units added to all axes.
         }
-        \label{fig:universe_stability}
-\end{figure}
+    \label{fig:universe_stability}
+\end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
 
 The production of a Higgs boson is only feasible at conditions close to those thought to exist at the beginning of the Universe.

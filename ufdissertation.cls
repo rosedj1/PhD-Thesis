@@ -202,10 +202,16 @@
     {% Begin Environment Code
         \setcounter{figCount}{1}
         \minipage\textwidth
-        \vspace{0.25cm}  % Jake added this to make a little space between fig and text above fig.
+        % TODO: If figure is at top of page, do not add \vspace.
+        %=== Jake added vspace to make a little space between fig and text above fig.
+        % \vspace{0.25cm}
+        \vspace{0.53\baselineskip}  % Gives ~same spacing as \includegraphics command.
     }
     {% End Environment Code
-        \vspace{0.25cm}  % Jake added this to make a little space between fig and text below fig.
+        %=== Jake added vspace to make a little space between fig and text below fig.
+        % \vspace{0.5cm}
+        % TODO: If figure is at bottom of page, do not add \vspace.
+        \vspace{1.10\baselineskip}  % Gives ~same spacing as \includegraphics command.
         \endminipage
     }
 

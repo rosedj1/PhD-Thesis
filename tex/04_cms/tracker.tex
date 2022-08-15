@@ -1,11 +1,12 @@
 % TODO: Fix whitespace between word and units.
 \section{The Silicon Tracker}
 \label{sec:tracker}
-
+% TODO: Change all "pile up" -> "pileup"
+% TODO: Fix all numbers to have correct commas and kerns.
 At the heart of CMS is one of the world's largest silicon detectors: the silicon tracker, the closest sub-detector surrounding the interaction point.
 The main goal of the silicon tracker is not to capture outgoing particles but to very precisely measure the hits from the charged particles as they pass through it.
 The tracker also assists in vertex identification, differentiating between primary and secondary vertices, the latter of which often comes from B meson decays.
-When multiple \pp collisions occur within the same BX (so-called \emph{pile up}), the tracker distinguishes between proton collisions with a resolution of about 100 \mum longitudinally and 50 \mum transverse to the beam pipe.
+When multiple \pp collisions occur within the same BX (so-called \emph{pileup}), the tracker distinguishes between proton collisions with a resolution of about 100 \mum longitudinally and 50 \mum transverse to the beam pipe.
 This is crucial to resolve which outgoing particles came from which \pp vertex.
 
 The tracker consists of two types of pure silicon detectors: the pixel detector and the strip detector, each of which is described in turn below.
@@ -17,13 +18,13 @@ The tracker consists of two types of pure silicon detectors: the pixel detector 
 \label{sec:pixel}
 
 The innermost part of the silicon tracker is the pixel detector, which is the closest subdetector to the interaction point.
-The pixel detector is composed of 66 million silicon ``pixels'', as shown in Fig.~\ref{fig:tracker_real} (Left, pink).
+The pixel detector is composed of 66 million silicon ``pixels'', as shown in Fig.~\ref{fig:tracker_real}.
 A single pixel is 100\mum $\times$ 150\mum and, collectively, they cover a sensitive area of 1.9$\meter^2$.
 Because it sits only 8\cm away from the beam pipe, the pixel detector receives the highest particle flux than any other subdetector:
 around 10 million particles/$\cm^2$ per second.
 
 The pixel detector is made of three cylindrical layers and two endcaps that surround the beam pipe.
-In total, the pixel detector has around 6,000 connections (channels) per$\cm^2$.
+In total, the pixel detector has around 6000 connections (channels) per$\cm^2$.
 
 After the LHC Run 1 was completed, the accelerator received luminosity upgrades during the 2013--2014 Long Shutdown.
 To handle these higher luminosities, the pixel detector was replaced by the CMS Phase-1 pixel detector during the LHC technical stop in 2016--2017.
@@ -43,36 +44,40 @@ The overall mass of the pixel detector decreased and granted the detector with b
 
 \subsection{The Strip Detector}
 \label{sec:strip}
-
+% TODO: Change all instances to: labeling / labelled
 The outer part of the silicon tracker is called the strip detector, which has 10 million detector strips spread across 10 cylindrical layers.
-The first 4 layers belong to the tracker inner barrel (TIB) and the remaining 6 layers belong to the tracker outer barrel (TOB), Fig.~\ref{fig:tracker_real} (Left, green and blue, respectively). 
+The first 4 layers belong to the tracker inner barrel (TIB) and the remaining 6 layers belong to the tracker outer barrel (TOB), Fig.~\ref{fig:tracker_real}. 
 Both the TIB and TOB have two endcaps associated with them, the TID and TEC, respectively.
 Accounting for all of its components, the strip detector is sensitive to 200$\meter^2$.
-Fig.~\ref{fig:tracker_xs} gives a clearly labelled transverse illustration of the pixel and strip detectors.
+Fig.~\ref{fig:tracker_xs} gives a clearly labeled transverse illustration of the pixel and strip detectors.
 % It functions similarly to the pixels in that 
 % It also has has slightly worse resolution than the pixel detector.
 % Both the pixel and strip trackers have barrel and endcap components for nearly hermetic coverage around the beam pipe.
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/tracker/silicon_tracker_simulated.png}
-\includegraphics[width=0.49\textwidth,height=10cm,keepaspectratio]{figures/cms/tracker/silicon_tracker_real.jpg}
-    \caption
-        [(Left) A simulation of the silicon tracker. (Right) The real silicon tracker within CMS]
-        {
-        (Left) A simulation of the silicon tracker, showing the 3 cylindrical layers of the pixel detector (pink), 4 layers of the TIB (green), and the 6 layers of the TOB (blue) of the strip detector.
+%=== Simulated and real images of silicon tracker.
+\begin{multiFigure}
+    \centering
+    \addFigure{0.49}{figures/cms/tracker/silicon_tracker_simulated.png}
+    \addFigure{0.49}{figures/cms/tracker/silicon_tracker_real.jpg}
+    \captionof{figure}
+        [Depictions of the silicon tracker]
+        {Depictions of the silicon tracker.
+        \;A) Simulated image of the silicon tracker, showing the 3 cylindrical layers of the pixel detector (pink), 4 layers of the TIB (green), and the 6 layers of the TOB (blue) of the strip detector.
         The endcap components are also shown.
-        (Right) A picture of the real silicon tracker at the center of CMS.
+        \;B) The real silicon tracker at the center of CMS.
         } 
     \label{fig:tracker_real}
-\end{figure}
+\end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
-\centering
-\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/cms/tracker/silicon_tracker_transverse_view.png}
-    \caption{A transverse view of the silicon pixel and strip detectors, explicitly labelling the different layers involved.}
+%=== Transverse view of silicon tracker.
+\begin{multiFigure}
+    \centering
+    \includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/cms/tracker/silicon_tracker_transverse_view.png}
+    \captionof{figure}
+        [Transverse view of the silicon pixel and strip detectors]
+        {Transverse view of the silicon pixel and strip detectors, explicitly labeling the different tracking layers.}
     \label{fig:tracker_xs}
-\end{figure}
+\end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
 
 % Consider the life of a particle produced from a \pp collision:

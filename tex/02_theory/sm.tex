@@ -12,6 +12,7 @@ to the value predicted by the SM
 \begin{equation*}
     a_e^{\mathrm{pred}} = 0.001\ 159\ 652\ 181\ 643(764).
 \end{equation*}
+% TODO: CITE
 An impressive agreement to better than one part per trillion.
 
 On the other hand, the SM has no explanation for some observed physical phenomena (Sec.~\ref{sec:shortcomings}), \eg the existence of dark matter~\cite{particle_data_group_review_2020}, and is thus not a fully descriptive model of the Universe.
@@ -19,13 +20,15 @@ Furthermore, the Collider Detector at Fermilab (CDF) Collaboration recently meas
 Recent results from the Baksan Experiment on Sterile Transitions suggest electron neutrinos oscillating between sterile neutrino states~\cite{PhysRevLett.128.232501}.
 Nevertheless, the SM has laid important foundations in particle physics for over 100 years and is fully explained with the discovery of the Higgs boson in 2012 TODO:CITE.
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}[pbth]
+\begin{multiFigure}
     \centering
     \includegraphics[width=0.7\textwidth,keepaspectratio]{figures/sm/wmass.pdf}
-        \caption{TODO:CITE Precision measurements of the \PW boson mass performed by various collaborations.} 
-        \label{fig:wmass}
-    \end{figure}
-    %%%%%%%%%%%%%%%%%%%%
+    \captionof{figure}
+        [Precision measurements of the \PW boson mass performed by various collaborations]
+        {TODO:CITE Precision measurements of the \PW boson mass performed by various collaborations.} 
+    \label{fig:wmass}
+\end{multiFigure}
+%%%%%%%%%%%%%%%%%%%%
 % CDF MW=80,433.5 +- 6.4 stat +- 6.9 syst = 80,433.5 +- 9.4 MeV/c2
 % SM expectation: MW=80,357 +- 4inputs +- 4theory MeV
 
@@ -89,8 +92,8 @@ and then finally a brief description of the shortcomings of the SM (Sec.~\ref{se
 \section{Overview}
 \label{sec:sm_overview}
 
+% TODO: Ensure proper particle symbols.
 The SM is a renormalizable quantum field theory defined in terms of a Lagrangian that describes interactions between fundamental particles as governed by the strong, weak, and electromagnetic forces. It is a non-Abelian gauge theory comprising interacting field theories based on gauge invariance constructed within the framework of quantum mechanics and special relativity. The SM exhibits invariance under the symmetry group
-
 \begin{equation}
     \text{SU}(3)_C \times \text{SU}(2)_L \times \text{U}(1)_Y
 \end{equation}
@@ -118,11 +121,11 @@ So for example the electron is an excitation of the \emph{electron field}, $\psi
 In fact, \emph{every} electron is an excitation of this same electron field. 
 An electron is identical to every other electron in every way (same mass, same charge, etc.).
 Quantum Mechanics (QM) does a fine job of describing how slow-moving particles behave.
-However, as soon as particles begin moving at 30.5\% of the speed of light ($91.4\tentothe{6}$\,m/s), then there is a 5\% difference between the particle's rest mass energy ($E = mc^2$) and its total relativistic energy ($E = \gamma mc^2$).
+However, as soon as particles begin moving at 30.5\% of the speed of light ($91.4 \times \tentothe{6}$\,m/s), then there is a 5\% difference between the particle's rest mass energy ($E = mc^2$) and its total relativistic energy ($E = \gamma mc^2$).
 In other words, fast-moving particles must account for effects due to Special Relativity (SR).
 The merger of QM and SR gives rise to Quantum Field Theory (QFT)---the backbone of the SM.
 
-Fig.~\ref{fig:particular_table} shows all the fundamental particles that have been discovered up to the present day.
+Figure~\ref{fig:particular_table} shows all the fundamental particles that have been discovered up to the present day.
 % The phrase ``fundamental particle'' just means that the particle is not composed of anything smaller than itself. 
 % These particles are not just diabolical creations from theorists. 
 % No, these particles are precisely defined, mathematical objects whose existence has been predicted by the SM and experimentally verified time and time again in the laboratory.
@@ -139,21 +142,23 @@ There are two major types of particles: \emph{bosons} and \emph{fermions}.
 % instead an intermediate particle, very often a boson, is said to ``mediate'' the interaction and be the entity responsible which transfers the force from one particle to the other. 
 % Ever wonder how two electrons "know" that they are near each other and that they should repel? 
 \emph{How do two electrons ``know'' that one is near the other and that they should repel?}
-Fig.~\ref{fig:ee_scattering} shows a Feynman diagram of two electrons ``communicating'' with each other by means of an intermediate photon.
+Figure~\ref{fig:ee_scattering} shows a Feynman diagram of two electrons ``communicating'' with each other by means of an intermediate photon.
+%%%%%%%%%%%%%%%%%%%%
+\begin{multiFigure}
+    \centering
+    \includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_moeller.png}
+        \captionof{figure}
+            [Feynman diagram showing \ee (Møller) scattering]
+            {Feynman diagram showing electron--electron scattering, also known as Møller scattering.} 
+        \label{fig:ee_scattering}
+    \end{multiFigure}
+    %%%%%%%%%%%%%%%%%%%%
 % I like to think of it as the two electrons ``playing catch'' with the photon.
 In QFT, mediator particles bosons like the photon convey information between the two interacting electrons.
 % The first electron recoils from the throw and then the second electron recoils from catching the photon.
 The idea is that the photon carries momentum away from the first electron and brings it to the second one, therefore making it look as if the two electrons are repelling one another.
 The photon isn't \emph{real} of course---it is said to be a \emph{virtual} photon.
 This is why gauge bosons are often called the force carriers.
-%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[pbth]
-\centering
-\includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_moeller.png}
-    \caption{A Feynman diagram showing electron-electron scattering, also known as Møller scattering.} 
-    \label{fig:ee_scattering}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%
 
 % Quantum Electrodynamics, one of the theories cooped up in the SM, is a quantum field theory that can mathematically describe one electron "throwing" a photon to the other.
 The Feynman diagram in Fig.~\ref{fig:ee_scattering} is a wonderfully simple way to visualize particle physics processes.
@@ -171,7 +176,7 @@ Thus, the first force carrier---the first gauge boson---has been presented: the 
 It is a massless particle and it is the mediator of the EM force. 
 Photons only interact with particles that carry \emph{electric charge}.
 The charge that a particle carries ultimately determines with which bosons it may interact and via which forces.
-The four fundamental forces found in nature, along with their decreasing, relative strength are: 
+The four fundamental forces found in nature, along with their decreasing relative strengths, are: 
 % (1) strong, (2) EM, (3) weak, (4) gravitational
 \begin{enumerate}
     \item strong force $(1)$
@@ -184,13 +189,12 @@ The four fundamental forces found in nature, along with their decreasing, relati
 The mediators of the strong force are the 8 gluons. 
 Similar to the photon, they are also massless.
 Gluons are trapped inside of protons, neutrons, and other hadronic matter. 
-They are responsible for ``glueing'' nuclei to together, hence their name.
+They ``glue'' nuclei to together, hence their name.
 Just as photons can only interact with particles that have electric charge, gluons can only interact with particles that have \emph{color} charge.
-Interestingly, gluons themselves carry color charge which they mediate back and forth between quarks (fermions discussed below).
+There are three kinds of color charges---red, green, and blue---though not related at all to visual color.
+Each color has its corresponding anticolor charge---antired, antigreen, and antiblue---which negate the corresponding color charge, much like how a `$+1$' electric charge neutralizes a `$-1$' charge.
+Interestingly, gluons themselves carry color charge (1 color and 1 anticolor charge) which they mediate back and forth between quarks (fermions discussed below).  % TODO: This may be repeated below.
 This is quite different from the photon which itself does not carry electric charge.
-There are three kinds of color charges: red, green, and blue.
-Every gluon carries two color charges:
-one kind of color and an anticolor: antired, antigreen, or antiblue.
 
 There are three bosons which mediate the weak force: the \PZ, $\PW^+$, and $\PW^-$.
 They are extraordinarily massive particles, weighing in at $91.2\GeV$ for the \PZ and $80.4\GeV$ for both kinds of \PW bosons. 
@@ -199,10 +203,9 @@ These bosons interact with any particle that carries ``weak hypercharge''.
 The weak force has plagued physicists for nearly a century until only recently.
 Particles which decay via the weak force live an astonishingly long time. 
 Take for example the neutral pion ($\pi^0$). 
-It decays very quickly, via the EM force, into two photons on the order of $\tentotheminus{18}\sec$.
-Now take the charged Kaon ${\rm K^+}$. 
-This particle decays into three charged pions, but takes on average $\tentotheminus{8}\sec$ to do so.
-Over 10 orders of magnitude different from the pion decay.
+It decays very quickly, via the EM force, into two photons on the order of $\tentotheminus{18}\snd$.
+Now consider the charged kaon $(K^+)$ that can decay into three charged pions but takes $\tentotheminus{8}\snd$ to do so (on average).
+This is over 10 orders of magnitude different from the $\pi^0$ decay.
 This is because the charged kaon decays via the weak force.
 The final boson is the scalar Higgs boson and will be introduced in Sec.~\ref{sec:higgs_mech} below.
 

@@ -19,7 +19,7 @@ Comparing this cross section to the cross section of Higgs boson production $\le
 shows that a Higgs boson is produced in approximately one out of every \emph{billion} \pp collisions---a rare event indeed.
 % TODO CITE
 
-To complicate matters further, the Higgs boson has a \emph{very} short mean lifetime of only $1.6 \tentotheminus{22}\snd$~\cite{particle_data_group_review_2020} TODO:doublecheck.
+To complicate matters further, the Higgs boson has a \emph{very} short mean lifetime of only $1.6 \times \tentotheminus{22}\snd$~\cite{particle_data_group_review_2020} TODO:doublecheck.
 % TODO: Get citation other than PDG.
 Thus, the existence of the Higgs boson is not \emph{directly} detected by CMS (Chapter~\ref{ch:cms}) but is instead \emph{inferred} from its stable decay products which enter the various subdetectors.
 Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass (approximately 125\GeV),
@@ -29,21 +29,20 @@ which gives the scalar boson sufficient energy to decay into at least 9 differen
 Each decay mode occurs with a different probability---the \emph{branching fraction} (\br)---whose value depends on \mH, as shown in Fig.~\ref{fig:higgs_br}.
 % \textcolor{red}{MENTION THAT NOT ALL DECAYS MAKE ON-SHELL PARTICLES?}
 The question then becomes, \emph{``Which Higgs boson decay mode is the most useful for measuring \mH?''}
-\begin{figure}[!htbp]
-    \begin{center}
-        % Figures come from:
-        % https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG?redirectedfrom=LHCPhysics.LHCHXSWG#Higgs_cross_sections_and_decay_b
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/higgs_BR_80to200GeV.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/higgs_BR_120to130GeV.pdf}
-		\caption
-			[Branching fractions of Higgs boson decays as a function of the Higgs boson mass.]
-			{
-            The branching fractions of various Higgs boson decays as a function of the Higgs boson mass
-            over a wide range (Left) and a narrow range (Right) of values.
-            }
-		\label{fig:higgs_br}
-	\end{center}
-\end{figure} 
+\begin{multiFigure}
+	\centering
+	% Figures come from:
+	% https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG?redirectedfrom=LHCPhysics.LHCHXSWG#Higgs_cross_sections_and_decay_b
+	\addFigure{0.49}{figures/higgsmassmeas/higgs_BR_80to200GeV.pdf}
+	\addFigure{0.49}{figures/higgsmassmeas/higgs_BR_120to130GeV.pdf}
+	\captionof{figure}
+		[Branching fractions of Higgs boson decays as a function of the Higgs boson mass]
+		{The branching fractions of various Higgs boson decays as a function of the Higgs boson mass.
+		\;A) Wide range of Higgs boson mass values (80--200\GeV).
+		\;B) Narrow range of Higgs boson mass values (120--130\GeV).
+	}
+	\label{fig:higgs_br}
+\end{multiFigure} 
 % Real particles enter detectors in CMS which send signals to various electronics.
 % Particle Flow algorithm pieces the information together to construct objects out of each event.
 % Now, instead of just a deposit of energy in the ECAL and corresponding hits in the silicon tracker, the particle is identified as a newly produced electron.
@@ -54,12 +53,12 @@ Owing to its large signal-to-background ratio of approximately 2
 and its relatively rare four-lepton final state, the \hzzfourl decay channel is chosen and is called the \emph{signal process}.
 On average, a Higgs boson will decay into two \PZ bosons (one on-shell and the other off-shell) only 2.6\% of the time.
 % TODO:cite
-In turn, each \PZ boson \emph{may} decay into two opposite-sign, same flavor (OSSF) leptons (\ztolplm, where $\ell = \Pe, \mu$) on average approximately 6.7\% of the time.
+In turn, each \PZ boson \emph{may} decay into two opposite-sign, same flavor (OSSF) leptons (\ztolplm, where $\ell = \Pe, \Pmu$) on average approximately 6.7\% of the time.
 % TODO:cite
-This signal process then gives rise to four distinct final states: \foure, \fourmu, \twoetwomu, \twomutwoe.
+This signal process then gives rise to four distinct final states: \foure, \fourmu, \twoetwomu, \twomutwoe.
 The branching fraction for the overall signal process is then calculated as: % B(Z->ee)=0.033632, B(Z->mumu)=0.033662
 \begin{equation*}
-    \brof{\hzzfourl} = \brof{\htozz} \left[ \brof{\ztolplm} \right]^2 = 1.8\tentotheminus{3}.
+    \brof{\hzzfourl} = \brof{\htozz} \left[ \brof{\ztolplm} \right]^2 = 1.8 \times \tentotheminus{3}.
 \end{equation*}
 Thus, a signal event is expected to be produced only once in about every \emph{trillion} \pp collisions.
 
@@ -89,18 +88,19 @@ Although the event selection is devised to ideally select only signal events, it
 there are certain physics process that have exactly the same initial and final states as the signal process.
 Such processes ``contaminate'' the collected signal events and are called \emph{background processes}.
 Concretely, Fig.~\ref{fig:feyndiag_sig_vs_bkg} shows how identical initial-state gluons can react to produce exactly the same final-state particles, while producing different intermediate particles:
-the signal process (Left), initiated by gluon-gluon fusion \vs a background process (Right) which skips the intermediate Higgs boson.
+the signal process (\gghzzfourl), initiated by gluon-gluon fusion \vs a background process (\ggzzfourl) which skips the intermediate Higgs boson.
 It is imperative for particle physics analyses to maximize the number of collected signal events while minimizing the number of collected background events.
 Section~\ref{sec:bkg_estim} discusses the associated background processes and how to estimate the number of events these contribute to the signal region.
 \begin{multiFigure}
 	\centering
-	\addFigure{0.48}{figures/higgsmassmeas/feynman_diag_HZZ4L.png}
-	\addFigure{0.48}{figures/placeholder.png}
+	\addFigure{0.49}{figures/higgsmassmeas/feynman_diag_HZZ4L.png}
+	\addFigure{0.49}{figures/placeholder.png}
 	\captionof{figure}
-	[Feynman diagrams for the \gghzzfourl and \ggzzstarfourl processes.]
-	{Feynman diagrams showing how different processes can have the same initial and final states.
-	A) TODO:UPDATE DIAGRAM. The signal process \gghzzfourl.
-	B) One possible background process \ggzzstarfourl.}
+		[Feynman diagrams for the \gghzzfourl and \ggzzstarfourl processes]
+		{Feynman diagrams showing how different physics processes can have the same initial and final states.
+		\;A) TODO:UPDATE DIAGRAM. The signal process \gghzzfourl.
+		\;B) An example background process \ggzzstarfourl.
+		}
 	\label{fig:feyndiag_sig_vs_bkg}
 \end{multiFigure}
 
@@ -110,7 +110,7 @@ Section~\ref{sec:bkg_estim} discusses the associated background processes and ho
 
 %=== Thanks to Dr. Xunwu Zuo for the Feynman diagrams shown in Fig.~\ref{fig:main_higgs_modes}, which shows the major production modes of the Higgs boson. ===%
 % Feynman diagrams below don't compile well because the key "horizontal" requires building with LuaTeX.
-% \begin{figure}[!htb]
+% \begin{multiFigure}
 %     \centering 
 %     \captionsetup{justification=centering}
 %     \begin{subfigure}[b]{0.45\textwidth} % b for bottom alignment so caption is at the same height
@@ -167,7 +167,7 @@ Section~\ref{sec:bkg_estim} discusses the associated background processes and ho
 %     \end{subfigure}
 %     \caption{Main production modes of the Higgs boson.}
 %     \label{fig:main_higgs_modes}
-% \end{figure}
+% \end{multiFigure}
 
 
 
@@ -282,15 +282,16 @@ Simulated signal events are then used to predict the \emph{line shape} of this s
 This signal modeling is performed using a double-sided Crystal Ball function to fit the line shape, for various mass points of \mH, in each of the four final states.
 % m4l dist Full Run 2.
 %%%%%%%%%%%%%%%%%%%%
-\begin{figure}[pbth]
+\begin{multiFigure}
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio]{figures/higgsmassmeas/m4l_FullRun2_epjc.jpeg}
-		\caption
-			[Distribution of \mfourl from \hzzfourl events using Full Run 2 data.]
-			{Distribution of \mfourl from \hzzfourl events using Full Run 2 data. Plot taken from TODO:cite HIG-19-001 EPJC.
-			}
-        \label{fig:m4l_run2}
-\end{figure}
+	\captionof{figure}
+		[Distribution of \mfourl from \hzzfourl events using Full Run 2 data]
+		{Distribution of \mfourl from \hzzfourl events using Full Run 2 data.
+		Plot taken from TODO:cite HIG-19-001 EPJC.
+		}
+	\label{fig:m4l_run2}
+\end{multiFigure}
 
 The precision on the measured value of \mH is improved by implementing several analysis techniques, such as
 % \begin{itemize}

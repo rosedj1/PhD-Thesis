@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{times}
+\usepackage[utf8]{inputenc}
+\renewcommand{\arraystretch}{2}
+
+\begin{document}
+    
+%% Change \toperule to \hline\hline if you prefer the two separate lines in the table
+
+\begin{table}\centering
+    \begin{tabularx}{.9\textwidth}{XccX}\toprule
+        \multicolumn{4}{c}{\textbf{Electrons}} \\ \hline
+        & $p_T^e > 7 \;\text{GeV}$ & $|\eta^e| < 2.5$ & \\
+        & $d_{xy} < 0.5 \;\text{cm}$ & $d_{z} < 1 \;\text{cm}$ & \\
+        \multicolumn{4}{c}{$|\mathrm{SID}_\text{3D}| < 4$} \\
+        \multicolumn{4}{c}{BDT ID with isolation with cuts from Tables [INSERT TABLES HERE]} \\ \toprule
+        
+        \multicolumn{4}{c}{\textbf{Muons}} \\ \hline
+        \multicolumn{4}{c}{Global or Tracker Muon} \\
+        \multicolumn{4}{c}{Discard Standalone Muon tracks if reconstructed in muon system only} \\
+        & $p_T^\mu > 5 \;\text{GeV}$ & $|\eta^\mu| < 2.4$ & \\
+        & $d_{xy} < 0.5 \;\text{cm}$ & $d_{z} < 1 \;\text{cm}$ & \\
+        \multicolumn{4}{c}{$|\mathrm{SID}_\text{3D}| < 4$} \\
+        \multicolumn{4}{c}{PF muon ID if $p_T < 200 \;\text{GeV}$}, PF muon ID or High-$p_T$ muon ID (Table [INSERT HERE]) if $p_T > 200 \;\text{GeV}$ \\ 
+        \multicolumn{4}{c}{$\mathcal{I}_\text{PF}^\mu < 0.35$} \\ \toprule
+        
+        \multicolumn{4}{c}{\textbf{FSR Photons}} \\ \hline
+        & $p_T^\text{fl} > 2 \;\text{GeV}$ & $|\eta^\gamma| < 2.4$ & \\
+        \multicolumn{4}{c}{$\mathcal{I}_\text{PF}^\gamma < 1.8$} \\ 
+        & $\Delta R(l,\gamma) < 0.5$ & $\frac{\Delta R(l,\gamma)}{(p_T^\gamma)^2} < 0.012 \;\text{GeV}^{-2}$ & \\ \toprule
+
+        \multicolumn{4}{c}{\textbf{Jets}} \\ \hline
+        & $p_T^\text{jet} > 30 \;\text{GeV}$ & $|\eta^\text{jet}| < 4.7$ & \\
+        \multicolumn{4}{c}{$\Delta R(l/\gamma, \text{jet}) > 0.4$} \\
+        \multicolumn{4}{c}{Cut-based jet ID (tight WP)} \\
+        \multicolumn{4}{c}{Jet pileup ID (tight WP)} \\
+        \multicolumn{4}{c}{Deep CSV b-tagging (medium WP)} \\ \toprule
+
+    \end{tabularx}
+\end{table}
+
+
+\end{document}

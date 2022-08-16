@@ -15,6 +15,17 @@
 % \end{multiFigure}
 % * Make sure that there is NO NEWLINE between \begin{multiFigure} and the line ABOVE it (otherwise your figs will be off-center)!
 
+
+%=== Rules on CAPITALIZATION ===%
+% Title Case: all principal words are capitalized except prepositions, articles, and conjunctions.
+% Sentence Case: Normal sentence rules.
+
+% Ch. 1: CHAPTER TITLES ARE ALL CAPS
+% Sec. 1.2: Section Titles Are in Title Case
+% Subsec. 1.2.3: Subsection Titles Are in Title Case
+% Subsubsec. 1.2.3.4: Subsubsection titles are in sentence case
+% Any header levels beyond subsubsections should just use bold text and should not be numbered.
+
 \documentclass{ufdissertation}\sloppy
 
 \usepackage[T1]{fontenc}
@@ -83,10 +94,10 @@
 \chair[Guenakh Mitselmakher]{Andrey Korytov}%                   Chair and Cochair (see comment block above).
 
 %% additional sections
-\setDedicationFile{tex/dedicationFile}%                Dedication Page
-\setAcknowledgementsFile{tex/acknowledgementsFile}%    Acknowledgements Page
-\setBiographicalFile{tex/biographyFile}%               Biography file of the Author (you).
-\setAbstractFile{tex/abstractFile}%                    Abstract Page (This should only include the abstract itself)
+% \setDedicationFile{tex/dedicationFile}%                Dedication Page
+% \setAcknowledgementsFile{tex/acknowledgementsFile}%    Acknowledgements Page
+% \setBiographicalFile{tex/biographyFile}%               Biography file of the Author (you).
+% \setAbstractFile{tex/abstractFile}%                    Abstract Page (This should only include the abstract itself)
 
 %=== Bibliography is printed in the command \setReferenceFile below. ===%
 % \bibliographystyle{plain}
@@ -130,15 +141,15 @@
 % %--- Higgs Mass Measurement ---%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tex/05_higgs_mass/higgs_intro.tex}
-% \input{tex/05_higgs_mass/overview.tex}
-% \input{tex/05_higgs_mass/datasets_simul_trig.tex}
+\input{tex/05_higgs_mass/overview.tex}
+\input{tex/05_higgs_mass/datasets_simul_trig.tex}
 \input{tex/05_higgs_mass/obj_and_event_sel.tex}
-% \input{tex/05_higgs_mass/signal_modeling.tex}
+\input{tex/05_higgs_mass/signal_modeling.tex}
 \input{tex/05_higgs_mass/techniques.tex}
-% \input{tex/05_higgs_mass/backgrounds.tex}
-% \input{tex/05_higgs_mass/kinem_discrim.tex}
-% \input{tex/05_higgs_mass/syst_uncert.tex}
-% \input{tex/05_higgs_mass/results.tex}
+\input{tex/05_higgs_mass/backgrounds.tex}
+\input{tex/05_higgs_mass/kinem_discrim.tex}
+\input{tex/05_higgs_mass/syst_uncert.tex}
+\input{tex/05_higgs_mass/results.tex}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %--- Search for Dilepton Resonances ---%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

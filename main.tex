@@ -15,7 +15,6 @@
 % \end{multiFigure}
 % * Make sure that there is NO NEWLINE between \begin{multiFigure} and the line ABOVE it (otherwise your figs will be off-center)!
 
-
 %=== Rules on CAPITALIZATION ===%
 % Title Case: all principal words are capitalized except prepositions, articles, and conjunctions.
 % Sentence Case: Normal sentence rules.
@@ -95,7 +94,7 @@
 
 %% additional sections
 % \setDedicationFile{tex/dedicationFile}%                Dedication Page
-% \setAcknowledgementsFile{tex/acknowledgementsFile}%    Acknowledgements Page
+\setAcknowledgementsFile{tex/acknowledgementsFile}%    Acknowledgements Page
 % \setBiographicalFile{tex/biographyFile}%               Biography file of the Author (you).
 % \setAbstractFile{tex/abstractFile}%                    Abstract Page (This should only include the abstract itself)
 
@@ -109,7 +108,7 @@
 
 %%%% These are NOT required, so only use them if you actually need/have them.
 % \setAbbreviationsFile{tex/abbreviations}%           Abbreviations Page. Jake changed this to say "LIST OF ACRONYMS".
-\setAppendixFile{tex/appendix}%                     Appendix Content; hyperlinking might be weird.
+\setAppendixFile{tex/appendix}%                     Appendix Content; hyperlinking might be weird. TODO: Fix hyperlinking.
 \multipleAppendixtrue%                          Uncomment this if you have more than one appendix, otherwise leave it commented. This adds "A", "B" in the TOC next to each Appendix entry.
 
 %=== Main Text ===%
@@ -125,7 +124,7 @@
 % %%%%%%%%%%%%%
 % %--- LHC ---%
 % %%%%%%%%%%%%%
-% \input{tex/03_lhc/lhc.tex}
+\input{tex/03_lhc/lhc.tex}
 % %%%%%%%%%%%%%
 % %--- CMS ---%
 % %%%%%%%%%%%%%
@@ -155,7 +154,7 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \input{tex/06_dilep_res/dilep_res_intro.tex}
 % \input{tex/06_dilep_res/overview.tex}
-% \input{tex/06_dilep_res/datasets_simul_trig.tex}
+\input{tex/06_dilep_res/datasets_simul_trig.tex}
 % % TODO: Include object selection in event_sel.tex?
 % \input{tex/06_dilep_res/event_sel.tex}
 % \input{tex/06_dilep_res/backgrounds.tex}

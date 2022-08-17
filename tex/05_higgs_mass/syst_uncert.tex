@@ -1,9 +1,22 @@
+%=== SigFigs on integrated luminosity values.
+% The current PC recommendation is to show three digits for any integrated luminosity value, i.e., 138/fb for 2016--2018 and 36.3/fb for 2016-only, even when both numbers are quoted in the same document. 
+%=== L_int Uncertainty ===% 
+% From: https://twiki.cern.ch/twiki/bin/view/CMS/TWikiLUM#Quick_summary_table
+%                                       2015        2016    	           2017 	        2018 	        2015-2018 	            2016-2018
+% Total delivered luminosity [1/fb] 	4.31 	    41.5     	           49.81 	        67.86 	        163.56          	    159.25
+% Recommended luminosity [1/fb] 	    2.27† 	    36.3 (36.31)¶ 	       41.48 (41.53) 	59.83 (59.74) 	139.92 (139.87) 	    137.65 (137.60)
+% Preliminary luminosity [1/fb] 	    2.26†§ 	    35.9 (35.92)§          41.48 (41.53) 	59.83 (59.74)   139.50 (139.45)§ 	    137.24 (137.19)§
+% Change of recommended/preliminary 	0.7% 	    1.1%    	           ― 	             ― 	            0.3 (0.3) % 	        0.3 (0.3) %
+% Recommended uncertainty [%] 	        1.6 	    1.2     	           2.3 	            2.5 	        1.6 	                1.6
+% Reference(s) 	                        LUM-17-003 	LUM-17-003 	           LUM-17-004 	    LUM-18-002 	    LUM-17-003, LUM-18-002 	LUM-17-003, LUM-18-002 
+% Always include the reference to the 2015/2016 pp 13 TeV luminosity paper (LUM-17-003), which describes the methodology used by all luminosity measurements also for other datasets (i.e. also for pp 5 TeV, pPb, PbPb analyses).
+% Additionally, include references to the PASes that describe the luminosity measurement of the used data sets, e.g. LUM-17-004 (2017) and LUM-18-002 (2018) for full Run 2 pp 13 TeV analyses. 
 \section{Systematic Uncertainties}
 \label{sec:syst_uncert}
 The systematic uncertainties involved in this analysis are detailed in TODO:CITE HIG-19-001.
 For reference, the systematic uncertainties are summarized below:
 \begin{itemize}
-	\item \lumiint (2.5\%) TODO: confirm number and cite.
+	\item $\lumiint$ (1.6\%)~\cite{LUM-17-003, LUM-17-004, LUM-18-002}.
 	\item Lepton momentum scale and resolution (conservative values from extensive analysis are given in \tablename~\ref{table:ScaleRes_syst}.)
 	\item Lepton identification and reconstruction efficiencies (2.5--9\%), depending on the final state % TODO: confirm number.
 	\item Lepton energy scale

@@ -1,6 +1,7 @@
 % TODO: Maybe in the \caption[], don't use a final period at the end within the square brackets? Check TOC.
 % Great animation about protons going through the CERN accelerator complex.
 % https://www.youtube.com/watch?v=FLrEghnKncA
+
 \chapter{THE LARGE HADRON COLLIDER}
 \label{ch:lhc}
 
@@ -137,7 +138,7 @@ The flow of accelerators is as follows:
     % \item The flow 
     \item From the PSB, \pname are the rest are accelerated to 2\GeV and then injected into the \emph{Proton Synchrotron} (PS).
     \item The PS increases the energy of the particles to 26\GeV and then feeds the protons into the \emph{Super Proton Synchrotron} (SPS).
-    \item Next, the SPS energizes the protons to a center-of-mass energy of 450\GeV and sends bunches of protons (so-called \emph{proton bunches}, $\approx$$\tentothe{11}$ protons) into the LHC. %  are packed together into a ``proton bunch''. % a accelerates protons to com energy
+    \item Next, the SPS energizes the protons to a center-of-mass energy of 450\GeV and sends bunches of protons (so-called \emph{proton bunches}, $\mathcal{O}\left(\tentothe{11}\right)$ protons) into the LHC. %  $\approx$$\tentothe{11}$  are packed together into a ``proton bunch''. % a accelerates protons to com energy
 \end{itemize}
 % TODO: Mention: A single proton bunch is about the size of a human hair ($\approx$50\mum wide and $\approx$10\cm long). 
 % TODO: Mention: The clockwise and counterclockwise rings are filled to a maximum of 2808 proton bunches, each one spaced 25\ns apart, and then sent to collide. 
@@ -147,7 +148,7 @@ It is inside the LHC that \pname and its fellow protons within its proton bunch 
     This is analgous to the timing required when pushing a person on a swing:
     the pusher must push at \emph{just} the right time to increase the momentum of the one swinging, lest the pusher slows the swinger down!
 } within radio-frequency (RF) cavities.
-After sufficient energy is delivered to the proton bunches, they finally achieve their max speed of 0.999\,999\,96$c$. %   99.999\,996\%$c$.
+After sufficient energy is delivered to the proton bunches, they finally achieve their max speed of 0.999\,999\,990$c$ (corresponding to a Lorentz factor of $\gamma \approx 7000$). %  Wikipedia says 6930.  99.999\,996\%$c$.
 At this speed, \emph{each proton} in the proton bunch carries a center-of-mass energy of 6.5\TeV.
 
 \pname and its neighboring protons in the proton bunch are nearly ready for a head-on collision with another proton bunch to make interesting physics.
@@ -156,7 +157,7 @@ Since the protons are bare, they are all positively charged, and are subject to 
 Therefore, the LHC is equipped with 1232 dipole magnets distributed all along its circumference to turn the proton bunches.
 The cross section of such a dipole magnet is shown in Fig.~\ref{fig:lhc_dipole_xs}.
 Each dipole magnet is 14.3\meter long, weighs 35\tonne, costs nearly 500\,KCHF to produce, and has nearly 11\,700\,A of current running through it.  % TODO: make command for amps unit?
-Only with such massive currents is it possible to generate the appropriate magnetic field strength of 8\tesla to keep the protons moving in a circular fashion at their near-light speed. 
+Only with such massive currents is it possible to generate the necessary magnetic field strength of 8\tesla to keep the protons moving in a circular fashion at their near-light speed. 
 The magnetic field is maintained by copper-clad niobium-titanium coils, which requires the cryogenics conditions of 96\tonne of superfluid helium-4 to achieve the necessary temperature of 1.9\kelvin to reach a superconducting state; 
 this temperature is colder than that of outer space.
 % TODO: Check numbers here and ref.
@@ -190,7 +191,7 @@ This is a testament to just how small protons truly are.
 
 %from 50 $\mu$m
 In the event that \pname does not collide with any of the oncoming protons, then it is simply ``recycled'' and continues going around the LHC ring for another opportunity at a \pp collision.
-When the anticipated moment finally comes---\ie a ``hard'' \pp collision is realized, as shown in Fig.~\ref{fig:pp_collision}---the energy of the single collision contains a monstrous center-of-mass energy of $\sqrt{s} = 13\TeV$, which is more than enough to create new particles like top quarks, Higgs bosons (Chapter~\ref{ch:higgs_mass}), and potentially BSM particles (Chapter~\ref{ch:dilep_res}).
+When the anticipated moment finally comes---\ie a ``hard'' \pp collision is realized, as shown in Fig.~\ref{fig:pp_collision}---the energy of the single collision contains a monstrous center-of-mass energy of \sqrtsthirteen, which is more than enough to create new particles like top quarks, Higgs bosons (Chapter~\ref{ch:higgs_mass}), and potentially BSM particles (Chapter~\ref{ch:dilep_res}).
 % Truly, it is the particles inside the protons, the so-called \emph{partons} that interact with one another, as shown in Fig.~\ref{fig:pp_collision}.
 In order to analyze such interesting particles, one needs to detect the outgoing particles produced from the \pp collisions.
 One such dedicated particle detector is located at Point 5---the Compact Muon Solenoid (CMS) detector---and is described in the next chapter.
@@ -211,7 +212,62 @@ One such dedicated particle detector is located at Point 5---the Compact Muon So
 % TODO: FCC?
 % Just as the PS feeds protons into the SPS, which feeds protons into the LHC, so too is it being considered for the LHC to feed a new project---the 100\Km Future Circular Collider.
 
+
+% LPS SPS
+% into a beam pipe going clockwise and another 2800 bunches going around counterclockwise, 
+
 % TODO:
+\section{Physics of the LHC}
+The merit of a particle collider is typically judged by its center-of-mass energy and a second parameter: the \emph{luminosity}.
+In essence, luminosity refers to the `brightness' of the colliding particle beams,
+\ie the more tightly packed the particle bunches are, the higher the number of particles per bunch, the more frequently the bunches collide, then the higher the luminosity will be.
+Concretely, the instantaneous time-dependent luminosity $(\lumi(t))$ is defined as the ratio between the expected rate $\left( R(t) \right)$ of events and the corresponding cross section $(\sigma)$ for some physics process:
+\begin{equation}
+    \lumi(t)= \frac{R(t)}{\sigma}.
+    \label{eqn:lumi_def}
+\end{equation}
+Physicists are interested in the total number of events $\left( N^\text{exp} \right)$ they should expect to see in the laboratory---observing a number of events significantly different enough from $N^\text{exp}$ may hint at new physics.
+Rearrangement of Eqn.~\ref{eqn:lumi_def} and setting $R(t) = \text{d}N^\text{exp} / \dt$ gives the infinitesimal change in the number of expected events after a small increment of time $(\dt)$:
+\begin{equation}
+    \frac{\text{d}N^\text{exp}}{\dt} = \sigma \lumi(t).
+    \label{eqn:dNdt}
+\end{equation}
+Collider experiments typically last over long time periods, so integrating Eqn.~\ref{eqn:dNdt} from some starting time $\left( t_1 \right)$ to some later time $\left( t_2 \right)$, gives $N^\text{exp}$:
+\begin{align*}
+    N^\text{exp} &= \sigma \int_{t_1}^{t_2}{\lumi(t) \dt}
+    \\
+    \implies N^\text{exp} &= \sigma \lumiint,
+    \label{eqn:Nexp}
+\end{align*}
+where $\int_{t_1}^{t_2}{\lumi(t) \dt} \equiv \lumiint$ and $\sigma$ is assumed to be independent of time.
+% The term $\int_{t_1}^{t_2}{\lumi(t) \dt}$ is the aptly named \emph{integrated luminosity} $\left( \lumiint \right)$ and is a measure of the amount of data collected from $t_1$ to $t_2$.
+The term \lumiint is aptly named \emph{integrated luminosity} and is a measure of the amount of data collected from $t_1$ to $t_2$.
+
+When two proton bunches cross at the LHC, the instantaneous luminosity $\left( \lumi_\text{b}\right)$ can be calculated using the so-called \emph{van der Meer method}~\cite{LUM-17-003}:
+\begin{equation}
+    \lumi_\text{b} = \frac{f_r  n_1  n_2}{A_\text{eff}},
+    \label{eqn:lumi}
+\end{equation}
+where $f_r$ is the LHC frequency of revolution of the particle bunches (11\,245.6\Hz) during collisions,
+$n_1$ and $n_2$ are the numbers of particles in each bunch,
+and $A_\text{eff}$ is the effective area of overlap between the two bunches.
+Since the particle bunches are not infinitely narrow but instead have a cross-sectional profile, $A_\text{eff}$ can be put into terms of the widths of each bunch.
+Specifically, if the bunches collide head-on, are Gaussian-distributed, and have the same root-mean-square beam widths ($\sigma_x$ and $\sigma_y$, in the $x$ and $y$ directions, respectively), then Eqn.~\ref{eqn:lumi} becomes:
+\begin{equation}
+    \lumi_\text{b} = \frac{f_r  n_1  n_2}{4\pi \sigma_x \sigma_y}.
+    \label{eqn:lumi_final}
+\end{equation}
+
+From Eqn.~\ref{eqn:lumi_final}, it is easy to validate the intuitive description of luminosity as described at the beginning of this section:
+$\lumi_\text{b}$ is directly proportional to the numbers of particles in each bunch and to the frequency of revolution,
+and it is inversely proportional to the beam widths.
+% TODO: Include the below?
+% Using the values of the LHC ($f_r = 11\,245.6\Hz$, ) This yields 
+
+
+% The luminosity of the LHC is $\mathcal{O}(\LHigh)$ the number of particles 
+% It should be mentioned that the luminosity of the LHC is on the order of \LHigh. %$10^{34}$ Hz/cm$^2$.
+
 % SPECS
 % - Luminosity
 % - rates
@@ -222,18 +278,6 @@ One such dedicated particle detector is located at Point 5---the Compact Muon So
 % efficiency is ideally unity.
 
 
-% LPS SPS
-% into a beam pipe going clockwise and another 2800 bunches going around counterclockwise, 
-
-
-
-
-% TODO:
-% \subsection{Physics of the LHC}
-% The luminosity of the LHC is $\mathcal{O}(\LHigh)$ the number of particles 
-% It should be mentioned that the luminosity of the LHC is on the order of \LHigh. %$10^{34}$ Hz/cm$^2$.
-
-
 
 
 % The LHC has ushered in the era of ``TeV-scale physics'',
@@ -242,9 +286,6 @@ One such dedicated particle detector is located at Point 5---the Compact Muon So
 
 % It takes a proton \~90 $\mu$s 
 % to make a complete revolution around the LHC moving at such a speed.
-
-% The LHC collides particles using the brightest beams and highest energies that humans have ever made.
-% Bright beams meaning highest luminosity.
 
 % Higgs boson produced every 1 billion collisions.
 

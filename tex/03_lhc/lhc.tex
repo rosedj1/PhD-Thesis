@@ -8,9 +8,7 @@
 % OUTLINE
 % \section{Motivation for a Large Hadron Collider}
 \section{Motivation}
-Although the SM
-% TODO:(Chapter~\ref{ch:theory})
-has shown to be an astoundingly accurate framework so far, it must continue to be scrutinized by the barrage of measurements that either confirm or contradict its predictions.
+Although the SM (Ch.~\ref{ch:theory}) has shown to be an astoundingly accurate framework so far, it must continue to be scrutinized by the barrage of measurements that either confirm or contradict its predictions.
 % cross-examined
 Interestingly, a recent measurement of the mass of the \PW boson has shown significant deviation from SM predictions, with a sensitivity of 7$\sigma$~\cite{cdf_collaboration_high-precision_2022}.
 After all, undeniable fact comes from reproducible results obtained from measurement---not from some theoretical model which \emph{may} or \emph{may not} describe reality.
@@ -112,7 +110,8 @@ Therefore, a natural way to explore the intricacies and inner workings of the LH
     \includegraphics[height=12.5cm]{figures/lhc/cern_complex.png}
     \captionof{figure}
         [The accelerator complex at CERN]
-        {The accelerator complex at CERN.}
+        {The accelerator complex at CERN. Diagram taken from~\cite{PhysRevLett.114.191803}.% TODO: correct the ref
+        }
     \label{fig:lhc_complex}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
@@ -121,7 +120,8 @@ Therefore, a natural way to explore the intricacies and inner workings of the LH
 The journey to discovery begins in a surprisingly small tank of hydrogen gas (\htwo) located in the LINAC4 building at the main CERN site.
 % , in which a proton that is bound to another proton as a molecule of H2 .
 % Pic of hydrogen source from here: https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.linac4
-Inside this tank, a proton---conveniently named Paul Roton, or just \pname for short---and $\mathcal{O}(\tentothe{23})$ other protons (TODO:DOUBLE CHECK THIS)
+Inside this tank, a proton---conveniently named Paul Roton, or just \pname for short---and $\mathcal{O}(\tentothe{23})$ other protons
+% (TODO:DOUBLE CHECK THIS)
 coexist in bound states as molecules of H$_2$.
 Although the tank has a meager mass of 
 % TODO: Double check this number.
@@ -156,19 +156,23 @@ The only problem is that the proton bunches must be turned (to keep them in the 
 Since the protons are bare, they are all positively charged, and are subject to a Lorentz force when they pass through a magnetic field.
 Therefore, the LHC is equipped with 1232 dipole magnets distributed all along its circumference to turn the proton bunches.
 The cross section of such a dipole magnet is shown in Fig.~\ref{fig:lhc_dipole_xs}.
-Each dipole magnet is 14.3\meter long, weighs 35\tonne, costs nearly 500\,KCHF to produce, and has nearly 11\,700\,A of current running through it.  % TODO: make command for amps unit?
+Each dipole magnet is 14.3\meter long, weighs 35\tonne, costs nearly 500\,KCHF to produce, and has nearly 11\,700\,A of current running through it.
 Only with such massive currents is it possible to generate the necessary magnetic field strength of 8\tesla to keep the protons moving in a circular fashion at their near-light speed. 
 The magnetic field is maintained by copper-clad niobium-titanium coils, which requires the cryogenics conditions of 96\tonne of superfluid helium-4 to achieve the necessary temperature of 1.9\kelvin to reach a superconducting state; 
 this temperature is colder than that of outer space.
 % TODO: Check numbers here and ref.
-There are also 506 quadrupole magnets (TODO:CITE) that compress the proton bunches as tightly as possible before collision with the other oncoming proton beam.
+There are also 392 quadrupole magnets
+% (TODO:CITE)
+that compress the proton bunches as tightly as possible before collision with the other oncoming proton beam.
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
 \centering
-    \includegraphics[height=10cm,keepaspectratio]{figures/lhc/lhc_dipole_xs.jpg}
+    \includegraphics[height=7.5cm,keepaspectratio]{figures/lhc/lhc_dipole_xs.jpg}
     \captionof{figure}
         [Cross section of a dipole magnet at the LHC]
-        {A cross section of one of the 1232 dipole magnets which span the entire length of the LHC tunnel.} 
+        {A cross section of one of the 1232 dipole magnets which span the entire length of the LHC tunnel.
+        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        } 
     \label{fig:lhc_dipole_xs}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
@@ -184,7 +188,9 @@ This is a testament to just how small protons truly are.
     \includegraphics[width=0.7\textwidth,keepaspectratio]{figures/lhc/pileup_pp_2018.png}
     \captionof{figure}
         [Average pileup distribution during the LHC 2018 run]
-        {Distribution of the average number of \pp collisions per proton bunch crossing (\emph{pileup}) which CMS recorded during the LHC 2018 run.} 
+        {Distribution of the average number of \pp collisions per proton bunch crossing (\emph{pileup}) which CMS recorded during the LHC 2018 run.
+        Plot taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        } 
     \label{plt:pileup}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
@@ -201,21 +207,18 @@ One such dedicated particle detector is located at Point 5---the Compact Muon So
     \includegraphics[width=0.8\textwidth]{figures/lhc/proton_proton_quarksandgluons.jpg}
     \captionof{figure}
         [Diagram showing the constituent (\emph{partons}) of two protons interacting in a \pp collision]
-        {Two protons can be smashed together at very high energies at the LHC $\left( \sqrtsthirteen \right)$ to have their constituent partons interact and convert into new kinds of matter.} 
+        {Two protons can be smashed together at very high energies at the LHC $\left( \sqrtsthirteen \right)$ to have their constituent partons interact and convert into new kinds of matter.
+        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        } 
     \label{fig:pp_collision}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
-
 % Finally two incoming proton bunches approach a common collision point.
 % - Frequency of BX: considering that proton bunches are spaced 25\ns apart, this means 
-
 % TODO: FCC?
 % Just as the PS feeds protons into the SPS, which feeds protons into the LHC, so too is it being considered for the LHC to feed a new project---the 100\Km Future Circular Collider.
-
-
 % LPS SPS
 % into a beam pipe going clockwise and another 2800 bunches going around counterclockwise, 
-
 % TODO:
 \section{Physics of the LHC}
 The merit of a particle collider is typically judged by its center-of-mass energy and a second parameter: the \emph{luminosity}.
@@ -259,8 +262,8 @@ Specifically, if the bunches collide head-on, are Gaussian-distributed, and have
 \end{equation}
 
 From Eqn.~\ref{eqn:lumi_final}, it is easy to validate the intuitive description of luminosity as described at the beginning of this section:
-$\lumi_\text{b}$ is directly proportional to the numbers of particles in each bunch and to the frequency of revolution,
-and it is inversely proportional to the beam widths.
+$\lumi_\text{b}$ is directly proportional to the numbers of particles in each bunch.
+% TODO: uncomment: and to the frequency of revolution, and it is inversely proportional to the beam widths.
 % TODO: Include the below?
 % Using the values of the LHC ($f_r = 11\,245.6\Hz$, ) This yields 
 

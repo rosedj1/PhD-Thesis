@@ -5,10 +5,11 @@
 
 %\subsubsection{Z1-mass line shape}
 % \subsubsection{Methodology}
-TODO:REWORD, USE CONSISTENT SYMBOLS.
+% TODO:REWORD, USE CONSISTENT SYMBOLS.
 In order to improve the four lepton invariant mass resolution, a kinematic fit is also performed
 using a mass constraint on the intermediate on-shell Z resonance, using an approach similar to the one
-described in TODO:CITE
+described previously.
+% TODO:CITE
 % \cite{RefToZrefit}.
 The basic idea is to re-evaluate \pT of two leptons forming 
 the Z bosons of the Higgs candidate, with a constraint on the reconstructed Z mass to follow 
@@ -39,20 +40,23 @@ Events from all three years have been merged, asking for a
 $p_T > 20(10)$\GeV for (sub)leading leptons, and $|\eta|<$2.4(2.5) for $\mu$(e), focusing on
 the reconstructed mass range of [105-140] \GeV in $m_{4l}^{RECO}$. The fit function used is a convolution
 of a CB plus three different guassians.
-\begin{figure}[!htbp]
-\begin{center}
-	\includegraphics[width=0.45\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Z1_lineshape/4mu.pdf}
-	\includegraphics[width=0.45\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Z1_lineshape/4e.pdf}
-  	\includegraphics[width=0.45\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Z1_lineshape/2e2mu.pdf}
-	\includegraphics[width=0.45\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Z1_lineshape/2mu2e.pdf}
-	\caption
+\begin{multiFigure}[!htbp]
+    \centering
+	\addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/Z1_lineshape/4mu.pdf}
+	\addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/Z1_lineshape/4e.pdf}
+  	\addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/Z1_lineshape/2e2mu.pdf}
+	\addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/Z1_lineshape/2mu2e.pdf}
+	\captionof{figure}
         [On-shell Z resonance line shape at generator level, as taken from ggH sample @ 125 \GeV]
-        {TODO:REWORD On-shell Z resonance line shape at generator level, as taken from ggH sample @ 125 \GeV,
-        merging all three years for the 4 different final states: 4$\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
+        {On-shell Z resonance line shape at generator level, as taken from ggH sample @ 125 \GeV, % TODO:REWORD
+        merging all three years for the 4 different final states:
+        \;A) 4$\mu$.
+        \;B) 4e.
+        \;C) 2e2$\mu$.
+        \;D) 2$\mu$2e.
         }
-\label{fig:Z1_lineshape}
-\end{center}
-\end{figure}
+    \label{fig:Z1_lineshape}
+\end{multiFigure}
 %After this kinimatic refitting, the mass of the Z candidate, the $m_{4\ell}$, and the $\sigma_{m_{4\ell}}$
 %are recalculated. The comparison of the reconstructed and refitted mass can be seen in Fig.~\ref{Z1constraint}.
 %\begin{figure}[!htbp]
@@ -199,18 +203,22 @@ of a CB plus three different guassians.
 % \subsection{Mass distributions}
 The new invariant mass distributions, with also the constraint of the on-shell Z1 boson, are shown in 
 Fig.~\ref{fig:1D_VXBS_Z1_mass_2018_ggH}.
-\begin{figure}[!htbp]
-\begin{center}
-	\includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_Z1_mass_2018_ggH_4mu.pdf}
-	\includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_Z1_mass_2018_ggH_4e.pdf}
-  	\includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_Z1_mass_2018_ggH_2e2mu.pdf}
-	\includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_Z1_mass_2018_ggH_2mu2e.pdf}
-    \caption
+\begin{multiFigure}[!htbp]
+    \centering
+	\addFigure{0.45}{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_Z1_mass_2018_ggH_4mu.pdf}
+	\addFigure{0.45}{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_Z1_mass_2018_ggH_4e.pdf}
+  	\addFigure{0.45}{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_Z1_mass_2018_ggH_2e2mu.pdf}
+	\addFigure{0.45}{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_Z1_mass_2018_ggH_2mu2e.pdf}
+    \captionof{figure}
         [Four-lepton invariant mass distribution, with VXBS and Z1 constraint]
-        {TODO:REWORD Four-lepton invariant mass distribution, with VXBS and Z1 constraint, in the signal region ([105-140]\GeV) using ggH events, with the DSCB fit for 2018: 4$\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+        {Four-lepton invariant mass distribution, with VXBS and Z1 constraint, in the signal region ([105-140]\GeV) using ggH events, with the DSCB fit for 2018: % TODO:REWORD
+        \;A) 4$\mu$.
+        \;B) 4e.
+        \;C) 2e2$\mu$.
+        \;D) 2$\mu$2e.
+        } 
 \label{fig:1D_VXBS_Z1_mass_2018_ggH}
-\end{center}
-\end{figure}
+\end{multiFigure}
 Comparing these new distributions (Fig.~\ref{fig:1D_VXBS_Z1_mass_2018_ggH}) with the previous ones (Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}), it can be seen that the \Zone constraint has a bigger improvement in final states with on-shell Z boson decaying in to 2e (~30$\%$ improvement on $\sigma$ for 2e2$\mu$ and 16$\%$ for 4e) while the other two final states (4$\mu$ and 2$\mu$2e) are less affected (improvement in $\sigma$ of the other of 5$\%$).
 
 \subsubsection{Expected mH measurement uncertainties (MC) and relative improvements}

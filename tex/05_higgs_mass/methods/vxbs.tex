@@ -41,7 +41,8 @@ Both the X and Y widths of the beamspot are smaller ($X_{2018} \approx 9 \mu m$ 
 % \end{figure}
 Once the event is selected, the vertex+beamspot constraint is applied.
 
-TODO:REWORD Muon reconstruction currently used does not take into account any information about the 
+% TODO:REWORD
+Muon reconstruction currently used does not take into account any information about the 
 vertex production of the lepton itself. % and in the Higgs boson decay, all the leptons are prompt.
 In the VX+BS approach, the four tracks from Higgs boson decay are constrained looking for a common 
 vertex (VX) that must be compatible with the beamspot (BS). 
@@ -60,8 +61,8 @@ As can been seen, resolution improves by about 10$\%$ in 2018 and roughly 5$\%$ 
 	\includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/vxbs/vxbs_muon_pTresol_vs_pT.png}
     \caption
     [Muon \pT resolution as a function of \pT before and after VX+BS.]
-    {TODO: Use actual PDFs. Muon \pT resolution as a function of \pT, for 2018 (top left), 2017 (top right) 
-and 2016 (bottom, split in post- and pre-VFP), with (red) and without (black) VXBS constraint.}
+    {Muon \pT resolution as a function of \pT, for 2018 (top left), 2017 (top right) 
+and 2016 (bottom, split in post- and pre-VFP), with (red) and without (black) VXBS constraint.} % TODO: Use actual PDFs. 
 \label{fig:Resolution_pT}
 \end{center}
 \end{figure}
@@ -70,8 +71,8 @@ and 2016 (bottom, split in post- and pre-VFP), with (red) and without (black) VX
 	\includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/vxbs/vxbs_muon_pTresol_vs_eta.png}
     \caption
     [Muon \pT resolution as a function of \pT before and after VX+BS.]
-    {TODO: Use actual PDFs. Muon \pT resolution as a function of \abseta, for 2018 (top left), 2017 (top right) 
-and 2016 (bottom, split in post- and pre-VFP), with (red) and without (black) VXBS constraint.}
+    {Muon \pT resolution as a function of \abseta, for 2018 (top left), 2017 (top right) 
+and 2016 (bottom, split in post- and pre-VFP), with (red) and without (black) VXBS constraint.} % TODO: Use actual PDFs.
 \label{fig:Resolution_eta}
 \end{center}
 \end{figure}
@@ -86,14 +87,14 @@ As can been seen, the \PZ boson resolution gets improved comparably to that of t
 	% \includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/vxbs/vxbs_mZdist_2016preVFP_2016postVFP.png}
     \caption
         [\PZ boson mass distributions in data and MC, with and without VX+BS constraint]
-        {TODO: REWORD \PZ boson mass distributions in data and MC, without (left) and with (right) VX+BS constraint,
+        {\PZ boson mass distributions in data and MC, without (left) and with (right) VX+BS constraint, % TODO: REWORD 
         for 2018 (top), 2017 (middle top), 2016 post-VFP (middle bottom) and 2016 pre-VFP (bottom).
         }
 \label{UL_ZBoson_DataMC_comparison_VXBS}
 \end{center}
 \end{figure}
 
-More on beamspot constraint studies can be found in Appendix TODO:Link not showing up~\ref{app:adhoc_studies}.
+More on beamspot constraint studies can be found in Appendix~\ref{app:adhoc_studies}. % TODO:Link not showing up
 
 				%In this mass window, as can be seen in \figurename~\ref{pT_res_VXBS} the muon \pT resolution 
 				%improves by about 5-10\%; simular improvement has been observed in the \textbf{UL samples used}
@@ -148,20 +149,22 @@ More on beamspot constraint studies can be found in Appendix TODO:Link not showi
 
 %=== 1D likelihood fit after VX+BS ===%
 The updated invariant mass distributions, after applying the VX+BS constraint, are shown in Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}.
-\begin{figure}[!htbp]
-    \begin{center}
-        \includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_4mu.pdf}
-        \includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_4e.pdf}
-        \includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_2e2mu.pdf}
-        \includegraphics[width=0.45\textwidth]{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_2mu2e.pdf}
-        \caption
+\begin{multiFigure}[!htbp]
+    \centering
+        \addFigure{0.45}{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_4mu.pdf}
+        \addFigure{0.45}{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_4e.pdf}
+        \addFigure{0.45}{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_2e2mu.pdf}
+        \addFigure{0.45}{figures/higgsmassmeas/ggH_MassDistribution/1D_VXBS_mass_2018_ggH_2mu2e.pdf}
+        \captionof{figure}
             [Four-lepton invariant mass distribution, after applying the VX+BS constraint]
-            {TODO: Convert to multiFigure: Four-lepton invariant mass distribution, after applying the VX+BS constraint, in 
-            the signal region ([105-140]\GeV) using ggH events, with the DSCB fit for 2018: 4$\mu$ (top left),
-            4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+            {Four-lepton invariant mass distribution, after applying the VX+BS constraint in the signal region ([105-140]\GeV) using ggH events, with the DSCB fit for 2018.
+            \;A) 4$\mu$.    % TODO: Convert to multiFigure:
+            \;B) 4e.
+            \;B) 2e2$\mu$.
+            \;B) 2$\mu$2e.
+            }
     \label{fig:1D_VXBS_mass_2018_ggH}
-    \end{center}
-    \end{figure}
+    \end{multiFigure}
 As can been seen, comparing these new distributions (Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}, Right) with the ones before beamspot constraint (Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}, Left), the $\sigma$ in 4$\mu$ final state has improved by 7$\%$, 4e is not affected (as expected), while mixed flavor final states show an improvement of a few percent.
 
 \subsubsection{Expected \mH measurement uncertainties (MC)}

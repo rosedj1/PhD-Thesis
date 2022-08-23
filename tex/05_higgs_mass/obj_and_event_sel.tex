@@ -17,18 +17,71 @@ and \ZZ-candidate selection,
 the purity of the signal process is optimized and, by extension, so is the precision on the measurement of \mH.
 
 As part of the event selection, the particle objects within the selected events must pass certain kinematical criteria to be considered for the analysis.
-The object selection used in this analysis is summarized in Table~\ref{table:obj_sel_higgs} and the step-by-step event selection can be found in TODO:Ref HIG-19-001 EPJC.
-TODO:Define $\Delta R, \mathcal{I}^\gamma_{\text{PF}}$
-\begin{figure}
-    \centering
+
+%=== To write about the below, start at p.18 of AN-19-139v6.
+% \subsection{Object Selection}
+% \label{sec:obj_sel}
+% % \subsubsection{Electrons}
+% Electron objects are required to satisfy the reconstructed transverse momentum of $\pt^\Pe > 7\GeV$, $\abs{\eta^\Pe} < 2.5$, and 
+% % \label{sec:el_sel}
+% % \subsection{Muons}
+% % \label{sec:mu_sel}
+% % \subsection{Isolation}
+% % \label{sec:iso}
+% % \subsection{Final State Radiation}
+% % \label{sec:fsr}
+The object selection used in this analysis is summarized in Table~\ref{table:obj_sel_higgs} and the step-by-step event selection can be found in~\cite{PhysRevLett.114.191803}. % TODO:Ref HIG-19-001 EPJC.
+% TODO:Define $\Delta R, \mathcal{I}^\gamma_{\text{PF}}$
+% TODO: Change all tables to tabularx?
+\begin{table}\fontsize{10}{12}\selectfont\centering\renewcommand{\arraystretch}{2}
     \topcaption
-        [TODO:Change to proper table.]
-        {TODO:Change to proper table.
-        From Ref.TODO:AN-19-139v6.
-        TODO:Need to show Tables 11--14 (below).}
-    \includegraphics[width=0.90\textwidth]{figures/higgsmassmeas/table_objsel_hzz4l.png}
+        [Object selection criteria for \mH measurement analysis]
+        {Object selection criteria for \mH measurement analysis.
+        % TODO: Ref.TODO:AN-19-139v6.
+        % TODO:Need to show Tables 11--14 (below).
+        }
+    \begin{tabularx}{\textwidth}{>{\hsize=.3\hsize}X>{\hsize=.2\hsize}c>{\hsize=.2\hsize}c>{\hsize=.3\hsize}X}
+        \toprule
+        \multicolumn{4}{c}
+            {\textbf{Electrons}} \\
+                \hline
+            & $\pte > 7\GeV$ & $\absetaof{\Pe} < 2.5$ & \\
+            & $d_{xy} < 0.5\cm$ & $d_{z} < 1\cm$ & \\
+        \multicolumn{4}{c}{$|\text{SIP}_\text{3D}| < 4$} \\
+        \multicolumn{4}{c}{Satisfies BDT ID from isolation cuts from Table~\ref{table:2016_dataSamples}} \\ % TODO: Ref correct table.
+        \toprule
+
+        \multicolumn{4}{c}{\textbf{Muons}} \\
+            \hline
+        \multicolumn{4}{c}{Global or Tracker Muon} \\
+        \multicolumn{4}{c}{Discard Standalone Muon tracks if reconstructed in muon system only} \\
+            & $\ptmu > 5\GeV$ & $\absetaof{\Pmu} < 2.4$ & \\
+            & $d_{xy} < 0.5\cm$ & $d_{z} < 1\cm$ & \\
+        \multicolumn{4}{c}{$|\text{SIP}_\text{3D}| < 4$} \\
+        \multicolumn{4}{c}{PF muon ID if $\ptmu < 200\GeV$, PF muon ID or High-$\pT$ muon ID (Table~\ref{table:2016_dataSamples}) if $\ptmu > 200\GeV$} \\  % TODO: Ref correct table.
+        \multicolumn{4}{c}{$\mathcal{I}_\text{PF}^\Pmu < 0.35$} \\
+        \toprule
+        
+        \multicolumn{4}{c}{\textbf{FSR Photons}} \\ \hline
+        & $\frac{\Delta R(\ell,\gamma)}{\left( \pT^\gamma \right)^2}$$\pT^\gamma > 2\GeV$ & $\absetaof{\gamma} < 2.4$ & \\
+        \multicolumn{4}{c}{$\mathcal{I}_\text{PF}^\gamma < 1.8$} \\ 
+        & $\Delta R(\ell,\gamma) < 0.5$ & $\frac{\Delta R(\ell,\gamma)}{\left( \pT^\gamma \right)^2} < 0.012\GeV^{-2}$ & \\
+        \toprule
+
+        \multicolumn{4}{c}{\textbf{Jets}} \\ \hline
+        & $\pT^\text{jet} > 30\GeV$ & $\absetaof{\text{jet}} < 4.7$ & \\
+        \multicolumn{4}{c}{$\Delta R(\ell/\gamma, \text{jet}) > 0.4$} \\
+        \multicolumn{4}{c}{Cut-based jet ID (tight WP)} \\
+        \multicolumn{4}{c}{Jet pileup ID (tight WP)} \\
+        \multicolumn{4}{c}{Deep CSV \Pqb-tagging (medium WP)} \\ \toprule
+    \end{tabularx}
     \label{table:obj_sel_higgs}
-\end{figure}
+\end{table}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.90\textwidth]{figures/higgsmassmeas/table_objsel_hzz4l.png}
+%     \label{table:obj_sel_higgs}
+% \end{figure}
 
 % TODO: Fill out these subsections.
 % \subsection{Trigger Selection}
@@ -46,17 +99,7 @@ TODO:Define $\Delta R, \mathcal{I}^\gamma_{\text{PF}}$
 %     \item is found within a small radius relative to the $z$ axis ($r_\text{PV} < 2\cm$)
 % \end{itemize}
 
-% \subsection{Object Selection}
-% \label{sec:obj_sel}
-% % \subsubsection{Electrons}
-% Electron objects are required to satisfy the reconstructed transverse momentum of $\pt^\Pe > 7\GeV$, $\abs{\eta^\Pe} < 2.5$, and 
-% % \label{sec:el_sel}
-% % \subsection{Muons}
-% % \label{sec:mu_sel}
-% % \subsection{Isolation}
-% % \label{sec:iso}
-% % \subsection{Final State Radiation}
-% % \label{sec:fsr}
+
 % Then you gotta select the leptons from the event.
 % Select at least 3 leptons per event.
 % The leading lepton must have $\pt \ge 20\GeV$, the subleading lepton must have $\pt \ge 10\GeV$, and the remaining leptons must have $\pt \ge 5\GeV$.
@@ -91,10 +134,8 @@ TODO:Define $\Delta R, \mathcal{I}^\gamma_{\text{PF}}$
 After the full analysis selection is implemented in each of the \fourl final states,
 the expected yields for the signal and background processes are given in Tables~\ref{tab:yield_sr_105to140} and~\ref{tab:yield_sr_70to170},
 which count events within the narrow signal region $\left(105 < \mfourl < 140\GeV\right)$ and wide signal region $\left(70 < \mfourl < 170\GeV\right)$, respectively.
-%=== Filippo is waiting to put cutflow table here. ===%
 \begin{table}[!htb]
     \centering
-    % \captionsetup{justification=centering}
     \topcaption
         [Yields in the narrow signal region $105 < \mfourl < 140\GeV$]
         {Number of expected yields of signal and background processes within the narrow signal region $105 < \mfourl < 140\GeV$ after the full event selection using \lumiruntwo, split into the four final states.}
@@ -111,18 +152,14 @@ which count events within the narrow signal region $\left(105 < \mfourl < 140\Ge
         \hline
     Total Expected                          &   221.4   & 103.7     & 162.3         & 117.1         &   604.5   \\
         \hline
-    % Total Observed                          &   ---       &   ---       &   ---           &   ---           &   ---           \\
-    %     \hline
     \end{tabular}
     \label{tab:yield_sr_105to140}
 \end{table}
 \begin{table}[!htb]
     \centering
-    % \captionsetup{justification=centering}
     \topcaption
         [Yields in the wide signal region $70 < \mfourl < 170\GeV$]
         {Number of expected yields of signal and background processes within the wide signal region $70 < \mfourl < 170\GeV$ after the full event selection using \lumiruntwo, split into the four final states.}
-    % \begin{tabular}{llllll}
     \begin{tabular}{lrrrrr}
         \hline
     Process                                 &   \fourmu &   \foure  &   \twoetwomu  &   \twomutwoe  &   Inclusive   \\
@@ -136,49 +173,9 @@ which count events within the narrow signal region $\left(105 < \mfourl < 140\Ge
         \hline
     Total Expected                          &  679.0    &	287.2	&   387.4	    &   278.8	    &   1632.3      \\
         \hline
-    % Total Observed                          &   ---       &   ---       &   ---           &   ---           &   ---           \\
-    %     \hline
     \end{tabular}
     \label{tab:yield_sr_70to170}
 \end{table}
-%=== TODO: Put "A" beneath first subfigure, "B" beneath second, etc.
-% Reference subfigs like: ~\subref{s}
-% \begin{figure}[!htb]
-%     \centering
-% PLOTS GO HERE
-%     \begin{subfigure}{0.3\textwidth}
-%         \includegraphics[width=\textwidth]{example-image}
-%         \caption{First subfigure.}
-%         \label{fig:first}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}{0.3\textwidth}
-%         \includegraphics[width=\textwidth]{example-image}
-%         \caption{Second subfigure.}
-%         \label{fig:second}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}{0.3\textwidth}
-%         \includegraphics[width=\textwidth]{example-image}
-%         \caption{Third subfigure.}
-%         \label{fig:third}
-%     \end{subfigure}
-%     \caption{Subreferences in \LaTeX.}
-%     \label{fig:figures}
-%     \end{figure}
-% \begin{figure}[!htb]
-%     \centering
-%     % width=0.48\textwidth
-%     \includegraphics[height=5.5cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_4mu.png}
-%     \includegraphics[height=5.5cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_4e.png}
-%     \includegraphics[height=5.5cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_2e2mu.png}
-%     \includegraphics[height=5.5cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_2mu2e.png}
-%     \includegraphics[height=7.0cm]{figures/higgsmassmeas/dist_m4l_allyears_fullsel_fs_inclus.png}
-%     \caption
-%         [Some words here.]
-%         {Distribution of the four-lepton invariant mass for each final state. A) blah blah}
-%     \label{fig:dist_m4l_fullsel}
-% \end{figure}
 \begin{multiFigure}
     \centering
     \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/MassDistribution_70_170/InclusiveMass_4mu_workinprogress.pdf}

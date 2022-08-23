@@ -4,6 +4,8 @@
 % * BibLaTeX offers excellent flexibility, but you'll need to go into ufdissertation.cls and perform the 'biblatex' (un)comment instructions as well as changing some things in main.tex.
 % default biblatex style: It uses the word "In: " in strange places. Otherwise it looks good. What journal would it correspond to though?
 
+%=== BEST WAY TO GET BIBTEX CODE FOR CITATION: Look up your article on https://inspirehep.net/
+
 %=== How to get your bib to look the way you want (BibTeX). ===%
 % (1) Select a journal style you like: JHEP, APS, MLA, Chicago, etc.
 %     Use paperpile.com to look at citation styles---it seems good but look at an example paper from that journal to confirm the citation style.
@@ -33,8 +35,9 @@
 % Chicago: Uses the date in the text and doesn't use any numbers in the bib.
 % Chem-ACS: Doesn't include the title! Also, uses parentheses around numbers in bib.
 
+% TODO: Implement these!
 %=== After spending loads of time on bibliography styles, etc., I've learned: ===%
-% * Don't export bibliography from zotero---instead pull citation from website, then make the following changes:
+% * Don't export bibliography from zotero---instead pull citation from website (preferably INSPIRE), then make the following changes:
 % (1) Delete key=abstract, if it exists.
 % (2) If 3 or more authors, only keep the first author and replace second onward with "and others" (this will be replaced by "et al.").
 % (3) Make sure that key=url is filled out.
@@ -52,7 +55,7 @@ The general guidelines for choosing references are:
 %=== Some citation types ===%
 % article
 % misc
-% techreport (arXiv)
+% techreport
 % unpublished
 % phdthesis
 
@@ -88,56 +91,69 @@ The general guidelines for choosing references are:
 % N.B.: Curly braces:
 % * Protect the upper/lowercase of the word.
 % * Allow you to use commands, e.g., ...mass near 125{\GeV}
-% * I don't think are required to use math env ($...$)
-% * I think if you do: "{...}", then letter case is protected (so you don't have to do: {The {H}iggs boson...}).
+% * I don't think curly braces are required to use math env. Just do: '$...$'
+% * I think if you do: "{all the words here}", then letter case is protected (so you don't have to do: {The {H}iggs boson...}).
 
-% Xunwu's changes to the original citation taken from url:
-% * Added key=number and made the value=(reportNumber's value).
-% * In number's value, changed comma to dot to separate strings.
-% * Removed ", CMS-TDR-12" from reportNumber.
-% This techreport printout looks like this:
-% <author>, <title>, Technical Report <number>, <month> <year>. <url>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%=== NOTES FOR techreports ===%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% It's better to pull a techreport (like a PAS) from CERN Document Server (CDS) than from INSPIRE.
+% If pulling techreport bib ref from CDS, then make the following changes:
+% * Changed key=reportNumber to key=number".
+% * Deleted the word "Collaboration" from key=collaboration.
+% * Added type="CMS Physics Analysis Summary",
+%=== techreport keys:
+techreport{citekey,
+  author      = "",
+  title       = "",
+  institution = "",
+  year        = "",
+  type        = "",
+  number      = "",
+  address     = "",
+  month       = "",
+  note        = "",
+  annote      = ""
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% TODO: In key=title, get the sqrt symbol to have math mode font. 
-% TODO: Change all lepton l's to {$\ell$}
-% TODO: Are quotes around titles necessary?
+%=== Info on different journal styles ===%
+% EPJC
+% * Uses non-italicized text for fundamental particles. E.g., non-italics μ for muons: p_T^μ
 
 %=== FINAL DECISION: I will use JHEP citation style. ===%
 % Reference titles are italicized, sentence case (i.e., only the first word's first letter is uppercase), proper nouns are also uppercase, references are in appearance-order, citation ranges look like 1--3 (and use an en dash). 
-% So if this is in the title: "pp collisions at sqrt{s} = 7 TeV", everything EXCEPT the 7 is italicized. The "=" is in math mode.
+% Numbers are NOT italicized E.g. "pp collisions at sqrt{s} = 7 TeV", everything EXCEPT the 7 is italicized. The "=" is in math mode.
 % Interestingly, JHEP uses lowercase "ref.", "refs.", "section", "figure", "figures", "table", "tables 12--14". Doesn't use "fig.", "sec.", or "tab.".
 % The reference label (e.g., [2]) can be put directly after the thing which it references or at the end of the sentence.
 % Introduce abbreviations in parentheses: "The standard model (SM)...the SM Higgs boson (H)."
 % Lowercase 'c' when saying 'CMS collaboration'.
 % When to use 'et al.'? I can't say for sure in JHEP style... I've seen:
-% * 'M. Della Negra et al., Muon trigger...'
-% * 'CDF Collaboration, D0 collaboration, T. Aaltonen et al., Combination of...'
-% * 'M. Anfreville, D. Bailleux, J. Bard, A. Bornheim, C. Bouchand et al., Laser monitoring...'
+% * "M. Della Negra et al., Muon trigger..."
+% * "CMS collaboration, Combined results of searches for the standard model Higgs boson in pp"
+% * "CDF Collaboration, D0 collaboration, T. Aaltonen et al., Combination of..."  (From doi:10.1007/JHEP06(2013)081:)
+% * "M. Anfreville, D. Bailleux, J. Bard, A. Bornheim, C. Bouchand et al., Laser monitoring..."
+% * "K. Arnold, M. Bahr, G. Bozzi, F. Campanario, C. Englert et al., VBFNLO: a parton level Monte Carlo for processes with electroweak bosons, Comput. Phys. Commun. 180 (2009) 1661"
+% * "ALEPH, CDF, D0, DELPHI, L3, OPAL, SLD collaborations, LEP Electroweak Working Group, Tevatron Electroweak Working Group, and SLD Electroweak and Heavy Flavour Groups, Precision electroweak measurements and constraints on the standard model"
+
+
+%=== Recommendations to ensure nice and consistent bibtex style:
+% * To preserve uppercase letters, ensure that the values of all keys have double quotes and then curly braces: "{Words Go Here...}". 
+% * For key=author: When you have a giant author list replace all names---except the first---with "and others" (no dot at the end). This will get converted to "et al.".
+% * For key=journal: abbreviate the journal (e.g., Physics Letters B -> Phys. Lett. B)
+% * Add key=collaboration with value=CMS.
+% * If any numbers or units, then surround in math env ($...$) and use typical commands (e.g., \GeV).
+% TODO: In key=title, get the sqrt symbol to have math mode font. 
+% TODO: Change all lepton l's to {$\ell$}
+% TODO: Are quotes around titles necessary?
 
 %=== Higgs Discovery ===%
-@article{chatrchyan_observation_2013,
-	title = {Observation of a new boson with mass near 125{\GeV} in pp collisions at $\sqrt{s}$ = 7 and 8{\TeV}},
-	volume = {2013},
-	issn = {1029-8479},
-	url = {https://doi.org/10.1007/JHEP06(2013)081},
-	doi = {10.1007/JHEP06(2013)081},
-	language = {en},
-	number = {6},
-	urldate = {2022-06-06},
-	journal = {Journal of High Energy Physics},
-	author = {Chatrchyan, S. and Khachatryan, V. and Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Bergauer, T. and Dragicevic, M. and Er{\"o}, J. and Fabjan, C. and Friedl, M. and Fr{\"u}hwirth, R. and Ghete, V. M. and H{\"o}rmann, N. and Bloch, D. and Bodin, D. and {The CMS collaboration}},
-	month = jun,
-	year = {2013},
-	keywords = {Hadron-Hadron Scattering},
-	pages = {81},
-}
 @article{chatrchyan_observation_2012,
 	title = {Observation of a new boson at a mass of 125{\GeV} with the {CMS} experiment at the {LHC}},
 	volume = {716},
 	issn = {0370-2693},
 	url = {https://www.sciencedirect.com/science/article/pii/S0370269312008581},
 	doi = {10.1016/j.physletb.2012.08.021},
-	abstract = {Results are presented from searches for the standard model Higgs boson in proton–proton collisions at s=7 and 8 TeV in the Compact Muon Solenoid experiment at the LHC, using data samples corresponding to integrated luminosities of up to 5.1 fb−1 at 7 TeV and 5.3 fb−1 at 8 TeV. The search is performed in five decay modes: γγ, ZZ, W+W−, τ+τ−, and bb¯. An excess of events is observed above the expected background, with a local significance of 5.0 standard deviations, at a mass near 125 GeV, signalling the production of a new particle. The expected significance for a standard model Higgs boson of that mass is 5.8 standard deviations. The excess is most significant in the two decay modes with the best mass resolution, γγ and ZZ; a fit to these signals gives a mass of 125.3±0.4(stat.)±0.5(syst.) GeV. The decay to two photons indicates that the new particle is a boson with spin different from one.},
 	language = {en},
 	number = {1},
 	urldate = {2022-06-06},
@@ -164,17 +180,28 @@ The general guidelines for choosing references are:
 	year = {2012},
 	pages = {1--29},
 }
+@article{chatrchyan_observation_2013,
+	title = {Observation of a new boson with mass near 125{\GeV} in pp collisions at $\sqrt{s} = 7$ and $8{\TeV}$},
+	volume = {2013},
+	issn = {1029-8479},
+	url = {https://doi.org/10.1007/JHEP06(2013)081},
+	doi = {10.1007/JHEP06(2013)081},
+	language = {en},
+	number = {6},
+	urldate = {2022-06-06},
+	journal = {Journal of High Energy Physics},
+	author = {Chatrchyan, S. and Khachatryan, V. and Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Bergauer, T. and Dragicevic, M. and Er{\"o}, J. and Fabjan, C. and Friedl, M. and Fr{\"u}hwirth, R. and Ghete, V. M. and H{\"o}rmann, N. and Bloch, D. and Bodin, D. and {The CMS collaboration}},
+	month = jun,
+	year = {2013},
+	keywords = {Hadron-Hadron Scattering},
+	pages = {81},
+}
 
 %=== Higgs Mass Measurements ===%
-% Example citations from JHEP article, doi:10.1007/JHEP06(2013)081:
-CDF Collaboration, D0 collaboration, T. Aaltonen et al., Combination of Tevatron
-CMS collaboration, Combined results of searches for the standard model Higgs boson in pp
-K. Arnold, M. Bahr, G. Bozzi, F. Campanario, C. Englert et al., VBFNLO: a parton level Monte Carlo for processes with electroweak bosons, Comput. Phys. Commun. 180 (2009) 1661
 @article{PhysRevLett.114.191803,
-  title = {Combined Measurement of the {H}iggs Boson Mass in $pp$ Collisions at $\sqrt{s}$ = 7 and 8{\TeV} with the {ATLAS} and {CMS} Experiments},
-  author = {Aad, G. and Abbott, B. and Abdallah, J. and Abdinov, O. and Aben, R. and Abolins, M. and AbouZeid, O. S. and Abramowicz, H. and Abreu, H. and Abreu, R. and Taylor, D. and Woods, N.},
-  collaboration = {ATLAS Collaboration and CMS},
+  title = {Combined Measurement of the {H}iggs Boson Mass in $pp$ Collisions at $\sqrt{s} = 7$ and $8{\TeV}$ with the {ATLAS} and {CMS} Experiments},
   journal = {Phys. Rev. Lett.},
+  collaboration = {ATLAS and CMS},
   volume = {114},
   issue = {19},
   pages = {191803},
@@ -185,19 +212,55 @@ K. Arnold, M. Bahr, G. Bozzi, F. Campanario, C. Englert et al., VBFNLO: a parton
   doi = {10.1103/PhysRevLett.114.191803},
   url = {https://link.aps.org/doi/10.1103/PhysRevLett.114.191803}
 }
-@article{sirunyan_measurement_2020,
-	title = {A measurement of the {Higgs} boson mass in the diphoton decay channel},
-	volume = {805},
-	issn = {03702693},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/S037026932030229X},
-	doi = {10.1016/j.physletb.2020.135425},
+  author = {Aad, G. and Abbott, B. and Abdallah, J. and Abdinov, O. and Aben, R. and Abolins, M. and AbouZeid, O. S. and Abramowicz, H. and Abreu, H. and Abreu, R. and Taylor, D. and Woods, N.},
+@article{the_cms_collaboration_precise_2015,
+    author = "Khachatryan, Vardan and others",
+    collaboration = "CMS",
+    title = "{Precise determination of the mass of the Higgs boson and tests of compatibility of its couplings with the standard model predictions using proton collisions at 7 and 8 $\,\text {TeV}$}",
+    eprint = "1412.8662",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-HIG-14-009, CERN-PH-EP-2014-288",
+    doi = "10.1140/epjc/s10052-015-3351-7",
+    journal = "Eur. Phys. J. C",
+    volume = "75",
+    number = "5",
+    pages = "212",
+    year = "2015"
+}
+article{the_cms_collaboration_precise_2015,
+	title = {Precise determination of the mass of the {Higgs} boson and tests of compatibility of its couplings with the standard model predictions using proton collisions at 7 and 8 \${\textbackslash},{\textbackslash}text \{{TeV}\}\$\$ {TeV}},
+	volume = {75},
+	issn = {1434-6044, 1434-6052},
+	url = {http://link.springer.com/10.1140/epjc/s10052-015-3351-7},
+	doi = {10.1140/epjc/s10052-015-3351-7},
 	language = {en},
-	urldate = {2022-06-10},
-	journal = {Physics Letters B},
-	author = {Sirunyan, A.M. and Tumasyan, A. and Adam, W. and Ambrogi, F. and Bergauer, T. and Dragicevic, M. and Erö, J. and Escalante Del Valle, A. and Flechl, M. and Frühwirth, R. and Jeitler, M. and Teague, D. and Trembath-reichert, S.},
-	month = jun,
-	year = {2020},
-	pages = {135425},
+	number = {5},
+	urldate = {2022-08-21},
+	journal = {Eur. Phys. J. C},
+  collaboration = {CMS collaboration},
+	author = {{The CMS Collaboration} and Khachatryan, V. and Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Bergauer, T. and Dragicevic, M. and Erö, J.},
+	month = may,
+	year = {2015},
+	pages = {212},
+}
+
+% HIG-16-041
+% Xunwu's version: 2016 HZZ mass
+@article{HIG_16_041,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{M}easurements of properties of the {H}iggs boson decaying into the four-lepton final state in pp collisions at ${\sqrt{s}=13\TeV}$",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "11",
+      year           = "2017",
+      pages          = "047",
+      doi            = "10.1007/JHEP11(2017)047",
+      eprint         = "1706.09936",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-HIG-16-041, CERN-EP-2017-123",
+      SLACcitation   = "%%CITATION = ARXIV:1706.09936;%%"
 }
 @article{aaboud_measurement_2018,
 	title = {Measurement of the {Higgs} boson mass in the {H} {\textrightarrow} {ZZ$^\ast$} {\textrightarrow} 4{$\ell$} and {H} {\textrightarrow} $\gamma$$\gamma$ channels with $\sqrt{s}$ = 13{\TeV} pp collisions using the {ATLAS} detector},
@@ -212,6 +275,43 @@ K. Arnold, M. Bahr, G. Bozzi, F. Campanario, C. Englert et al., VBFNLO: a parton
 	month = sep,
 	year = {2018},
 	pages = {345--366},
+}
+@techreport{CMS-PAS-HIG-18-029,
+      title         = "{Measurements of Higgs boson production via gluon fusion and vector boson fusion in the diphoton decay channel at $\sqrt{s} = 13\TeV$}",
+      institution   = "CERN",
+      collaboration = "CMS",
+      address       = "Geneva",
+      number        = "CMS-PAS-HIG-18-029",
+      year          = "2019",
+      url           = "http://cds.cern.ch/record/2667225",
+} % GOOD!
+@techreport{ATLAS-CONF-2019-025,
+      title         = "{Measurements of the Higgs boson inclusive, differential
+                       and production cross sections in the $4\ell$ decay channel
+                       at $\sqrt{s} = 13\TeV$ with the ATLAS detector}",
+      institution   = "CERN",
+      collaboration = "ATLAS",
+      address       = "Geneva",
+      number        = "ATLAS-CONF-2019-025",
+      month         = "Jul",
+      year          = "2019",
+      url           = "http://cds.cern.ch/record/2682107",
+      note          = "All figures including auxiliary figures are available at
+                       https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2019-025",
+} % GOOD!
+@article{sirunyan_measurement_2020,
+	title = {A measurement of the {Higgs} boson mass in the diphoton decay channel},
+	volume = {805},
+	issn = {03702693},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S037026932030229X},
+	doi = {10.1016/j.physletb.2020.135425},
+	language = {en},
+	urldate = {2022-06-10},
+	journal = {Physics Letters B},
+	author = {Sirunyan, A.M. and Tumasyan, A. and Adam, W. and Ambrogi, F. and Bergauer, T. and Dragicevic, M. and Erö, J. and Escalante Del Valle, A. and Flechl, M. and Frühwirth, R. and Jeitler, M. and Teague, D. and Trembath-reichert, S.},
+	month = jun,
+	year = {2020},
+	pages = {135425},
 }
 
 %=== The PDG ===%
@@ -283,9 +383,45 @@ article{PDG2020,
     year = "2020"
 }
 
-%====================%
-%=== SM Anomalies ===%
-%====================%
+%======================%
+%=== Standard Model ===%
+%======================%
+% Quarks and Leptons, Halzen and Martin.
+@book{Halzen:1984mc,
+    author = "Halzen, F. and Martin, Alan D.",
+    title = "{Quarks and Leptons: An Introductory Course in Modern Particle Physics}",
+    isbn = "978-0-471-88741-6",
+    year = "1984"
+}
+% Theoretical a_e.
+@article{Aoyama:2014sxa,
+    title = "{Tenth-Order Electron Anomalous Magnetic Moment: Contribution of Diagrams without Closed Lepton Loops}",
+    author = "Aoyama, T. and others",
+    eprint = "1412.8284",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    doi = "10.1103/PhysRevD.91.033006",
+    journal = "Phys. Rev. D",
+    volume = "91",
+    number = "3",
+    pages = "033006",
+    year = "2015",
+    note = "[Erratum: Phys.Rev.D 96, 019901 (2017)]"
+}
+% Measured a_e.
+@article{Hanneke:2008tm,
+    author = "Hanneke, D. and others",
+    title = "{New Measurement of the Electron Magnetic Moment and the Fine Structure Constant}",
+    eprint = "0801.1134",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.atom-ph",
+    doi = "10.1103/PhysRevLett.100.120801",
+    journal = "Phys. Rev. Lett.",
+    volume = "100",
+    pages = "120801",
+    year = "2008"
+}  % GOOD!
+
 @article{PhysRevLett.128.232501,
   title = {Results from the {Baksan} {Experiment} on Sterile Transitions {(BEST)}},
   author = {Barinov, V. V. and Cleveland, B. T. and Danshin, S. N. and Ejiri, H. and Elliott, S. R. and Frekers, D. and Gavrin, V. N. and Gorbachev, V. V. and Gorbunov, D. S. and Haxton, W. C. and Ibragimova, T. V. and Kim, I. and Kozlova, Yu. P. and Zvir, A. I.},
@@ -301,6 +437,8 @@ article{PDG2020,
   url = {https://link.aps.org/doi/10.1103/PhysRevLett.128.232501}
 }
 %=== W-Boson Mass Measurement ===%
+% CDF MW=80,433.5 +- 6.4 stat +- 6.9 syst = 80,433.5 +- 9.4 MeV/c2
+% SM expectation: MW=80,357 +- 4inputs +- 4theory MeV
 @article{cdf_collaboration_high-precision_2022,
 	title = {High-precision measurement of the \textit{{W}} boson mass with the {CDF} {II} detector},
 	volume = {376},
@@ -311,7 +449,7 @@ article{PDG2020,
 	number = {6589},
 	urldate = {2022-06-10},
 	journal = {Science},
-      collaboration = {CDF},
+  collaboration = {CDF},
 	author = {Zuc, S.},
 	month = apr,
 	year = {2022},
@@ -430,55 +568,6 @@ article{PDG2020,
 	title = "{Performance of {CMS} muon reconstruction in pp collision events at {$\sqrt{s} = 7\TeV$}}",
 	journal = {J. Inst.},
 	url = {https://doi.org/10.1088/1748-0221/7/10/p10002},
-}
-
-
-% HIG-16-041
-article{hig16041,
-    title = "{Measurements of properties of the Higgs boson decaying into four leptons in pp collisions at sqrt{s} = 13 TeV}",
-    collaboration = "CMS",
-    author = "CMS Collaboration",
-    reportNumber = "CMS-PAS-HIG-16-041",
-    year = "2017"
-}
-% From AN: {HIG_16_041,
-      institution   = "CERN",
-      address       = "Geneva",
-      number        = "CMS-PAS-HIG-16-041",
-      url           = "http://cds.cern.ch/record/2256357",
-}
-% From CDS:
-techreport{hig16041,
-      title         = "{Measurements of properties of the Higgs boson decaying into four leptons in pp collisions at sqrt{s} = 13 TeV}",
-      institution   = "CERN",
-      collaboration = "CMS Collaboration",
-      address       = "Geneva",
-      reportNumber  = "CMS-PAS-HIG-16-041",
-      year          = "2017",
-      url           = "http://cds.cern.ch/record/2256357",
-}
-% From INSPIRE:
-article{CMS:2017jkd,
-    collaboration = "CMS",
-    title = "{Measurements of properties of the Higgs boson decaying into four leptons in pp collisions at sqrt{s} = 13 TeV}",
-    reportNumber = "CMS-PAS-HIG-16-041",
-    year = "2017",
-}
-% Xunwu's version: 2016 HZZ mass
-@article{HIG_16_041,
-      author         = "Sirunyan, Albert M and others",
-      title          = "{M}easurements of properties of the {H}iggs boson decaying into the four-lepton final state in pp collisions at ${\sqrt{s}=13\TeV}$",
-      collaboration  = "CMS",
-      journal        = "JHEP",
-      volume         = "11",
-      year           = "2017",
-      pages          = "047",
-      doi            = "10.1007/JHEP11(2017)047",
-      eprint         = "1706.09936",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ex",
-      reportNumber   = "CMS-HIG-16-041, CERN-EP-2017-123",
-      SLACcitation   = "%%CITATION = ARXIV:1706.09936;%%"
 }
 
 % Universe stability (citation taken straight from url).
@@ -989,7 +1078,7 @@ author = {CMS Collaboration}
 %% theory
 
 %% LHC Higgs results
-% Higgs discovery
+%=== Higgs discovery
 @article{Aad:2012tfa,
       author         = "Aad, Georges and others",
       title          = "{O}bservation of a new particle in the search for the {S}tandard {M}odel {H}iggs boson with the {ATLAS} detector at the {LHC}",
@@ -1006,17 +1095,6 @@ author = {CMS Collaboration}
       SLACcitation   = "%%CITATION = ARXIV:1207.7214;%%"
 }
 
-%=== Changes Xunwu made to the original website citation extraction: ===%
-% For all keys, REPLACE surrounding brackets {...} with double quotes "...".
-% author:
-% * When you have a giant author list replace all names---except the first---with "and others" (no dot at the end).
-% title:
-% * Wrap first letter of title in '{ }'.
-% * If any numbers or units, then surround in math env ($...$) and use, e.g., \GeV.
-% journal:
-% * ABBREVIATED the journal: Physics Letters B -> "Phys. Lett. B"
-% ADD key=collaboration with value="CMS".
-% DELETE key=abstract.
 
 XUNWU'S VERSION:
 @article{chatrchyan_observation_2012_xunwu,
@@ -2281,7 +2359,7 @@ Program title: Pythia 8.2 Catalogue identifier: ACTU_v4_0 Program summary URL:ht
 }
 
 @article{PhysRevD.2.1285,
-  title = {Weak Interactions with Lepton-Hadron Symmetry},
+  title = {Weak Interactions with Lepton--Hadron Symmetry},
   author = {Glashow, S. L. and Iliopoulos, J. and Maiani, L.},
   journal = {Phys. Rev. D},
   volume = {2},

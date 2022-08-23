@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[height=10cm]{figures/cms/cms_poster_SX5.jpg}
+    \includegraphics[height=12cm]{figures/cms/cms_poster_SX5.jpg}
     \captionof{figure}
         [Life-size poster of the CMS detector]
         {Life-size poster of the CMS detector, taken during CERN Open Days 2019 in the SX5 warehouse where parts of CMS were assembled.
@@ -25,7 +25,9 @@ In 2012, both CMS and its competing experiment, A Toroidal LHC ApparatuS (ATLAS)
     \captionof{figure}
         [Points of interest along the LHC (Points 1--8)]
         {Points of interest along the LHC (Points 1--8).
-        Collisions occur at Points 1 (ATLAS), 2 (ALICE), 5 (CMS), and 8 (LHCb), whereas the remaining points are used for LHC beam maintenance and testing.} 
+        Collisions occur at Points 1 (ATLAS), 2 (ALICE), 5 (CMS), and 8 (LHCb), whereas the remaining points are used for LHC beam maintenance and testing.
+        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        } 
     \label{fig:lhc_points}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
@@ -55,7 +57,9 @@ A few example particles and their associated tracks are shown in Fig.~\ref{fig:c
     \includegraphics[width=\textwidth,keepaspectratio]{figures/cms/cms_cut_away.png}
     \captionof{figure}
         [Cut out of the CMS detector showing its various subdetector components]
-        {Cut out of the CMS detector showing its various subdetector components.}
+        {Cut out of the CMS detector showing its various subdetector components.
+        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        }
     \label{fig:cms_cut_out_view}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
@@ -74,6 +78,13 @@ defined as $\eta = -\ln [ \tan(\theta/2)]$. % Formula comes from: https://twiki.
 %         \right)
 % \end{equation*}
 % which surround the 
+% After the protons collide, they make a mess of all sorts of particles:
+% electrons, lambda baryons, kaons, muons, photons...
+
+In the remainder of this chapter, the subdetectors of CMS are described in detail:
+the silicon tracker in Sec.~\ref{sec:tracker},
+followed by the electromagnetic and hadron calorimeters in Sec.~\ref{sec:calo},
+then the solenoid and yoke system in Sec.~\ref{sec:solenoid}.
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
@@ -81,13 +92,15 @@ defined as $\eta = -\ln [ \tan(\theta/2)]$. % Formula comes from: https://twiki.
     \captionof{figure}
         [A transverse view of CMS showing particle ``filtration'']
         {
-        A transverse view of CMS showing how the detector ``filters'' the outgoing particles as they pass through different subdetectors.
-        A positron (solid red line) curves due to the presence of the magnetic field and gets stopped in the ECAL, creating an EM shower.
-        A photon (blue dashed line) does not get detected at all by the Silicon Tracker, since it has no electric charge.
-        It continues through to the ECAL and makes a shower here, like the positron.
-        Charged hadrons (solid green line) will show curved tracks from the Silicon Tracker, may leave some trace in the ECAL, but primarily get stopped by the HCAL creating hadronic showers.
-        Neutral hadrons (dashed green line) do not interact with the tracker, and only undergo EM showers a little in the ECAL, but show most energy deposits in the HCAL.
-        Muons (solid blue line) are detected by the Silicon Tracker and then mostly pass through the other subdetectors without interacting until they finally reach the Muon System.
+        % TODO: uncomment below
+        % A transverse view of CMS showing how the detector ``filters'' the outgoing particles as they pass through different subdetectors.
+        % A positron (solid red line) curves due to the presence of the magnetic field and gets stopped in the ECAL, creating an EM shower.
+        % A photon (blue dashed line) does not get detected at all by the Silicon Tracker, since it has no electric charge.
+        % It continues through to the ECAL and makes a shower here, like the positron.
+        % Charged hadrons (solid green line) will show curved tracks from the Silicon Tracker, may leave some trace in the ECAL, but primarily get stopped by the HCAL creating hadronic showers.
+        % Neutral hadrons (dashed green line) do not interact with the tracker, and only undergo EM showers a little in the ECAL, but show most energy deposits in the HCAL.
+        % Muons (solid blue line) are detected by the Silicon Tracker and then mostly pass through the other subdetectors without interacting until they finally reach the Muon System.
+        % TODO: uncomment above
         % In fact you can even determine whether its charge is positive or negative since
         % q v cross B gives the direction of Force.
         % The velocity of the muon is out like this, and the B field is into the screen, so the applied force would be up like this for a positive particle. 
@@ -97,15 +110,9 @@ defined as $\eta = -\ln [ \tan(\theta/2)]$. % Formula comes from: https://twiki.
         % Notice that since it is curving the opposite way from the muon so we know this is a positive particle.
         % Next up the solid green trajectory represents a charged hadron, like for example maybe an antiproton that got produced.
         % Notice that it would be the same sign as the muon because they curve in the same direction.
+        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
         } 
     \label{fig:cms_particle_trajectories}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
-% After the protons collide, they make a mess of all sorts of particles:
-% electrons, lambda baryons, kaons, muons, photons...
-
-In the remainder of this chapter, the subdetectors of CMS are described in detail:
-the silicon tracker in Sec.~\ref{sec:tracker},
-followed by the electromagnetic and hadron calorimeters in Sec.~\ref{sec:calo},
-then the solenoid and yoke system in Sec.~\ref{sec:solenoid}.
 % and finally the muon system in Sec.~\ref{sec:muon_sys}.

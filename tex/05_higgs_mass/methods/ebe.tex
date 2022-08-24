@@ -57,9 +57,15 @@ The full error matrices ($\delta p_{T}/p_{T}$, $\eta$) for muons and electrons, 
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_eta_ele_ECAL_workinprogress.pdf}
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_eta_ele_tracker_workinprogress.pdf}
     \captionof{figure}
-        % TODO: May need to implement A--I.
         [Scatterplots of the relative \pt error \vs $\eta$]
-        {Scatterplots of the relative \pt error \vs $\eta$ for muons (left column), ECAL driven electrons (middle column), and tracker driven electrons (right column) for 2016 (top row), 2017 (middle row), and 2018 (bottom row) data.}
+        {Scatterplots of the relative \pt error \vs $\eta$ in data.
+        \;Left column: A, D, G) Muons.
+        \;Middle column: B, E, H) ECAL-driven electrons.
+        \;Right column: C, F, I) Tracker-driven electrons.
+        \;Top row: A, B, C) 2016.
+        \;Middle row: D, E, F) 2017.
+        \;Bottom row: G, H, I) 2018.
+        }
     \label{fig:2D_Mpas_vs_eta}
 \end{multiFigure}
 % \begin{figure}[!htbp]
@@ -145,9 +151,9 @@ Scatterplots of $\delta p_{T}$/$p_{T}$ \vs \PT are shown in Figs.~\ref{fig:2D_Mp
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_pt_tracker_2_workinprogress.pdf}
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_pt_tracker_3_workinprogress.pdf}
     \captionof{figure}
-        [words.]
+        [Scatterplots of the relative lepton \PT error \vs \PT for tracker-driven electrons]
         % TODO: Is it OK to skip over 1.44--1.6?
-        {Scatterplots of the relative lepton \PT error vs \PT for tracker-driven electrons with $0 < \abseta < 0.8$ (left column), $1.0 < \abseta < 1.44$ (middle column), and $1.6 < \abseta < 2.0$ (right column) for 2016 (top row), 2017 (middle row), and 2018 (bottom row) data.}
+        {Scatterplots of the relative lepton \PT error \vs \PT for tracker-driven electrons with $0 < \abseta < 0.8$ (left column), $1.0 < \abseta < 1.44$ (middle column), and $1.6 < \abseta < 2.0$ (right column) for 2016 (top row), 2017 (middle row), and 2018 (bottom row) data.}
     \label{fig:2D_Mpas_vs_pt_electron_tracker}
 \end{multiFigure}
 
@@ -162,18 +168,41 @@ The first fit is used to fix all the parameters of the functions but the $\sigma
 replaced in the second fit by $\lambda$ $\times$ $\delta_{m_{Z}}$, where $\lambda$ is the 
 floated parameter of the fit. 
 
-%If statistics is large enough for a...\textbf{DECIDE HOW TO BEHAVE IN CASE OF LACK OF STATISTCS}.
 The summary of $\lambda$ correction factors for electrons and muons is shown in Table~\ref{table:Lambdas}.
-% TODO: CONVERT TO TABLE.
-\begin{multiFigure}
-    \centering
-    \captionof{table}
-    [Lambda values.] % TODO:
-    {Lambda values.} % TODO: ELIMINATE DATA FROM TABLE Convert to proper table.
-    \addFigure{0.96}{figures/higgsmassmeas/ebe/table_lambdas.png}
-    % \includegraphics[width=0.96\textwidth]{figures/higgsmassmeas/ebe/table_lambdas.png}
+\begin{table}[!h]\fontsize{10}{12}\selectfont
+    \topcaption
+        [Event-by-event lambda correction factors.] % TODO: reword
+        {Event-by-event lambda correction factors.}
+    \begin{tabularx}{\textwidth}{BMSSSSSSSS} % TODO: Fix  numbers in table.
+        \toprule 
+        \multicolumn{2}{c}{\textbf{2016 pre-VFP}} & \multicolumn{2}{c}{\textbf{2016 post-VFP}} & \multicolumn{2}{c}{\textbf{2017}} & \multicolumn{2}{c}{\textbf{2018}} \\ \toprule
+
+        && \multicolumn{8}{c}{Muons} \\
+        \multicolumn{2}{c}{$0 < |\eta| < 0.9$} & 1.05 & 1.248 & 1.043 & 1.214 & 1.047 & 1.183 & 1.019 & 1.227 \\
+        \multicolumn{2}{c}{$0.9 < |\eta| < 1.8$} & 1.187 & 1.256 & 1.204 & 1.234 & 1.219 & 1.223 & 1.206 & 1.236 \\
+        \multicolumn{2}{c}{$1.8 < |\eta| < 2.4$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\ \toprule
+
+        && \multicolumn{8}{c}{ECAL electrons} \\ 
+        $0 < |\eta| < 0.8$ & $\delta p_T/p_T < 0.01$ & 1.648 & 1.619 & 1.645 & 1.646 & 1.690 & 1.633 & 1.676 & 1.661 \\
+        $0 < |\eta| < 0.8$ & $0.01 < \delta p_T/p_T < 0.015$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $0 < |\eta| < 0.8$ & $0.015 < \delta p_T/p_T < 0.025$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $0 < |\eta| < 1$ & $0.025 < \delta p_T/p_T < 1$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $\delta p_T/p_T < 0.02$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $0.03 < \delta p_T/p_T < 0.04$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $0.04 < \delta p_T/p_T < 0.05$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $0.05 < \delta p_T/p_T < 0.06$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $0.8 < |\eta| < 2.5$ & $\delta p_T/p_T < 0.025$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
+        $1 < |\eta| < 2.5$ & $0.06 < \delta p_T/p_T < 1$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\ \toprule
+        
+        && \multicolumn{8}{c}{Tracker electrons} \\ 
+        \multicolumn{2}{c}{$0 < |\eta| < 1.44$} & 1.05 & 1.248 & 1.043 & 1.214 & 1.047 & 1.183 & 1.019 & 1.227 \\
+        \multicolumn{2}{c}{$1.44 < |\eta| < 1.6$} & 1.187 & 1.256 & 1.204 & 1.234 & 1.219 & 1.223 & 1.206 & 1.236 \\
+        \multicolumn{2}{c}{$1.6 < |\eta| < 2$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\
+        \multicolumn{2}{c}{$2 < |\eta| < 2.5$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\ \hline
+    \end{tabularx}
     \label{table:Lambdas}
-\end{multiFigure}
+\end{table}
+
 % \begin{table}[ht]	
 % 	\begin{center}
 % 		\begin{tabular}{ccccccc}

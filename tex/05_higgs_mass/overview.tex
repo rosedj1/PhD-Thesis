@@ -1,33 +1,19 @@
 \section{Analysis Overview}
 \label{sec:analysis_overview}
-% TODO: Include something like this?
-% Higgs bosons produced:
-% \begin{itemize}
-% 	\item 2010: 776
-% 	\item 2011: 105K
-% 	\item 2012: ~500K?
-% 	\item 2016: 2M Higgs, 30 Higgs/min
-% 	\item 2017: 2.5M 
-% 	\item 2018: 3.5M
-% \end{itemize}
 The first step to performing a precision measurement of \mH is to ``observe'' many Higgs bosons.
 However, production of a Higgs boson is essentially nonexistent in everyday conditions and is still extremely rare even in the high-energy \pp collisions of the LHC (Chapter~\ref{ch:lhc}).
 At a center-of-mass energy of 13\TeV, the total inclusive inelastic cross section of two protons colliding is 70\mb.
 % TODO: CITE.
 Comparing this cross section to the cross section of Higgs boson production $\left( \sigma_{\pp \to \PH} = 59\pb \right)$
-% TODO:cite sigma(pptoH) = 59 pb
+% TODO:cite
 shows that a Higgs boson is produced in approximately one out of every \emph{billion} \pp collisions---a rare event indeed.
 % TODO CITE
 
 To complicate matters further, the Higgs boson has a \emph{very} short mean lifetime of only $1.6 \times \tentotheminus{22}\snd$~\cite{particle_data_group_review_2020}. % TODO:doublecheck.
-% TODO: Get citation other than PDG.
 Thus, the existence of the Higgs boson is not \emph{directly} detected by CMS (Chapter~\ref{ch:cms}) but is instead \emph{inferred} from its stable decay products which enter the various subdetectors.
-Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass (approximately 125\GeV),
-%  while the heaviest particle is the top quark.
-% TODO:possibly refer back to a section where I mention the quarks individually? (Sec.~\ref{sec:sm}).
+Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass (approximately 125\GeV),  % TODO: cite best measurement so far.
 which gives the scalar boson sufficient energy to decay into at least 9 different final states.
 Each decay mode occurs with a different probability---the \emph{branching fraction} (\br)---whose value depends on \mH, as shown in Fig.~\ref{fig:higgs_br}.
-% \textcolor{red}{MENTION THAT NOT ALL DECAYS MAKE ON-SHELL PARTICLES?}
 The question then becomes, \emph{``Which Higgs boson decay mode is the most useful for measuring \mH?''}
 \begin{multiFigure}
 	\centering
@@ -46,15 +32,12 @@ The question then becomes, \emph{``Which Higgs boson decay mode is the most usef
 % Real particles enter detectors in CMS which send signals to various electronics.
 % Particle Flow algorithm pieces the information together to construct objects out of each event.
 % Now, instead of just a deposit of energy in the ECAL and corresponding hits in the silicon tracker, the particle is identified as a newly produced electron.
-% CMS records which kinds of objects came from which events and stores the information in \emph{data sets} (TODO: ref Sec. future).
 
 Owing to its large signal-to-background ratio of approximately 2
 % TODO:cite HIG-19-001?
 and its relatively rare four-lepton final state, the \hzzfourl decay channel is chosen and is called the \emph{signal process}.
-On average, a Higgs boson will decay into two \PZ bosons (one on-shell and the other off-shell) only 2.6\% of the time.
-% TODO:cite
-In turn, each \PZ boson \emph{may} decay into two opposite-sign, same flavor (OSSF) leptons (\ztolplm, where $\ell = \Pe, \Pmu$) on average approximately 6.7\% of the time.
-% TODO:cite
+On average, a Higgs boson will decay into two \PZ bosons (one on-shell and the other off-shell) only 2.6\% of the time. % TODO:cite
+In turn, each \PZ boson \emph{may} decay into two opposite-sign, same flavor (OSSF) leptons (\ztolplm, where $\ell = \Pe, \Pmu$) on average approximately 6.7\% of the time. % TODO:cite
 This signal process then gives rise to four distinct final states: \foure, \fourmu, \twoetwomu, \twomutwoe.
 The branching fraction for the overall signal process is then calculated as: % B(Z->ee)=0.033632, B(Z->mumu)=0.033662
 \begin{equation*}
@@ -65,8 +48,7 @@ Thus, a signal event is expected to be produced only once in about every \emph{t
 The strategy is then to search the \pp collision data collected by CMS for all the detected \hzzfourl events.
 The task is not so straightforward;
 events in the data are categorized---not by the entire decay process---but by their final state, based on which triggers fired to collect which events.
-% TODO: uncomment the line below.
-% Section~\ref{sec:analyzed_data} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
+Section~\ref{sec:analyzed_data} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
 For each chosen event, the subdetectors of CMS (Secs.~\ref{sec:tracker}--\ref{sec:muon_sys}) provide a plethora of track and energy-detection information to reconstruct \emph{objects}, which are representations of the underlying particles within the event.
 The reconstructed objects are then assembled in a fashion that checks if the decay logic coincides with the signal process of interest: \hzzfourl.
 % TODO: Clean up this sentence.
@@ -82,8 +64,7 @@ The reconstructed objects are often required to pass certain detector selection 
 %     - Form two different pairs of opposite-sign, same-flavor (OSSF) leptons
 %     - If it appears that the to select specific hzz4l events (\emph{event selection}).
 These criteria are analysis-specific and are collectively called the \emph{event selection} of the analysis.
-% TODO: The event selection for this analysis is described in Sec.~\ref{sec:evt_sel}.
-% TODO: ref may be wrong.
+The event selection for this analysis is described in Sec.~\ref{sec:evt_sel}.
 Although the event selection is devised to ideally select only signal events, it is not guaranteed;
 there are certain physics process that have exactly the same initial and final states as the signal process.
 Such processes ``contaminate'' the collected signal events and are called \emph{background processes}.
@@ -93,13 +74,13 @@ It is imperative for particle physics analyses to maximize the number of collect
 Section~\ref{sec:bkg_estim} discusses the associated background processes and how to estimate the number of events these contribute to the signal region.
 \begin{multiFigure}
 	\centering
-	\addFigure{0.49}{figures/higgsmassmeas/feynman_diag_HZZ4L.png}
-	\addFigure{0.49}{figures/higgsmassmeas/feynman_diag_HZZ4L.png}  % TODO: Get other diagram
+	\addFigure{0.49}{figures/higgsmassmeas/feynman_diag_HZZ4L.png} % TODO: Add gluons to diagram.
+	\addFigure{0.49}{figures/higgsmassmeas/feynman_diag_ggZZ4L.png}  % TODO: Fix diagram.
 	\captionof{figure}
 		[Feynman diagrams for the \gghzzfourl and \ggzzstarfourl processes]
 		{Feynman diagrams showing how different physics processes can have the same initial and final states.
-		\;A) The signal process \gghzzfourl. % TODO:UPDATE DIAGRAM. 
-		\;B) An example background process \ggzzstarfourl.
+		\;A) The signal process \gghzzfourl.
+		\;B) An example background process \ggzzfourl.
 		}
 	\label{fig:feyndiag_sig_vs_bkg}
 \end{multiFigure}
@@ -271,7 +252,7 @@ Predictions from simulation can then be compared to the truth---\emph{the data}-
 For example, a surplus of events in data where none was expected may lead to the discovery of new particles, as was the case for the discovery of the Higgs boson.
 % TODO:cite.
 % agreement or deviations in what was expected.
-% TODO: The simulated events for this analysis are described in Sec.~\ref{sec:analyzed_data}.
+TODO: The simulated events for this analysis are described in Sec.~\ref{sec:sim_samples}.
 
 \emph{So how is the measurement of \mH obtained?}
 Since the signal process is \hzzfourl, conservation of energy leads one to expect that $\mfourl \approx \mH$.

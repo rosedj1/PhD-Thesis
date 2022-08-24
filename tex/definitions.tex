@@ -38,6 +38,12 @@
 % A skip is the same width of the space between words (the interword space).
 % Neither kerns nor skips will be broken across lines, but ~ may get stretched: `5~Kg` -> `5    Kg`.
 
+%=== When to use which 'L'. ===%
+% Lagrangian : mathcal{L}
+% Lagrangian density : mathscr{L} or mathfrak{L}(<== ugly)
+% Likelihood : L
+% Integrated Lumi : L_\text{int}
+
 % Some shorthand
 % turn off italics
 % Some sources suggest to not use the \mbox commands.
@@ -47,7 +53,7 @@
 \newcommand{\etc}{\mbox{etc.}\xspace}     %etc.
 \newcommand{\vs}{\mbox{vs.}\xspace}      %vs. No slant according to HIG-16-041 and HIG-19-001.
 \newcommand{\mdash}{\ensuremath{\text{---}}} % for use within formulas
-\providecommand {\NA}{\ensuremath{\text{---}}}    % for Not applicable (or available). Needs to be renewcommanded for APS to \cdots
+\providecommand{\NA}{\ensuremath{\text{---}}}    % for Not applicable (or available). Needs to be renewcommanded for APS to \cdots
 \providecommand{\middlepipe}{\ensuremath{\; \middle| \;}\xspace{}}  % The spacing to the left and right of \middle is weird, so manually fix it.
 
 % \providecommand{\paren}[1]{\ensuremath{\left( \text{#1} \right)}\xspace}  % Ends up spacing out the internal text too much.
@@ -60,7 +66,8 @@
 \newcommand{\tesla}{\ensuremath{\,\text{T}}\xspace}
 \newcommand{\gram}{\ensuremath{\,\text{g}}\xspace}
 \newcommand{\meter}{\ensuremath{\,\text{m}}\xspace}
-\newcommand{\snd}{\ensuremath{\,\text{s}}\xspace}
+\newcommand{\sndns}{\ensuremath{\text{s}}\xspace} 
+\newcommand{\snd}{\ensuremath{\,\sndns}\xspace}
 % Mass.
 \newcommand{\Kgns}{\ensuremath{\text{Kg}}\xspace}  % To leading thin space (kern).
 \newcommand{\Kg}{\ensuremath{\,\Kgns}\xspace}
@@ -84,7 +91,7 @@
 \newcommand{\musns}{\ensuremath{\text{\textmu}\text{s}}\xspace}  % No leading thin space.
 \newcommand{\mus}{\ensuremath{\,\musns}\xspace}
 \newcommand{\ns}{\ensuremath{\,\text{ns}}\xspace}
-\providecommand{\dt}{\ensuremath{\text{d}t}\xspace}
+\providecommand{\dt}{\ensuremath{dt}\xspace}
 % Energy.
 \newcommand{\KJ}{\ensuremath{\,\text{KJ}}\xspace}
 \newcommand{\GJ}{\ensuremath{\,\text{GJ}}\xspace}
@@ -185,10 +192,10 @@
 \newcommand{\syst}{\ensuremath{\,\text{(syst.)}}\xspace}
 \newcommand{\theo}{\ensuremath{\,\text{(theo.)}}\xspace}
 \newcommand{\SoB}{\ensuremath{S/B}\xspace}
-\newcommand{\lhood}{\ensuremath{\mathcal{L}}\xspace}
-\newcommand{\lhoodm}{\ensuremath{\mathcal{L}_{\mass{i}}}\xspace}
-\newcommand{\lhoodSR}{\ensuremath{\mathcal{L}^\text{SR}_{\mass{i}}}\xspace}
-\newcommand{\lhoodsb}{\ensuremath{\mathcal{L}^\text{sb}_{\mass{i}}}\xspace}
+\newcommand{\lhood}{\ensuremath{L}\xspace}
+\newcommand{\lhoodm}{\ensuremath{L_{\mass{i}}}\xspace}
+\newcommand{\lhoodSR}{\ensuremath{L^\text{SR}_{\mass{i}}}\xspace}
+\newcommand{\lhoodsb}{\ensuremath{L^\text{sb}_{\mass{i}}}\xspace}
 \providecommand{\poisson}[1]{\ensuremath{\text{Pois}\left( #1 \right)}\xspace}
 %  Experiments
 \newcommand{\DZERO}{D0\xspace}     %etc.
@@ -279,7 +286,7 @@
 \newcommand{\PGn}{\ensuremath{\nu}\xspace} % generic neutrino
 \newcommand{\PAGn}{\ensuremath{\bar{\nu}}\xspace} % generic neutrino
 \providecommand{\jpsi}{\ensuremath{J / \psi}\xspace}
-\newcommand{\pname}{\text{P. Roton}\xspace}
+\newcommand{\pname}{\ensuremath{\text{Proto-}n}\xspace}
 % Modified.
 \newcommand{\Zone}{\ensuremath{\PZ_{\mathrm{1}}}\xspace}
 \newcommand{\Ztwo}{\ensuremath{\PZ_{\mathrm{2}}}\xspace}

@@ -13,25 +13,26 @@ Starting from the raw distribution of the relative mass error, taken from ggH 12
 is done independently for each year and for each final state. Example of the binning is given, 
 for 2018, in  Fig.~\ref{Bin_splitting_2018}. First studies on categorizations can be found below. % TODO:CITE.
 % \cite{HIG_18_002}.
-\begin{figure}[!htbp]
-\begin{center}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Bin_splitting/RelMassErroSplitting_4mu.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Bin_splitting/RelMassErroSplitting_4e.pdf}
-  	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Bin_splitting/RelMassErroSplitting_2e2mu.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Bin_splitting/RelMassErroSplitting_2mu2e.pdf}
-\caption{
-	Relative mass error distribution for 2018 ggH sample @ 125 GeV: black lines show 
-	the bins used for the categorization.}
-\label{Bin_splitting_2018}
-\end{center}
-\end{figure}
+\begin{multiFigure}
+    \begin{center}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Bin_splitting/RelMassErroSplitting_4mu.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Bin_splitting/RelMassErroSplitting_4e.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Bin_splitting/RelMassErroSplitting_2e2mu.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Bin_splitting/RelMassErroSplitting_2mu2e.pdf}
+    \captionof{figure}
+        [Relative mass error distribution for 2018 ggH sample]
+        {Relative mass error distribution for 2018 ggH sample @ 125 GeV: black lines show 
+        the bins used for the categorization.}
+    \label{Bin_splitting_2018}
+    \end{center}
+\end{multiFigure}
 To extract mass measurement using categorization, the signal is modelled independently in each bin, 
 obtaining final measurements combining data cards. \\
 Examples of the signal parameterization for 2018 are shown in 
-Fig.~\ref{signal_lineshape_2018_4mu}(4$\mu$),
+Fig.~\ref{signal_lineshape_2018_4mu} (4$\mu$),
  \ref{signal_lineshape_2018_4e} (4e), 
- \ref{signal_lineshape_2018_2e2mu} (2e2$\mu$) and \ref{signal_lineshape_2018_2mu2e} (2$\mu$2e). 
- Each figure shows the fit of the 125 \GeV ggH sample (in blue, top left) and
+ \ref{signal_lineshape_2018_2e2mu} (2e2$\mu$) and~\ref{signal_lineshape_2018_2mu2e} (2$\mu$2e). 
+ Each figure shows the fit of the 125\GeV ggH sample (in blue, top left) and
 the simultaneous fits of the all five mass points (red scale) in few random bins.
 %Fig.~\ref{signal_lineshape_2016}(2$\mu$2e 2016),
 % \ref{signal_lineshape_2017} (2e2$\mu$ 2017), 
@@ -42,75 +43,95 @@ the simultaneous fits of the all five mass points (red scale) in few random bins
 %\ref{signal_lineshape_2018_full_2}, for the simultaneous fits.
 % TODO: Use multiFigure
 % TODO: Reword
-\begin{figure}[!htbp]
+\begin{multiFigure}
 \begin{center}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4mu_ggF_2018_2.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4mu_ggF_2018_3.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4mu_ggF_2018_8.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4mu_ggF_2018_9.pdf}
-\caption
-[Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (2nd, 3rd, 8th, and 9th) 
-for 4$\mu$ 2018]
-{Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (2nd, 3rd, 8th, and 9th) 
-for 4$\mu$ 2018. Top left: 125 GeV sample only fit. The others plots stand for the simultaneous 
-fit of all the mass points: starting from top right respectively 125, 120, 124, 126, 130 GeV.}
+	\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4mu_ggF_2018_2.pdf}
+	\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4mu_ggF_2018_3.pdf}
+	\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4mu_ggF_2018_8.pdf}
+	\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4mu_ggF_2018_9.pdf}
+    \captionof{figure}
+        [Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (2nd, 3rd, 8th, and 9th) 
+        for 4$\mu$ 2018]
+        {Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (2nd, 3rd, 8th, and 9th) for 4$\mu$ 2018.
+        Top left: 125\GeV sample only fit. The others plots stand for the simultaneous fit of all the mass points:
+        starting from top right respectively 125, 120, 124, 126, 130\GeV.
+        \;A) 2nd bin.
+        \;B) 3rd bin.
+        \;C) 8th bin.
+        \;D) 9th bin.
+        }
 \label{signal_lineshape_2018_4mu}
 \end{center}
-\end{figure}
+\end{multiFigure}
 
 % TODO: Use multiFigure
 % TODO: Reword
-\begin{figure}[!htbp]
-\begin{center}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4e_ggF_2018_1.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4e_ggF_2018_2.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4e_ggF_2018_5.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4e_ggF_2018_9.pdf}
-\caption
-[Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 2nd, 5th, and 9th) 
-for 4e 2018]
-{Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 2nd, 5th, and 9th) 
-for 4e 2018. Top left: 125 GeV sample only fit. The others plots stand for the simultaneous 
-fit of all the mass points: starting from top right respectively 125, 120, 124, 126, 130 GeV.}
-\label{signal_lineshape_2018_4e}
-\end{center}
-\end{figure}
+\begin{multiFigure}
+    \begin{center}
+	\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4e_ggF_2018_1.pdf}
+	\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4e_ggF_2018_2.pdf}
+	\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4e_ggF_2018_5.pdf}
+	\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_4e_ggF_2018_9.pdf}
+    \captionof{figure}
+        [Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 2nd, 5th, and 9th) 
+        for 4e 2018]
+        {Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 2nd, 5th, and 9th) 
+        for 4e 2018. Top left: 125 GeV sample only fit. The others plots stand for the simultaneous 
+        fit of all the mass points: starting from top right respectively 125, 120, 124, 126, 130\GeV.
+        \;A) 1st bin.
+        \;B) 2nd bin.
+        \;C) 5th bin.
+        \;D) 9th bin. % TODO: double check bin numbers.
+        }
+    \label{signal_lineshape_2018_4e}
+    \end{center}
+\end{multiFigure}
 
 % TODO: Use multiFigure
 % TODO: Reword
-\begin{figure}[!htbp]
-\begin{center}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2e2mu_ggF_2018_1.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2e2mu_ggF_2018_3.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2e2mu_ggF_2018_7.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2e2mu_ggF_2018_9.pdf}
-\caption
-[Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 3rd, 7th, and 9th) 
-for 2e2$\mu$ 2018]
-{Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 3rd, 7th, and 9th) 
-for 2e2$\mu$ 2018. Top left: 125 GeV sample only fit. The others plots stand for the simultaneous 
-fit of all the mass points: starting from top right respectively 125, 120, 124, 126, 130 GeV.}
-\label{signal_lineshape_2018_2e2mu}
-\end{center}
-\end{figure}
+\begin{multiFigure}
+    \begin{center}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2e2mu_ggF_2018_1.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2e2mu_ggF_2018_3.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2e2mu_ggF_2018_7.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2e2mu_ggF_2018_9.pdf}
+    \captionof{figure}
+        [Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 3rd, 7th, and 9th) 
+        for 2e2$\mu$ 2018]
+        {Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 3rd, 7th, and 9th) 
+        for 2e2$\mu$ 2018. Top left: 125 GeV sample only fit. The others plots stand for the simultaneous 
+        fit of all the mass points: starting from top right respectively 125, 120, 124, 126, 130 GeV.
+        \;A) 1st bin.
+        \;B) 3rd bin.
+        \;C) 7th bin.
+        \;D) 9th bin. % TODO: double check bin numbers.
+        }
+        \label{signal_lineshape_2018_2e2mu}
+    \end{center}
+\end{multiFigure}
 
 % TODO: Use multiFigure
 % TODO: Reword
-\begin{figure}[!htbp]
-\begin{center}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2mu2e_ggF_2018_1.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2mu2e_ggF_2018_4.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2mu2e_ggF_2018_6.pdf}
-	\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2mu2e_ggF_2018_9.pdf}
-\caption
-[Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 4th, 6th, and 9th) 
-for 2$\mu$2e 2018]
-{Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 4th, 6th, and 9th) 
-for 2$\mu$2e 2018. Top left: 125 GeV sample only fit. The others plots stand for the simultaneous 
-fit of all the mass points: starting from top right respectively 125, 120, 124, 126, 130 GeV.}
-\label{signal_lineshape_2018_2mu2e}
-\end{center}
-\end{figure}
+\begin{multiFigure}
+    \begin{center}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2mu2e_ggF_2018_1.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2mu2e_ggF_2018_4.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2mu2e_ggF_2018_6.pdf}
+        \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/DSCB_2mu2e_ggF_2018_9.pdf}
+    \captionof{figure}
+        [Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 4th, 6th, and 9th) 
+        for 2$\mu$2e 2018]
+        {Fit examples for four $D'^{VXBS}_{m_{4\ell}}$ bins (1st, 4th, 6th, and 9th) 
+        for 2$\mu$2e 2018. Top left: 125 GeV sample only fit. The others plots stand for the simultaneous 
+        fit of all the mass points: starting from top right respectively 125, 120, 124, 126, 130 GeV.
+        \;A) 1st bin.
+        \;B) 4th bin.
+        \;C) 6th bin.
+        \;D) 9th bin. % TODO: double check bin numbers.
+        }
+    \label{signal_lineshape_2018_2mu2e}
+    \end{center}
+\end{multiFigure}
 Looking in each bin at the parameter mean of the DSCB function, used to fit the 125 \GeV sample, 
 (Fig.~\ref{MeanDependence}), it can be seen that if in 4$\mu$ final state (black dots) the mean
 is quite stable, in the 4e (in red) and 2e2$\mu$ (green) final states, it shifts towards lower values
@@ -128,21 +149,25 @@ not only as a function of mass but also as a function of mass resolution.
 %the two distributions are quite similar. 
 % TODO: Use multiFigure
 % TODO: Reword
-\begin{figure}[!htbp]
-\begin{center}
-		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/MeanDependenceFromSigma_20160.pdf}
-		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/MeanDependenceFromSigma_20165.pdf}
-		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/MeanDependenceFromSigma_2017.pdf}
-		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/MeanDependenceFromSigma_2018.pdf}
-\caption
-[DSCB mean values as a function of mass resolution for the four different final states]
-{DSCB mean values as a function of mass resolution for the four different final states: 4$\mu$ (black),
-4e (red), 2e2$\mu$ (green) and 2$\mu$2e (blue). Each bin on the x axis stands for a bin 
-in categorization (moving from left to right, the relative mass error comes bigger). 
-Top 2016 (left pre-VFP, right post-VFP), bottom left 2017, bottom right 2018.}
-\label{MeanDependence}
-\end{center}
-\end{figure}
+\begin{multiFigure}
+    \begin{center}
+            \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/MeanDependenceFromSigma_20160.pdf}
+            \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/MeanDependenceFromSigma_20165.pdf}
+            \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/MeanDependenceFromSigma_2017.pdf}
+            \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/Categorisation/MeanDependenceFromSigma_2018.pdf}
+        \captionof{figure}
+            [DSCB mean values as a function of mass resolution for the four different final states]
+            {DSCB mean values as a function of mass resolution for the four different final states: 4$\mu$ (black),
+            4e (red), 2e2$\mu$ (green) and 2$\mu$2e (blue). Each bin on the x axis stands for a bin 
+            in categorization (moving from left to right, the relative mass error comes bigger). 
+            \;A) 2016 pre-VFP.
+            \;A) 2016 post-VFP.
+            \;A) 2017 pre-VFP.
+            \;A) 2018 pre-VFP.
+            }
+        \label{MeanDependence}
+    \end{center}
+\end{multiFigure}
 Finally, examples of the fits for normalisation can be observed in 
 Fig.~\ref{signal_normalization_20160} (2016 pre-VFP ggH),
 Fig.~\ref{signal_normalization_20165} (2016 post-VFP ggH), 

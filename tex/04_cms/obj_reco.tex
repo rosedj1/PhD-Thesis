@@ -1,6 +1,7 @@
 % Will describe how CMS generally reconstructs objects.
 % HZZ4L object selection is described in Higgs Mass chapter.
 % TODO: MENTION PARTICLE FLOW!
+% TODO: Add more refs.
 \section{Object Reconstruction}
 \label{sec:obj_reco}
 A single \pp collision yields thousands of particles, each of which must be identified by the CMS detector in order to be used in physics analyses.
@@ -51,7 +52,9 @@ The tracker and muon systems exhibit high reconstruction efficiency, and about 9
 Tau leptons are characterized by a mean lifetime of about $2.9 \times \tentotheminus{13}\snd$, meaning they decay within a few millimeters from their production point for the typical Lorentz boosts at the LHC.
 Fully leptonic decays are reconstructed in a similar way as other leptons, semileptonic decays to hadrons ($\tau_\text{h}$) and a neutrino result in small and collimated hadron jets requiring a specific reconstruction algorithm.
 The $\tau_\text{h}$ reconstruction algorithm should be able to determine the $\tau$ decay mode, identify PF candidates associated with both charged hadrons and photons from $\pi^0 \rightarrow \gamma\gamma$ decays, and regroup them together to estimate the $\tau_\text{h}$ kinematic properties.
-The hadrons plus strips (HPS) algorithm~\cite{CMS:2011eio,CMS:2015pac} analyzes PF candidates and assesses their compatibility with $\tau_\text{h}$ objects.
+The hadrons plus strips (HPS) algorithm
+% ~\cite{CMS:2011eio,CMS:2015pac} % TODO: Find if possible.
+analyzes PF candidates and assesses their compatibility with $\tau_\text{h}$ objects.
 Contributions from neutral pions can appear either directly as photon PF candidates or as electron candidates clustered inside the jet.
 Therefore these candidates with $\pT > 0.5\GeV$ are clustered into ``strips'' using an iterative procedure.
 A dynamic strip construction was introduced in Run 2 and defined the $\Delta\eta$ and $\Delta\phi$ clustering window sizes as functions of the strip \pT to ensure an optimal collection of the energy and to minimize the impact of background.
@@ -59,13 +62,15 @@ A dynamic strip construction was introduced in Run 2 and defined the $\Delta\eta
 \subsection{Jet Reconstruction}
 \label{sec:jet_reco}
 Quarks and gluons undergo a hadronization process, requiring the recollection and measurement of the hadronization products in order to estimate their initial momentum.
-Jets resulting from this process are reconstructed by clustering the PF candidates with the anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma}, which combines candidates that are close to each other based on a metric that is defined to produce jets of an approximate conic shape clustered around the hardest particles in the event.
+Jets resulting from this process are reconstructed by clustering the PF candidates with the anti-\kt algorithm,
+% ~\cite{Cacciari:2008gp, Cacciari:2011ma} % TODO: find if possible
+which combines candidates that are close to each other based on a metric that is defined to produce jets of an approximate conic shape clustered around the hardest particles in the event.
 The size of the jet cone is determined by the distance parameter $\Delta R$ at which the algorithm is operated (typically $\Delta R = 0.4$ and $ \Delta R = 0.8$).
 The anti-\kt algorithm is resilient against infrared and collinear events, \ie it is not affected by soft radiation or collinear parton splitting. 
 
 The jet four-momentum is calculated as the vector sum of the four-momenta of the clustered candidates and a set of corrections are applied to calibrate the jet response using the information of particles generated in a simulation.
 These corrections of the jet energy scale take into account the contribution of the pileup in the event, nonlinearities in the detector response to hadrons, and residual differences between the data and the simulation used during calibration.
-Corrections are validated using dijet, multijet, $\gamma + \text{jets}$, and leptonic $\PZ + \text{jets}$ events~\cite{collaboration_2011,CMS:2016lmd}.
+Corrections are validated using dijet, multijet, $\gamma + \text{jets}$, and leptonic $\PZ + \text{jets}$ events. % TODO: find if possible. ~\cite{collaboration_2011,CMS:2016lmd}.
 Typical jet resolutions are about 15--20\% for jets at 30\GeV, 10\% at 100\GeV, and 5\% at 1\TeV.
 
 % \subsubsection{Jet Energy Correction}

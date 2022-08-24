@@ -1,6 +1,6 @@
 \chapter{THE STANDARD MODEL OF PARTICLE PHYSICS}
 \label{ch:theory}
-The Standard Model (SM) is a collection of the most accurate and self-consistent particle physics theories that mathematically describe the properties of particles within the Universe and their interactions with each other.
+The Standard Model (SM) is a collection of the most accurate and self-consistent particle physics theories that mathematically describe the properties of particles within the Universe and their interactions with each other~\cite{Glashow:1961tr,PhysRevLett.19.1264}.
 For the past century, some of the most brilliant minds in physics have spent their entire careers to develop equations, mathematical tricks, and completely novel ideas to help build a solid foundation for the SM.
 
 To demonstrate the unparalleled accuracy with which the SM predicts physical phenomena, one needs to look no further than the anomalous magnetic moment of the electron $\left( a_\Pe \right)$.
@@ -36,12 +36,12 @@ and then it concludes by highlighting a few recent measurements that seem to dev
 \section{Overview}
 \label{sec:sm_overview}
 
-The SM~\cite{Glashow:1961tr,PhysRevLett.19.1264} is a renormalizable quantum field theory defined in terms of a Lagrangian (\lagrang) that describes interactions between fundamental particles as governed by the strong, weak, and EM forces.
+The SM is a renormalizable quantum field theory defined in terms of a Lagrangian (\lagrang) that describes interactions between fundamental particles as governed by the strong, weak, and EM forces.
 It is a non-Abelian gauge theory comprising interacting field theories based on gauge invariance and constructed within the framework of quantum mechanics and special relativity.
 The SM exhibits invariance under the symmetry group:
-\begin{equation}
+\begin{equation*}
     SU(3)_C \times SU(2)_L \times U(1)_Y,
-\end{equation}
+\end{equation*}
 where $SU(3)_C$ invariance explains the existence of gluons ($g$) as the mediators of the strong force, described by quantum chromodynamics (QCD), and the $SU(2)_L \times U(1)_Y$ invariance results in the $\PW^\pm$, $\PZ^0$, and $\gamma$ bosons as mediators of the electroweak force, described by the unified electroweak theory and QED.
 Interactions via the strong, electromagnetic, and weak forces are restricted to particles carrying a color charge, electric charge, and a weak charge, respectively.
 The SM formulation lacks the ability to describe gravity on a quantum level and might actually be incompatible with the most successful modern theories of gravitation.
@@ -199,7 +199,7 @@ The six quarks are the fermions which interact with gluons.
 They have \st{quarky} quirky names like: 
 up, down, charm, strange, top, bottom. 
 These are called the six ``flavors'' of quarks.
-The top quark is an absolutely massive particle, being at the \emph{top} of the particle mass scale at $\approx$173\GeV---approximately the same mass as a tungsten atom.
+The top quark is an absolutely massive particle, being at the \emph{top} of the particle mass scale at $172.25^{+0.76}_{-0.77}\GeV$~\cite{Tumasyan:2779091}---approximately the same mass as a tungsten atom.
 
 Quarks (\Pq) are electrically charged particles, but they have fractional charge.
 Each quark in the top row of Fig.~\ref{fig:particular_table} has $+2/3$ electric charge and the bottom row has $-1/3$.
@@ -224,6 +224,13 @@ Examples of mesons are the pion $\pi^+$ $\left(\Pqu \Paqd \right)$\footnote{
 \section{Mathematical Underpinnings of the SM}
 \label{sec:sm_math}
 
+% TODO: Write more flowy intro.
+% Lagrangian mechanics.
+% * Gives equation of motion, \ie how the system evolves 
+% Transformations can be applied but Lagrangian must remain invariant.
+% Noether's Theorem says that an invariance (\ie a symmetry) implies the existence of an associated current that is \emph{conserved}.
+% * One of the most profound realizations in physics was made ~\cite{Noether1918}.
+
 % The main objective of the LHC is to probe the Electroweak Symmetry Breaking (EWSB) mechanism that generates the masses of the known elementary particles in the SM.
 %  in the SMby the ATLAS~\cite{ATLAS:2012yve} and the CMS~\cite{CMS:2012qbp} collaborations and the subsequent studies of its properties with the full data set from Run 1, from 2009 to 2012, with a center-of-mass energy of 7\TeV and 8\TeV, provided the first opportunity to study this mechanism.
 The discovery of the Higgs boson in 2012 confirmed the process of electroweak symmetry breaking (EWSB), which is the mechanism that generates the masses of the \PWpm and \PZ gauge bosons.
@@ -232,7 +239,7 @@ Not only did EWSB explain the short-range nature of weak interactions but it als
 
 In the SM, the electroweak interactions are described by a gauge field theory invariant under the $SU(2)_L \times U(1)_Y$ symmetry group.
 The mechanism of EWSB~\cite{PhysRevD.2.1285, PhysRevLett.13.321, PhysRev.145.1156} provides a general framework to preserve the structure of these gauge interactions at high energies.
-The EWSB mechanism posits a self-interacting electroweak doublet of complex scalar fields, whose CP-even neutral component acquires a vacuum expectation value (VEV) of $v = 246\GeV$, which sets the scale of the symmetry breaking.
+The EWSB mechanism posits a self-interacting electroweak doublet of complex scalar fields, whose CP-even neutral component acquires a vacuum expectation value (VEV), which sets the scale of the symmetry breaking.
 Three massless Goldstone bosons are generated and are absorbed to give masses to the \PW and \PZ gauge bosons.
 The remaining component of the doublet becomes the Higgs boson, a new (and so far unique) fundamental scalar particle.
 The masses of all fermions are also a consequence of EWSB since the Higgs field is postulated to couple to the fermions through Yukawa interactions.
@@ -274,61 +281,131 @@ The masses of all fermions are also a consequence of EWSB since the Higgs field 
 
 % TODO: Derive formula for mH.
 % TODO: Show Mexican hat potential.
-Without EWSB, the SM does not As discussed in Sec.~\ref{sec:sm_overview}, EWSB is responsible for generating mass for the \PWpm and \PZ gauge bosons.
-
-Following The SM scalar potential reads:
+The SM lagrangian contains a scalar potential term that reads:
 \begin{equation}
-    V (\phi) = m^2\phi^\dagger\phi + \lambda(\phi^\dagger\phi)^2,
+    V (\phi) = \mu^2\phi^\dagger\phi + \lambda(\phi^\dagger\phi)^2,
+    \label{eqn:scalar_pot}
 \end{equation}
-with the Higgs field $\phi$ being a self-interacting $SU(2)_L$ complex doublet (four real degrees of freedom) with weak hypercharge $Y = 1$ (the hypercharge is normalized such that $Q = T_{3L} + Y /2$, where $Q$ is the electric charge and $T_{3L}$ the eigenvalue of the diagonal generator of $SU(2)_L$):
+where the Higgs field $\left( \phi(x) \right)$ is a self-interacting $SU(2)_L$ doublet of complex scalar fields containing 4 real degrees of freedom $\left( \phi^k \text{, where } k=1, 2, 3, 4 \right)$ with weak hypercharge $Y = 1$:
 \begin{equation}
-    \phi = \frac{1}{\sqrt{2}}
+    \phi(x) = \frac{1}{\sqrt{2}}
     \begin{pmatrix}
         \sqrt{2}\phi^+ \\
-        \phi^0 + ia^0
+        \phi^3 + i\phi^4
     \end{pmatrix},
+    \label{eqn:higgs_doublet}
 \end{equation}
-where $\phi^0$ and $a^0$ are the CP-even and CP-odd neutral components, $\phi^+$ is the complex charged component of the Higgs doublet, and $V(\phi)$ is the most general renormalizable scalar potential.
-If the quadratic term is negative, the neutral component of the scalar doublet acquires a nonzero VEV:
+where $\phi^3$ and $\phi^4$ are the CP-even and CP-odd neutral components, $\phi^+ \equiv \phi^1 + i \phi^2$ is the complex charged component of the Higgs doublet, and $V(\phi)$ is the most general renormalizable scalar potential.
+The hypercharge is normalized such that $Q = T_{3} + \frac{Y}{2}$, where $Q$ is the electric charge and $T_{3}$ is the eigenvalue of the diagonal generator of $SU(2)_L$.
+
+The case where $\lambda > 0$ in Eqn.~\ref{eqn:scalar_pot} indicates that a minimum exists in the potential and that $\phi$ is self-coupling~\cite{bass_higgs_2021}.
+If $\mu^2 < 0$ is also required, then the minimum of $V(\phi)$ $\left( \ie \frac{\partial V}{\partial \phi} = 0 \right)$ occurs at:
 \begin{equation}
-    \langle\phi\rangle = \frac{1}{\sqrt{2}}
-    \begin{pmatrix}
-        0 \\ v
-    \end{pmatrix},
+    \abs{\phi} = \sqrt{ \frac{-\mu^2}{2\lambda} }.
+    \label{eqn:higgs_min}
 \end{equation}
-with $\phi^0 = H+\langle\phi^0\rangle$ and $\langle\phi^0\rangle \equiv v$, inducing the spontaneous breaking of the SM gauge symmetry $SU(3)_C \times SU(2)_L \times U(1)_Y$ into $SU(3)_C \times U(1)_\text{EM}$.
+% \begin{align*}
+%     &\frac{\partial V}{\partial \phi} = 0
+%     \\
+%     \implies \abs{\phi} = &\sqrt{ \frac{-\mu^2}{2\lambda} }  \equiv \frac{v}{2},
+% \end{align*}
+This corresponds to the manifold of points that are invariant under the $SU(2)$ transformations~\cite{Halzen:1984mc}.
+This ``Maxican hat'' potential is shown in Fig.~\ref{fig:mex_hat} and illustrates the concept of spontaneous symmetry breaking.
+%%%%%%%%%%%%%%%%%%%%
+\begin{multiFigure}
+    \centering
+    \includegraphics[height=6cm,keepaspectratio]{figures/sm/higgs_potential.png}
+    \captionof{figure}
+        [Mexican-hat-shaped Higgs potential for $\lambda > 0$ and $\mu^2 < 0$]
+        {Mexican-hat-shaped Higgs potential for $\lambda > 0$ and $\mu^2 < 0$.
+        Figure taken from~\cite{bass_higgs_2021}.} 
+    \label{fig:mex_hat}
+\end{multiFigure}
+%%%%%%%%%%%%%%%%%%%%
+Choosing the point $\phi^1 = \phi^2 = \phi^4 = 0$ in the manifold for convenience constrains $\left(\phi^3\right)^2 = \frac{-\mu^2}{\lambda} \equiv v^2$,
+where $v$ is the Higgs VEV and has a value of 246\GeV. % TODO: Ref VEV value.
+The doublet in Eqn.~\ref{eqn:higgs_doublet} can now be written as:
+\begin{equation*}
+    \langle\phi\rangle = \sqrt{\frac{1}{2}}
+    \hspace{3pt}
+    \begin{pmatrix}
+        0 
+        \\
+        v 
+    \end{pmatrix},
+\end{equation*}
+and expansion of $\phi(x)$ about this particular vacuum gives:
+\begin{equation*}
+    \phi(x) = 
+    \sqrt{ \frac{1}{2} }
+    \hspace{3pt}
+    \begin{pmatrix}
+        0
+        \\
+        v + H(x)
+    \end{pmatrix},
+\end{equation*}
+where $H(x)$ is the scalar Higgs field.
+Spontaneous breaking of the SM gauge symmetry $SU(3)_C \times SU(2)_L \times U(1)_Y$ into $SU(3)_C \times U(1)_\text{EM}$ has now been induced.
 
 The global minimum of the theory defines the ground state, and spontaneous symmetry breaking implies that there is a (global and/or local) symmetry of the system that is not respected by the ground state.
 From the four generators of the $SU(2)_L \times U(1)_Y$ SM gauge group, three are spontaneously broken, implying that they lead to non-trivial transformations of the ground state and indicate the existence of three massless Goldstone bosons identified with three of the four Higgs field degrees of freedom.
 The Higgs field couples to the $W_\mu$ and $B_\mu$ gauge fields associated with the $SU(2)_L \times U(1)_Y$ local symmetry through the covariant derivative appearing in the kinetic term of the Higgs Lagrangian:
-\begin{equation}
+\begin{equation*}
     \lagrang_\text{Higgs} = (D_\mu\phi)^\dagger(D^\mu\phi) - V(\phi),
-\end{equation}
+\end{equation*}
 where $D_\mu\phi \equiv \left( \partial_\mu - ig \frac{\sigma^a}{2}W^a_\mu - ig^\prime \frac{Y}{2} B_\mu \right)\phi$,
 and $\sigma^a$ (with $a = 1,2,3$) are the usual Pauli matrices,
 and finally $g$ and $g^\prime$ are the $SU(2)_L$ and $U(1)_Y$ gauge couplings, respectively,
-As a result, the neutral and the two charged massless Goldstone degrees of freedom mix with the gauge fields corresponding to the broken generators of $SU(2)_L$ and $U(1)_Y$ and become, in the unitary gauge, the longitudinal components of the $\PZ$ and $\PW$ physical gauge bosons, respectively.
-The $\PZ$ and $\PW$ gauge bosons acquire masses:
-\begin{equation}
-    m_{\PW} = \frac{1}{2}vg, \hspace{7pt} m_{\PZ} = \frac{1}{2} v \sqrt{g^2+{g^\prime}^2}.
-\end{equation}
+It is useful to note that:
+\begin{equation*}
+    \frac{g^\prime}{g} = \tan{\theta_W},
+\end{equation*}
+where $\theta_W$ is the weak mixing angle and has been measured to be $\sin^2{\theta_W} = 0.223\,37 \pm 0.000\,10$~\cite{Sirlin:1980nh}.
+As a result, the neutral and the two charged massless Goldstone degrees of freedom mix with the gauge fields corresponding to the broken generators of $SU(2)_L$ and $U(1)_Y$:
+\begin{align*}
+    A_\mu &= B_\mu \cos{\theta_W}  + W^3_\mu \sin{\theta_W},
+    \\
+    Z_\mu &= -B_\mu \sin{\theta_W}  + W^3_\mu \cos{\theta_W},
+\end{align*}
+thus becoming, in the unitary gauge, the longitudinal components of the $\PZ$ and $\PW$ physical gauge bosons, respectively. % TODO: I don't think this is correct.
+The $\PW$ and $\PZ$ gauge bosons acquire masses:
+\begin{equation*}
+    m_{\PW} = \frac{1}{2}vg, \hspace{7pt} m_{\PZ} = \frac{1}{2} v \sqrt{g^2+{g^\prime}^2},
+\end{equation*}
+from which the following relation is derived:
+\begin{equation*}
+    \frac{m_{\PW}}{m_{\PZ}} = \cos{\theta_W}.
+\end{equation*}
 
 The fourth generator remains unbroken since it is the one associated to the conserved $U(1)_\text{EM}$ gauge symmetry; thus, its corresponding gauge field---the photon ($\gamma$)---remains massless.
 Similarly the eight color gauge bosons, the gluons ($g$), corresponding to the conserved $SU(3)_C$ gauge symmetry with 8 unbroken generators, also remain massless (though confined inside hadrons and mesons as the result of the asymptotic freedom behaviour of QCD).
-Hence, from the initial four degrees of freedom of the Higgs field, two are absorbed by the $\PW^\pm$ gauge bosons, one by the $\PZ$ gauge boson, and there is one remaining degree of freedom, $\PH$, that is the physical Higgs boson---a new eponymous scalar particle dreamt of by Peter Higgs~\cite{PhysRevLett.13.321,PhysRev.145.1156}.
+Hence, from the initial four degrees of freedom of the Higgs field, two are absorbed by the $\PW^\pm$ gauge bosons, one by the $\PZ$ gauge boson, and there is one remaining degree of freedom, $\PH$, that is the physical Higgs boson---a relatively new and eponymous scalar particle dreamt of by Peter Higgs~\cite{PhysRevLett.13.321,PhysRev.145.1156}.
 The Higgs boson is neutral under the electromagnetic interactions and transforms as a singlet under $SU(3)_C$ and hence does not couple at tree level to the massless photons and gluons.
 
-The fermions of the SM acquire mass through renormalizable interactions between the Higgs field and the fermions: the Yukawa interactions:
-\begin{equation}
-    \lagrang_\text{Yukawa} = -\hat{h}_{d_{ij}} \bar{q}_{L_i}\phi d_{R_j} \hat{h}_{u_{ij}} \bar{q}_{L_i}\tilde{\phi} u_{R_j} \hat{h}_{l_{ij}} \bar{l}_{L_i}\phi e_{R_j} + h.c.
-\end{equation}
+The fermions of the SM acquire mass through renormalizable interactions between the Higgs field and the fermions, \ie the Yukawa interactions:
+\begin{equation*}
+    -\lagrang_\text{Yukawa} = \hat{h}^{(d)}_{ij} \bar{q}_{L_i} \phi d_{R_j} +
+    \hat{h}^{(u)}_{ij} \bar{q}_{L_i} \tilde{\phi} u_{R_j} +
+    \hat{h}^{(\ell)}_{ij} \bar{\ell}_{L_i} \phi e_{R_j} + h.c.,
+\end{equation*}
 which respect the symmetries of the SM but generate fermion masses once EWSB occurs.
-In the Lagrangian above, $\tilde{\phi} = i\sigma_2\phi^*$ and $q_L$ ($l_L$) and $u_R$, $d_R$ ($e_R$) are the quark (lepton) $SU(2)_L$ doublets and singlets, respectively, while in each term $\hat{h}_{X_{ij}}$ is parametrized by a $3\times3$ matrix.
-The mass term for neutrinos is omitted, but could be added in an analogous manner to the up-type quarks when right-handed neutrinos are supplementing the SM particle content (neutrinos can also acquire Majorana masses via non-renormalizable dimension-5 interactions with the Higgs field~\cite{Weinberg:1979sa}).
-Once the Higgs field acquires a VEV, and after rotation to the fermion mass eigenstate basis that also diagonalizes the Higgs--fermion interactions, $\hat{h}_{f_{ij}} \rightarrow h_{f_i} \delta_{ij}$, all fermions acquire a mass given by $m_{f_i} = h_{f_{i}} v/\sqrt{2}$.
-The indices $i,j = 1,2,3$ refer to the three families in the up quark, down quark or charged lepton sectors.
-It should be noted that the EWSB mechanism provides no additional insight into possible underlying reasons for the large variety of masses of the fermions, often referred to as the flavor hierarchy.
+The indices $i,j = 1,2,3$ refer to the three families of up quarks, down quarks, or charged leptons.
+In the Lagrangian above, $\tilde{\phi} = i\sigma_2\phi^*$ while $q_L$ ($\ell_L$) and $u_R$, $d_R$ ($e_R$) are the quark (lepton) $SU(2)_L$ doublets and singlets, respectively, while in each term $\hat{h}^{(f)}_{{ij}}$ is parameterized by a $3\times3$ coupling matrix for the appropriate fermion ($f$).
+% The mass term for neutrinos is omitted, but could be added in an analogous manner to the up-type quarks when right-handed neutrinos are supplementing the SM particle content (neutrinos can also acquire Majorana masses via non-renormalizable dimension-5 interactions with the Higgs field~\cite{Weinberg:1979sa}).
+Once the Higgs field acquires a VEV, and after rotation to the fermion mass eigenstate basis that also diagonalizes the Higgs--fermion interactions, $\hat{h}^{(f)}_{ij} \rightarrow h^{(f)}_{i} \delta_{ij}$, all fermions acquire a mass given by:
+\begin{equation*}
+    m^{(f)}_{i} = \frac{h^{(f)}_{i} v}{\sqrt{2}}.
+\end{equation*}
+Finally, looking back at the first two terms of Eqn.~\ref{eqn:scalar_pot} reveals the mass of the SM Higgs boson $(\mH)$ in terms of the parameters $v$ and $\lambda$:
+\begin{equation*}
+    \mH = \sqrt{2 \lambda} v.
+\end{equation*}
+It should be noted that the EWSB mechanism provides no additional insight into possible underlying reasons for the large variety of masses of the fermions, often referred to as the \emph{flavor hierarchy}.
 The fermion masses, accounting for a large number of the free parameters of the SM, are simply translated into Yukawa couplings.
+
+
+
 % % At room temperature, we know that the weak force, which mediates decays of radioactive substances, is very different from the EM force.
 % % However, at large energy scales, like those found during the Big Bang or those produced in the energetic proton--proton collisions of the Large Hadron Collider, the electromagnetic (EM) force and weak force are unified. 
 % At large energy scales, like those found during the Big Bang or those produced in the energetic proton--proton collisions of the Large Hadron Collider, the electromagnetic (EM) force and weak nuclear force are one and the same: they are unified.

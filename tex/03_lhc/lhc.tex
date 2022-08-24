@@ -1,4 +1,3 @@
-% TODO: Maybe in the \caption[], don't use a final period at the end within the square brackets? Check TOC.
 % Great animation about protons going through the CERN accelerator complex.
 % https://www.youtube.com/watch?v=FLrEghnKncA
 
@@ -87,8 +86,6 @@ The 4 main particle detectors and their locations along the LHC are:
 % SND	Scattering and Neutrino Detector
 
 The world-renowned feat of digging the tunnel for, constructing, commissioning, and monitoring the LHC was made possible by CERN:
-% - Before the LHC, LEP was originally in the tunnel.
-%     - LEP ran from TODO--TODO.
 the European Organization for Nuclear Research (French: \emph{Conseil Européean pour la Recherche Nucléaire}).
 CERN is an international collaboration of---at the time of this writing---more than 33 countries,
 % it's actually 34.
@@ -117,12 +114,12 @@ Therefore, a natural way to explore the intricacies and inner workings of the LH
 %%%%%%%%%%%%%%%%%%%%
 
 \section{The Journey of a Proton at the LHC}
-The journey to discovery begins in a surprisingly small tank of hydrogen gas (\htwo) located in the LINAC4 building at the main CERN site.
+The journey to discovery begins with a surprisingly small tank of hydrogen gas (\htwo) located in the LINAC4 building at the main CERN site.
 % , in which a proton that is bound to another proton as a molecule of H2 .
 % Pic of hydrogen source from here: https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.linac4
-Inside this tank, a proton---conveniently named Paul Roton, or just \pname for short---and $\mathcal{O}(\tentothe{23})$ other protons
-% (TODO:DOUBLE CHECK THIS)
-coexist in bound states as molecules of H$_2$.
+Inside this tank of \htwo are on the order of $\tentothe{23}$ protons and let's keep track of, say, the $n^\text{th}$ proton as it makes its \emph{first} journey around the LHC---let's call this one \pname (from the Greek word \textgreek{πρώτος} meaning \emph{first}).
+% TODO:DOUBLE CHECK THIS
+% coexist in bound states as molecules of H$_2$.
 Although the tank has a meager mass of 
 % TODO: Double check this number.
 $\approx$10\Kg,
@@ -138,18 +135,18 @@ The flow of accelerators is as follows:
     % \item The flow 
     \item From the PSB, \pname are the rest are accelerated to 2\GeV and then injected into the \emph{Proton Synchrotron} (PS).
     \item The PS increases the energy of the particles to 26\GeV and then feeds the protons into the \emph{Super Proton Synchrotron} (SPS).
-    \item Next, the SPS energizes the protons to a center-of-mass energy of 450\GeV and sends bunches of protons (so-called \emph{proton bunches}, $\mathcal{O}\left(\tentothe{11}\right)$ protons) into the LHC. %  $\approx$$\tentothe{11}$  are packed together into a ``proton bunch''. % a accelerates protons to com energy
+    \item Next, the SPS energizes the protons to a beam energy of 450\GeV and sends protons in discrete packets (\emph{proton bunches}), each of which contains $\mathcal{O}(\tentothe{11})$ protons into the LHC. %  $\approx$$\tentothe{11}$  are packed together into a ``proton bunch''. % a accelerates protons to com energy
 \end{itemize}
 % TODO: Mention: A single proton bunch is about the size of a human hair ($\approx$50\mum wide and $\approx$10\cm long). 
 % TODO: Mention: The clockwise and counterclockwise rings are filled to a maximum of 2808 proton bunches, each one spaced 25\ns apart, and then sent to collide. 
-It is inside the LHC that \pname and its fellow protons within its proton bunch are given precisely timed \emph{kicks} by the electric field\footnote{
+It is inside the LHC that \pname and its fellow protons within its proton bunch are given precisely timed \emph{kicks} by electric fields\footnote{
     The electric field quickly oscillates between pointing parallel to the direction of travel of the proton bunch to pointing \emph{antiparallel} to the direction of travel.
     Therefore, precise timing is required to ensure that the electric field only points parallel so as to speed up the protons in the proton bunch.
     This is analgous to the timing required when pushing a person on a swing:
     the pusher must push at \emph{just} the right time to increase the momentum of the one swinging, lest the pusher slows the swinger down!
 } within radio-frequency (RF) cavities.
-After sufficient energy is delivered to the proton bunches, they finally achieve their max speed of 0.999\,999\,990$c$ (corresponding to a Lorentz factor of $\gamma \approx 7000$). %  Wikipedia says 6930.  99.999\,996\%$c$.
-At this speed, \emph{each proton} in the proton bunch carries a center-of-mass energy of 6.5\TeV.
+After sufficient energy is delivered to the proton bunches, the particles reach their max speed of 0.999\,999\,990$c$ (corresponding to a Lorentz factor of $\gamma \approx 7000$). %  Wikipedia says 6930.  99.999\,996\%$c$.
+At this speed, \emph{each proton} in the proton bunch carries an energy as measured in the lab frame of 6.5\TeV.
 
 \pname and its neighboring protons in the proton bunch are nearly ready for a head-on collision with another proton bunch to make interesting physics.
 The only problem is that the proton bunches must be turned (to keep them in the circular LHC) and must be tightly squeezed down (to increase the chance of \pp collisions).
@@ -160,10 +157,6 @@ Each dipole magnet is 14.3\meter long, weighs 35\tonne, costs nearly 500\,KCHF t
 Only with such massive currents is it possible to generate the necessary magnetic field strength of 8\tesla to keep the protons moving in a circular fashion at their near-light speed. 
 The magnetic field is maintained by copper-clad niobium-titanium coils, which requires the cryogenics conditions of 96\tonne of superfluid helium-4 to achieve the necessary temperature of 1.9\kelvin to reach a superconducting state; 
 this temperature is colder than that of outer space.
-% TODO: Check numbers here and ref.
-There are also 392 quadrupole magnets
-% (TODO:CITE)
-that compress the proton bunches as tightly as possible before collision with the other oncoming proton beam.
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
 \centering
@@ -178,10 +171,13 @@ that compress the proton bunches as tightly as possible before collision with th
 %%%%%%%%%%%%%%%%%%%%
 
 % As two bunches (one from the clockwise proton beam and the other from the counterclockwise beam) approach one of the four detector points along the LHC, each bunch is squeezed tightly using quadrupole magnets, helping to focus the beams which increases the chance for the desired \pp collisions.
-As the two proton beams approach one of the four detector points along the LHC, two of the oncoming bunches are squeezed tightly using the quadrupole magnets which increases the chance for the desired \pp collisions.
+As the two proton beams approach one of the four detector points along the LHC, two of the oncoming bunches are squeezed tightly by quadrupole magnets which increases the chance for the desired \pp collisions.
 During a bunch crossing (BX), amazingly most of the protons just pass right by one another; 
 out of the $\approx$$\tentothe{11}$ possible \pp collisions that could have occurred, Fig.~\ref{plt:pileup} shows that on average only approximately 32 collisions occurred per BX during the 2018 Run of the LHC. %, according to a particle detector called CMS, described in Chapter~\ref{ch:cms}.  a mere 50 collisions take place on average (\ie only 0.0001\%).
 This is a testament to just how small protons truly are.
+% % TODO: Check numbers here and ref.
+% There are also 392 quadrupole magnets
+% that compress the proton bunches as tightly as possible before collision with the other oncoming proton beam.
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
@@ -219,7 +215,6 @@ One such dedicated particle detector is located at Point 5---the Compact Muon So
 % Just as the PS feeds protons into the SPS, which feeds protons into the LHC, so too is it being considered for the LHC to feed a new project---the 100\Km Future Circular Collider.
 % LPS SPS
 % into a beam pipe going clockwise and another 2800 bunches going around counterclockwise, 
-% TODO:
 \section{Physics of the LHC}
 The merit of a particle collider is typically judged by its center-of-mass energy and a second parameter: the \emph{luminosity}.
 In essence, luminosity refers to the `brightness' of the colliding particle beams,
@@ -230,9 +225,9 @@ Concretely, the instantaneous time-dependent luminosity $(\lumi(t))$ is defined 
     \label{eqn:lumi_def}
 \end{equation}
 Physicists are interested in the total number of events $\left( N^\text{exp} \right)$ they should expect to see in the laboratory---observing a number of events significantly different enough from $N^\text{exp}$ may hint at new physics.
-Rearrangement of Eqn.~\ref{eqn:lumi_def} and setting $R(t) = \text{d}N^\text{exp} / \dt$ gives the infinitesimal change in the number of expected events after a small increment of time $(\dt)$:
+Rearrangement of Eqn.~\ref{eqn:lumi_def} and setting $R(t) = dN^\text{exp} / \dt$ gives the infinitesimal change in the number of expected events after a small increment of time $(\dt)$:
 \begin{equation}
-    \frac{\text{d}N^\text{exp}}{\dt} = \sigma \lumi(t).
+    \frac{dN^\text{exp}}{\dt} = \sigma \lumi(t).
     \label{eqn:dNdt}
 \end{equation}
 Collider experiments typically last over long time periods, so integrating Eqn.~\ref{eqn:dNdt} from some starting time $\left( t_1 \right)$ to some later time $\left( t_2 \right)$, gives $N^\text{exp}$:

@@ -1,20 +1,18 @@
 % Will describe how CMS generally reconstructs objects.
 % HZZ4L object selection is described in Higgs Mass chapter.
-% TODO: MENTION PARTICLE FLOW!
-% TODO: Add more refs.
 \section{Object Reconstruction}
 \label{sec:obj_reco}
 A single \pp collision yields thousands of particles, each of which must be identified by the CMS detector in order to be used in physics analyses.
-The primary software for object identification within CMS is called Particle Flow. % TODO: special font for Particle Flow? % TODO: ref
+By combining the specialized information from the various subdetectors (\eg tracks and energy clusters), particles are more confidently identified.
 % The \pp collision itself is called the \emph{primary vertex} and must be carefully reconstructed (Sec.~\ref{sec:track_vertex_reco}).
 Electron and photon objects are reconstructed (Sec.~\ref{sec:egamma_reco}) using the silicon tracker (Sec.~\ref{sec:tracker}) and ECAL (Sec.~\ref{sec:ecal}) systems.
 The reconstruction of muon objects (Sec.~\ref{sec:muon_reco}) uses information from all subdetectors, the most important of which are the silicon tracker and muon system (Sec.~\ref{sec:muon_sys}).
-Tau objects are the final type of charged leptons to be reconstructed (Sec.~\ref{sec:tau_reco}), which may decay hadronically---thus leaving hadronic energy signatures in the HCAL---and by the silicon tracker detecting a displaced secondary vertex, thanks to the relatively long lifetime of the tau lepton.  % TODO: Bleh. I don't like this sentence. Ref.    displaced secondary vertex coupled with ECAL .
+Tau objects are the last kind of charged lepton to be reconstructed (Sec.~\ref{sec:tau_reco}).
+Tau leptons frequently decay hadronically and so they leave hadronic energy signatures in the HCAL.
+At the same time, the silicon tracker can detect a displaced secondary vertex, thanks to the relatively long lifetime of the tau lepton.
 Hadronic matter is grouped into jet objects, each of which is carefully reconstructed (Sec.~\ref{sec:jet_reco}.) using information from the silicon tracker, ECAL, and HCAL (Sec.~\ref{sec:hcal}).
 Finally, after accounting for all the momenta and energies of the observed particles, the missing transverse energy $\left( \MET \right)$ is evaluated (Sec.~\ref{sec:met_reco}).
-
-% \subsection{Vertex and Track Reconstruction}
-% \label{sec:track_vertex_reco}
+This ``holistic approach'' of combining subdetector information to identify particles is called `particle-flow' (PF)~\cite{particle_flow}.
 
 \subsection{Electron and Photon Reconstruction}
 \label{sec:egamma_reco}
@@ -23,60 +21,54 @@ Since photons are electrically neutral, the silion tracker will not detect them.
 Another consequence of their neutrality is that photons do not bend in a magnetic field;
 their energy deposits will point radially back to the vertex from which they originated.
 On the other hand, electrons \emph{are} charged and so will not only be detected within the layers of the silicon tracker but will also reveal a curved track.
-Hence, the energy deposits from electrons within the ECAL will not necessarily point towards the vertex from which the electron came~\cite{Ereco_performance_2015}.
+Hence, the energy deposits from electrons within the ECAL will \emph{not} necessarily point towards the vertex from which the electron came~\cite{Ereco_performance_2015}.
 
-Within CMS, track fitting and pattern recognition typically occur within a single framework called the Combinatorial Track Finder (CTF), which is an extension of the Kalman filter~\cite{general_track_reco}.
-However, the reconstruction of tracks of charged particles is computationally difficult  the CTF 
+Within CMS, track fitting and pattern recognition typically occur within a single framework called the Combinatorial Track Finder (CTF), which is an extension of the Kalman filter (KF)~\cite{general_track_reco}.
+However, the reconstruction of tracks of charged particles is computationally difficult.
 As electrons pass through matter, they may radiate away some of their energy in the form of bremsstrahlung photons.
-The distribution of this energy loss is extremely non-Gaussian and is not accurately modeled by the Kalman Filter.
+The distribution of this energy loss is extremely non-Gaussian and is not accurately modeled by the KF.
 Instead, the CMS tracker uses a Gaussian-sum filter (GSF) algorithm~\cite{gsf} to model the energy-loss distribution as a mixture of Gaussian functions.
 This ultimately improves the momentum resolution of electrons.
 
 \subsection{Muon Reconstruction}
-% TODO: Fix all the symbols (\pT).
-% TODO: Clean up equation.
 \label{sec:muon_reco}
 Muons leave a very clean signature in the CMS detector thanks to their interactions in the muon detectors.
 Consequently, muon tracks are reconstructed by dedicated algorithms that are independent from the iterative PF identification system used to reconstruct other particles.
-These algorithms are based on a Kalman filter method that accounts for the muon energy loss in the detector materials.
+These algorithms are based on a KF method that accounts for muon energy loss in the detector materials.
 
 The most reliable muon detection occurs when both the silicon tracker \emph{and} the muon system both register hits corresponding to the same particle object.
-When both subsystems detect such a particle---most likely a muon---it is called a \emph{global muon}.
-This can be compared to the situation when only the muon system registers hits, in which case this is most likely a \emph{standalone muon} and must be rejected due to its worse momentum resolution and higher contamination from cosmic ray background.
-The opposite case occurs when only the tracker registers hits and the corresponding particle is termed a \emph{tracker muon}~\cite{reco_muon}.
+When both subsystems detect such a particle---\emph{most likely a muon}---it is called a `global muon'.
+This can be compared to the situation when only the muon system registers hits, in which case this is most likely a `standalone muon' and must be rejected due to its worse momentum resolution and higher contamination from cosmic ray backgrounds.
+The opposite case occurs when only the tracker registers hits and the corresponding particle is termed a `tracker muon'~\cite{reco_muon}.
 
-The tracker and muon systems exhibit high reconstruction efficiency, and about 99\% of muons are reconstructed either as tracker or global muons, and candidates sharing the same inner tracks are merged into a single object. Muon charge and momentum assignments are calculated from tracker measurements for muons with $p_T < 200 \;\text{GeV}$, since multiple scattering effects may degrade the muon detector measurements. The global track curvature is instead used for muons with $p_T > 200 \;\text{GeV}$ if the charge-to-momentum ratio agrees within two standard deviations from the tracker-only measurement. The muon transverse momentum resolution thus ranges from 1 to 6\% depending on the $\eta$ coordinate for muons with $p_T < 100 \;\text{GeV}$, which is better than the 10\% resolution for central muons of $p_T = 1 \;\text{TeV}$.
+The tracker and muon systems exhibit high reconstruction efficiency, and about 99\% of muons are reconstructed either as tracker or global muons.
+Candidates sharing the same inner tracks are merged into a single object.
+Muon charge and momentum assignments are calculated from tracker measurements for muons with $\pT < 200\GeV$, since multiple scattering may degrade the muon detector measurements.
+The global track curvature is instead used for muons with $\pT > 200\GeV$ if the charge-to-momentum ratio agrees within two standard deviations from the tracker-only measurement.
+The muon transverse momentum resolution ranges from 1--6\% depending on the $\eta$ coordinate for muons with $\pT < 100\GeV$, which is better than the 10\% resolution for central muons with $\pT \approx 1\TeV$.
 
 \subsection{Tau Reconstruction}
 \label{sec:tau_reco}
 Tau leptons are characterized by a mean lifetime of about $2.9 \times \tentotheminus{13}\snd$, meaning they decay within a few millimeters from their production point for the typical Lorentz boosts at the LHC.
 Fully leptonic decays are reconstructed in a similar way as other leptons, semileptonic decays to hadrons ($\tau_\text{h}$) and a neutrino result in small and collimated hadron jets requiring a specific reconstruction algorithm.
 The $\tau_\text{h}$ reconstruction algorithm should be able to determine the $\tau$ decay mode, identify PF candidates associated with both charged hadrons and photons from $\pi^0 \rightarrow \gamma\gamma$ decays, and regroup them together to estimate the $\tau_\text{h}$ kinematic properties.
-The hadrons plus strips (HPS) algorithm
-% ~\cite{CMS:2011eio,CMS:2015pac} % TODO: Find if possible.
-analyzes PF candidates and assesses their compatibility with $\tau_\text{h}$ objects.
+The hadrons plus strips (HPS) algorithm~\cite{hps_algo1, hps_algo2} analyzes PF candidates and assesses their compatibility with $\tau_\text{h}$ objects.
 Contributions from neutral pions can appear either directly as photon PF candidates or as electron candidates clustered inside the jet.
-Therefore these candidates with $\pT > 0.5\GeV$ are clustered into ``strips'' using an iterative procedure.
+Therefore these candidates with $\pT > 0.5\GeV$ are clustered into `strips' using an iterative procedure.
 A dynamic strip construction was introduced in Run 2 and defined the $\Delta\eta$ and $\Delta\phi$ clustering window sizes as functions of the strip \pT to ensure an optimal collection of the energy and to minimize the impact of background.
 
 \subsection{Jet Reconstruction}
 \label{sec:jet_reco}
 Quarks and gluons undergo a hadronization process, requiring the recollection and measurement of the hadronization products in order to estimate their initial momentum.
-Jets resulting from this process are reconstructed by clustering the PF candidates with the anti-\kt algorithm,
-% ~\cite{Cacciari:2008gp, Cacciari:2011ma} % TODO: find if possible
+Jets resulting from this process are reconstructed by clustering the PF candidates with the anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma},
 which combines candidates that are close to each other based on a metric that is defined to produce jets of an approximate conic shape clustered around the hardest particles in the event.
 The size of the jet cone is determined by the distance parameter $\Delta R$ at which the algorithm is operated (typically $\Delta R = 0.4$ and $ \Delta R = 0.8$).
 The anti-\kt algorithm is resilient against infrared and collinear events, \ie it is not affected by soft radiation or collinear parton splitting. 
 
 The jet four-momentum is calculated as the vector sum of the four-momenta of the clustered candidates and a set of corrections are applied to calibrate the jet response using the information of particles generated in a simulation.
-These corrections of the jet energy scale take into account the contribution of the pileup in the event, nonlinearities in the detector response to hadrons, and residual differences between the data and the simulation used during calibration.
-Corrections are validated using dijet, multijet, $\gamma + \text{jets}$, and leptonic $\PZ + \text{jets}$ events. % TODO: find if possible. ~\cite{collaboration_2011,CMS:2016lmd}.
+These corrections of the jet energy scale take into account the contribution of the pileup in the event, nonlinearities in the detector response to hadrons, and residual differences between the data and simulation used during calibration.
+Corrections are validated using dijet, multijet, $\gamma + \text{jets}$, and leptonic $\PZ + \text{jets}$ events~\cite{CMS:2016lmd}.
 Typical jet resolutions are about 15--20\% for jets at 30\GeV, 10\% at 100\GeV, and 5\% at 1\TeV.
-
-% \subsubsection{Jet Energy Correction}
-% \label{sec:jec}
-% \subsubsection{Tagging \Pqb-Jets}
-% \label{sec:btag}
 
 \subsection{MET Reconstruction}
 \label{sec:met_reco}
@@ -85,7 +77,6 @@ The negative projection of this vector onto the transverse plane is denoted as m
 
 A bias can be introduced into the \ptvecmiss determination through inefficiencies within the tracking algorithm, minimal thresholds in the calorimeter energy estimation, and nonlinearities of the energy response for hadronic particles within the calorimeters.
 Thus, a correction is applied by propagating the jet energy corrections $\left( \vec{p}_{\text{T}, j}^{\kern1pt \text{corr}} - \vec{p}_{\text{T}, j} \right) \equiv \Delta \vec{p}_{\text{T}, j}$ for each jet $j$ out of all $N_\text{jets}$ jets into the calculation:
-% TODO: Maybe add subscript j to pT to properly sum over jets.
 \begin{equation}
 \ptvec^{\kern1pt \text{miss,corr}} =
     \ptvecmiss - \sum^{N_\text{jets}}_{j}

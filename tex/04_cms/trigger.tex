@@ -1,34 +1,35 @@
 \section{Trigger System}
 \label{sec:trigger}
-% TODO: Add a trigger pic.
 % TODO: Add more refs.
-Collection of collision data by CMS for each and every interaction under nominal LHC conditions would require 40\TB/sec, which is an insurmountable task for the CERN computing farm, whose processing is limited by CPU performance and storage capacity.
-Moreover, most proton collisions at the LHC arise from soft interactions and are highly unlikely to contain signatures of new physics, meaning they are of little interest.
-Hence a trigger system is designed to reduce the event collection rate to 100\KHz by rejecting uninteresting events while keeping potentially interesting ones.
-CMS implements a two-stage trigger system, the first of which is the Level-1 (L1) trigger, which filters events and passes them to the High-Level Trigger (HLT).
+If CMS were to try and store all the collision data for each and every interaction under nominal LHC conditions,
+then CMS would collect $\approx$40\TB/\sndns---an insurmountable task for the CERN computing farm, whose processing is limited by CPU performance and storage capacity.
+Moreover, most \pp collisions at the LHC arise from soft interactions and are highly unlikely to contain signatures of new physics, meaning they are of little interest.
+Hence, a trigger system is designed to reduce the event collection rate to 100\KHz by rejecting uninteresting events while keeping potentially interesting ones.
+CMS implements a two-stage trigger system: the Level-1 (L1) trigger passes carefully selected events the second stage, the High-Level Trigger (HLT).
 
-Triggers may be prescaled for two reasons:
-firstly, different physics processes are characterized by different cross sections and,
-secondly, the trigger must keep up with luminosity changes.
+Triggers can be `prescaled' and may be so for two reasons:
+(1) different physics processes are characterized by different cross sections and
+(2) the trigger must keep up with luminosity changes.
 For the former, a prescale may be used to keep large inputs under control by, for example, recording only 1 out of every $x$ collisions, where $x$ is the prescale value.
-This may be implemented if a process is far more likely to be recorded in order to reduce the rate.
+This may be implemented for frequently occurring processes since they can be recorded (relatively) whenever is needed.
+By cutting down on these frequent events, it frees up the trigger to focus on rarer events.
 For the latter, it is important to note that as the luminosity drops, prescales can be relaxed and can therefore change within the same fill.
-A trigger can be prescaled at both levels in the CMS trigger system.
+A trigger can be prescaled at both trigger levels in the CMS trigger system.
 
 \subsection{The Level-1 Trigger}
 \label{sec:L1_trig}
-The Level-1 trigger reduces the event rate from 50\MHz to 100\KHz with a latency of 3.2\mus by utilizing Field Programmable Gate Arrays (FPGAs) and Application Specific Integrated Circuits (ASICs).
+The L1 trigger reduces the event rate from 50\MHz to 100\KHz with a latency of 3.2\mus by utilizing Field Programmable Gate Arrays (FPGAs) and Application Specific Integrated Circuits (ASICs).
 The L1 trigger uses only coarsely segmented data from the calorimeters and muon detectors while maintaining all of the high-resolution data in pipeline memories in the front-end electronics.
-The L1 trigger features several algorithms (L1 bits or seeds) to store a general description of the event content from events that are accepted, which is then passed to the HLT for further event processing.
+The L1 trigger features several algorithms (L1 `bits' or `seeds') to store a general description of the event content from an accepted event, which is then passed to the HLT for further event processing.
 
 \subsection{The High-Level Trigger}
 \label{sec:hlt}
-The HLT is a software system organized into a set of algorithms known as ``paths'' designed to select specific event topologies, thus reducing the output rate from 100\KHz to approximately 1\KHz.
-Each path comprises steps (\emph{modules}) that reconstruct high-level objects and implements decisions based on their properties.
-Each path can be modified by changing its modules or by defining new ones, maximizing the flexibility of the software.
+The HLT is a software system organized into a set of algorithms known as `paths' designed to select specific event topologies, thus reducing the output rate from 100\KHz to approximately 1\KHz.
+Each path comprises steps (`modules') that reconstruct high-level objects and implement decisions based on their properties.
+The paths can be modified by changing the modules or by defining new ones, which maximizes the flexibility of the software.
 
-The guiding principles for the construction of HLT paths are regional reconstruction (focusing only on detector regions tagged as interesting by the L1 seeds) and fast event veto (discarding uninteresting events as soon as possible to optimize trigger timing).
-
-Selected events are stored in various Primary Datasets (PD) to be used for offline analyses.
+The guiding principles for the construction of HLT paths are regional reconstruction (\ie focusing only on detector regions tagged as \emph{interesting} by the L1 seeds)
+and fast event veto (\ie discarding uninteresting events as soon as possible to optimize trigger timing).
+Selected events are stored in various Primary Datasets (PD) to be used for offline analysis.
 Events with similar topologies are often found in the same PD.
-Since a single event may satisfy the criteria for multple HLT paths, an event may be stored more than once in the same PD.
+Since a single event may satisfy the criteria for multple HLT paths, it is common for an event to be stored multiple times within the same PD.

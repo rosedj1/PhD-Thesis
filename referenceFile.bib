@@ -146,10 +146,11 @@ techreport{citekey,
 % TODO: In key=title, get the sqrt symbol to have math mode font. 
 % TODO: Change all lepton l's to {$\ell$}
 % TODO: Are quotes around titles necessary?
+% TODO: Get fresh citations from INSPIREHEP.
 
 %=== Higgs Discovery ===%
 @article{chatrchyan_observation_2012,
-	title = {Observation of a new boson at a mass of 125{\GeV} with the {CMS} experiment at the {LHC}},
+	title = "{Observation of a new boson at a mass of $125{\GeV}$ with the {CMS} experiment at the {LHC}}",
 	volume = {716},
 	issn = {0370-2693},
 	url = {https://www.sciencedirect.com/science/article/pii/S0370269312008581},
@@ -163,6 +164,20 @@ techreport{citekey,
 	year = {2012},
 	keywords = {CMS, Higgs, Physics},
 	pages = {30--61},
+}
+@article{chatrchyan_observation_2012_xunwu,
+      title          = "{O}bservation of a new boson at a mass of ${125\GeV}$ with the {CMS} experiment at the {LHC}",
+      collaboration  = "CMS",
+      journal        = "Phys. Lett. B",
+      volume         = "716",
+      year           = "2012",
+      pages          = "30",
+      doi            = "10.1016/j.physletb.2012.08.021",
+      eprint         = "1207.7235",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-HIG-12-028, CERN-PH-EP-2012-220",
+      SLACcitation   = "%%CITATION = ARXIV:1207.7235;%%"
 }
 @article{aad_observation_2012,
 	title = {Observation of a new particle in the search for the {Standard} {Model} {Higgs} boson with the {ATLAS} detector at the {LHC}},
@@ -190,12 +205,41 @@ techreport{citekey,
 	number = {6},
 	urldate = {2022-06-06},
 	journal = {Journal of High Energy Physics},
-	author = {Chatrchyan, S. and Khachatryan, V. and Sirunyan, A. M. and Tumasyan, A. and Adam, W. and Bergauer, T. and Dragicevic, M. and Er{\"o}, J. and Fabjan, C. and Friedl, M. and Fr{\"u}hwirth, R. and Ghete, V. M. and H{\"o}rmann, N. and Bloch, D. and Bodin, D. and {The CMS collaboration}},
+	author = {Chatrchyan, S. and others},
 	month = jun,
 	year = {2013},
-	keywords = {Hadron-Hadron Scattering},
+	keywords = {Hadron--Hadron Scattering},
 	pages = {81},
 }
+@article{chatrchyan_observation_2013_xunwu,
+      author         = "Chatrchyan, Serguei and others",
+      title          = "{O}bservation of a new boson with mass near ${125\GeV}$ in ${\Pp\Pp}$ collisions at ${\sqrt{s} = 7}$ and {8\TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "06",
+      year           = "2013",
+      pages          = "081",
+      doi            = "10.1007/JHEP06(2013)081",
+      eprint         = "1303.4571",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "CMS-HIG-12-036, CERN-PH-EP-2013-035",
+      SLACcitation   = "%%CITATION = ARXIV:1303.4571;%%"
+}
+% From arXiv.
+article{2013,
+	doi = {10.1007/jhep06(2013)081},
+	url = {https://doi.org/10.1007%2Fjhep06%282013%29081},
+	year = 2013,
+	month = {jun},
+	publisher = {Springer Science and Business Media {LLC}},
+	volume = {2013},
+	number = {6},
+	author = {S. Chatrchyan and V. Khachatryan and A. M. Sirunyan and A. Tumasyan and W. Adam and T. Bergauer and M. Dragicevic and J. Erö and C. Fabjan and M. Friedl and R. Frühwirth},
+	title = {Observation of a new boson with mass near 125 {GeV} in pp collisions at {\textdollar} {\textbackslash}sqrt$\lbrace$s$\rbrace$=7 {\textdollar} and 8 {TeV}},
+	journal = {Journal of High Energy Physics}
+}
+%========================%
 
 %=== Higgs Mass Measurements ===%
 @article{PhysRevLett.114.191803,
@@ -244,9 +288,7 @@ article{the_cms_collaboration_precise_2015,
 	year = {2015},
 	pages = {212},
 }
-
-% HIG-16-041
-% Xunwu's version: 2016 HZZ mass
+% Xunwu's version of HIG-16-041 (2016 HZZ mass measurement)
 @article{HIG_16_041,
       author         = "Sirunyan, Albert M and others",
       title          = "{M}easurements of properties of the {H}iggs boson decaying into the four-lepton final state in pp collisions at ${\sqrt{s}=13\TeV}$",
@@ -285,20 +327,6 @@ article{the_cms_collaboration_precise_2015,
       year          = "2019",
       url           = "http://cds.cern.ch/record/2667225",
 } % GOOD!
-@techreport{ATLAS-CONF-2019-025,
-      title         = "{Measurements of the Higgs boson inclusive, differential
-                       and production cross sections in the $4\ell$ decay channel
-                       at $\sqrt{s} = 13\TeV$ with the ATLAS detector}",
-      institution   = "CERN",
-      collaboration = "ATLAS",
-      address       = "Geneva",
-      number        = "ATLAS-CONF-2019-025",
-      month         = "Jul",
-      year          = "2019",
-      url           = "http://cds.cern.ch/record/2682107",
-      note          = "All figures including auxiliary figures are available at
-                       https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2019-025",
-} % GOOD!
 @article{sirunyan_measurement_2020,
 	title = {A measurement of the {Higgs} boson mass in the diphoton decay channel},
 	volume = {805},
@@ -314,6 +342,72 @@ article{the_cms_collaboration_precise_2015,
 	pages = {135425},
 }
 
+%=== Measurements of the weak mixing angle ===%
+@article{noauthor_precision_2006,
+	title = {Precision electroweak measurements on the {Z} resonance},
+	volume = {427},
+	issn = {03701573},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0370157305005119},
+	doi = {10.1016/j.physrep.2005.12.006},
+	language = {en},
+	number = {5-6},
+	urldate = {2022-08-29},
+	journal = {Phys. Rept.},
+	month = may,
+	year = {2006},
+	pages = {257--454},
+  primaryClass = "hep-ex",
+  collaboration = {SLD Electroweak Group, DELPHI, ALEPH, SLD, SLD Heavy Flavour Group, OPAL, LEP Electroweak Working Group, L3},
+  author = {Schael Sammyboy and others}
+}
+@article{the_lhcb_collaboration_measurement_2015,
+	title = {Measurement of the forward-backward asymmetry in ${\PZ/\gamma^\ast \to \mumupm}$ decays and determination of the effective weak mixing angle},
+	volume = {2015},
+	issn = {1029-8479},
+	url = {http://link.springer.com/10.1007/JHEP11(2015)190},
+	doi = {10.1007/JHEP11(2015)190},
+	language = {en},
+	number = {11},
+	urldate = {2022-08-29},
+	journal = {J. High Energ. Phys.},
+	month = nov,
+	year = {2015},
+	pages = {190},
+	collaboration = {LHCb},
+}
+  author = {LHCb collaboration},
+@article{cms_collaboration_measurement_2018,
+	title = {Measurement of the weak mixing angle using the forward-backward asymmetry of {Drell}--{Yan} events in pp collisions at ${\sqrt{s} = 8\TeV}$},
+	volume = {78},
+	issn = {1434-6044, 1434-6052},
+	url = {http://link.springer.com/10.1140/epjc/s10052-018-6148-7},
+	doi = {10.1140/epjc/s10052-018-6148-7},
+	language = {en},
+	number = {9},
+	urldate = {2022-08-29},
+	journal = {Eur. Phys. J. C},
+	collaboration = {CMS},
+	month = sep,
+	year = {2018},
+	pages = {701},
+}
+
+
+
+% TODO: INCORPORATE
+@techreport{ATLAS-CONF-2019-025,
+      title         = "{Measurements of the Higgs boson inclusive, differential and production cross sections in the $4\ell$ decay channel at $\sqrt{s} = 13\TeV$ with the ATLAS detector}",
+      institution   = "CERN",
+      collaboration = "ATLAS",
+      address       = "Geneva",
+      number        = "ATLAS-CONF-2019-025",
+      month         = "Jul",
+      year          = "2019",
+      url           = "http://cds.cern.ch/record/2682107",
+      note          = "All figures including auxiliary figures are available at
+                       https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2019-025",
+} % GOOD!
+
 %=== The PDG ===%
 % How JHEP cites it:
 % Particle Data Group collaboration, J. Beringer et al., Review of particle physics (RPP), Phys. Rev. D 86 (2012) 010001
@@ -324,7 +418,6 @@ article{the_cms_collaboration_precise_2015,
 	issn = {2050-3911},
 	url = {https://doi.org/10.1093/ptep/ptaa104},
 	doi = {10.1093/ptep/ptaa104},
-	abstract = {The Review summarizes much of particle physics and cosmology. Using data from previous editions, plus 3,324 new measurements from 878 papers, we list, evaluate, and average measured properties of gauge bosons and the recently discovered Higgs boson, leptons, quarks, mesons, and baryons. We summarize searches for hypothetical particles such as supersymmetric particles, heavy bosons, axions, dark photons, etc. Particle properties and search limits are listed in Summary Tables. We give numerous tables, figures, formulae, and reviews of topics such as Higgs Boson Physics, Supersymmetry, Grand Unified Theories, Neutrino Mixing, Dark Energy, Dark Matter, Cosmology, Particle Detectors, Colliders, Probability and Statistics. Among the 120 reviews are many that are new or heavily revised, including a new review on High Energy Soft QCD and Diffraction and one on the Determination of CKM Angles from B Hadrons.The Review is divided into two volumes. Volume 1 includes the Summary Tables and 98 review articles. Volume 2 consists of the Particle Listings and contains also 22 reviews that address specific aspects of the data presented in the Listings.The complete Review (both volumes) is published online on the website of the Particle Data Group (pdg.lbl.gov) and in a journal. Volume 1 is available in print as the PDG Book. A Particle Physics Booklet with the Summary Tables and essential tables, figures, and equations from selected review articles is available in print and as a web version optimized for use on phones as well as an Android app.},
 	number = {8},
 	urldate = {2022-06-08},
 	journal = {Progress of Theoretical and Experimental Physics},
@@ -453,7 +546,7 @@ article{PDG2020,
 
 @article{PhysRevLett.128.232501,
   title = {Results from the {Baksan} {Experiment} on Sterile Transitions {(BEST)}},
-  author = {Barinov, V. V. and Cleveland, B. T. and Danshin, S. N. and Ejiri, H. and Elliott, S. R. and Frekers, D. and Gavrin, V. N. and Gorbachev, V. V. and Gorbunov, D. S. and Haxton, W. C. and Ibragimova, T. V. and Kim, I. and Kozlova, Yu. P. and Zvir, A. I.},
+  author = {Barinov, V. and others},
   journal = {Phys. Rev. Lett.},
   volume = {128},
   issue = {23},
@@ -502,21 +595,329 @@ article{PDG2020,
 	pages = {170--176},
 }
 	author = {{CDF Collaboration{\textdagger}{\textdaggerdbl}} and Aaltonen, T. and Amerio, S. and Amidei, D. and Anastassov, A. and Annovi, A. and Antos, J. and Apollinari, G. and Appel, J. A. and Arisawa, T. and Artikov, A. and Asaadi, J. and Ashmanskas, W. and Auerbach, B. and Aurisano, A. and Azfar, F. and Badgett, W. and Bae, T. and Barbaro-Galtieri, A. and Barnes, V. E. and Barnett, B. A. and Barria, P. and Bartos, P. and Bauce, M. and Bedeschi, F. and Behari, S. and Bellettini, G. and Bellinger, J. and Benjamin, D. and Beretvas, A. and Bhatti, A. and Bland, K. R. and Blumenfeld, B. and Bocci, A. and Bodek, A. and Bortoletto, D. and Boudreau, J. and Boveia, A. and Brigliadori, L. and Bromberg, C. and Brucken, E. and Budagov, J. and Budd, H. S. and Burkett, K. and Busetto, G. and Bussey, P. and Butti, P. and Buzatu, A. and Calamba, A. and Camarda, S. and Campanelli, M. and Carls, B. and Carlsmith, D. and Carosi, R. and Carrillo, S. and Casal, B. and Casarsa, M. and Castro, A. and Catastini, P. and Cauz, D. and Cavaliere, V. and Cerri, A. and Cerrito, L. and Chen, Y. C. and Chertok, M. and Chiarelli, G. and Chlachidze, G. and Cho, K. and Chokheli, D. and Clark, A. and Clarke, C. and Convery, M. E. and Conway, J. and Corbo, M. and Cordelli, M. and Cox, C. A. and Cox, D. J. and Cremonesi, M. and Cruz, D. and Cuevas, J. and Culbertson, R. and d{\textquoteright}Ascenzo, N. and Datta, M. and de Barbaro, P. and Demortier, L. and Deninno, M. and D{\textquoteright}Errico, M. and Devoto, F. and Di Canto, A. and Di Ruzza, B. and Dittmann, J. R. and Donati, S. and D{\textquoteright}Onofrio, M. and Dorigo, M. and Driutti, A. and Ebina, K. and Edgar, R. and Elagin, A. and Erbacher, R. and Errede, S. and Esham, B. and Farrington, S. and Fern{\'a}ndez Ramos, J. P. and Field, R. and Flanagan, G. and Forrest, R. and Franklin, M. and Freeman, J. C. and Frisch, H. and Funakoshi, Y. and Galloni, C. and Garfinkel, A. F. and Garosi, P. and Gerberich, H. and Gerchtein, E. and Giagu, S. and Giakoumopoulou, V. and Gibson, K. and Ginsburg, C. M. and Giokaris, N. and Giromini, P. and Glagolev, V. and Glenzinski, D. and Gold, M. and Goldin, D. and Golossanov, A. and Gomez, G. and Gomez-Ceballos, G. and Goncharov, M. and Gonz{\'a}lez L{\'o}pez, O. and Gorelov, I. and Goshaw, A. T. and Goulianos, K. and Gramellini, E. and Grosso-Pilcher, C. and Guimaraes da Costa, J. and Hahn, S. R. and Han, J. Y. and Happacher, F. and Hara, K. and Hare, M. and Harr, R. F. and Harrington-Taber, T. and Hatakeyama, K. and Hays, C. and Heinrich, J. and Herndon, M. and Hocker, A. and Hong, Z. and Hopkins, W. and Hou, S. and Hughes, R. E. and Husemann, U. and Hussein, M. and Huston, J. and Introzzi, G. and Iori, M. and Ivanov, A. and James, E. and Jang, D. and Jayatilaka, B. and Jeon, E. J. and Jindariani, S. and Jones, M. and Joo, K. K. and Jun, S. Y. and Junk, T. R. and Kambeitz, M. and Kamon, T. and Karchin, P. E. and Kasmi, A. and Kato, Y. and Ketchum, W. and Keung, J. and Kilminster, B. and Kim, D. H. and Kim, H. S. and Kim, J. E. and Kim, M. J. and Kim, S. H. and Kim, S. B. and Kim, Y. J. and Kim, Y. K. and Kimura, N. and Kirby, M. and Kondo, K. and Kong, D. J. and Konigsberg, J. and Kotwal, A. V. and Kreps, M. and Kroll, J. and Kruse, M. and Kuhr, T. and Kurata, M. and Laasanen, A. T. and Lammel, S. and Lancaster, M. and Lannon, K. and Latino, G. and Lee, H. S. and Lee, J. S. and Leo, S. and Leone, S. and Lewis, J. D. and Limosani, A. and Lipeles, E. and Lister, A. and Liu, Q. and Liu, T. and Lockwitz, S. and Loginov, A. and Lucchesi, D. and Luc{\`a}, A. and Lueck, J. and Lujan, P. and Lukens, P. and Lungu, G. and Lys, J. and Lysak, R. and Madrak, R. and Maestro, P. and Malik, S. and Manca, G. and Manousakis-Katsikakis, A. and Marchese, L. and Margaroli, F. and Marino, P. and Matera, K. and Mattson, M. E. and Mazzacane, A. and Mazzanti, P. and McNulty, R. and Mehta, A. and Mehtala, P. and Menzione, A. and Mesropian, C. and Miao, T. and Michielin, E. and Mietlicki, D. and Mitra, A. and Miyake, H. and Moed, S. and Moggi, N. and Moon, C. S. and Moore, R. and Morello, M. J. and Mukherjee, A. and Muller, Th. and Murat, P. and Mussini, M. and Nachtman, J. and Nagai, Y. and Naganoma, J. and Nakano, I. and Napier, A. and Nett, J. and Nigmanov, T. and Nodulman, L. and Noh, S. Y. and Norniella, O. and Oakes, L. and Oh, S. H. and Oh, Y. D. and Okusawa, T. and Orava, R. and Ortolan, L. and Pagliarone, C. and Palencia, E. and Palni, P. and Papadimitriou, V. and Parker, W. and Pauletta, G. and Paulini, M. and Paus, C. and Phillips, T. J. and Piacentino, G. and Pianori, E. and Pilot, J. and Pitts, K. and Plager, C. and Pondrom, L. and Poprocki, S. and Potamianos, K. and Pranko, A. and Prokoshin, F. and Ptohos, F. and Punzi, G. and Redondo Fern{\'a}ndez, I. and Renton, P. and Rescigno, M. and Rimondi, F. and Ristori, L. and Robson, A. and Rodriguez, T. and Rolli, S. and Ronzani, M. and Roser, R. and Rosner, J. L. and Ruffini, F. and Ruiz, A. and Russ, J. and Rusu, V. and Sakumoto, W. K. and Sakurai, Y. and Santi, L. and Sato, K. and Saveliev, V. and Savoy-Navarro, A. and Schlabach, P. and Schmidt, E. E. and Schwarz, T. and Scodellaro, L. and Scuri, F. and Seidel, S. and Seiya, Y. and Semenov, A. and Sforza, F. and Shalhout, S. Z. and Shears, T. and Shepard, P. F. and Shimojima, M. and Shochet, M. and Shreyber-Tecker, I. and Simonenko, A. and Sliwa, K. and Smith, J. R. and Snider, F. D. and Song, H. and Sorin, V. and St. Denis, R. and Stancari, M. and Stentz, D. and Strologas, J. and Sudo, Y. and Sukhanov, A. and Suslov, I. and Takemasa, K. and Takeuchi, Y. and Tang, J. and Tecchio, M. and Teng, P. K. and Thom, J. and Thomson, E. and Thukral, V. and Toback, D. and Tokar, S. and Tollefson, K. and Tomura, T. and Torre, S. and Torretta, D. and Totaro, P. and Trovato, M. and Ukegawa, F. and Uozumi, S. and V{\'a}zquez, F. and Velev, G. and Vellidis, K. and Vernieri, C. and Vidal, M. and Vilar, R. and Viz{\'a}n, J. and Vogel, M. and Volpi, G. and Wagner, P. and Wallny, R. and Wang, S. M. and Waters, D. and Wester, W. C. and Whiteson, D. and Wicklund, A. B. and Wilbur, S. and Williams, H. H. and Wilson, J. S. and Wilson, P. and Winer, B. L. and Wittich, P. and Wolbers, S. and Wolfmeister, H. and Wright, T. and Wu, X. and Wu, Z. and Yamamoto, K. and Yamato, D. and Yang, T. and Yang, U. K. and Yang, Y. C. and Yao, W.-M. and Yeh, G. P. and Yi, K. and Yoh, J. and Yorita, K. and Yoshida, T. and Yu, G. B. and Yu, I. and Zanetti, A. M. and Zeng, Y. and Zhou, C. and Zucchelli, S.},
-% Weinberg Angle.
-@article{Sirlin:1980nh,
-    author = "Sirlin, A.",
-    title = "{Radiative Corrections in the $SU(2)_L \times U(1)$ Theory: A Simple Renormalization Framework}",
-    reportNumber = "PRINT-80-0267 (IAS,PRINCETON)",
-    doi = "10.1103/PhysRevD.22.971",
-    journal = "Phys. Rev. D",
-    volume = "22",
-    pages = "971--981",
-    year = "1980"
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %=== LHC and Luminosity ===%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CERN Accelerator Complex.
+% TODO: URL not showing up.
+@unpublished{cern_complex,
+      author        = "Lopienska, Ewa",
+      title         = "{The CERN accelerator complex, layout in 2022. Complexe des accélérateurs du CERN en janvier 2022}",
+      month         = "Feb",
+      year          = "2022",
+      url           = "https://cds.cern.ch/record/2800984",
+      note          = "General Photo",
+}
+% Dipole magnet cross section.
+unpublished
+@unpublished{dipole_xs,
+      author        = "Maximilien Brice",
+      title         = "{Cross section of an LHC dipole in the tunnel}",
+      month         = "Jul",
+      year          = "2011",
+      url           = "https://cds.cern.ch/record/1365795",
+}
+% Pileup plot.
+% TODO: get more info about this guy.
+@unpublished{pileup,
+      title         = "{Interactions per crossing (pileup) for 2011--2012 and 2015--2018}",
+      url           = "https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults",
+}
+% Proton--proton collision.
+@unpublished{pp_collision,
+      title         = "{When protons collide, from ATLAS Physics Master Classes}",
+      url           = "https://atlas.physicsmasterclasses.org/en/zpath_protoncollisions.html",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%=== The CMS Experiment ===%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TODO: Get URL to show up.
+@unpublished{lhc_poi,
+      title         = "{Underground infrastructure and alignments of the SPS, LEP and LHC collider tunnels}",
+      url           = "https://www.tunneltalk.com/CERN-10Dec2014-Future-Circular-Collider-preliminary-alignment-studies.php",
+      month         = "Dec",
+      year          = "2014",
+      author        = "Peter Kenyon"
+}
+@techreport{cms_cut_away,
+      author        = "Sakuma, Tai",
+      title         = "{Cutaway diagrams of CMS detector}",
+      collaboration = "CMS",
+      month         = "May",
+      year          = "2019",
+      number        = "{CMS-OUTREACH-2019-001}",
+      url           = "https://cds.cern.ch/record/2665537",
+}
+
+% TODO: Get URL to show up.
+@unpublished{cms_filter,
+      author        = "Barney, David",
+      title         = "{CMS Detector Slice}",
+      month         = "Jan",
+      year          = "2016",
+      url           = "https://cds.cern.ch/record/2120661",
+      note          = "CMS Collection",
+}
+% TODO: Get URL to show up.
+@unpublished{strip_detector_xs,
+  collaboration = "{CMS}",
+  title  = "{CMS Tracker layers shown in the plane perpendicular to the beam}",
+  year   = {2016},
+  url    = "https://cms.cern/detector/identifying-tracks/silicon-strips",
+}
+% TODO: Get URL to show up.
+@unpublished{ecal_crystal_lab,
+  author = {Lucas Taylor},
+  note   = {},
+  title  = "{Lead tungstate crystals for the CMS ECAL}",
+  year   = {2011},
+  url    = {https://cms.cern/book/export/html/1198},
+}
+% Phase-1 Pixel Upgrade.
+@article{pixel_phase1,
+      author        = "Adam, W. and others",
+      title         = "{The CMS Phase-1 Pixel Detector Upgrade}",
+      journal       = "JINST",
+      collaboration = "CMS Tracker Group of the CMS",
+      archivePrefix = "arXiv",
+      eprint        = "2012.14304",
+      reportNumber  = "02",
+      volume        = "16",
+      pages         = "P02027. 84 p",
+      month         = "Dec",
+      year          = "2020",
+      url           = "https://cds.cern.ch/record/2748381",
+      doi           = "10.1088/1748-0221/16/02/P02027",
+}
+@unpublished{tracker_real,
+  collaboration = {CMS},
+  note   = {https://cms.cern/detector/identifying-tracks},
+  title  = "{CMS Tracker showing silicon strip detectors in the barrel module}",
+  year   = {2017}
+}
+% TODO: INCORPORATE
+@techreport{Dominguez:1481838,
+      author        = "Dominguez, A and others",
+      editor        = "Dominguez, A",
+      title         = "{CMS Technical Design Report for the Pixel Detector Upgrade}",
+      reportNumber  = "CERN-LHCC-2012-016, CMS-TDR-11",
+      month         = "Sep",
+      year          = "2012",
+      url           = "https://cds.cern.ch/record/1481838",
+      note          = "Additional contacts: Jeffrey Spalding, Fermilab,
+                       Jeffrey.Spalding@cern.ch Didier Contardo, Universite Claude
+                       Bernard-Lyon I, didier.claude.contardo@cern.ch",
+}
+techreport{arXiv:2012.14304_xunwu,
+      title         = "{The CMS Phase-1 Pixel Detector Upgrade}",
+      collaboration = "CMS Tracker Group",
+      number        = "arXiv:2012.14304",
+      month         = "Dec",
+      year          = "2020",
+      reportNumber  = "arXiv:2012.14304",
+      url           = "https://cds.cern.ch/record/2748381",
+}
+% Magnetic Field Lines.
+@article{mag_field_lines,
+    author = "Chatrchyan, S and others",
+    collaboration = "CMS",
+    title = "{Precise Mapping of the Magnetic Field in the CMS Barrel Yoke using Cosmic Rays}",
+    eprint = "0910.5530",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.ins-det",
+    reportNumber = "CMS-CFT-09-015",
+    doi = "10.1088/1748-0221/5/03/T03021",
+    journal = "JINST",
+    volume = "5",
+    pages = "T03021",
+    year = "2010"
+}
+@article{cms_long_xs_view,
+    author = "Sirunyan, A. M. and others",
+    collaboration = "CMS",
+    title = "{Performance of the CMS muon detector and muon reconstruction with proton--proton collisions at $\sqrt{s}= 13\TeV$}",
+    eprint = "1804.04528",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.ins-det",
+    reportNumber = "CMS-MUO-16-001, CERN-EP-2018-058",
+    doi = "10.1088/1748-0221/13/06/P06015",
+    journal = "JINST",
+    volume = "13",
+    number = "06",
+    pages = "P06015",
+    year = "2018"
+}
+% Particle Flow.
+@article{particle_flow,
+    author = "Sirunyan, A. M. and others",
+    collaboration = "CMS",
+    title = "{Particle-flow reconstruction and global event description with the CMS detector}",
+    eprint = "1706.04965",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.ins-det",
+    reportNumber = "CMS-PRF-14-001, CERN-EP-2017-110",
+    doi = "10.1088/1748-0221/12/10/P10003",
+    journal = "JINST",
+    volume = "12",
+    number = "10",
+    pages = "P10003",
+    year = "2017"
+}
+% Xunwu also had these keys but including them doesn't change anything with my jhep.bst file:
+	publisher = {{IOP} Publishing},
+	pages = {P10003--P10003},
+	month = {oct},
+	url = {https://doi.org/10.1088%2F1748-0221%2F12%2F10%2Fp10003},
+@article{collaboration_cms_2008,
+	title = {The {CMS} experiment at the {CERN} {LHC}},
+	volume = {3},
+	issn = {1748-0221},
+	url = {https://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08004},
+	doi = {10.1088/1748-0221/3/08/S08004},
+	number = {08},
+	urldate = {2022-06-10},
+	journal = {J. Inst.},
+      collaboration = {CMS},
+	author = {Collaboration, The CMS and Chatrchyan, S and Hmayakyan, G and Khachatryan, V and Sirunyan, A M and Adam, W and Bauer, T and Bergauer, T and Bergauer, H and Dragicevic, M and Punz, T and Riboni, P},
+	month = aug,
+	year = {2008},
+	pages = {S08004--S08004},
+}
+% Electron Reconstruction
+@article{Ereco_performance_2015,
+	title = {Performance of electron reconstruction and selection with the {CMS} detector in proton-proton collisions at $\sqrt{s} = 8${\TeV}},
+	volume = {10},
+	issn = {1748-0221},
+	doi = {10.1088/1748-0221/10/06/P06005},
+	language = {en},
+	number = {06},
+	urldate = {2022-07-23},
+	journal = {J. Inst.},
+    collaboration = {CMS},
+	month = jun,
+	year = {2015},
+	pages = {P06005--P06005},
+	url = {https://iopscience.iop.org/article/10.1088/1748-0221/10/06/P06005},
+}
+@article{general_track_reco,
+	doi = {10.1088/1748-0221/9/10/p10009},
+	year = 2014,
+	month = {oct},
+	publisher = {{IOP} Publishing},
+	volume = {9},
+	number = {10},
+	pages = {P10009--P10009},
+      collaboration = {CMS},
+	title = {Description and performance of track and primary-vertex reconstruction with the {CMS} tracker},
+	journal = {Journal of Instrumentation},
+	url = {https://doi.org/10.1088/1748-0221/9/10/p10009},
+}
+% Gaussian-sum filter
+@article{gsf,
+	doi = {10.1088/0954-3899/31/9/n01},
+	year = 2005,
+	month = {jul},
+	publisher = {{IOP} Publishing},
+	volume = {31},
+	number = {9},
+	pages = {N9--N20},
+	author = {W Adam and others},
+	title = {Reconstruction of electrons with the {G}aussian-sum filter in the {CMS} tracker at the {LHC}},
+	journal = {Journal of Physics G: Nuclear and Particle Physics},
+	url = {https://doi.org/10.1088/0954-3899/31/9/n01},
+}
+	author = {W Adam and R Frühwirth and A Strandlie and T Todorov},
+% Muon Reco.
+@article{reco_muon,
+	doi = {10.1088/1748-0221/7/10/p10002},
+	year = 2012,
+	month = {oct},
+	publisher = {{IOP} Publishing},
+	volume = {7},
+	number = {10},
+	pages = {P10002--P10002},
+	author = {The CMS collaboration},
+      collaboration = {CMS},
+	title = "{Performance of {CMS} muon reconstruction in pp collision events at {$\sqrt{s} = 7\TeV$}}",
+	journal = {J. Inst.},
+	url = {https://doi.org/10.1088/1748-0221/7/10/p10002},
+}
+
+@article{hps_algo1,
+    author = "Chatrchyan, Serguei and others",
+    collaboration = "CMS",
+    title = "{Performance of $\tau$-lepton reconstruction and identification in CMS}",
+    eprint = "1109.6034",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.ins-det",
+    reportNumber = "CERN-PH-EP-2011-137, CMS-TAU-11-001",
+    doi = "10.1088/1748-0221/7/01/P01001",
+    journal = "JINST",
+    volume = "7",
+    pages = "P01001",
+    year = "2012",
+} % From INSPIRE.
+@article{hps_algo2,
+    author = "Khachatryan, Vardan and others",
+    collaboration = "CMS",
+    title = "{Reconstruction and identification of \ensuremath{\tau} lepton decays to hadrons and \ensuremath{\nu}$_\tau$ at CMS}",
+    eprint = "1510.07488",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.ins-det",
+    reportNumber = "CMS-TAU-14-001, CERN-PH-EP-2015-261",
+    doi = "10.1088/1748-0221/11/01/P01019",
+    journal = "JINST",
+    volume = "11",
+    number = "01",
+    pages = "P01019",
+    year = "2016"
+} % From INSPIRE.
+@article{Cacciari:2008gp,
+    author = "Cacciari, Matteo and others",
+    title = "{The anti-$k_t$ jet clustering algorithm}",
+    eprint = "0802.1189",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    reportNumber = "LPTHE-07-03",
+    doi = "10.1088/1126-6708/2008/04/063",
+    journal = "JHEP",
+    volume = "04",
+    pages = "063",
+    year = "2008"
+} % From INSPIRE.
+@article{Cacciari:2011ma,
+    author = "Cacciari, Matteo and others",
+    title = "{FastJet User Manual}",
+    eprint = "1111.6097",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    reportNumber = "CERN-PH-TH-2011-297",
+    doi = "10.1140/epjc/s10052-012-1896-2",
+    journal = "Eur. Phys. J. C",
+    volume = "72",
+    pages = "1896",
+    year = "2012"
+} % From INSPIRE.
+@article{CMS:2016lmd,
+    author = "Khachatryan, Vardan and others",
+    collaboration = "CMS",
+    title = "{Jet energy scale and resolution in the CMS experiment in pp collisions at 8 TeV}",
+    eprint = "1607.03663",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-JME-13-004, CERN-PH-EP-2015-305",
+    doi = "10.1088/1748-0221/12/02/P02014",
+    journal = "JINST",
+    volume = "12",
+    number = "02",
+    pages = "P02014",
+    year = "2017"
+} % From INSPIRE.
+
+
+CERN
 % LUM-17-003
 % From iNSPIRE:
 @article{LUM-17-003,
@@ -553,105 +954,11 @@ article{PDG2020,
     url = "http://cds.cern.ch/record/2676164"
 }
 
-%=== The CMS Experiment ===%
-@article{collaboration_cms_2008,
-	title = {The {CMS} experiment at the {CERN} {LHC}},
-	volume = {3},
-	issn = {1748-0221},
-	url = {https://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08004},
-	doi = {10.1088/1748-0221/3/08/S08004},
-	number = {08},
-	urldate = {2022-06-10},
-	journal = {J. Inst.},
-      collaboration = {CMS},
-	author = {Collaboration, The CMS and Chatrchyan, S and Hmayakyan, G and Khachatryan, V and Sirunyan, A M and Adam, W and Bauer, T and Bergauer, T and Bergauer, H and Dragicevic, M and Punz, T and Riboni, P},
-	month = aug,
-	year = {2008},
-	pages = {S08004--S08004},
-}
-% Electron Reconstruction
-@article{Ereco_performance_2015,
-	title = {Performance of electron reconstruction and selection with the {CMS} detector in proton-proton collisions at $\sqrt{s} = 8${\TeV}},
-	volume = {10},
-	issn = {1748-0221},
-	doi = {10.1088/1748-0221/10/06/P06005},
-	language = {en},
-	number = {06},
-	urldate = {2022-07-23},
-	journal = {J. Inst.},
-      collaboration = {CMS},
-	month = jun,
-	year = {2015},
-	pages = {P06005--P06005},
-	url = {https://iopscience.iop.org/article/10.1088/1748-0221/10/06/P06005},
-}
-% Gaussian-sum filter
-@article{gsf,
-	doi = {10.1088/0954-3899/31/9/n01},
-	year = 2005,
-	month = {jul},
-	publisher = {{IOP} Publishing},
-	volume = {31},
-	number = {9},
-	pages = {N9--N20},
-	author = {W Adam and others},
-	title = {Reconstruction of electrons with the {G}aussian-sum filter in the {CMS} tracker at the {LHC}},
-	journal = {Journal of Physics G: Nuclear and Particle Physics},
-	url = {https://doi.org/10.1088/0954-3899/31/9/n01},
-}
-	author = {W Adam and R Frühwirth and A Strandlie and T Todorov},
-% 
-@article{general_track_reco,
-	doi = {10.1088/1748-0221/9/10/p10009},
-	year = 2014,
-	month = {oct},
-	publisher = {{IOP} Publishing},
-	volume = {9},
-	number = {10},
-	pages = {P10009--P10009},
-      collaboration = {CMS},
-	title = {Description and performance of track and primary-vertex reconstruction with the {CMS} tracker},
-	journal = {Journal of Instrumentation},
-	url = {https://doi.org/10.1088/1748-0221/9/10/p10009},
-}
-% Muon Reco.
-@article{reco_muon,
-	doi = {10.1088/1748-0221/7/10/p10002},
-	year = 2012,
-	month = {oct},
-	publisher = {{IOP} Publishing},
-	volume = {7},
-	number = {10},
-	pages = {P10002--P10002},
-	author = {The CMS collaboration},
-      collaboration = {CMS},
-	title = "{Performance of {CMS} muon reconstruction in pp collision events at {$\sqrt{s} = 7\TeV$}}",
-	journal = {J. Inst.},
-	url = {https://doi.org/10.1088/1748-0221/7/10/p10002},
-}
-% Pixel Phase-1 Upgrade.
-@techreport{Dominguez:1481838,
-      author        = "Dominguez, A and Abbaneo, D and Arndt, K and Bacchetta, N
-                       and Ball, A and Bartz, E and Bertl, W and Bilei, G M and
-                       Bolla, G and Cheung, H W K and Chertok, M and Costa, S and
-                       Demaria, N and Daniel Dominguez Vazquez and Ecklund, K and
-                       Erdmann, W and Gill, K and Hall, G and Harder, K and
-                       Hartmann, F and Horisberger, R and Johns, W and Kaestli, H
-                       C and Klein, K and Kotlinski, D and Kwan, S and Pesaresi, M
-                       and Postema, H and Rohe, T and Schäfer, C and Starodumov,
-                       A and Streuli, S and Tricomi, A and Tropea, P and Troska, J
-                       and Vasey, F and Zeuner, W",
-      editor        = "Dominguez, A",
-      title         = "{CMS Technical Design Report for the Pixel Detector
-                       Upgrade}",
-      reportNumber  = "CERN-LHCC-2012-016, CMS-TDR-11",
-      month         = "Sep",
-      year          = "2012",
-      url           = "https://cds.cern.ch/record/1481838",
-      note          = "Additional contacts: Jeffrey Spalding, Fermilab,
-                       Jeffrey.Spalding@cern.ch Didier Contardo, Universite Claude
-                       Bernard-Lyon I, didier.claude.contardo@cern.ch",
-}
+
+
+
+
+
 
 % Universe stability (citation taken straight from url).
 @article{univ_stab,
@@ -848,6 +1155,18 @@ article{Cowan:2010js,
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Xunwu's references below. ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -913,16 +1232,6 @@ article{Cowan:2010js,
 	journal = {Journal of Instrumentation}
 }
 
-@article{Sakuma:2665537,
-      author        = "Sakuma, Tai",
-      title         = "{Cutaway diagrams of CMS detector}",
-      collaboration = "CMS Collaboration",
-      month         = "May",
-      year          = "2019",
-      reportNumber  = "CMS-OUTREACH-2019-001",
-      url           = "https://cds.cern.ch/record/2665537",
-}
-
 % CMS magnetic field
 @article{Collaboration_2010,
 	doi = {10.1088/1748-0221/5/03/t03021},
@@ -944,16 +1253,6 @@ article{Cowan:2010js,
   url          = {https://twiki.cern.ch/twiki/bin/view/CMSPublic/DPGResultsTRK}
 }
 
-% phase-1 pixel
-@techreport{arXiv:2012.14304,
-      title         = "{The CMS Phase-1 Pixel Detector Upgrade}",
-      collaboration = "CMS Tracker Group",
-      number        = "arXiv:2012.14304",
-      month         = "Dec",
-      year          = "2020",
-      reportNumber  = "arXiv:2012.14304",
-      url           = "https://cds.cern.ch/record/2748381",
-}
 
 % ECAL
 @article{BROWN200729,
@@ -1177,54 +1476,6 @@ author = {CMS Collaboration}
       reportNumber   = "CERN-PH-EP-2012-218",
       SLACcitation   = "%%CITATION = ARXIV:1207.7214;%%"
 }
-
-
-XUNWU'S VERSION:
-@article{chatrchyan_observation_2012_xunwu,
-      author         = "Chatrchyan, Serguei and others",
-      title          = "{O}bservation of a new boson at a mass of ${125\GeV}$ with the {CMS} experiment at the {LHC}",
-      collaboration  = "CMS",
-      journal        = "Phys. Lett. B",
-      volume         = "716",
-      year           = "2012",
-      pages          = "30",
-      doi            = "10.1016/j.physletb.2012.08.021",
-      eprint         = "1207.7235",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ex",
-      reportNumber   = "CMS-HIG-12-028, CERN-PH-EP-2012-220",
-      SLACcitation   = "%%CITATION = ARXIV:1207.7235;%%"
-}
-
-@article{chatrchyan_observation_2013_xunwu,
-      author         = "Chatrchyan, Serguei and others",
-      title          = "{O}bservation of a new boson with mass near ${125\GeV}$ in ${\Pp\Pp}$ collisions at ${\sqrt{s} = 7}$ and {8\TeV}",
-      collaboration  = "CMS",
-      journal        = "JHEP",
-      volume         = "06",
-      year           = "2013",
-      pages          = "081",
-      doi            = "10.1007/JHEP06(2013)081",
-      eprint         = "1303.4571",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ex",
-      reportNumber   = "CMS-HIG-12-036, CERN-PH-EP-2013-035",
-      SLACcitation   = "%%CITATION = ARXIV:1303.4571;%%"
-}
-% From arXiv.
-article{2013,
-	doi = {10.1007/jhep06(2013)081},
-	url = {https://doi.org/10.1007%2Fjhep06%282013%29081},
-	year = 2013,
-	month = {jun},
-	publisher = {Springer Science and Business Media {LLC}},
-	volume = {2013},
-	number = {6},
-	author = {S. Chatrchyan and V. Khachatryan and A. M. Sirunyan and A. Tumasyan and W. Adam and T. Bergauer and M. Dragicevic and J. Erö and C. Fabjan and M. Friedl and R. Frühwirth},
-	title = {Observation of a new boson with mass near 125 {GeV} in pp collisions at {\textdollar} {\textbackslash}sqrt$\lbrace$s$\rbrace$=7 {\textdollar} and 8 {TeV}},
-	journal = {Journal of High Energy Physics}
-}
-%========================%
 
 % ATLAS Higgs coupling
 @article{PhysRevD.99.072001,
@@ -2280,21 +2531,6 @@ Program title: Pythia 8.2 Catalogue identifier: ACTU_v4_0 Program summary URL:ht
       SLACcitation   = "%%CITATION = ARXIV:1209.6215;%%"
 }
 
-%object reco
-@article{Sirunyan_2017,
-	doi = {10.1088/1748-0221/12/10/p10003},
-	url = {https://doi.org/10.1088%2F1748-0221%2F12%2F10%2Fp10003},
-	year = 2017,
-	month = {oct},
-	publisher = {{IOP} Publishing},
-	volume = {12},
-	number = {10},
-	pages = {P10003--P10003},
-	author = {A.M. Sirunyan and others},
-	title = {Particle-flow reconstruction and global event description with the {CMS} detector},
-	journal = {Journal of Instrumentation}
-}
-
 @article{Sirunyan:2017ezt,
       author         = "Sirunyan, A. M. and others",
       title          = "{I}dentification of heavy-flavour jets with the {CMS}
@@ -2859,4 +3095,17 @@ abstract = {A minimal supergauge invariant extension of quantum electrodynamics 
     volume = "43",
     pages = "1566--1570",
     year = "1979"
+}
+
+
+% Weinberg Angle... not sure actually
+@article{Sirlin:1980nh,
+    author = "Sirlin, A.",
+    title = "{Radiative Corrections in the $SU(2)_L \times U(1)$ Theory: A Simple Renormalization Framework}",
+    reportNumber = "PRINT-80-0267 (IAS,PRINCETON)",
+    doi = "10.1103/PhysRevD.22.971",
+    journal = "Phys. Rev. D",
+    volume = "22",
+    pages = "971--981",
+    year = "1980"
 }

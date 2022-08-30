@@ -53,16 +53,32 @@ Such is the purpose of the world's largest and most powerful particle accelerato
 Deep beneath the surface of the earth (50--175\meter), the LHC straddles the border shared by France and Switzerland.
 Sandwiched between the scenic Jura mountains to the northwest and the sprawling city of Geneva (French: Genève) to the southeast is CERN.
 To illustrate the enormous circumference (26.659\Km) of this circular accelerator, Fig.~\ref{fig:lhc_on_map} shows the LHC superimposed to scale on a map.
-For reference, the inscribed area of the LHC (56.7$\Km^{2}$) is almost four times greater than the area of the neighboring city of Geneva (15.9$\Km^{2}$).
+For reference, the inscribed area of the LHC (56.7$\Km^{2}$) is almost four times greater than the area of the neighboring city of Geneva (15.9$\Km^{2}$)\footnote{
+    By now, the astute reader may have noticed that the author prefers to use the unit prefix `K' to represent $\tentothe{3}$ instead of the typical lowercase `k'.
+    \emph{But why}, you may ask?
+    The author invites the reader to consider that within the International System of Units (SI), the common unit prefixes that represent a collection of more than 1 base unit are \emph{uppercase} letters: 
+    \eg `M' is mega-- $(\tentothe{6})$,
+    `G' is giga-- $(\tentothe{9})$,
+    `T' is tera-- $(\tentothe{12})$, \etc---except for arguably the most commonly used letter: `k' for kilo $(\tentothe{3})$.
+    Frustrating.
+
+    Furthermore, consider the usage of ``KJ'' on page 6 in Ref.~\cite{collaboration_cms_2008}.
+    Lastly, recall that three zeros in finance are sometimes condensed to a simple `K', \eg \$20\,000 becomes \$20K.
+    Thus, the author chooses consistency over convention and kindly warns the reader to anticipate `K' for `kilo--', such as `\Kgns' to represent 1000 grams, instead of `kg'.
+    
+    The diehard defender of SI may argue that a kilobyte (KB) is 1024 bytes and is typically represented as `KB'.
+    True, so in order to maintain self-consistency within this dissertation, the value 1024 will be represented as `k';
+    so a kilobyte will be represented as `kB', though it is not used in this dissertation. 
+}.
 
 The LHC is not only a particle \emph{accelerator} but also a proton--proton (\pp), proton--lead ion, and lead--lead ion \emph{collider}.
 By sending one particle beam clockwise around the ring and the other beam counterclockwise, the charged particles are carefully maneuvered using dipole magnets and tightly collimated using quadrupole magnets before they ultimately collide at 4 specific points along the LHC, as shown in Fig.~\ref{fig:lhc_on_map}.
 % , anywhere from , , and sandwiched between the scenic Jura mountains to the west and the sprawling city of Geneva (Genève) to the east
 %  straddles the Franco-Swiss border, approximately 100\meter below the surface of the earth (Fig.~\ref{fig:lhc_and_boosters}, Left).
-When the LHC is fully powered, \emph{each} proton in the beam carries an average energy of 6.5\TeV which gives a single \pp collision a massive center-of-mass energy of 13\TeV\footnote{
+When the LHC is fully powered, \emph{each} proton in the beam carries an average energy of 6.5\TeV which gives a single \pp collision a massive\footnote{
     For comparison, a \emph{mosquito} in flight carries about 13\TeV of kinetic energy.
     For two \emph{fundamental particles} to collide with this much energy is truly astonishing!
-}.
+} center-of-mass energy of 13\TeV.
 This emulates the conditions theorized to exist at the beginning of the universe, which allows cosmological studies to be carried out.
 The hugely energetic \pp collisions cause the quark and gluon constituents within the protons to interact with each other and transform into new particles.
 The newly created particles and the residual particle debris are ejected away from the collision point---whether straight down the beampipe, completely orthogonal to it, or somewhere in between.
@@ -107,8 +123,7 @@ Therefore, a natural way to explore the intricacies and inner workings of the LH
     \includegraphics[height=12.5cm]{figures/lhc/cern_complex.png}
     \captionof{figure}
         [The accelerator complex at CERN]
-        {The accelerator complex at CERN. Diagram taken from~\cite{PhysRevLett.114.191803}.% TODO: correct the ref
-        }
+        {The accelerator complex at CERN. Figure taken from~\cite{cern_complex}.}
     \label{fig:lhc_complex}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
@@ -164,8 +179,7 @@ this temperature is colder than that of outer space.
     \captionof{figure}
         [Cross section of a dipole magnet at the LHC]
         {A cross section of one of the 1232 dipole magnets which span the entire length of the LHC tunnel.
-        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
-        } 
+        Figure taken from~\cite{dipole_xs}.} 
     \label{fig:lhc_dipole_xs}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
@@ -181,11 +195,11 @@ This is a testament to just how small protons truly are.
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[width=0.7\textwidth,keepaspectratio]{figures/lhc/pileup_pp_2018.png}
+    \includegraphics[width=0.85\textwidth,keepaspectratio]{figures/lhc/pileup_allYears.pdf}
     \captionof{figure}
-        [Average pileup distribution during the LHC 2018 run]
-        {Distribution of the average number of \pp collisions per proton bunch crossing (\emph{pileup}) which CMS recorded during the LHC 2018 run.
-        Plot taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        [Average pileup distribution during various LHC runs]
+        {Distributions of the average number of \pp interactions per proton bunch crossing (\emph{pileup}) which CMS recorded during various years over the course of Runs 1 and 2.
+        Plot taken from~\cite{pileup}.
         } 
     \label{plt:pileup}
 \end{multiFigure}
@@ -204,14 +218,13 @@ One such dedicated particle detector is located at Point 5---the Compact Muon So
     \captionof{figure}
         [Diagram showing the constituent (\emph{partons}) of two protons interacting in a \pp collision]
         {Two protons can be smashed together at very high energies at the LHC $\left( \sqrtsthirteen \right)$ to have their constituent partons interact and convert into new kinds of matter.
-        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figure taken from~\cite{pp_collision}.
         } 
     \label{fig:pp_collision}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
 % Finally two incoming proton bunches approach a common collision point.
 % - Frequency of BX: considering that proton bunches are spaced 25\ns apart, this means 
-% TODO: FCC?
 % Just as the PS feeds protons into the SPS, which feeds protons into the LHC, so too is it being considered for the LHC to feed a new project---the 100\Km Future Circular Collider.
 % LPS SPS
 % into a beam pipe going clockwise and another 2800 bunches going around counterclockwise, 
@@ -258,7 +271,6 @@ Specifically, if the bunches collide head-on, are Gaussian-distributed, and have
 
 From Eqn.~\ref{eqn:lumi_final}, it is easy to validate the intuitive description of luminosity as described at the beginning of this section:
 $\lumi_\text{b}$ is directly proportional to the numbers of particles in each bunch.
-% TODO: uncomment: and to the frequency of revolution, and it is inversely proportional to the beam widths.
 % TODO: Include the below?
 % Using the values of the LHC ($f_r = 11\,245.6\Hz$, ) This yields 
 

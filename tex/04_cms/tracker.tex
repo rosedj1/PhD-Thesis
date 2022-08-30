@@ -1,70 +1,58 @@
 \section{The Silicon Tracker}
 \label{sec:tracker}
-At the heart of CMS is one of the world's largest silicon detectors: the silicon tracker, the closest sub-detector surrounding the interaction point.
-The main goal of the silicon tracker is not to capture outgoing particles but to very precisely measure the hits from the charged particles as they pass through it.
-The tracker also assists in vertex identification, differentiating between primary and secondary vertices, the latter of which often comes from B meson decays.
-When multiple \pp collisions occur within the same BX (so-called \emph{pileup}), the tracker distinguishes between proton collisions with a resolution of about 100 \mum longitudinally and 50 \mum transverse to the beam pipe.
+At the heart of CMS is one of the world's largest silicon detectors: the silicon tracker (Fig.~\ref{fig:tracker_real}).
+It is the subdetector closest to the \pp interaction point.
+The main goal of the silicon tracker is not to stop the outgoing particles but to very precisely measure the hits from the charged particles as they pass through it.
+The tracker also assists with vertex identification, differentiating between primary and secondary vertices, the latter of which often comes from $B$-meson decays.
+When multiple \pp collisions occur within the same BX, the tracker distinguishes between \pp vertices with a resolution of about 15--20\mum.
 This is crucial to resolve which outgoing particles came from which \pp vertex.
-
 The tracker consists of two types of pure silicon detectors: the pixel detector and the strip detector, each of which is described in turn below.
-% , and are absolutely necessary to \emph{track} the decay products from \pp collisions.
-
-% 100M pixels, 40M pictures per second.
-
-\subsection{The Pixel Detector}
-\label{sec:pixel}
-
-The innermost part of the silicon tracker is the pixel detector, which is the closest subdetector to the interaction point.
-The pixel detector is composed of 66 million silicon ``pixels'', as shown in Fig.~\ref{fig:tracker_real}.
-A single pixel is 100\mum $\times$ 150\mum and, collectively, they cover a sensitive area of 1.9$\meter^2$.
-Because it sits only 8\cm away from the beam pipe, the pixel detector receives the highest particle flux than any other subdetector:
-around 10 million particles/$\cmns^2$ per second.
-
-The pixel detector is made of three cylindrical layers and two endcaps that surround the beam pipe.
-In total, the pixel detector has around 6000 connections(channels)/$\cmns^2$.
-
-After the LHC Run 1 was completed, the accelerator received luminosity upgrades during the 2013--2014 Long Shutdown.
-To handle these higher luminosities, the pixel detector was replaced by the CMS Phase-1 pixel detector during the LHC technical stop in 2016--2017.
-The upgrades outfitted the detector with four barrel layers and three endcap disks per side, which allowed for particle detection up to $\abseta < 2.5$.
-The overall mass of the pixel detector decreased and granted the detector with better tracking capability.
-
-% Cite:
-% The CMS Phase-1 pixel detector upgrade
-% To cite this article: W. Adam et al 2021 JINST 16 P02027
-% https://d1wqtxts1xzle7.cloudfront.net/81437241/Adam_2021_J._Inst._16_P02027-libre.pdf?1645997389=&response-content-disposition=attachment%3B+filename%3DThe_CMS_Phase_1_pixel_detector_upgrade.pdf&Expires=1646800221&Signature=TRRZ5QLjlKL1rSOqgFxAMLY4vgj9EsI-NJSwy3erQAo2jhua1DZakAsJ-q1A4OB6KD1siSA20izwTEhzcojs8hhKZkC0y~gdcmxh7nrKDKmr59F8VMg2xINMemvOxyB9S3-pDxZN9t~VjtHhgAArmHmyLSuu90cy8BAFs3VkyZ1Wbr-RJx2uiRPb2zKXHWQw64laosnzKoBNvFg7B2ZdDaUpryDfPQpyZu3HkwQKV1Jd~ZpXlF0FjvxKm~QTm9Bk~bpxO5G5UiwaNv0sQhnWi37YAvs49yIks0NZrrCP7rbASStJ5L89sgSo44LPZxr3Usm6mGmglhW0eW8HliBYig__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
-
-
-% REFERENCING THE CMS DETECTOR
-% How Hualin has it:
-% C. Collaboration, "the CMS Experiment at the CERN LHC," \textit{Journal of Instrumentation}, vol. 3, p. S08004, 2008.
-% Compare the above to what gets printed out when you get bibtex working!
-
-\subsection{The Strip Detector}
-\label{sec:strip}
-The outer part of the silicon tracker is called the strip detector, which has 10 million detector strips spread across 10 cylindrical layers.
-The first 4 layers belong to the tracker inner barrel (TIB) and the remaining 6 layers belong to the tracker outer barrel (TOB), Fig.~\ref{fig:tracker_real}. 
-Both the TIB and TOB have two endcaps associated with them, the TID and TEC, respectively.
-Accounting for all of its components, the strip detector is sensitive to 200$\meter^2$.
-Figure~\ref{fig:tracker_xs} shows a clearly labeled transverse illustration of the pixel and strip detectors.
-% It functions similarly to the pixels in that 
-% It also has has slightly worse resolution than the pixel detector.
-% Both the pixel and strip trackers have barrel and endcap components for nearly hermetic coverage around the beam pipe.
 %%%%%%%%%%%%%%%%%%%%
-%=== Simulated and real images of silicon tracker.
+%=== Real image silicon tracker.
 \begin{multiFigure}
     \centering
-    \addFigure{0.49}{figures/cms/tracker/silicon_tracker_simulated.png}
-    \addFigure{0.49}{figures/cms/tracker/silicon_tracker_real.jpg}
+    \includegraphics[width=0.8\textwidth]{figures/cms/tracker/silicon_tracker_real.jpg}
     \captionof{figure}
-        [Depictions of the silicon tracker]
-        {Depictions of the silicon tracker. Figures taken from~\cite{Tumasyan:2779091}. % TODO: Point to correct citation!
-        \;A) Simulated image of the silicon tracker, showing the 3 cylindrical layers of the pixel detector (pink), 4 layers of the TIB (green), and the 6 layers of the TOB (blue) of the strip detector.
-        The endcap components are also shown.
-        \;B) The real silicon tracker at the center of CMS.
-        } 
+        [The real silicon tracker at the center of CMS]
+        {The real silicon tracker at the center of CMS. Figure taken from~\cite{tracker_real}.}
     \label{fig:tracker_real}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
+
+\subsection{The Pixel Detector}
+\label{sec:pixel}
+After the LHC Run 1 finished, the collider received luminosity upgrades during the 2013--2014 Long Shutdown.
+To handle these higher luminosities, the pixel detector was replaced by the CMS Phase-1 pixel detector during the LHC technical stop in 2016--2017.
+The upgrades outfitted the pixel detector with four barrel layers and three endcap disks per side, which allowed for particle detection up to $\abseta < 2.5$.
+Figure~\ref{fig:pixel_xs_long} shows the changes within the pixel detector before and after the Phase-1 upgrade.
+The overall mass of the pixel detector decreased and granted the detector with better tracking capability.
+%%%%%%%%%%%%%%%%%%%%
+%=== Before/after Phase-1 Upgrade of pixel detector.
+\begin{multiFigure}
+    \centering
+    % \addFigure{0.49}{figures/cms/tracker/silicon_tracker_simulated.png}
+    \includegraphics[width=\textwidth]{figures/cms/tracker/pixel_barrel_upgrade.png}
+    \captionof{figure}
+        [Longitudinal cross section of the Phase-1 pixel detector]
+        {Longitudinal cross section of the pixel detector.
+        The top-half of the figure shows the pixel detector after the ``Phase-1 upgrade'' (\eg having 4 barrel layers) as compared to its ``Original'' version (with only 3 barrel layers) in the bottom-half of the figure.
+        Figure taken from~\cite{pixel_phase1}.}
+    \label{fig:pixel_xs_long}
+\end{multiFigure}
+%%%%%%%%%%%%%%%%%%%%
+
+The innermost part of the silicon tracker is the pixel detector, which is composed of 124 \emph{million} silicon ``pixels''.
+A single pixel is 100\mum $\times$ 150\mum and, collectively, they cover a sensitive area of 1.9$\meter^2$.
+Because it sits only 29\mm away from the beam pipe, the pixel detector receives the highest particle flux than any other subdetector:
+around 10 million particles/$\cmns^2$ per second.
+
+\subsection{The Strip Detector}
+\label{sec:strip}
+The outer part of the silicon tracker is called the strip detector and has $\approx$10 million detector strips spread across 10 cylindrical layers.
+The first 4 layers belong to the tracker inner barrel (TIB) and the remaining 6 layers belong to the tracker outer barrel (TOB), Fig.~\ref{fig:tracker_xs}. 
+Both the TIB and TOB have two endcaps associated with them, the TID and TEC, respectively.
+Accounting for all of its components, the strip detector is sensitive to 200$\meter^2$.
+Figure~\ref{fig:tracker_xs} shows a clearly labeled transverse view of the pixel and strip detectors before the Phase-1 upgrade.
 %=== Transverse view of silicon tracker.
 \begin{multiFigure}
     \centering
@@ -72,26 +60,8 @@ Figure~\ref{fig:tracker_xs} shows a clearly labeled transverse illustration of t
     \captionof{figure}
         [Transverse view of the silicon pixel and strip detectors]
         {Transverse view of the silicon pixel and strip detectors, explicitly labeling the different tracking layers.
-        Figure taken from~\cite{LUM-18-002}. % TODO: Point to correct citation!
-        }
+        Note that the inner ``3 pixel layers'' indicates that this image is before the Phase-1 upgrade of the pixel detector.
+        Figure taken from~\cite{strip_detector_xs}.}
     \label{fig:tracker_xs}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
-
-% Consider the life of a particle produced from a \pp collision:
-% Starting at the IP, the produced particles first have an opportunity to interact with the Tracker (Fig.~\ref{fig:tracker_real}, Right).
-% Only charged particles will generate ``hits'' in the Silicon Tracker.
-% Therefore, photons, neutrons, and neutral pions, \eg, are invisible to the tracker.
-% Given enough hits and using sophisticated reconstruction software, we can determine precisely how the particle passed through the tracker.
-% It's essentially a fancy game of ``connect-the-dots'' to determine the particle's trajectory.
-% Figuring out the trajectory allows one to measure the radius of curvature, and therefore the momentum of the particle.
-% This is what makes the Silicon Tracker such an important subdetector.
-
-% Another major benefit of the Silicon Tracker is its assistance in vertex identification.
-% During pile up (multiple proton collisions happening within the same BX),
-% the tracker distinguishes between proton collisions with a resolution of about 
-% 100~\mum longitudinally and 50~\mum transverse to the beam pipe.
-% This is crucial to resolve which outgoing particles came from which \pp vertex.
-% Since the tracker wasn't built to catch particles, they usually continue on to the next subsystems.
-% Thus, CMS must be built as a kind of ``particle filter''.
-% Electrons and photons are the first to be filtered out by the Electromagnetic Calorimeter...

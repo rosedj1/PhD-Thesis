@@ -1,13 +1,13 @@
 \section{The Muon System}
 \label{sec:muon_sys}
-Although it is the farthest system from the interaction point, the muon system is one of the most important within the Compact \emph{Muon} Solenoid detector.
+Although it is the farthest system from the interaction point, the muon system is one of the most important subsystems within the Compact \emph{Muon} Solenoid experiment.
 %  is the {\bf Muon System} and is what puts the {\it Muon} in Compact {\it Muon} Solenoid.
 Of the particles emerging from the interaction point, electrons and photons are absorbed by the ECAL (Sec.~\ref{sec:ecal}) and hadronic matter is absorbed by the HCAL (Sec.~\ref{sec:hcal}).
 This filtration process leaves only neutrinos and muons to enter the muon system, which is the outermost detector situated past the solenoid (Sec.~\ref{sec:solenoid}).
 As mentioned in Ch.~\ref{ch:theory}, neutrinos are the only weakly interacting, electrically neutral SM particles which makes them incredibly difficult to detect directly.
 In fact, neutrinos interact with normal matter so little that a light-year of lead (9.46 \emph{trillion}\Km) would only stop half of the neutrinos moving through it.
-Thus, the detection of neutrinos produced from \pp collisions is inferred via \MET on a per-event basis.
-Muons, on the other hand, have a mass of 105.7\MeV (relatively heavy for a weakly-interacting, electrically-charged particle) and live a billion-billion times longer than a Higgs boson: the average lifetime of a muon is $\tau_{\Pmu} = 2.2 \times \tentotheminus{6}$ s.
+So, detection of neutrinos produced from \pp collisions is inferred via \MET on a per-event basis.
+Muons, on the other hand, have a mass of 105.7\MeV (relatively heavy for a weakly-interacting, electrically-charged particle) and live approximately \tentothe{17} times longer than a Higgs boson: the average lifetime of a muon is $\tau_{\Pmu} = 2.2 \times \tentotheminus{6}\snd$.
 % which interestingly will travel way outside of CMS before decaying, upwards of 100s of kilometers before decaying to an electron and neutrino (neutrinos are the only particles which CMS can't explicitly detect).
 These properties are what determined the properties of the muon system within CMS to consist of its four main subdetectors, each of which is described in the following subsections:
 \begin{enumerate}
@@ -19,11 +19,11 @@ These properties are what determined the properties of the muon system within CM
 
 \subsection{Cathode Strip Chambers}
 \label{sec:csc} 
-% TODO: Change all "ME-" to "ME$-$"? Same for +?
+
 \textit{\textbf{Overview:}}
 A cathode strip chamber (CSC) is a multi-wire proportional chamber capable of precisely measuring the position of muons which enter and ionize the gas within.
 Spatial coordinates are obtained by the collection of electrical signals along the cathode strips $(\phi)$, anode wires $(r)$, and across multiple CSC layers $(z)$.
-CSCs are found exclusively on the two endcaps of CMS, with each endcap bearing 270 chambers (Fig.~\ref{fig:cms_endcap}).
+CSCs are found exclusively on the two endcaps of CMS---with each endcap bearing 270 chambers (Fig.~\ref{fig:cms_endcap})---so that there are 540 CSCs in total.
 The chambers are arranged azimuthally around the beam pipe in four disks per endcap allowing for contiguous coverage in $\phi$.
 In total, the CSC system provides an effective detection area of about 5000$\meter^2$, has a total gas volume that exceeds $> 50\meter^{3}$, and contains over 400\,000 read-out channels.
 %%%%%%%%%%%%%%%%%%%%
@@ -34,18 +34,14 @@ In total, the CSC system provides an effective detection area of about 5000$\met
     \captionof{figure}
         [Cathode strip chambers line the disks of CMS]
         {Cathode strip chambers line the disks of CMS.
-        \;A) Simulated cut-out view of the ME+ endcap, with the coordinate system of CMS on the left-hand side.
+        \;A) Simulated cut-out view of the ME$+$ endcap, with the coordinate system of CMS on the left-hand side.
         Human for scale.
-        \;B) The actual ME-2 disk of CMS is shown, revealing its ME-2/1 and ME-2/2 rings of CSCs.
-        Figures taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        \;B) The actual ME$-$2 disk of CMS is shown, revealing its ME$-$2/1 and ME$-$2/2 rings of CSCs.
+        Figures taken from~\cite{collaboration_cms_2008}.
         }
     \label{fig:cms_endcap}
 \end{multiFigure}
-%%%%%%%%%%%%%%%%%%%%
-\textit{\textbf{Design:}}
-Each CSC is trapezoidal in shape with its narrow end pointed toward the beam pipe (Fig.~\ref{fig:csc_guts}).
-The chambers are arranged in rings and each chamber subtends either 10\degrees or 20\degrees in $\phi$, as described in Sec.~\ref{sec:csc_numbering}.
-The CSCs cover the pseudorapidity range of $0.9 < \abseta < 2.4$ (Fig.~\ref{fig:cms_long_view_subdetectors}).
+
 %%%%%%%%%%%%%%%%%%%%
 % Longitudinal cross section
 \begin{multiFigure}
@@ -54,17 +50,21 @@ The CSCs cover the pseudorapidity range of $0.9 < \abseta < 2.4$ (Fig.~\ref{fig:
     \captionof{figure}
         [Longitudinal cross section of CMS with pseudorapidity values shown]
         {Longitudinal cross section of CMS showing the different pseudorapidity values ($\eta$), along with the different subdetector regions.
-        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figure taken from~\cite{cms_long_xs_view}.
         }
     \label{fig:cms_long_view_subdetectors}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
+\textit{\textbf{Design:}}
+Each CSC is trapezoidal in shape with its narrow end pointed toward the beam pipe (Fig.~\ref{fig:csc_guts}).
+The chambers are arranged in rings and each chamber subtends either 10\degrees or 20\degrees in $\phi$, as described in Sec.~\ref{sec:csc_numbering}.
+The CSCs cover the pseudorapidity range of $0.9 < \abseta < 2.4$ (Fig.~\ref{fig:cms_long_view_subdetectors}).
+
 A single CSC is composed of six layers (or \emph{gas gaps}), each of which is filled with a carefully prepared gaseous mixture\footnote{
     The gas mixture ratio of Ar:CO$_{2}$:CF$_{4}$ was chosen to be 5:4:1 to maximize the lifetime of the CSCs as they endure radiation damage through years of use.
     The CO$_{2}$ is used as a non-flammable quencher to reach even larger electron multiplicities, while the CF$_{4}$ helps prevent polymerization along (aging of) the wires.
     }
 of Ar:CO$_{2}$:CF$_{4}$ (Fig.~\ref{fig:csc_separatelayers}).
-% The gas mixture flows from one layer to the next in a zigzag manner and has a flow rate of $9\meter^3/\sndns$. % TODO.
 Within every layer, the gas mixture surrounds approximately 80 copper strips, each of which spans radially away from the interaction point.
 A single strip is about 8.4\mm wide at the narrower end of the CSC, about 16\mm at the wider end, and is separated from its neighboring strip by about 0.5\mm.
 Per layer, the inner gas also surrounds over 1000 gold-plated tungsten wires, which are oriented azimuthally (so approximately orthogonal to the strips).
@@ -77,11 +77,11 @@ The largest CSCs are 3.4\meter long as measured along a strip and 1.5\meter wide
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/csc_separatedlayers.jpeg}
+    \includegraphics[width=0.9\textwidth,keepaspectratio]{figures/cms/muonsys/csc_separatedlayers.jpeg}
     \captionof{figure}
         [Cross section of CSC revealing the gas gaps]
         {Exploded view of the cross section of a CSC showing how the 7 panels come together to form the 6 gas gaps between the panels.
-        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figure taken from~\cite{collaboration_cms_2008}.
         }
     \label{fig:csc_separatelayers}
 \end{multiFigure}
@@ -98,7 +98,7 @@ The largest CSCs are 3.4\meter long as measured along a strip and 1.5\meter wide
         Thin, horizontal, gold-plated tungsten wires span the entire width of the CSC. 
         Thicker, vertical strips run along the length.
         \;B) More detail inside a CSC showing the radial strips, horizontal wires, and 5 segments separating the wires.
-        Figures taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figures taken from~\cite{collaboration_cms_2008}.
         }
     \label{fig:csc_guts}
 \end{multiFigure}
@@ -119,7 +119,7 @@ The total number of ionized electrons per initial electron is referred to as the
     \captionof{figure}
         [Muon traverses a CSC, ionizing the gas within and creating an electron avalanche]
         {A muon passes through one of the gaseous layers of the CSC, ionizing the gas mixture and inducing a charge on the anode wires and cathode strips.
-        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figure taken from~\cite{collaboration_cms_2008}.
         }
     \label{fig:elec_avalanche}
 \end{multiFigure}
@@ -141,7 +141,7 @@ Therefore, comparator logic is implemented on the strips to narrow down the prec
         {Comparator logic as a muon traverses the layers of a CSC.
         \;A) Comparators are used to compare neighboring strip cluster charge to determine on which half-strip the peak charge resided.
         \;B) Muon passes through all six layers of a CSC inducing charge on various half-strips.
-        Figures taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figures taken from~\cite{collaboration_cms_2008}.
         }
     % cathode front-end board (CFEB) 
     \label{fig:comparators}
@@ -180,15 +180,15 @@ It is worth noting that a CSC can accommodate up to 1$\KHz/\cmns^2$.
 
 \subsubsection{CSC Numbering Scheme}
 \label{sec:csc_numbering}
-The two endcaps are labelled as ``ME+'' and ``ME-'', depending on whether they are situated in the $+z$ direction or $-z$.
+The two endcaps are labelled as `ME$+$' and `ME$-$', depending on whether they are situated in the $+z$ direction or $-z$.
 Both endcaps are structurally symmetric, so it is sufficient to discuss only one in detail.
-The ME+ endcap has four disks: ME+1 is the first disk and the one closest to the interaction point, while ME+4 is the fourth and the farthest away. 
-Within each disk, there are either two or three ``rings'' of CSCs, as shown in Fig.~\ref{fig:cms_long_view_subdetectors} (green).
-These rings are labelled as ME+$D$/$R$, where $D$ indicates the disk number and $R$ indicates the ring number.
-For example, ME+2/1 refers to the second disk and the first ring (the ring closest to the beam pipe).
+The ME$+$ endcap has four disks: ME$+$1 is the first disk and the one closest to the interaction point, while ME$+$4 is the fourth and the farthest away. 
+Within each disk, there are either two or three \emph{rings} of CSCs, as shown in Fig.~\ref{fig:cms_long_view_subdetectors} (green).
+These rings are labelled as ME$+D$/$R$, where $D$ indicates the disk number and $R$ indicates the ring number.
+For example, ME$+$2/1 refers to the second disk and the first ring (the ring closest to the beam pipe).
 All rings contain 36 CSCs, except for ME$\pm X$/1, for $X= 2,3,4$, which contain only 18 CSCs.
 Finally, the CSCs are given one final number to label them on the ring:
-the CSC that sits along the positive $x$-axis in the coordinate system of CMS is given the number ``01'', \eg ME+4/2/01. 
+the CSC that sits along the positive $x$ axis in the coordinate system of CMS is given the number `01', \eg ME$+$4/2/01. 
 The CSCs are then numbered incrementally following the positive azimuthal direction.
 
 \subsection{Drift-Tube Chambers}
@@ -204,13 +204,13 @@ Altogether, there are 250 DTs built inside of, between, and outside of the iron 
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[width=15cm,height=10cm,keepaspectratio]{figures/cms/muonsys/drifttube_superlayers.jpeg}
+    \includegraphics[height=9cm,keepaspectratio]{figures/cms/muonsys/drifttube_superlayers.jpeg}
     \captionof{figure}
         [Cross section of an entire drift tube chamber]
         {Cross section of an entire drift tube (DT) chamber showing 3 superlayers (SLs) and the interior honeycomb plate.
         Two SLs are indicated by the blue rectangles, whose cells (orange rectangle) have anode wires (red dots) oriented parallel to the beam pipe.
         The third SL is indicated by the green rectangle and is placed orthogonally to the other two SLs.
-        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figure taken from~\cite{collaboration_cms_2008} and modified with orange, green, and blue rectangles and red dots.
         }
     \label{fig:dt_superlayers}
 \end{multiFigure}
@@ -218,11 +218,11 @@ Altogether, there are 250 DTs built inside of, between, and outside of the iron 
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[height=6cm,keepaspectratio]{figures/cms/muonsys/drifttube_xs.jpeg}
+    \includegraphics[height=5.5cm,keepaspectratio]{figures/cms/muonsys/drifttube_xs.jpeg}
     \captionof{figure}
         [Cross section of a single drift tube cell]
         {Cross section of a single drift tube cell showing the drift lines (light blue), isochrone lines (dark blue), dimensions of the cell, and locations of the anode wire and cathode strips.
-        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figure taken from~\cite{collaboration_cms_2008}.
         }
     \label{fig:dt_cell}
 \end{multiFigure}
@@ -234,7 +234,7 @@ Altogether, there are 250 DTs built inside of, between, and outside of the iron 
     \captionof{figure}
         [Cross section of the CMS barrel showing the locations of the drift tubes]
         {Cross section of the CMS barrel showing the locations and the numbering scheme of the drift tubes in the barrel.
-        Figure taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
+        Figure taken from~\cite{collaboration_cms_2008}.
         }
         \label{fig:dt_locations}
 \end{multiFigure}
@@ -279,7 +279,8 @@ Muons traversing through the RPCs ionize the gas and cause an avalanche, which i
 \textbf{\textit{Design:}}
 % RPCs consist of two highly-resistive parallel plates (bakelite electrodes), one positively-charged and the other negatively-charged, separated by a 2-\mmns gap of gaseous volume.
 The gas is a three-component mixture composed of 95.2\% C$_2$H$_2$F$_4$, 4.5\% $i$C$_4$HO (isobutane), and 0.4\% SF$_6$ with a 35--40\% humidity, and kept at 21$\degrees$C.
-The RPC system consists of 480 rectangular chambers that are oriented parallel to the beam pipe and are 2.455\mm long.
+The RPC system consists of 480 rectangular chambers found in the barrel and are oriented parallel to the beam pipe, each at 2.455\meter long.
+There are also 288 RPCs found on each endcap.
 RPCs have better time resolution compared to the 25\ns between two consecutive \pp bunch crossings. 
 
 % Gas mixture comprised of 96.2\% C$_{2}$H$_{2}$F$_{4}$ (1,1,1,2-tetrafluoroethane) $+$ 3.5\% $i$C$_{4}$H$_10$ (isobutane) $+$ 
@@ -336,15 +337,6 @@ Electrons created during the ionization process drift towards the foil and are m
 % The Compact \textit{Muon} Solenoid would be a pretty hypocritical name if CMS did not detect muons. Au contraire; it \textit{specializes} in muon detection. 
 % P
 %It would be an ironic name if it did not detect muons well. 
-
-% The Muon System is comprised of three kinds of gaseous detectors: 
-% \begin{enumerate}
-%     \item {\bf Drift Tubes} (DTs) found in the barrel.
-%     \item {\bf Resistive Plate Chambers} (RPCs) found in both the barrel and endcap.
-%     \item {\bf Cathode Strip Chambers} (CSCs) found only in the endcap.
-% \end{enumerate}
-% Each of these technologies is constructed differently and was designed with a specific purpose. 
-% In Chapter~\ref{ch:CSC}, the inner-workings of the CSCs are explained.
 
 % This concludes the overall design and purpose of the subdetectors that make up CMS.
 % Since I have had hands-on experience working on CSCs, I will discuss the CSC components and how it works in more detail in the subsection below.

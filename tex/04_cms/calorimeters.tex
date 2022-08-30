@@ -6,7 +6,7 @@
 
 % WHAT IT IS
 \textit{\textbf{Overview:}}
-Particles that pass through the silicon tracker~\ref{sec:tracker} encounter the electromagnetic calorimeter (ECAL).
+Particles that pass through the silicon tracker (Sec.~\ref{sec:tracker}) encounter the electromagnetic calorimeter (ECAL).
 Those particles which interact electromagnetically but not strongly (\ie mostly photons and electrons) are typically absorbed by the ECAL.
 The particle's energy is then transferred to the ECAL in the form of an electromagnetic (EM) shower.
 The size and shape of the EM shower provide information about the particle's energy and trajectory.
@@ -17,7 +17,7 @@ Since the Higgs boson can decay into two photons, the ECAL played a critical rol
 The ECAL is a hermetic, cylindrical, homogeneous subdetector that consists of a barrel (EB), two endcaps (EE), and a preshower detector in front of each endcap (Fig.~\ref{fig:ecal_xs}).
 The EB covers $\abseta < 1.479$ while the EE covers $1.479 < \abseta < 3.0$.
 The entire subdetector is composed of transparent lead tungstate (PbWO$_4$) crystals that point axially towards the center (\ie towards the interaction point) of CMS.
-The transparent crystals, one of which is shown in Fig.~\ref{fig:ecal_crystals} (A), have a high density (8.28 g/cm$^3$) which provide the ECAL with radiation resistance and a short radiation length ($X_0 = 0.89\cm$).
+The transparent crystals, one of which is shown in Fig.~\ref{fig:ecal_crystals}, have a high density (8.28 g/cm$^3$) which provide the ECAL with radiation resistance and a short radiation length ($X_0 = 0.89\cm$).
 Because so many crystals are used (61\,200 crystals in the EB and 7324 in the EE), the ECAL has excellent energy resolution and fine granularity.
 Each endcap is composed of two \emph{Dee}s, one of which is shown in Fig.~\ref{fig:ecal_xs}.
 A single Dee carries 3662 crystals.
@@ -27,8 +27,6 @@ This gives a single crystal from the barrel a volume of approximately 132.5$\cm^
 % ECAL diagram
 \begin{multiFigure}
     \centering
-    % \captionsetup{justification=justified}
-    % \includegraphics[width=0.95\textwidth]{figures/cms/ecal/xs_whiteblack.jpeg}
     \addFigure{0.505}{figures/cms/ecal/xs_whiteblack.jpeg}
     \addFigure{0.455}{figures/cms/ecal/dee.jpeg}
     \captionof{figure}
@@ -37,7 +35,7 @@ This gives a single crystal from the barrel a volume of approximately 132.5$\cm^
         \;A) Cross-sectional view of the electromagnetic calorimeter (ECAL) of CMS.
         \;B) One of the Dees which comprise the endcap of the ECAL.
         Each square has $5 \times 5$ crystals and constitutes a ``supercrystal''.
-        Figures taken from~\cite{collaboration_cms_2008}. % TODO: Check where figs came from.
+        Figures taken from~\cite{collaboration_cms_2008}.
         }
     \label{fig:ecal_xs}
 \end{multiFigure}
@@ -52,9 +50,9 @@ This gives a single crystal from the barrel a volume of approximately 132.5$\cm^
     \captionof{figure}
         [Images of ECAL crystals and how they are grown]
         {Images of ECAL crystals and how they are grown.
+        Figures taken from~\cite{ecal_crystal_lab}.
         \;A) ECAL crystals made are grown in a lab and made from PbWO$_4$.
         \;B) Although comprised mostly of metal, ECAL crystals are transparent and have a photomultiplier detector attached at the end.
-        Figures taken from~\cite{PhysRevLett.114.191803}. % TODO: Point to correct citation!
         } 
     \label{fig:ecal_crystals}
 \end{multiFigure}
@@ -67,8 +65,6 @@ Electrons radiate more photons as they accelerate around PbWO$_4$ nuclei, in a p
 Meanwhile, near the presence of a nucleus, high-energy photons pair produce into \eepm.
 % In turn, these newly-produced electrons can radiate more photons 
 This cycle of electron/photon production disperses all the initial particle energy into a spray of decreasingly lower-energy particles until it all runs out; this is the EM shower.
-% TODO: SHOW PICTURE OF EM SHOWER.
-% TODO: REFERENCE EM SHOWER FIG.
 
 The ECAL crystals then scintillate (emits photons) in proportion to the amount of energy deposited by the interacting particle. 
 The scintillator photons are detected by avalanche photodiodes on the back of each barrel crystal or by vacuum phototriodes in the endcap crystals Fig.~\ref{fig:ecal_crystals}.
@@ -126,7 +122,7 @@ Each layer has 108 trays.
         [Cross-sectional quadrant view of the HCAL components]
         {A cross-sectional quadrant view of CMS showing the locations of the HCAL components:
         the barrel (HB), outer (HO), endcap (HE), and forward (HF) detectors.
-        Figure taken from~\cite{LUM-17-004}. % TODO: Point to correct citation!
+        Figure taken from~\cite{collaboration_cms_2008}.
         }
     \label{fig:hcal_quadrant}
 \end{multiFigure}
@@ -145,5 +141,3 @@ The entire HCAL utilizes approximately 70\,000 plastic scintillator tiles.
 The active material in the HB is 3.7-\mmns-thick Kuraray SCSN81 plastic scintillator, selected for its radiation hardness and long-term stability.
 % TODO: Has this been incorporated yet?: Hadron showers -> tiles scintillate -> scintillated photons
 Scintillated photons are collected by 0.94-\mmns-diameter green double-cladded wavelength shifting (WLS) fibers (Kuraray Y-11), which carry the light to hybrid photodiodes (HPD).
-
-% TODO: Write nice lead into the solenoid.

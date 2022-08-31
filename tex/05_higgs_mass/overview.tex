@@ -1,17 +1,30 @@
 \section{Analysis Overview}
 \label{sec:analysis_overview}
-The first step to performing a precision measurement of \mH is to ``observe'' many Higgs bosons.
-However, production of a Higgs boson is essentially nonexistent in everyday conditions and is still extremely rare even in the high-energy \pp collisions of the LHC (Chapter~\ref{ch:lhc}).
-At a center-of-mass energy of 13\TeV, the total inclusive inelastic cross section of two protons colliding is 70\mb.
-% TODO: CITE.
-Comparing this cross section to the cross section of Higgs boson production $\left( \sigma_{\pp \to \PH} = 59\pb \right)$
-% TODO:cite
-shows that a Higgs boson is produced in approximately one out of every \emph{billion} \pp collisions---a rare event indeed.
-% TODO CITE
+The first step to performing a precision measurement of \mH is to `observe' many Higgs bosons.
+However, production of a Higgs boson is nonexistent in everyday conditions and is extremely rare even in the high-energy \pp collisions of the LHC (Chapter~\ref{ch:lhc}).
+There are four major production modes of a Higgs boson, as shown in Fig.~\ref{fig:higgs_prod_modes}:
+gluon--gluon fusion (ggH),
+vector boson fusion (VBF),
+associated production with a gauge boson or sometimes called `Higgs-strahlung' ($\PV \PH$, where $\PV = \PWpm, \PZ$),
+and associated production with top quarks $\left( \ttbarh \right)$.
+These production modes are listed in terms of decreasing production `cross section' ($\sigma$), which is proportional to the probability with which that process occurs.
 
-To complicate matters further, the Higgs boson has a \emph{very} short mean lifetime of only $1.6 \times \tentotheminus{22}\snd$~\cite{particle_data_group_review_2020}. % TODO:doublecheck.
-Thus, the existence of the Higgs boson is not \emph{directly} detected by CMS (Chapter~\ref{ch:cms}) but is instead \emph{inferred} from its stable decay products which enter the various subdetectors.
-Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass (approximately 125\GeV),  % TODO: cite best measurement so far.
+At a center-of-mass energy of 13\TeV, the total inclusive inelastic cross section of two protons colliding is $78.1 \pm 2.9\mb$, when extrapolated to the full phase space~\cite{ATLAS:2016ygv}.
+When this value is compared to the sum of the production mode cross sections of the Higgs boson, $\sigma(\pp \to \PH) = 55.1 \pm 3.3\pb$, shows that a Higgs boson is produced in approximately one out of every \emph{billion} \pp collisions---a rare event indeed~\cite{new_pdg_2022}.
+\begin{multiFigure}
+	\centering
+	\includegraphics[width=\textwidth]{figures/higgsmassmeas/higgs_prod_modes.png}
+	\captionof{figure}
+		[Feynman diagrams showing the major production modes of the Higgs boson]
+		{Feynman diagrams showing the major production modes of the Higgs boson and their corresponding production cross sections and uncertainties.
+		Figure taken from~\cite{new_pdg_2022}.
+		}
+	\label{fig:higgs_prod_modes}
+\end{multiFigure} 
+
+To complicate matters further, the Higgs boson has a \emph{very} short mean lifetime of only $1.6 \times \tentotheminus{22}\snd$~\cite{particle_data_group_review_2020}. % TODO: get theoretical lifetime and cite.
+Thus, the existence of the Higgs boson is not directly detected by CMS (Chapter~\ref{ch:cms}) but is instead \emph{inferred} from its stable decay products which enter the various subdetectors.
+Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass ($125.10 \pm 0.14\GeV$)~\cite{particle_data_group_review_2020},
 which gives the scalar boson sufficient energy to decay into at least 9 different final states.
 Each decay mode occurs with a different probability---the \emph{branching fraction} (\br)---whose value depends on \mH, as shown in Fig.~\ref{fig:higgs_br}.
 The question then becomes, \emph{``Which Higgs boson decay mode is the most useful for measuring \mH?''}
@@ -85,24 +98,60 @@ Section~\ref{sec:bkg_estim} discusses the associated background processes and ho
 	\label{fig:feyndiag_sig_vs_bkg}
 \end{multiFigure}
 
-%=== How to draw Feynman diagrams in LaTeX.
-% Taken from Xunwu's code
+% \begin{figure}[ht]
+%     \centering
+%     \begin{tikzpicture}
 
+%     \begin{feynman}[large]
+%         \vertex (gg) {}; % h at beginning 
+%         \vertex [above = 1.5cm of gg] (g1) {$\Pg$};
+%         \vertex [below = 1.5cm of gg] (g2) {$\Pg$};
+%         \vertex [right = 1.5cm of gg] (ttt); 
+%         \vertex [above = 1.5cm of ttt] (t1); 
+%         \vertex [below = 1.5cm of ttt] (t2); 
+%         \vertex [right = 1cm of ttt] (tt); 
+%         \vertex [right = 1cm of tt] (h); 
+%         \vertex [above right = 1.5cm and 1.5cm of h] (Z1); % top ZD
+%         \vertex [below right = 1.5cm and 1.5cm of h] (Z2); % bottom ZD
+%         \vertex [above right = 0.65cm and 2cm of Z2] (Z2l1) {$\ell^-$}; % top l of top Z
+%         \vertex [below right = 0.65cm and 2cm of Z2] (Z2l2) {$\ell^+$}; % bottom l of top Z
+%         \vertex [above right = 0.65cm and 2cm of Z1] (Z1l1) {$\ell^-$}; % top l of bottom Z
+%         \vertex [below right = 0.65cm and 2cm of Z1] (Z1l2) {$\ell^+$}; % bottom l of bottom Z
+%         % TODO: SUZANNE: Need a top-quark loop.
+%         % TODO: SUZANNE: Need to make gluon lines horizontal.
+        
+%         \diagram* {
+%             (g1) -- [gluon] (t1),
+%             (g2) -- [gluon] (t2),
+%             (t1) -- [fermion, edge label=$\Pqt$] (tt) -- [fermion, edge label=$\Paqt$] (t2) -- [fermion, edge label=$\Pqt$] (t1);
+%             (tt) -- [scalar, edge label=\PH] (h),
+%             % (kappa) -- [scalar, edge label=$s$, below] (s),
+%             (h) -- [boson, edge label=\PZ] (Z1),
+%             (Z2) -- [boson, edge label=\PZ] (h),
+%             (Z1l2) -- [fermion] (Z1) -- [fermion] (Z1l1);
+%             (Z2l2) -- [fermion] (Z2) -- [fermion] (Z2l1);
+%         };
+%     \end{feynman}
+%     \end{tikzpicture}
+%     \caption{Feynman diagram showing how different physics processes can have the same initial and final states.}
+% \end{figure}
 
 %=== Thanks to Dr. Xunwu Zuo for the Feynman diagrams shown in Fig.~\ref{fig:main_higgs_modes}, which shows the major production modes of the Higgs boson. ===%
 % Feynman diagrams below don't compile well because the key "horizontal" requires building with LuaTeX.
 % \begin{multiFigure}
 %     \centering 
-%     \captionsetup{justification=centering}
-%     \begin{subfigure}[b]{0.45\textwidth} % b for bottom alignment so caption is at the same height
-%         \centering
-%         \feynmandiagram[horizontal=g1 to t1, horizontal=t2 to h] {
+%     \begin{tikzpicture}
+% 	\begin{feynman}[large]
+%         \diagram* {
 %             g1 [particle = \Pg] -- [gluon] t1,
 %             t1 -- [fermion, edge label = \Pqt] t2 -- [fermion, edge label = \Pqt] t3 -- [fermion, edge label = \Pqt] t1,
 %             g2 [particle = \Pg] -- [gluon] t3,
 %             t2 -- [scalar] h [particle = \PH],
 %             g1 -- [draw=none] g2,
 %         };
+% 	\end{feynman}
+% 	\end{tikzpicture}
+% \end{multiFigure}
 
 %         \caption*{\ggH}
 %     \end{subfigure} 
@@ -250,7 +299,6 @@ Furthermore, software can even emulate the process of particles as they travel t
 Programs like \GEANTfour show analysts what to expect as the particles interact with a virtual version of the CMS detector.
 Predictions from simulation can then be compared to the truth---\emph{the data}---as a way to check the accuracy of the analysis.
 For example, a surplus of events in data where none was expected may lead to the discovery of new particles, as was the case for the discovery of the Higgs boson.
-% TODO:cite.
 % agreement or deviations in what was expected.
 TODO: The simulated events for this analysis are described in Sec.~\ref{sec:sim_samples}.
 

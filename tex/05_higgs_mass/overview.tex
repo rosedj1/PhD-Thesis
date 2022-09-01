@@ -22,10 +22,9 @@ When this value is compared to the sum of the production mode cross sections of 
 	\label{fig:higgs_prod_modes}
 \end{multiFigure} 
 
-To complicate matters further, the Higgs boson has a \emph{very} short mean lifetime of only $1.6 \times \tentotheminus{22}\snd$~\cite{particle_data_group_review_2020}. % TODO: get theoretical lifetime and cite.
-Thus, the existence of the Higgs boson is not directly detected by CMS (Chapter~\ref{ch:cms}) but is instead \emph{inferred} from its stable decay products which enter the various subdetectors.
-Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass ($125.10 \pm 0.14\GeV$)~\cite{particle_data_group_review_2020},
-which gives the scalar boson sufficient energy to decay into at least 9 different final states.
+To complicate matters further, the Higgs boson has a \emph{very} short theoretical mean lifetime of approximately $2 \times \tentotheminus{22}\snd$~\cite{CMS-PAS-HIG-21-013}.
+Thus, the existence of the Higgs boson is not directly detected by CMS (Ch.~\ref{ch:cms}) but is instead \emph{inferred} from its stable decay products which enter the various subdetectors.
+Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass ($125.10 \pm 0.14\GeV$), which gives the scalar boson sufficient energy to decay into at least 9 different final states~\cite{particle_data_group_review_2020}.
 Each decay mode occurs with a different probability---the \emph{branching fraction} (\br)---whose value depends on \mH, as shown in Fig.~\ref{fig:higgs_br}.
 The question then becomes, \emph{``Which Higgs boson decay mode is the most useful for measuring \mH?''}
 \begin{multiFigure}
@@ -46,11 +45,9 @@ The question then becomes, \emph{``Which Higgs boson decay mode is the most usef
 % Particle Flow algorithm pieces the information together to construct objects out of each event.
 % Now, instead of just a deposit of energy in the ECAL and corresponding hits in the silicon tracker, the particle is identified as a newly produced electron.
 
-Owing to its large signal-to-background ratio of approximately 2
-% TODO:cite HIG-19-001?
-and its relatively rare four-lepton final state, the \hzzfourl decay channel is chosen and is called the \emph{signal process}.
-On average, a Higgs boson will decay into two \PZ bosons (one on-shell and the other off-shell) only 2.6\% of the time. % TODO:cite
-In turn, each \PZ boson \emph{may} decay into two opposite-sign, same flavor (OSSF) leptons (\ztolplm, where $\ell = \Pe, \Pmu$) on average approximately 6.7\% of the time. % TODO:cite
+Owing to its large signal-to-background ratio of approximately 2 and its relatively rare four-lepton final state, the \hzzfourl decay channel is chosen and is called the \emph{signal process}~\cite{HIG_19_001}.
+On average, a Higgs boson theoretically decays into two \PZ bosons (one on-shell and the other off-shell) approximately 2.7\% of the time~\cite{ATLAS:2022vkf}.
+In turn, each \PZ boson \emph{may} decay into two opposite-sign, same flavor (OSSF) leptons (\ztolplm, where $\ell = \Pe, \Pmu$) on average approximately 6.7\% of the time~\cite{particle_data_group_review_2020}.
 This signal process then gives rise to four distinct final states: \foure, \fourmu, \twoetwomu, \twomutwoe.
 The branching fraction for the overall signal process is then calculated as: % B(Z->ee)=0.033632, B(Z->mumu)=0.033662
 \begin{equation*}
@@ -317,7 +314,7 @@ This signal modeling is performed using a double-sided Crystal Ball function to 
 	\captionof{figure}
 		[Distribution of \mfourl from \hzzfourl events using Full Run 2 data]
 		{Distribution of \mfourl from \hzzfourl events using Full Run 2 data.
-		Plot taken from~\cite{PhysRevLett.114.191803}. % TODO:cite HIG-19-001 EPJC.
+		Plot taken from~\cite{HIG_19_001}.
 		}
 	\label{fig:m4l_run2}
 \end{multiFigure}

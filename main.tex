@@ -40,13 +40,13 @@
 \usepackage{subcaption} % allowing to use subfigure inside figure
 \usepackage{topcapt} % allow \topcaption
 \usepackage{graphicx} % allow \resizebox
-%\usepackage{amsrefs}%   amsrefs contains the .bibtex style content for mathematician papers.
 \usepackage{newtxtext}
 \usepackage{newtxmath}
 \usepackage{mathrsfs}  % Gives fancy L for Lagrangian: \mathscr{L}
 \usepackage{multirow}
 \usepackage{cellspace}
 \usepackage{soul}
+\usepackage{cleveref}  % \cref{table1,table2,table3}
 \usepackage[greek,english]{babel}
 \setlength\cellspacetoplimit{10pt}
 \setlength\cellspacebottomlimit{10pt}
@@ -121,8 +121,8 @@
 
 %%%% These are NOT required, so only use them if you actually need/have them.
 % \setAbbreviationsFile{tex/abbreviations}%           Abbreviations Page. Jake changed this to say "LIST OF ACRONYMS".
-% \setAppendixFile{tex/appendix}%                     Appendix Content; hyperlinking might be weird. TODO: Fix hyperlinking.
-% \multipleAppendixtrue%                          Uncomment this if you have more than one appendix, otherwise leave it commented. This adds "A", "B" in the TOC next to each Appendix entry.
+\setAppendixFile{tex/appendix}%                     Appendix Content; hyperlinking might be weird. TODO: Fix hyperlinking.
+\multipleAppendixtrue%                          Uncomment this if you have more than one appendix, otherwise leave it commented. This adds "A", "B" in the TOC next to each Appendix entry.
 
 %=== Main Text ===%
 \begin{document}
@@ -151,8 +151,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Higgs Mass Measurement ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{tex/05_higgs_mass/higgs_intro.tex}
-\input{tex/05_higgs_mass/overview.tex}
+% \input{tex/05_higgs_mass/higgs_intro.tex}
+% \input{tex/05_higgs_mass/overview.tex}
 % \input{tex/05_higgs_mass/datasets_simul_trig.tex}
 % \input{tex/05_higgs_mass/obj_and_event_sel.tex}
 % \input{tex/05_higgs_mass/signal_modeling.tex}
@@ -164,14 +164,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Search for Dilepton Resonances ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/06_dilep_res/dilep_res_intro.tex}
+\input{tex/06_dilep_res/dilep_res_intro.tex}
 % \input{tex/06_dilep_res/overview.tex}
 % \input{tex/06_dilep_res/datasets_simul_trig.tex}
 % % TODO: Include object selection in event_sel.tex?
 % \input{tex/06_dilep_res/event_sel.tex}
 % \input{tex/06_dilep_res/backgrounds.tex}
 % \input{tex/06_dilep_res/syst_uncert.tex}
-% \input{tex/06_dilep_res/results.tex}
+\input{tex/06_dilep_res/results.tex}
 %%%%%%%%%%%%%%%%%%%%
 %--- Conclusion ---%
 %%%%%%%%%%%%%%%%%%%%

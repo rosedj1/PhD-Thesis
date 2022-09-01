@@ -52,6 +52,7 @@ The general guidelines for choosing references are:
 * Reference relevant theoretical papers, especially ones that predict a value for your measurement.
 * Give a minimal general bibliography for the nonexpert reader who might need to be educated on the subject. These are papers typically referred to in the introduction. 
 
+
 %=== Some citation types ===%
 % article
 % misc
@@ -97,7 +98,7 @@ The general guidelines for choosing references are:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %=== NOTES FOR techreports ===%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% It's better to pull a techreport (like a PAS) from CERN Document Server (CDS) than from INSPIRE.
+% It's better to pull a techreport (like a PAS) from CERN Document Server (CDS) than from INSPIREhep.
 % If pulling techreport bib ref from CDS, then make the following changes:
 % * Changed key=reportNumber to key=number".
 % * Deleted the word "Collaboration" from key=collaboration.
@@ -125,7 +126,8 @@ techreport{citekey,
 % Reference titles are italicized, sentence case (i.e., only the first word's first letter is uppercase), proper nouns are also uppercase, references are in appearance-order, citation ranges look like 1--3 (and use an en dash). 
 % Numbers are NOT italicized E.g. "pp collisions at sqrt{s} = 7 TeV", everything EXCEPT the 7 is italicized. The "=" is in math mode.
 % Interestingly, JHEP uses lowercase "ref.", "refs.", "section", "figure", "figures", "table", "tables 12--14". Doesn't use "fig.", "sec.", or "tab.".
-% The reference label (e.g., [2]) can be put directly after the thing which it references or at the end of the sentence.
+%  - Note that UF overrides this rule and treats these words like proper nouns: Figure, Reference, Section, Chapter, Table. Although they can be abbreviated, they MUST be capitalized.
+% The reference label (e.g., [2]) can be put directly after the thing which it references, or before a comma, or before the period which terminates the sentence.
 % Introduce abbreviations in parentheses: "The standard model (SM)...the SM Higgs boson (H)."
 % Lowercase 'c' when saying 'CMS collaboration'.
 % When to use 'et al.'? I can't say for sure in JHEP style... I've seen:
@@ -242,10 +244,11 @@ article{2013,
 %========================%
 
 %=== Higgs Mass Measurements ===%
+% TODO: Check that author prints as we want.
 @article{PhysRevLett.114.191803,
   title = {Combined Measurement of the {H}iggs Boson Mass in $pp$ Collisions at $\sqrt{s} = 7$ and $8{\TeV}$ with the {ATLAS} and {CMS} Experiments},
   journal = {Phys. Rev. Lett.},
-  collaboration = {ATLAS and CMS},
+  author = {{$\textsc{ATLAS and CMS}$ collaborations}},
   volume = {114},
   issue = {19},
   pages = {191803},
@@ -256,11 +259,12 @@ article{2013,
   doi = {10.1103/PhysRevLett.114.191803},
   url = {https://link.aps.org/doi/10.1103/PhysRevLett.114.191803}
 }
+  collaboration = {ATLAS and CMS},
   author = {Aad, G. and Abbott, B. and Abdallah, J. and Abdinov, O. and Aben, R. and Abolins, M. and AbouZeid, O. S. and Abramowicz, H. and Abreu, H. and Abreu, R. and Taylor, D. and Woods, N.},
 @article{the_cms_collaboration_precise_2015,
     author = "Khachatryan, Vardan and others",
     collaboration = "CMS",
-    title = "{Precise determination of the mass of the Higgs boson and tests of compatibility of its couplings with the standard model predictions using proton collisions at 7 and 8 $\,\text {TeV}$}",
+    title = "{Precise determination of the mass of the Higgs boson and tests of compatibility of its couplings with the standard model predictions using proton collisions at $7$ and $8\TeV$}",
     eprint = "1412.8662",
     archivePrefix = "arXiv",
     primaryClass = "hep-ex",
@@ -288,7 +292,8 @@ article{the_cms_collaboration_precise_2015,
 	year = {2015},
 	pages = {212},
 }
-% Xunwu's version of HIG-16-041 (2016 HZZ mass measurement)
+% TODO: Add %%CITATION = ARXIV:1706.09936;%% to refs?
+% Run 2, HZZ mass measurement, 2016 (Xunwu added SLACcitation key)
 @article{HIG_16_041,
       author         = "Sirunyan, Albert M and others",
       title          = "{M}easurements of properties of the {H}iggs boson decaying into the four-lepton final state in pp collisions at ${\sqrt{s}=13\TeV}$",
@@ -964,7 +969,7 @@ techreport{arXiv:2012.14304_xunwu,
 CERN
 % LUM-17-003
 % From iNSPIRE:
-@article{LUM-17-003,
+@article{LUM_17_003,
     author = "Sirunyan, A. M. and others",
     collaboration = "CMS",
     title = "Precision luminosity measurement in proton-proton collisions at $\sqrt{s}={13\TeV}$ in 2015 and 2016 at {CMS}",
@@ -978,7 +983,7 @@ CERN
     year = "2021"
 }
 % LUM-17-004
-@techreport{LUM-17-004,
+@techreport{LUM_17_004,
     author = "{CMS Collaboration}",
     collaboration = "CMS",
     title = "{CMS} luminosity measurement for the 2017 data-taking period at $\sqrt{s}={13\TeV}$",
@@ -988,7 +993,7 @@ CERN
     url = "http://cds.cern.ch/record/2621960"
 }
 % LUM-18-002
-@techreport{LUM-18-002,
+@techreport{LUM_18_002,
     author = "{CMS Collaboration}",
     collaboration = "CMS",
     title = "{CMS} luminosity measurement for the 2018 data-taking period at $\sqrt{s}={13\TeV}$",
@@ -1015,9 +1020,70 @@ CERN
       note          = "Submitted to the Journal of High Energy Physics. All figures and tables can be found at http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-19-016 (CMS Public Pages)",
       type          = "CMS Physics Analysis Summary"
 }
+% Production cross section measurements.
+@article{HIG_19_001,
+    author = "Sirunyan, Albert M and others",
+    collaboration = "CMS",
+    title = "{Measurements of production cross sections of the Higgs boson in the four-lepton final state in proton\textendash{}proton collisions at $\sqrt{s} = 13\,\text {Te}\text {V} $}",
+    eprint = "2103.04956",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-HIG-19-001, CERN-EP-2021-016",
+    doi = "10.1140/epjc/s10052-021-09200-x",
+    journal = "Eur. Phys. J. C",
+    volume = "81",
+    number = "6",
+    pages = "488",
+    year = "2021"
+}
+% Higgs branching fractions.
+@article{ATLAS:2022vkf,
+    collaboration = "ATLAS",
+    title = "{A detailed map of Higgs boson interactions by the ATLAS experiment ten years after the discovery}",
+    eprint = "2207.00092",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-EP-2022-057",
+    doi = "10.1038/s41586-022-04893-w",
+    journal = "Nature",
+    volume = "607",
+    number = "7917",
+    pages = "52--59",
+    year = "2022"
+}
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%=== Higgs mass measurement analysis ===%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@techreport{HIG_21_019,
+  title         = "{Higgs boson mass and on-shell width measurements in the four-lepton final state using full Run 2 data}",
+  month         = jun,
+  institution   = "CERN",
+  collaboration = "CMS",
+  address       = "Geneva",
+  number        = "CMS-PAS-HIG-21-019",
+  year          = "2022",
+  type          = "CMS Physics Analysis Summary"
+}
+% PDF Uncertainties.
+@article{Alekhin:2011sk,
+    author = "Alekhin, Sergey and others",
+    title = "{The PDF4LHC Working Group Interim Report}",
+    eprint = "1101.0536",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    month = "1",
+    year = "2011"
+}
+@article{Botje:2011sn,
+    author = "Botje, Michiel and others",
+    title = "{The PDF4LHC Working Group Interim Recommendations}",
+    eprint = "1101.0538",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    month = "1",
+    year = "2011"
+}
 
 
 % Universe stability (citation taken straight from url).
@@ -1081,7 +1147,26 @@ article{Cowan:2010js,
       address       = "Geneva",
       institution   = "CERN",
 }
+% Higgs boson lifetime.
+@techreport{CMS-PAS-HIG-21-013,
+      title         = "{Evidence for off-shell Higgs boson production and first measurement of its width}",
+      institution   = "CERN",
+      collaboration = "CMS",
+      address       = "Geneva",
+      number        = "CMS-PAS-HIG-21-013",
+      year          = "2021",
+      url           = "https://cds.cern.ch/record/2784590",
+      type          = "CMS Physics Analysis Summary"
+}
 
+% TODO: Need to have URL show up? Xunwu uses (at)misc, then "URL <monospace font hyperlink>" 
+@misc{ultralegacy_twiki,
+  author       = "{Physics Data and Monte Carlo Validation (PdmV) Group}",
+  title        = "{Run-2 UltraLegacy Datasets for Analysis}",
+  year         = {2022},
+  month        = aug,
+  url = "{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmVRun2LegacyAnalysis}",
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %=== Dilepton Mass Resonance ===%
@@ -1212,6 +1297,50 @@ article{Cowan:2010js,
 	keywords = {High Energy Physics - Experiment, High Energy Physics - Phenomenology},
 	pages = {537},
 	annote = {Comment: 76 pages, 2 figures, 11 tables},
+}
+% Theory cross sections for ZD.
+@article{Curtin:2014cca,
+    author = "Curtin, David and others",
+    title = "{Illuminating Dark Photons with High-Energy Colliders}",
+    eprint = "1412.0018",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    reportNumber = "YITP-SB-14-49",
+    doi = "10.1007/JHEP02(2015)157",
+    journal = "JHEP",
+    volume = "02",
+    pages = "157",
+    year = "2015"
+}
+% Cross section of ggH.
+@article{Anastasiou:2016cez,
+    author = "Anastasiou, Charalampos and others",
+    title = "{High precision determination of the gluon fusion Higgs boson cross-section at the LHC}",
+    eprint = "1602.00695",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    reportNumber = "CP3-16-01, ZU-TH-27-15, NIKHEF-2016-004, CERN-TH-2016-006",
+    doi = "10.1007/JHEP05(2016)058",
+    journal = "JHEP",
+    volume = "05",
+    pages = "058",
+    year = "2016"
+}
+% THE EPJC PAPER.
+@article{CMS:2021pcy,
+    author = "Tumasyan, A. and others",
+    collaboration = "CMS",
+    title = "{Search for low-mass dilepton resonances in Higgs boson decays to four-lepton final states in proton\textendash{}proton collisions at $\sqrt{s}=13\,\text {TeV} $}",
+    eprint = "2111.01299",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CMS-HIG-19-007, CERN-EP-2021-093",
+    doi = "10.1140/epjc/s10052-022-10127-0",
+    journal = "Eur. Phys. J. C",
+    volume = "82",
+    number = "4",
+    pages = "290",
+    year = "2022"
 }
 
 
@@ -1753,7 +1882,6 @@ doi = "https://doi.org/10.1016/j.physletb.2015.03.048",
 url = "http://www.sciencedirect.com/science/article/pii/S0370269315002117",
 author = "V. Khachatryan and others",
 keywords = "CMS, Physics, Higgs, Lepton, Muon, Electron, Dilepton, Dimuon, Dielectron, Higgs boson",
-abstract = "A search is presented for a standard model-like Higgs boson decaying to the μ+μ− or e+e− final states based on proton–proton collisions recorded by the CMS experiment at the CERN LHC. The data correspond to integrated luminosities of 5.0 fb−1 at a centre-of-mass energy of 7 TeV and 19.7 fb−1 at 8 TeV for the μ+μ− search, and of 19.7 fb−1 at 8 TeV for the e+e− search. Upper limits on the production cross section times branching fraction at the 95% confidence level are reported for Higgs boson masses in the range from 120 to 150 GeV. For a Higgs boson with a mass of 125 GeV decaying to μ+μ−, the observed (expected) upper limit on the production rate is found to be 7.4 (6.5−1.9+2.8) times the standard model value. This corresponds to an upper limit on the branching fraction of 0.0016. Similarly, for e+e−, an upper limit of 0.0019 is placed on the branching fraction, which is ≈3.7×105 times the standard model value. These results, together with recent evidence of the 125 GeV boson coupling to τ-leptons with a larger branching fraction consistent with the standard model, confirm that the leptonic couplings of the new boson are not flavour-universal."
 }
 
 %2016 CMS hmm 
@@ -2291,20 +2419,6 @@ Program title: Pythia 8.2 Catalogue identifier: ACTU_v4_0 Program summary URL:ht
     volume  = "91",
     pages   = "094003",
     year    = "2015"
-}
-
-@article{Anastasiou:2016cez,
-    author = "Anastasiou, Charalampos and Duhr, Claude and Dulat, Falko and Furlan, Elisabetta and Gehrmann, Thomas and Herzog, Franz and Lazopoulos, Achilleas and Mistlberger, Bernhard",
-    title = "{H}igh precision determination of the gluon fusion {H}iggs boson cross-section at the {LHC}",
-    eprint = "1602.00695",
-    archivePrefix = "arXiv",
-    primaryClass = "hep-ph",
-    reportNumber = "CP3-16-01, ZU-TH-27-15, NIKHEF-2016-004, CERN-TH-2016-006",
-    doi = "10.1007/JHEP05(2016)058",
-    journal = "JHEP",
-    volume = "05",
-    pages = "058",
-    year = "2016"
 }
 
 @article{Cacciari:2015jma,

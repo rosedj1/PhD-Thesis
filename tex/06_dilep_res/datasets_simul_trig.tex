@@ -5,14 +5,14 @@ The data sets used for the search for low-mass dilepton mass resonances in SM Hi
 A brief explanation of the parameters used to generate the data sets follows next.
 
 The physics processes corresponding to the signal $\pp \to \htozzd \left( \zdzd \right) \to \fourl$, where $\ell = (\Pe, \Pmu)$, were generated at leading order (LO) using \MGvATNLO 2.2.2 (2.4.2) for 2016 (2017, 2018) samples using the parameters set by the HAHM.
-For each signal process, theoretical cross sections $\left( \sigma_{\PZD} \right)$ are calculated by taking the following product:
+For each signal process, a theoretical cross section $\left( \sigma_{\PZD} \right)$ is calculated by taking the following product:
 \begin{equation*}
-    \sigma_{\PZD} = \sigma^\text{NNNLO}\left( \ggtoH \right) \times \brof{\htozzd} \left(\text{or } \brof{\htozdzd} \right),
+    \sigma_{\PZD} = \sigma^\text{NNNLO}\left( \ggtoH \right) \times \big( \brof{\htozzd} \text{ or } \brof{\htozdzd} \big),
 \end{equation*}
-where 
-On the other hand, \POWHEG v2 was used to simulate the production of SM Higgs bosons via the typical processes (ggH, VBF, VH, and \ttbarh) and to simulate \qqzz at next-to-leading order (NLO) using perturbative quantum chromodynamics (Refs.~\cite{frixione_matching_2007, bagnaschi_higgs_2012, alioli_general_2010,nason_new_2004}).
-The other irreducible background process \ggzz was simulated using \MCFM 7.0.1 (Ref.~\cite{mcfm_campbell_precision_2019}) at LO, to which NLO correction factors were applied (Ref.~\cite{nlo_corr_grazzini_fully_2018}).
-The simulation of \htofourl was carried out by the software \JHUGEN 7.0.2 (Refs.~\cite{hdecay_gao_spin_2010, hdecay_bolognesi_spin_2012}).
+where the branching fractions are taken from Ref.~\cite{Curtin:2014cca} and the ggH cross section at next-to-next-to-next-to-leading order (NNNLO) is taken from Ref.~\cite{Anastasiou:2016cez}.
+On the other hand, \POWHEG v2 was used to simulate the production of SM Higgs bosons via the typical processes (ggH, VBF, VH, and \ttbarh) and to simulate \qqzz at next-to-leading order (NLO) using perturbative quantum chromodynamics~\cite{frixione_matching_2007, bagnaschi_higgs_2012, alioli_general_2010, nason_new_2004}.
+The other irreducible background process \ggzz was simulated using \MCFM 7.0.1~\cite{mcfm_campbell_precision_2019} at leading order (LO), to which next-to-leading order (NLO) correction factors were applied~\cite{nlo_corr_grazzini_fully_2018}.
+The simulation of \htofourl was carried out by the software \JHUGEN 7.0.2~\cite{hdecay_gao_spin_2010, hdecay_bolognesi_spin_2012}.
 
 % TODO: Include ttZ and triboson info? Check EPJC.
 

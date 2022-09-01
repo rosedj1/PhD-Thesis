@@ -8,9 +8,9 @@
 % Preliminary luminosity [1/fb] 	    2.26†§ 	    35.9 (35.92)§          41.48 (41.53) 	59.83 (59.74)   139.50 (139.45)§ 	    137.24 (137.19)§
 % Change of recommended/preliminary 	0.7% 	    1.1%    	           ― 	             ― 	            0.3 (0.3) % 	        0.3 (0.3) %
 % Recommended uncertainty [%] 	        1.6 	    1.2     	           2.3 	            2.5 	        1.6 	                1.6
-% Reference(s) 	                        LUM-17-003 	LUM-17-003 	           LUM-17-004 	    LUM-18-002 	    LUM-17-003, LUM-18-002 	LUM-17-003, LUM-18-002 
-% Always include the reference to the 2015/2016 pp 13 TeV luminosity paper (LUM-17-003), which describes the methodology used by all luminosity measurements also for other datasets (i.e. also for pp 5 TeV, pPb, PbPb analyses).
-% Additionally, include references to the PASes that describe the luminosity measurement of the used data sets, e.g. LUM-17-004 (2017) and LUM-18-002 (2018) for full Run 2 pp 13 TeV analyses. 
+% Reference(s) 	                        LUM_17_003 	LUM_17_003 	           LUM_17_004 	    LUM_18_002 	    LUM_17_003, LUM_18_002 	LUM_17_003, LUM_18_002 
+% Always include the reference to the 2015/2016 pp 13 TeV luminosity paper (LUM_17_003), which describes the methodology used by all luminosity measurements also for other datasets (i.e. also for pp 5 TeV, pPb, PbPb analyses).
+% Additionally, include references to the PASes that describe the luminosity measurement of the used data sets, e.g. LUM_17_004 (2017) and LUM_18_002 (2018) for full Run 2 pp 13 TeV analyses. 
 
 %=== 2018 Prompt Reco
 % https://twiki.cern.ch/twiki/bin/view/CMS/PdmV2018Analysis
@@ -22,21 +22,18 @@
 
 \section{Systematic Uncertainties}
 \label{sec:syst_uncert}
-The systematic uncertainties involved in this analysis are as follows. % TODO: detailed in TODO:CITE HIG-19-001.
-For reference, the systematic uncertainties are summarized below:
+The sources of systematic uncertainties and the impact they have on the estimation of \mfourl are detailed in Ref.~\cite{HIG_21_019}, which include
 \begin{itemize}
-	\item $\lumiint$ (1.6\%)~\cite{LUM-17-003, LUM-18-002, LUM-17-004}.
-	\item Lepton momentum scale and resolution (conservative values from extensive analysis are given in \tablename~\ref{table:ScaleRes_syst}.)
-	\item Lepton identification and reconstruction efficiencies (2.5--9\%), depending on the final state % TODO: confirm number.
-	\item Lepton energy scale
-	% \item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG.
-	\item Estimation of the reducible background (31\%). % TODO: cite.
+	\item integrated luminosity, $\lumiint$ (1.6\%)~\cite{LUM_17_003, LUM_17_004, LUM_18_002}
+	\item lepton momentum scale (0.01--0.06\%) and momentum resolution (3--10\%), depending on the final state (\tablename~\ref{table:ScaleRes_syst})
+	\item lepton identification and reconstruction efficiencies (2.5--9\%), depending on the final state
+	\item estimation of the reducible background ($\sim$31\%), depending on the final state.
 \end{itemize}
 \begin{table}[ht]
 	\begin{center}
 		\topcaption
-		% []
-		{Impact of the lepton scale and resolution.}
+		% [] % TODO
+		{Impact of the lepton momentum scale and resolution.}
                 \begin{tabular}{ccccc}
 		\hline
 		Syst	&	4$\mu$	&	4e	&	2e2$\mu$	&	2$\mu$2e	\\
@@ -44,24 +41,22 @@ For reference, the systematic uncertainties are summarized below:
 		Muon scale	&	0.01\%	&	---	&	0.01\%	&	0.01\%	\\
 		Electron scale	&	---	&	0.06\%	&	0.06\%	&	0.06\%	\\
 		\hline
-		Muon resoltuon	&	3\%	&	---	&	3\%	&	3\%	\\
+		Muon resolution	&	3\%	&	---	&	3\%	&	3\%	\\
 		Electron resolution	&	---	&	10\%	&       10\%&       10\%	\\
 		\hline
 		\end{tabular}
 		\label{table:ScaleRes_syst}
 	\end{center}
 \end{table}
-
-The theoretical systematic uncertainties include:
+The sources of theoretical uncertainties come from Ref.~\cite{HIG_19_001},
+are summarized in \tablename~\ref{table:theo_syst},
+and have impacts on \mfourl which include
 \begin{itemize}
-	\item Renormalization and factorization scale uncertainties. % TODO: Get number and cite.
-	\item Choice of the set of parton distribution functions. % TODO: Get number and cite.
-	% \item BOTH OF THE ABOVE AFFECT SIGNAL AND BKG
-	\item Additional uncertainty of 10\% on the $K$ factor used for \ggzzfourl prediction is applied
-	\item Branching fraction uncertainties for signal and background processes. % TODO: Get number and cite.
+	\item renormalization and factorization scale uncertainties come from varying these scales between 0.5--2.0 times their nominal values
+	\item choice of the set of parton distribution functions~\cite{Alekhin:2011sk, Botje:2011sn}
+	\item additional uncertainty of 10\% on the $K$ factor used for \ggzzfourl prediction
+	\item branching fraction uncertainties for \hzzfourl signal (2\%).
 \end{itemize}
-and are summarized in \tablename~\ref{table:theo_syst}.
-A systematic uncertainty of 2\% on the branching fraction of \hzzfourl only affects the signal yield is also considered. 
 \begin{table}[ht]	
 	\begin{center}
 		\topcaption

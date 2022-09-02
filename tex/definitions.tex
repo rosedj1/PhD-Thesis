@@ -124,7 +124,7 @@
 
 % Cross section.
 \newcommand{\mb}{\ensuremath{\,\text{mb}}\xspace}
-\newcommand{\pb}{\ensuremath{\,\text{pb}}\xspace}
+\providecommand{\pb}{\ensuremath{\,\text{pb}}\xspace}  % Conflicts with `physics' package.
 \newcommand{\pbparen}{\ensuremath{\,(\text{pb})}\xspace}
 \newcommand{\fb}{\ensuremath{\,\text{fb}}\xspace}
 % Luminosity.
@@ -179,7 +179,7 @@
 % absolute value
 \providecommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
 % Calculus: Roman face derivative.
-\newcommand{\dd}[2]{\ensuremath{\frac{\cmsSymbolFace{d} #1}{\cmsSymbolFace{d} #2}}}
+\providecommand{\dd}[2]{\ensuremath{\frac{\cmsSymbolFace{d} #1}{\cmsSymbolFace{d} #2}}}  % Conflicts with `physics' package.
 \newcommand{\ddinline}[2]{\ensuremath{\cmsSymbolFace{d} #1/\cmsSymbolFace{d} #2}}
 \newcommand{\rd}{\ensuremath{\cmsSymbolFace{d}}}
 \newcommand{\re}{\ensuremath{\cmsSymbolFace{e}}}
@@ -201,6 +201,7 @@
 
 % Physics symbols.
 \providecommand{\lagrang}{\ensuremath{\mathcal{L}}\xspace}
+\providecommand{\lagrangdens}{\ensuremath{\mathscr{L}}\xspace}
 \newcommand{\abseta}{\ensuremath{\abs{\eta}}\xspace}
 \newcommand{\absetaof}[1]{\ensuremath{\abs{ \eta^{#1} }}\xspace}
 \newcommand{\PT}{\ensuremath{p_{\mathrm{T}}}\xspace}
@@ -255,8 +256,10 @@
 %=== Particles ===%
 \newcommand{\Pn}{\ensuremath{\mathrm{n}}}
 \newcommand{\Pp}{\ensuremath{\mathrm{p}}}
-\newcommand{\PV}{\ensuremath{\mathrm{V}}\xspace}
+\providecommand{\PV}{\ensuremath{\mathrm{V}}\xspace}  % Conflicts with `physics' package.
 \newcommand{\PW}{\ensuremath{\mathrm{W}}\xspace}
+\newcommand{\PWp}{\ensuremath{\mathrm{W}^+}\xspace}
+\newcommand{\PWm}{\ensuremath{\mathrm{W}^-}\xspace}
 \newcommand{\PWpm}{\ensuremath{\mathrm{W}^\pm}\xspace}
 \newcommand{\PX}{\ensuremath{\mathrm{X}}\xspace}
 \newcommand{\PZ}{\ensuremath{\text{Z}}\xspace}

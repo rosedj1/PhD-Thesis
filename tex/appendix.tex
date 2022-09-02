@@ -26,19 +26,18 @@ From the figure it can be seen that:
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \addFigure{0.49}{figures/adhoc_d0/PV_outside.png}
-    \addFigure{0.49}{figures/adhoc_d0/PV_inside.png}
-        \captionof{figure}
-            [Diagram showing circular trajectory of a muon with respect to the primary vertex]
-            {Diagram showing circular trajectory of a muon with respect to the primary vertex.
-            \;A) The true primary vertex (PV) is \emph{outside} the circular trajectory of a muon.
-            \;B) The PV is \emph{inside} the circular trajectory of a muon.
-            } 
-        \label{fig:traj}
+        \addFigure{0.49}{figures/adhoc_d0/PV_outside.png}
+        \addFigure{0.49}{figures/adhoc_d0/PV_inside.png}
+    \captionof{figure}
+        [Diagram showing circular trajectory of a muon with respect to the primary vertex]
+        {Diagram showing circular trajectory of a muon with respect to the primary vertex.
+        \;A) The true primary vertex (PV) is \emph{outside} the circular trajectory of a muon.
+        \;B) The PV is \emph{inside} the circular trajectory of a muon.} 
+    \label{fig:traj}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
 
-From Fig.~\ref{fig:traj} (Left) we see that:
+From Fig.~\ref{fig:traj} (A) it can be seen that:
 \begin{equation}
     \label{azimuth}
 \phi_{\Pmu^{\pm}} = \phi_{s} \pm \pi/2.
@@ -61,7 +60,7 @@ the $d_0$ for $\Pmu^{\pm}$ which came from a PV outside the circle trajectory is
     \implies  d_{0,\Pmu^{\pm}}^{\text{PV,outside}} = \mp \lvert \vec{s} \rvert. 
 \end{equation}
 
-The case for the PV being {\it inside} the circle trajectory (Fig.~\ref{fig:traj}, Right) simply leads to a sign change in Eqn.~\ref{azimuth}:
+The case when the PV is \textit{inside} the circlular trajectory is shown in Fig.~\ref{fig:traj} (B) and simply leads to a sign change in Eqn.~\ref{azimuth}:
 \begin{equation}
     \label{azimuth_flipped}
 \phi_{\Pmu^{\pm}} = \phi_{s} \mp \pi/2.
@@ -72,7 +71,7 @@ Starting again from the definition of $d_0$, but this time using Eqn.~\ref{azimu
 \implies  d_{0,\Pmu^{\pm}}^{\text{PV,inside}} = \pm \lvert \vec{s} \rvert.
 \end{equation}
 
-Indeed we see that the magnitude of $d_0$ {\it is the transverse impact parameter} $(\lvert \vec{s} \rvert)$, as expected!
+Indeed we see that the magnitude of $d_0$ \textit{is the transverse impact parameter} $(\lvert \vec{s} \rvert)$, as expected!
 The sign of $d_0$, however, is not possible to interpret at this point: 
 for a $d_0 > 0$ could either mean a $\Pmu^-$ coming from a PV outside the circlular trajectory \emph{or}
 could mean a $\Pmu^+$ coming from a PV found inside the circle.
@@ -102,34 +101,31 @@ To summarize: it is the \emph{product} of the charge and $d_0$ that contains use
     \text{outside of circle},& \text{if charge}(\Pmu^{\pm}) \cdot d_{0,\Pmu^{\pm}} < 0.
 \end{cases}
 \]
-
-
-
-
 %---------------%
 % \newpage
 \chapter{Correlation between transverse momentum bias and impact parameter}
 % \label{app:dpT_graphs}
-
 % TODO: Make multiFigure
 \begin{multiFigure}
     \centering
-    \addFigure{0.45}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p0eta0p2.pdf}
-    \addFigure{0.45}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p2eta0p4.pdf}
-    \addFigure{0.45}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p4eta0p6.pdf}
-    \addFigure{0.45}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p6eta0p8.pdf}
-    \addFigure{0.45}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p8eta1p0.pdf}
-    \addFigure{0.45}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_1p0eta1p2.pdf}
-    \addFigure{0.45}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_1p2eta1p5.pdf}
+        % 0.45 is OK.
+        \addFigure{0.4}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p0eta0p2.pdf}
+        \addFigure{0.4}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p2eta0p4.pdf}
+        \addFigure{0.4}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p4eta0p6.pdf}
+        \addFigure{0.4}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p6eta0p8.pdf}
+        \addFigure{0.4}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_0p8eta1p0.pdf}
+        \addFigure{0.4}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_1p0eta1p2.pdf}
+        \addFigure{0.4}{figures/adhoc_d0/dpToverpTvsqd0_final_plots_2017/graph_dpTvsqd0_1p2eta1p5.pdf}
     \captionof{figure}
         [\pTmismeas vs. avg$(\qdzero)$ for 2017 MC in bins of \abseta: 0.0--0.2--0.4--0.6--0.8--1.0--1.25--1.5]
         {Plots of \pTmismeas vs. avg$(\qdzero)$ for 2017 MC.
         The \abseta bin edges used are: [0.0--0.2--0.4--0.6--0.8--1.0--1.25--1.5].
         Each line uses data from a single \pT bin. 
         The \pT correction parameters for each (\abseta, \pT) bin are found in the legend.
-    }
+        \;A) 
+        \;B) TODO}
 \end{multiFigure}
-\newpage
+
 % % TODO: Make multiFigure
 % \begin{figure}[!htbp]
 %     % \vspace*{0.3cm}

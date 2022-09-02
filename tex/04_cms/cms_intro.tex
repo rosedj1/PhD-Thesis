@@ -1,10 +1,10 @@
 \chapter{THE CMS DETECTOR} 
 \label{ch:cms}
-\textcolor{white}{words}  % This is dumb but necessary; having any words here forces \begin{multiFigure} to be centered...
+
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[height=10cm]{figures/cms/cms_poster_SX5.jpg}
+        \includegraphics[height=12cm]{figures/cms/cms_poster_SX5.jpg}
     \captionof{figure}
         [Life-size poster of the CMS detector]
         {Life-size poster of the CMS detector, taken during CERN Open Days 2019 in the SX5 warehouse where parts of CMS were assembled.
@@ -17,12 +17,12 @@ Weighing in at 14\,000 tonnes, standing 15 meters (5 stories) tall, and reaching
 % two general-purpose particle detectors at the LHC (Fig.~\ref{fig:cms_poster}).
 the four major particle detectors at the LHC.
 CMS is situated approximately 100\meter under the earth at the fifth collision point (\emph{Point 5}) along the LHC, as shown in Fig.~\ref{fig:lhc_points}.
-In the summer of 2012, both CMS and its competing experiment, A Toroidal LHC ApparatuS (ATLAS), independently discovered the Higgs boson~\cite{chatrchyan_observation_2012, aad_observation_2012, chatrchyan_observation_2013}, a triumphant day that was recorded in particle physics history.
+In the summer of 2012, both CMS and its competing experiment, A Toroidal LHC ApparatuS (ATLAS), independently discovered the Higgs boson~\cite{chatrchyan_observation_2012, ATLAS:2012yve, chatrchyan_observation_2013}, a triumphant day that was recorded in particle physics history.
 % LHC Points.
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[height=9cm,keepaspectratio]{figures/cms/lhc_points_with_buildings.png}
+        \includegraphics[height=9cm,keepaspectratio]{figures/cms/lhc_points_with_buildings.png}
     \captionof{figure}
         [Points of interest along the LHC (Points 1--8)]
         {Points of interest along the LHC (Points 1--8).
@@ -34,7 +34,7 @@ In the summer of 2012, both CMS and its competing experiment, A Toroidal LHC App
 % The purpose of CMS is to precisely measure the kinematical properties of the abundant decay products that come from the \pp collisions delivered by the LHC.
 % These particle properties, like momentum, energy, and charge, are used to reconstruct the particle trajectories (``tracks'') and help to identify the particles themselves.
 
-The LHC (Ch.~\ref{ch:lhc}) directs two proton bunches together on a collision course every 25\ns to produce thousands of new particles per \pp collision.
+The LHC (\cref{ch:lhc}) directs two proton bunches together on a collision course every 25\ns to produce thousands of new particles per \pp collision.
 These outward-moving particles travel all sorts of directions away from the interaction point.
 CMS is built around the interaction point in a series of cylindrical subdetectors for nearly hermetic coverage so that most of the particles \emph{must} travel through CMS.
 The detector sports a solenoid---for which CMS was named---which generates a 3.8\tesla uniform magnetic field that points longitudinally down the central axis of CMS.
@@ -45,7 +45,7 @@ Electrically neutral particles experience no Lorentz force and thus travel in st
 % CMS Cutout View.
 \begin{multiFigure}
     \centering
-    \includegraphics[width=\textwidth,keepaspectratio]{figures/cms/cms_cut_away.pdf}
+        \includegraphics[width=\textwidth,keepaspectratio]{figures/cms/cms_cut_away.pdf}
     \captionof{figure}
         [Cut out of the CMS detector showing its various subdetector components]
         {Cut out of the CMS detector showing its various subdetector components.
@@ -54,7 +54,7 @@ Electrically neutral particles experience no Lorentz force and thus travel in st
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
 
-The subdetectors shown in Fig.~\ref{fig:cms_cut_out_view} measure the momenta and energies of the particles emitted from the \pp collision point.
+The subdetectors shown in \cref{fig:cms_cut_out_view} measure the momenta and energies of the particles emitted from the \pp collision point.
 As particles interact with the subdetectors, they may pass through some while getting completely absorbed by others.
 For example, charged particles can leave `hits' in the silicon tracker system and continue through to the next radially outward subdetector, whereas hadronic matter tends to be captured by the hadronic calorimeter.
 In this way, CMS is like a large `particle filter'.
@@ -74,16 +74,17 @@ It is thus helpful to convert $\theta$ to the Lorentz-invariant quantity called 
 defined as $\eta = -\ln [ \tan(\theta/2)]$. % Formula comes from: https://twiki.cern.ch/twiki/bin/view/Sandbox/GeorgeAlversonSandbox#Symbols_and_units_natural_units
 
 In the remainder of this chapter, the subdetectors of CMS are described in detail:
-the silicon tracker in Sec.~\ref{sec:tracker},
+% the silicon tracker in Sec.~\ref{sec:tracker},
+the silicon tracker in \cref{sec:tracker},
 followed by the electromagnetic and hadron calorimeters in Sec.~\ref{sec:calo},
 then the solenoid and yoke system in Sec.~\ref{sec:solenoid}.
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[width=0.96\textwidth,keepaspectratio]{figures/cms/cms_transverse_particletrajectories_corrected.png}
+        \includegraphics[width=0.96\textwidth,keepaspectratio]{figures/cms/cms_transverse_particletrajectories_corrected.png}
     \captionof{figure}
-        [A transverse view of CMS showing particle `filtration']
-        {A transverse view of CMS showing how the detector `filters' the outgoing particles as they pass through different subdetectors.
+        [Transverse view of CMS showing particle `filtration']
+        {Transverse view of CMS showing how the detector `filters' the outgoing particles as they pass through different subdetectors.
         A positron (solid red line) curves due to the presence of the magnetic field and gets stopped in the ECAL, creating an EM shower.
         A photon (blue dashed line) does not get detected at all by the Silicon Tracker, since it has no electric charge.
         It continues through to the ECAL and makes a shower here, like the positron.

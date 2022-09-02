@@ -22,24 +22,6 @@ The two IBs for this analysis are:
 
 \subsubsection{ggZZ background}
 Following the prescription from Ref.~\cite{HIG_19_001}, the \ggzzfourl background is reweighted by a $K$ factor to reach NNLO precision.
-%\figurename~\ref{Mass_comparison_ggZZ} shows a comparison of the ggZZ background in different final 
-%states, for different years, for different reconstruction.
-%\begin{figure}[!htbp]
-%\begin{center}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%\caption{ggZZ mass distribution for 2016 on top ($4\mu$ on the left 4e on the right),
-%2017 in the middle (4$\mu$ on the left 2e2$\mu$ on the right),
-%2018 on bottom (4e on the left 2$\mu$2e on the right),
-%Four different approaches are shown: baseline (black), refit+baseline (red), VXBS (green)
-%and VXBS+refit (blue).}
-%\label{Mass_comparison_ggZZ}
-%\end{center}
-%\end{figure}
 
 \subsubsection{qqZZ background}
 %qqZZ with k.qqZZ.ewk and k.qqZZ.qcd.M
@@ -47,24 +29,6 @@ The \qqzzfourl background is generated at NLO and then scaled to NNLO using NNLO
 as a function of \mass{\ZZ}. Additional NLO electroweak corrections, which depend on the initial state quark flavors and their
 kinematic variables, are also applied to this process in the region $\mass{\ZZ} > 2\mass{\PZ}$, where the corrections have been computed. 
 For more details and plots, see Ref.~\cite{HIG_19_001}.
-%\figurename~\ref{Mass_comparison_qqZZ} shows a comparison of the qqZZ background in different final 
-%states, for different years, for different reconstruction.
-%\begin{figure}[!htbp]
-%\begin{center}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%		\includegraphics[width=0.35\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/Placeholder.png}
-%\caption{ggZZ mass distribution for 2016 on top ($4\mu$ on the left 4e on the right),
-%2017 in the middle (4$\mu$ on the left 2e2$\mu$ on the right),
-%2018 on bottom (4e on the left 2$\mu$2e on the right),
-%Four different approaches are shown: baseline (black), refit+baseline (red), VXBS (green)
-%and VXBS+refit (blue).}
-%\label{Mass_comparison_qqZZ}
-%\end{center}
-%\end{figure}
 
 \subsection{Reducible Background}
 \label{sec:redbkg}
@@ -177,25 +141,69 @@ Similar equations can be derived for the contributions of a 3pr event to the 3P1
 Since a 3pr event needs only 1 nonprompt PTS lepton to be included in the 4P region (therefore, carrying only 1 factor of $f$), a 3pr event tends to contribute more weight to 4P than does a 2pr event (which carries $f^2$).
 
 If the total number of 2pr, 3pr, and 4pr events is \xtwoprompt, \xthreeprompt, and \xfourprompt, respectively, then Fig.~\ref{fig:prompt_to_crs} shows how the weight of a single event, derived in the previous equations (and others forthcoming), from each category contributes to the final yield of each CR $\left( \ntwoPtwoF, \nthreePoneF \right)$ and of the SR $\left( \nfourP \right)$.
-% \begin{figure}[!htbp]
-% 	\begin{center}
-% 		\begin{tikzpicture}
-% 			\node (X2pr) {\xtwoprompt};
-% 			\node[right=4cm of X2pr] (X3pr) {\xthreeprompt};
-% 			\node[right=4cm of X3pr] (X4pr) {\xfourprompt};
-% 			\node[below=2cm of X2pr] (N2p) {\ntwoPtwoF};
-% 			\node[below=2cm of X3pr] (N3p) {\nthreePoneF};
-% 			\node[below=2cm of X4pr] (N4p) {\nfourP};
-% 			% \draw[-latex] (X3pr) -- (N4p) node[xshift=2cm,yshift=1cm,rotate=45] {some words};
-% 			% \draw[-latex] (X3pr) -- (N4p) node[midway,above,rotate=45] {words};
-% 			% \draw[-latex] (X3pr) -- (N4p) node[sloped, anchor=center] {words};
-% 		\end{tikzpicture}
-% 		\caption{
-% 			Each category of prompt processes contribute an effective event weight $\left( w^k \right)$ The total number of events that yield 2/3/4 prompt leptons each con
-% 			}
-% 		\label{fig:prompt_to_crs}
-% 	\end{center}
-% \end{figure}
+
+% TODO: use consistent symbols in figure below!
+\begin{figure}
+	\centering
+    \begin{tikzpicture}
+        % top nodes
+        \node[yshift=5pt] (X2pr) {$X_\text{2pr}$ {\small (Z + jets, $t\bar{t}$ + jets)}};
+        \node[right=3.5cm of X2pr] (X3pr) {$X_\text{3pr}$ {\small(WZ + jets)}};
+        \node[right=4.5cm of X3pr] (X4pr) {$X_\text{4pr}$ {\small(ZZ,Z$\gamma^*$)}};
+        
+        % bottom nodes
+        \node[below=5.5cm of X2pr.west, xshift=12pt] (N2P2F) {$N_\text{2P2F}$};
+        \node[below=5.5cm of X3pr.west, xshift=12pt] (N3P1F) {$N_\text{3P1F}$};
+        \node[below=5.5cm of X4pr.west, xshift=12pt] (N4P) {$N_\text{4P}$};
+        
+        % solid lines
+        \draw[-stealth, line width=1.5pt] ([yshift=-10pt,xshift=12pt]X2pr.west) -- (N2P2F);
+        \draw[-stealth, line width=1.5pt] ([yshift=-10pt,xshift=12pt]X2pr.west) -- (N3P1F);
+        \draw[-stealth, line width=1.5pt] ([yshift=-10pt,xshift=12pt]X2pr.west) -- (N4P);
+
+        % dashed lines
+        \draw[-stealth, dash pattern=on 10pt off 10pt, line width=1.5pt] ([yshift=-10pt,xshift=12pt]X3pr.west) -- (N3P1F);
+        \draw[-stealth, dash pattern=on 10pt off 10pt, line width=1.5pt] ([yshift=-10pt,xshift=12pt]X3pr.west) -- (N4P);
+        
+        % dotted lines
+        \draw[-stealth, loosely dotted, line width=2pt] ([yshift=-10pt,xshift=12pt]X4pr.west) -- (N3P1F);
+        \draw[-stealth, loosely dotted, line width=2pt] ([yshift=-10pt,xshift=12pt]X4pr.west) -- (N4P);
+        
+        % equation nodes
+        \node[draw, fill=white, below=4.15 of X2pr.west, xshift=12pt] (eq1) {\small $\epsilon^2(1-f)^2$};
+        \node[draw, fill=white, below left=4.15 and 1.25cm of X3pr.west, xshift=12pt] (eq2) {\small $2\epsilon^2f(1-f)$};
+        \node[draw, fill=white, below=4.15 of X3pr.west, xshift=10pt] (eq3) {\small $\epsilon^3(1-f)$};
+        \node[draw, fill=white, below right=4.15 and 1.2cm of X3pr.west, xshift=12pt] (eq4) {\small $4\epsilon^3\epsilon_\text{F}^\text{pr}$};
+        \node[draw, fill=white, below left=4.15 and 3.2cm of X4pr.west, xshift=12pt] (eq5) {\small $\epsilon^2f^2$};
+        \node[draw, fill=white, below left=4.15 and 1.4cm of X4pr.west, xshift=12pt] (eq6) {\small $\epsilon^3f$};
+        \node[draw, fill=white, below=4.15 of X4pr.west, xshift=12pt] (eq7) {\small $\epsilon^4$};
+
+        % RB and IB nodes
+        \node[fill=white, above=.25cm of eq5, yshift=-3pt] (RB) {\small RB};
+        \node[fill=white, above left=.25cm and 0.25cm of eq7, yshift=-3pt] (IB) {\small IB};
+
+        \draw[line width=1pt] ([yshift=2pt]RB.south) -- (eq5.north);
+        \draw[line width=1pt] ([yshift=2pt]RB.south) -- (eq6.west);
+        \draw[line width=1pt] ([yshift=2pt,xshift=4pt]IB.south) -- (eq7.west);
+        
+        % \draw[line width=1.5pt, -stealth] (e21f2) -- (N2P2F);
+        
+        % \diagram* {
+            % (X2pr) -- (e21f2),
+        %     (ZZ) -- [boson, edge label=$Z$] (Z1),
+        %     (ZZ) -- [boson, edge label=$Z$] (Z2),
+        %     (Z1) -- [boson, edge label=$Z_D$] (ZD),
+        %     (ZDl2) -- [fermion] (ZD) -- [fermion] (ZDl1);
+        %     (Z2l2) -- [fermion] (Z2) -- [fermion] (Z2l1);
+        % };
+    \end{tikzpicture}
+	\caption
+		[Diagram showing how RB prompt-lepton processes contribute to observed PTS-lepton events.]
+		{Contributions of per-event weights (boxed values) of various $n$-prompt-lepton processes ($X_{n\text{pr}}$, in parentheses) to the total numbers of events in the observed control regions $\left( \ntwoPtwoF, \nthreePoneF \right)$ and signal region $\left( \nfourP \right)$.
+		The labels ``IB'' and ``RB'' indicate those contributions which comprise the irreducible and reducible backgrounds, respectively.}
+		\label{fig:prompt_to_crs}
+\end{figure}
+
 It is then straightforward to evaluate the expected number of RB 4P events:
 \begin{align}
 	\label{eqn:n4p_x2x3}
@@ -226,20 +234,6 @@ This is achieved by relating \xtwoprompt to \ntwoPtwoF using Eq.~\ref{eqn:wt_2pr
 	% \\
 	% \implies \xtwoprompt &= \frac{ \ntwoPtwoF }{ \epsilon^2 \left( 1-f \right)^2 }
 \end{align}
-
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{figures/higgsmassmeas/redbkg/promptwgts_to_CRSR.png}
-		\caption
-			[Diagram showing how RB prompt-lepton processes contribute to observed PTS-lepton events.]
-			{
-			Contributions of per-event weights (boxed values) of various $n$-prompt-lepton processes ($X_{n\text{pr}}$, in parentheses) to the total numbers of events in the observed control regions $\left( \ntwoPtwoF, \nthreePoneF \right)$ and signal region $\left( \nfourP \right)$.
-			The labels ``IB'' and ``RB'' indicate those contributions which comprise the irreducible and reducible backgrounds, respectively.
-			}
-		\label{fig:prompt_to_crs}
-	\end{center}
-\end{figure}
 
 The strategy to relate \xthreeprompt to \nthreePoneF is not as straightforward as relating \xtwoprompt to \ntwoPtwoF,
 since two other sources also contribute to the 3P1F CR (as shown in Fig.~\ref{fig:prompt_to_crs}):
@@ -297,169 +291,157 @@ and by summing over the total number of raw yields per CR:
 where $f_{1,j}$ and $f_{2,j}$ are the misidentification rates of the first and second FTS leptons, respectively, found in the $j^{\text{th}}$ 2P2F event
 and $\hat{w}^k_{\ZZ}$ accounts for the differential QCD and electroweak $K$ factors defined previously. % TODO: in TODO:REF $sec:bkg_irred$. %Sec.~\ref{sec:bkg_irred}.
 % The plots in \figurename~\ref{FINAL RBE PLOTS} make use of Eq.~\ref{eqn:rbe_formula_final}.
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_2mu2e.pdf}
-		\caption
-			[Distributions of the predicted and observed RB yields for the 2P2F CR (2016 pre-VFP).]
-			{
-			Events from 2016 pre-VFP UL data that pass 2P2F CR selections (black markers) 
-			are compared to the stacked 2P2F distributions of simulated samples
-			(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar).
-			The results are split into the $4\ell$ final states:
-            $4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
-			}
-		\label{cr_plots_2p2f_2016prevfp}
-	\end{center}
-\end{figure}
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_2P2F_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_2P2F_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_2P2F_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_2P2F_2mu2e.pdf}
-		\caption
-			[Distributions of the predicted and observed RB yields for the 2P2F CR (2016 post-VFP).]
-			{
-			Events from 2016 post-VFP UL data that pass 2P2F CR selections (black markers) 
-			are compared to the stacked 2P2F distributions of simulated samples
-			(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar).
-			The results are split into the $4\ell$ final states:
-            $4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
-			}
-		\label{cr_plots_2p2f_2016postvfp}
-	\end{center}
-\end{figure}
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_2mu2e.pdf}
-		\caption
-			[Distributions of the predicted and observed RB yields for the 2P2F CR (2017).]
-			{
-			Events from 2017 UL data that pass 2P2F CR selections (black markers) 
-			are compared to the stacked 2P2F distributions of simulated samples
-			(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar).
-			The results are split into the $4\ell$ final states:
-			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
-			}
-		\label{cr_plots_2p2f_2017}
-	\end{center}
-\end{figure}
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_2mu2e.pdf}
-		\caption
-			[Distributions of the predicted and observed RB yields for the 2P2F CR (2018).]
-			{
-			Events from 2018 UL data that pass 2P2F CR selections (black markers) 
-			are compared to the stacked 2P2F distributions of simulated samples
-			(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar).
-			The results are split into the $4\ell$ final states:
-			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
-			}
-		\label{cr_plots_2p2f_2018}
-		\end{center}
-\end{figure}
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_3P1F_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_3P1F_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_3P1F_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_3P1F_2mu2e.pdf}
-		\caption
-			[Distributions of the predicted and observed RB yields for the 3P1F CR (2016 pre-VFP).]
-			{
-			Events from 2016 pre-VFP UL data that pass 3P1F CR selections (black markers) 
-			are compared to the stacked 3P1F distributions of simulated samples
-			(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar)
-			and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
-			This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
-			The results are split into the $4\ell$ final states:
-			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
-			}
-		\label{cr_plots_3p1f_2016prevfp}
-	\end{center}
-\end{figure}
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_3P1F_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_3P1F_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_3P1F_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_3P1F_2mu2e.pdf}
-		\caption
-			[Distributions of the predicted and observed RB yields for the 3P1F CR (2016 post-VFP).]
-			{
-			Events from 2016 post-VFP UL data that pass 3P1F CR selections (black markers) 
-			are compared to the stacked 3P1F distributions of simulated samples
-			(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar)
-			and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
-			This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
-			The results are split into the $4\ell$ final states:
-			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
-			}
-		\label{cr_plots_3p1f_2016postvfp}
-	\end{center}
-\end{figure}
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_2mu2e.pdf}
-		\caption
-			[Distributions of the predicted and observed RB yields for the 3P1F CR (2017).]
-			{
-			Events from 2017 UL data that pass 3P1F CR selections (black markers) 
-			are compared to the stacked 3P1F distributions of simulated samples
-			(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar)
-			and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
-			This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
-			The results are split into the $4\ell$ final states:
-			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
-			}
-		\label{cr_plots_3p1f_2017}
-	\end{center}
-\end{figure}
-% TODO: Change to multiFigure.
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_2mu2e.pdf}
-		\caption
-			[Distributions of the predicted and observed RB yields for the 3P1F CR (2018).]
-			{
-			Events from 2018 UL data that pass 3P1F CR selections (black markers) 
-			are compared to the stacked 3P1F distributions of simulated samples
-			(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar)
-			and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
-			This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
-			The results are split into the $4\ell$ final states:
-			$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).
-			}
-		\label{cr_plots_3p1f_2018}
-	\end{center}
-\end{figure}
+% TODO: Update caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_4mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_4e.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_2e2mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_2P2F_2mu2e.pdf}
+	\captionof{figure}
+		[Distributions of the predicted and observed RB yields for the 2P2F CR (2016 pre-VFP)]
+		{TODO
+		\;A)
+		\;B) Events from 2016 pre-VFP UL data that pass 2P2F CR selections (black markers) 
+		are compared to the stacked 2P2F distributions of simulated samples
+		(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar).
+		The results are split into the $4\ell$ final states:
+		$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+	\label{cr_plots_2p2f_2016prevfp}
+\end{multiFigure}
+% TODO: Update caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_2P2F_4mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_2P2F_4e.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_2P2F_2e2mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_2P2F_2mu2e.pdf}
+	\captionof{figure}
+		[Distributions of the predicted and observed RB yields for the 2P2F CR (2016 post-VFP)]
+		{TODO:
+		\;A)
+		Events from 2016 post-VFP UL data that pass 2P2F CR selections (black markers) 
+		are compared to the stacked 2P2F distributions of simulated samples
+		(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar).
+		The results are split into the $4\ell$ final states:
+		$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+	\label{cr_plots_2p2f_2016postvfp}
+\end{multiFigure}
+% TODO: Update caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_4mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_4e.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_2e2mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2017_CR_2P2F_2mu2e.pdf}
+	\captionof{figure}
+		[Distributions of the predicted and observed RB yields for the 2P2F CR (2017)]
+		{TODO:
+		\;A)
+		Events from 2017 UL data that pass 2P2F CR selections (black markers) 
+		are compared to the stacked 2P2F distributions of simulated samples
+		(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar).
+		The results are split into the $4\ell$ final states:
+		$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+	\label{cr_plots_2p2f_2017}
+\end{multiFigure}
+% TODO: Update caption to reflect subfigures.
+\begin{multiFigure}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_4mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_4e.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_2e2mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2018_CR_2P2F_2mu2e.pdf}
+	\captionof{figure}
+		[Distributions of the predicted and observed RB yields for the 2P2F CR (2018)]
+		{TODO:
+		\;A)
+		Events from 2018 UL data that pass 2P2F CR selections (black markers) 
+		are compared to the stacked 2P2F distributions of simulated samples
+		(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar).
+		The results are split into the $4\ell$ final states:
+		$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+	\label{cr_plots_2p2f_2018}
+\end{multiFigure}
+% TODO: Update caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_3P1F_4mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_3P1F_4e.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_3P1F_2e2mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016preVFP_CR_3P1F_2mu2e.pdf}
+	\captionof{figure}
+		[Distributions of the predicted and observed RB yields for the 3P1F CR (2016 pre-VFP)]
+		{TODO:
+		\;A)
+		Events from 2016 pre-VFP UL data that pass 3P1F CR selections (black markers) 
+		are compared to the stacked 3P1F distributions of simulated samples
+		(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar)
+		and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
+		This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
+		The results are split into the $4\ell$ final states:
+		$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+	\label{cr_plots_3p1f_2016prevfp}
+\end{multiFigure}
+% TODO: Update caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_3P1F_4mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_3P1F_4e.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_3P1F_2e2mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2016postVFP_CR_3P1F_2mu2e.pdf}
+	\captionof{figure}
+		[Distributions of the predicted and observed RB yields for the 3P1F CR (2016 post-VFP)]
+		{TODO:
+		\;A)
+		Events from 2016 post-VFP UL data that pass 3P1F CR selections (black markers) 
+		are compared to the stacked 3P1F distributions of simulated samples
+		(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar)
+		and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
+		This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
+		The results are split into the $4\ell$ final states:
+		$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+	\label{cr_plots_3p1f_2016postvfp}
+\end{multiFigure}
+% TODO: Update caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_4mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_4e.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_2e2mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2017_CR_3P1F_2mu2e.pdf}
+	\captionof{figure}
+		[Distributions of the predicted and observed RB yields for the 3P1F CR (2017)]
+		{TODO:
+		\;A)
+		Events from 2017 UL data that pass 3P1F CR selections (black markers) 
+		are compared to the stacked 3P1F distributions of simulated samples
+		(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar)
+		and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
+		This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
+		The results are split into the $4\ell$ final states:
+		$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+	\label{cr_plots_3p1f_2017}
+\end{multiFigure}
+% TODO: Update caption to reflect subfigures.
+\begin{multiFigure}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_4mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_4e.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_2e2mu.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/cr/UL2018_CR_3P1F_2mu2e.pdf}
+	\captionof{figure}
+		[Distributions of the predicted and observed RB yields for the 3P1F CR (2018)]
+		{TODO:
+		\;A)
+		Events from 2018 UL data that pass 3P1F CR selections (black markers) 
+		are compared to the stacked 3P1F distributions of simulated samples
+		(\Zplusjets, \ttbarplusjets, \WZ, \ZZ, \Zgammastar)
+		and to the predicted contribution of 2-prompt-2-nonprompt-lepton processes to the 3P1F CR (red line).
+		This prediction is obtained by making a distribution of all event weights given by Eq.~\ref{eqn:wt_2prto3p1f_simp} and stacking that on top of the WZ and \ZZ distributions.
+		The results are split into the $4\ell$ final states:
+		$4\mu$ (top left), 4e (top right), 2e2$\mu$ (bottom left), 2$\mu$2e (bottom right).}
+	\label{cr_plots_3p1f_2018}
+\end{multiFigure}
 
-% \subsubsection{Tight-to-loose lepton rates}
 \subsubsection{Lepton misidentification rate measurement}
 \label{sec:fr_evtsel}
 As mentioned in Sec.~\ref{sec:redbkg}, the lepton misidentification rate ($f$) is the probability that a nonprompt lepton will pass tight selections (PTS).
@@ -501,72 +483,71 @@ The calculation of $f$ requires that \looselep is a nonprompt lepton but since d
 For example, the decay of \WZ produces 3 prompt leptons and so this contribution must be subtracted.
 Thus, the number of expected prompt probe leptons from \WZ events is subtracted from both the numerator and denominator in Eq.~\ref{eqn:fr_calc} for each $\ell, \pt, \abseta$ bin.
 The final misidentification rates used in the OS Method for electrons and muons are shown in Figures~\ref{fr_plots_el} and~\ref{fr_plots_mu} using 2016--2018 UL data.
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016preVFP_el_yaxis_full.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016postVFP_el_yaxis_full.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2017_el_yaxis_full.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2018_el_yaxis_full.pdf}
-		\caption
-			[Electron misidentification rates \vs electron \pt for the OS Method.]
-			{
-			Electron misidentification rates \vs the \pt of the probe electron evaluated for the OS Method selecting $\PZ + \Pe$ events in UL data
-			for each year in Run 2:
-			2016 pre-VFP (top left),
-			2016 post-VFP (top right),
-			2017 (bottom left), and
-			2018 (bottom right).
-			Rates are evaluated separately for the barrel (blue lines) and endcap (red lines) regions,
-			partitioned at $\abs{\eta^{\Pe}} = 1.497$.
-			The final rates (dashed lines) are calculated by subtracting out the expected \WZ contribution---estimated from simulation---from the numerator and denominator in the rate calculation.
-		}
-		\label{fr_plots_el}
-	\end{center}
-\end{figure}
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016preVFP_mu_yaxis_full.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016postVFP_mu_yaxis_full.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2017_mu_yaxis_full.pdf}
-		\includegraphics[width=0.48\textwidth]{figures/higgsmassmeas/redbkg/fr/fakerates_UL2018_mu_yaxis_full.pdf}
-		\caption
-			[Muon misidentification rates \vs muon \pt for the OS Method.]
-			{
-			Muon misidentification rates \vs the \pt of the probe muon evaluated for the OS Method selecting $\PZ + \mu$ events in UL data
-			for each year in Run 2:
-			2016 pre-VFP (top left),
-			2016 post-VFP (top right),
-			2017 (bottom left), and
-			2018 (bottom right).
-			Rates are evaluated separately for the barrel (blue lines) and endcap (red lines) regions,
-			partitioned at $\abs{\eta^{\mu}} = 1.2$.
-			The final rates (dashed lines) are calculated by subtracting out the expected \WZ contribution---estimated from simulation---from the numerator and denominator in the rate calculation.
-		}
-		\label{fr_plots_mu}
-	\end{center}
-\end{figure}
-% \subsubsection{OS Method event selection}
-% \label{osmethod_evtsel}
+% TODO: Change caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016preVFP_el_yaxis_full.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016postVFP_el_yaxis_full.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/fr/fakerates_UL2017_el_yaxis_full.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/fr/fakerates_UL2018_el_yaxis_full.pdf}
+	\captionof{figure}
+		[Electron misidentification rates \vs electron \pt for the OS Method]
+		{TODO:
+		\;A)
+		Electron misidentification rates \vs the \pt of the probe electron evaluated for the OS Method selecting $\PZ + \Pe$ events in UL data
+		for each year in Run 2:
+		2016 pre-VFP (top left),
+		2016 post-VFP (top right),
+		2017 (bottom left), and
+		2018 (bottom right).
+		Rates are evaluated separately for the barrel (blue lines) and endcap (red lines) regions,
+		partitioned at $\abs{\eta^{\Pe}} = 1.497$.
+		The final rates (dashed lines) are calculated by subtracting out the expected \WZ contribution---estimated from simulation---from the numerator and denominator in the rate calculation.}
+	\label{fr_plots_el}
+\end{multiFigure}
+% TODO: Change caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016preVFP_mu_yaxis_full.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/fr/fakerates_UL2016postVFP_mu_yaxis_full.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/fr/fakerates_UL2017_mu_yaxis_full.pdf}
+		\addFigure{0.48}{figures/higgsmassmeas/redbkg/fr/fakerates_UL2018_mu_yaxis_full.pdf}
+	\captionof{figure}
+		[Muon misidentification rates \vs muon \pt for the OS Method]
+		{TODO:
+		\;A) 
+		Muon misidentification rates \vs the \pt of the probe muon evaluated for the OS Method selecting $\PZ + \mu$ events in UL data
+		for each year in Run 2:
+		2016 pre-VFP (top left),
+		2016 post-VFP (top right),
+		2017 (bottom left), and
+		2018 (bottom right).
+		Rates are evaluated separately for the barrel (blue lines) and endcap (red lines) regions,
+		partitioned at $\abs{\eta^{\mu}} = 1.2$.
+		The final rates (dashed lines) are calculated by subtracting out the expected \WZ contribution---estimated from simulation---from the numerator and denominator in the rate calculation.}
+	\label{fr_plots_mu}
+\end{multiFigure}
 
-\subsubsection{Background fitting}
+\subsubsection{Background Fitting}
+% TODO: REWORD
 The background is modelled by fitting the four-lepton mass distribution in the range 70--770\GeV
 with a Landau function (fitting each final state independently).
 Examples of the fit for 2018 are reported in \figurename~\ref{ZX_models_2018}.
-% TODO: Get 2017 and 2016 plots?
-% TODO: Change to multiFigure.
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_4mu.pdf}
-		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_4e.pdf}
-		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_2e2mu.pdf}
-		\includegraphics[width=0.48\textwidth]{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_2mu2e.pdf}
-		\caption{2018 \ZplusX Landau modelling, split in four different final states:
+% TODO: Change caption to reflect subfigures.
+\begin{multiFigure}
+	\centering
+		\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_4mu.pdf}
+		\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_4e.pdf}
+		\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_2e2mu.pdf}
+		\addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/RedBkg/ZX_2018_2mu2e.pdf}
+	\captionof{figure}
+		[TODO NO DOT AT END]
+		{TODO:
+		\;A) 
+		2018 \ZplusX Landau modelling, split in four different final states:
 		4$\mu$ top left 4e top right, 2e2$\mu$ bottom left, 2$\mu$2e bottom right.}
-		\label{ZX_models_2018}
-	\end{center}
-\end{figure}
+	\label{ZX_models_2018}
+\end{multiFigure}
 When applying categorization, the very low statistics in each bin prevents a fit of the distribution.
 In this case, the shapes are obtained directly from the inclusive distributions in each final state.
 %is currently obtained, for 2017 and 2018,

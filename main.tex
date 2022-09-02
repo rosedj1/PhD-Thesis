@@ -1,19 +1,26 @@
-%=== Dissertation template borrowed from Dr. Xunwu Zuo (2021). ===%
+%=== Dissertation template adapted from Dr. Xunwu Zuo's, circa 2021. ===%
 
 %% UF thesis template from https://helpdesk.ufl.edu/application-support-center/etd-technical-support/ms-word-and-latex-templates/
 %% LaTex template summer 2019
 
 %=== NOTES TO FUTURE USERS ===%
-% Inside ufdissertation.cls you'll find this custom environment command:
+% First off, hello and welcome to your very own thesis tutorial!
+% * Inside ufdissertation.cls you'll find this custom environment command:
 % \begin{multiFigure}
 %     \centering
-%     \addFigure{0.96}{path/to/fig}
-%     \captionof{figure}
-%         []
-%         {}
-%     \label{fig:X}
+%     \addFigure{0.48}{path/to/fig1}  % <== If just using 1 fig, then use \includegraphics[]{}
+%     \addFigure{0.48}{path/to/fig2}
+%     \captionof{figure}  % <== This can be either {figure} or {table}.
+%         [This short caption appears in the List of Figures]  % <== Don't use a period!
+%         {This long caption should explain the figure/table in more detail.
+%         \;A) First figure details...
+%         \;B) Second figure details...}
+%     \label{fig:two_figures}
 % \end{multiFigure}
-% * Make sure that there is NOT A NEWLINE between \begin{multiFigure} and the line ABOVE it (otherwise your figs will be off-center)!
+% TODO: Suzanne may have fixed the weird centering problem! Delete the below if so.
+% Make sure that there is text DIRECTLY ABOVE \begin{multiFigure} (i.e., NO NEWLINE above)---otherwise your figs will be off-center!
+% * I finally realize why this happens: if there is a newline above multiFigure, then LaTeX treats this as the start of a new paragraph. So it INDENTS the multifigure (which spans all of \textwidth, which is indented!).
+% * Sprinkle the word "TODO" around your document when you need to fix something later.
 
 %=== Rules on CAPITALIZATION ===%
 % Title Case: all principal words are capitalized except prepositions, articles, and conjunctions.
@@ -29,9 +36,14 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{charter}
-\usepackage{ragged2e} % to make text fully justified
+\usepackage{ragged2e} % to make text fully justified... is this even needed?
+\input{tex/definitions.tex}
+% \usepackage{physics}
 \usepackage{tikz}%       tikz is used by almost everyone, but certainly by me for this.
-\usepackage[compat=1.1.0]{tikz-feynman}% for drawing feynman diagrams 
+%=== Feynman Diagrams
+% https://www.overleaf.com/learn/latex/Feynman_diagrams#Manual_Placement
+% \usepackage[compat=1.1.0]{tikz-feynman}% for drawing feynman diagrams 
+\usepackage[compat=1.0.0]{tikz-feynman}% for drawing feynman diagrams 
 \usepackage{pgfplots}%   pgfplots is tikz but better.
 \usepackage{xspace}
 \xspaceaddexceptions{]\}}
@@ -46,7 +58,25 @@
 \usepackage{multirow}
 \usepackage{cellspace}
 \usepackage{soul}
-\usepackage{cleveref}  % \cref{table1,table2,table3}
+\usepackage{slashed}
+
+% A lovely package that lets you use \cref{} that handles the words: Figure, Fig., Figures, Figs., Table, Tables, etc.!
+\usepackage[capitalise]{cleveref}
+\Crefname{chapter}{Ch.}{Chs.}
+\Crefname{section}{Sec.}{Secs.}
+\Crefname{equation}{Eqn.}{Eqns.}
+\Crefname{figure}{Fig.}{Figs.}
+% How to use \cref:
+% * "\Cref{fig1,fig2,fig3} show..."        produces: "Figures 1-5 to 1-7 show..."
+% * "As shown in \cref{fig1,fig2,fig3}..." produces: "As shown in Figs. 1-5 to 1-7..." (notice the lowercase \cref!)
+% Also works for Tables:
+% * "\Cref{tab1,tab2,tab3} show..."        produces: "Tables 1-5 to 1-7 show..."
+% * "As shown in \cref{tab1,tab2,tab3}..." produces: "As shown in Tables 1-5 to 1-7..." (assuming that table objects are referenced).
+%=== Keep in mind that there should be no white spaces between labels!
+% You can use \Crefrange{fig1}{fig4} instead, but it doesn't produce as precise results:
+% * "\Cref{fig1,fig2,fig3,fig5,fig6} show..." produces: "Figures 1-5 to 1-7, 1-9 and 1-10 show...". You can't do this with \Crefrange or \crefrange.
+% \crefrange also always uses the word "to"---never the word "and" (for when you use just 2 figs/tables). 
+
 \usepackage[greek,english]{babel}
 \setlength\cellspacetoplimit{10pt}
 \setlength\cellspacebottomlimit{10pt}
@@ -60,9 +90,8 @@
 \newcolumntype{B}{>{\hsize=.15\hsize}Y}
 \newcolumntype{M}{>{\hsize=.25\hsize}Y}
 \newcolumntype{S}{>{\hsize=.05\hsize}Y}
-%===
 
-% For Suzanne's Feynman diagrams.
+%===For Suzanne's Feynman diagrams.
 \usepackage{tikz}
 \usetikzlibrary{patterns}
 \pgfdeclarepatternformonly{south west lines}{\pgfqpoint{-0pt}{-0pt}}{\pgfqpoint{3pt}{3pt}}{\pgfqpoint{3pt}{3pt}}{
@@ -75,8 +104,6 @@
     \pgfpathlineto{\pgfqpoint{.2pt}{3.2pt}}
     \pgfusepath{stroke}
 }
-
-\input{tex/definitions.tex}
 
 %=== N.B.: If you want to use biblatex, go into ufdissertation.cls and search for 'biblatex' (un)comment instructions.
 % \usepackage[sorting=none, backend=biber, style=phys, biblabel=brackets]{biblatex}
@@ -107,7 +134,7 @@
 
 %% additional sections
 % \setDedicationFile{tex/dedicationFile}%                Dedication Page
-% \setAcknowledgementsFile{tex/acknowledgementsFile}%    Acknowledgements Page
+\setAcknowledgementsFile{tex/acknowledgementsFile}%    Acknowledgements Page
 % \setBiographicalFile{tex/biographyFile}%               Biography file of the Author (you).
 % \setAbstractFile{tex/abstractFile}%                    Abstract Page (This should only include the abstract itself)
 
@@ -133,7 +160,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 %--- Standard Model ---%
 %%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/02_theory/sm.tex}
+\input{tex/02_theory/sm.tex}
 %%%%%%%%%%%%%
 %--- LHC ---%
 %%%%%%%%%%%%%
@@ -152,7 +179,7 @@
 %--- Higgs Mass Measurement ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \input{tex/05_higgs_mass/higgs_intro.tex}
-% \input{tex/05_higgs_mass/overview.tex}
+\input{tex/05_higgs_mass/overview.tex}
 % \input{tex/05_higgs_mass/datasets_simul_trig.tex}
 % \input{tex/05_higgs_mass/obj_and_event_sel.tex}
 % \input{tex/05_higgs_mass/signal_modeling.tex}
@@ -164,14 +191,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Search for Dilepton Resonances ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{tex/06_dilep_res/dilep_res_intro.tex}
+% \input{tex/06_dilep_res/dilep_res_intro.tex}
 % \input{tex/06_dilep_res/overview.tex}
 % \input{tex/06_dilep_res/datasets_simul_trig.tex}
 % % TODO: Include object selection in event_sel.tex?
 % \input{tex/06_dilep_res/event_sel.tex}
 % \input{tex/06_dilep_res/backgrounds.tex}
 % \input{tex/06_dilep_res/syst_uncert.tex}
-\input{tex/06_dilep_res/results.tex}
+% \input{tex/06_dilep_res/results.tex}
 %%%%%%%%%%%%%%%%%%%%
 %--- Conclusion ---%
 %%%%%%%%%%%%%%%%%%%%

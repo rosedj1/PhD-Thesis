@@ -59,17 +59,56 @@ Gravitational effects are negligible at subnuclear scales.
 \subsection{The Particles: The Players on the Fields}
 Contrary to intuition, fundamental particles are not hard, billiard-ball-like objects as is often perceived.
 Instead the SM predicts that every particle is actually an \emph{excitation} of its corresponding field.
-So, for example, the electron is an excitation of the \emph{electron field}, $\psi_{e}(x)$, a bispinor that describes a spin-$1/2$ field that follows the Dirac equation: 
+So, for example, the electron is an excitation of the \emph{electron field}, $\psi_{\Pe}(x)$, a bispinor that describes a spin-$1/2$ field that follows the equation: 
 \begin{equation*}
-    \left( i\hbar c \gamma^{\mu}{\partial}_{\mu} 
-    - mc^{2} \right)\psi(x) = 0.
+    \left( i\hbar c \gamma^{\mu}{\partial}_{\mu} - mc^{2} \right)\psi_{\Pe}(x) = 0,
 \end{equation*}
+which becomes the more familiar Dirac equation when using natural units ($c\equiv \hbar \equiv 1$) and extending $\psi_{\Pe}(x) \to \psi(x)$ for the case of a free spin-1/2 Dirac field:
+\begin{equation}
+    \left( i \gamma^{\mu}{\partial}_{\mu} - m \right)\psi(x) = 0,
+    \label{eqn:dirac}
+\end{equation}
+where $\partial_\mu$ is the covariant derivative and $\gamma^\mu$ stands for the Dirac matrices ($\mu = 0,1,2,3$):
+\begin{equation*}
+    \gamma^0 = 
+    \begin{pmatrix}
+        I_{2} & 0 \\
+        0  & -I_{2} \\
+    \end{pmatrix}
+    \quad , \quad
+    \gamma^a = 
+    \begin{pmatrix}
+        0 & \sigma^a \\
+        -\sigma^a  & 0 \\
+    \end{pmatrix}
+    \quad , \quad
+    \text{where } a = 1,2,3
+    \quad ,
+\end{equation*}
+where $I_2$ is the $2 \times 2$ identity matrix and $\sigma^a$ indicates the Pauli matrices:
+\begin{equation*}
+    \sigma_1 = 
+    \begin{pmatrix}
+        I_2 & 0 \\
+        0  & -I_2 \\
+    \end{pmatrix}
+    \quad , \quad
+    \gamma^a = 
+    \begin{pmatrix}
+        0 & \sigma^a \\
+        -\sigma^a  & 0 \\
+    \end{pmatrix}
+    \quad , \quad
+    \text{where } a = 1,2,3
+    \quad ,
+\end{equation*}
+    
 In fact, \emph{every} electron is an excitation of this same electron field. 
 An electron is identical to every other electron in every way (same mass, same charge, etc.).
 Although quantum mechanics (QM) is able to mathematically describe the equations of motions of slow-moving particles, particles with sufficiently high speeds become \emph{relativistic} and are described by the mathematics of special relativity (SR).
 When particles move at 30.5\% of the speed of light ($91.4 \times \tentothe{6}$\meter/s), there is a 5\% difference between the particle's rest mass energy ($E = mc^2$) and its relativistic energy ($E = \gamma mc^2$).
 No longer does QM describe fast-moving particles; now SR must be used.
-The ``merger'' of QM and SR gives rise to quantum field theory (QFT), which is the backbone of the SM.
+The ``merger'' of QM and SR gives rise to quantum field theory (QFT)---the backbone of the SM.
 
 % Figure~\ref{fig:particular_table} shows all the fundamental particles that have been discovered up to the present day.
 % The phrase ``fundamental particle'' just means that the particle is not composed of anything smaller than itself. 
@@ -80,25 +119,27 @@ One of the primary goals of particle physics is to determine these properties, b
 % Without further ado, let's meet the particles.
 The two major types of particles are \emph{bosons} and \emph{fermions}.
 % We are going to take a non-traditional route and introduce the bosons first, then the fermions.
-
 % The bosons are said to be the "force carrier" particles. 
 % In particle physics, when two particles interact with one another, how do they do it? 
 % instead an intermediate particle, very often a boson, is said to ``mediate'' the interaction and be the entity responsible which transfers the force from one particle to the other. 
 % Ever wonder how two electrons "know" that they are near each other and that they should repel? 
+
 %%%%%%%%%%%%%%%%%%%%
+% TODO: Build Feynman diagram!
 \begin{multiFigure}
     \centering
-    \includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_moeller.png}
+        \includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_moeller.png}
     \captionof{figure}
-    [Feynman diagram showing electron--electron (Møller) scattering]
-    {Feynman diagram showing electron--electron (Møller) scattering.} 
+        [Feynman diagram showing electron--electron (Møller) scattering]
+        {Feynman diagram showing electron--electron (Møller) scattering.} 
     \label{fig:ee_scattering}
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
+
 \subsubsection{Bosons: Use the Force}
 
 \emph{How do two electrons ``know'' that one is near the other and that they should repel?}
-Figure~\ref{fig:ee_scattering} shows a Feynman diagram of two electrons interacting with one other by means of an intermediate, virtual photon.
+\Cref{fig:ee_scattering} shows a Feynman diagram of two electrons interacting with one other by means of an intermediate, virtual photon $(\gamma)$.
 In QFT, mediator particles are called bosons---like the photon---convey interactions beween two interacting electrons.
 The idea is that the photon carries momentum away from the first electron and carries it to the second one, therefore making it appear as if the two electrons are repelling one another.
 The photon is not a measurable particle in this case, so it is said to be a \emph{virtual} photon.
@@ -220,67 +261,102 @@ Examples of mesons are the pion $\pi^+$ $\left(\Pqu \Paqd \right)$\footnote{
     Accounting for leptons, quarks, bosons, quark bound states, and now antiparticles, it's easy to see why it's called the ``\emph{particle zoo!}''
 }, the kaon $K^-$ $\left(\Pqs \Paqu \right)$, and the $\jpsi$ $\left( \Pqc \Paqc \right)$.
 
-% \section{Electroweak Symmetry Breaking}
 \section{Mathematical Underpinnings of the SM}
 \label{sec:sm_math}
 
-% TODO: Write more flowy intro.
-% Lagrangian mechanics.
-% * Gives equation of motion, \ie how the system evolves 
-% Transformations can be applied but Lagrangian must remain invariant.
-% Noether's Theorem says that an invariance (\ie a symmetry) implies the existence of an associated current that is \emph{conserved}.
-% * One of the most profound realizations in physics was made ~\cite{Noether1918}.
+Thanks to the brilliance of Professor Emmy Noether~\cite{Noether1918}, physics has greatly benefitted from the study of \emph{symmetry}.
+She showed that the very existence of a symmetry \emph{implies} the conservation of an associated quantity (typically called a `current').
+For example, if some law of physics is the same on Earth as it is on Mars (\eg $E = mc^2$ \emph{is} still true even across vast amounts of space), then there is an inherent symmetry (or ``sameness'') to the system across space and this \emph{implies} that the system obeys \emph{conservation of linear momentum}.
+Similarly, if a system has rotational symmetry (\eg if you perform an experiment and get the same results facing north as you do facing southeast), then this \emph{implies} that the system obeys \emph{conservation of angular momentum}.
+As a final---and astounding---example, a system that shows symmetry across time implies \emph{conservation of energy} within that system.
+
+Particle physics makes use of \emph{gauge} symmetries, which lead to conservation of electric charge, color charge, \etc
+By understanding such symmetries, the equations of motion (EOM) for a system are revealed (\ie how the system evolves throughout spacetime).
+In particle physics, Newtonian mechanics is insufficient to obtain the EOM of quantum particles, so instead Lagrangian mechanics is used.
+The first step is to write down the Euler--Lagrange equation~\cite{Halzen:1984mc}:
+\begin{equation}
+    % TODO: Use proper partial fractions commands from physics package.
+    \frac{d}{\dt}
+    \left( \frac{\partial \lagrang}{\partial \dot{q}_i} \right)
+    -
+    \frac{\partial \lagrang}{\partial q_i} = 0,
+    \label{eqn:euler_lagrange}
+\end{equation}
+where the $q_i(t)$ are the time-dependent generalized coordinates of the associated particles
+and \lagrang is the general Lagrangian function defined as:
+\begin{equation*}
+    \lagrang \equiv T - V,
+\end{equation*}
+where $T$ and $V$ are, respectively, the kinetic and potential energy functions of the system.
+The second step is to find the stationary points using \cref{eqn:euler_lagrange} which yields the EOM of the system.
+
+In particle physics, however, the generalized coordinates are promoted to particle \emph{wave functions}---functions of space and time:
+\begin{align*}
+    q_i(t) \to \phi(\vec{x}, t) & \equiv \phi(x_\mu)
+    \\
+    \lagrang(q_i, \dot{q}_i, t) \to  \lagrangdens & \left( \phi, \frac{\partial \phi}{\partial x_\mu}, x_\mu \right),
+\end{align*}
+where \lagrangdens is called the `Lagrangian density' and is related to \lagrang through:
+\begin{equation*}
+    \lagrang = \int{d^3x \, \lagrangdens}.
+\end{equation*}
+Gauge transformations can be applied to particle fields so long as \lagrangdens remains invariant.
+
+In all its glory, the SM Lagrangian density is~\cite{Halzen:1984mc, thesis_xunwu}:
+\begin{align*}
+    \lagrangdens =
+    & - \frac{1}{4} B_{\mu \nu} B^{\mu \nu} - \frac{1}{4} W^a_{\mu \nu} W^{a \mu \nu} - \frac{1}{4} G^k_{\mu \nu} G^{k \mu \nu}
+    \\
+    & + \abs{D_\mu\Phi}^2 + \mu^2 \Phi^\dagger \Phi - \lambda \left( \Phi^\dagger \Phi \right)^2
+    \\
+    & + \sum_f{
+        % \left[
+            \bar{\psi}^f_R (i {\slashed D_\mu}) \psi_R^f + \bar{\psi}^f_L (i {\slashed D_\mu}) \psi_L^f
+        % \right]
+        }
+    \\
+    & + \sum_f{
+        % \left[
+            g_f \left[ \bar{\psi}_R^f \Phi^\dagger \psi_L^f + \bar{\psi}_L^f \Phi \psi_R^f + \bar{\psi}_R^f \tilde{\Phi}^\dagger \psi_L^f + \bar{\psi}_L^f \tilde{\Phi} \psi_R^f \right]
+        % \right]
+        },
+\end{align*}
+where the field strength tensors for the interaction fields ($B_\mu$, $W_\mu^a$, and $G_\mu^k$) of their corresponding group are:
+\begin{align*}
+    U(1) : \quad & B_{\mu \nu}    = \partial_\mu B_\nu - \partial_\nu B_\mu
+    \\
+    SU(2) : \quad & W_{\mu \nu}^a  = \partial_\mu W_\nu^a - \partial_\nu W_\mu^a + g \varepsilon^{abc} W_\mu^b W_\nu^c
+    \\
+    SU(3) : \quad & G_{\mu \nu}^k  = \partial_\mu G_\nu^k - \partial_\nu G_\mu^k + g_s f^{klm} G_\mu^l G_\nu^m,
+\end{align*}
+% TODO: Define these:
+% where the covariant derivative is given by ${\slashed D_\mu} = \gamma^\mu D_\mu$,
+% where $a$
+% partial derivative, Dslash,
+% Bnu, Wnua Gnuk, g, g_s, varepsilon^abc, f^klm,
+% \Phi, \Phi^\dagger, \mu, \lambda,
+% \psi_R^f, \bar{\psi}_R^f
+% $\mu$ and $\nu$ are the Lorentz vector indices which run from 1--4,
+% $a$ and $k$ are the group generator indices which run from 1--3 and 1--8, respectively,
+% $D_\mu$ is the covariant derivative which contains the field strength coefficients ($g\prime$, $g$, and $g_s$)
+% and the sums are taken over the fermion flavors $f$, and for each coupling there exists a coupling strength $g_f$.
+
+
 
 % The main objective of the LHC is to probe the Electroweak Symmetry Breaking (EWSB) mechanism that generates the masses of the known elementary particles in the SM.
 %  in the SMby the ATLAS~\cite{ATLAS:2012yve} and the CMS~\cite{CMS:2012qbp} collaborations and the subsequent studies of its properties with the full data set from Run 1, from 2009 to 2012, with a center-of-mass energy of 7\TeV and 8\TeV, provided the first opportunity to study this mechanism.
-The discovery of the Higgs boson in 2012 confirmed the process of electroweak symmetry breaking (EWSB), which is the mechanism that generates the masses of the \PWpm and \PZ gauge bosons.
-Not only did EWSB explain the short-range nature of weak interactions but it also explained the existence of the Higgs field and how the other charged fermions acquire their mass.
-% The data collected during the LHC Run 2, from 2015 to 2018, with a higher center-of-mass energy of 13\TeV and more robust dataset, revealed the compatibility of the Higgs boson and its role within the Standard Model (SM)~\cite{Glashow:1961tr,PhysRevLett.19.1264,PhysRevD.2.1285}.
+The discovery of the Higgs boson in 2012 confirmed the existence of the Higgs field, subsequently providing insight into the mechanism from which EWSB arises.
+Not only does it explain the short-range nature of weak interactions but it also provides an explanation for the massive \PWpm and \PZ gauge bosons.
 
 In the SM, the electroweak interactions are described by a gauge field theory invariant under the $SU(2)_L \times U(1)_Y$ symmetry group.
-The mechanism of EWSB~\cite{PhysRevD.2.1285, PhysRevLett.13.321, PhysRev.145.1156} provides a general framework to preserve the structure of these gauge interactions at high energies.
+The mechanism of EWSB provides a general framework to preserve the structure of these gauge interactions at high energies~\cite{PhysRevD.2.1285, PhysRevLett.13.321, PhysRev.145.1156}.
 The EWSB mechanism posits a self-interacting electroweak doublet of complex scalar fields, whose CP-even neutral component acquires a vacuum expectation value (VEV), which sets the scale of the symmetry breaking.
-Three massless Goldstone bosons are generated and are absorbed to give masses to the \PW and \PZ gauge bosons.
-The remaining component of the doublet becomes the Higgs boson, a new (and so far unique) fundamental scalar particle.
+Four massless Goldstone bosons are generated, two of which linearly combine to give the \PWp and \PWm gauge bosons while the remaining two combine to give the photon $(\gamma)$ and the \PZ gauge bosons.
 The masses of all fermions are also a consequence of EWSB since the Higgs field is postulated to couple to the fermions through Yukawa interactions.
-
-% The initial measurements during the LHC Run 1 were accessible mainly through production and decay channels related to the couplings of the Higgs boson to the vector gauge bosons (the mediators of the electroweak interactions, $W^\pm$, $Z$ and $\gamma$, as well as the gluons, $g$, mediators of the strong interactions).
-% The outstanding performance of the LHC Run 2, made it possible for the ATLAS and CMS experiments to independently and unambiguously establish the couplings of the Higgs boson to the charged fermions of the third generation (the top quark, the bottom quark, and the tau).
-
-% In all observed production and decay modes measured so far, the rates and differential measurements are found to be consistent, within experimental and theoretical uncertainties, with the SM predictions.
-% In high resolution decay channels, such as the ones with four leptons (electrons or muons) or diphoton final states, the mass of the Higgs boson has been measured at the permill precision level.
-
-% Nevertheless, several channels are still out of reach experimentally and the couplings of the Higgs boson to light fermions are yet to be explored.
-% Moreover, within the current precision, a more complicated sector with additional states is not ruled out, nor has it been established whether the Higgs boson is an elementary particle or whether it has an internal structure like any other scalar particles observed before it.
-
-% In particular, perturbative unitarity~\cite{PhysRevLett.30.1268,PhysRevD.10.1145,LlewellynSmith:1973yud,PhysRevD.16.1519} would be lost at high energies since the longitudinal $\PW/\PZ$ boson scattering amplitude would grow with the center-of-mass energy.
-% In addition, the radiative corrections to the gauge boson self-energies would exhibit dangerous logarithmic divergences that would be difficult to reconcile with EW precision data.
-% The discovery of the Higgs boson verified that the SM is a spontaneously broken gauge theory and, as such, it could a priori be consistently extrapolated well above the masses of the \PW and \PZ bosons.
-% Formally there is no need for new physics at the EW scale, though as the SM Higgs boson is a scalar particle, at the quantum level it has sensitivity to possible new physics scales.
-% Quite generally, the Higgs boson mass is affected by the presence of heavy particles and receives quantum corrections which destabilize the weak scale barring a large fine tuning of unrelated parameters.
-% This is known as the Higgs naturalness or hierarchy problem~\cite{PhysRevD.3.1818,tHooft:1980xss}.
-% It has been the prime motivation for new physics searches at the TeV scale.
-% New theoretical paradigms have been imagined, such as a new fermion--boson symmetry called supersymmetry (SUSY)~\cite{WESS19741} (for recent reviews, see Refs.~\cite{Martin:1997ns,Allanchach:2019wrx}), or the existence of strong interactions at a scale of the order of a TeV from which the Higgs boson would emerge as a composite state~\cite{Georgi:1986im} (see Refs.~\cite{Bellazzini:2014yua,Panico:2015jxa,Csaki:2015hcd} for recent reviews).
-% Alternatively, new agents stabilizing the weak scale could also be light yet elusive, such as in models of neutral naturalness~\cite{Chacko:2005pe,Chacko:2005un,Craig:2015pha,Craig:2014aea}.
-% Other more recent scenarios~\cite{Craig:2014aea,Graham:2015cka,Espinosa:2015eda}, instead, rely on the cosmological evolution of the Universe to drive the Higgs boson mass to a value much smaller than the cutoff of the theory and aim at alleviating the hierarchy problem without the need for TeV scale new physics, though there might still be interesting and spectacular signatures~\cite{Craig:2014aea,Graham:2015cka,Espinosa:2015eda,Flacke:2016szy}.
-% Beyond the naturalness problem, extensions of the SM Higgs sector without other low-energy particles have been proposed, for example, to provide explanations for the fermion mass hierarchies, see \eg Ref. ~\cite{Bauer:2015fxa,Bauer:2015kzy}, to account for the Dark Matter abundance, see \eg Ref.~\cite{Barbieri:2006dq}, or to modify the properties of the electroweak phase transition~\cite{Morrissey:2012db}.
-% Such models with additional scalars provide grounds to explore new Higgs boson signals in concrete and complete scenarios, with different types of coupling structure to fermions and gauge bosons.
-
-% The Higgs boson is special and, in the 10 years since its discovery, it has become a powerful tool, providing the capability to explore the manifestations of the SM and to probe the physics landscape beyond.
-
-% It may offer direct insight on physics beyond the weak scale through possible sizeable effects on the Higgs boson properties.
-% However, the Higgs boson couplings that have been so far observed do appear to be in good agreement with their SM predictions.
-% This, together with the strong bounds from precision electroweak and flavor data, provides the possibility that the Higgs boson may well be elementary, weakly coupled, and solitary up to the Planck scale, rendering the EW vacuum potentially metastable~\cite{Degrassi:2012ry,Alekhin:2012py,Buttazzo:2013uya}.
-
-% After completion of the first two runs, the LHC has only gathered approximately 5\% of its projected full dataset.
-% During the second long shut down currently underway, the LHC is undergoing important upgrades in order to prepare for its high luminosity phase.
-% The foreseen larger datasets to be collected during Run 3 and ultimately during the High Luminosity LHC (HL-LHC), will enable yet more fundamental and challenging measurements to explore new physics.
 
 \subsection{The Brout--Englert--Higgs Mechanism}
 \label{sec:higgs_mech}
 
-% TODO: Derive formula for mH.
-% TODO: Show Mexican hat potential.
 The SM lagrangian contains a scalar potential term that reads:
 \begin{equation}
     V (\phi) = \mu^2\phi^\dagger\phi + \lambda(\phi^\dagger\phi)^2,
@@ -298,7 +374,7 @@ where the Higgs field $\left( \phi(x) \right)$ is a self-interacting $SU(2)_L$ d
 where $\phi^3$ and $\phi^4$ are the CP-even and CP-odd neutral components, $\phi^+ \equiv \phi^1 + i \phi^2$ is the complex charged component of the Higgs doublet, and $V(\phi)$ is the most general renormalizable scalar potential.
 The hypercharge is normalized such that $Q = T_{3} + \frac{Y}{2}$, where $Q$ is the electric charge and $T_{3}$ is the eigenvalue of the diagonal generator of $SU(2)_L$.
 
-The case where $\lambda > 0$ in Eqn.~\ref{eqn:scalar_pot} indicates that a minimum exists in the potential and that $\phi$ is self-coupling~\cite{bass_higgs_2021}.
+The case where $\lambda > 0$ in \cref{eqn:scalar_pot} indicates that a minimum exists in the potential and that $\phi$ is self-coupling~\cite{bass_higgs_2021}.
 If $\mu^2 < 0$ is also required, then the minimum of $V(\phi)$ $\left( \ie \frac{\partial V}{\partial \phi} = 0 \right)$ occurs at:
 \begin{equation}
     \abs{\phi} = \sqrt{ \frac{-\mu^2}{2\lambda} }.
@@ -310,11 +386,11 @@ If $\mu^2 < 0$ is also required, then the minimum of $V(\phi)$ $\left( \ie \frac
 %     \implies \abs{\phi} = &\sqrt{ \frac{-\mu^2}{2\lambda} }  \equiv \frac{v}{2},
 % \end{align*}
 This corresponds to the manifold of points that are invariant under the $SU(2)$ transformations~\cite{Halzen:1984mc}.
-This ``Maxican hat'' potential is shown in Fig.~\ref{fig:mex_hat} and illustrates the concept of spontaneous symmetry breaking.
+This ``Maxican hat'' potential is shown in \cref{fig:mex_hat} and illustrates the concept of spontaneous symmetry breaking.
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[height=6cm,keepaspectratio]{figures/sm/higgs_potential.png}
+        \includegraphics[height=6cm,keepaspectratio]{figures/sm/higgs_potential.png}
     \captionof{figure}
         [Mexican-hat-shaped Higgs potential for $\lambda > 0$ and $\mu^2 < 0$]
         {Mexican-hat-shaped Higgs potential for $\lambda > 0$ and $\mu^2 < 0$.
@@ -348,7 +424,7 @@ and expansion of $\phi(x)$ about this particular vacuum gives:
 where $H(x)$ is the scalar Higgs field.
 Spontaneous breaking of the SM gauge symmetry $SU(3)_C \times SU(2)_L \times U(1)_Y$ into $SU(3)_C \times U(1)_\text{EM}$ has now been induced.
 
-The global minimum of the theory defines the ground state, and spontaneous symmetry breaking implies that there is a (global and/or local) symmetry of the system that is not respected by the ground state.
+The global minimum of the theory defines the ground state, and spontaneous symmetry breaking implies that there is a global or local symmetry of the system that is not respected by the ground state.
 From the four generators of the $SU(2)_L \times U(1)_Y$ SM gauge group, three are spontaneously broken, implying that they lead to non-trivial transformations of the ground state and indicate the existence of three massless Goldstone bosons identified with three of the four Higgs field degrees of freedom.
 The Higgs field couples to the $W_\mu$ and $B_\mu$ gauge fields associated with the $SU(2)_L \times U(1)_Y$ local symmetry through the covariant derivative appearing in the kinetic term of the Higgs Lagrangian:
 \begin{equation*}
@@ -463,7 +539,7 @@ The CDF measurement of \mass{\PW}, along with measurements performed by other co
 %%%%%%%%%%%%%%%%%%%%
 \begin{multiFigure}
     \centering
-    \includegraphics[height=8cm,keepaspectratio]{figures/sm/wmass.pdf}
+        \includegraphics[height=8cm,keepaspectratio]{figures/sm/wmass.pdf}
     \captionof{figure}
         [Precision measurements of the \PW boson mass performed by various collaborations]
         {Precision measurements of the \PW boson mass performed by various collaborations.
@@ -476,24 +552,11 @@ Another recent result comes from the Baksan Experiment on Sterile Transitions, w
 Moreover, fermion masses are not predicted by the SM;
 their masses are parameters of the theory and so must be experimentally measured~\cite{Halzen:1984mc}.
 Additionally, the SM does not
-% TODO: expand upon these?
 \begin{itemize}
-    % No neutrino masses. Are they Dirac or Majorana particles?
     \item \ldots incorporate gravity on a mathematical quantum level
-    % No gravity. Can't combine quantum mechanics and gravity.
-    % - SUSY:
-    %     - A way to unify the fundamental forces (all 4?) but SM doesn't predict SUSY particles.
-    %     - Do they exist? No evidence yet.
     \item \ldots explain the matter/antimatter asymmetry of the Universe
-    % - Matter/Antimatter Asymmetry:
-    %     - So why is the universe made of \emph{only} matter?
     \item \ldots predict the existence of dark matter
-    % - Dark matter/Dark Energy:
-    %     -  suggest that there is much more matter in the universe that what has been directly observed.
-    %     The SM has no explanation for dark matter dark energy.
     \item \ldots explain why there should be exactly three generations of fermions~\cite{particle_data_group_review_2020}.
-    % \item Higgs field parameters appear highly fine-tuned.
-    % \item Neutrino oscillations confirm that neutrinos \emph{do} have masses but interaction with the Higgs field is not responsible for this origination.
 \end{itemize}
 
 Therefore, the foundation of the SM must continue to be scrutinized via particle collider experiments.

@@ -64,35 +64,9 @@ The full error matrices ($\delta p_{T}/p_{T}$, $\eta$) for muons and electrons, 
         \;Right column: C, F, I) Tracker-driven electrons.
         \;Top row: A, B, C) 2016.
         \;Middle row: D, E, F) 2017.
-        \;Bottom row: G, H, I) 2018.
-        }
+        \;Bottom row: G, H, I) 2018.}
     \label{fig:2D_Mpas_vs_eta}
 \end{multiFigure}
-% \begin{figure}[!htbp]
-% 	\begin{center}
-% %		\subfloat[][2016]
-% %		   {		
-%                     \includegraphics[width=0.32\textwidth]{Figures/EBE/2016_vs_eta_muon.pdf}
-% 					\includegraphics[width=0.32\textwidth]{Figures/EBE/2016_vs_eta_ele_ECAL.pdf} 
-% 					\includegraphics[width=0.32\textwidth]{Figures/EBE/2016_vs_eta_ele_tracker.pdf}
-% %			}\\
-% %		\subfloat[][2017]
-%             % {
-% 		    		\includegraphics[width=0.32\textwidth]{Figures/EBE/2017_vs_eta_muon.pdf}
-% 					\includegraphics[width=0.32\textwidth]{Figures/EBE/2017_vs_eta_ele_ECAL.pdf} 
-% 					\includegraphics[width=0.32\textwidth]{Figures/EBE/2017_vs_eta_ele_tracker.pdf}
-% %			}\\
-% %		\subfloat[][2018]
-%             % {
-% 		    		\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/ebe/2018_vs_eta_muon.pdf}
-% 					\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/ebe/2018_vs_eta_ele_ECAL.pdf} 
-% 					\includegraphics[width=0.32\textwidth]{figures/higgsmassmeas/ebe/2018_vs_eta_ele_tracker.pdf}
-% %			}\\
-% 		\caption{Scatterplot of the relative lepton \PT error vs $\eta$ for muons (left), 
-% 				ECAL driven electrons (middle), and tracker driven electrons (right) for 2018 data.}
-% 	\label{fig:2D_Mpas_vs_eta}
-% 	\end{center}
-% \end{figure}
 
 Starting from these distributions, corrections to lepton momentum uncertainty in mutual $|\eta|$ bins are derived for muons (Fig.~\ref{fig:2D_Mpas_vs_pt_muon}), ECAL-driven electrons (Fig.~\ref{fig:2D_Mpas_vs_pt_electron_ECAL}), and tracker electrons (Fig.~\ref{fig:2D_Mpas_vs_pt_electron_tracker}) using bins of $\delta p_{T}$/$p_{T}$ \vs \abseta.
 Scatterplots of $\delta p_{T}$/$p_{T}$ \vs \PT are shown in Figs.~\ref{fig:2D_Mpas_vs_pt_electron_ECAL} and~\ref{fig:2D_Mpas_vs_pt_electron_tracker}.
@@ -172,7 +146,8 @@ The summary of $\lambda$ correction factors for electrons and muons is shown in 
 \begin{table}[!h]\fontsize{10}{12}\selectfont
     \topcaption
         [Event-by-event lambda correction factors.] % TODO: reword
-        {Event-by-event lambda correction factors.}
+        {Event-by-event lambda correction factors.     \PT error corrections for muons and electrons in different kinematic region. For each year, MC 
+        is on the left, data on the right.}
     \begin{tabularx}{\textwidth}{BMSSSSSSSS} % TODO: Fix  numbers in table.
         \toprule 
         \multicolumn{2}{c}{\textbf{2016 pre-VFP}} & \multicolumn{2}{c}{\textbf{2016 post-VFP}} & \multicolumn{2}{c}{\textbf{2017}} & \multicolumn{2}{c}{\textbf{2018}} \\ \toprule
@@ -181,7 +156,7 @@ The summary of $\lambda$ correction factors for electrons and muons is shown in 
         \multicolumn{2}{c}{$0 < |\eta| < 0.9$} & 1.05 & 1.248 & 1.043 & 1.214 & 1.047 & 1.183 & 1.019 & 1.227 \\
         \multicolumn{2}{c}{$0.9 < |\eta| < 1.8$} & 1.187 & 1.256 & 1.204 & 1.234 & 1.219 & 1.223 & 1.206 & 1.236 \\
         \multicolumn{2}{c}{$1.8 < |\eta| < 2.4$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\ \toprule
-
+% TODO: Move ECAL electrons and other similar labels to left side of table?
         && \multicolumn{8}{c}{ECAL electrons} \\ 
         $0 < |\eta| < 0.8$ & $\delta p_T/p_T < 0.01$ & 1.648 & 1.619 & 1.645 & 1.646 & 1.690 & 1.633 & 1.676 & 1.661 \\
         $0 < |\eta| < 0.8$ & $0.01 < \delta p_T/p_T < 0.015$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
@@ -239,9 +214,6 @@ The summary of $\lambda$ correction factors for electrons and muons is shown in 
 % 			\hline
 % 		\end{tabular}
 % 	\end{center}
-% 	\caption{\PT error corrections for muons and electrons in different kinematic region. For each year, MC 
-% 	is on the left, data on the right.}
-% 	\label{table:Lambdas}
 % \end{table}
 % TODO: Figure 8 (from AN) of lambdas vs. dpT/pT bins? CONTAINS DATA.
 
@@ -266,10 +238,10 @@ final states in Fig.~\ref{fig:HClosure_test}.
 % CLOSURE: Z->mumu MC.
 \begin{multiFigure}
     \centering
-    \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/VXBS_20160_MC_workinprogress.pdf}
-    \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/VXBS_20165_MC_workinprogress.pdf}
-    \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/VXBS_2017_MC_workinprogress.pdf}
-    \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/VXBS_2018_MC_workinprogress.pdf}
+        \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/VXBS_20160_MC_workinprogress.pdf}
+        \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/VXBS_20165_MC_workinprogress.pdf}
+        \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/VXBS_2017_MC_workinprogress.pdf}
+        \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/VXBS_2018_MC_workinprogress.pdf}
     \captionof{figure}
         % [Closure plots showing corrections to lepton momentum uncertainty on \ztomumu events]
         [Validation of the per-event mass uncertainties from simulated \ztomumu events]
@@ -278,17 +250,16 @@ final states in Fig.~\ref{fig:HClosure_test}.
         \;A) 2016 pre-VFP.
         \;B) 2016 post-VFP.
         \;C) 2017.
-        \;D) 2018.
-		}
+        \;D) 2018.}
     \label{fig:ZClosure_test_MU}
 \end{multiFigure}
 % CLOSURE: Z->ee MC.
 \begin{multiFigure}
     \centering
-    \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/ZEE_20160_MC_workinprogress.pdf}
-    \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/ZEE_20165_MC_workinprogress.pdf}
-    \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/ZEE_2017_MC_workinprogress.pdf}
-    \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/ZEE_2018_MC_workinprogress.pdf}
+        \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/ZEE_20160_MC_workinprogress.pdf}
+        \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/ZEE_20165_MC_workinprogress.pdf}
+        \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/ZEE_2017_MC_workinprogress.pdf}
+        \addFigure{0.45}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/ZEE_2018_MC_workinprogress.pdf}
     \captionof{figure}
         [Validation of the per-event mass uncertainties using simulated \ztoee events]
         {Validation of the per-event mass uncertainties using simulated \ztoee events.
@@ -296,28 +267,29 @@ final states in Fig.~\ref{fig:HClosure_test}.
         \;A) 2016 pre-VFP.
         \;B) 2016 post-VFP.
         \;C) 2017.
-        \;D) 2018.
-        }
+        \;D) 2018.}
     \label{fig:ZClosure_test_ELE}
 \end{multiFigure}
 % CLOSURE: ggH4l MC.
 % $\sigma_\text{m}^\text{2e2\Pmu}\;(\GeVns)$ % FOR TESTING. DELETE
 \begin{multiFigure}
     \centering
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2016_H4mu_Closure_test_workinprogress.png}
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2016_H4e_Closure_test_workinprogress.png}
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2016_H2e2mu_Closure_test_workinprogress.png}
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2016_H4mu_Closure_test_workinprogress.png}
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2016_H4e_Closure_test_workinprogress.png}
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2016_H2e2mu_Closure_test_workinprogress.png}
 
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2017_H4mu_Closure_test_workinprogress.png}
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2017_H4e_Closure_test_workinprogress.png}
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2017_H2e2mu_Closure_test_workinprogress.png}
-    
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_H4mu_Closure_test_workinprogress.png}
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_H4e_Closure_test_workinprogress.png}
-    \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_H2e2mu_Closure_test_workinprogress.png}
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2017_H4mu_Closure_test_workinprogress.png}
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2017_H4e_Closure_test_workinprogress.png}
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2017_H2e2mu_Closure_test_workinprogress.png}
+        
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_H4mu_Closure_test_workinprogress.png}
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_H4e_Closure_test_workinprogress.png}
+        \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_H2e2mu_Closure_test_workinprogress.png}
     \captionof{figure}
         [Validation of the per-event mass uncertainties using simulated \gghtofourl events]
-        {Validation of the per-event mass uncertainties using simulated \gghtofourl events for
+        {TODO:
+        \;A) 
+        Validation of the per-event mass uncertainties using simulated \gghtofourl events for
         2016 (top row), 2017 (middle row), and 2018 (bottom row) in three different final states:
 		\fourmu (left column), \foure (middle column), and \twoetwomu (right column).
 		The 20\% reference band is also shown.}

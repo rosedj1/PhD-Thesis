@@ -201,6 +201,7 @@
 %                               Except it doesn't float around and it resets figCount.
     {% Begin Environment Code
         \setcounter{figCount}{1}
+        \noindent  % Jake and Suzanne added this which fixes a very annoying centering problem wth multiFigure!
         \minipage\textwidth
         % TODO: If figure is at top of page, do not add \vspace.
         %=== Jake added vspace to make a little space between fig and text above fig.
@@ -428,7 +429,10 @@
 
 %%%%%% Next is the creation of the List of Objects code.
 %   Note: By default LaTeX only supports table of contents, List of tables and List of figures. The primary package to use to create a custom list is the tocloft package; but that has been depreciated and thus creates all kinds of cascading formatting problems with the other packages we use here. 
-%   However, we can hijack another well-maintained package that generates (among other things) a custom "List of ...". Specifically, we hijack the "algorithms" package, which gives a "list of algorithms" and an "algorithm" environment that takes captions and, in general, does everything we want. We will hijack this, then retool it to format it how we want, and finally reskin the words a little bit to make it say "object" instead of "algorithm" where needed, in the output. Since this could be a bit confusing for the author (using an 'algorithm' environment to insert an object') we conclude by defining an "addObject" command that will allow the author to add an object via the sensible "addObject" command, and that command will do all the weird formating and call all the weird environments/factors/etc to make it work, all behind the scenes.
+%   However, we can hijack another well-maintained package that generates (among other things) a custom "List of ...".
+%   Specifically, we hijack the "algorithms" package, which gives a "list of algorithms" and an "algorithm" environment that takes captions and, in general, does everything we want.
+%   We will hijack this, then retool it to format it how we want, and finally reskin the words a little bit to make it say "object" instead of "algorithm" where needed, in the output.
+%   Since this could be a bit confusing for the author (using an 'algorithm' environment to insert an object') we conclude by defining an "addObject" command that will allow the author to add an object via the sensible "addObject" command, and that command will do all the weird formating and call all the weird environments/factors/etc to make it work, all behind the scenes.
 %   Currently I don't have a good enough idea of what the formating or nature of "Objects" are, in order to actually write the "addObjects" command fully, but I have the shell defined and correct until I get additional parameters.
 
 
@@ -465,7 +469,7 @@
 \floatname{algorithm}{Object}% Change the word "Algorithm" in the in-line text to be "Object".
 
 %% NOTE ABOUT THE FOLLOWING \addObject COMMAND::
-%   I am still unclear about what exactly objects are, or how they are to be treated in the text. 
+%       I am still unclear about what exactly objects are, or how they are to be treated in the text. 
 %       This command is a temporary formating command, which can be adjusted to format the "object" input by an author,
 %       without the author actually needing to do much of anything, or knowing much of anything in the background.
 %       At a minimum, I suspect there will need to be another required argument, where the author will supply a hyperlink.

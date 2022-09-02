@@ -136,6 +136,29 @@ The two major types of particles are \emph{bosons} and \emph{fermions}.
     \centering
         \includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_moeller.png}
     \captionof{figure}
+    \begin{tikzpicture}
+        \begin{feynman}[large]
+            \centering
+            \vertex (h) {$h$}; % h at beginning 
+            \vertex [right=1cm of h] (ZZ); % h -> ZZ vertex
+            \node [circle, fill=black, inner sep=2pt, above right = 1cm and 1.25cm of ZZ] (Z1); % black dot node at epsilon (control size with ) 
+            \node [above left = 7pt and 7pt of Z1] (e) {$\epsilon$}; % node with epsilon text
+            \vertex [below right = 1cm and 2.5cm of ZZ] (Z2); % h -> ZZ bottom Z
+            \vertex [above right = 0.5cm and 1.25cm of Z2] (Z2l1) {$l$}; % bottom Z -> ll (top l)
+            \vertex [below right = 0.5cm and 1.25cm of Z2] (Z2l2) {$l$}; % bottom Z -> ll (bottom l)
+            \vertex [above right = 1cm and 1.25cm of Z1] (ZD); % ZD
+            \vertex [above right = 0.5cm and 1.25cm of ZD] (ZDl1) {$l$}; % ZD -> ll (top l)
+            \vertex [below right = 0.5cm and 1.25cm of ZD] (ZDl2) {$l$}; % ZD -> ll (bottom l)
+            \diagram* {
+                (h) -- [scalar] (ZZ),
+                (ZZ) -- [boson, edge label=$Z$] (Z1),
+                (ZZ) -- [boson, edge label=$Z$] (Z2),
+                (Z1) -- [boson, edge label=$Z_D$] (ZD),
+                (ZDl2) -- [fermion] (ZD) -- [fermion] (ZDl1);
+                (Z2l2) -- [fermion] (Z2) -- [fermion] (Z2l1);
+            };
+        \end{feynman}
+    \end{tikzpicture}
         [Feynman diagram showing electron--electron (Møller) scattering]
         {Feynman diagram showing electron--electron (Møller) scattering.} 
     \label{fig:ee_scattering}

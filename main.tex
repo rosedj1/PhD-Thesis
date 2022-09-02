@@ -65,6 +65,7 @@
 \Crefname{chapter}{Ch.}{Chs.}
 \Crefname{section}{Sec.}{Secs.}
 \Crefname{equation}{Eqn.}{Eqns.}
+\creflabelformat{equation}{#2#1#3}
 \Crefname{figure}{Fig.}{Figs.}
 % How to use \cref:
 % * "\Cref{fig1,fig2,fig3} show..."        produces: "Figures 1-5 to 1-7 show..."
@@ -160,7 +161,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 %--- Standard Model ---%
 %%%%%%%%%%%%%%%%%%%%%%%%
-\input{tex/02_theory/sm.tex}
+% \input{tex/02_theory/sm.tex}
 %%%%%%%%%%%%%
 %--- LHC ---%
 %%%%%%%%%%%%%
@@ -179,7 +180,7 @@
 %--- Higgs Mass Measurement ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \input{tex/05_higgs_mass/higgs_intro.tex}
-\input{tex/05_higgs_mass/overview.tex}
+% \input{tex/05_higgs_mass/overview.tex}
 % \input{tex/05_higgs_mass/datasets_simul_trig.tex}
 % \input{tex/05_higgs_mass/obj_and_event_sel.tex}
 % \input{tex/05_higgs_mass/signal_modeling.tex}
@@ -191,17 +192,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Search for Dilepton Resonances ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/06_dilep_res/dilep_res_intro.tex}
-% \input{tex/06_dilep_res/overview.tex}
-% \input{tex/06_dilep_res/datasets_simul_trig.tex}
+\input{tex/06_dilep_res/dilep_res_intro.tex}
+\input{tex/06_dilep_res/overview.tex}
+\input{tex/06_dilep_res/datasets_simul_trig.tex}
 % % TODO: Include object selection in event_sel.tex?
-% \input{tex/06_dilep_res/event_sel.tex}
-% \input{tex/06_dilep_res/backgrounds.tex}
-% \input{tex/06_dilep_res/syst_uncert.tex}
-% \input{tex/06_dilep_res/results.tex}
+\input{tex/06_dilep_res/event_sel.tex}
+\input{tex/06_dilep_res/backgrounds.tex}
+\input{tex/06_dilep_res/syst_uncert.tex}
+\input{tex/06_dilep_res/results.tex}
 %%%%%%%%%%%%%%%%%%%%
 %--- Conclusion ---%
 %%%%%%%%%%%%%%%%%%%%
-% \input{tex/conclusion.tex}
+\input{tex/conclusion.tex}
 %=========================================================%
 \end{document}

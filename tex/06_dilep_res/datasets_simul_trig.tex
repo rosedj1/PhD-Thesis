@@ -1,5 +1,4 @@
 \section{Analyzed Data}
-% \section{Data Sets, Simulated Samples, and Triggers}
 \label{sec:analyzed_data_dilep}
 The data sets used for the search for low-mass dilepton mass resonances in SM Higgs boson decays uses the same data sets for all three years (2016--2018) as those found in Ref.~\ref{}.
 A brief explanation of the parameters used to generate the data sets follows next.
@@ -14,85 +13,41 @@ On the other hand, \POWHEG v2 was used to simulate the production of SM Higgs bo
 The other irreducible background process \ggzz was simulated using \MCFM 7.0.1~\cite{mcfm_campbell_precision_2019} at leading order (LO), to which next-to-leading order (NLO) correction factors were applied~\cite{nlo_corr_grazzini_fully_2018}.
 The simulation of \htofourl was carried out by the software \JHUGEN 7.0.2~\cite{hdecay_gao_spin_2010, hdecay_bolognesi_spin_2012}.
 
-% TODO: Include ttZ and triboson info? Check EPJC.
-
-% TODO: Go to AN-18-194v14, p. 87 for tables and such.
-% TODO:UPDATE WITH DILEP TRIGGERS
 \subsection{Trigger Paths}
 \label{sec:trig_dilep}
 %%%%%%%%%%%%%%%%%%%%%%%
 %=== Triggers 2016 ===%
 %%%%%%%%%%%%%%%%%%%%%%%
+The trigger paths used to collect Run 2 data events for the dilepton mass resonance search are shown in \cref{table:dilep_2016_trig,table:dilep_2017_trig,table:dilep_2018_trig}.
 \begin{table}[h]
-    % \small
-    % \centering
+    \small
+    \centering
     \captionof{table}
-        [Trigger paths used to collect 2016 data (pre- and post-VFP)] % TODO:
-        {Trigger paths used to collect 2016 data (pre- and post-VFP) for the measurement of \mh.} % TODO:
-		\begin{tabular}{|lll|}
+        [Trigger paths used to collect 2016 data for the dilepton resonance search]
+        {Trigger paths used to collect 2016 data for the dilepton resonance search.}
+		\begin{tabular}{|lcl|}
 		\hline      
             HLT path                                                        & Prescale          & Primary data set \\
         \hline
-            % TODO: Confirm with Filippo that these paths are correct.
-            % TODO: Where can I find all the list of triggers? How do we know these are the best triggers to use and that we didn't miss any?
-            % The trigger paths below are from the Python script: templateData_UL16preVFP_10626_3l_cfg.py.
-            % (A) = Found in AN-19-139v6.
-            % (S) = Found in Python script.
-            % * None of the AN paths do not contain "_v" at the end.
-            % * I appended a "*" to the end of all "_v".
-            \texttt{HLT\_DoubleEle33\_CaloIdL\_GsfTrkIdVL\_v*} & 1 & DoubleEG \\                        % (A) + (S)
-            \texttt{HLT\_Ele16\_Ele12\_Ele8\_CaloIdL\_TrackIdL\_v*} & 1 & DoubleEG \\                   % (A) + (S)
-            \texttt{HLT\_Ele17\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*} & 1 & DoubleEG \\              % (A) + (S)
-            \texttt{HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*} & 1 & DoubleEG \\              % (A) + (S)
-            \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_v*} & 1 & DoubleMuon \\                   % (S)
-            \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_v*} & 1 & DoubleMuon \\                       % (A) + (S)
-            \texttt{HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_DZ\_v*} & 1 & DoubleMuon \\                 % (S)
-            \texttt{HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_v*} & 1 & DoubleMuon \\                     % (A) + (S)
-            \texttt{HLT\_TripleMu\_12\_10\_5\_v*} & 1 & DoubleMuon \\                                   % (A) + (S)
-            \texttt{HLT\_DiMu9\_Ele9\_CaloIdL\_TrackIdL\_v*} & 1 & MuonEG \\                            % (A) + (S)
-            \texttt{HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL\_v*} & 1 & MuonEG \\                           % (A) + (S)
-            \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele17\_CaloIdL\_TrackIdL\_IsoVL\_v*} & 1 & MuonEG \\           % (A) + (S)
-            \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*} & 1 & MuonEG \\       % (S)
-            \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_v*} & 1 & MuonEG \\           % (A) + (S)
-            \texttt{HLT\_Mu17\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_v*} & 1 & MuonEG \\          % (A) + (S)
-            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele8\_CaloIdL\_TrackIdL\_IsoVL\_v*} & 1 & MuonEG \\           % (A) + (S)
-            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*} & 1 & MuonEG \\      % (S)
-            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_v*} & 1 & MuonEG \\          % (A) + (S)
-            \texttt{HLT\_Ele25\_eta2p1\_WPTight\_Gsf\_v*} & 1 & SingleElectron \\                       % (S)
-            \texttt{HLT\_Ele27\_eta2p1\_WPLoose\_Gsf\_v*} & 1 & SingleElectron \\                       % (A) + (S)
-            % HLT_Ele25_eta2p1_WPTight                                                                  % (A)
-            % HLT_Ele27_WPTight                                                                         % (A)
-            \texttt{HLT\_Ele27\_WPTight\_Gsf\_v*} & 1 & SingleElectron \\                               % (S)
-            \texttt{HLT\_Ele32\_eta2p1\_WPTight\_Gsf\_v*} & 1 & SingleElectron \\                       % (S)
-            \texttt{HLT\_IsoMu20\_v* OR HLT\_IsoTkMu20\_v*} & 1 & SingleMuon \\                         % (A) + (S)
-            \texttt{HLT\_IsoMu22\_v* OR HLT\_IsoTkMu22\_v*} & 1 & SingleMuon \\                         % (A) + (S)
-            \texttt{HLT\_IsoMu24\_v* OR HLT\_IsoTkMu24\_v*} & 1 & SingleMuon \\                         % (S)
-            %=== Duplicate of above but without backspaces.
-            % \texttt{HLT_Ele16_Ele12_Ele8_CaloIdL_TrackIdL_v*} & 1 & DoubleEG \\             % (A) + (S)
-            % \texttt{HLT_Ele17_Ele12_CaloIdL_TrackIdL_IsoVL_DZ_v*} & 1 & DoubleEG \\         % (A) + (S)
-            % \texttt{HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_DZ_v*} & 1 & DoubleEG \\         % (A) + (S)
-            % \texttt{HLT_DoubleEle33_CaloIdL_GsfTrkIdVL_v*} & 1 & DoubleEG \\                % (A) + (S)
-            % \texttt{HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_v*} & 1 & DoubleMuon \\                % (A) + (S)
-            % \texttt{HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_v*} & 1 & DoubleMuon \\             % (S)
-            % \texttt{HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ_v*} & 1 & DoubleMuon \\           % (S)
-            % \texttt{HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_v*} & 1 & DoubleMuon \\              % (A) + (S)
-            % \texttt{HLT_TripleMu_12_10_5_v*} & 1 & DoubleMuon \\                            % (A) + (S)
-            % \texttt{HLT_Mu8_TrkIsoVVL_Ele17_CaloIdL_TrackIdL_IsoVL_v*} & 1 & MuonEG \\      % (A) + (S)
-            % \texttt{HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_v*} & 1 & MuonEG \\      % (A) + (S)
-            % \texttt{HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_v*} & 1 & MuonEG \\   % (S)
-            % \texttt{HLT_Mu17_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_v*} & 1 & MuonEG \\     % (A) + (S)
-            % \texttt{HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_v*} & 1 & MuonEG \\     % (A) + (S)
-            % \texttt{HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ_v*} & 1 & MuonEG \\  % (S)
-            % \texttt{HLT_Mu23_TrkIsoVVL_Ele8_CaloIdL_TrackIdL_IsoVL_v*} & 1 & MuonEG \\      % (A) + (S)
-            % \texttt{HLT_Mu8_DiEle12_CaloIdL_TrackIdL_v*} & 1 & MuonEG \\                    % (A) + (S)
-            % \texttt{HLT_DiMu9_Ele9_CaloIdL_TrackIdL_v*} & 1 & MuonEG \\                     % (A) + (S)
-            % \texttt{HLT_Ele25_eta2p1_WPTight_Gsf_v*} & 1 & SingleElectron \\                % (S)
-            % \texttt{HLT_Ele27_WPTight_Gsf_v*} & 1 & SingleElectron \\                       % (S)
-            % \texttt{HLT_Ele27_eta2p1_WPLoose_Gsf_v*} & 1 & SingleElectron \\                % (A) + (S)
-            % \texttt{HLT_Ele32_eta2p1_WPTight_Gsf_v*} & 1 & SingleElectron \\                % (S)
-            % \texttt{HLT_IsoMu20_v* OR HLT_IsoTkMu20_v*} & 1 & SingleMuon \\                 % (A) + (S)
-            % \texttt{HLT_IsoMu22_v* OR HLT_IsoTkMu22_v*} & 1 & SingleMuon \\                 % (A) + (S)
-            % \texttt{HLT_IsoMu24_v* OR HLT_IsoTkMu24_v*} & 1 & SingleMuon \\                 % (S)
+            \texttt{HLT\_Ele17\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ} &    1 &   DoubleEG \\
+            \texttt{HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ} &    1 &   DoubleEG \\
+            \texttt{HLT\_DoubleEle33\_CaloIdL\_GsfTrkIdVL} &   1 &   DoubleEG \\
+            \texttt{HLT\_Ele16\_Ele12\_Ele8\_CaloIdL\_TrackIdL} &    1 &   DoubleEG \\
+            \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL} &     1 &   DoubleMuon \\
+            \texttt{HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL} &   1 &   DoubleMuon \\
+            \texttt{HLT\_TripleMu\_12\_10\_5} &     1 &   DoubleMuon \\
+            \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele17\_CaloIdL\_TrackIdL\_IsoVL} &   1 &   MuonEG \\
+            \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL} &   1 &   MuonEG \\
+            \texttt{HLT\_Mu17\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL} &  1 &   MuonEG \\
+            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL} &  1 &   MuonEG \\
+            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele8\_CaloIdL\_TrackIdL\_IsoVL} &   1 &   MuonEG \\
+            \texttt{HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL} &     1 &   MuonEG \\
+            \texttt{HLT\_DiMu9\_Ele9\_CaloIdL\_TrackIdL} &  1 &   MuonEG \\
+            \texttt{HLT\_Ele25\_eta2p1\_WPTight} &     1 &   SingleElectron \\
+            \texttt{HLT\_Ele27\_WPTight} &    1 &   SingleElectron \\
+            \texttt{HLT\_Ele27\_eta2p1\_WPLoose\_Gsf} &     1 &   SingleElectron \\
+            \texttt{HLT\_IsoMu20 OR HLT\_IsoTkMu20} &    1 &   SingleMuon \\
+            \texttt{HLT\_IsoMu22 OR HLT\_IsoTkMu22} &    1 &   SingleMuon \\
         \hline
 		\end{tabular}
 	\label{table:dilep_2016_trig}
@@ -100,142 +55,62 @@ The simulation of \htofourl was carried out by the software \JHUGEN 7.0.2~\cite{
 %%%%%%%%%%%%%%%%%%%%%%%
 %=== Triggers 2017 ===%
 %%%%%%%%%%%%%%%%%%%%%%%
-% TODO:UPDATE WITH DILEP TRIGGERS
 \begin{table}[h]
-    % \small
-    % \centering
+    \small
+    \centering
     \captionof{table}
-        [Trigger paths used to collect 2017 data] % TODO:
-        {Trigger paths used to collect 2017 data for the measurement of \mh.} % TODO:
-		\begin{tabular}{|lll|}
-		\hline      
-        HLT path                                                        & Prescale          & Primary data set \\
-        \hline
-            % TODO: Confirm with Filippo that these paths are correct.
-            % TODO: Where can I find all the list of triggers? How do we know these are the best triggers to use and that we didn't miss any?
-            % The trigger paths below are from the Python script: templateData_UL17_10626_4l_cfg_FOR_Sync.py.
-            % (A) = Found in AN-19-139v6.
-            % (S) = Found in Python script.
-            % There are only a couple differences compared to those found in AN-19-139v6:
-            % * Most of the AN paths do not contain "_v" at the end.
-            % * HLT_DoubleEle33_CaloIdL* has a different suffix.
-            % * I appended a "*" to the end of all "_v".
-            \texttt{HLT\_DoubleEle33\_CaloIdL\_MW\_v*}                       & 1 &                  DoubleEG  \\ % (S)
-            \texttt{HLT\_Ele16\_Ele12\_Ele8\_CaloIdL\_TrackIdL\_v*}          & 1 &                  DoubleEG  \\  % (A) + (S)
-            \texttt{HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_v*}         & 1 &                  DoubleEG  \\  % (A) + (S)
-            % 'HLT\_DoubleEle33\_CaloIdL\_GsfTrkIdVL',                                                         % (A)  \\
-            \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_Mass3p8\_v*}           & 1 &          DoubleMuon  \\  % (A) + (S)
-            \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_Mass8\_v*}         & 1 &              DoubleMuon  \\  % (A) + (S)
-            \texttt{HLT\_TripleMu\_10\_5\_5\_DZ\_v*}         & 1 &                                  DoubleMuon  \\  % (A) + (S)
-            \texttt{HLT\_TripleMu\_12\_10\_5\_v*}            & 1 &                                  DoubleMuon  \\  % (A) + (S)
-            \texttt{HLT\_DiMu9\_Ele9\_CaloIdL\_TrackIdL\_DZ\_v*}         & 1 &                      MuonEG  \\  % (A) + (S)
-            \texttt{HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL\_DZ\_v*}            & 1 &                  MuonEG  \\  % (A) + (S)
-            \texttt{HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL\_v*}            & 1 &                      MuonEG  \\  % (A) + (S)
-            \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*}            & 1 &  MuonEG  \\  % (A) + (S)
-            \texttt{HLT\_Mu12\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*}           & 1 &  MuonEG    \\  % (A) + (S)
-            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*}           & 1 &  MuonEG     \\  % (A) + (S)
-            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_v*}           & 1 &      MuonEG  \\  % (A) + (S)
-            \texttt{HLT\_Ele35\_WPTight\_Gsf\_v*}            & 1 &                                  SingleElectron  \\  % (A) + (S)
-            \texttt{HLT\_Ele38\_WPTight\_Gsf\_v*}            & 1 &                                  SingleElectron  \\  % (A) + (S)
-            \texttt{HLT\_Ele40\_WPTight\_Gsf\_v*}            & 1 &                                  SingleElectron  \\  % (A) + (S)
-            \texttt{HLT\_IsoMu27\_v*}            & 1 &                                              SingleMuon  \\  % (A) + (S)
-        \hline
-    %=== From AN-19-139v6.
-    % HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_*
-    % HLT_DoubleEle33_CaloIdL_GsfTrkIdVL
-    % HLT_Ele16_Ele12_Ele8_CaloIdL_TrackIdL
-    % HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8
-    % HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass8
-    % HLT_TripleMu_12_10_5
-    % HLT_TripleMu_10_5_5_DZ
-    % HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL
-    % HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ
-    % HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ
-    % HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ
-    % HLT_DiMu9_Ele9_CaloIdL_TrackIdL_DZ
-    % HLT_Mu8_DiEle12_CaloIdL_TrackIdL
-    % HLT_Mu8_DiEle12_CaloIdL_TrackIdL_DZ
-    % HLT_Ele35_WPTight_Gsf_v*
-    % HLT_Ele38_WPTight_Gsf_v*
-    % HLT_Ele40_WPTight_Gsf_v*
-    % HLT_IsoMu27
-    %=== ORIGINAL templateData_UL17_10626_4l_cfg_FOR_Sync.py:
-    % 'HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_v',
-    % 'HLT_DoubleEle33_CaloIdL_MW_v',
-    % 'HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8_v',
-    % 'HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass8_v',
-    % 'HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_v',
-    % 'HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_v',
-    % 'HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_v',
-    % 'HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ_v',
-    % 'HLT_DiMu9_Ele9_CaloIdL_TrackIdL_DZ_v',
-    % 'HLT_Mu8_DiEle12_CaloIdL_TrackIdL_v',
-    % 'HLT_Mu8_DiEle12_CaloIdL_TrackIdL_DZ_v',
-    % 'HLT_Ele16_Ele12_Ele8_CaloIdL_TrackIdL_v',
-    % 'HLT_TripleMu_10_5_5_DZ_v',
-    % 'HLT_TripleMu_12_10_5_v',
-    % 'HLT_Ele35_WPTight_Gsf_v',
-    % 'HLT_Ele38_WPTight_Gsf_v',
-    % 'HLT_Ele40_WPTight_Gsf_v',
-    % 'HLT_IsoMu27_v',
+        [Trigger paths used to collect 2017 data for the dilepton resonance search]
+        {Trigger paths used to collect 2017 data for the dilepton resonance search.}
+		\begin{tabular}{|lcl|}
+            \hline      
+        HLT path       & Prescale          & Primary data set \\
+            \hline
+        \texttt{HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_$\ast$} & 1 & DoubleEG \\
+        \texttt{HLT\_DoubleEle33\_CaloIdL\_GsfTrkIdVL} & 1 & DoubleEG \\
+        \texttt{HLT\_Ele16\_Ele12\_Ele8\_CaloIdL\_TrackIdL} & 1 & DoubleEG \\
+        \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_Mass3p8} & 1 & DoubleMuon \\
+        \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_Mass8} & 1 & DoubleMuon \\
+        \texttt{HLT\_TripleMu\_12\_10\_5} & 1 & DoubleMuon \\
+        \texttt{HLT\_TripleMu\_10\_5\_5\_D2} & 1 & DoubleMuon \\
+        \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL} & 1 & MuonEG \\
+        \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ} & 1 & MuonEG \\
+        \texttt{HLT\_Mu12\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ} & 1 & MuonEG \\
+        \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ} & 1 & MuonEG \\
+        \texttt{HLT\_DiMu9\_Ele9\_CaloIdL\_TrackIdL\_DZ} & 1 & MuonEG \\
+        \texttt{HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL} & 1 & MuonEG \\
+        \texttt{HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL\_DZ} & 1 & MuonEG \\
+        \texttt{HLT\_Ele35\_WPTight\_Gsf\_v$\ast$} & 1 & SingleElectron \\
+        \texttt{HLT\_Ele38\_WPTight\_Gsf\_v$\ast$} & 1 & SingleElectron \\
+        \texttt{HLT\_Ele40\_WPTight\_Gsf\_v$\ast$} & 1 & SingleElectron \\
+        \texttt{HLT\_IsoMu27} & 1 & SingleMuon \\
+            \hline
 		\end{tabular}
-	\label{table:dilep_2018_trig}
+	\label{table:dilep_2017_trig}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%
 %=== Triggers 2018 ===%
 %%%%%%%%%%%%%%%%%%%%%%%
-% TODO:UPDATE WITH DILEP TRIGGERS
 \begin{table}[h]
-    % \small
-    % \centering
+    \small
+    \centering
     \captionof{table}
-        [Trigger paths used to collect 2018 data] % TODO:
-        {Trigger paths used to collect 2018 data for the measurement of \mh.} % TODO:
+        [Trigger paths used to collect 2018 data for the dilepton resonance search]
+        {Trigger paths used to collect 2018 data for the dilepton resonance search.}
 		\begin{tabular}{|lcl|}
 		\hline      
-        HLT path                                                        & Prescale          & Primary data set \\
+        HLT path        & Prescale          & Primary data set \\
         \hline
-        % TODO: Confirm with Filippo that these paths are correct.
-        % TODO: Where can I find all the list of triggers? How do we know these are the best triggers to use and that we didn't miss any?
-            % The trigger paths below are from the Python script: templateData_UL18_10626_3l_cfg_FOR_SYNC.py.
-            % (A) Found in AN-19-139v6.
-            % (T) Toni used these triggers in the script.
-            % There are only a couple differences compared to those found in AN-19-139v6:
-            % * Most of the AN paths do not contain "_v" at the end.
-            % * HLT_DoubleEle33_CaloIdL* has a different suffix.
-            % * I appended a "*" to the end of all "_v".
-            \texttt{HLT\_DoubleEle25\_CaloIdL\_MW\_v*}                              & 1                 & DoubleEG              \\  % (A) & (T)
-            \texttt{HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_v*}                & 1                 & DoubleEG           \\  % (A) & (T)
-            \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_Mass3p8\_v*}          & 1                 & DoubleMuon               \\  % (A) & (T)
-            \texttt{HLT\_TripleMu\_10\_5\_5\_DZ\_v*}                              & 1                   & DoubleMuon             \\  % (T)
-            \texttt{HLT\_TripleMu\_12\_10\_5\_v*}                                & 1                    & DoubleMuon            \\  % (T)
-            \texttt{HLT\_DiMu9\_Ele9\_CaloIdL\_TrackIdL\_DZ\_v*}                  & 1                   & MuonEG          \\  % (A) & (T)
-            \texttt{HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL\_DZ\_v*}                 & 1                   & MuonEG               \\  % (T)
-            \texttt{HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL\_v*}                    & 1                    & MuonEG              \\  % (T)
-            \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*}   & 1                 & MuonEG                \\  % (A) & (T)
-            \texttt{HLT\_Mu12\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*}  & 1                 & MuonEG          \\  % (A) & (T)
-            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*}  & 1                 & MuonEG                \\  % (T)
-            \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_v*}      & 1                 & MuonEG          \\  % (A) & (T)
-            \texttt{HLT\_Ele32\_WPTight\_Gsf\_v*}                               & 1                     & SingleElectron    \\  % (A) & (T)
-            \texttt{HLT\_IsoMu24\_v*}                                         & 1                       & SingleMuon    \\  % (A) & (T)
+        \texttt{HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_v*} & 1 & DoubleEG \\
+        \texttt{HLT\_DoubleEle25\_CaloIdL\_MW\_v*} & 1 & DoubleEG \\
+        \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_Mass3p8\_v*} & 1 & DoubleMuon \\
+        \texttt{HLT\_Mu23\_TrkIsoVVL\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_v*} & 1 & MuonEG \\
+        \texttt{HLT\_Mu8\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*} & 1 & MuonEG \\
+        \texttt{HLT\_Mu12\_TrkIsoVVL\_Ele23\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*} & 1 & MuonEG \\
+        \texttt{HLT\_DiMu9\_Ele9\_CaloIdL\_TrackIdL\_DZ\_v*} & 1 & MuonEG \\
+        \texttt{HLT\_Ele32\_WPTight\_Gsf\_v*} & 1 & SingleElectron \\
+        \texttt{HLT\_IsoMu24\_v*} & 1 & SingleMuon \\
         \hline
-        %=== ORIGINAL templateData_UL18_10626_3l_cfg_FOR_SYNC.py
-        % Toni
-        % 'HLT_Ele32_WPTight_Gsf_v', 
-        % 'HLT_IsoMu24_v',
-        % 'HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_v',
-        % 'HLT_DoubleEle25_CaloIdL_MW_v',
-        % 'HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8_v',
-        % 'HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_v',
-        % 'HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_v',
-        % 'HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_v',
-        % 'HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ_v',
-        % 'HLT_DiMu9_Ele9_CaloIdL_TrackIdL_DZ_v',
-        % 'HLT_TripleMu_10_5_5_DZ_v',
-        % 'HLT_TripleMu_12_10_5_v',
-        % 'HLT_Mu8_DiEle12_CaloIdL_TrackIdL_v', 
-        % 'HLT_Mu8_DiEle12_CaloIdL_TrackIdL_DZ_v', 
-		\end{tabular}
+    \end{tabular}
 	\label{table:dilep_2018_trig}
 \end{table}
 
@@ -244,7 +119,6 @@ The simulation of \htofourl was carried out by the software \JHUGEN 7.0.2~\cite{
 The ReReco data set names, which contain the events collected by CMS that are used in the search for \PZD for 2016, 2017, and 2018 are listed in Tables~\ref{table:2016_dataSamples_dilep}, \ref{table:2017_dataSamples_dilep}, and \ref{table:2018_dataSamples_dilep}, respectively.
 %=== Data sets 2016.
 \begin{table}[h]
-    %  \captionsetup{justification=justified}
     \small
     \centering
     \captionof{table}
@@ -400,37 +274,36 @@ The ReReco data set names, which contain the events collected by CMS that are us
 \end{table}
 
 \subsection{Simulated Events}
+\label{sec:sim_samples_dilep}
 % Monte Carlo refers to a simulation technique.
 % Therefore "Monte Carlo events" makes no sense, while "Monte Carlo program" is fine.
 % Use "simulated events" instead (NOT "simulation" samples!).
-\label{sec:sim_samples_dilep}
-The data set names containing the simulated events for signal and background processes are listed in Tables~\ref{table:dilep_2016_simSamples}--\ref{table:dilep_2018_simSamples}. % TODO:UPDATE TABLE.
+The names of the data sets used to simulate signal and background events for the dilepton mass resonance search are listed in \cref{table:dilep_simSamples_sig}.
 \begin{table}[h]
     \small
+    \centering
     \captionof{table}
-        [Names of simulated signal and background samples for 2016 data] % TODO: get correct info
-        {Names of simulated signal and background samples for 2016 data. \\ % TODO:
+        [Names of simulated events (signal and background) for the dilepton resonance analysis]
+        {Names of simulated events (signal and background) for the dilepton resonance analysis. \\
         $[1]$ ``RunIISummer20UL16MiniAODv2-106X\_mcRun2\_asymptotic\_v17-v2/MINIAODSIM''
         \\
         or
         \\
         ``RunIISummer20UL16MiniAODAPVv2-106X\_mcRun2\_asymptotic\_preVFP\_v11-v2/MINIAODSIM''}
-	\begin{tabular}{|ll|}
-		\hline      
-        Name of signal data set & $\sigma \times \mathcal{B}\pbparen$ \\
-        \hline
-		GluGluHToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV709\_pythia8/[1]	&	0.01333521	\\
-		VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV709\_pythia8/[1]	&	0.001038159	\\
-		WplusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV709\_pythia8/[1]	&	0.0002305562	\\
-		WminusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV709\_pythia8/[1]	&	0.0001462348	\\
-		ZH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2-minlo-HZJ\_JHUGenV709\_pythia8/[1]	&	0.0005321759	\\
-		ttH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2\_JHUGenV709\_pythia8/[1]	&	0.0003639351	\\
-		bbH\_HToZZTo4L\_M125\_13TeV\_JHUgenV702\_pythia8/[1]	&	0.0001339560	\\
-		tqH\_HToZZTo4L\_M125\_TuneCP5\_13TeV-jhugenv7011\-pythia8/[1]	&	0.0000857830	\\
-		\hline	
-		\hline	
-        Name of background data set & $\sigma \times \mathcal{B}\pbparen$ \\
-		\hline	
+	\begin{tabular}{|lll|}
+            \hline      
+        Signal data set name & $\sigma \times \mathcal{B}(\times \epsilon_\text{filter})\fbparen$ \\
+            \hline
+		\texttt{/GluGluHToZZTo4L\_M125\_13TeV\_powheg2\_JHUgenV6\_pythia8/[1]}	&	12.18	\\
+		\texttt{/VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUgenV6\_pythia8/[1]} & 1.044       \\
+		\texttt{/WplusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUgenV6\_pythia8/[1]} & 0.232 \\
+		\texttt{/WminusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUgenV6\_pythia8/[1]} & 0.147 \\
+		\texttt{/ZH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2-minlo-HZJ\_JHUgenV6\_pythia8/[1]} & 0.668 \\
+		\texttt{/ttH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg\_JHUgen\_pythia8/[1]} & 0.393 \\
+            \hline	
+            \hline	
+        Background data set name & $\sigma \times \mathcal{B}\pbparen$ \\
+            \hline	
 		ZZTo4L\_13TeV\_powheg\_pythia8/[1]	&	1.256	\\
 		GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8/[1]	&	0.00158549	\\
 		GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8/[1]	&	0.00158549	\\
@@ -438,73 +311,7 @@ The data set names containing the simulated events for signal and background pro
 		GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8/[1]	&	0.0031942	\\
 		GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8/[1]	&	0.0031942	\\
 		GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8/[1]	&	0.0031942	\\
-        \hline
+            \hline
         \end{tabular}
-    \label{table:dilep_2016_simSamples}
-\end{table}
-\begin{table}[h]
-    \small
-    \captionof{table}
-        [Names of simulated signal and background samples for 2017 data] % TODO:
-        {Names of simulated signal and background samples for 2017 data. \\ % TODO:
-        $[2]$ ``RunIISummer20UL17MiniAODv2-106X\_mc2017\_realistic\_v9/MINIAODSIM''}
-	\begin{tabular}{|ll|}
-		\hline      
-        Name of signal data set & $\sigma \times \mathcal{B}\pbparen$ \\
-        \hline
-		GluGluHToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[2]	&	0.01333521	\\
-		VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[2]	&	0.001038159	\\
-		WplusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV7011\_pythia8/[2]	&	0.0002305562	\\
-		WminusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV7011\_pythia8/[2]	&	0.0001462348	\\
-		ZH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2-minlo-HZJ\_JHUGenV7011\_pythia8/[2]	&	0.0005321759	\\
-		ttH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[2]	&	0.0003639351	\\
-		bbH\_HToZZTo4L\_M125\_13TeV\_JHUGenV7011\_pythia8/[2]	&	0.0001339560	\\
-		tqH\_HToZZTo4L\_M125\_TuneCP5\_13TeV-jhugenv7011\-pythia8/[1]	&	0.0000857830	\\
-		\hline	
-		\hline	
-        Name of background data set & $\sigma \times \mathcal{B}\pbparen$ \\
-		\hline	
-		ZZTo4L\_13TeV\_powheg\_pythia8/[2]	&	1.256	\\
-		GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8/[2]	&	0.00158549	\\
-		GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8/[2]	&	0.00158549	\\
-		GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8/[2]	&	0.00158549	\\
-		GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8/[2]	&	0.0031942	\\
-		GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8/[2]	&	0.0031942	\\
-		GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8/[2]	&	0.0031942	\\
-        \hline
-        \end{tabular}
-    \label{table:dilep_2017_simSamples}
-\end{table}
-\begin{table}[h]
-    \small
-    \captionof{table}
-        [Names of simulated signal and background samples for 2018 data] % TODO:
-        {Names of simulated signal and background samples for 2018 data. \\ % TODO:
-        $[3]$ ``RunIISummer20UL18MiniAODv2-106X\_upgrade2018\_realistic\_v16\_L1v1/MINIAODSIM''}
-	\begin{tabular}{|ll|}
-		\hline      
-        Name of signal data set & $\sigma \times \mathcal{B}\pbparen$ \\
-        \hline
-		GluGluHToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[3]	&	0.01333521	\\
-		VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[3]	&	0.001038159	\\
-		WplusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV7011\_pythia8/[3]	&	0.0002305562	\\
-		WminusH\_HToZZTo4L\_M125\_13TeV\_powheg2-minlo-HWJ\_JHUGenV7011\_pythia8/[3]	&	0.0001462348	\\
-		ZH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2-minlo-HZJ\_JHUGenV7011\_pythia8/[3]	&	0.0005321759	\\
-		ttH\_HToZZ\_4LFilter\_M125\_13TeV\_powheg2\_JHUGenV7011\_pythia8/[3]	&	0.0003639351	\\
-		bbH\_HToZZTo4L\_M125\_TuneCP2\_13TeV-JHUGenV7011\_pythia8/[3]	&	0.0001339560	\\
-		tqH\_HToZZTo4L\_M125\_TuneCP5\_13TeV-jhugenv7011\-pythia8/[1]	&	0.0000857830	\\
-		\hline	
-		\hline	
-        Name of background data set & $\sigma \times \mathcal{B}\pbparen$ \\
-		\hline	
-		ZZTo4L\_TuneCP5\_13TeV\_powheg\_pythia8/[3]	&	1.256	\\
-		GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8/[3]	&	0.00158549	\\
-		GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8/[3]	&	0.00158549	\\
-		GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8/[3]	&	0.00158549	\\
-		GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8/[3]	&	0.0031942	\\
-		GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8/[3]	&	0.0031942	\\
-		GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8/[3]	&	0.0031942	\\
-        \hline
-        \end{tabular}
-    \label{table:dilep_2018_simSamples}
+    \label{table:dilep_simSamples_bkg}
 \end{table}

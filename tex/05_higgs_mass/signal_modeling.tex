@@ -1,19 +1,14 @@
 \section{Signal Modeling}
 \label{sec:signal_model}
-%=== FROM AN but modified. ===%
-%The dominant POWHEG ggF process is reweighted to the NNLOPS one, using bins of generated Higgs 
-%$p_{T}$ and number of generated jets. More details in \cite{HIG_19_001}.
-% TODO:REWORD
 
 \subsection{Signal Normalization}
 \label{sec:SignalNormalization}
-% TODO:REWORD
 The normalization of the Higgs boson signal is obtained from simulation, 
-looking at the expected signal yields in the range [105, 140] GeV, 
-for five simulated mass points (120, 124, 125, 126, and 130 GeV).
-A second order polynomial function is used to extract the dependence of the normalization from $m_{H}$.
-Fits are performed separately for each production mode, for each decay channel and for each year. 
-Examples of the fits are shown in Fig.~\ref{fig:signal_normalization}
+by looking at the expected signal yields within the range 105--140\GeV, 
+using five simulated mass points: $\mH = 120, 124, 125, 126, 130\GeV$.
+A second order polynomial function is used to extract the dependence of the normalization from \mH.
+Fits are performed separately for each production mode, for each decay channel, and for each year. 
+Examples of the fits are shown in \cref{fig:signal_normalization}.
 \begin{multiFigure}
     \centering
         \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/SignalModelling/Signal_Normalisation/NoZ1/2016pre_ggH_yield_workinprogress.pdf}
@@ -32,34 +27,22 @@ Examples of the fits are shown in Fig.~\ref{fig:signal_normalization}
 
 \subsection{Parameterizing the Signal Line Shape}
 \label{sec:SignalParametrization}
-% TODO:REWORD
-The signal lineshape is obtained from the fit of the Higgs boson mass distribution, 
-in the range [105, 140]\GeV, using a double-sided Crystal Ball (DSCB) function, which has 6 parameters.
-%This function has six independent parameters, 
-%with a Gaussian core ($\sigma_{m}$) that describes the four-lepton mass resolution function and 
-%the systematic mass shift ($\Delta m_{H}$) of the peak, and the left- and right-hand tail 
-%originating from leptons emitting brem in the tracker material, present for both electrons and muons, 
-%and from the non-Gaussian mis-measurements specific to interactions of electrons with the detector material 
-%(each side of the distribution is described by two parameters, n and $\alpha$).\\
-Fit parameters $\theta^i$ are derived as a function of \mH, using a first-order polynomial:
-%\textbf{Compare first vs second order formula: current results with second one}
+The signal lineshape is obtained from the fit of the \mfourl distribution in the range 105--140\GeV, using a double-sided Crystal Ball (DSCB) function, which has 6 parameters.
+Fit parameters $\left( \theta^i \right)$ are derived as a function of \mH, using a first-order polynomial:
 \[
 \theta^{i}_\text{DSCB} = a^i + b^{i}~(\mH - 125)% + c~(m_{H} - 125)^{2}
 \]
-
-First, fitting only the 125\GeV sample, the $a^i$ term for each parameter is extracted ($b^i$ is not yet taken into account).
-Then, a second fit is performed:
-this time, $a^i$ is fixed to the value found before, while $b^i$ is kept free to float when fitting all five different mass points (120, 124, 125, 126, 130\GeV) simultaneously.
+The process begins by fitting only the 125\GeV sample, during which the $a^i$ term for each parameter is extracted ($b^i$ is not yet taken into account).
+Then, a second fit is performed, during which $a^i$ is fixed to the previously value found, while $b^i$ is obtained while simultaneously fitting all five \mH mass points.
 
 The fit is performed separately, for each production mode, for each decay channel, for each year. 
-To take into account the non-resonant contribution in the case of $\PV\PH$ and $\ttbarh$ production modes, the 
-DSCB is convoluted with a Landau function that describes the possibility for a 
-lepton from the Higgs boson decay to be lost or not selected.\\
-\subsection{Building the 1D pdf}
-The measurement of \mH is extracted by maximizing the one-dimensional likelihood function $\lhood \left( \mH \middlepipe \mfourl \right)$ using the \mfourl spectrum.  % TODO: Filippo has: "where $m_{H}$ is fixed to the value of 125 GeV." but this doesn't make sense. 
+To take into account the non-resonant contribution of $\PV\PH$ and $\ttbarh$ production modes,
+the DSCB is convoluted with a Landau function that describes the possibility for a lepton from the Higgs boson decay to be lost or to not be selected.
+
+\subsection{Building the 1D PDF}
+The measurement of \mH is extracted by maximizing the one-dimensional likelihood function $\lhood \left( \mH \middlepipe \mfourl \right)$ across the \mfourl spectrum.
 The model and the normalization used for the signal are described in Sec.~\ref{sec:SignalNormalization}.
-The DSCB fits of the four-lepton invariant mass distributions are shown in Figure.~\ref{fig:1D_mass_2018_ggH} for the signal region 105--140\GeV using simulated ggH events, split into the four different final states.
-% TODO: 2017 or 2016 plots?
+The DSCB fits of the four-lepton invariant mass distributions are shown in \cref{fig:1D_mass_2018_ggH} for the signal region (105--140\GeV) using simulated ggH events, split into the four different final states.
 \begin{multiFigure}
     \centering
         \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/ggH_MassDistribution/1D_mass_2018_ggH_4mu_workinprogress.pdf}
@@ -68,16 +51,16 @@ The DSCB fits of the four-lepton invariant mass distributions are shown in Figur
         \addFigure{0.48}{../../higgsmassmeasurement/AN-19-248/Figures/ggH_MassDistribution/1D_mass_2018_ggH_2mu2e_workinprogress.pdf}
     \captionof{figure}
         [Distributions of \mfourl in the signal region (105--140\GeV) using simulated ggH events]
-        {Distributions of \mfourl in the signal region (105--140\GeV) using simulated ggH events, fitted with a DSCB function using 2018 samples.
-        \;A) \fourmu.
-        \;B) \foure.
-        \;C) \twoetwomu.
-        \;D) \twomutwoe.}
+        {Distributions of \mfourl in the signal region (105--140\GeV) using simulated ggH events, fitted with a DSCB function for the year 2018.
+        \;A) The \fourmu final state.
+        \;B) The \foure final state.
+        \;C) The \twoetwomu final state.
+        \;D) The \twomutwoe final state.}
     \label{fig:1D_mass_2018_ggH}
 \end{multiFigure}
 
-\subsubsection{Expected uncertainties on \mH before improvements}
-Assuming perfect background rejection and neglecting any systematic uncertainties, the expected uncertainty on the measurement of \mH is shown in Tables~\ref{table:1D_model_result_fs} and~\ref{table:1D_model_result_year}, split by final state and by year, respectively.
+\subsubsection{Expected Uncertainties on \mH before Improvements}
+Assuming perfect background rejection and neglecting any systematic uncertainties, the expected uncertainty on the measurement of \mH is shown in \cref{table:1D_model_result_fs,table:1D_model_result_year}, split by final state and by year, respectively.
 % TODO: Consider using tabularx
 %=== By final state.
 \begin{table}[!ht]
@@ -86,8 +69,7 @@ Assuming perfect background rejection and neglecting any systematic uncertaintie
     \topcaption
         [Expected Higgs boson mass uncertainty measured with the 1D model]
         {Expected Higgs boson mass uncertainty measured with the 1D model for different final states.
-        All mass uncertainties are reported in $\MeVns$ and are statistical-only.
-        }
+        All mass uncertainties are reported in $\MeVns$ and are statistical-only.}
 	\begin{tabular}{cccccc}
             \hline      
         Expected uncertainty $(\MeVns)$	&	\fourmu	&	\foure	&	\twoetwomu	& \twomutwoe	& Inclusive	\\
@@ -115,14 +97,3 @@ Assuming perfect background rejection and neglecting any systematic uncertaintie
         \end{tabular}
     \label{table:1D_model_result_year}
 \end{table}
-% TODO: Include any of the below?
-%The 1D likelihood scans vs \mH, while profiling signal strength $\mu$ as all other nuisance parameters, are 
-%shown in \figurename~\ref{1D_model}. 
-%%All systematic errors are included. In order to estimate the 
-%%contribution of the statistical and systematic error to the mass measurement, a likelihood scan removing 
-%%both the normalization and shape systematics is performed. As in the case of the scan including the full 
-%%uncertainties, $\mu$ is profiled, and then its uncertainty is included in the statistical error, because 
-%%its magnitude represents the amount of signal events fitted, and then it has statistical nature. 
-%%The systematic uncertainty is estimated as the difference in quadrature between the full uncertainty 
-%%and the statistical uncertainty. 
-%Results are summarised in ~\tablename~\ref{table:1D_model_result}.

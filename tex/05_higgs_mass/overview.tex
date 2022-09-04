@@ -1,8 +1,8 @@
 \section{Analysis Overview}
 \label{sec:analysis_overview}
 The first step to performing a precision measurement of \mH is to `observe' many Higgs bosons.
-However, production of a Higgs boson is nonexistent in everyday conditions and is extremely rare even in the high-energy \pp collisions of the LHC (Chapter~\ref{ch:lhc}).
-There are four major production modes of a Higgs boson, as shown in Fig.~\ref{fig:higgs_prod_modes}:
+However, production of a Higgs boson is nonexistent in everyday conditions and is extremely rare even in the high-energy \pp collisions of the LHC (\cref{ch:lhc}).
+There are four major production modes of a Higgs boson, as shown in \cref{fig:higgs_prod_modes}:
 gluon--gluon fusion (ggH),
 vector boson fusion (VBF),
 associated production with a gauge boson or sometimes called `Higgs-strahlung' ($\PV \PH$, where $\PV = \PWpm, \PZ$),
@@ -24,7 +24,7 @@ When this value is compared to the sum of the production mode cross sections of 
 To complicate matters further, the Higgs boson has a \emph{very} short theoretical mean lifetime of approximately $2 \times \tentotheminus{22}\snd$~\cite{CMS-PAS-HIG-21-013}.
 Thus, the existence of the Higgs boson is not directly detected by CMS (\cref{ch:cms}) but is instead \emph{inferred} from its stable decay products which enter the various subdetectors.
 Among all the fundamental particles so far discovered, the Higgs boson has the second largest mass ($125.10 \pm 0.14\GeV$), which gives the scalar boson sufficient energy to decay into at least 9 different final states~\cite{particle_data_group_review_2020}.
-Each decay mode occurs with a different probability---the \emph{branching fraction} (\br)---whose value depends on \mH, as shown in Fig.~\ref{fig:higgs_br}.
+Each decay mode occurs with a different probability---the \emph{branching fraction} (\br)---whose value depends on \mH, as shown in \cref{fig:higgs_br}.
 The question then becomes, \emph{``Which Higgs boson decay mode is the most useful for measuring \mH?''}
 \begin{multiFigure}
 	\centering
@@ -36,7 +36,8 @@ The question then becomes, \emph{``Which Higgs boson decay mode is the most usef
 		[Branching fractions of Higgs boson decays as a function of the Higgs boson mass]
 		{The branching fractions of various Higgs boson decays as a function of the Higgs boson mass.
 		\;A) Wide range of Higgs boson mass values (80--200\GeV).
-		\;B) Narrow range of Higgs boson mass values (120--130\GeV).}
+		\;B) Narrow range of Higgs boson mass values (120--130\GeV).
+		Plots taken from Ref.~\cite{particle_data_group_review_2020}.}
 	\label{fig:higgs_br}
 \end{multiFigure} 
 % Real particles enter detectors in CMS which send signals to various electronics.
@@ -56,8 +57,8 @@ Thus, a signal event is expected to be produced only once in about every \emph{t
 The strategy is then to search the \pp collision data collected by CMS for all the detected \hzzfourl events.
 The task is not so straightforward;
 events in the data are categorized---not by the entire decay process---but by their final state, based on which triggers fired to collect which events.
-Section~\ref{sec:analyzed_data} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
-For each chosen event, the subdetectors of CMS (Secs.~\ref{sec:tracker}--\ref{sec:muon_sys}) provide a plethora of track and energy-detection information to reconstruct \emph{objects}, which are representations of the underlying particles within the event.
+\Cref{sec:analyzed_data} describes the triggers used for this analysis to select events with the \fourl final state found in the corresponding data sets.
+For each chosen event, the subdetectors of CMS (\crefrange{sec:tracker}{sec:muon_sys}) provide a plethora of track and energy-detection information to reconstruct \emph{objects}, which are representations of the underlying particles within the event.
 The reconstructed objects are then assembled in a fashion that checks if the decay logic coincides with the signal process of interest: \hzzfourl.
 % TODO: Clean up this sentence.
 For example, a pair of OSSF lepton-like objects should appear to come from a \PZ-like object---\ie having a nominal mass of approximately 91\GeV and zero net electric charge---instead of, say, appearing to come from a \PH-like object.
@@ -72,31 +73,23 @@ The reconstructed objects are often required to pass certain detector selection 
 %     - Form two different pairs of opposite-sign, same-flavor (OSSF) leptons
 %     - If it appears that the to select specific hzz4l events (\emph{event selection}).
 These criteria are analysis-specific and are collectively called the \emph{event selection} of the analysis.
+
+% TODO: Get \cref to work: Sec.
 The event selection for this analysis is described in Sec.~\ref{sec:evt_sel}.
 Although the event selection is devised to ideally select only signal events, it is not guaranteed;
 there are certain physics process that have exactly the same initial and final states as the signal process.
 Such processes ``contaminate'' the collected signal events and are called \emph{background processes}.
-Concretely, Fig.~\ref{fig:feyndiag_sig_vs_bkg} shows how identical initial-state gluons can react to produce exactly the same final-state particles, while producing different intermediate particles:
+Concretely, \cref{fig:feyndiag_sig_vs_bkg} shows how identical initial-state gluons can react to produce exactly the same final-state particles, while producing different intermediate particles:
 the signal process (\gghzzfourl), initiated by gluon-gluon fusion \vs a background process (\ggzzfourl) which skips the intermediate Higgs boson.
 It is imperative for particle physics analyses to maximize the number of collected signal events while minimizing the number of collected background events.
+% TODO: Get \Cref to work: Section
 Section~\ref{sec:bkg_estim} discusses the associated background processes and how to estimate the number of events these contribute to the signal region.
-\begin{multiFigure}
-	\centering
-		\addFigure{0.49}{figures/higgsmassmeas/feynman_diag_HZZ4L.png} % TODO: Add gluons to diagram.
-		\addFigure{0.49}{figures/higgsmassmeas/feynman_diag_ggZZ4L.png}  % TODO: Fix diagram.
-	\captionof{figure}
-		[Feynman diagrams for the \gghzzfourl and \ggzzstarfourl processes]
-		{Feynman diagrams showing how different physics processes can have the same initial and final states.
-		\;A) The signal process \gghzzfourl.
-		\;B) An example background process \ggzzfourl.}
-	\label{fig:feyndiag_sig_vs_bkg}
-\end{multiFigure}
 
-% TODO: Use this Feynman diagram code?
 \begin{figure}[ht]
     \centering
     \begin{tikzpicture}
 
+	% gg->H->ZZ->4l
     \begin{feynman}[large]
         \vertex (gg) {}; % h at beginning 
         \vertex [above = 2.5cm of gg] (g1) {$\Pg$};
@@ -112,8 +105,6 @@ Section~\ref{sec:bkg_estim} discusses the associated background processes and ho
         \vertex [below right = 0.65cm and 2cm of Z2] (Z2l2) {$\ell^+$}; % bottom l of top Z
         \vertex [above right = 0.65cm and 2cm of Z1] (Z1l1) {$\ell^-$}; % top l of bottom Z
         \vertex [below right = 0.65cm and 2cm of Z1] (Z1l2) {$\ell^+$}; % bottom l of bottom Z
-        % TODO: SUZANNE: Need a top-quark loop.
-        % TODO: SUZANNE: Need to make gluon lines horizontal.
         
         \diagram* {
             (g1) -- [gluon] (t1),
@@ -126,13 +117,12 @@ Section~\ref{sec:bkg_estim} discusses the associated background processes and ho
             (Z1l2) -- [fermion] (Z1) -- [fermion] (Z1l1);
             (Z2l2) -- [fermion] (Z2) -- [fermion] (Z2l1);
         };
+		\node [left = 1cm of gg] (A) {A};
     \end{feynman}
     \end{tikzpicture}
-
-
-
+	
+	% gg->ZZ->4l
 	\begin{tikzpicture}
-
 		\begin{feynman}[large]
 			\vertex (topleft); % h at beginning 
 			\vertex [right=3cm of topleft] (topright); % h at beginning 
@@ -161,167 +151,17 @@ Section~\ref{sec:bkg_estim} discusses the associated background processes and ho
 				(topright) -- [boson] (Zt),
 				(bottomright) -- [boson] (Zb),
 			};
+
+			\node [below left=2.5cm and 1cm of gt] (B) {B};
 		\end{feynman}
 		\end{tikzpicture}
-
-
-
-
-    \caption{Feynman diagram showing how different physics processes can have the same initial and final states.}
+	\captionof{figure}
+		[Feynman diagrams for the \gghzzfourl and \ggzzstarfourl processes]
+		{Feynman diagrams showing how two different physics processes can have the same initial and final states, thus interfering with one another.
+		\;A) The signal process \gghzzfourl.
+		\;B) An example background process \ggzzfourl.}
+	\label{fig:feyndiag_sig_vs_bkg}
 \end{figure}
-
-% TODO: Use this Feynman diagram code?
-%=== Thanks to Dr. Xunwu Zuo for the Feynman diagrams shown in Fig.~\ref{fig:main_higgs_modes}, which shows the major production modes of the Higgs boson. ===%
-% Feynman diagrams below don't compile well because the key "horizontal" requires building with LuaTeX.
-% \begin{multiFigure}
-%     \centering 
-%     \begin{tikzpicture}
-% 	\begin{feynman}[large]
-%         \diagram* {
-%             g1 [particle = \Pg] -- [gluon] t1,
-%             t1 -- [fermion, edge label = \Pqt] t2 -- [fermion, edge label = \Pqt] t3 -- [fermion, edge label = \Pqt] t1,
-%             g2 [particle = \Pg] -- [gluon] t3,
-%             t2 -- [scalar] h [particle = \PH],
-%             g1 -- [draw=none] g2,
-%         };
-% 	\end{feynman}
-% 	\end{tikzpicture}
-% \end{multiFigure}
-
-%         \caption*{\ggH}
-%     \end{subfigure} 
-%     %to put these two diagrams side by side. no empty line in between these two blocks, otherwise it indicates an empty line in the pdf
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[horizontal=b to h]{
-%             q1 [particle = $\Pq_{1}$] -- [fermion] a -- [fermion] aq1 [particle = $\Pq^\prime_{1}$],
-%             a -- [boson, edge label = \PV] b -- [boson, edge label = \PV] c,
-%             b -- [scalar] h [particle = \PH],
-%             aq2 [particle = $\Pq_{2}$] -- [fermion] c -- [fermion] q2 [particle = $\Pq^\prime_{2}$],
-
-%             q1 -- [draw = none] n -- [draw = none] aq2,
-%             a -- [draw = none] c,
-%             aq1 -- [draw = none] h -- [draw = none] q2,
-
-%         };
-%         \caption*{\qqH}
-%     \end{subfigure}
-
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[horizontal=a to b] {
-%             q [particle = \Pq] -- [fermion] a -- [anti fermion] aq [particle = $\Pq^\prime$],
-%             a -- [boson, edge label = \PV] b,
-%             v [particle = \PV] -- [boson] b -- [scalar] h [particle = \PH],
-%         };
-%         \caption*{\VH}
-%     \end{subfigure}
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[horizontal=b to h]{
-%             g1 [particle = \Pg] -- [gluon] a -- [fermion] t1 [particle = \Pqt],
-%             a -- [anti fermion, edge label = \Paqt] b -- [anti fermion, edge label = \Pqt] c,
-%             b -- [scalar] h [particle = \PH],
-%             g2 [particle = \Pg] -- [gluon] c -- [anti fermion] t2 [particle = \Paqt],
-
-%             g1 -- [draw = none] n -- [draw = none] g2,
-%             a -- [draw = none] c,
-%             t1 -- [draw = none] h -- [draw = none] t2,
-%         };
-%         \caption*{\ttH}
-%     \end{subfigure}
-%     \caption{Main production modes of the Higgs boson.}
-%     \label{fig:main_higgs_modes}
-% \end{multiFigure}
-
-
-% TODO: Use this Feynman diagram code?
-% \begin{figure*}[!htb]
-%     \centering
-%     \captionsetup{justification=centering}
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[horizontal=b to h]{
-%             g1 [particle = \Pg] -- [gluon] a -- [fermion] b1 [particle = \Pqb],
-%             a -- [anti fermion, edge label = \Paqb] b -- [anti fermion, edge label = \Pqb] c,
-%             b -- [scalar] h [particle = \PH],
-%             g2 [particle = \Pg] -- [gluon] c -- [anti fermion] b2 [particle = \Paqb],
-
-%             g1 -- [draw = none] n -- [draw = none] g2,
-%             a -- [draw = none] c,
-%             b1 -- [draw = none] h -- [draw = none] b2,
-%         };
-%         \caption*{\bbH}
-%     \end{subfigure}
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[horizontal=a to b] {
-%             g [particle = \Pg] -- [gluon] a -- [anti fermion] qb [particle = \Pqb],
-%             a -- [fermion, edge label = \Pqb] b,
-%             w [particle = $\PW^{-}$] -- [boson] b -- [fermion, edge label = \Pqt] th -- [fermion] t [particle = \Pqt],
-%             th -- [scalar] h [particle = \PH],
-%             t -- [draw = none] h -- [draw = none] w, 
-%         };
-%         \caption*{\tHW}
-%     \end{subfigure}
-
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[vertical=a to b] {
-%             q [particle = \Pq] -- [fermion] a -- [fermion] aq [particle = \Pq'],
-%             a -- [boson, edge label = \PW] b,
-%             qb [particle = \Pqb] -- [fermion] b -- [fermion, edge label = \Pqt] c,
-%             c -- [scalar] h [particle = \PH],
-%             c -- [fermion] t [particle = \Pqt],
-%             q -- [draw = none] n -- [draw = none] qb,
-%             aq -- [draw = none] h -- [draw = none] c,
-%             aq -- [draw = none] h -- [draw = none] t,
-%         };
-%         \caption*{\tHq}
-%     \end{subfigure}
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[horizontal=b to h]{
-%             q1 [particle = \Pq] -- [fermion] a -- [fermion] q2 [particle = $\Pq^\prime$],
-%             a -- [boson, edge label = \PW] b -- [boson, edge label = \PW] c,
-%             b -- [scalar] h [particle = \PH],
-%             qb [particle = \Pqb] -- [fermion] c -- [fermion] qt [particle = \Pqt],
-
-%             q1 -- [draw = none] n -- [draw = none] qb,
-%             a -- [draw = none] c,
-%             q2 -- [draw = none] h -- [draw = none] qt,
-%         };
-%         \caption*{\tHq}
-%     \end{subfigure}
-
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[horizontal=g1 to q1, horizontal=q2 to z] {
-%             g1 [particle = \Pg] -- [gluon] q1,
-%             q1 -- [fermion, edge label' = \Pq] q2 -- [fermion, edge label' = \Pq] q3 -- [fermion, edge label' = \Pq] q1,
-%             g2 [particle = \Pg] -- [gluon] q3,
-%             q2 -- [boson, edge label = \PZ] z ,
-%             z -- [boson] z2 [particle = \PZ],
-%             z -- [scalar] h [particle = \PH],
-%             g1 -- [draw=none] g2,
-%         };
-%         \caption*{\ggZH}
-%     \end{subfigure} 
-%     \begin{subfigure}[b]{0.45\textwidth}
-%         \centering
-%         \feynmandiagram[horizontal=t1 to t2] {
-%             g1 [particle = \Pg] -- [gluon] t1 -- [fermion, edge label = \Pqt] t2 -- [boson] z [particle = \PZ],
-%             g2 [particle = \Pg] -- [gluon] t4 -- [anti fermion, edge label = \Pqt] t3 -- [scalar] h [particle = \PH],
-%             t1 -- [anti fermion, edge label = \Pqt] t4,
-%             t2 -- [fermion, edge label = \Pqt] t3,
-%             g1 -- [draw = none] g2,
-%             z -- [draw = none] h,
-%         };
-%         \caption*{\ggZH}
-%     \end{subfigure} 
-%     \caption{Examples of minor Higgs boson production modes.}
-%     \label{fig:minor_higgs_modes}
-% \end{figure*}
 
 Before drawing conclusions from the data themselves, it is necessary for particle physicists to make predictions about their analysis using simulated events or \emph{simulation}.
 Such events simulate a specific process (\eg $\pp \to \hzzfourl$), governed by a theoretical model that is programmed mathematically into a software package.
@@ -335,7 +175,7 @@ Programs like \GEANTfour show analysts what to expect as the particles interact 
 Predictions from simulation can then be compared to the truth---\emph{the data}---as a way to check the accuracy of the analysis.
 For example, a surplus of events in data where none was expected may lead to the discovery of new particles, as was the case for the discovery of the Higgs boson.
 % agreement or deviations in what was expected.
-TODO: The simulated events for this analysis are described in Sec.~\ref{sec:sim_samples}.
+The simulated events for this analysis are described in Sec.~\ref{sec:sim_samples}.
 
 \emph{So how is the measurement of \mH obtained?}
 Since the signal process is \hzzfourl, conservation of energy leads one to expect that $\mfourl \approx \mH$.
@@ -430,4 +270,4 @@ The expected results of the precision measurement of \mH are summarized in Sec.~
 % 	\end{tabular}
 % 	\label{tab:cms_vs_atlas}
 % \end{table}
-% For reference, Table~\ref{tab:cms_vs_atlas} summarizes the previous Higgs boson mass measurements made by ATLAS and CMS collaborations, using the \htofourl decay channel.
+% For reference, \cref{tab:cms_vs_atlas} summarizes the previous Higgs boson mass measurements made by ATLAS and CMS collaborations, using the \htofourl decay channel.

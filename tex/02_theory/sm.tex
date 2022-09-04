@@ -22,17 +22,6 @@ The remainder of this chapter presents a general overview of the particles and f
 followed by a brief analysis of the mathematical underpinnings of the SM, specifically the important process of electroweak symmetry breaking (Sec.~\ref{sec:sm_math}),
 and then it concludes by highlighting a few recent measurements that seem to deviate signficantly from SM expectation (Sec.~\ref{sec:shortcomings}).
 
-% TODO: include any of the below?
-% MATHEMATICAL FRAMEWORK
-% - Show SM Lagrangian.
-% - Derive interactions between particles.
-%     BEH MECHANISM
-%     - Robert Brout, François Englert, and Peter Higgs claimed that elementary particles acquire their masses via spontaneous EWSB. (reword!)
-%     - Sheldon Glashow, Abdus Salam, and Steven Weinberg were able to unify the weak and electromagnetic forces into a single force, above the unification energy of 246\GeV.
-%     - In 1973 the Gargamelle collaboration experimentally confirmed the existence of the electroweak force by discovering neutral currents in neutrino scattering experiments.
-%     - Furthermore, in 1983 the UA1 and UA2 collaborations used proton-antiproton collisions to discover the theorized \PW and \PZ electroweak gauge bosons.
-% SHORTCOMINGS OF THE SM
-
 \section{Overview}
 \label{sec:sm_overview}
 
@@ -132,38 +121,33 @@ The two major types of particles are \emph{bosons} and \emph{fermions}.
 % Ever wonder how two electrons "know" that they are near each other and that they should repel? 
 
 %%%%%%%%%%%%%%%%%%%%
-\begin{multiFigure}
+% \begin{figure}
+%     \centering
+%         \includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_moeller.png}
+
+\begin{figure}
     \centering
-        \includegraphics[width=6cm,height=6cm,keepaspectratio]{figures/sm/ee_scattering_moeller.png}
-    \captionof{figure}
     \begin{tikzpicture}
         \begin{feynman}[large]
             \centering
-            \vertex (h) {$h$}; % h at beginning 
-            \vertex [right=1cm of h] (ZZ); % h -> ZZ vertex
-            \node [circle, fill=black, inner sep=2pt, above right = 1cm and 1.25cm of ZZ] (Z1); % black dot node at epsilon (control size with ) 
-            \node [above left = 7pt and 7pt of Z1] (e) {$\epsilon$}; % node with epsilon text
-            \vertex [below right = 1cm and 2.5cm of ZZ] (Z2); % h -> ZZ bottom Z
-            \vertex [above right = 0.5cm and 1.25cm of Z2] (Z2l1) {$l$}; % bottom Z -> ll (top l)
-            \vertex [below right = 0.5cm and 1.25cm of Z2] (Z2l2) {$l$}; % bottom Z -> ll (bottom l)
-            \vertex [above right = 1cm and 1.25cm of Z1] (ZD); % ZD
-            \vertex [above right = 0.5cm and 1.25cm of ZD] (ZDl1) {$l$}; % ZD -> ll (top l)
-            \vertex [below right = 0.5cm and 1.25cm of ZD] (ZDl2) {$l$}; % ZD -> ll (bottom l)
+            \vertex (ein) {$e^-$}; % h at beginning 
+            \vertex [right=4cm of ein] (eout) {$e^-$}; % h -> ZZ vertex
+            \vertex [below right=1.33cm and 2cm of ein] (phot);
+            \vertex [below=1.33cm of phot] (photb);
+            \vertex [below=4cm of ein] (pin) {$e^+$}; % h -> ZZ vertex
+            \vertex [right=4cm of pin] (pout) {$e^+$}; % h -> ZZ vertex
             \diagram* {
-                (h) -- [scalar] (ZZ),
-                (ZZ) -- [boson, edge label=$Z$] (Z1),
-                (ZZ) -- [boson, edge label=$Z$] (Z2),
-                (Z1) -- [boson, edge label=$Z_D$] (ZD),
-                (ZDl2) -- [fermion] (ZD) -- [fermion] (ZDl1);
-                (Z2l2) -- [fermion] (Z2) -- [fermion] (Z2l1);
-            };
+                (phot) -- [boson, edge label=$\gamma$, color=red] (photb),
+                (pout) -- [fermion] (photb) -- [fermion] (pin);
+                (ein) -- [fermion] (phot) -- [fermion] (eout);
+                };
         \end{feynman}
     \end{tikzpicture}
+    \captionof{figure}
         [Feynman diagram showing electron--electron (Møller) scattering]
-        {Feynman diagram showing electron--electron (Møller) scattering.} 
+        {Feynman diagram showing electron--electron (Møller) scattering.}
     \label{fig:ee_scattering}
-\end{multiFigure}
-%%%%%%%%%%%%%%%%%%%%
+\end{figure}
 
 \subsubsection{Bosons: Use the Force}
 
@@ -172,10 +156,10 @@ The two major types of particles are \emph{bosons} and \emph{fermions}.
 In QFT, mediator particles are called bosons---like the photon---convey interactions beween two interacting electrons.
 The idea is that the photon carries momentum away from the first electron and carries it to the second one, therefore making it appear as if the two electrons are repelling one another.
 The photon is not a measurable particle in this case, so it is said to be a \emph{virtual} photon.
-This is why gauge bosons are often called the force carriers.
+This is why gauge bosons are called `force carriers'.
 
 % Quantum Electrodynamics, one of the theories cooped up in the SM, is a quantum field theory that can mathematically describe one electron "throwing" a photon to the other.
-The Feynman diagram in Fig.~\ref{fig:ee_scattering} is a simple way to visualize particle physics processes, although it must be stated that it does not depict what \emph{actually} happens between particles.
+The Feynman diagram in \cref{fig:ee_scattering} is a simple way to visualize particle physics processes, although it must be stated that it does not depict what \emph{actually} happens between particles.
 Feynman diagrams are instead a useful tool to help calculate the probabilities with which various processes happen.
 Each diagram represents a single, scalar number that is calculated from a QFT integral and indicates how likely a process is to happen.
 % Another benefit of Feynman Diagrams is their tinker-toy-like connectab you can string them together in novel ways to predict real-world processes.
@@ -207,7 +191,7 @@ There are three kinds of color charges---red, green, and blue---though not at al
 Each color has its corresponding anticolor charge---antired, antigreen, and antiblue---which negates the corresponding color charge, much like how a `$+1$' electric charge neutralizes a `$-1$' charge.
 Not only would a red--antired (or green--antigreen or blue--antiblue) charge pair be considered a colorless (neutral) state but so too would the combination of red--green--blue (or antired--antigreen--antiblue).
 A phenomenon known as \emph{color confinement} suggests that only colorless bound states are observable.
-Interestingly, gluons themselves carry color charge (typically a color--anticolor combination) which they mediate between quarks (fermions discussed below).  % TODO: This may be repeated below.
+Interestingly, gluons themselves carry color charge (typically a color--anticolor combination) which they mediate between quarks (fermions discussed below).
 This is in direct contrast to the photon which does not itself carry its associated charge (the electric charge).
 
 There are three bosons which mediate the weak force: the \PZ, $\PW^+$, and $\PW^-$.
@@ -377,12 +361,10 @@ and $\varepsilon^{abc}$ and $f^{klm}$ are the structure constants of the $SU(2)$
 % \psi_R^f, \bar{\psi}_R^f
 where $a$ runs from 1--3 (from \cref{eqn:gamma_matrices}),
 $k$ stands for the group generator indices and runs from 1--8,
-% and finally the sums are taken over the fermion flavors $f$, and for each coupling there exists a coupling strength $g_f$.
+and finally the sums are taken over the fermion flavors $f$, each combination of which has a coupling strength $g_f$.
 
-
-
-% The main objective of the LHC is to probe the Electroweak Symmetry Breaking (EWSB) mechanism that generates the masses of the known elementary particles in the SM.
-%  in the SMby the ATLAS~\cite{ATLAS:2012yve} and the CMS~\cite{CMS:2012qbp} collaborations and the subsequent studies of its properties with the full data set from Run 1, from 2009 to 2012, with a center-of-mass energy of 7\TeV and 8\TeV, provided the first opportunity to study this mechanism.
+\subsection{The Brout--Englert--Higgs Mechanism}
+\label{sec:higgs_mech}
 The discovery of the Higgs boson in 2012 confirmed the existence of the Higgs field, subsequently providing insight into the mechanism from which EWSB arises.
 Not only does it explain the short-range nature of weak interactions but it also provides an explanation for the massive \PWpm and \PZ gauge bosons.
 
@@ -391,9 +373,6 @@ The mechanism of EWSB provides a general framework to preserve the structure of 
 The EWSB mechanism posits a self-interacting electroweak doublet of complex scalar fields, whose CP-even neutral component acquires a vacuum expectation value (VEV), which sets the scale of the symmetry breaking.
 Four massless Goldstone bosons are generated, two of which linearly combine to give the \PWp and \PWm gauge bosons while the remaining two combine to give the photon $(\gamma)$ and the \PZ gauge bosons.
 The masses of all fermions are also a consequence of EWSB since the Higgs field is postulated to couple to the fermions through Yukawa interactions.
-
-\subsection{The Brout--Englert--Higgs Mechanism}
-\label{sec:higgs_mech}
 
 The SM lagrangian contains a scalar potential term that reads:
 \begin{equation}
@@ -437,7 +416,7 @@ This ``Maxican hat'' potential is shown in \cref{fig:mex_hat} and illustrates th
 \end{multiFigure}
 %%%%%%%%%%%%%%%%%%%%
 Choosing the point $\phi^1 = \phi^2 = \phi^4 = 0$ in the manifold for convenience constrains $\left(\phi^3\right)^2 = \frac{-\mu^2}{\lambda} \equiv v^2$,
-where $v$ is the Higgs VEV and has a value of 246\GeV. % TODO: Ref VEV value.
+where $v$ is the Higgs VEV and has a value of 246\GeV.
 The doublet in Eqn.~\ref{eqn:higgs_doublet} can now be written as:
 \begin{equation*}
     \langle\phi\rangle = \sqrt{\frac{1}{2}}
@@ -486,7 +465,7 @@ As a result, the neutral and the two charged massless Goldstone degrees of freed
     \\
     Z_\mu &= -B_\mu \sin{\theta_W}  + W^3_\mu \cos{\theta_W},
 \end{align*}
-thus becoming, in the unitary gauge, the longitudinal components of the $\PZ$ and $\PW$ physical gauge bosons, respectively. % TODO: I don't think this is correct.
+thus becoming, in the unitary gauge, the longitudinal components of the $\PZ$ and $\PW$ physical gauge bosons. % TODO: I don't think this is correct.
 The $\PW$ and $\PZ$ gauge bosons acquire masses:
 \begin{equation*}
     m_{\PW} = \frac{1}{2}vg, \hspace{7pt} m_{\PZ} = \frac{1}{2} v \sqrt{g^2+{g^\prime}^2},

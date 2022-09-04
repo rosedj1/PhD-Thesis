@@ -11,8 +11,6 @@ For the \hzzfourl analysis, Sec.~\ref{sec:trig} lists the triggers used, Sec.~\r
 
 \subsection{Trigger Paths}
 \label{sec:trig}
-% TODO
-$table:2016_trig$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %=== Triggers 2016 (for pre- and post-VFP) ===%
@@ -583,23 +581,22 @@ The data set names containing the simulated events for signal and background pro
     \label{table:2018_simSamples}
 \end{table}
 
-% TODO: Reword.
 \subsection{Pileup Reweighting}
-Simulated samples are reweighted by taking into account the pileup distribution.
+Simulated samples are reweighted by taking the pileup distribution into account.
 The pileup weight is extracted for each year by comparing simulation and data distributions.
 The minimum bias cross section used for each year is 69.2\mb.
-Pileup distributions for each year are shown in Fig.~\ref{fig:pileupReweight}.
+Pileup distributions are shown in \cref{fig:pileupReweight} for each year.
+\clearpage  % TODO: PLOTS OVERFLOW.
 \begin{multiFigure}
     \centering
-        \addFigure{0.48}{figures/higgsmassmeas/Reweighted_2016.pdf}
-        \addFigure{0.48}{figures/higgsmassmeas/Reweighted_2017.pdf}
-        \addFigure{0.48}{figures/higgsmassmeas/Reweighted_2018.pdf}
+        \addFigure{0.5}{figures/higgsmassmeas/Reweighted_2016.png}
+        \addFigure{0.5}{figures/higgsmassmeas/Reweighted_2017.png}
+        \addFigure{0.5}{figures/higgsmassmeas/Reweighted_2018.png}
     \captionof{figure}
-        [Data--simulation pileup distributions] % TODO:REWORD  no dot at end.
-        {Data--simulation pileup distributions for which up (down) scale has been obtained using 72.4 (66)\mb. % TODO:REWORD 
+        [Data--simulation pileup distributions showing up and down scales]
+        {Data--simulation pileup distributions showing up (down) scales, obtained using 72.4 (66)\mb. % TODO:REWORD 
         \;A) 2016 (for pre- and post-VFP).
         \;B) 2017.
-        \;C) 2018.
-        } 
+        \;C) 2018.} 
     \label{fig:pileupReweight}
 \end{multiFigure}

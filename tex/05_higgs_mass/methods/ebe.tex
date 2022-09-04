@@ -1,47 +1,29 @@
 % TODO: make mfourl bold here but not in TOC.
-% TODO: check out sec-075-newEBE.tex
 % \subsection{Per-Event Relative Mass Error Categorization}
-\subsection{Improving Event-by-Event \mfourl Uncertainty}
+\subsection{Event-by-Event \mfourl Uncertainty}
 \label{sec:ebe}
-% TODO:REWORD
 For each event, the uncertainty on the \mfourl value (\mfourlerr) is used directly in the \Zone constraint (Sec.~\ref{sec:Z1constraint}).
-By improving the precision on the \mfourlerr 
 Per-event four-lepton uncertainties are used for (a) performing the \Zone constraint and (b) in the measurement of \mH so that better-measured events are given higher weights in the likelihood fit.
-Individual lepton uncertainty on momentum measurement can be predicted on a per-lepton 
-basis. In the case of muons, the full error matrix is obtained using muon track fit; for the electrons,
-instead, the momentum error is estimated from the combination of the ECAL and tracker measurement, 
-neglecting the uncertainty on the track direction from the GSF fit. \\
-The uncertainty on the kinematics at the per-lepton level is then propagated to the four-lepton case 
-to predict the mass error on an event-by-event basis, using the following approach.\\
-Each $\delta m_{i}$, corresponding to individual lepton momentum variation, is calculated separately 
-and then the measured resolution on the invariant mass of the four leptons is taken as the quadrature sum 
-of the four individual $\delta m_{i}$:
+Individual lepton uncertainty on momentum measurement can be predicted on a per-lepton basis.
+In the case of muons, the full error matrix is obtained using the muon track fit;
+for the electrons, instead the momentum error is estimated from the combination of the ECAL and tracker measurements.
+This neglects the uncertainty on the track direction from the GSF fit.
+
+The uncertainty on the kinematics at the per-lepton level is then propagated to the estimation of \mfourl, to predict its error on an event-by-event basis.
+Each $\delta m_{i}$ corresponds to the uncertainty on \mfourl by considering the uncertainty on the momentum of lepton $i$.
+Lepton-by-lepton, the momentum is smeared by its uncertainty and a different $\delta m_{i}$ is calculated each time.
+Finally, the measured resolution on the invariant mass of the four leptons is taken as the quadrature sum of the four individual $\delta m_{i}$:
 \[
-m_{0} = F(p_{T1}, \phi_{1},\eta_{1}; p_{T2}, \phi_{2},\eta_{2}; p_{T3}, \phi_{3}, \eta_{3}; p_{T4}, \phi_{4},\eta_{4})
+m_{0} = F\left( p_{T1}, \phi_{1},\eta_{1}; p_{T2}, \phi_{2},\eta_{2}; p_{T3}, \phi_{3}, \eta_{3}; p_{T4}, \phi_{4},\eta_{4} \right)
 \]
-\[\delta m_{i} = F(...; p_{Ti} + \delta p_{Ti}, \phi_{i}, \eta_{i}; ...) - m_{0} \quad
+\[
+    \delta m_{i} = F(...; p_{Ti} + \delta p_{Ti}, \phi_{i}, \eta_{i}; ...) - m_{0} \quad
 \]
 \[
 \delta m = \sqrt{\delta m_{1}^2 + \delta m_{2}^2 + \delta m_{3}^2 + \delta m_{4}^2}
 \]
 
-%=== Can't get the below to be centered...
-% \begin{align*}
-%         m_0 = F(
-%         p_{T1}, \phi_1, \eta_1;
-%         p_{T2}, \phi_2, \eta_2;
-%         p_{T3}, \phi_3, \eta_3;
-%         p_{T4}, \phi_4, \eta_4
-%         )
-%         \\
-%         \delta m_i = F(...; p_{Ti} + \delta p_{Ti}, \phi_i, \eta_i; ...) - m_0
-%         \\
-%         \delta m = \sqrt{
-%         (\delta m_1)^2 + (\delta m_2)^2 + (\delta m_3)^2 + (\delta m_4)^2
-%         }
-% \end{align*}
-% TODO: Check with Filippo if these are MC or data.
-The full error matrices ($\delta p_{T}/p_{T}$, $\eta$) for muons and electrons, separately, are shown in Fig.~\ref{fig:2D_Mpas_vs_eta} for all years.
+The full error matrices ($\delta p_{T}/p_{T}$, $\eta$) for muons and electrons, separately, are shown in \cref{fig:2D_Mpas_vs_eta} for all years.
 \begin{multiFigure}
     \centering
 
@@ -85,9 +67,8 @@ Scatterplots of $\delta p_{T}$/$p_{T}$ \vs \PT are shown in Figs.~\ref{fig:2D_Mp
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_pt_muon_2_workinprogress.pdf}
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_pt_muon_3_workinprogress.pdf}
     \captionof{figure}
-        [Scatterplots of the relative \pT error vs \pT for muons in bins of \abseta]
-        % TODO: fix words below.
-        {Scatterplots of the relative \pT error vs \pT for muons. $0 < \abseta < 0.9$ (left column), $0.9 < \abseta < 1.8$ (middle column), and $1.8 < \abseta < 2.4$ (right column) for 2016 (top row), 2017 (middle row), and 2018 (bottom row) data.}
+        [Scatterplots of the relative \pT error \vs \pT for muons in bins of \abseta]
+        {Scatterplots of the relative \pT error \vs \pT for muons. $0 < \abseta < 0.9$ (left column), $0.9 < \abseta < 1.8$ (middle column), and $1.8 < \abseta < 2.4$ (right column) for 2016 (top row), 2017 (middle row), and 2018 (bottom row) data.}
     \label{fig:2D_Mpas_vs_pt_muon}
 \end{multiFigure}
 % ECAL electrons.
@@ -105,9 +86,8 @@ Scatterplots of $\delta p_{T}$/$p_{T}$ \vs \PT are shown in Figs.~\ref{fig:2D_Mp
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_pt_ECAL_2_workinprogress.pdf}
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_pt_ECAL_3_workinprogress.pdf}
     \captionof{figure}
-        [Scatterplots of the relative \pT error vs \pT for ECAL-driven electrons in bins of \abseta]
-        % TODO: Is it OK to skip over 1.0--2.0?
-        {Scatterplots of the relative \pT error vs \pT for ECAL-driven electrons with $0 < \abseta < 0.8$ (left column), $0.8 < \abseta < 1.0$ (middle column), and $2.0 < \abseta < 2.5$ (right column) for 2016 (top row), 2017 (middle row), and 2018 (bottom row) data.}
+        [Scatterplots of the relative \pT error \vs \pT for ECAL-driven electrons in bins of \abseta]
+        {Scatterplots of the relative \pT error \vs \pT for ECAL-driven electrons with $0 < \abseta < 0.8$ (left column), $0.8 < \abseta < 1.0$ (middle column), and $2.0 < \abseta < 2.5$ (right column) for 2016 (top row), 2017 (middle row), and 2018 (bottom row) data.}
     \label{fig:2D_Mpas_vs_pt_electron_ECAL}
 \end{multiFigure}
 % Tracker electrons.
@@ -126,31 +106,29 @@ Scatterplots of $\delta p_{T}$/$p_{T}$ \vs \PT are shown in Figs.~\ref{fig:2D_Mp
     \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_vs_pt_tracker_3_workinprogress.pdf}
     \captionof{figure}
         [Scatterplots of the relative lepton \PT error \vs \PT for tracker-driven electrons]
-        % TODO: Is it OK to skip over 1.44--1.6?
         {Scatterplots of the relative lepton \PT error \vs \PT for tracker-driven electrons with $0 < \abseta < 0.8$ (left column), $1.0 < \abseta < 1.44$ (middle column), and $1.6 < \abseta < 2.0$ (right column) for 2016 (top row), 2017 (middle row), and 2018 (bottom row) data.}
     \label{fig:2D_Mpas_vs_pt_electron_tracker}
 \end{multiFigure}
 
 \subsubsection{Procedure to Derive Corrections to $\delta \ptl$}
-% TODO: REWORD
 To derive the corrections ($\lambda$), the dilepton invariant mass $\left( \mll \right)$ from \ztolplm events is fitted twice with a Breit--Wigner (BW) function convolved with a Crystal Ball (CB), plus an exponential function (EXP).
 In this model, the BW represents the true \mZ lineshape, the CB simulates the detector effects, and the EXP describes the falling background.
 When deriving the corrections, the mean and sigma of the BW have been set to the PDG values $\left( \mZ = 91.19\GeV, \; \Gamma_{\PZ} = 2.49\GeV \right)$~\cite{particle_data_group_review_2020}.
- The fit is done in the mass range [60, 120]\GeV, using only
-$e^{+}e^{-}$ or $\mu^{+}\mu^{-}$ pairs.\\
+ The fit is done in the mass range 60--120\GeV, using only $e^{+}e^{-}$ or $\Pmu^{+}\Pmu^{-}$ pairs.\\
 The first fit is used to fix all the parameters of the functions but the $\sigma$ of the CB which is
-replaced in the second fit by $\lambda$ $\times$ $\delta_{m_{Z}}$, where $\lambda$ is the 
+replaced in the second fit by $\lambda$ $\times$ $\delta_{\mZ}$, where $\lambda$ is the 
 floated parameter of the fit. 
 
-The summary of $\lambda$ correction factors for electrons and muons is shown in Table~\ref{table:Lambdas}.
+The summary of $\lambda$ correction factors for electrons and muons is shown in \cref{table:Lambdas}.
 \begin{table}[!h]\fontsize{10}{12}\selectfont
     \topcaption
-        [Event-by-event lambda correction factors.] % TODO: reword
+        [Event-by-event lepton \pt lambda correction factors.] % TODO: reword
         {Event-by-event lambda correction factors.     \PT error corrections for muons and electrons in different kinematic region. For each year, MC 
         is on the left, data on the right.}
     \begin{tabularx}{\textwidth}{BMSSSSSSSS} % TODO: Fix  numbers in table.
         \toprule 
-        \multicolumn{2}{c}{\textbf{2016 pre-VFP}} & \multicolumn{2}{c}{\textbf{2016 post-VFP}} & \multicolumn{2}{c}{\textbf{2017}} & \multicolumn{2}{c}{\textbf{2018}} \\ \toprule
+        && \multicolumn{2}{c}{\textbf{2016 pre-VFP}} & \multicolumn{2}{c}{\textbf{2016 post-VFP}} & \multicolumn{2}{c}{\textbf{2017}} & \multicolumn{2}{c}{\textbf{2018}} \\ 
+        && \textbf{MC} & \textbf{Data} & \textbf{MC} & \textbf{Data} & \textbf{MC} & \textbf{Data} & \textbf{MC} & \textbf{Data}\\ \toprule
 
         && \multicolumn{8}{c}{Muons} \\
         \multicolumn{2}{c}{$0 < |\eta| < 0.9$} & 1.05 & 1.248 & 1.043 & 1.214 & 1.047 & 1.183 & 1.019 & 1.227 \\
@@ -158,83 +136,46 @@ The summary of $\lambda$ correction factors for electrons and muons is shown in 
         \multicolumn{2}{c}{$1.8 < |\eta| < 2.4$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\ \toprule
 % TODO: Move ECAL electrons and other similar labels to left side of table?
         && \multicolumn{8}{c}{ECAL electrons} \\ 
-        $0 < |\eta| < 0.8$ & $\delta p_T/p_T < 0.01$ & 1.648 & 1.619 & 1.645 & 1.646 & 1.690 & 1.633 & 1.676 & 1.661 \\
-        $0 < |\eta| < 0.8$ & $0.01 < \delta p_T/p_T < 0.015$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
-        $0 < |\eta| < 0.8$ & $0.015 < \delta p_T/p_T < 0.025$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
-        $0 < |\eta| < 1$ & $0.025 < \delta p_T/p_T < 1$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
-        $1 < |\eta| < 2.5$ & $\delta p_T/p_T < 0.02$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
-        $1 < |\eta| < 2.5$ & $0.03 < \delta p_T/p_T < 0.04$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
-        $1 < |\eta| < 2.5$ & $0.04 < \delta p_T/p_T < 0.05$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
-        $1 < |\eta| < 2.5$ & $0.05 < \delta p_T/p_T < 0.06$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
-        $0.8 < |\eta| < 2.5$ & $\delta p_T/p_T < 0.025$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\
-        $1 < |\eta| < 2.5$ & $0.06 < \delta p_T/p_T < 1$ & 1.490 & 1.506 & 1.470 & 1.528 & 1.540 & 1.496 & 1.544 & 1.511 \\ \toprule
+        $0 < |\eta| < 0.8$ & $\delta p_T/p_T < 0.01$            & 1.648	    &   1.619   &   1.645   &	1.646   & 1.690 &   1.633   &   1.676   &   1.661   \\
+        $0 < |\eta| < 0.8$ & $0.01 < \delta p_T/p_T < 0.015$    & 1.490	    &   1.506   &   1.470   &	1.528   & 1.540 &   1.496   &   1.544   &   1.511   \\
+        $0 < |\eta| < 0.8$ & $0.015 < \delta p_T/p_T < 0.025$   & 1.229	    &   1.311   &   1.272   &	1.294   & 1.359 &   1.325   &   1.298   &   1.346   \\
+        $0 < |\eta| < 1$ & $0.025 < \delta p_T/p_T < 1$         & 1.130	    &   1.198   &   1.140   &	1.127   & 1.121 &   1.123   &   1.132   &   1.138   \\
+        $1 < |\eta| < 2.5$ & $\delta p_T/p_T < 0.02$            & 1.712	    &   1.552   &   1.674   &	1.622   & 1.745 &   1.699   &   1.759   &   1.677   \\
+        $1 < |\eta| < 2.5$ & $0.03 < \delta p_T/p_T < 0.04$     & 1.479	    &   1.370   &   1.465   &	1.393   & 1.504 &   1.478   &   1.407   &   1.391   \\
+        $1 < |\eta| < 2.5$ & $0.04 < \delta p_T/p_T < 0.05$     & 1.472	    &   1.376   &   1.376   &	1.349   & 1.346 &   1.443   &   1.350   &   1.418   \\
+        $1 < |\eta| < 2.5$ & $0.05 < \delta p_T/p_T < 0.06$     & 1.394	    &   1.444   &   1.380   &	1.399   & 1.455 &   1.411   &   1.394   &   1.404   \\
+        $0.8 < |\eta| < 2.5$ & $\delta p_T/p_T < 0.025$         & 1.392	    &   1.455   &   1.381   &	1.425   & 1.402 &   1.396   &   1.403   &   1.369   \\
+        $1 < |\eta| < 2.5$ & $0.06 < \delta p_T/p_T < 1$        & 1.144	    &   0.995   &   1.202   &	1.021   & 0.842 &   0.973   &   0.964   &   0.951   \\ \toprule
         
         && \multicolumn{8}{c}{Tracker electrons} \\ 
-        \multicolumn{2}{c}{$0 < |\eta| < 1.44$} & 1.05 & 1.248 & 1.043 & 1.214 & 1.047 & 1.183 & 1.019 & 1.227 \\
-        \multicolumn{2}{c}{$1.44 < |\eta| < 1.6$} & 1.187 & 1.256 & 1.204 & 1.234 & 1.219 & 1.223 & 1.206 & 1.236 \\
-        \multicolumn{2}{c}{$1.6 < |\eta| < 2$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\
-        \multicolumn{2}{c}{$2 < |\eta| < 2.5$} & 1.197 & 1.201 & 1.183 & 1.164 & 1.197 & 1.173 & 1.108 & 1.188 \\ \hline
+        \multicolumn{2}{c}{$0 < |\eta| < 1.44$}                 & 2.312 &   2.419   & 2.117 &   2.124   & 1.886 &   2.04    &   1.822   &   2.259 \\
+        \multicolumn{2}{c}{$1.44 < |\eta| < 1.6$}               & 6.047 &   6.401   & 6.363 &   5.797   & 6.501 &   6.38    &   6.730   &   6.493 \\
+        \multicolumn{2}{c}{$1.6 < |\eta| < 2$}                  & 3.067 &   2.933   & 3.043 &   2.671   & 2.650 &   2.81    &   2.677   &   2.736 \\
+        \multicolumn{2}{c}{$2 < |\eta| < 2.5$}                  & 2.625 &   2.603   & 2.800 &   2.572   & 2.993 &   3.05    &   3.004   &   2.945 \\ \hline
     \end{tabularx}
     \label{table:Lambdas}
 \end{table}
 
-% \begin{table}[ht]	
-% 	\begin{center}
-% 		\begin{tabular}{ccccccc}
-% 			\hline
-% 			\hline			
-% 			& \multicolumn{2}{c}{\textbf{2016}} & \multicolumn{2}{c}{\textbf{2017}} & \multicolumn{2}{c}{\textbf{2018}} \\
-% 			& \multicolumn{1}{c}{\textbf{MC}} & \multicolumn{1}{c}{\textbf{Data}} & \multicolumn{1}{c}{\textbf{MC}} & \multicolumn{1}{c}{\textbf{Data}} & \multicolumn{1}{c}{\textbf{MC}} & \multicolumn{1}{c}{\textbf{Data}} \\
-% 			\hline
-% 			\hline
-% 			& \multicolumn{6}{c}{Muons} \\
-% 			$ 0 < |\eta| < 0.9$ &	1.05	&	1.248	&	1.043	&	1.214	&	1.047		&	1.183	&	1.019	&	1.227	\\
-%                        $ 0.9 < |\eta| < 1.8$ &	1.187	&	1.256	&	1.204	&	1.234	&	1.219	&	1.223	&	1.206	&	1.236	\\
-%                        $ 1.8 < |\eta| < 2.4$ &	1.197	&	1.201	&	1.183	&	1.164	&	1.197	&	1.173	&	1.108	&	1.188	\\
-% 			\hline
-% 			\hline
-% 			& \multicolumn{6}{c}{ECAL electrons} \\
-% 			$0 < |\eta| < 0.8$ and $\delta\pt/\pt < 0.01$            & 2.006 & 1.893 & 2.086 & 2.030 & 2.054 & 1.914 \\
-%                        $0 < |\eta| < 0.8$ and $0.01 < \delta\pt/\pt < 0.015$    & 1.590 & 1.575 & 1.698 & 1.680 & 1.701 & 1.635\\
-%                        $0 < |\eta| < 0.8$ and $0.015 < \delta\pt/\pt < 0.025$   & 1.406 & 1.373 & 1.426 & 1.450 & 1.447 & 1.467\\
-%                        $0 < |\eta| < 1$ and $0.025 < \delta\pt/\pt < 1$         & 1.517 & 1.531 & 1.481 & 1.521 & 1.560 & 1.569\\
-%                        $1 < |\eta| < 2.5$ and $\delta\pt/\pt < 0.02$            & 2.116 & 2.002 & 2.305 & 2.210 & 2.324 & 2.228\\
-%                        $1 < |\eta| < 2.5$ and $0.02 < \delta\pt/\pt < 0.03$     & 1.645 & 1.623 & 1.815 & 1.795 & 1.787 & 1.759\\
-%                        $1 < |\eta| < 2.5$ and $0.03 < \delta\pt/\pt < 0.04$     & 1.472 & 1.489 & 1.568 & 1.560 & 1.468 & 1.509\\
-%                        $1 < |\eta| < 2.5$ and $0.04 < \delta\pt/\pt < 0.06$     & 1.374 & 1.448 & 1.414 & 1.606 & 1.378 & 1.477\\
-%                        $0.8 < |\eta| < 1$ and $\delta\pt/\pt < 0.025$           & 1.149 & 1.203 & 1.196 & 1.241 & 1.180 & 1.286\\
-%                        $1 < |\eta| < 2.5$ and $0.06 < \delta\pt/\pt < 1$        & 1.099 & 1.221 & 1.171 & 1.331 & 1.123 & 1.272\\
-% 			\hline
-% 			\hline
-% 			& \multicolumn{6}{c}{tracker electrons} \\
-% 			$0 < |\eta| < 1.44$ & 1.619 & 1.872 & 2.382 & 2.115 & 2.120 & 1.936\\
-%                        $1.44 < |\eta| < 1.6$ & 6.452 & 5.900 & 6.572 & 7.056 & 5.613 & 5.524\\
-%                        $1.6 < |\eta| < 2$ & 2.732 & 2.826 & 3.430 &2.846& 3.204 & 3.016\\
-%                        $2 < |\eta| <2.5$ & 3.010 &3.081& 3.963 &3.817& 4.110 & 3.762\\
-% 			\hline
-% 		\end{tabular}
-% 	\end{center}
-% \end{table}
-% TODO: Figure 8 (from AN) of lambdas vs. dpT/pT bins? CONTAINS DATA.
-
 % TODO: REWORD.
-\subsubsection{Validation of corrections (MC, data)}
+\subsubsection{Validation of lambda corrections (MC, data)}
 \label{sec:ClosureTest}
-A closure test is performed to validate correction derived for lepton \PT error. \\
-First, events are divided according to different predicted $\delta m_{Z}/m_{Z}$ ranges before corection. 
-Then, in each bin, the dilepton invariant mass distribution is fitted using a BW convoluted with CB 
-plus exponential function, to get $\delta m_{Z}^{fit}$ (measured $m_{Z}$ resolution). Finally 
-the average predicted $\delta m_{Z}$ is calculated in each $\delta m_{Z}/m_{Z}$ bin before and after the 
-correction factor for lepton \PT error is applied (predicted $m_{Z}$ resolution). \\
-In the closure plot, it is expected to see $\delta m_{Z}$ gets closer to $\delta m_{Z}^{fit}$ 
-after correction, and the points should stay in a band which is 20\% around diagonal line, which 
+A `closure test' is performed to validate the correction factors derived for the individual lepton \PT errors (\cref{table:Lambdas}).
+First, events are sorted into different predicted $\delta \mZ/\mZ$ ranges before correction. 
+Then, in each bin, the \mll distribution is fit with a BW function convolved with CB function, plus an exponentially decaying function to model the background.
+This yields the measured $\mZ$ resolution $\left( \delta \mZ^\text{fit} \right)$ per bin.
+
+Lastly, the average predicted $\delta \mZ$ is calculated in each $\delta \mZ/\mZ$ bin before and after the lambda correction factor is applied.
+This gives the predicted $\mZ$ resolution.
+
+In the closure plot, it is expected that $\delta \mZ$ should get closer to $\delta \mZ^\text{fit}$ after correction.
+Furthermore, the points should stay within a band that is $20\%$ around the 1-to-1 (diagonal) line, in the plot of measured \vs predicted \mZ.
 is the uncertainty assigned to the resolution in the previous analysis \cite{HIG_16_041}. 
-This closure test is shown in Fig.~\ref{fig:ZClosure_test_MU} for muons and in Fig.~\ref{fig:ZClosure_test_ELE} 
-for electrons. A further check has been also performed, looking at the closure test of the predicted four lepton mass 
+This closure test is shown in \cref{fig:ZClosure_test_MU} for muons and in \cref{fig:ZClosure_test_ELE} for electrons.
+A further check has been also performed, looking at the closure test of the predicted four lepton mass 
 resolution compared to the fitted four lepton mass resolution using H signal MC samples once the 
 corrections derived using \PZ events are applied. After applying corrections, measured $m_{4l}$ 
 resolution gets closer to the prediction. This closure test is shown for three different 
-final states in Fig.~\ref{fig:HClosure_test}.
+final states in \cref{fig:HClosure_test}.
 % CLOSURE: Z->mumu MC.
 \begin{multiFigure}
     \centering
@@ -287,9 +228,7 @@ final states in Fig.~\ref{fig:HClosure_test}.
         \addFigure{0.32}{../../higgsmassmeasurement/AN-19-248/Figures/EBE/2018_H2e2mu_Closure_test_workinprogress.png}
     \captionof{figure}
         [Validation of the per-event mass uncertainties using simulated \gghtofourl events]
-        {TODO:
-        \;A) 
-        Validation of the per-event mass uncertainties using simulated \gghtofourl events for
+        {Validation of the per-event mass uncertainties using simulated \gghtofourl events for
         2016 (top row), 2017 (middle row), and 2018 (bottom row) in three different final states:
 		\fourmu (left column), \foure (middle column), and \twoetwomu (right column).
 		The 20\% reference band is also shown.}

@@ -17,9 +17,6 @@
 %         \;B) Second figure details...}
 %     \label{fig:two_figures}
 % \end{multiFigure}
-% TODO: Suzanne may have fixed the weird centering problem! Delete the below if so.
-% Make sure that there is text DIRECTLY ABOVE \begin{multiFigure} (i.e., NO NEWLINE above)---otherwise your figs will be off-center!
-% * I finally realize why this happens: if there is a newline above multiFigure, then LaTeX treats this as the start of a new paragraph. So it INDENTS the multifigure (which spans all of \textwidth, which is indented!).
 % * Sprinkle the word "TODO" around your document when you need to fix something later.
 
 %=== Rules on CAPITALIZATION ===%
@@ -42,8 +39,7 @@
 \usepackage{tikz}%       tikz is used by almost everyone, but certainly by me for this.
 %=== Feynman Diagrams
 % https://www.overleaf.com/learn/latex/Feynman_diagrams#Manual_Placement
-% \usepackage[compat=1.1.0]{tikz-feynman}% for drawing feynman diagrams 
-\usepackage[compat=1.0.0]{tikz-feynman}% for drawing feynman diagrams 
+\usepackage[compat=1.1.0]{tikz-feynman}% for drawing feynman diagrams 
 \usepackage{pgfplots}%   pgfplots is tikz but better.
 \usepackage{xspace}
 \xspaceaddexceptions{]\}}
@@ -56,17 +52,17 @@
 \usepackage{newtxmath}
 \usepackage{mathrsfs}  % Gives fancy L for Lagrangian: \mathscr{L}
 \usepackage{multirow}
+\usepackage{multicol}
 \usepackage{cellspace}
 \usepackage{soul}
 \usepackage{slashed}
 
 % A lovely package that lets you use \cref{} that handles the words: Figure, Fig., Figures, Figs., Table, Tables, etc.!
 \usepackage[capitalise]{cleveref}
+\creflabelformat{equation}{#2#1#3}  % So that \cref{} displays equations without parentheses: Eqn. (1-3) -> Eqn. 1-3.
 \Crefname{chapter}{Ch.}{Chs.}
 \Crefname{section}{Sec.}{Secs.}
 \Crefname{equation}{Eqn.}{Eqns.}
-\creflabelformat{equation}{#2#1#3}
-\Crefname{figure}{Fig.}{Figs.}
 % How to use \cref:
 % * "\Cref{fig1,fig2,fig3} show..."        produces: "Figures 1-5 to 1-7 show..."
 % * "As shown in \cref{fig1,fig2,fig3}..." produces: "As shown in Figs. 1-5 to 1-7..." (notice the lowercase \cref!)
@@ -134,10 +130,10 @@
 \chair[Guenakh Mitselmakher]{Andrey Korytov}%                   Chair and Cochair (see comment block above).
 
 %% additional sections
-% \setDedicationFile{tex/dedicationFile}%                Dedication Page
+\setDedicationFile{tex/dedicationFile}%                Dedication Page
 \setAcknowledgementsFile{tex/acknowledgementsFile}%    Acknowledgements Page
-% \setBiographicalFile{tex/biographyFile}%               Biography file of the Author (you).
-% \setAbstractFile{tex/abstractFile}%                    Abstract Page (This should only include the abstract itself)
+\setBiographicalFile{tex/biographyFile}%               Biography file of the Author (you).
+\setAbstractFile{tex/abstractFile}%                    Abstract Page (This should only include the abstract itself)
 
 %=== Bibliography is printed in the command \setReferenceFile below. ===%
 % \bibliographystyle{plain}
@@ -157,45 +153,44 @@
 %%%%%%%%%%%%%%%
 %--- Intro ---%
 %%%%%%%%%%%%%%%
-% \input{tex/01_intro/intro.tex}
+\input{tex/01_intro/intro.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %--- Standard Model ---%
 %%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/02_theory/sm.tex}
+\input{tex/02_theory/sm.tex}
 %%%%%%%%%%%%%
 %--- LHC ---%
 %%%%%%%%%%%%%
-% \input{tex/03_lhc/lhc.tex}
+\input{tex/03_lhc/lhc.tex}
 %%%%%%%%%%%%%
 %--- CMS ---%
 %%%%%%%%%%%%%
-% \input{tex/04_cms/cms_intro.tex}
-% \input{tex/04_cms/tracker.tex}
-% \input{tex/04_cms/calorimeters.tex}
-% \input{tex/04_cms/solenoid.tex}
-% \input{tex/04_cms/muon_system.tex}
-% \input{tex/04_cms/trigger.tex}
-% \input{tex/04_cms/obj_reco.tex}
+\input{tex/04_cms/cms_intro.tex}
+\input{tex/04_cms/tracker.tex}
+\input{tex/04_cms/calorimeters.tex}
+\input{tex/04_cms/solenoid.tex}
+\input{tex/04_cms/muon_system.tex}
+\input{tex/04_cms/trigger.tex}
+\input{tex/04_cms/obj_reco.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Higgs Mass Measurement ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \input{tex/05_higgs_mass/higgs_intro.tex}
-% \input{tex/05_higgs_mass/overview.tex}
-% \input{tex/05_higgs_mass/datasets_simul_trig.tex}
-% \input{tex/05_higgs_mass/obj_and_event_sel.tex}
-% \input{tex/05_higgs_mass/signal_modeling.tex}
-% \input{tex/05_higgs_mass/techniques.tex}
-% \input{tex/05_higgs_mass/backgrounds.tex}
-% \input{tex/05_higgs_mass/kinem_discrim.tex}
-% \input{tex/05_higgs_mass/syst_uncert.tex}
-% \input{tex/05_higgs_mass/results.tex}
+\input{tex/05_higgs_mass/higgs_intro.tex}
+\input{tex/05_higgs_mass/overview.tex}
+\input{tex/05_higgs_mass/datasets_simul_trig.tex}
+\input{tex/05_higgs_mass/obj_and_event_sel.tex}
+\input{tex/05_higgs_mass/signal_modeling.tex}
+\input{tex/05_higgs_mass/techniques.tex}
+\input{tex/05_higgs_mass/backgrounds.tex}
+\input{tex/05_higgs_mass/kinem_discrim.tex}
+\input{tex/05_higgs_mass/syst_uncert.tex}
+\input{tex/05_higgs_mass/results.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--- Search for Dilepton Resonances ---%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{tex/06_dilep_res/dilep_res_intro.tex}
 \input{tex/06_dilep_res/overview.tex}
 \input{tex/06_dilep_res/datasets_simul_trig.tex}
-% % TODO: Include object selection in event_sel.tex?
 \input{tex/06_dilep_res/event_sel.tex}
 \input{tex/06_dilep_res/backgrounds.tex}
 \input{tex/06_dilep_res/syst_uncert.tex}

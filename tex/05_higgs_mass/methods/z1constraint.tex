@@ -13,21 +13,21 @@ described previously.
 % \cite{RefToZrefit}.
 The basic idea is to re-evaluate \pT of two leptons forming 
 the Z bosons of the Higgs candidate, with a constraint on the reconstructed Z mass to follow 
-the Z boson true lineshape. For a 125 \GeV Higgs, the selected $Z_{1}$ is mostly on-shell, 
+the Z boson true lineshape. For a 125\GeV Higgs, the selected $Z_{1}$ is mostly on-shell, 
 while $m_{Z_{2}}$ distribution is broad and the spread is much bigger than detector resolution. 
-When considering mass measurment of 125 \GeV Higgs, expected gain in resolution comes from refitting $Z_{1}$.
+When considering mass measurment of 125\GeV Higgs, expected gain in resolution comes from refitting $Z_{1}$.
 The likelihood to be maximized can be written as:
 \[
 \mathcal{L}(p_{T}^{1} , p_{T}^{2}|p_{T}^{reco1}, \sigma p_{T}^{1},p_{T}^{reco2}, \sigma p_{T}^{2}) = 
 Gauss(p_{T}^{reco1}|p_{T}^{1}, \sigma p_{T}^{1}) \cdot Gauss(p_{T}^{reco2}|p_{T}^{2}, \sigma p_{T}^{2}) 
-\cdot \mathcal{L}(m_{12}|m_{Z},m_{H})
+\cdot \mathcal{L}(m_{12}|\mZ,m_{H})
 \]
 where $p_{T}^{reco1,2}$ are the reconstructed transverse momentum of the two leptons forming the $Z_{1}$,
 $\sigma_{p_{T}^{1,2}}$ are the per lepton resolution (uncertainty on \pT measurement, corrected using 
 method described in \ref{sec:ebe}), $p_{T}^{1,2}$ are the observables under optimisation,
-$m_{12}$ is the invariant mass calculated from $p_{T}^{1}$ and $p_{T}^{2}$. $\mathcal{L}(m_{12}|m_{Z},m_{H})$
+$m_{12}$ is the invariant mass calculated from $p_{T}^{1}$ and $p_{T}^{2}$. $\mathcal{L}(m_{12}|\mZ,m_{H})$
 is the likelihood, given the true lineshape of $m_{Z_{1}}$. \\
-%For a 125 \GeV Higgs, the selected $Z_{1}$ is not always on-shell, so the Breit Wigner shape can not describe
+%For a 125\GeV Higgs, the selected $Z_{1}$ is not always on-shell, so the Breit Wigner shape can not describe
 %perfectly its lineshape at generator level. In principle, one can choose any of the $Z_{1}$ 
 %lineshapes to be used in the refitting procedure. As long as all Monte Carlor samples and data
 %events go through the same procedure (including the same true $Z_{1}$ lineshape), 
@@ -35,10 +35,10 @@ is the likelihood, given the true lineshape of $m_{Z_{1}}$. \\
 %optimize the sensitivity.
 For each event, the likelihood is maximized and \pT information of the refitted leptons are updated. \\
 Fig.~\ref{fig:Z1_lineshape} shows the on-shell Z resonance line shape, at generator level, 
-used to perform the kinematical fit, as taken from ggH 125 \GeV sample. 
+used to perform the kinematical fit, as taken from ggH 125\GeV sample. 
 Events from all three years have been merged, asking for a 
-$p_T > 20(10)$\GeV for (sub)leading leptons, and $|\eta|<$2.4(2.5) for $\mu$(e), focusing on
-the reconstructed mass range of [105-140] \GeV in $m_{4l}^{RECO}$. The fit function used is a convolution
+$p_T > 20(10)$\GeV for (sub)leading leptons, and $|\eta|<$2.4(2.5) for $\Pmu$(e), focusing on
+the reconstructed mass range of [105-140]\GeV in $m_{4l}^{RECO}$. The fit function used is a convolution
 of a CB plus three different guassians.
 \begin{multiFigure}
     \centering
@@ -50,10 +50,10 @@ of a CB plus three different guassians.
         [On-shell Z resonance line shape at generator level, as taken from ggH sample @ 125\GeV]
         {On-shell Z resonance line shape at generator level, as taken from ggH sample @ 125\GeV, % TODO:REWORD
         merging all three years for the 4 different final states.
-        \;A) 4$\mu$.
-        \;B) 4e.
-        \;C) 2e2$\mu$.
-        \;D) 2$\mu$2e.}
+        \;A) \fourmu.
+        \;B) \foure.
+        \;C) \twoetwomu.
+        \;D) \twomutwoe.}
     \label{fig:Z1_lineshape}
 \end{multiFigure}
 %After this kinimatic refitting, the mass of the Z candidate, the $m_{4\ell}$, and the $\sigma_{m_{4\ell}}$
@@ -71,18 +71,18 @@ Fig.~\ref{fig:1D_VXBS_Z1_mass_2018_ggH}.
     \captionof{figure}
         [Four-lepton invariant mass distribution, with VXBS and Z1 constraint]
         {Four-lepton invariant mass distribution, with VXBS and Z1 constraint, in the signal region ([105-140]\GeV) using ggH events, with the DSCB fit for 2018: % TODO:REWORD
-        \;A) 4$\mu$.
-        \;B) 4e.
-        \;C) 2e2$\mu$.
-        \;D) 2$\mu$2e.} 
+        \;A) \fourmu.
+        \;B) \foure.
+        \;C) \twoetwomu.
+        \;D) \twomutwoe.} 
     \label{fig:1D_VXBS_Z1_mass_2018_ggH}
 \end{multiFigure}
-Comparing these new distributions (Fig.~\ref{fig:1D_VXBS_Z1_mass_2018_ggH}) with the previous ones (Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}), it can be seen that the \Zone constraint has a bigger improvement in final states with on-shell Z boson decaying in to 2e (~30$\%$ improvement on $\sigma$ for 2e2$\mu$ and 16$\%$ for 4e) while the other two final states (4$\mu$ and 2$\mu$2e) are less affected (improvement in $\sigma$ of the other of 5$\%$).
+Comparing these new distributions (Fig.~\ref{fig:1D_VXBS_Z1_mass_2018_ggH}) with the previous ones (Fig.~\ref{fig:1D_VXBS_mass_2018_ggH}), it can be seen that the \Zone constraint has a bigger improvement in final states with on-shell Z boson decaying in to 2e (~30$\%$ improvement on $\sigma$ for \twoetwomu and 16$\%$ for \foure) while the other two final states (\fourmu and \twomutwoe) are less affected (improvement in $\sigma$ of the other of 5$\%$).
 
 \subsubsection{Expected mH measurement uncertainties (MC) and relative improvements}
 The new four-lepton mass ($m'_{4\ell}$), shown in Fig.~\ref{fig:1D_VXBS_Z1_mass_2018_ggH},
 is used to rebuild the 1D likelihood function, $\mathcal{L}$($m'_{4\ell}|m_{H}$). Signal normalisation and signal parameterization are extracted following the procedure described in \ref{sec:signal_model}.
-The expected \mH measurement uncertainty, is reported in Table~\ref{table:1D_model_result_Z1} (or in Table~\ref{table:1D_model_result_Z1_year}
+The expected \mH measurement uncertainty, is reported in \cref{table:1D_model_result_Z1} (or in \cref{table:1D_model_result_Z1_year}
 splitted in years).
 %===
 \begin{table}[ht]	
@@ -96,12 +96,12 @@ splitted in years).
         }
     \begin{tabular}{ccccccc}
         \hline			
-    Expected uncertainty	&	4$\mu$	&	4e	&	2e2$\mu$	&2$\mu$2e	& inclusive & Rel. Improvement \\
+    Expected uncertainty	&	\fourmu	&	\foure	&	\twoetwomu	&\twomutwoe	& inclusive & Rel. Improvement \\
         \hline			
-        1$D'_{VXBS}$ (No bkg)	&	129	&	357	&	223	&	255	&	99	&	-8\%	\\
-        1$D_{VXBS}$  (No bkg)	&	137	&	394	&	275	&	266	&	108 &	-4\%	\\
-    %	1$D'_{VXBS}$ (No bkg)	&	134	&	424	&	250	&	279	&	105	&	-9\%	\\
-    %	1$D_{VXBS}$  (No bkg)	&	144	&	466	&	313	&	291	&	116	&	-\\	
+        1$D'_\text{VXBS}$ (No bkg)	&	129	&	357	&	223	&	255	&	99	&	-8\%	\\
+        1$D_\text{VXBS}$  (No bkg)	&	137	&	394	&	275	&	266	&	108 &	-4\%	\\
+    %	1$D'_\text{VXBS}$ (No bkg)	&	134	&	424	&	250	&	279	&	105	&	-9\%	\\
+    %	1$D_\text{VXBS}$  (No bkg)	&	144	&	466	&	313	&	291	&	116	&	-\\	
         %\hline
     %relative improvement	&	-	&	-	&	-	&	-	&	-	\\
         \hline
@@ -123,10 +123,10 @@ splitted in years).
         \hline			
     Expected uncertainty	&	2016 pre-VFP	&	2016 post-VFP	&	2017	&	2018	\\
         \hline			
-        1$D'_{VXBS}$ (No bkg)	&	266	&	276	&	182	&	148	\\
-        1$D_{VXBS}$	(No bkg)	&	291	&	301	&	198	&	162	\\
-    %	1$D'_{VXBS}$ (No bkg)	&	206	&	194	&	157	\\
-    %	1$D_{VXBS}$	(No bkg)	&	227	&	212	&	173	\\
+        1$D'_\text{VXBS}$ (No bkg)	&	266	&	276	&	182	&	148	\\
+        1$D_\text{VXBS}$	(No bkg)	&	291	&	301	&	198	&	162	\\
+    %	1$D'_\text{VXBS}$ (No bkg)	&	206	&	194	&	157	\\
+    %	1$D_\text{VXBS}$	(No bkg)	&	227	&	212	&	173	\\
         \hline
     \end{tabular}
     \label{table:1D_model_result_Z1_year}

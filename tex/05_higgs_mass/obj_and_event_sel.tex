@@ -1,45 +1,22 @@
 % This section was Event Reconstruction and Selection but now just making it Event Selection.
 \section{Object and Event Selection}
 \label{sec:evt_sel}
-% Amidst the chaotic particle deluge that arises from \pp collisions, the events that appear to follow the decay chain and properties of the \hzzfourl signal are carefully selected.
 Amidst the chaotic particle deluge that arises from \pp collisions, those events which appear to follow the decay chain and properties of the \hzzfourl signal must be carefully selected.
-% Amidst the chaotic particle deluge that arises from \pp collisions, the desired \hzzfourl signal events must be carefully separated out from the rest of the particles.
-%  that appear to follow the decay chain and properties of the .
 Crafting a well-designed \emph{event selection} that identifies these signal events---while throwing away the nonsignal events---is the goal.
-By implementing a rigorous trigger selection,
-% (Sec.~\ref{sec:trigger_sel})
+By implementing a rigorous
+trigger selection,
 vertex selection,
-% (Sec.~\ref{sec:vertex_sel})
 final-state object selection,
-% (Sec.~\ref{sec:obj_sel})
 and \ZZ-candidate selection,
-% (Sec.~\ref{sec:zz_sel})
-the purity of the signal process is optimized and, by extension, so is the precision on the measurement of \mH.
+the purity of the signal process is optimized and---by extension---so is the precision on the measurement of \mH.
 
-As part of the event selection, the particle objects within the selected events must pass certain kinematical criteria to be considered for the analysis.
-
-%=== To write about the below, start at p.18 of AN-19-139v6.
-% \subsection{Object Selection}
-% \label{sec:obj_sel}
-% % \subsubsection{Electrons}
-% Electron objects are required to satisfy the reconstructed transverse momentum of $\pt^\Pe > 7\GeV$, $\abs{\eta^\Pe} < 2.5$, and 
-% % \label{sec:el_sel}
-% % \subsection{Muons}
-% % \label{sec:mu_sel}
-% % \subsection{Isolation}
-% % \label{sec:iso}
-% % \subsection{Final State Radiation}
-% % \label{sec:fsr}
-The object selection used in this analysis is summarized in Table~\ref{table:obj_sel_higgs} and the step-by-step event selection can be found in Ref.~\cite{HIG_19_001}.
-% TODO:Define $\Delta R, \mathcal{I}^\gamma_{\text{PF}}$
+As part of the event selection, the particle objects themselves must pass certain kinematical criteria to be considered for the analysis.
+The object selection used in this analysis is summarized in \cref{table:obj_sel_higgs} and the step-by-step event selection can be found in Ref.~\cite{HIG_19_001}.
 % TODO: Change all tables to tabularx?
 \begin{table}\fontsize{10}{12}\selectfont\centering\renewcommand{\arraystretch}{2}
-    \topcaption
+    \captionof{table}
         [Object selection criteria for \mH measurement analysis]
-        {Object selection criteria for \mH measurement analysis.
-        % TODO: Ref.TODO:AN-19-139v6.
-        % TODO:Need to show Tables 11--14 (below).
-        }
+        {Object selection criteria for \mH measurement analysis.}
     \begin{tabularx}{\textwidth}{>{\hsize=.3\hsize}X>{\hsize=.2\hsize}c>{\hsize=.2\hsize}c>{\hsize=.3\hsize}X}
         \toprule
         \multicolumn{4}{c}
@@ -48,7 +25,7 @@ The object selection used in this analysis is summarized in Table~\ref{table:obj
             & $\pte > 7\GeV$ & $\absetaof{\Pe} < 2.5$ & \\
             & $d_{xy} < 0.5\cm$ & $d_{z} < 1\cm$ & \\
         \multicolumn{4}{c}{$|\text{SIP}_\text{3D}| < 4$} \\
-        \multicolumn{4}{c}{Satisfies BDT ID from isolation cuts from Table~\ref{table:2016_dataSamples}} \\ % TODO: Ref correct table.
+        \multicolumn{4}{c}{Satisfies BDT ID from isolation cuts found in Ref.~\cite{HIG_19_001}} \\
         \toprule
 
         \multicolumn{4}{c}{\textbf{Muons}} \\
@@ -58,7 +35,7 @@ The object selection used in this analysis is summarized in Table~\ref{table:obj
             & $\ptmu > 5\GeV$ & $\absetaof{\Pmu} < 2.4$ & \\
             & $d_{xy} < 0.5\cm$ & $d_{z} < 1\cm$ & \\
         \multicolumn{4}{c}{$|\text{SIP}_\text{3D}| < 4$} \\
-        \multicolumn{4}{c}{PF muon ID if $\ptmu < 200\GeV$, PF muon ID or High-$\pT$ muon ID (Table~\ref{table:2016_dataSamples}) if $\ptmu > 200\GeV$} \\  % TODO: Ref correct table.
+        \multicolumn{4}{c}{PF muon ID if $\ptmu < 200\GeV$, PF muon ID or High-$\pT$ muon ID if $\ptmu > 200\GeV$ according to (Ref.~\cite{HIG_19_001})}\\
         \multicolumn{4}{c}{$\mathcal{I}_\text{PF}^\Pmu < 0.35$} \\
         \toprule
         
@@ -78,40 +55,8 @@ The object selection used in this analysis is summarized in Table~\ref{table:obj
     \label{table:obj_sel_higgs}
 \end{table}
 
-% TODO: Fill out these subsections.
-% \subsection{Trigger Selection}
-% \label{sec:trigger_sel}
-% Events are selected that have the object selection criteria mentioned in Sec.~\ref{sec:obj_reco} and then 
-
-% \subsection{Vertex Selection}
-% \label{sec:vertex_sel}
-% First, the location of the \pp collision point (\emph{vertex}) must be identified.
-% A good primary vertex (PV) is selected according to the following criteria:
-% \begin{itemize}
-%     \item has a high number of degrees of freedom ($N_\text{PV} > 4$)
-%     \item is restricted to the $z$ axis ($z_\text{PV} < 24\cm$)
-%     % z_\mathrm{\raisebox{-1pt}{{\fontsize{6}{8}\selectfont PV}}}
-%     \item is found within a small radius relative to the $z$ axis ($r_\text{PV} < 2\cm$)
-% \end{itemize}
-
-
-% Then you gotta select the leptons from the event.
-% Select at least 3 leptons per event.
-% The leading lepton must have $\pt \ge 20\GeV$, the subleading lepton must have $\pt \ge 10\GeV$, and the remaining leptons must have $\pt \ge 5\GeV$.
-% Did you get some muons and electrons? Good!
-% Do they satisfy the criteria to make Z bosons? Good!
-% Do the Z bosons appear to come from a Higgs boson? Good!
-
-% \subsection{\ZZ Candidate Selection}
-% If an event contains more than one \ZZ candidate that passes the selection criteria, then the candidate with the highest value of \Dkinbkg is selected as the overall \ZZ candidate for the event.
-% % \subsection{\mathbf{\ZZ} Candidate Selection}
-% % \subsection{\boldmath{\ZZ} Candidate Selection}
-% % \subsection{\ZZ Candidate Selection}
-% \label{sec:zz_sel}
-% Words.
-
-After the full analysis selection is implemented in each of the \fourl final states and the distributions are shown in Fig.~\ref{fig:m4l_dists}.
-The expected yields for the signal and background processes are given in Tables~\ref{tab:yield_sr_105to140} and~\ref{tab:yield_sr_70to170},
+After the full analysis selection is implemented in each of the \fourl final states and the distributions are shown in \cref{fig:m4l_dists}.
+The expected yields for the signal and background processes are given in \cref{tab:yield_sr_105to140,tab:yield_sr_70to170},
 which count events within the narrow signal region $\left(105 < \mfourl < 140\GeV\right)$ and wide signal region $\left(70 < \mfourl < 170\GeV\right)$, respectively.
 \begin{multiFigure}
     \centering
